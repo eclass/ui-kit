@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "env": {
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "standard-with-typescript",
+    "standard-jsx",
+    "standard-react",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:promise/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jest/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/react",
+    "plugin:prettier/recommended"
+  ]
+}

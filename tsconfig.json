@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    // significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS
+    // "skipLibCheck": true,
+    "skipLibCheck": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react",
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true
+  },
+  "include": ["src"],
+  "exclude": ["jest.config.js", ".eslintrc.js"]
+}
