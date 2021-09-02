@@ -16,12 +16,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/eclass/ui-kit"
+    "url": "https://github.com/eclass/ui-kit"
   },
   "bugs": {
-    "url": "https://gitlab.com/eclass/ui-kit/issues"
+    "url": "https://github.com/eclass/ui-kit/issues"
   },
-  "homepage": "https://gitlab.com/eclass/ui-kit#readme",
+  "homepage": "https://github.com/eclass/ui-kit#readme",
   "author": "Team eClass (https://www.eclass.cl/)",
   "contributors": [
     "Alvaro Alvarez <alv.ale.alvarez@gmail.com>"
@@ -90,8 +90,5 @@
     "semantic-release": "17.4.7",
     "typescript": "4.4.2",
     "vite": "2.5.3"
-  },
-  "publishConfig": {
-    "@eclass:registry": "https://gitlab.com/api/v4/projects/23996506/packages/npm/"
   }
 }
