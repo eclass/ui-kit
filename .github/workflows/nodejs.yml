@@ -30,8 +30,8 @@ jobs:
         with:
           node-version: '12.22.6'
           cache: 'npm'
-      - name: Clean install on CI
-        run: npm ci
+      - run: npm ci
+      - run: npm run build
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
