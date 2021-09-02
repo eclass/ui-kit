@@ -28,8 +28,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "build:types": "tsc src/index.ts --emitDeclarationOnly --esModuleInterop --outDir dist",
+    "build": "tsc && vite build && npm run build:types",
+    "build:types": "tsc src/index.ts --declaration --emitDeclarationOnly --jsx react --esModuleInterop --outDir dist",
     "serve": "vite preview",
     "test": "jest --watch",
     "storybook": "start-storybook -p 6006",
