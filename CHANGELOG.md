@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/eclass/ui-kit/compare/v1.0.1...v1.0.2) (2021-09-02)
+
+
+### Bug Fixes
+
+* **ci:** release npm run build ([63f14dc](https://github.com/eclass/ui-kit/commit/63f14dc5e48435dd779f14b76447a28691a8e0e6))
+
 ## [1.0.1](https://github.com/eclass/ui-kit/compare/v1.0.0...v1.0.1) (2021-09-02)
 
 
