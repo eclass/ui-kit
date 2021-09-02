@@ -34,8 +34,9 @@
     "test": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "format": "prettier -w -u .",
-    "lint": "eslint . --fix"
+    "format": "prettier --write 'src/**/*.ts'",
+    "lint": "eslint 'src/**/*.ts' --fix",
+    "lint:check": "eslint 'src/**/*.ts'"
   },
   "peerDependencies": {
     "react": "^16.8 || 17.x",
