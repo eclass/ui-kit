@@ -14,9 +14,12 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-      - run: npm ci
-      - name: lint
+      - name: Clean install on CI
+        run: npm ci
+      - name: Linter code check
         run: npm run lint:check
+      - name: Testing JEST
+        run: npm run test
   release:
     if: github.ref == 'refs/heads/main'
     needs: test
@@ -27,7 +30,8 @@ jobs:
         with:
           node-version: '12.22.6'
           cache: 'npm'
-      - run: npm ci
+      - name: Clean install on CI
+        run: npm ci
       - run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
