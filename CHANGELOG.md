@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/eclass/ui-kit/compare/v1.0.0...v1.0.1) (2021-09-02)
+
+
+### Bug Fixes
+
+* **package:** access public ([b581462](https://github.com/eclass/ui-kit/commit/b5814629924a6d196ffe1d0de407286e39fb31c0))
+
 # 1.0.0 (2021-09-02)
 
 
