@@ -39,6 +39,9 @@
     "lint": "eslint 'src/**/*.ts' --fix",
     "lint:check": "eslint 'src/**/*.ts'"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "peerDependencies": {
     "react": "^16.8 || 17.x",
     "react-dom": "^16.8 || 17.x"
