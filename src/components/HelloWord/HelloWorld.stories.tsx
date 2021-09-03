@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof HelloWorld> = (args) => <HelloWorld {...ar
 
 export const Primary = Template.bind({})
 Primary.args = {
-  name: 'Alvaro',
+  name: 'Alvaro Álvarez',
 }
