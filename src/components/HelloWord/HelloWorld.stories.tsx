@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import { HelloWorld } from './HelloWorld'
 
 const Story: ComponentMeta<typeof HelloWorld> = {
-  title: 'Example/HelloWorld',
+  title: 'Components/HelloWorld',
   component: HelloWorld,
 }
 export default Story
@@ -13,5 +13,5 @@ const Template: ComponentStory<typeof HelloWorld> = (args) => <HelloWorld {...ar
 
 export const Primary = Template.bind({})
 Primary.args = {
-  name: 'Alvaro Álvarez',
+  name: 'Alvaro [AAAA]',
 }

@@ -13,4 +13,4 @@ jobs:
           node-version: '12.22.6'
           cache: 'npm'
       - run: npm ci
-      - run: npm run deploy-storybook -- --out=docs
+      - run: npm run deploy-storybook -- --out=docs --source-branch=main
