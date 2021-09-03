@@ -1,3 +1,11 @@
+## [1.0.4](https://github.com/eclass/ui-kit/compare/v1.0.3...v1.0.4) (2021-09-03)
+
+
+### Bug Fixes
+
+* **ci:** gh-pages ([ce9042c](https://github.com/eclass/ui-kit/commit/ce9042cffbfd27b1a1586db47008bf20565d2047))
+* **ci:** remove gh-pages.yml ([c447e27](https://github.com/eclass/ui-kit/commit/c447e270b04bab757bc38dac834b2b0dadfaf634))
+
 ## [1.0.3](https://github.com/eclass/ui-kit/compare/v1.0.2...v1.0.3) (2021-09-03)
 
 
