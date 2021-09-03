@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/eclass/ui-kit/compare/v1.0.2...v1.0.3) (2021-09-03)
+
+
+### Bug Fixes
+
+* **stories:** fixes linter errors ([3439c59](https://github.com/eclass/ui-kit/commit/3439c5963ec41074dc0affbecbf2cff218308109))
+
 ## [1.0.2](https://github.com/eclass/ui-kit/compare/v1.0.1...v1.0.2) (2021-09-02)
 
 
