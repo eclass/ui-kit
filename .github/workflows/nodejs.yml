@@ -36,3 +36,18 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+  pages:
+    if: github.ref == 'refs/heads/main'
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '12.22.6'
+          cache: 'npm'
+      - run: npm ci
+      - name: Deploy to GH Pages
+        env:
+          GITHUB_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy-storybook -- --out=docs --source-branch=main
