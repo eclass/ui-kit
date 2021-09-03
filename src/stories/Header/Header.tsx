@@ -1,16 +1,16 @@
 import React from 'react'
 
-import { Button } from './Button'
+import { Button } from '../Button/Button'
 import './header.css'
 
-interface HeaderProps {
+export interface HeaderProps {
   user?: {}
   onLogin: () => void
   onLogout: () => void
   onCreateAccount: () => void
 }
 
-export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps): JSX.Element => (
   <header>
     <div className="wrapper">
       <div>

@@ -2,12 +2,13 @@ import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { Page } from './Page'
-import * as HeaderStories from './Header.stories'
+import * as HeaderStories from '../Header/Header.stories'
 
-export default {
+const Story: ComponentMeta<typeof Page> = {
   title: 'Example/Page',
   component: Page,
-} as ComponentMeta<typeof Page>
+}
+export default Story
 
 const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />
 

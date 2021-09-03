@@ -9,7 +9,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: '@eclass/ui-kit',
-      fileName: (format) => `eclass-ui-kit.${format}.js`,
+      fileName: format => `eclass-ui-kit.${format}.js`,
     },
     sourcemap: true,
     rollupOptions: {

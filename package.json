@@ -1,5 +1,6 @@
 {
   "name": "@eclass/ui-kit",
+  "description": "Elementos UI transversales eClass",
   "version": "1.0.2",
   "files": [
     "dist"
@@ -24,7 +25,8 @@
   "homepage": "https://github.com/eclass/ui-kit#readme",
   "author": "Team eClass (https://www.eclass.cl/)",
   "contributors": [
-    "Alvaro Alvarez <alv.ale.alvarez@gmail.com>"
+    "Alvaro Alvarez <alv.ale.alvarez@gmail.com>",
+    "Sebastián González Riffo <sebastian@gonzalezr.cl>"
   ],
   "scripts": {
     "dev": "vite",
@@ -34,9 +36,10 @@
     "test": "jest --coverage",
     "test-local": "jest --watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -o docs/ ",
+    "lint": "npm run format && npm run eslint",
     "format": "prettier --write 'src/**/*.ts'",
-    "lint": "eslint 'src/**/*.ts' --fix",
+    "eslint": "eslint 'src/**/*.ts' --fix",
     "lint:check": "eslint 'src/**/*.ts'"
   },
   "publishConfig": {

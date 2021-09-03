@@ -3,10 +3,11 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { HelloWorld } from './HelloWorld'
 
-export default {
+const Story: ComponentMeta<typeof HelloWorld> = {
   title: 'Example/HelloWorld',
   component: HelloWorld,
-} as ComponentMeta<typeof HelloWorld>
+}
+export default Story
 
 const Template: ComponentStory<typeof HelloWorld> = (args) => <HelloWorld {...args} />
 
