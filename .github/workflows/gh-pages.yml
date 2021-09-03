@@ -13,4 +13,7 @@ jobs:
           node-version: '12.22.6'
           cache: 'npm'
       - run: npm ci
-      - run: npm run deploy-storybook -- --out=docs --source-branch=main
+      - name: Deploy to GH Pages
+        env:
+          GH_TOKEN: eclass:${{ secrets.GH_TOKEN }}
+        run: npm run deploy-storybook -- --out=docs --source-branch=main
