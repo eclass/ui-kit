@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/eclass/ui-kit/compare/v1.0.4...v1.1.0) (2021-09-10)
+
+
+### Features
+
+* **app:** add eClass theme ([613955f](https://github.com/eclass/ui-kit/commit/613955f5b3c0f3be499e3712582be6c8b01ce253))
+* **app:** add eClass theme ([c683a57](https://github.com/eclass/ui-kit/commit/c683a57c662cd3ffe66a1f811f8f4f49d8d815d5))
+
 ## [1.0.4](https://github.com/eclass/ui-kit/compare/v1.0.3...v1.0.4) (2021-09-03)
 
 
