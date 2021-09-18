@@ -102,6 +102,6 @@
     "storybook-builder-vite": "0.0.12",
     "ts-jest": "27.0.5",
     "typescript": "4.4.2",
-    "vite": "2.5.6"
+    "vite": "2.5.10"
   }
 }
