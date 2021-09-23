@@ -24,5 +24,14 @@
     "plugin:jest-dom/recommended",
     "plugin:testing-library/react",
     "plugin:prettier/recommended"
-  ]
+  ],
+  "overrides": [
+    {
+      "files": ["*.mdx"],
+      "extends": "plugin:mdx/recommended"
+    }
+  ],
+  "settings": {
+    "mdx/code-blocks": true
+  }
 }
