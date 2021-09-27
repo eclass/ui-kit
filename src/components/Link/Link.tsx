@@ -1,5 +1,3 @@
-import * as React from 'react'
-
 export interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
   /** Provides a text to the anchor */
   children?: React.ReactChild

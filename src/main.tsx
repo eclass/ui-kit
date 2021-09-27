@@ -1,6 +1,7 @@
-import { Playground } from './Playground'
 import React from 'react'
 import ReactDOM from 'react-dom'
+
+import { Playground } from './Playground'
 
 ReactDOM.render(
   <React.StrictMode>

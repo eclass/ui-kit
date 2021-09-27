@@ -1,4 +1,3 @@
-import * as React from 'react'
 import { HelloWorld } from './components'
 
 export function Playground(): JSX.Element {
