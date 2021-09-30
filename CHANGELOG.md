@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/eclass/ui-kit/compare/v1.1.0...v1.2.0) (2021-09-30)
+
+
+### Features
+
+* **framework:** chakra ui ([ffcd24f](https://github.com/eclass/ui-kit/commit/ffcd24fe61dc4fb0e8320431dee9c19de4fe2bd8))
+
 # [1.1.0](https://github.com/eclass/ui-kit/compare/v1.0.4...v1.1.0) (2021-09-10)
 
 
