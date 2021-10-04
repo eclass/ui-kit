@@ -35,14 +35,3 @@ export const colors = {
     cultured2: '#F8F8F8',
   },
 }
-
-// const sd = []
-// for (const prop in colors) {
-//   for (const prop2 in colors[prop]) {
-//     sd.push(`${prop}.${prop2}`)
-//   }
-// }
-
-// console.log('sd:', sd)
-
-export type col = 'icon.ripeMango' | 'neutral.darkCharcoal'

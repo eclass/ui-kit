@@ -25,4 +25,15 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+      '@atoms': path.resolve(__dirname, './src/atoms/'),
+      '@theme': path.resolve(__dirname, './src/theme/'),
+      '@molecules': path.resolve(__dirname, './src/molecules/'),
+      '@organisms': path.resolve(__dirname, './src/organisms/'),
+      '@icon': path.resolve(__dirname, './src/atoms/Icons/'),
+      '@color': path.resolve(__dirname, './src/theme/colors'),
+    },
+  },
 })
