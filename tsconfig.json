@@ -20,5 +20,14 @@
     "sourceMap": true
   },
   "include": ["src", "test"],
-  "exclude": ["jest.config.js", ".eslintrc.js"]
+  "exclude": ["jest.config.js", ".eslintrc.js"],
+  "paths": {
+    "@": ["./src/"],
+    "@atoms": ["./src/atoms/"],
+    "@theme": ["./src/theme/"],
+    "@mocules": ["./src/mocules/"],
+    "@organisms": ["./src/organisms/"],
+    "@icon": ["./src/atoms/Icons/"],
+    "@color": ["./src/theme/colors"],
+  },
 }

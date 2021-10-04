@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react"
+import { ChakraProvider } from '@chakra-ui/react'
 
 import { theme } from '../src/theme'
 
@@ -20,4 +20,4 @@ export const parameters = {
   },
 }
 
-export const decorators = [ withChakra ]
+export const decorators = [withChakra]
