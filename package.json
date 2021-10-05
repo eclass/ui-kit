@@ -106,7 +106,7 @@
     "vite": "2.6.3"
   },
   "dependencies": {
-    "@chakra-ui/react": "1.6.8",
+    "@chakra-ui/react": "1.6.9",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "@fontsource/lora": "4.5.0",
