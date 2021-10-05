@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/eclass/ui-kit/compare/v1.2.0...v1.3.0) (2021-10-05)
+
+
+### Features
+
+* **courselist:** listado de cursos ([6e01368](https://github.com/eclass/ui-kit/commit/6e01368b3bb607aa9568ca621e6b38b8470ace77))
+
 # [1.2.0](https://github.com/eclass/ui-kit/compare/v1.1.0...v1.2.0) (2021-09-30)
 
 
