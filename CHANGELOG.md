@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/eclass/ui-kit/compare/v1.3.0...v1.4.0) (2021-10-05)
+
+
+### Features
+
+* **theme:** export theme to the library ([95237bb](https://github.com/eclass/ui-kit/commit/95237bb33d4665579b6ac496c2071dd0bd87de95))
+
 # [1.3.0](https://github.com/eclass/ui-kit/compare/v1.2.0...v1.3.0) (2021-10-05)
 
 
