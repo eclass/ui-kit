@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react'
+import { colors } from '../../theme/colors'
 
 export interface LabelProps {
   children: React.ReactChild
@@ -10,8 +11,8 @@ export interface LabelProps {
 
 export function Label({
   children,
-  bg = 'icon.ripeMango',
-  color = 'neutral.darkCharcoal',
+  bg = 'var(--chakra-colors-icon-ripeMango)',
+  color = colors.icon.lightSeaGreen,
   size = 'md',
   m = '0',
 }: LabelProps): JSX.Element {
