@@ -1,3 +1,11 @@
+## [1.4.1](https://github.com/eclass/ui-kit/compare/v1.4.0...v1.4.1) (2021-10-06)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @chakra-ui/react to v1.6.9 ([06ee8f8](https://github.com/eclass/ui-kit/commit/06ee8f819eff1de19c91276233df3fc30f0d4ccf))
+* **label:** prueba vars ([#72](https://github.com/eclass/ui-kit/issues/72)) ([6e7f4b1](https://github.com/eclass/ui-kit/commit/6e7f4b1ac2f93d46a1783a6f8327520c2582199e))
+
 # [1.4.0](https://github.com/eclass/ui-kit/compare/v1.3.0...v1.4.0) (2021-10-05)
 
 
