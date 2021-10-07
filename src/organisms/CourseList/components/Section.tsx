@@ -14,7 +14,7 @@ import {
 import { CourseBoxContext } from '../CourseBox'
 import { DateStatus } from './DateStatus'
 import { IconSelection } from './IconSelection'
-import { Label } from '../../../atoms'
+import { Label, vars } from '../../../'
 
 export function Section(): JSX.Element | null {
   const { name, dateStatus, information, progress } = React.useContext(CourseBoxContext)
@@ -31,7 +31,11 @@ export function Section(): JSX.Element | null {
           direction="row"
           divider={
             dateStatus.init.length > 0 && dateStatus.end.length > 0 ? (
-              <StackDivider h=".5rem" borderColor="neutral.silverSand" alignSelf="center" />
+              <StackDivider
+                h=".5rem"
+                borderColor={vars('colors-neutral-silverSand')}
+                alignSelf="center"
+              />
             ) : (
               <></>
             )
@@ -40,7 +44,7 @@ export function Section(): JSX.Element | null {
           <DateStatus date={dateStatus.end} />
         </HStack>
       )}
-      <Heading as="h2" size="sm" mt=".3125rem">
+      <Heading as="h2" fontSize="1rem" mt=".3125rem" fontWeight="700" lineHeight="1.3">
         {name}
       </Heading>
       <Flex mt="1rem" justify="space-between">
@@ -51,7 +55,10 @@ export function Section(): JSX.Element | null {
           </Text>
         </Flex>
         {progress?.finalGrade.length > 0 && (
-          <Label size="sm" bg={progress?.isApproved ? 'alert.jadeGreen' : 'alert.red'} color="#fff">
+          <Label
+            size="sm"
+            bg={progress?.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
+            color={vars('colors-neutral-white')}>
             {progress?.finalGrade}
           </Label>
         )}
@@ -65,7 +72,7 @@ export function Section(): JSX.Element | null {
           mt=".625rem"
           lineHeight=".875rem"
           borderTop="1px solid"
-          borderTopColor="neutral.platinum">
+          borderTopColor={vars('colors-neutral-platinum')}>
           {/* eslint-disable-next-line */}
           {information.map((item, index) => (
             <ListItem key={index} display="flex">
@@ -75,13 +82,13 @@ export function Section(): JSX.Element | null {
                   <Link
                     isExternal
                     href={item.href}
-                    color="main.deepSkyBlue"
+                    color={vars('colors-main-deepSkyBlue')}
                     textDecor="underline"
                     fontWeight="500">
                     {item.text}
                   </Link>
                 ) : (
-                  <Text m="0" color="neutral.gray">
+                  <Text m="0" color={vars('colors-neutral-gray')}>
                     {item.text}
                   </Text>
                 )}

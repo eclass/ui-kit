@@ -1,6 +1,8 @@
 import React from 'react'
 import { Icon as IconChakra } from '@chakra-ui/react'
 
+import { vars } from '../../'
+
 export interface BaseProps {
   w?: string
   h?: string
@@ -14,7 +16,7 @@ interface IconProps extends BaseProps {
 export function Icon({
   w = '1rem',
   h = '1rem',
-  color = 'main.ziggurat',
+  color = vars('colors-main-ziggurat'),
   viewBox = '0 0 16 16',
   children,
 }: IconProps): JSX.Element {

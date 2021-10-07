@@ -3,7 +3,7 @@ import { LinkBox, Box, Flex } from '@chakra-ui/react'
 
 import { Header, Section, Footer } from './components'
 import { box } from './dataFake'
-import { Ripples } from '../../atoms'
+import { Ripples, vars } from '../../'
 
 export const CourseBoxContext = React.createContext<Partial<box>>({})
 
@@ -21,7 +21,7 @@ interface CourseBoxProps {
 
 export function CourseBox({ data }: CourseBoxProps): JSX.Element {
   const cssActive = {
-    boxShadow: '0 2px 7px 0 var(--chakra-colors-neutral-silverSand)',
+    boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
   }
 
   return (
@@ -29,7 +29,7 @@ export function CourseBox({ data }: CourseBoxProps): JSX.Element {
       <LinkBox
         as="article"
         borderWidth="1px"
-        borderColor="neutral.platinum"
+        borderColor={vars('colors-neutral-platinum')}
         borderRadius={10}
         cursor="pointer"
         transition="box-shadow .3s"

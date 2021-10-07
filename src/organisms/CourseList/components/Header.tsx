@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box, Stack, Image, Center } from '@chakra-ui/react'
 
-import { Label } from '../../../atoms'
+import { Label, vars } from '../../../'
 import { CourseBoxContext } from '../CourseBox'
 
 export function Header(): JSX.Element {
@@ -18,7 +18,9 @@ export function Header(): JSX.Element {
       {labels !== undefined && labels.length > 0 && (
         <Stack direction="row" p="1rem" spacing=".625rem" wrap="wrap">
           {labels.map((item, index) => (
-            <Label key={index} bg={item.id === 'NEW' ? '#FF7A14' : undefined}>
+            <Label
+              key={index}
+              bg={item.id === 'NEW' ? vars('colors-secondary-pumpkin') : undefined}>
               {item.text}
             </Label>
           ))}
@@ -32,8 +34,8 @@ export function Header(): JSX.Element {
           left=".9375rem"
           transform="translateY(30%)"
           h="3.5rem"
-          border="1px solid #e6e6e6"
-          bg="#fff"
+          border={`1px solid ${vars('colors-neutral-platinum')}`}
+          bg={vars('colors-neutral-white')}
           overflow="hidden"
           borderRadius="0.25em"
           w="6.25rem">

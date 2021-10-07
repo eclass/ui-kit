@@ -78,7 +78,7 @@ export interface box {
     /** Contiene la url hacia donde apunta el botón */
     href: string
     /** Si el link se abre en otra pestaña (CV). En V8 te manda al curso */
-    isExternal: boolean
+    targetBlank: boolean
   }
   /** Etiquetas utilizadas en CV */
   labels: [
@@ -142,7 +142,7 @@ export const dataBase = {
     text: 'Tu curso aún no comienza',
     hasIcon: false,
     href: 'https://platform.eclass.io/',
-    isExternal: false,
+    targetBlank: false,
   },
   labels: [
     {
@@ -209,7 +209,7 @@ export const dataStates: any = {
     action: {
       ...dataBase.action,
       text: 'Solicitar inscripción',
-      isExternal: true,
+      targetBlank: true,
     },
     labels: [],
   },
@@ -239,7 +239,7 @@ export const dataStates: any = {
     action: {
       ...dataBase.action,
       text: 'Ver información del curso',
-      isExternal: true,
+      targetBlank: true,
     },
     labels: [],
   },
@@ -269,7 +269,7 @@ export const dataStates: any = {
     action: {
       ...dataBase.action,
       text: 'Inscríbete',
-      isExternal: true,
+      targetBlank: true,
     },
   },
   inscripcion2: {
@@ -298,7 +298,7 @@ export const dataStates: any = {
     action: {
       ...dataBase.action,
       text: 'Inscríbete',
-      isExternal: true,
+      targetBlank: true,
     },
     labels: [
       {
@@ -338,7 +338,7 @@ export const dataStates: any = {
     action: {
       ...dataBase.action,
       text: 'Ver información del curso',
-      isExternal: true,
+      targetBlank: true,
     },
     labels: [],
   },
@@ -405,7 +405,7 @@ export const dataStates: any = {
     ],
     action: {
       ...dataBase.action,
-      isExternal: true,
+      targetBlank: true,
       hasIcon: true,
       text: 'Comenzar a estudiar',
     },
@@ -443,7 +443,7 @@ export const dataStates: any = {
     ],
     action: {
       ...dataBase.action,
-      isExternal: true,
+      targetBlank: true,
       hasIcon: true,
       text: 'Comenzar a estudiar',
     },
@@ -481,7 +481,7 @@ export const dataStates: any = {
     ],
     action: {
       ...dataBase.action,
-      isExternal: true,
+      targetBlank: true,
       hasIcon: true,
       text: 'Comenzar a estudiar',
     },
@@ -519,7 +519,7 @@ export const dataStates: any = {
     ],
     action: {
       ...dataBase.action,
-      isExternal: true,
+      targetBlank: true,
       hasIcon: true,
       text: 'Comenzar a estudiar',
     },
@@ -557,7 +557,7 @@ export const dataStates: any = {
     ],
     action: {
       ...dataBase.action,
-      isExternal: true,
+      targetBlank: true,
       hasIcon: true,
       text: 'Comenzar a estudiar',
     },
@@ -595,7 +595,7 @@ export const dataStates: any = {
     ],
     action: {
       ...dataBase.action,
-      isExternal: true,
+      targetBlank: true,
       hasIcon: true,
       text: 'Continuar estudiando',
     },
