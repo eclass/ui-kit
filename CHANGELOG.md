@@ -1,3 +1,10 @@
+## [1.4.2](https://github.com/eclass/ui-kit/compare/v1.4.1...v1.4.2) (2021-10-07)
+
+
+### Bug Fixes
+
+* **chakra:** utilizo variables css ([#74](https://github.com/eclass/ui-kit/issues/74)) ([701dd17](https://github.com/eclass/ui-kit/commit/701dd17e1ddd2fc15f481eea924f148d75c25348))
+
 ## [1.4.1](https://github.com/eclass/ui-kit/compare/v1.4.0...v1.4.1) (2021-10-06)
 
 
