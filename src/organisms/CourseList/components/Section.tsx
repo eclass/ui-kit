@@ -77,18 +77,19 @@ export function Section(): JSX.Element | null {
           {information.map((item, index) => (
             <ListItem key={index} display="flex">
               <IconSelection type={item.icon} />
-              <Box display="inline-block" ml=".625rem" fontSize=".75rem">
+              <Box display="inline-block" ml=".625rem">
                 {item.href.length > 0 ? (
                   <Link
                     isExternal
                     href={item.href}
                     color={vars('colors-main-deepSkyBlue')}
                     textDecor="underline"
-                    fontWeight="500">
+                    fontWeight="500"
+                    fontSize=".75rem">
                     {item.text}
                   </Link>
                 ) : (
-                  <Text m="0" color={vars('colors-neutral-gray')}>
+                  <Text m="0" color={vars('colors-neutral-gray')} fontSize=".75rem">
                     {item.text}
                   </Text>
                 )}
