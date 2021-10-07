@@ -1,3 +1,10 @@
+## [1.4.3](https://github.com/eclass/ui-kit/compare/v1.4.2...v1.4.3) (2021-10-07)
+
+
+### Bug Fixes
+
+* **couselist:** grilla + perfiles ([#76](https://github.com/eclass/ui-kit/issues/76)) ([12486e7](https://github.com/eclass/ui-kit/commit/12486e7ef085cf3970fd22155552d23a197b9c3e))
+
 ## [1.4.2](https://github.com/eclass/ui-kit/compare/v1.4.1...v1.4.2) (2021-10-07)
 
 
