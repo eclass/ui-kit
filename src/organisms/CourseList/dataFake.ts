@@ -1,6 +1,7 @@
 export type icon = 'schedule' | 'certificate' | 'circularCheck' | 'progress' | 'circularInformation'
 
 export interface box {
+  id: number
   /**
    * Nombre del curso (utilizado en el titulo de la caja).
    */
@@ -33,6 +34,10 @@ export interface box {
     detail: string
     /** Estilo que puede poseer el estado. */
     style: string
+  }
+  Profile: {
+    id: number
+    name: string
   }
   /** Detalle del progreso del curso. */
   progress: {
@@ -83,7 +88,7 @@ export interface box {
   /** Etiquetas utilizadas en CV */
   labels: [
     {
-      /** Indica el ID de la etiqueta (NEW | OBLIGATORY) */
+      /** Indica el ID de la etiqueta (NEW | OBLIGATORY | PROFILE ) */
       id: string
       /** Contiene el texto de la etiqueta */
       text: string
@@ -102,6 +107,10 @@ export const dataBase = {
     name: 'NEXT',
     detail: '',
     style: '',
+  },
+  Profile: {
+    id: 4,
+    name: 'Alumno',
   },
   progress: {
     label: 'Tienes hasta el Lunes 16 de Enero para de 2022 inscribirte',
@@ -155,6 +164,7 @@ export const dataBase = {
 export const dataStates: any = {
   noHabilitado: {
     ...dataBase,
+    id: 1,
     status: {
       ...dataBase.status,
       id: 1,
@@ -185,6 +195,7 @@ export const dataStates: any = {
   },
   preInscripcion: {
     ...dataBase,
+    id: 2,
     status: {
       ...dataBase.status,
       id: 2,
@@ -215,6 +226,7 @@ export const dataStates: any = {
   },
   preInscripcion2: {
     ...dataBase,
+    id: 3,
     status: {
       ...dataBase.status,
       id: 2,
@@ -245,6 +257,7 @@ export const dataStates: any = {
   },
   inscripcion: {
     ...dataBase,
+    id: 4,
     status: {
       ...dataBase.status,
       id: 3,
@@ -274,10 +287,15 @@ export const dataStates: any = {
   },
   inscripcion2: {
     ...dataBase,
+    id: 5,
     status: {
       ...dataBase.status,
       id: 3,
       name: 'inscripcion',
+    },
+    Profile: {
+      id: 1,
+      name: 'Administrador',
     },
     progress: {
       ...dataBase.progress,
@@ -313,6 +331,7 @@ export const dataStates: any = {
   },
   noDisponible: {
     ...dataBase,
+    id: 6,
     status: {
       ...dataBase.status,
       id: 4,
@@ -340,10 +359,20 @@ export const dataStates: any = {
       text: 'Ver información del curso',
       targetBlank: true,
     },
-    labels: [],
+    labels: [
+      {
+        id: 'OBLIGATORY',
+        text: 'Obligatorio',
+      },
+      {
+        id: 'NEW',
+        text: 'Nuevo',
+      },
+    ],
   },
   noDisponible2: {
     ...dataBase,
+    id: 7,
     status: {
       ...dataBase.status,
       id: 4,
@@ -375,6 +404,7 @@ export const dataStates: any = {
   },
   activado: {
     ...dataBase,
+    id: 8,
     status: {
       ...dataBase.status,
       id: 5,
@@ -413,6 +443,7 @@ export const dataStates: any = {
   },
   sinEstudiar: {
     ...dataBase,
+    id: 9,
     status: {
       ...dataBase.status,
       id: 6,
@@ -451,6 +482,7 @@ export const dataStates: any = {
   },
   sinEstudiar2: {
     ...dataBase,
+    id: 10,
     status: {
       ...dataBase.status,
       id: 6,
@@ -489,6 +521,7 @@ export const dataStates: any = {
   },
   sinEstudiar3: {
     ...dataBase,
+    id: 11,
     status: {
       ...dataBase.status,
       id: 6,
@@ -527,6 +560,7 @@ export const dataStates: any = {
   },
   sinEstudiar4: {
     ...dataBase,
+    id: 12,
     status: {
       ...dataBase.status,
       id: 6,
@@ -565,6 +599,7 @@ export const dataStates: any = {
   },
   continuar: {
     ...dataBase,
+    id: 13,
     status: {
       ...dataBase.status,
       id: 7,
@@ -603,6 +638,7 @@ export const dataStates: any = {
   },
   continuar2: {
     ...dataBase,
+    id: 14,
     status: {
       ...dataBase.status,
       id: 7,
@@ -639,6 +675,7 @@ export const dataStates: any = {
   },
   pendiente: {
     ...dataBase,
+    id: 15,
     status: {
       ...dataBase.status,
       id: 8,
@@ -674,6 +711,7 @@ export const dataStates: any = {
   },
   terminado: {
     ...dataBase,
+    id: 16,
     status: {
       ...dataBase.status,
       id: 9,
@@ -711,6 +749,7 @@ export const dataStates: any = {
   },
   terminado2: {
     ...dataBase,
+    id: 17,
     status: {
       ...dataBase.status,
       id: 9,
@@ -748,6 +787,7 @@ export const dataStates: any = {
   },
   terminado3: {
     ...dataBase,
+    id: 18,
     status: {
       ...dataBase.status,
       id: 9,

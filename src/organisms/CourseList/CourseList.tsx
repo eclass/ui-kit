@@ -1,53 +1,37 @@
-import { Box, useMediaQuery } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 import { CourseBox } from './CourseBox'
 
 interface WrapperCoursesProps {
   courses: any
-  col?: number
   m?: string
-  maxWContainer?: string
-  wCourses?: string
 }
 
-export function CourseList({
-  courses,
-  col = 3,
-  m = '0 auto',
-  maxWContainer = '60rem',
-  wCourses = '17.8125rem',
-}: WrapperCoursesProps): JSX.Element | null {
-  const ColumnGap = '1.875rem'
-  const [col2, col3] = useMediaQuery([
-    `(min-width: calc((${wCourses} * 2) + ${ColumnGap}))`,
-    `(min-width: calc((${wCourses} * 3) + ${ColumnGap} * 2))`,
-  ])
-  const coursesNumber = courses.length
+export const columnGap = 1.25 // 20px
+export const wCourse = 17.8125 // 285px
 
-  let gridTemplateColumns = '1fr'
-  if (col2 && !col3) {
-    gridTemplateColumns = 'repeat(2, 1fr)'
-  } else if (col3) {
-    gridTemplateColumns = `repeat(auto-fit, minmax(${wCourses}, 1fr))`
-    if (coursesNumber < col) {
-      gridTemplateColumns = `repeat(3, 1fr)`
-    }
-  }
-
-  if (coursesNumber === 0) {
+/**
+ * Retorna listado de cursos.
+ * @example
+ *  <CourseList courses={courses} />
+ *
+ * Tener en cuenta el width del padre donde se pondra este componente, utilizar método maxWidthCoursesList
+ * @see src/organisms/CourseList/maxWidthCoursesList.ts
+ */
+export function CourseList({ courses, m = '0 auto' }: WrapperCoursesProps): JSX.Element | null {
+  if (courses.length === 0) {
     return null
   }
 
   return (
     <Box
       display="grid"
-      gridColumnGap={ColumnGap}
-      gridRowGap="2.5rem"
-      gridTemplateColumns={gridTemplateColumns}
-      m={m}
-      maxW={maxWContainer}>
-      {courses.map((course: any, index: number) => (
-        <CourseBox key={index} data={course} />
+      gridColumnGap={`${columnGap}rem`}
+      gridRowGap="1.75rem"
+      gridTemplateColumns={`repeat(auto-fill, minmax(${wCourse}rem, 1fr))`}
+      m={m}>
+      {courses.map((course: any) => (
+        <CourseBox key={course.id} data={course} />
       ))}
     </Box>
   )
