@@ -7,6 +7,9 @@ const main = {
 
 export const colors = {
   main,
+  secondary: {
+    pumpkin: '#FF7A14',
+  },
   alert: {
     deepSkyBlue: main.deepSkyBlue,
     veryLightBlue: main.veryLightBlue,
@@ -33,5 +36,6 @@ export const colors = {
     platinum: '#E8E8E8',
     cultured: '#F4F4F4',
     cultured2: '#F8F8F8',
+    white: '#FFFFFF',
   },
 }

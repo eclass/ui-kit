@@ -3,6 +3,7 @@ import { Center, LinkOverlay, Text } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
 import { ArrowRight } from '../../../atoms/Icons'
+import { vars } from '../../../'
 
 export function Footer(): JSX.Element | null {
   const { action } = React.useContext(CourseBoxContext)
@@ -10,22 +11,27 @@ export function Footer(): JSX.Element | null {
     return null
   }
   return (
-    <Center as="footer" mt="1rem" p="1rem" borderTop="1px solid" borderTopColor="neutral.platinum">
+    <Center
+      as="footer"
+      mt="1rem"
+      p="1rem"
+      borderTop="1px solid"
+      borderTopColor={vars('colors-neutral-platinum')}>
       {action.enabled ? (
         <>
           <LinkOverlay
             href={action.href}
-            color="main.deepSkyBlue"
+            color={vars('colors-main-deepSkyBlue')}
             fontWeight="500"
             mr="1.5rem"
             lineHeight="1.172rem"
-            isExternal={action.isExternal}>
+            isExternal={action.targetBlank}>
             {action.text}
           </LinkOverlay>
-          {action.hasIcon && <ArrowRight color="main.deepSkyBlue" />}
+          {action.hasIcon && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
         </>
       ) : (
-        <Text fontWeight="500" lineHeight="1.172rem" color="neutral.spanishGrey">
+        <Text fontWeight="500" lineHeight="1.172rem" color={vars('colors-neutral-spanishGrey')}>
           {action.text}
         </Text>
       )}
