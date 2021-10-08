@@ -1,3 +1,10 @@
+## [1.4.5](https://github.com/eclass/ui-kit/compare/v1.4.4...v1.4.5) (2021-10-08)
+
+
+### Bug Fixes
+
+* **courselist:** nota solo con state 7, margen btn accion ([#80](https://github.com/eclass/ui-kit/issues/80)) ([84479cb](https://github.com/eclass/ui-kit/commit/84479cb4dd45836b3ab54d075c01b3215dec80c4))
+
 ## [1.4.4](https://github.com/eclass/ui-kit/compare/v1.4.3...v1.4.4) (2021-10-08)
 
 
