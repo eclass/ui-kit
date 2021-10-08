@@ -183,7 +183,7 @@ export const dataStates: any = {
       {
         icon: 'certificate',
         text: 'Certificado por ACHS',
-        href: '',
+        href: null,
       },
     ],
     action: {
