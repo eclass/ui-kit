@@ -1,3 +1,10 @@
+## [1.4.4](https://github.com/eclass/ui-kit/compare/v1.4.3...v1.4.4) (2021-10-08)
+
+
+### Bug Fixes
+
+* **courselist:** detalles css, exportar maxwidth, information href null ([#79](https://github.com/eclass/ui-kit/issues/79)) ([70a71b7](https://github.com/eclass/ui-kit/commit/70a71b73b95bc10c7df1017d4b49ea975fa397c4))
+
 ## [1.4.3](https://github.com/eclass/ui-kit/compare/v1.4.2...v1.4.3) (2021-10-07)
 
 
