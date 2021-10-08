@@ -1,23 +1,15 @@
 import React from 'react'
-import {
-  Box,
-  Heading,
-  StackDivider,
-  Link,
-  List,
-  HStack,
-  Text,
-  ListItem,
-  Flex,
-} from '@chakra-ui/react'
+import { Box, Heading, Link, List, HStack, Text, ListItem, Flex } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
 import { DateStatus } from './DateStatus'
 import { IconSelection } from './IconSelection'
 import { Label, vars } from '../../../'
 
+const ID_QUALIFIED = 7
+
 export function Section(): JSX.Element | null {
-  const { name, dateStatus, information, progress } = React.useContext(CourseBoxContext)
+  const { name, dateStatus, information, progress, status } = React.useContext(CourseBoxContext)
 
   // eslint-disable-next-line
   if (!progress) {
@@ -31,12 +23,7 @@ export function Section(): JSX.Element | null {
           direction="row"
           divider={
             dateStatus.init.length > 0 && dateStatus.end.length > 0 ? (
-              <StackDivider
-                h=".5rem"
-                borderColor={vars('colors-neutral-silverSand')}
-                alignSelf="center"
-                variant="solid"
-              />
+              <Box h=".5rem" w="1px" bg={vars('colors-neutral-silverSand')} alignSelf="center" />
             ) : (
               <></>
             )
@@ -55,7 +42,7 @@ export function Section(): JSX.Element | null {
             {progress?.label}
           </Text>
         </Flex>
-        {progress?.finalGrade.length > 0 && (
+        {status?.id === ID_QUALIFIED && progress?.finalGrade.length > 0 && (
           <Label
             size="sm"
             bg={progress?.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}

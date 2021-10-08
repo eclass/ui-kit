@@ -12,7 +12,7 @@ interface payload {
  * @example
  * maxWidthCoursesList()
  */
-export const maxWidthCoursesList = (nCols: number = 4): payload => {
+export function maxWidthCoursesList(nCols: number = 4): payload {
   const maxWidth = nCols * wCourse + columnGap * (nCols - 1)
   return {
     px: `${maxWidth * 16}px`,

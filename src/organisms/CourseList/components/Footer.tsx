@@ -31,7 +31,11 @@ export function Footer(): JSX.Element | null {
           {action.hasIcon && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
         </>
       ) : (
-        <Text fontWeight="500" lineHeight="1.172rem" color={vars('colors-neutral-spanishGrey')}>
+        <Text
+          fontWeight="500"
+          lineHeight="1.172rem"
+          color={vars('colors-neutral-spanishGrey')}
+          m="0">
           {action.text}
         </Text>
       )}
