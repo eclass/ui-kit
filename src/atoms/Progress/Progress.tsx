@@ -2,7 +2,10 @@ import { CircularProgress } from '@chakra-ui/react'
 
 import { vars } from '../../'
 
-export function Progress({ value = 0 }: any): JSX.Element {
+interface ProgressProps {
+  value: number
+}
+export function Progress({ value = 0 }: ProgressProps): JSX.Element {
   return (
     <CircularProgress
       size="1rem"
