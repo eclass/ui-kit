@@ -10,7 +10,7 @@ export function DateStatus({ date }: DateStatusProps): JSX.Element | null {
   }
 
   return (
-    <Text fontSize=".75rem" color="neutral.darkCharcoal">
+    <Text fontSize=".75rem" color="neutral.darkCharcoal" m="0">
       {date}
     </Text>
   )

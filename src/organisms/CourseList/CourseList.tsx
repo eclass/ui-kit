@@ -29,7 +29,8 @@ export function CourseList({ courses, m = '0 auto' }: WrapperCoursesProps): JSX.
       gridColumnGap={`${columnGap}rem`}
       gridRowGap="1.75rem"
       gridTemplateColumns={`repeat(auto-fill, minmax(${wCourse}rem, 1fr))`}
-      m={m}>
+      m={m}
+      w="100%">
       {courses.map((course: any) => (
         <CourseBox key={course.id} data={course} />
       ))}

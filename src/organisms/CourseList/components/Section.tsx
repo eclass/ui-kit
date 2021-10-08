@@ -35,6 +35,7 @@ export function Section(): JSX.Element | null {
                 h=".5rem"
                 borderColor={vars('colors-neutral-silverSand')}
                 alignSelf="center"
+                variant="solid"
               />
             ) : (
               <></>
@@ -78,7 +79,7 @@ export function Section(): JSX.Element | null {
             <ListItem key={index} display="flex">
               <IconSelection type={item.icon} />
               <Box display="inline-block" ml=".625rem">
-                {item.href.length > 0 ? (
+                {item.href?.length > 0 ? (
                   <Link
                     isExternal
                     href={item.href}
