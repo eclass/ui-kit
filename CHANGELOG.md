@@ -1,3 +1,15 @@
+# [1.5.0](https://github.com/eclass/ui-kit/compare/v1.4.5...v1.5.0) (2021-10-13)
+
+
+### Bug Fixes
+
+* **types:** api eclass error ([41e05c9](https://github.com/eclass/ui-kit/commit/41e05c95841100e476e80ecc18243349fe00765e))
+
+
+### Features
+
+* **atoms:** stories, courselist type api ([#98](https://github.com/eclass/ui-kit/issues/98)) ([8e742b4](https://github.com/eclass/ui-kit/commit/8e742b4ad2a3669aada0d2975179be3cf2aae7f1))
+
 ## [1.4.5](https://github.com/eclass/ui-kit/compare/v1.4.4...v1.4.5) (2021-10-08)
 
 
