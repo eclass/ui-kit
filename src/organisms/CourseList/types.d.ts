@@ -1,5 +1,5 @@
 /* eslint-disable-next-line */
-import { AcademicBox } from '@eclass/api'
+// import { AcademicBox } from '@eclass/api'
 import { box } from './dataFake'
 
 export type AcademicList = box
