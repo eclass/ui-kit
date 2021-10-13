@@ -17,6 +17,7 @@ export function Header(): JSX.Element {
       bgPos="center"
       bgSize="cover"
       height="8.75rem"
+      borderBottom={`1px solid ${vars('colors-neutral-platinum')}`}
       pos="relative">
       <Box p="1rem">
         {profile?.id !== STUDENT && (

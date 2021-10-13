@@ -22,7 +22,10 @@ export function Section(): JSX.Element | null {
         <HStack
           direction="row"
           divider={
-            dateStatus.init.length > 0 && dateStatus.end.length > 0 ? (
+            dateStatus.init !== undefined &&
+            dateStatus.init.length > 0 &&
+            dateStatus.end !== undefined &&
+            dateStatus.end.length > 0 ? (
               <Box h=".5rem" w="1px" bg={vars('colors-neutral-silverSand')} alignSelf="center" />
             ) : (
               <></>
@@ -45,7 +48,8 @@ export function Section(): JSX.Element | null {
         {status?.id === ID_QUALIFIED && progress?.finalGrade.length > 0 && (
           <Label
             size="sm"
-            bg={progress?.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
+            // eslint-disable-next-line
+            bg={progress.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
             color={vars('colors-neutral-white')}>
             {progress?.finalGrade}
           </Label>
@@ -57,16 +61,14 @@ export function Section(): JSX.Element | null {
           spacing=".625rem"
           paddingInlineStart="0"
           pt=".625rem"
-          mt=".625rem"
+          m=".625rem 0 0"
           lineHeight=".875rem"
-          borderTop="1px solid"
-          borderTopColor={vars('colors-neutral-platinum')}>
-          {/* eslint-disable-next-line */}
+          borderTop={`1px solid ${vars('colors-neutral-platinum')}`}>
           {information.map((item, index) => (
             <ListItem key={index} display="flex">
               <IconSelection type={item.icon} />
               <Box display="inline-block" ml=".625rem">
-                {item.href?.length > 0 ? (
+                {item.href !== undefined && item.href?.length > 0 ? (
                   <Link
                     isExternal
                     href={item.href}

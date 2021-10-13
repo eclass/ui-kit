@@ -161,6 +161,15 @@ export const dataBase = {
   ],
 }
 
+/*
+logo: 'https://cdn.eclass.com/img/productos/logos/logo-utec-square.jpg',
+logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
+
+background: 'https://cdn.eclass.com/img/cursos/default1.png',
+background: 'https://cdn.eclass.com/img/cursos/default2.png',
+background: 'https://cdn.eclass.com/img/cursos/default3.png',
+*/
+
 export const dataStates: any = {
   noHabilitado: {
     ...dataBase,
@@ -195,6 +204,8 @@ export const dataStates: any = {
   },
   preInscripcion: {
     ...dataBase,
+    logo: 'https://cdn.eclass.com/img/productos/logos/logo-utec-square.jpg',
+    background: 'https://cdn.eclass.com/img/cursos/default1.png',
     id: 2,
     status: {
       ...dataBase.status,
@@ -227,6 +238,7 @@ export const dataStates: any = {
   preInscripcion2: {
     ...dataBase,
     id: 3,
+    logo: '',
     status: {
       ...dataBase.status,
       id: 2,
@@ -257,6 +269,7 @@ export const dataStates: any = {
   },
   inscripcion: {
     ...dataBase,
+    background: 'https://cdn.eclass.com/img/cursos/default2.png',
     id: 4,
     status: {
       ...dataBase.status,
@@ -293,10 +306,6 @@ export const dataStates: any = {
       id: 3,
       name: 'inscripcion',
     },
-    Profile: {
-      id: 1,
-      name: 'Administrador',
-    },
     progress: {
       ...dataBase.progress,
       label: 'Tienes hasta el Lunes 16 de Enero para de 2022 inscribirte',
@@ -306,13 +315,7 @@ export const dataStates: any = {
       ...dataBase.dateStatus,
       hasDates: true,
     },
-    information: [
-      {
-        icon: 'certificate',
-        text: 'Certificado por ACHS',
-        href: '',
-      },
-    ],
+    information: [],
     action: {
       ...dataBase.action,
       text: 'Inscríbete',
@@ -332,6 +335,8 @@ export const dataStates: any = {
   noDisponible: {
     ...dataBase,
     id: 6,
+    logo: '',
+    background: 'https://cdn.eclass.com/img/cursos/default2.png',
     status: {
       ...dataBase.status,
       id: 4,
@@ -359,19 +364,12 @@ export const dataStates: any = {
       text: 'Ver información del curso',
       targetBlank: true,
     },
-    labels: [
-      {
-        id: 'OBLIGATORY',
-        text: 'Obligatorio',
-      },
-      {
-        id: 'NEW',
-        text: 'Nuevo',
-      },
-    ],
+    labels: [],
   },
   noDisponible2: {
     ...dataBase,
+    background: 'https://cdn.eclass.com/img/cursos/default3.png',
+    logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
     id: 7,
     status: {
       ...dataBase.status,
@@ -398,7 +396,6 @@ export const dataStates: any = {
     action: {
       ...dataBase.action,
       enabled: false,
-      text: 'Ver información del curso',
     },
     labels: [],
   },
@@ -444,6 +441,7 @@ export const dataStates: any = {
   sinEstudiar: {
     ...dataBase,
     id: 9,
+    logo: '',
     status: {
       ...dataBase.status,
       id: 6,
@@ -483,6 +481,7 @@ export const dataStates: any = {
   sinEstudiar2: {
     ...dataBase,
     id: 10,
+    background: 'https://cdn.eclass.com/img/cursos/default2.png',
     status: {
       ...dataBase.status,
       id: 6,
@@ -644,6 +643,7 @@ export const dataStates: any = {
       id: 7,
       name: 'continuar',
     },
+    logo: '',
     progress: {
       ...dataBase.progress,
       label: 'Has completado un 100% de tu curso',
@@ -675,6 +675,7 @@ export const dataStates: any = {
   },
   pendiente: {
     ...dataBase,
+    background: 'https://cdn.eclass.com/img/cursos/default3.png',
     id: 15,
     status: {
       ...dataBase.status,
@@ -749,7 +750,12 @@ export const dataStates: any = {
   },
   terminado2: {
     ...dataBase,
+    logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
     id: 17,
+    Profile: {
+      id: 1,
+      name: 'Administrador',
+    },
     status: {
       ...dataBase.status,
       id: 9,
@@ -788,6 +794,7 @@ export const dataStates: any = {
   terminado3: {
     ...dataBase,
     id: 18,
+    logo: '',
     status: {
       ...dataBase.status,
       id: 9,
