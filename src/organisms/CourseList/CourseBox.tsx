@@ -2,10 +2,10 @@ import * as React from 'react'
 import { LinkBox, Box, Flex } from '@chakra-ui/react'
 
 import { Header, Section, Footer } from './components'
-import { box } from './dataFake'
 import { Ripples, vars } from '../../'
+import * as Type from './types.d'
 
-export const CourseBoxContext = React.createContext<Partial<box>>({})
+export const CourseBoxContext = React.createContext<Partial<Type.AcademicList>>({})
 
 interface WithRipplesProps {
   enabled: boolean
@@ -16,7 +16,7 @@ function WithRipples({ enabled, children }: WithRipplesProps): JSX.Element {
 }
 
 interface CourseBoxProps {
-  data: any
+  data: Type.AcademicList
 }
 
 export function CourseBox({ data }: CourseBoxProps): JSX.Element {
@@ -36,7 +36,7 @@ export function CourseBox({ data }: CourseBoxProps): JSX.Element {
         _hover={cssActive}
         _focus={cssActive}
         overflow="hidden">
-        <WithRipples enabled={data.action.enabled}>
+        <WithRipples enabled={data.action?.enabled ?? false}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box>
               <Header />

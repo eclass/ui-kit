@@ -10,6 +10,10 @@ export interface LabelProps {
   m?: string
 }
 
+/**
+ * Componente Label
+ * @example <Label>Etiqueta</Label>
+ */
 export function Label({
   children,
   bg = vars('colors-icon-ripeMango'),

@@ -7,7 +7,7 @@ import { vars } from '../../../'
 
 export function Footer(): JSX.Element | null {
   const { action } = React.useContext(CourseBoxContext)
-  if (action === undefined || (action?.enabled && action.href.length === 0)) {
+  if (action === undefined || (action?.enabled && action.href?.length === 0)) {
     return null
   }
   return (
@@ -28,7 +28,8 @@ export function Footer(): JSX.Element | null {
             isExternal={action.targetBlank}>
             {action.text}
           </LinkOverlay>
-          {action.hasIcon && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
+          {/* eslint-disable-next-line */}
+          {action.hasIcon === true && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
         </>
       ) : (
         <Text

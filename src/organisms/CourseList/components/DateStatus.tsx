@@ -1,16 +1,19 @@
 import { Text } from '@chakra-ui/react'
 
+import { vars } from '../../../'
+
 interface DateStatusProps {
-  date: string
+  date?: string
 }
 
 export function DateStatus({ date }: DateStatusProps): JSX.Element | null {
-  if (date.length === 0) {
+  /* eslint-disable-next-line */
+  if (!date || date.length === 0) {
     return null
   }
 
   return (
-    <Text fontSize=".75rem" color="neutral.darkCharcoal" m="0">
+    <Text fontSize=".75rem" color={vars('colors-neutral-darkCharcoal')} m="0">
       {date}
     </Text>
   )
