@@ -50,7 +50,7 @@ export function Header(): JSX.Element {
           left=".9375rem"
           transform="translateY(30%)"
           h="3.5rem"
-          border={`1px solid ${vars('colors-neutral-platinum')}`}
+          border={vars('borders-light')}
           bg={vars('colors-neutral-white')}
           overflow="hidden"
           borderRadius="0.25em"

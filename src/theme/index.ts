@@ -7,9 +7,11 @@ import '@fontsource/lora/400.css'
 
 import { colors } from './colors'
 import { styles } from './styles'
+import { utils } from './utils'
 
 export const theme = extendTheme({
   colors,
+  ...utils,
   fonts: {
     body: 'roboto',
   },

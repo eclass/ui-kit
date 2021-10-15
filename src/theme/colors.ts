@@ -1,10 +1,16 @@
 const main = {
-  blueGrey: '#60798E',
   deepSkyBlue: '#0189FF',
-  ziggurat: '#B0CFE0',
+  azureRadiance: '#017BE5',
+  blueGrey: '#60798E',
   veryLightBlue: '#E0EEFA',
+  linkWater: '#C7DEF2',
+  ziggurat: '#B0CFE0',
 }
 
+/**
+ * Valores definidos en el sistema de diseños eclass.
+ * @see https://zeroheight.com/15698077d/p/435a07-paleta-de-colores
+ */
 export const colors = {
   main,
   secondary: {

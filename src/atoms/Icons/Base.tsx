@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon as IconChakra } from '@chakra-ui/react'
 
-import { vars } from '../../'
+import { vars } from '../..'
 
 export interface BaseProps {
   w?: string
@@ -14,7 +14,7 @@ interface IconProps extends BaseProps {
   children: React.ReactChild | React.ReactChild[]
 }
 
-export function Icon({
+export function Base({
   w = '1rem',
   h = '1rem',
   color = vars('colors-main-ziggurat'),

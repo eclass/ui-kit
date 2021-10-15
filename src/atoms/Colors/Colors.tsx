@@ -12,15 +12,10 @@ export interface ColorsProps extends BoxProps {
 export function Colors({ type, ...styles }: ColorsProps): JSX.Element {
   return (
     <Box {...styles}>
-      <SimpleGrid columns={6} spacing={5} minChildWidth="8rem">
+      <SimpleGrid spacing={5} templateColumns="repeat(auto-fill, minmax(8rem, 1fr))">
         {Object.keys(colors[type]).map((color: string, index) => (
-          <Color
-            key={index}
-            type={type}
-            color={color}
-            // @ts-expect-error
-            hexa={colors[type][color]}
-          />
+          // @ts-expect-error
+          <Color key={index} type={type} color={color} hexa={colors[type][color]} />
         ))}
       </SimpleGrid>
     </Box>

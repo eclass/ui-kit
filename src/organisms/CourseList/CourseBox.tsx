@@ -28,8 +28,8 @@ export function CourseBox({ data }: CourseBoxProps): JSX.Element {
     <CourseBoxContext.Provider value={data}>
       <LinkBox
         as="article"
-        border={`1px solid ${vars('colors-neutral-platinum')}`}
-        borderRadius={10}
+        border={vars('borders-light')}
+        borderRadius={vars('radii-big')}
         cursor="pointer"
         transition="box-shadow .3s"
         _active={cssActive}
