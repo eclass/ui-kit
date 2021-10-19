@@ -16,7 +16,8 @@ export function Footer(): JSX.Element | null {
       mt="1rem"
       p="1rem"
       borderTop="1px solid"
-      borderTopColor={vars('colors-neutral-platinum')}>
+      borderTopColor={vars('colors-neutral-platinum')}
+    >
       {action.enabled ? (
         <>
           <LinkOverlay
@@ -25,7 +26,8 @@ export function Footer(): JSX.Element | null {
             fontWeight="500"
             mr="1.5rem"
             lineHeight="1.172rem"
-            isExternal={action.targetBlank}>
+            isExternal={action.targetBlank}
+          >
             {action.text}
           </LinkOverlay>
           {/* eslint-disable-next-line */}
@@ -36,7 +38,8 @@ export function Footer(): JSX.Element | null {
           fontWeight="500"
           lineHeight="1.172rem"
           color={vars('colors-neutral-spanishGrey')}
-          m="0">
+          m="0"
+        >
           {action.text}
         </Text>
       )}

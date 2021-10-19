@@ -35,7 +35,8 @@ export function CourseBox({ data }: CourseBoxProps): JSX.Element {
         _active={cssActive}
         _hover={cssActive}
         _focus={cssActive}
-        overflow="hidden">
+        overflow="hidden"
+      >
         <WithRipples enabled={data.action?.enabled ?? false}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box>

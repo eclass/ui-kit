@@ -1,0 +1,3 @@
+{
+  "src/**/*.{ts,tsx,mdx}": ["npm run lint"]
+}

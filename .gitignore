@@ -6,3 +6,5 @@ dist-ssr
 *.local
 yarn-error.log
 docs
+.eslintcache
+tsconfig.tsbuildinfo

@@ -18,7 +18,8 @@ export function Header(): JSX.Element {
       bgSize="cover"
       height="8.75rem"
       borderBottom={`1px solid ${vars('colors-neutral-platinum')}`}
-      pos="relative">
+      pos="relative"
+    >
       <Box p="1rem">
         {profile?.id !== STUDENT && (
           <Label bg={vars('colors-neutral-white')} m="0 0 .625rem 0">
@@ -33,7 +34,8 @@ export function Header(): JSX.Element {
             {labels.map((item, index) => (
               <Label
                 key={index}
-                bg={item.id === 'NEW' ? vars('colors-secondary-pumpkin') : undefined}>
+                bg={item.id === 'NEW' ? vars('colors-secondary-pumpkin') : undefined}
+              >
                 {item.text}
               </Label>
             ))}
@@ -52,7 +54,8 @@ export function Header(): JSX.Element {
           bg={vars('colors-neutral-white')}
           overflow="hidden"
           borderRadius="0.25em"
-          w="6.25rem">
+          w="6.25rem"
+        >
           <Image src={logo} alt={logoAlt} maxHeight="3.5rem" />
         </Center>
       )}
