@@ -107,7 +107,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "1.6.10",
-    "@emotion/react": "11.4.1",
+    "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
     "@fontsource/lora": "4.5.0",
     "@fontsource/roboto": "4.5.1",
