@@ -17,7 +17,7 @@ export function Header(): JSX.Element {
       bgPos="center"
       bgSize="cover"
       height="8.75rem"
-      borderBottom={`1px solid ${vars('colors-neutral-platinum')}`}
+      borderBottom={vars('borders-light')}
       pos="relative"
     >
       <Box p="1rem">
@@ -53,7 +53,7 @@ export function Header(): JSX.Element {
           border={vars('borders-light')}
           bg={vars('colors-neutral-white')}
           overflow="hidden"
-          borderRadius="0.25em"
+          borderRadius={vars('radii-small')}
           w="6.25rem"
         >
           <Image src={logo} alt={logoAlt} maxHeight="3.5rem" />
