@@ -30,7 +30,8 @@ export function Section(): JSX.Element | null {
             ) : (
               <></>
             )
-          }>
+          }
+        >
           <DateStatus date={dateStatus.init} />
           <DateStatus date={dateStatus.end} />
         </HStack>
@@ -50,7 +51,8 @@ export function Section(): JSX.Element | null {
             size="sm"
             // eslint-disable-next-line
             bg={progress.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
-            color={vars('colors-neutral-white')}>
+            color={vars('colors-neutral-white')}
+          >
             {progress?.finalGrade}
           </Label>
         )}
@@ -63,7 +65,8 @@ export function Section(): JSX.Element | null {
           pt=".625rem"
           m=".625rem 0 0"
           lineHeight=".875rem"
-          borderTop={`1px solid ${vars('colors-neutral-platinum')}`}>
+          borderTop={`1px solid ${vars('colors-neutral-platinum')}`}
+        >
           {information.map((item, index) => (
             <ListItem key={index} display="flex">
               <IconSelection type={item.icon} />
@@ -75,7 +78,8 @@ export function Section(): JSX.Element | null {
                     color={vars('colors-main-deepSkyBlue')}
                     textDecor="underline"
                     fontWeight="500"
-                    fontSize=".75rem">
+                    fontSize=".75rem"
+                  >
                     {item.text}
                   </Link>
                 ) : (

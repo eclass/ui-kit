@@ -11,7 +11,8 @@ export function ArrowRight(props: BaseProps): JSX.Element {
           height="16"
           x="0"
           y="0"
-          maskUnits="userSpaceOnUse">
+          maskUnits="userSpaceOnUse"
+        >
           <path fill="#fff" d="M16 16H32V32H16z" transform="rotate(180 16 16)" />
         </mask>
         <g mask="url(#mask0)">

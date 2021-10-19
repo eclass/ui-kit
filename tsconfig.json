@@ -20,7 +20,7 @@
     "sourceMap": true
   },
   "include": ["src", "test"],
-  "exclude": ["jest.config.js", ".eslintrc.js"],
+  "exclude": ["jest.config.js", ".eslintrc.js", "prepare.js"],
   "paths": {
     "@": ["./src/"],
     "@atoms": ["./src/atoms/"],

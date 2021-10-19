@@ -44,7 +44,8 @@ export function Label({
       fontWeight={config[size].fontWeight}
       lineHeight=".875rem"
       m={m}
-      p={config[size].p}>
+      p={config[size].p}
+    >
       {children}
     </Box>
   )

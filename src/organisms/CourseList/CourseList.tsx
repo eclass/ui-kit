@@ -29,7 +29,8 @@ export function CourseList({
       gridRowGap="1.75rem"
       gridTemplateColumns={`repeat(auto-fill, minmax(${wCourse}rem, 1fr))`}
       m={m}
-      w="100%">
+      w="100%"
+    >
       {courses?.map((course: Type.AcademicList) => (
         <CourseBox key={course.id} data={course} />
       ))}
