@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/eclass/ui-kit/compare/v1.5.0...v1.5.1) (2021-10-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @chakra-ui/react to v1.6.10 ([544b139](https://github.com/eclass/ui-kit/commit/544b139a46e6734f97b5a3b64374e52105e19680))
+* **deps:** update dependency @emotion/react to v11.5.0 ([#120](https://github.com/eclass/ui-kit/issues/120)) ([257bf1f](https://github.com/eclass/ui-kit/commit/257bf1f6618275f0316241debd047f75fbb1142e))
+
 # [1.5.0](https://github.com/eclass/ui-kit/compare/v1.4.5...v1.5.0) (2021-10-13)
 
 
