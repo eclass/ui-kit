@@ -1,3 +1,10 @@
+## [1.5.2](https://github.com/eclass/ui-kit/compare/v1.5.1...v1.5.2) (2021-10-20)
+
+
+### Bug Fixes
+
+* **theme:** bordes, grilla storie colors ([#113](https://github.com/eclass/ui-kit/issues/113)) ([97ebcc1](https://github.com/eclass/ui-kit/commit/97ebcc1f391bf3ae5b50b9635b605e068dc63f83))
+
 ## [1.5.1](https://github.com/eclass/ui-kit/compare/v1.5.0...v1.5.1) (2021-10-19)
 
 
