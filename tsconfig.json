@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2019",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     // significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS

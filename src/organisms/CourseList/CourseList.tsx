@@ -18,7 +18,7 @@ export function CourseList({
   courses,
   m = '0 auto',
 }: Type.WrapperCoursesProps): JSX.Element | null {
-  if (courses?.length === 0) {
+  if (courses === undefined) {
     return null
   }
 

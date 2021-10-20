@@ -1,8 +1,8 @@
-import { Icon, BaseProps } from './Icon'
+import { Base, BaseProps } from './Base'
 
 export function ArrowRight(props: BaseProps): JSX.Element {
   return (
-    <Icon {...props}>
+    <Base {...props}>
       <g clipPath="url(#clip0)">
         <mask
           id="mask0"
@@ -24,7 +24,7 @@ export function ArrowRight(props: BaseProps): JSX.Element {
           <path fill="#fff" d="M0 0H16V16H0z" />
         </clipPath>
       </defs>
-    </Icon>
+    </Base>
   )
 }
 

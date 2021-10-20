@@ -1,8 +1,8 @@
-import { Icon, BaseProps } from './Icon'
+import { Base, BaseProps } from './Base'
 
 export function Schedule(props: BaseProps): JSX.Element {
   return (
-    <Icon {...props}>
+    <Base {...props}>
       <path
         fill="currentColor"
         fillRule="evenodd"
@@ -15,7 +15,7 @@ export function Schedule(props: BaseProps): JSX.Element {
       <path fill="currentColor" d="M7 10H9V12H7z" />
       <path fill="currentColor" d="M10 7H12V9H10z" />
       <path fill="currentColor" d="M10 10H12V12H10z" />
-    </Icon>
+    </Base>
   )
 }
 

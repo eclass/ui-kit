@@ -4,7 +4,7 @@ import { CourseList } from './CourseList'
 import { dataFake, maxWidthCoursesList } from '.'
 
 const Story: Meta = {
-  title: 'Atoms/CourseList',
+  title: 'organisms/CourseList',
   component: CourseList,
 }
 

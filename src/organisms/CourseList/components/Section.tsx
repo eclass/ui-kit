@@ -65,7 +65,7 @@ export function Section(): JSX.Element | null {
           pt=".625rem"
           m=".625rem 0 0"
           lineHeight=".875rem"
-          borderTop={`1px solid ${vars('colors-neutral-platinum')}`}
+          borderTop={vars('borders-light')}
         >
           {information.map((item, index) => (
             <ListItem key={index} display="flex">

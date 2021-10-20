@@ -8,13 +8,21 @@ interface ColorProps extends ColorsProps {
 }
 
 export function Color({ type, color, hexa }: ColorProps): JSX.Element {
-  const { hasCopied, onCopy } = useClipboard(`${type}.${color}`)
+  const { hasCopied, onCopy } = useClipboard(`colors-${type}-${color}`)
   return (
     <Box cursor="pointer" onClick={onCopy}>
-      <Center bg={`${type}.${color}`} h="80px">
+      <Center bg={`${type}.${color}`} h="8rem" borderRadius="base" border="light">
         {hasCopied ? (
-          <Box as="span" bg="neutral.cultured2" color="neutral.darkCharcoal">
-            nombre copiado
+          <Box
+            as="span"
+            bg="whiteAlpha.700"
+            color="neutral.darkCharcoal"
+            fontSize=".75rem"
+            borderRadius="base"
+            border="light"
+            p=".25rem 1rem"
+          >
+            copiado
           </Box>
         ) : null}
       </Center>
