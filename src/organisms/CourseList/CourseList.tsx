@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 
 import { CourseBox } from './CourseBox'
-import * as Type from './types.d'
+import * as Type from './types'
 
 export const columnGap = 1.25 // 20px
 export const wCourse = 17.8125 // 285px

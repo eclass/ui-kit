@@ -3,7 +3,6 @@
     "target": "ES2019",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
-    // significant perf increase by skipping checking .d.ts files, particularly those in node_modules. Recommended by TS
     "skipLibCheck": true,
     "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
@@ -14,20 +13,22 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+    "incremental": true,
     "jsx": "react-jsx",
     "importHelpers": true,
-    "declaration": true,
-    "sourceMap": true
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@atoms": ["src/atoms"],
+      "@theme": ["src/theme"],
+      "@theme/*": ["src/theme/*"],
+      "@organisms": ["src/organisms"],
+      "@icons": ["src/atoms/Icons"]
+    },
+    "plugins": [
+      { "transform": "typescript-transform-paths", "afterDeclarations": true }
+    ]
   },
-  "include": ["src", "test"],
-  "exclude": ["jest.config.js", ".eslintrc.js", "prepare.js"],
-  "paths": {
-    "@": ["./src/"],
-    "@atoms": ["./src/atoms/"],
-    "@theme": ["./src/theme/"],
-    "@mocules": ["./src/mocules/"],
-    "@organisms": ["./src/organisms/"],
-    "@icon": ["./src/atoms/Icons/"],
-    "@color": ["./src/theme/colors"],
-  },
+  "include": ["src", "test", "vite.config.ts"],
+  "exclude": ["jest.config.js", ".eslintrc.js", "prepare.js"]
 }

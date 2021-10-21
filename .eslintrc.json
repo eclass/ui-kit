@@ -1,6 +1,8 @@
 {
   "root": true,
   "env": {
+    "browser": true,
+    "node": true,
     "jest": true
   },
   "parser": "@typescript-eslint/parser",
@@ -32,6 +34,14 @@
     }
   ],
   "settings": {
-    "mdx/code-blocks": true
+    "mdx/code-blocks": true,
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx", ".mdx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
   }
 }

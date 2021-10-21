@@ -1,5 +1,5 @@
-import { Schedule, Certificate, CircularCheck, CircularInformation } from '../../../atoms/Icons'
-import { Progress } from '../../../atoms'
+import { Progress } from '@atoms'
+import { Schedule, Certificate, CircularCheck, CircularInformation } from '@icons'
 
 interface IconSelectionProps {
   type: string

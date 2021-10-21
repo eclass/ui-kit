@@ -1,4 +1,5 @@
 const path = require('path')
+const tsconfigPaths = require('vite-tsconfig-paths').default
 
 const toPath = (_path) => path.join(process.cwd(), _path)
 
@@ -14,9 +15,10 @@ module.exports = {
   typescript: {
     check: true
   },
-  viteFinal: async config => {
+  async viteFinal(config) {
     return {
       ...config,
+      plugins: [...config.plugins, tsconfigPaths({ extensions: ['ts', 'tsx', 'mdx'] })],
       resolve: {
         ...config.resolve,
         alias: {

@@ -1,6 +1,6 @@
 import { SimpleGrid, Box, BoxProps } from '@chakra-ui/react'
 
-import { colors } from '../../theme/colors'
+import { colors } from '@theme/colors'
 import { Color } from './Color'
 
 type ColorsType = keyof typeof colors

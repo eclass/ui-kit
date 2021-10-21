@@ -2,14 +2,16 @@ import * as React from 'react'
 import { Center, LinkOverlay, Text } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
-import { ArrowRight } from '../../../atoms/Icons'
-import { vars } from '../../../'
+import { ArrowRight } from '@icons'
+import { vars } from '@theme'
 
 export function Footer(): JSX.Element | null {
   const { action } = React.useContext(CourseBoxContext)
-  if (action === undefined || (action?.enabled && action.href?.length === 0)) {
+
+  if (action == null || (action?.enabled && action.href?.length === 0)) {
     return null
   }
+
   return (
     <Center
       as="footer"
@@ -30,8 +32,7 @@ export function Footer(): JSX.Element | null {
           >
             {action.text}
           </LinkOverlay>
-          {/* eslint-disable-next-line */}
-          {action.hasIcon === true && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
+          {action.hasIcon && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
         </>
       ) : (
         <Text

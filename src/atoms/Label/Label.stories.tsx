@@ -1,6 +1,7 @@
 import { ComponentStory, Meta } from '@storybook/react'
 
 import { Label } from './Label'
+import { colors } from '@theme/colors'
 
 const meta: Meta = {
   title: 'Atoms/Label',
@@ -8,7 +9,7 @@ const meta: Meta = {
   argTypes: {
     children: { type: { required: true } },
     bg: { defaultValue: 'icon.ripeMango', control: 'color' },
-    color: { defaultValue: 'neutral.darkCharcoal', control: 'color' },
+    color: { defaultValue: colors.neutral.darkCharcoal, control: 'color' },
     size: {
       defaultValue: 'md',
       control: {

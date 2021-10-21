@@ -1,14 +1,13 @@
 import { Text } from '@chakra-ui/react'
 
-import { vars } from '../../../'
+import { vars } from '@theme'
 
 interface DateStatusProps {
   date?: string
 }
 
 export function DateStatus({ date }: DateStatusProps): JSX.Element | null {
-  /* eslint-disable-next-line */
-  if (!date || date.length === 0) {
+  if (date == null || date.length === 0) {
     return null
   }
 

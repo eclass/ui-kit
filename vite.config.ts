@@ -1,15 +1,16 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tsconfigPaths from 'vite-tsconfig-paths'
 import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), tsconfigPaths()],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: '@eclass/ui-kit',
-      fileName: format => `eclass-ui-kit.${format}.js`,
+      fileName: (format) => `eclass-ui-kit.${format}.js`,
     },
     sourcemap: true,
     rollupOptions: {
@@ -23,17 +24,6 @@ export default defineConfig({
           react: 'React',
         },
       },
-    },
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@atoms': path.resolve(__dirname, './src/atoms/'),
-      '@theme': path.resolve(__dirname, './src/theme/'),
-      '@molecules': path.resolve(__dirname, './src/molecules/'),
-      '@organisms': path.resolve(__dirname, './src/organisms/'),
-      '@icon': path.resolve(__dirname, './src/atoms/Icons/'),
-      '@color': path.resolve(__dirname, './src/theme/colors'),
     },
   },
 })

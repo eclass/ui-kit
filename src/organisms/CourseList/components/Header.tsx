@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { Box, Stack, Image, Center, Flex } from '@chakra-ui/react'
 
-import { Label, vars } from '../../../'
 import { CourseBoxContext } from '../CourseBox'
-import { Profile } from '../../../atoms/Icons'
+import { Label } from '@atoms'
+import { vars } from '@theme'
+import { Profile } from '@icons'
 
 const STUDENT = 4
 
