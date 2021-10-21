@@ -1,7 +1,6 @@
-import React from 'react'
 import { Icon as IconChakra } from '@chakra-ui/react'
 
-import { vars } from '../..'
+import { vars } from '@theme'
 
 export interface BaseProps {
   w?: string

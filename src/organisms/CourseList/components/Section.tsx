@@ -1,24 +1,25 @@
-import React from 'react'
+import * as React from 'react'
 import { Box, Heading, Link, List, HStack, Text, ListItem, Flex } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
 import { DateStatus } from './DateStatus'
 import { IconSelection } from './IconSelection'
-import { Label, vars } from '../../../'
+import { Label } from '@atoms'
+import { vars } from '@theme'
 
 const ID_QUALIFIED = 7
 
 export function Section(): JSX.Element | null {
   const { name, dateStatus, information, progress, status } = React.useContext(CourseBoxContext)
 
-  // eslint-disable-next-line
-  if (!progress) {
+  if (progress == null) {
     return null
   }
+
   return (
     <Box marginTop="1.875rem" as="section" p="0 .9375rem">
       {/* eslint-disable-next-line */}
-      {dateStatus?.hasDates && (
+      {dateStatus != null && dateStatus?.hasDates && (
         <HStack
           direction="row"
           divider={
@@ -49,7 +50,6 @@ export function Section(): JSX.Element | null {
         {status?.id === ID_QUALIFIED && progress?.finalGrade.length > 0 && (
           <Label
             size="sm"
-            // eslint-disable-next-line
             bg={progress.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
             color={vars('colors-neutral-white')}
           >
@@ -57,8 +57,7 @@ export function Section(): JSX.Element | null {
           </Label>
         )}
       </Flex>
-      {/* eslint-disable-next-line */}
-      {information && information?.length > 0 && (
+      {information != null && information?.length > 0 && (
         <List
           spacing=".625rem"
           paddingInlineStart="0"

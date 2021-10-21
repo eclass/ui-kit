@@ -2,8 +2,9 @@ import * as React from 'react'
 import { LinkBox, Box, Flex } from '@chakra-ui/react'
 
 import { Header, Section, Footer } from './components'
-import { Ripples, vars } from '../../'
-import * as Type from './types.d'
+import { Ripples } from '@atoms'
+import { vars } from '@theme'
+import * as Type from './types'
 
 export const CourseBoxContext = React.createContext<Partial<Type.AcademicList>>({})
 

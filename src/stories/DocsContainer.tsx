@@ -1,7 +1,7 @@
 import { DocsContainer as StoryDocsContainer, DocsContextProps } from '@storybook/addon-docs'
 import { ChakraProvider } from '@chakra-ui/react'
 
-import { theme } from '../theme'
+import { theme } from '@theme'
 
 interface DocsContainerProps {
   children: React.ReactNode
