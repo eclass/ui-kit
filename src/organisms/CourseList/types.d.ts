@@ -1,5 +1,5 @@
 // import { AcademicBox } from '@eclass/api'
-import { box } from './dataFake'
+import { box } from './utils/dataFake'
 
 export type AcademicList = box
 

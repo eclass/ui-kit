@@ -399,6 +399,43 @@ export const dataStates: any = {
     },
     labels: [],
   },
+  noDisponible3: {
+    ...dataBase,
+    background: 'https://cdn.eclass.com/img/cursos/default3.png',
+    logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
+    id: 57,
+    Profile: {
+      id: 1,
+      name: 'Administrador',
+    },
+    status: {
+      ...dataBase.status,
+      id: 4,
+      name: 'no disponible',
+    },
+    progress: {
+      ...dataBase.progress,
+      label: 'Tu curso iniciará el Lunes 16 de Enero de 2023',
+      icon: 'schedule',
+    },
+    dateStatus: {
+      init: 'Inicia 17 ene 2022',
+      end: '',
+      hasDates: true,
+    },
+    information: [
+      {
+        icon: 'certificate',
+        text: 'Certificado por ACHS',
+        href: '',
+      },
+    ],
+    action: {
+      ...dataBase.action,
+      enabled: false,
+    },
+    labels: [],
+  },
   activado: {
     ...dataBase,
     id: 8,
