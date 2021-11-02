@@ -1,3 +1,10 @@
+## [1.5.3](https://github.com/eclass/ui-kit/compare/v1.5.2...v1.5.3) (2021-11-02)
+
+
+### Bug Fixes
+
+* **courselist:** acceder al curso ([#150](https://github.com/eclass/ui-kit/issues/150)) ([79fc922](https://github.com/eclass/ui-kit/commit/79fc92281a1adc79fb8f807c17dea03e776b0bbf))
+
 ## [1.5.2](https://github.com/eclass/ui-kit/compare/v1.5.1...v1.5.2) (2021-10-20)
 
 
