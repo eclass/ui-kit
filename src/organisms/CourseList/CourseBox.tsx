@@ -4,6 +4,7 @@ import { LinkBox, Box, Flex } from '@chakra-ui/react'
 import { Header, Section, Footer } from './components'
 import { Ripples } from '@atoms'
 import { vars } from '@theme'
+import { isCourseActive } from './utils'
 import * as Type from './types'
 
 export const CourseBoxContext = React.createContext<Partial<Type.AcademicList>>({})
@@ -38,7 +39,7 @@ export function CourseBox({ data }: CourseBoxProps): JSX.Element {
         _focus={cssActive}
         overflow="hidden"
       >
-        <WithRipples enabled={data.action?.enabled ?? false}>
+        <WithRipples enabled={isCourseActive(data.action?.enabled, data.Profile.id)}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box>
               <Header />

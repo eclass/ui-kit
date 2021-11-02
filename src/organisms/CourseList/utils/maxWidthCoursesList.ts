@@ -1,4 +1,4 @@
-import { columnGap, wCourse } from './CourseList'
+import { columnGap, wCourse } from '../CourseList'
 
 interface payload {
   px: string
