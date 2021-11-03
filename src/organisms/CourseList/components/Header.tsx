@@ -57,7 +57,7 @@ export function Header(): JSX.Element {
           borderRadius={vars('radii-small')}
           w="6.25rem"
         >
-          <Image src={logo} alt={logoAlt} maxHeight="3.5rem" />
+          <Image src={logo} alt={logoAlt ?? 'logo'} maxHeight="3.5rem" maxWidth="6.25rem" />
         </Center>
       )}
     </Box>
