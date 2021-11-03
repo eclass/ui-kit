@@ -1,3 +1,10 @@
+## [1.5.4](https://github.com/eclass/ui-kit/compare/v1.5.3...v1.5.4) (2021-11-03)
+
+
+### Bug Fixes
+
+* **courselist:** maxwidth al logo ([f726bf6](https://github.com/eclass/ui-kit/commit/f726bf680f996f1ce40d49d1786b92ba82be46ef))
+
 ## [1.5.3](https://github.com/eclass/ui-kit/compare/v1.5.2...v1.5.3) (2021-11-02)
 
 
