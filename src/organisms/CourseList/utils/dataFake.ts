@@ -161,15 +161,6 @@ export const dataBase = {
   ],
 }
 
-/*
-logo: 'https://cdn.eclass.com/img/productos/logos/logo-utec-square.jpg',
-logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
-
-background: 'https://cdn.eclass.com/img/cursos/default1.png',
-background: 'https://cdn.eclass.com/img/cursos/default2.png',
-background: 'https://cdn.eclass.com/img/cursos/default3.png',
-*/
-
 export const dataStates: any = {
   noHabilitado: {
     ...dataBase,
@@ -596,6 +587,7 @@ export const dataStates: any = {
   },
   sinEstudiar4: {
     ...dataBase,
+    logo: 'https://cdn.eclass.com/img/productos/logos/logo-uandes-square.jpg',
     id: 12,
     status: {
       ...dataBase.status,
@@ -641,6 +633,7 @@ export const dataStates: any = {
       id: 7,
       name: 'continuar',
     },
+    logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
     progress: {
       ...dataBase.progress,
       label: 'Has completado un 25% de tu curso',
@@ -680,7 +673,7 @@ export const dataStates: any = {
       id: 7,
       name: 'continuar',
     },
-    logo: '',
+    logo: 'https://cdn.eclass.com/files/branding/programa/2119/imagePdf-1628188569.jpg',
     progress: {
       ...dataBase.progress,
       label: 'Has completado un 100% de tu curso',
