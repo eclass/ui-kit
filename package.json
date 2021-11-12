@@ -117,7 +117,7 @@
     "vite-tsconfig-paths": "3.3.17"
   },
   "dependencies": {
-    "@chakra-ui/react": "1.7.0",
+    "@chakra-ui/react": "1.7.1",
     "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
     "@fontsource/lora": "4.5.0",
