@@ -120,7 +120,7 @@
     "@chakra-ui/react": "1.7.1",
     "@emotion/react": "11.5.0",
     "@emotion/styled": "11.3.0",
-    "@fontsource/lora": "4.5.0",
+    "@fontsource/lora": "4.5.1",
     "@fontsource/roboto": "4.5.1",
     "framer-motion": "4.1.17",
     "react-ripples": "2.2.1"
