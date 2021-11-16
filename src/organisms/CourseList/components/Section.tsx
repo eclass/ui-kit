@@ -18,8 +18,7 @@ export function Section(): JSX.Element | null {
 
   return (
     <Box marginTop="1.875rem" as="section" p="0 .9375rem">
-      {/* eslint-disable-next-line */}
-      {dateStatus != null && dateStatus?.hasDates && (
+      {dateStatus?.hasDates && (
         <HStack
           direction="row"
           divider={
