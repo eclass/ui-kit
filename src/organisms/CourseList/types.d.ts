@@ -1,7 +1,6 @@
-// import { AcademicBox } from '@eclass/api'
-import { box } from './utils/dataFake'
+import { AcademicBox } from '@eclass/api'
 
-export type AcademicList = box
+export type AcademicList = AcademicBox
 
 export interface WrapperCoursesProps {
   courses: AcademicList[]

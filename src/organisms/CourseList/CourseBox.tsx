@@ -39,7 +39,7 @@ export function CourseBox({ data }: CourseBoxProps): JSX.Element {
         _focus={cssActive}
         overflow="hidden"
       >
-        <WithRipples enabled={isCourseActive(data.action?.enabled, data.Profile.id)}>
+        <WithRipples enabled={isCourseActive(data.action?.enabled ?? false, data.Profile?.id)}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box>
               <Header />
