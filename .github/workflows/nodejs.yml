@@ -17,7 +17,7 @@ jobs:
       - uses: webfactory/ssh-agent@v0.5.3
         with:
             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Host
+      - name: Add Know Hosts
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
@@ -37,6 +37,14 @@ jobs:
         with:
           node-version: '12.22.6'
           cache: 'npm'
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Add Know Hosts
+        run: |
+          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+        shell: bash
+      - name: Clean install on CI
       - run: npm ci
       - run: npm run build
       - run: npx semantic-release
@@ -53,6 +61,14 @@ jobs:
         with:
           node-version: '12.22.6'
           cache: 'npm'
+      - uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Add Know Hosts
+        run: |
+          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+        shell: bash
+      - name: Clean install on CI
       - run: npm ci
       - name: Deploy to GH Pages
         env:
