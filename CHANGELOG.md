@@ -1,3 +1,15 @@
+## [1.5.5](https://github.com/eclass/ui-kit/compare/v1.5.4...v1.5.5) (2021-11-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @chakra-ui/react to v1.6.12 ([e9399e0](https://github.com/eclass/ui-kit/commit/e9399e014c8d9a8da4d337f16f5692385fa754f7))
+* **deps:** update dependency @chakra-ui/react to v1.7.0 ([be067f6](https://github.com/eclass/ui-kit/commit/be067f66d6883a6e642b7d2eec7e0ac0361f8449))
+* **deps:** update dependency @chakra-ui/react to v1.7.1 ([d2cf0ab](https://github.com/eclass/ui-kit/commit/d2cf0ab71e349760dcc559f154afe889cb8ff728))
+* **deps:** update dependency @fontsource/lora to v4.5.1 ([f29ec88](https://github.com/eclass/ui-kit/commit/f29ec882d3b0558fdfe0b8bce2698ca3c8f690fb))
+* **deps:** update emotion monorepo to v11.6.0 ([215b6ca](https://github.com/eclass/ui-kit/commit/215b6ca2f004544f279b4925a42eb6107c38b553))
+* **types:** add eclass api types and sequelize types ([ddab50c](https://github.com/eclass/ui-kit/commit/ddab50c4bfc731303a9e288c55a37882b62ddec1))
+
 ## [1.5.4](https://github.com/eclass/ui-kit/compare/v1.5.3...v1.5.4) (2021-11-03)
 
 
