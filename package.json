@@ -124,7 +124,7 @@
     "@emotion/styled": "11.6.0",
     "@fontsource/lora": "4.5.1",
     "@fontsource/roboto": "4.5.1",
-    "framer-motion": "5.5.3",
+    "framer-motion": "5.5.4",
     "react-ripples": "2.2.1"
   }
 }
