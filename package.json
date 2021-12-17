@@ -100,7 +100,7 @@
     "eslint-plugin-react-hooks": "4.3.0",
     "eslint-plugin-simple-import-sort": "7.0.0",
     "eslint-plugin-testing-library": "5.0.1",
-    "graphql": "16.1.0",
+    "graphql": "16.2.0",
     "husky": "7.0.4",
     "identity-obj-proxy": "3.0.0",
     "jest": "27.4.5",
