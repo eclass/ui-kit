@@ -27,7 +27,7 @@ export function Footer(): JSX.Element | null {
             href={action.href}
             color={vars('colors-main-deepSkyBlue')}
             fontWeight="500"
-            mr="1.5rem"
+            mr={action.hasIcon ? '1.5rem' : '0'}
             lineHeight="1.172rem"
             isExternal={action.targetBlank}
           >
