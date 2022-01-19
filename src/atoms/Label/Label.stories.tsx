@@ -7,7 +7,7 @@ const meta: Meta = {
   title: 'Atoms/Label',
   component: Label,
   argTypes: {
-    children: { type: { required: true } },
+    children: { type: { name: 'string', required: true } },
     bg: { defaultValue: 'icon.ripeMango', control: 'color' },
     color: { defaultValue: colors.neutral.darkCharcoal, control: 'color' },
     size: {
