@@ -1,3 +1,37 @@
+## [1.5.5](https://github.com/eclass/ui-kit/compare/v1.5.4...v1.5.5) (2022-01-19)
+
+
+### Bug Fixes
+
+* **courselist:** texto accion centrado ([f6b33e0](https://github.com/eclass/ui-kit/commit/f6b33e09c66cc4065ca04ef8d74f4b3257530859))
+* **deps:** update dependency @chakra-ui/react to v1.6.12 ([e9399e0](https://github.com/eclass/ui-kit/commit/e9399e014c8d9a8da4d337f16f5692385fa754f7))
+* **deps:** update dependency @chakra-ui/react to v1.7.0 ([be067f6](https://github.com/eclass/ui-kit/commit/be067f66d6883a6e642b7d2eec7e0ac0361f8449))
+* **deps:** update dependency @chakra-ui/react to v1.7.1 ([d2cf0ab](https://github.com/eclass/ui-kit/commit/d2cf0ab71e349760dcc559f154afe889cb8ff728))
+* **deps:** update dependency @chakra-ui/react to v1.7.2 ([0696eaf](https://github.com/eclass/ui-kit/commit/0696eaff5e3a89a987045497333bdfa967229170))
+* **deps:** update dependency @chakra-ui/react to v1.7.3 ([df4ae21](https://github.com/eclass/ui-kit/commit/df4ae217aa99218fb1294042f947c5bc4c91b436))
+* **deps:** update dependency @chakra-ui/react to v1.7.4 ([12b6352](https://github.com/eclass/ui-kit/commit/12b63525bdfde7689f6e0e111f8c5fade426719c))
+* **deps:** update dependency @emotion/react to v11.7.0 ([569ba8d](https://github.com/eclass/ui-kit/commit/569ba8d3b9aed8d2581ce81ae1ed1d7d5717136b))
+* **deps:** update dependency @emotion/react to v11.7.1 ([4c28da1](https://github.com/eclass/ui-kit/commit/4c28da154d5455eee96027c1c2929a7eb8219580))
+* **deps:** update dependency @fontsource/lora to v4.5.1 ([f29ec88](https://github.com/eclass/ui-kit/commit/f29ec882d3b0558fdfe0b8bce2698ca3c8f690fb))
+* **deps:** update dependency framer-motion to v5 ([67cff26](https://github.com/eclass/ui-kit/commit/67cff260532f140df8e965c67136ee5c5835c532))
+* **deps:** update dependency framer-motion to v5.3.2 ([6f3460a](https://github.com/eclass/ui-kit/commit/6f3460a9a7030b89f2a8475b48e323c3114e29e4))
+* **deps:** update dependency framer-motion to v5.3.3 ([c518450](https://github.com/eclass/ui-kit/commit/c5184509d94f3e676ed38b95df526e3b6da56cd0))
+* **deps:** update dependency framer-motion to v5.4.1 ([ec49372](https://github.com/eclass/ui-kit/commit/ec493729437efd73976a5e62fddf7c287274e9a0))
+* **deps:** update dependency framer-motion to v5.4.2 ([e5d7121](https://github.com/eclass/ui-kit/commit/e5d712113cb72c2f8b22c2f18909aee10226d8dd))
+* **deps:** update dependency framer-motion to v5.4.3 ([ae3aaef](https://github.com/eclass/ui-kit/commit/ae3aaeffe934a3b336417617cf717ddcdfb7efcc))
+* **deps:** update dependency framer-motion to v5.4.4 ([4953984](https://github.com/eclass/ui-kit/commit/49539848b375ca79e833124220a35a817fef807e))
+* **deps:** update dependency framer-motion to v5.4.5 ([90bf690](https://github.com/eclass/ui-kit/commit/90bf6902ca1bba653b132ab1d52e1958dd0a7dd4))
+* **deps:** update dependency framer-motion to v5.5.1 ([64205b1](https://github.com/eclass/ui-kit/commit/64205b11bb62a4250ac9f2ca2847273f8f5b1f08))
+* **deps:** update dependency framer-motion to v5.5.2 ([#254](https://github.com/eclass/ui-kit/issues/254)) ([d5b5373](https://github.com/eclass/ui-kit/commit/d5b53737a8a06924c92012fbec2102f0c0d14100))
+* **deps:** update dependency framer-motion to v5.5.3 ([84dfd15](https://github.com/eclass/ui-kit/commit/84dfd15e66d7ebf9cd1df28fb2f53321d1e76fd0))
+* **deps:** update dependency framer-motion to v5.5.4 ([845d081](https://github.com/eclass/ui-kit/commit/845d081d87f84fbb39d20e5b670f09d6177042c0))
+* **deps:** update dependency framer-motion to v5.5.5 ([628b180](https://github.com/eclass/ui-kit/commit/628b18060b35dc44640daca64dcb679e5f89c674))
+* **deps:** update dependency framer-motion to v5.5.6 ([4d22298](https://github.com/eclass/ui-kit/commit/4d222981e33a7864aec14303b1f4b2b39e2cb794))
+* **deps:** update dependency framer-motion to v5.5.7 ([9426c0d](https://github.com/eclass/ui-kit/commit/9426c0d37273b6f7fc367f386245f0773cf647b7))
+* **deps:** update dependency framer-motion to v5.6.0 ([1140b80](https://github.com/eclass/ui-kit/commit/1140b805606e968e84e1b2894f7c66471da8504b))
+* **deps:** update emotion monorepo to v11.6.0 ([215b6ca](https://github.com/eclass/ui-kit/commit/215b6ca2f004544f279b4925a42eb6107c38b553))
+* **types:** add eclass api types and sequelize types ([ddab50c](https://github.com/eclass/ui-kit/commit/ddab50c4bfc731303a9e288c55a37882b62ddec1))
+
 ## [1.5.5](https://github.com/eclass/ui-kit/compare/v1.5.4...v1.5.5) (2021-11-17)
 
 
