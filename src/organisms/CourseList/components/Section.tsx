@@ -46,7 +46,7 @@ export function Section(): JSX.Element | null {
             {progress?.label}
           </Text>
         </Flex>
-        {status?.id === ID_QUALIFIED && progress?.finalGrade.length > 0 && (
+        {status?.id === ID_QUALIFIED && progress?.finalGrade && progress?.finalGrade.length > 0 && (
           <Label
             size="sm"
             bg={progress.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
