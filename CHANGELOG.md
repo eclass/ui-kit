@@ -1,3 +1,39 @@
+## [1.5.6](https://github.com/eclass/ui-kit/compare/v1.5.5...v1.5.6) (2022-02-03)
+
+
+### Bug Fixes
+
+* **courseboxtypes:** update coursebox types ([5ca1e77](https://github.com/eclass/ui-kit/commit/5ca1e77f00bac54cdeced54afd9401aa177147ef))
+* **courselist:** texto accion centrado ([b11d081](https://github.com/eclass/ui-kit/commit/b11d0816ac9e821f53c04a40cb80d3d09c9dc44a))
+* **deps:** update dependency @chakra-ui/react to v1.7.2 ([c7ff8e6](https://github.com/eclass/ui-kit/commit/c7ff8e686fc07b183285ab7289f897756d9e2b48))
+* **deps:** update dependency @chakra-ui/react to v1.7.3 ([8ed5189](https://github.com/eclass/ui-kit/commit/8ed5189c7193746376f0174f74ab2bab7736acbc))
+* **deps:** update dependency @chakra-ui/react to v1.7.4 ([a9644fe](https://github.com/eclass/ui-kit/commit/a9644fe390b4a0187beb955b96a603c5425760b0))
+* **deps:** update dependency @chakra-ui/react to v1.8.0 ([eeb563c](https://github.com/eclass/ui-kit/commit/eeb563c34b7556bdb3c37c0ee99571c82e39680d))
+* **deps:** update dependency @chakra-ui/react to v1.8.1 ([537aed6](https://github.com/eclass/ui-kit/commit/537aed631c22b4d3a87434f2b7f5d249ffcc3dfc))
+* **deps:** update dependency @emotion/react to v11.7.0 ([40d90ed](https://github.com/eclass/ui-kit/commit/40d90edc13ff870980841700ef497dea05ef369c))
+* **deps:** update dependency @emotion/react to v11.7.1 ([3993b74](https://github.com/eclass/ui-kit/commit/3993b74e49c6ad87302f82b978846e60234eaf95))
+* **deps:** update dependency framer-motion to v5 ([002cc2b](https://github.com/eclass/ui-kit/commit/002cc2bb32cec21ff8288fb1836d9b385156c1a2))
+* **deps:** update dependency framer-motion to v5.3.2 ([6a1bd8b](https://github.com/eclass/ui-kit/commit/6a1bd8be77ae78de2c69006da56515fc9b2cc9ba))
+* **deps:** update dependency framer-motion to v5.3.3 ([5b88341](https://github.com/eclass/ui-kit/commit/5b883412b3b20c4d06633cf55d797eed2c9a3fb0))
+* **deps:** update dependency framer-motion to v5.4.1 ([fda2d13](https://github.com/eclass/ui-kit/commit/fda2d130a3758385ff2fb175a1be004edec7c5fc))
+* **deps:** update dependency framer-motion to v5.4.2 ([dd692ec](https://github.com/eclass/ui-kit/commit/dd692ecaca581997daab284aee6511217f4d24c4))
+* **deps:** update dependency framer-motion to v5.4.3 ([0a190d5](https://github.com/eclass/ui-kit/commit/0a190d51ea57f0d8d2dcadef717e9becdc19d7e9))
+* **deps:** update dependency framer-motion to v5.4.4 ([035b058](https://github.com/eclass/ui-kit/commit/035b0582acef16bc694447601c11f0e0d8cbb013))
+* **deps:** update dependency framer-motion to v5.4.5 ([ef6afbc](https://github.com/eclass/ui-kit/commit/ef6afbcdda4a570e6c0ab887fc6f74ecf8420d8d))
+* **deps:** update dependency framer-motion to v5.5.1 ([07c6cff](https://github.com/eclass/ui-kit/commit/07c6cff4b6807decb1aac79e57f03effc320c69a))
+* **deps:** update dependency framer-motion to v5.5.2 ([#254](https://github.com/eclass/ui-kit/issues/254)) ([a56f621](https://github.com/eclass/ui-kit/commit/a56f62186f44921b4d32adb673d79e7ba0f5f8bc))
+* **deps:** update dependency framer-motion to v5.5.3 ([069e1b9](https://github.com/eclass/ui-kit/commit/069e1b930ab8c93bc9e4e8f3bfde40b596a47d40))
+* **deps:** update dependency framer-motion to v5.5.4 ([ea8c48b](https://github.com/eclass/ui-kit/commit/ea8c48bb945941018cc4a9d01ca6c0b3a00dff3c))
+* **deps:** update dependency framer-motion to v5.5.5 ([ff12744](https://github.com/eclass/ui-kit/commit/ff127442ca08b57646223138d2b132cbed1f52ee))
+* **deps:** update dependency framer-motion to v5.5.6 ([0db5aa2](https://github.com/eclass/ui-kit/commit/0db5aa210c7da42e1f76b2e87435342a3bd2cc3b))
+* **deps:** update dependency framer-motion to v5.5.7 ([7c43c02](https://github.com/eclass/ui-kit/commit/7c43c022d4aaf562c0366d46f931ad1c8ece60b2))
+* **deps:** update dependency framer-motion to v5.6.0 ([5b93b1e](https://github.com/eclass/ui-kit/commit/5b93b1ec6214c8e584a20e2d6c2886864691809a))
+* **deps:** update dependency framer-motion to v6 ([#319](https://github.com/eclass/ui-kit/issues/319)) ([aa51876](https://github.com/eclass/ui-kit/commit/aa518769a73c3866a976b0fae31daf95c07cc5ec))
+* **deps:** update dependency framer-motion to v6.2.1 ([1394e27](https://github.com/eclass/ui-kit/commit/1394e27a8f86cf0987a67fcf0f0314102161427c))
+* **deps:** update dependency framer-motion to v6.2.3 ([65d45d1](https://github.com/eclass/ui-kit/commit/65d45d1eaecfbf80585d9261ba402319fa6349ed))
+* **deps:** update fontsource monorepo to v4.5.2 ([7babb95](https://github.com/eclass/ui-kit/commit/7babb9556ae61adb627e9bc5924b36ecf7b1fc56))
+* **semanticrelease:** add version to semantic-release package for deploy task ([9492f4f](https://github.com/eclass/ui-kit/commit/9492f4fa5c97ce2ebf45de80fb8765284fd103cf))
+
 ## [1.5.5](https://github.com/eclass/ui-kit/compare/v1.5.4...v1.5.5) (2022-01-31)
 
 
