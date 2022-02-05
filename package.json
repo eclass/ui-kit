@@ -122,8 +122,8 @@
     "@chakra-ui/react": "1.8.3",
     "@emotion/react": "11.7.1",
     "@emotion/styled": "11.6.0",
-    "@fontsource/lora": "4.5.2",
-    "@fontsource/roboto": "4.5.2",
+    "@fontsource/lora": "4.5.3",
+    "@fontsource/roboto": "4.5.3",
     "framer-motion": "6.2.4",
     "react-ripples": "2.2.1"
   }
