@@ -34,8 +34,23 @@ export const shadows = {
   lg: '0 .5rem 2rem 0 rgba(0,0,0,.20)',
 }
 
+/**
+ * Valores definidos en el sistema de diseños eclass.
+ * @see https://zeroheight.com/15698077d/p/04fce7-spacial-units
+ */
+export const space = {
+  xxs: '.25rem',
+  xs: '.5rem',
+  s: '1rem',
+  m: '1.5rem',
+  l: '2rem',
+  xl: '3rem',
+  xxl: '5rem',
+}
+
 export const utils = {
   borders,
   radii,
   shadows,
+  space,
 }
