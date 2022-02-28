@@ -1,19 +1,22 @@
-import { Box, Button as BtnChackra } from '@chakra-ui/react'
-// import Ripples from 'react-ripples'
+import { Box, Button } from '@chakra-ui/react'
+import Ripples from 'react-ripples'
 
 import { vars } from '@theme'
+import { Loader } from '../Loader/Loader'
 
 interface colorScheme {
   main: string
   hover: string
-  disabled: string
 }
-
 interface props {
   bg?: colorScheme
+  /** Colores para el efecto del :active son necesarios dos */
+  borderColorActive?: string[]
   children?: React.ReactNode
   color?: string
   disabled?: boolean
+  fillLoader?: string
+  isFullWidth?: boolean
   leftIcon?: React.ReactElement
   m?: string
   isLoading?: boolean
@@ -21,14 +24,17 @@ interface props {
   rightIcon?: React.ReactElement
   rounded?: boolean
   size?: 'regular' | 'small'
-  stretched?: boolean
+  touchDark?: boolean
 }
 
 export function Btn({
   bg,
+  borderColorActive = [vars('colors-main-deepSkyBlue'), vars('colors-neutral-white')],
   children,
   color = vars('colors-neutral-white'),
   disabled = false,
+  fillLoader = vars('colors-neutral-white'),
+  isFullWidth = false,
   leftIcon,
   m = '0',
   isLoading = false,
@@ -36,7 +42,7 @@ export function Btn({
   rightIcon,
   rounded = false,
   size = 'regular',
-  stretched = false,
+  touchDark = false,
 }: props): JSX.Element {
   let showChildren = children ?? null
   if (!children && !rightIcon && !leftIcon) {
@@ -44,72 +50,66 @@ export function Btn({
   }
 
   const borderRadius = rounded ? '50%' : vars('radii-small')
-  const widthBorderHover = 3
+  const colorMain = bg?.main ?? vars('colors-main-deepSkyBlue')
+  const touchColor = touchDark ? 'rgba(160, 160, 160, 0.2)' : 'rgba(255, 255, 255, 0.2)'
+  const onlyIcon = !children && (rightIcon ?? leftIcon) ? 'onlyIcon' : ''
 
   return (
     <Box
       margin={m}
-      role="group"
       sx={{
         '.react-ripples': {
           borderRadius,
-          display: `${stretched ? 'grid' : 'inline-flex!important'}`,
+          display: `${isFullWidth ? 'grid' : 'inline-flex!important'}`,
         },
       }}
     >
-      {/* <Ripples> */}
-      <BtnChackra
-        onClick={(e: React.MouseEvent<HTMLElement>) => {
-          onClick?.(e)
-        }}
-        bg={bg?.main ?? vars('colors-main-deepSkyBlue')}
-        color={color}
-        disabled={disabled}
-        borderRadius={borderRadius}
-        padding={size === 'regular' ? vars('space-s') : vars('space-xs')}
-        height="auto"
-        isLoading={isLoading}
-        spinner={<div>Cargando...</div>}
-        iconSpacing={vars('space-xs')}
-        position="relative"
-        w={stretched ? '100%' : 'auto'}
-        _hover={{
-          bg: bg?.hover ?? vars('colors-main-azureRadiance'),
-        }}
-        _focus={{
-          boxShadow: 'none',
-        }}
-        _active={{
-          bg: bg?.main ?? vars('colors-main-azureRadiance'),
-        }}
-        _disabled={{
-          opacity: '50%',
-          cursor: 'not-allowed',
-        }}
-        _before={{
-          content: `""`,
-          height: '100%',
-          width: '100%',
-          borderRadius,
-          position: 'absolute',
-          boxShadow: `inset 0px 0px 0px ${widthBorderHover}px ${vars('colors-main-deepSkyBlue')}`,
-          zIndex: -1,
-          transition: 'all .1s ease-in-out',
-        }}
-        sx={{
-          ':focus': {
-            ':before': {
-              height: `calc(100% + ${widthBorderHover * 3}px)`,
-              width: `calc(100% + ${widthBorderHover * 3}px)`,
+      <Ripples color={touchColor}>
+        <Button
+          bg={colorMain}
+          size={size === 'regular' ? 'md' : 'sm'}
+          borderRadius={borderRadius}
+          color={color}
+          className={onlyIcon}
+          disabled={disabled}
+          height="auto"
+          iconSpacing={vars('space-xs')}
+          isActive={false}
+          isLoading={isLoading}
+          leftIcon={leftIcon}
+          onClick={(e: React.MouseEvent<HTMLElement>) => {
+            !isLoading && !disabled && onClick?.(e)
+          }}
+          padding={size === 'regular' ? vars('space-s') : vars('space-xs')}
+          position="relative"
+          isFullWidth={isFullWidth}
+          rightIcon={rightIcon}
+          spinner={<Loader fill={fillLoader} />}
+          _active={{
+            bg: bg?.main ?? vars('colors-main-azureRadiance'),
+          }}
+          _disabled={{
+            opacity: '50%',
+            cursor: 'not-allowed',
+          }}
+          _focus={{
+            boxShadow: `inset 0 0 0 2px ${borderColorActive[0]}, inset 0 0 0 4px ${borderColorActive[1]}`,
+          }}
+          _hover={{
+            bg: bg?.hover ?? vars('colors-main-azureRadiance'),
+          }}
+          sx={{
+            '&[data-loading]': {
+              cursor: 'wait',
             },
-          },
-        }}
-        leftIcon={leftIcon}
-        rightIcon={rightIcon}
-      >
-        {showChildren}
-      </BtnChackra>
-      {/* </Ripples> */}
+            '&.onlyIcon span': {
+              margin: 0,
+            },
+          }}
+        >
+          {showChildren}
+        </Button>
+      </Ripples>
     </Box>
   )
 }
