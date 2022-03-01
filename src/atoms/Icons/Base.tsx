@@ -11,6 +11,7 @@ export interface BaseProps {
 interface IconProps extends BaseProps {
   viewBox?: string
   children: React.ReactChild | React.ReactChild[]
+  title?: string
 }
 
 export function Base({
@@ -20,9 +21,11 @@ export function Base({
   m = '0',
   viewBox = '0 0 16 16',
   children,
+  title,
 }: IconProps): JSX.Element {
   return (
     <IconChakra w={w} h={h} viewBox={viewBox} color={color} m={m}>
+      <title>icon{title && `-${title}`}</title>
       {children}
     </IconChakra>
   )

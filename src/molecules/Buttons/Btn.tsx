@@ -2,31 +2,42 @@ import { Box, Button } from '@chakra-ui/react'
 import Ripples from 'react-ripples'
 
 import { vars } from '@theme'
-import { Loader } from '../Loader/Loader'
+import { Loader } from '@icons'
 
 interface colorScheme {
   main: string
   hover: string
 }
-interface props {
-  bg?: colorScheme
-  /** Colores para el efecto del :active son necesarios dos */
-  borderColorActive?: string[]
+
+export interface propsBaseBtns {
   children?: React.ReactNode
-  color?: string
   disabled?: boolean
-  fillLoader?: string
   isFullWidth?: boolean
   leftIcon?: React.ReactElement
   m?: string
   isLoading?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   rightIcon?: React.ReactElement
-  rounded?: boolean
   size?: 'regular' | 'small'
+}
+interface props extends propsBaseBtns {
+  bg?: colorScheme
+  /** Colores para el efecto del :active son necesarios dos */
+  borderColorActive?: string[]
+  color?: string
+  fillLoader?: string
+  rounded?: boolean
   touchDark?: boolean
 }
 
+/**
+ * Componente Btn
+ *
+ * Dibuja un boton base que posee todo lo estipulado en
+ * @see https://zeroheight.com/15698077d/p/358e93-buttons
+ *
+ * @example <Btn>Lorem</Btn>
+ */
 export function Btn({
   bg,
   borderColorActive = [vars('colors-main-deepSkyBlue'), vars('colors-neutral-white')],
@@ -71,7 +82,7 @@ export function Btn({
           borderRadius={borderRadius}
           color={color}
           className={onlyIcon}
-          disabled={disabled}
+          disabled={disabled || isLoading}
           height="auto"
           iconSpacing={vars('space-xs')}
           isActive={false}
@@ -100,10 +111,14 @@ export function Btn({
           }}
           sx={{
             '&[data-loading]': {
+              boxShadow: 'none',
               cursor: 'wait',
             },
             '&.onlyIcon span': {
-              margin: 0,
+              m: 0,
+            },
+            span: {
+              h: '1rem',
             },
           }}
         >
