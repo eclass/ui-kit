@@ -19,9 +19,10 @@ function WithRipples({ enabled, children }: WithRipplesProps): JSX.Element {
 
 interface CourseBoxProps {
   data: Type.AcademicList
+  onClick?: () => void
 }
 
-export function CourseBox({ data }: CourseBoxProps): JSX.Element {
+export function CourseBox({ data, onClick }: CourseBoxProps): JSX.Element {
   const cssActive = {
     boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
   }
@@ -45,7 +46,7 @@ export function CourseBox({ data }: CourseBoxProps): JSX.Element {
               <Header />
               <Section />
             </Box>
-            <Footer />
+            <Footer onClick={onClick} />
           </Flex>
         </WithRipples>
       </LinkBox>

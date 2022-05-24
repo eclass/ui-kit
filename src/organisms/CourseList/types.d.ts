@@ -5,4 +5,5 @@ export type AcademicList = AcademicBox
 export interface WrapperCoursesProps {
   courses: AcademicList[]
   m?: string
+  onClick?: () => void
 }
