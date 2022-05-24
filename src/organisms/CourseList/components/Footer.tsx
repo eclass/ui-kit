@@ -1,13 +1,20 @@
 import * as React from 'react'
-import { Center, LinkOverlay, Text } from '@chakra-ui/react'
+import { Button, Center, LinkOverlay, Text } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
 import { ArrowRight } from '@icons'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
 
-export function Footer(): JSX.Element | null {
+interface FooterProps {
+  onClick?: () => void
+}
+export function Footer({ onClick }: FooterProps): JSX.Element | null {
   const { action, Profile } = React.useContext(CourseBoxContext)
+
+  const cssButton = {
+    backgroundColor: 'transparent',
+  }
 
   if (action == null || (action?.enabled && action.href?.length === 0)) {
     return null
@@ -23,16 +30,34 @@ export function Footer(): JSX.Element | null {
     >
       {isCourseActive(action.enabled, Profile?.id) ? (
         <>
-          <LinkOverlay
-            href={action.href}
-            color={vars('colors-main-deepSkyBlue')}
-            fontWeight="500"
-            mr={action.hasIcon ? '1.5rem' : '0'}
-            lineHeight="1.172rem"
-            isExternal={action.targetBlank}
-          >
-            {action.text}
-          </LinkOverlay>
+          {onClick ? (
+            <Button
+              color={vars('colors-main-deepSkyBlue')}
+              backgroundColor="transparent"
+              fontWeight="500"
+              height="auto"
+              mr={action.hasIcon ? '1.5rem' : '0'}
+              lineHeight="1.172rem"
+              p="0"
+              onClick={onClick}
+              _hover={cssButton}
+              _focus={cssButton}
+              _active={cssButton}
+            >
+              {action.text}
+            </Button>
+          ) : (
+            <LinkOverlay
+              href={action.href}
+              color={vars('colors-main-deepSkyBlue')}
+              fontWeight="500"
+              mr={action.hasIcon ? '1.5rem' : '0'}
+              lineHeight="1.172rem"
+              isExternal={action.targetBlank}
+            >
+              {action.text}
+            </LinkOverlay>
+          )}
           {action.hasIcon && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
         </>
       ) : (

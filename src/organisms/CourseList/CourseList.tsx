@@ -17,6 +17,7 @@ export const wCourse = 17.8125 // 285px
 export function CourseList({
   courses,
   m = '0 auto',
+  onClick,
 }: Type.WrapperCoursesProps): JSX.Element | null {
   if (courses === undefined) {
     return null
@@ -32,7 +33,7 @@ export function CourseList({
       w="100%"
     >
       {courses?.map((course: Type.AcademicList) => (
-        <CourseBox key={course.id} data={course} />
+        <CourseBox key={course.id} data={course} onClick={onClick} />
       ))}
     </Box>
   )
