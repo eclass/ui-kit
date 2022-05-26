@@ -1,13 +1,25 @@
 import * as React from 'react'
-import { Center, LinkOverlay, Text } from '@chakra-ui/react'
+import { Button, Center, LinkOverlay, Text, useDisclosure } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
 import { ArrowRight } from '@icons'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
+import { PaymentModal } from './Modal'
 
 export function Footer(): JSX.Element | null {
-  const { action, Profile } = React.useContext(CourseBoxContext)
+  const { action, Profile, hasWarning } = React.useContext(CourseBoxContext)
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [overlay, setOverlay] = React.useState(false)
+
+  const cssButton = {
+    backgroundColor: 'transparent',
+  }
+
+  const handleClick = (): any => {
+    setOverlay(true)
+    onOpen()
+  }
 
   if (action == null || (action?.enabled && action.href?.length === 0)) {
     return null
@@ -23,16 +35,34 @@ export function Footer(): JSX.Element | null {
     >
       {isCourseActive(action.enabled, Profile?.id) ? (
         <>
-          <LinkOverlay
-            href={action.href}
-            color={vars('colors-main-deepSkyBlue')}
-            fontWeight="500"
-            mr={action.hasIcon ? '1.5rem' : '0'}
-            lineHeight="1.172rem"
-            isExternal={action.targetBlank}
-          >
-            {action.text}
-          </LinkOverlay>
+          {hasWarning ? (
+            <Button
+              color={vars('colors-main-deepSkyBlue')}
+              backgroundColor="transparent"
+              fontWeight="500"
+              height="auto"
+              mr={action.hasIcon ? '1.5rem' : '0'}
+              lineHeight="1.172rem"
+              p="0"
+              _hover={cssButton}
+              _focus={cssButton}
+              _active={cssButton}
+              onClick={() => handleClick()}
+            >
+              {action.text}
+            </Button>
+          ) : (
+            <LinkOverlay
+              href={action.href}
+              color={vars('colors-main-deepSkyBlue')}
+              fontWeight="500"
+              mr={action.hasIcon ? '1.5rem' : '0'}
+              lineHeight="1.172rem"
+              isExternal={action.targetBlank}
+            >
+              {action.text}
+            </LinkOverlay>
+          )}
           {action.hasIcon && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
         </>
       ) : (
@@ -45,6 +75,7 @@ export function Footer(): JSX.Element | null {
           {action.text}
         </Text>
       )}
+      <PaymentModal isOpen={isOpen} onClose={onClose} showOverlay={overlay} />
     </Center>
   )
 }

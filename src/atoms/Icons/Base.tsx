@@ -7,6 +7,7 @@ export interface BaseProps {
   h?: string
   color?: string
   m?: string
+  viewBox?: string
 }
 interface IconProps extends BaseProps {
   viewBox?: string
