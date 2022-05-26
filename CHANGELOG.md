@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/eclass/ui-kit/compare/v1.6.0...v1.7.0) (2022-05-26)
+
+
+### Bug Fixes
+
+* **boxlist:** quitamos propiedad onclick ([#452](https://github.com/eclass/ui-kit/issues/452)) ([7fe3e67](https://github.com/eclass/ui-kit/commit/7fe3e6729c9a30dccc8fecca074e3e91cae261d8))
+
+
+### Features
+
+* **pagos:** agregamos modal no pago ([#450](https://github.com/eclass/ui-kit/issues/450)) ([b53743e](https://github.com/eclass/ui-kit/commit/b53743ef62515ba75704cf02353468906f9c4070))
+
 # [1.6.0](https://github.com/eclass/ui-kit/compare/v1.5.6...v1.6.0) (2022-05-24)
 
 
