@@ -1,3 +1,27 @@
+# [1.6.0](https://github.com/eclass/ui-kit/compare/v1.5.6...v1.6.0) (2022-05-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @chakra-ui/react to v1.8.3 ([b04ed17](https://github.com/eclass/ui-kit/commit/b04ed17373a61601594a8671c69f970922b608bf))
+* **deps:** update dependency @chakra-ui/react to v1.8.5 ([173c290](https://github.com/eclass/ui-kit/commit/173c29096a97b76d7e332981d2ae4b1734827e5f))
+* **deps:** update dependency @chakra-ui/react to v1.8.6 ([2f24a8e](https://github.com/eclass/ui-kit/commit/2f24a8ec8e683f256b197d4fa751b92f1dc7b234))
+* **deps:** update dependency @chakra-ui/react to v1.8.7 ([a883047](https://github.com/eclass/ui-kit/commit/a8830475ed1e7d4ba8b9bedf46aacdeab6a20f78))
+* **deps:** update dependency @emotion/react to v11.8.2 ([dc9cfae](https://github.com/eclass/ui-kit/commit/dc9cfaebef36996b02477c3b4ad6f49cafd06460))
+* **deps:** update dependency @fontsource/lora to v4.5.4 ([80a67d3](https://github.com/eclass/ui-kit/commit/80a67d388afd26a0ade04e5ef8551c37c353f957))
+* **deps:** update dependency framer-motion to v6.2.4 ([e20e433](https://github.com/eclass/ui-kit/commit/e20e43300ef9cd5542fd11b62dacf24ff5501077))
+* **deps:** update dependency framer-motion to v6.2.6 ([139ea6d](https://github.com/eclass/ui-kit/commit/139ea6dad6bad02815618e2a9a99d71e5cdb63bb))
+* **deps:** update dependency framer-motion to v6.2.7 ([d21544e](https://github.com/eclass/ui-kit/commit/d21544e246023aa5c16e9e0b7791e8253e9adf78))
+* **deps:** update dependency framer-motion to v6.2.8 ([7d95997](https://github.com/eclass/ui-kit/commit/7d959972d4d75507f1683cb525cac70e8bdcb92a))
+* **deps:** update emotion monorepo to v11.8.1 ([250f282](https://github.com/eclass/ui-kit/commit/250f2821a74f23ba8171ce4357827881c97dd1f4))
+* **deps:** update fontsource monorepo ([be87fb2](https://github.com/eclass/ui-kit/commit/be87fb2f346d853eb26f0a43df4c164e7bf4bc16))
+* **deps:** update fontsource monorepo to v4.5.3 ([f69822c](https://github.com/eclass/ui-kit/commit/f69822c2a5c450ed1170a9f84e023e4ff2ab2341))
+
+
+### Features
+
+* **coursebox:** agregamos onclick a caja cursos ([#449](https://github.com/eclass/ui-kit/issues/449)) ([ff7c6a8](https://github.com/eclass/ui-kit/commit/ff7c6a82daef364a874ae780aa29525d77697e0e))
+
 ## [1.5.6](https://github.com/eclass/ui-kit/compare/v1.5.5...v1.5.6) (2022-02-03)
 
 
