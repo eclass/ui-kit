@@ -1,19 +1,24 @@
 import * as React from 'react'
-import { Button, Center, LinkOverlay, Text } from '@chakra-ui/react'
+import { Button, Center, LinkOverlay, Text, useDisclosure } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
 import { ArrowRight } from '@icons'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
+import { PaymentModal } from './Modal'
 
-interface FooterProps {
-  onClick?: () => void
-}
-export function Footer({ onClick }: FooterProps): JSX.Element | null {
-  const { action, Profile } = React.useContext(CourseBoxContext)
+export function Footer(): JSX.Element | null {
+  const { action, Profile, hasWarning } = React.useContext(CourseBoxContext)
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [overlay, setOverlay] = React.useState(false)
 
   const cssButton = {
     backgroundColor: 'transparent',
+  }
+
+  const handleClick = (): any => {
+    setOverlay(true)
+    onOpen()
   }
 
   if (action == null || (action?.enabled && action.href?.length === 0)) {
@@ -30,7 +35,7 @@ export function Footer({ onClick }: FooterProps): JSX.Element | null {
     >
       {isCourseActive(action.enabled, Profile?.id) ? (
         <>
-          {onClick ? (
+          {hasWarning ? (
             <Button
               color={vars('colors-main-deepSkyBlue')}
               backgroundColor="transparent"
@@ -39,10 +44,10 @@ export function Footer({ onClick }: FooterProps): JSX.Element | null {
               mr={action.hasIcon ? '1.5rem' : '0'}
               lineHeight="1.172rem"
               p="0"
-              onClick={onClick}
               _hover={cssButton}
               _focus={cssButton}
               _active={cssButton}
+              onClick={() => handleClick()}
             >
               {action.text}
             </Button>
@@ -70,6 +75,7 @@ export function Footer({ onClick }: FooterProps): JSX.Element | null {
           {action.text}
         </Text>
       )}
+      <PaymentModal isOpen={isOpen} onClose={onClose} showOverlay={overlay} />
     </Center>
   )
 }

@@ -1,3 +1,4 @@
+export * from './AlertInfo'
 export * from './ArrowRight'
 export * from './Certificate'
 export * from './CircularCheck'

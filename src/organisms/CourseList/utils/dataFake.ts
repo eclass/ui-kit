@@ -69,6 +69,7 @@ export const dataStates: any = {
   noHabilitado: {
     ...dataBase,
     id: 1,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 1,
@@ -102,6 +103,7 @@ export const dataStates: any = {
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-utec-square.jpg',
     background: 'https://cdn.eclass.com/img/cursos/default1.png',
     id: 2,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 2,
@@ -133,6 +135,7 @@ export const dataStates: any = {
   preInscripcion2: {
     ...dataBase,
     id: 3,
+    hasWarning: false,
     logo: '',
     status: {
       ...dataBase.status,
@@ -166,6 +169,7 @@ export const dataStates: any = {
     ...dataBase,
     background: 'https://cdn.eclass.com/img/cursos/default2.png',
     id: 4,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 3,
@@ -196,6 +200,7 @@ export const dataStates: any = {
   inscripcion2: {
     ...dataBase,
     id: 5,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 3,
@@ -230,6 +235,7 @@ export const dataStates: any = {
   noDisponible: {
     ...dataBase,
     id: 6,
+    hasWarning: false,
     logo: '',
     background: 'https://cdn.eclass.com/img/cursos/default2.png',
     status: {
@@ -266,6 +272,7 @@ export const dataStates: any = {
     background: 'https://cdn.eclass.com/img/cursos/default3.png',
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
     id: 7,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 4,
@@ -299,6 +306,7 @@ export const dataStates: any = {
     background: 'https://cdn.eclass.com/img/cursos/default3.png',
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
     id: 57,
+    hasWarning: false,
     Profile: {
       id: 1,
       name: 'Administrador',
@@ -334,6 +342,7 @@ export const dataStates: any = {
   activado: {
     ...dataBase,
     id: 8,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 5,
@@ -373,6 +382,7 @@ export const dataStates: any = {
   sinEstudiar: {
     ...dataBase,
     id: 9,
+    hasWarning: false,
     logo: '',
     status: {
       ...dataBase.status,
@@ -413,6 +423,7 @@ export const dataStates: any = {
   sinEstudiar2: {
     ...dataBase,
     id: 10,
+    hasWarning: false,
     background: 'https://cdn.eclass.com/img/cursos/default2.png',
     status: {
       ...dataBase.status,
@@ -453,6 +464,7 @@ export const dataStates: any = {
   sinEstudiar3: {
     ...dataBase,
     id: 11,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 6,
@@ -493,6 +505,7 @@ export const dataStates: any = {
     ...dataBase,
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-uandes-square.jpg',
     id: 12,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 6,
@@ -532,6 +545,7 @@ export const dataStates: any = {
   continuar: {
     ...dataBase,
     id: 13,
+    hasWarning: true,
     status: {
       ...dataBase.status,
       id: 7,
@@ -572,6 +586,7 @@ export const dataStates: any = {
   continuar2: {
     ...dataBase,
     id: 14,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 7,
@@ -611,6 +626,7 @@ export const dataStates: any = {
     ...dataBase,
     background: 'https://cdn.eclass.com/img/cursos/default3.png',
     id: 15,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 8,
@@ -647,6 +663,7 @@ export const dataStates: any = {
   terminado: {
     ...dataBase,
     id: 16,
+    hasWarning: false,
     status: {
       ...dataBase.status,
       id: 9,
@@ -686,6 +703,7 @@ export const dataStates: any = {
     ...dataBase,
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
     id: 17,
+    hasWarning: false,
     Profile: {
       id: 1,
       name: 'Administrador',
@@ -728,6 +746,7 @@ export const dataStates: any = {
   terminado3: {
     ...dataBase,
     id: 18,
+    hasWarning: false,
     logo: '',
     status: {
       ...dataBase.status,
