@@ -13,17 +13,22 @@ import {
 
 import { vars } from '@theme'
 import { AlertInfo } from '@/atoms/Icons'
+import * as Type from '../../types'
 
 interface PaymentModalProps {
   isOpen: boolean
+  onOpen: () => void
   onClose: () => void
   showOverlay: boolean
+  modalPaymentText: Type.PaymentText
 }
 
 export function PaymentModal({
   isOpen,
+  onOpen,
   onClose,
   showOverlay,
+  modalPaymentText,
 }: PaymentModalProps): JSX.Element | null {
   const cssButton = {
     backgroundColor: 'transparent',
@@ -42,7 +47,7 @@ export function PaymentModal({
   }, [showOverlay])
 
   return (
-    <Modal isCentered isOpen={isOpen} onClose={onClose} size="xl">
+    <Modal isCentered isOpen={isOpen} onClose={onClose} size="xl" blockScrollOnMount={false}>
       {overlay}
       <ModalContent marginTop="0" marginBottom="10.75rem">
         <ModalHeader
@@ -53,7 +58,7 @@ export function PaymentModal({
           p="2rem 2rem 0 2rem"
         >
           <AlertInfo w="52" h="45" viewBox="0 0 45 52" />
-          Curso congelado por pagos pendientes
+          {modalPaymentText.title}
         </ModalHeader>
         <ModalCloseButton
           size="md"
@@ -63,10 +68,7 @@ export function PaymentModal({
           _active={cssButton}
         />
         <ModalBody p="1rem 2rem 2rem 2rem">
-          <Text>
-            Para regularizar esta situación y continuar estudiando, comunícate cuanto antes con
-            regularizacion@eclass.com, de lo contrario tu curso será deshabilitado.
-          </Text>
+          <Text>{modalPaymentText.body}</Text>
         </ModalBody>
         <ModalFooter
           justifyContent="center"

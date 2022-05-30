@@ -6,8 +6,9 @@ import { ArrowRight } from '@icons'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
 import { PaymentModal } from './Modal'
+import * as Type from '../types'
 
-export function Footer(): JSX.Element | null {
+export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | null {
   const { action, Profile, hasWarning } = React.useContext(CourseBoxContext)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [overlay, setOverlay] = React.useState(false)
@@ -75,7 +76,13 @@ export function Footer(): JSX.Element | null {
           {action.text}
         </Text>
       )}
-      <PaymentModal isOpen={isOpen} onClose={onClose} showOverlay={overlay} />
+      <PaymentModal
+        isOpen={isOpen}
+        onClose={onClose}
+        showOverlay={overlay}
+        onOpen={onOpen}
+        modalPaymentText={modalPaymentText}
+      />
     </Center>
   )
 }
