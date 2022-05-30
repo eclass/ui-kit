@@ -5,6 +5,7 @@ export type AcademicList = AcademicBox
 interface PaymentText {
   title: string
   body: string
+  buttonName: string
 }
 
 export interface WrapperCoursesProps {

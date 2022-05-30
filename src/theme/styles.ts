@@ -10,23 +10,26 @@ export const styles = {
       borderStyle: 'none',
     },
     '.chakra-modal__content-container': {
+      padding: '1.87rem',
       zIndex: '1400',
       justifyContent: 'center',
       alignItems: 'center',
       overflow: 'auto',
     },
     '.chakra-modal__content': {
-      borderRadius: '8px',
+      borderRadius: '0.5rem',
       background: 'white',
       color: 'inherit',
       zIndex: '1400',
-      maxWidth: '589px',
+      maxWidth: '36.813rem',
+      boxShadow: '0px 4px 16px rgb(92 92 92 0.2)',
     },
     '.chakra-modal__header': {
       paddingInlineStart: '1.5rem',
       paddingInlineEnd: '1.5rem',
       fontSize: '1.25rem',
       fontWeight: '700',
+      textAlign: 'center',
       '.chakra-icon': {
         width: '13rem',
       },
@@ -34,7 +37,7 @@ export const styles = {
     '.chakra-modal__close-btn': {
       width: '2rem',
       height: '2rem',
-      borderRadius: '8px',
+      borderRadius: '0.5rem',
       fontSize: '0.75rem',
       position: 'absolute',
       top: '0.5rem',
