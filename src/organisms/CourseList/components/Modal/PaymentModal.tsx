@@ -49,7 +49,7 @@ export function PaymentModal({
   return (
     <Modal isCentered isOpen={isOpen} onClose={onClose} size="xl" blockScrollOnMount={false}>
       {overlay}
-      <ModalContent marginTop="0" marginBottom="10.75rem">
+      <ModalContent marginTop="0" marginBottom={['25.75rem', '15.75rem']}>
         <ModalHeader
           justifyContent="center"
           display="flex"
@@ -68,7 +68,7 @@ export function PaymentModal({
           _active={cssButton}
         />
         <ModalBody p="1rem 2rem 2rem 2rem">
-          <Text>{modalPaymentText.body}</Text>
+          <Text align="center">{modalPaymentText.body}</Text>
         </ModalBody>
         <ModalFooter
           justifyContent="center"
@@ -87,7 +87,7 @@ export function PaymentModal({
             _focus={cssButton}
             _active={cssButton}
           >
-            Entendido
+            {modalPaymentText.buttonName}
           </Button>
         </ModalFooter>
       </ModalContent>
