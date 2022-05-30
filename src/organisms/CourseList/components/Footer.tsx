@@ -45,6 +45,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
               mr={action.hasIcon ? '1.5rem' : '0'}
               lineHeight="1.172rem"
               p="0"
+              zIndex="inherit"
               _hover={cssButton}
               _focus={cssButton}
               _active={cssButton}
