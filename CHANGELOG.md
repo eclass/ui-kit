@@ -1,3 +1,10 @@
+## [1.7.2](https://github.com/eclass/ui-kit/compare/v1.7.1...v1.7.2) (2022-05-30)
+
+
+### Bug Fixes
+
+* **modal:** css correcciones y agregamos nombre del boton ([#455](https://github.com/eclass/ui-kit/issues/455)) ([ed93165](https://github.com/eclass/ui-kit/commit/ed931658e16747938b214846c0d0cb7da99f581f))
+
 ## [1.7.1](https://github.com/eclass/ui-kit/compare/v1.7.0...v1.7.1) (2022-05-30)
 
 
