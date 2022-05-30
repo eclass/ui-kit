@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/eclass/ui-kit/compare/v1.7.0...v1.7.1) (2022-05-30)
+
+
+### Bug Fixes
+
+* **modal:** correccion estilos globales y traduccion paymentmodal ([#453](https://github.com/eclass/ui-kit/issues/453)) ([d030ab6](https://github.com/eclass/ui-kit/commit/d030ab6df3eb1c59ffa14de8222255f0bfa797a3))
+
 # [1.7.0](https://github.com/eclass/ui-kit/compare/v1.6.0...v1.7.0) (2022-05-26)
 
 
