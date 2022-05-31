@@ -47,7 +47,14 @@ export function PaymentModal({
   }, [showOverlay])
 
   return (
-    <Modal isCentered isOpen={isOpen} onClose={onClose} size="xl" blockScrollOnMount={false}>
+    <Modal
+      isCentered
+      isOpen={isOpen}
+      onClose={onClose}
+      size="xl"
+      blockScrollOnMount={false}
+      closeOnOverlayClick={false}
+    >
       {overlay}
       <ModalContent marginTop="0" marginBottom={['25.75rem', '15.75rem']}>
         <ModalHeader
