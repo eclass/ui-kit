@@ -22,7 +22,7 @@ export const styles = {
       color: 'inherit',
       zIndex: '1400',
       maxWidth: '36.813rem',
-      boxShadow: '0px 4px 16px rgb(92 92 92 0.2)',
+      boxShadow: '0px 4px 16px rgba(92, 92, 92, 0.2)',
     },
     '.chakra-modal__header': {
       paddingInlineStart: '1.5rem',
