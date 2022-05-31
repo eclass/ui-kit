@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/eclass/ui-kit/compare/v1.7.2...v1.7.3) (2022-05-31)
+
+
+### Bug Fixes
+
+* **modal:** corregimos estilos modal pagos ([#456](https://github.com/eclass/ui-kit/issues/456)) ([956d8c6](https://github.com/eclass/ui-kit/commit/956d8c636b2e8579f84de79022d717817b5d4c1f))
+
 ## [1.7.2](https://github.com/eclass/ui-kit/compare/v1.7.1...v1.7.2) (2022-05-30)
 
 
