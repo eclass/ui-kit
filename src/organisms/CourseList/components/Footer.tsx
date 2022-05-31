@@ -22,7 +22,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
     onOpen()
   }
 
-  if (action == null || (action?.enabled && action.href?.length === 0)) {
+  if (action == null) {
     return null
   }
 
