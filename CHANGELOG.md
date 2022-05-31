@@ -1,3 +1,10 @@
+## [1.7.4](https://github.com/eclass/ui-kit/compare/v1.7.3...v1.7.4) (2022-05-31)
+
+
+### Bug Fixes
+
+* **modal:** quitamos condicion href vacio ([#457](https://github.com/eclass/ui-kit/issues/457)) ([de890bb](https://github.com/eclass/ui-kit/commit/de890bb4d83830bcbd7e5738d0c34c26af6ca040))
+
 ## [1.7.3](https://github.com/eclass/ui-kit/compare/v1.7.2...v1.7.3) (2022-05-31)
 
 
