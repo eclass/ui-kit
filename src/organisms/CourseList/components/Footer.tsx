@@ -9,7 +9,7 @@ import { PaymentModal } from './Modal'
 import * as Type from '../types'
 
 export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | null {
-  const { action, Profile, hasWarning } = React.useContext(CourseBoxContext)
+  const { action, Profile, hasFinanzeFreezed } = React.useContext(CourseBoxContext)
   const { isOpen, onOpen, onClose } = useDisclosure()
   const [overlay, setOverlay] = React.useState(false)
 
@@ -36,7 +36,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
     >
       {isCourseActive(action.enabled, Profile?.id) ? (
         <>
-          {hasWarning ? (
+          {hasFinanzeFreezed ? (
             <Button
               color={vars('colors-main-deepSkyBlue')}
               backgroundColor="transparent"
