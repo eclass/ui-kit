@@ -1,3 +1,10 @@
+## [1.7.5](https://github.com/eclass/ui-kit/compare/v1.7.4...v1.7.5) (2022-06-06)
+
+
+### Bug Fixes
+
+* **footer:** cambiamos nombre de warning curso congelado ([#460](https://github.com/eclass/ui-kit/issues/460)) ([60e8076](https://github.com/eclass/ui-kit/commit/60e8076be0ceaa015eb3fccda6ec6467ad0440cd))
+
 ## [1.7.4](https://github.com/eclass/ui-kit/compare/v1.7.3...v1.7.4) (2022-05-31)
 
 
