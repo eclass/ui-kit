@@ -25,6 +25,7 @@ export function Section(): JSX.Element | null {
             dateStatus.init !== undefined &&
             dateStatus.init.length > 0 &&
             dateStatus.end !== undefined &&
+            progress.icon !== null &&
             dateStatus.end.length > 0 ? (
               <Box h=".5rem" w="1px" bg={vars('colors-neutral-silverSand')} alignSelf="center" />
             ) : (
