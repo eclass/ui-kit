@@ -1,3 +1,10 @@
+## [1.7.7](https://github.com/eclass/ui-kit/compare/v1.7.6...v1.7.7) (2022-06-10)
+
+
+### Bug Fixes
+
+* **coursebox:** quitamos linea divisora en curso congelado ([#463](https://github.com/eclass/ui-kit/issues/463)) ([50c811d](https://github.com/eclass/ui-kit/commit/50c811d21ba26bc73e3f5905e2668da767ab8baa))
+
 ## [1.7.6](https://github.com/eclass/ui-kit/compare/v1.7.5...v1.7.6) (2022-06-10)
 
 
