@@ -18,6 +18,8 @@ export function IconSelection({ type, progressValue = 0 }: IconSelectionProps): 
       return <Progress value={progressValue} />
     case 'circularInformation':
       return <CircularInformation />
+    case 'info':
+      return <CircularInformation />
     default:
       return null
   }
