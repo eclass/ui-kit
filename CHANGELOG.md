@@ -1,3 +1,10 @@
+## [1.7.6](https://github.com/eclass/ui-kit/compare/v1.7.5...v1.7.6) (2022-06-10)
+
+
+### Bug Fixes
+
+* **icon:** agregamos nombre de icono info ([#462](https://github.com/eclass/ui-kit/issues/462)) ([1fb3708](https://github.com/eclass/ui-kit/commit/1fb3708219726a3537567526fc0e7a40551a7142))
+
 ## [1.7.5](https://github.com/eclass/ui-kit/compare/v1.7.4...v1.7.5) (2022-06-06)
 
 
