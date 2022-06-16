@@ -84,19 +84,75 @@ export const dataStates: any = {
       ...dataBase.dateStatus,
       hasDates: false,
     },
-    information: [
-      {
-        icon: 'certificate',
-        text: 'Certificado por ACHS',
-        href: null,
-      },
-    ],
+    information: null,
     action: {
       ...dataBase.action,
       href: '#',
       text: 'Ver información del curso',
     },
     labels: [],
+  },
+  inscripcionFutura: {
+    ...dataBase,
+    id: 1,
+    hasFinanzeFreezed: false,
+    status: {
+      ...dataBase.status,
+      id: 1,
+      name: 'noHabilitado',
+    },
+    progress: {
+      ...dataBase.progress,
+      label: 'Podrás inscribirte a partir del 31 de marzo de 2022',
+      icon: 'circularInformation',
+    },
+    dateStatus: {
+      ...dataBase.dateStatus,
+      hasDates: false,
+    },
+    information: null,
+    action: {
+      ...dataBase.action,
+      href: '#',
+      text: 'Ver información del curso',
+    },
+    labels: [
+      {
+        id: 'NEW',
+        text: 'Nuevo',
+      },
+    ],
+  },
+  inscripcionFinalizo: {
+    ...dataBase,
+    id: 1,
+    hasFinanzeFreezed: false,
+    status: {
+      ...dataBase.status,
+      id: 1,
+      name: 'noHabilitado',
+    },
+    progress: {
+      ...dataBase.progress,
+      label: 'El período de inscripción finalizó el 31 de marzo de 2022',
+      icon: 'circularInformation',
+    },
+    dateStatus: {
+      ...dataBase.dateStatus,
+      hasDates: false,
+    },
+    information: null,
+    action: {
+      ...dataBase.action,
+      href: '#',
+      text: 'Ver información del curso',
+    },
+    labels: [
+      {
+        id: 'NEW',
+        text: 'Nuevo',
+      },
+    ],
   },
   preInscripcion: {
     ...dataBase,
@@ -144,7 +200,7 @@ export const dataStates: any = {
     },
     progress: {
       ...dataBase.progress,
-      label: 'La solicitud de inscripción está en proceso',
+      label: 'Estamos procesando tu solicitud de inscripción',
       icon: 'circularInformation',
     },
     dateStatus: {
@@ -634,7 +690,7 @@ export const dataStates: any = {
     },
     progress: {
       ...dataBase.progress,
-      label: 'Curso finalizado en espera de nota',
+      label: '¡Curso finalizado! Estamos calculando tu promedio final',
       icon: 'circularInformation',
     },
     dateStatus: {
@@ -666,12 +722,12 @@ export const dataStates: any = {
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
-      id: 9,
-      name: 'terminado',
+      id: 7,
+      name: 'QUALIFIED',
     },
     progress: {
       ...dataBase.progress,
-      label: 'Curso finalizado con nota',
+      label: 'Curso aprobado con nota',
       icon: 'circularCheck',
       isApproved: true,
       finalGrade: '6,5',
@@ -710,12 +766,12 @@ export const dataStates: any = {
     },
     status: {
       ...dataBase.status,
-      id: 9,
-      name: 'terminado',
+      id: 7,
+      name: 'QUALIFIED',
     },
     progress: {
       ...dataBase.progress,
-      label: 'Curso finalizado con nota',
+      label: 'Curso reprobado con nota',
       icon: 'circularCheck',
       isApproved: false,
       finalGrade: '3,5',
