@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/eclass/ui-kit/compare/v1.7.7...v1.8.0) (2022-06-22)
+
+
+### Features
+
+* **varios:** actualizamos overlay modal y ejemplos storybook cursos ([#465](https://github.com/eclass/ui-kit/issues/465)) ([934a334](https://github.com/eclass/ui-kit/commit/934a334a8a6f5f808fdca4a79e7e00a956d0d9ce))
+
 ## [1.7.7](https://github.com/eclass/ui-kit/compare/v1.7.6...v1.7.7) (2022-06-10)
 
 
