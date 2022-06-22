@@ -35,7 +35,7 @@ export function PaymentModal({
   }
 
   function OverlayTwo(): any {
-    return <ModalOverlay bg="#ffffffc2" opacity=".8" backdropBlur="2px" />
+    return <ModalOverlay bg="#2F2F2F" opacity="0.32 !important" backdropBlur="2px" />
   }
 
   const [overlay, setOverlay] = React.useState(<OverlayTwo />)

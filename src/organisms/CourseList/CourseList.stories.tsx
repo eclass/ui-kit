@@ -8,11 +8,17 @@ const Story: Meta = {
   component: CourseList,
 }
 
+const modalPaymentText = {
+  title: 'titleModal',
+  body: 'bodyModal',
+  buttonName: 'understand',
+}
+
 export default Story
 
 const Template: ComponentStory<typeof CourseList> = (args) => (
   <div style={{ maxWidth: maxWidthCoursesList(4).rem }}>
-    <CourseList {...args} />
+    <CourseList {...args} modalPaymentText={modalPaymentText} />
   </div>
 )
 
@@ -36,6 +42,8 @@ StatusPlatform.args = {
     dataFake[15],
     dataFake[16],
     dataFake[17],
+    dataFake[18],
+    dataFake[19],
   ],
 }
 
