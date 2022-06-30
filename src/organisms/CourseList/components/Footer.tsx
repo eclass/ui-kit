@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button, Center, LinkOverlay, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Center, Text, useDisclosure } from '@chakra-ui/react'
 
 import { CourseBoxContext } from '../CourseBox'
 import { ArrowRight } from '@icons'
@@ -37,7 +37,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
       {isCourseActive(action.enabled, Profile?.id) ? (
         <>
           {hasFinanzeFreezed ? (
-            <Button
+            <Box
               color={vars('colors-main-deepSkyBlue')}
               backgroundColor="transparent"
               fontWeight="500"
@@ -52,18 +52,16 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
               onClick={() => handleClick()}
             >
               {action.text}
-            </Button>
+            </Box>
           ) : (
-            <LinkOverlay
-              href={action.href}
+            <Text
               color={vars('colors-main-deepSkyBlue')}
               fontWeight="500"
               mr={action.hasIcon ? '1.5rem' : '0'}
               lineHeight="1.172rem"
-              isExternal={action.targetBlank}
             >
               {action.text}
-            </LinkOverlay>
+            </Text>
           )}
           {action.hasIcon && <ArrowRight color={vars('colors-main-deepSkyBlue')} />}
         </>

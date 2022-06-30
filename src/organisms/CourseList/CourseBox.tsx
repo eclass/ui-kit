@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { LinkBox, Box, Flex } from '@chakra-ui/react'
+import { LinkBox, Box, Flex, LinkOverlay } from '@chakra-ui/react'
 
 import { Header, Section, Footer } from './components'
 import { Ripples } from '@atoms'
@@ -43,6 +43,10 @@ export function CourseBox({ data, modalPaymentText }: CourseBoxProps): JSX.Eleme
         <WithRipples enabled={isCourseActive(data.action?.enabled ?? false, data.Profile?.id)}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box>
+              {!data.hasFinanzeFreezed &&
+                isCourseActive(data.action?.enabled ?? false, data.Profile?.id) && (
+                  <LinkOverlay href={data.action?.href} isExternal={data.action?.targetBlank} />
+                )}
               <Header />
               <Section />
             </Box>
