@@ -1,3 +1,10 @@
+## [1.8.1](https://github.com/eclass/ui-kit/compare/v1.8.0...v1.8.1) (2022-06-30)
+
+
+### Bug Fixes
+
+* **coursebox:** correccion linkoverlay no clickeable ([#467](https://github.com/eclass/ui-kit/issues/467)) ([648b2a9](https://github.com/eclass/ui-kit/commit/648b2a953df7b180e68290365f92ed5f5ab4d6b3))
+
 # [1.8.0](https://github.com/eclass/ui-kit/compare/v1.7.7...v1.8.0) (2022-06-22)
 
 
