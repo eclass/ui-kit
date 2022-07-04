@@ -55,8 +55,8 @@
     "access": "public"
   },
   "peerDependencies": {
-    "react": "^16.8 || 17.x",
-    "react-dom": "^16.8 || 17.x"
+    "react": "^16.8 || 17.x || 18.x",
+    "react-dom": "^16.8 || 17.x || 18.x"
   },
   "devDependencies": {
     "@commitlint/cli": "13.2.1",
@@ -107,8 +107,8 @@
     "jest-watch-typeahead": "1.0.0",
     "lint-staged": "12.3.7",
     "prettier": "2.6.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
     "semantic-release": "19.0.3",
     "storybook-builder-vite": "0.1.22",
     "ts-jest": "27.1.4",
