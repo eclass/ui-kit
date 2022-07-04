@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/eclass/ui-kit/compare/v1.8.1...v1.9.0) (2022-07-04)
+
+
+### Features
+
+* **atoms:** creación de tiny alert ([#468](https://github.com/eclass/ui-kit/issues/468)) ([326b596](https://github.com/eclass/ui-kit/commit/326b5965f1f1bc4e209a5de5c346d1a073844ab2))
+
 ## [1.8.1](https://github.com/eclass/ui-kit/compare/v1.8.0...v1.8.1) (2022-06-30)
 
 
