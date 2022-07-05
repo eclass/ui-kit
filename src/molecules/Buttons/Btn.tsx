@@ -82,7 +82,7 @@ export function Btn({
           borderRadius={borderRadius}
           color={color}
           className={onlyIcon}
-          disabled={disabled || isLoading}
+          disabled={disabled}
           height="auto"
           iconSpacing={vars('space-xs')}
           isActive={false}

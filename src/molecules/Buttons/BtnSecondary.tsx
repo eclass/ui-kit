@@ -25,6 +25,7 @@ export function BtnSecondary({
         main: vars('colors-main-veryLightBlue'),
         hover: vars('colors-main-linkWater'),
       }}
+      fillLoader={vars('colors-main-deepSkyBlue')}
       borderColorActive={[vars('colors-main-deepSkyBlue'), vars('colors-neutral-white')]}
       color={vars('colors-main-deepSkyBlue')}
       disabled={disabled}
