@@ -59,6 +59,8 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
               fontWeight="500"
               mr={action.hasIcon ? '1.5rem' : '0'}
               lineHeight="1.172rem"
+              mt="0"
+              mb="0"
             >
               {action.text}
             </Text>
