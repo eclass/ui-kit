@@ -60,7 +60,7 @@ export function Btn({
     showChildren = 'Button'
   }
 
-  const borderRadius = rounded ? '50%' : vars('radii-small')
+  const borderRadius = rounded ? '12px' : vars('radii-small')
   const colorMain = bg?.main ?? vars('colors-main-deepSkyBlue')
   const touchColor = touchDark ? 'rgba(160, 160, 160, 0.2)' : 'rgba(255, 255, 255, 0.2)'
   const onlyIcon = !children && (rightIcon ?? leftIcon) ? 'onlyIcon' : ''
@@ -77,6 +77,8 @@ export function Btn({
     >
       <Ripples color={touchColor}>
         <Button
+          fontWeight="500"
+          fontSize={size === 'regular' ? 'medium' : 'small'}
           bg={colorMain}
           size={size === 'regular' ? 'md' : 'sm'}
           borderRadius={borderRadius}
@@ -91,7 +93,10 @@ export function Btn({
           onClick={(e: React.MouseEvent<HTMLElement>) => {
             !isLoading && !disabled && onClick?.(e)
           }}
-          padding={size === 'regular' ? vars('space-s') : vars('space-xs')}
+          paddingTop={size === 'regular' ? vars('space-xs') : vars('space-xxs')}
+          paddingBottom={size === 'regular' ? vars('space-xs') : vars('space-xxs')}
+          paddingLeft={size === 'regular' ? vars('space-s') : vars('space-xs')}
+          paddingRight={size === 'regular' ? vars('space-s') : vars('space-xs')}
           position="relative"
           isFullWidth={isFullWidth}
           rightIcon={rightIcon}

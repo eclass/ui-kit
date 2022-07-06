@@ -2,7 +2,8 @@ import { Box, Heading, HStack, VStack } from '@chakra-ui/react'
 import { Btn } from './molecules/Buttons/Btn'
 import { BtnPrimary } from './molecules/Buttons/BtnPrimary'
 import { BtnSecondary } from './molecules/Buttons/BtnSecondary'
-import { Profile } from './atoms/Icons'
+import { BtnTertiary } from './molecules/Buttons/BtnTertiary'
+import { Multimedia, Profile } from './atoms/Icons'
 import { vars } from './theme'
 
 export function Playground(): JSX.Element {
@@ -53,8 +54,25 @@ export function Playground(): JSX.Element {
           </BtnSecondary>
         </HStack>
         <HStack>
-          <Btn rounded>BtnPrimary</Btn>
+          <BtnTertiary rightIcon={<Multimedia color={vars('colors-neutral-gray')} />}>
+            BtnTertiary
+          </BtnTertiary>
+          <BtnTertiary leftIcon={<Multimedia color={vars('colors-neutral-gray')} />}>
+            BtnTertiary
+          </BtnTertiary>
+          <BtnTertiary rightIcon={<Multimedia color={vars('colors-main-deepSkyBlue')} />}>
+            BtnTertiary
+          </BtnTertiary>
+          <BtnTertiary leftIcon={<Multimedia color={vars('colors-main-deepSkyBlue')} />}>
+            BtnTertiary
+          </BtnTertiary>
         </HStack>
+        <Box width="50%">
+          <BtnPrimary isFullWidth m="0 0 8px">
+            Stretched Primary Button
+          </BtnPrimary>
+          <BtnSecondary isFullWidth>Stretched Secondary Button</BtnSecondary>
+        </Box>
       </VStack>
     </Box>
   )
