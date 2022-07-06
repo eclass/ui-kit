@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/eclass/ui-kit/compare/v1.9.0...v1.9.1) (2022-07-06)
+
+
+### Bug Fixes
+
+* **cousebox:** correccion margen link cursos ([#471](https://github.com/eclass/ui-kit/issues/471)) ([bde9a2c](https://github.com/eclass/ui-kit/commit/bde9a2cfd772a89126516a49a0a24772818f174f))
+
 # [1.9.0](https://github.com/eclass/ui-kit/compare/v1.8.1...v1.9.0) (2022-07-04)
 
 
