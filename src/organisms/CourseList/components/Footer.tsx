@@ -50,6 +50,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
               _focus={cssButton}
               _active={cssButton}
               onClick={() => handleClick()}
+              fontSize="1rem !important"
             >
               {action.text}
             </Box>
