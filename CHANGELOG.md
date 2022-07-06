@@ -1,3 +1,10 @@
+## [1.9.2](https://github.com/eclass/ui-kit/compare/v1.9.1...v1.9.2) (2022-07-06)
+
+
+### Bug Fixes
+
+* **coursebox:** corregimos more info button curso congelado ([#472](https://github.com/eclass/ui-kit/issues/472)) ([0e715e1](https://github.com/eclass/ui-kit/commit/0e715e1f7017e88c9708ff8895a79d7c11e5d913))
+
 ## [1.9.1](https://github.com/eclass/ui-kit/compare/v1.9.0...v1.9.1) (2022-07-06)
 
 
