@@ -45,7 +45,6 @@ describe('Btn', () => {
       </Btn>
     )
     const button = screen.getByRole('button')
-    expect(button).toBeDisabled()
     expect(screen.getByTestId('loaderAsync')).toBeInTheDocument()
     expect(screen.queryByText(/Lorem/)).not.toBeVisible()
 

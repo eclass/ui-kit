@@ -1,40 +1,33 @@
 import { vars } from '@theme'
 import { Button } from '@chakra-ui/react'
-
-interface colorScheme {
-  main: string
-  hover: string
-}
+import { Multimedia } from '@/atoms/Icons'
 
 export interface propsTertiaryBtn {
   children?: React.ReactNode
-  rightIcon?: React.ReactElement
-  leftIcon?: React.ReactElement
-  iconColor?: colorScheme
+  rightIcon?: boolean
+  withoutColor?: boolean
   m?: string
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
-interface props extends propsTertiaryBtn {
-  borderColorActive?: string[]
-  color?: colorScheme
-}
 
 export function BtnTertiary({
-  color,
-  borderColorActive = [vars('colors-main-deepSkyBlue'), vars('colors-neutral-white')],
   children,
-  rightIcon,
-  leftIcon,
+  rightIcon = false,
+  withoutColor = false,
   m = '0',
   onClick,
-}: props): JSX.Element {
-  const colorMain = color?.main ?? vars('colors-neutral-gray')
-  const onlyIcon = !children && (rightIcon ?? leftIcon) ? 'onlyIcon' : ''
+}: propsTertiaryBtn): JSX.Element {
+  const gray = vars('colors-neutral-gray')
+  const blue = vars('colors-main-deepSkyBlue')
+  const white = vars('colors-neutral-white')
+  const colorIcon = withoutColor ? gray : blue
+  const rIcon = rightIcon ? <Multimedia color={colorIcon} /> : undefined
+  const lIcon = !rightIcon ? <Multimedia color={colorIcon} /> : undefined
 
   return (
     <Button
       height="24px"
-      background={vars('colors-neutral-white')}
+      background={white}
       fontFamily="Roboto"
       fontStyle="normal"
       fontWeight="500"
@@ -42,22 +35,21 @@ export function BtnTertiary({
       lineHeight="16px"
       textDecorationLine="underline"
       borderRadius="12px"
-      className={onlyIcon}
-      color={colorMain}
-      rightIcon={rightIcon}
-      leftIcon={leftIcon}
+      color={gray}
+      rightIcon={rIcon}
+      leftIcon={lIcon}
       m={m}
       onClick={onClick}
       _hover={{
-        color: color?.hover ?? vars('colors-main-deepSkyBlue'),
+        color: blue,
       }}
       _focus={{
-        boxShadow: `inset 0 0 0 2px ${borderColorActive[0]}, inset 0 0 0 4px ${borderColorActive[1]}`,
+        boxShadow: `inset 0 0 0 2px ${blue}, inset 0 0 0 4px ${white}`,
       }}
       sx={{
         '&:hover': {
           'svg path': {
-            fill: vars('colors-main-deepSkyBlue'),
+            fill: blue,
           },
         },
       }}
