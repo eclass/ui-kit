@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/eclass/ui-kit/compare/v1.9.2...v1.10.0) (2022-07-08)
+
+
+### Features
+
+* **molecules:** butons ([155ad8b](https://github.com/eclass/ui-kit/commit/155ad8bfa88a9892ee0f94f43cb58bb1501f1efa))
+
 ## [1.9.2](https://github.com/eclass/ui-kit/compare/v1.9.1...v1.9.2) (2022-07-06)
 
 
