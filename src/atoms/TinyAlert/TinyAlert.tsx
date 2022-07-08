@@ -83,6 +83,7 @@ export function TinyAlert({ status, text, margin = '0' }: props): JSX.Element | 
       gap=".25rem"
       width="fit-content"
       borderRadius=".25rem"
+      className="TinyAlert-Box"
     >
       {alerts[status].icon && (
         <Box
