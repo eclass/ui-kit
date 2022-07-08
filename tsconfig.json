@@ -23,7 +23,8 @@
       "@theme": ["src/theme"],
       "@theme/*": ["src/theme/*"],
       "@organisms": ["src/organisms"],
-      "@icons": ["src/atoms/Icons"]
+      "@icons": ["src/atoms/Icons"],
+      "@molecules": ["src/molecules"]
     },
     "plugins": [
       { "transform": "typescript-transform-paths", "afterDeclarations": true }
