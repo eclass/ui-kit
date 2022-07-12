@@ -54,6 +54,22 @@ const Template: ComponentStory<typeof BtnTertiary> = (args) => {
       </BtnTertiary>
 
       <BtnTertiary m="0 0 8px">Left icon blue</BtnTertiary>
+      <Box
+        fontSize=".75rem"
+        fontWeight="400"
+        fontFamily="Roboto"
+        lineHeight=".875rem"
+        margin="0 0 4px"
+      >
+        Other icons
+      </Box>
+      <BtnTertiary iconStatus="answer">Answer</BtnTertiary>
+      <BtnTertiary iconStatus="edit">Edit</BtnTertiary>
+      <BtnTertiary iconStatus="eliminate">Eliminate</BtnTertiary>
+      <BtnTertiary iconStatus="password">Password</BtnTertiary>
+      <BtnTertiary iconStatus="more">More</BtnTertiary>
+      <BtnTertiary iconStatus="back">Go back</BtnTertiary>
+      <BtnTertiary>Default</BtnTertiary>
     </>
   )
 }
