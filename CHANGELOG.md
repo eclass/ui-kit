@@ -1,3 +1,11 @@
+## [1.10.1](https://github.com/eclass/ui-kit/compare/v1.10.0...v1.10.1) (2022-07-14)
+
+
+### Bug Fixes
+
+* **molecules:** inclusión props de type y tabIndex para botones secundarios y primarios ([#476](https://github.com/eclass/ui-kit/issues/476)) ([f12a714](https://github.com/eclass/ui-kit/commit/f12a7147a40c108bf3e5778d01a82f97f337bcbd))
+* **molecules:** nuevos iconos botón terciario ([#475](https://github.com/eclass/ui-kit/issues/475)) ([889be63](https://github.com/eclass/ui-kit/commit/889be63170ad8e9dcb18f55ecc82106a9f14f302))
+
 # [1.10.0](https://github.com/eclass/ui-kit/compare/v1.9.2...v1.10.0) (2022-07-08)
 
 
