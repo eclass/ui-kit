@@ -19,6 +19,8 @@ export interface propsBaseBtns {
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   rightIcon?: React.ReactElement
   size?: 'regular' | 'small'
+  type?: 'button' | 'submit' | 'reset' | undefined
+  tabIndex?: number
 }
 interface props extends propsBaseBtns {
   bg?: colorScheme
@@ -54,6 +56,8 @@ export function Btn({
   rounded = false,
   size = 'regular',
   touchDark = false,
+  type = 'button',
+  tabIndex,
 }: props): JSX.Element {
   let showChildren = children ?? null
   if (!children && !rightIcon && !leftIcon) {
@@ -93,6 +97,8 @@ export function Btn({
           onClick={(e: React.MouseEvent<HTMLElement>) => {
             !isLoading && !disabled && onClick?.(e)
           }}
+          type={type}
+          tabIndex={tabIndex}
           paddingTop={size === 'regular' ? vars('space-xs') : vars('space-xxs')}
           paddingBottom={size === 'regular' ? vars('space-xs') : vars('space-xxs')}
           paddingLeft={size === 'regular' ? vars('space-s') : vars('space-xs')}
