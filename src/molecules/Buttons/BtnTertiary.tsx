@@ -1,8 +1,9 @@
 import { vars } from '@theme'
 import { Button } from '@chakra-ui/react'
-import { Multimedia } from '@/atoms/Icons'
+import { GoBack, Password, Pen, PlusSign, TextBubble, TrashCan, Multimedia } from '@/atoms/Icons'
 
 export interface propsTertiaryBtn {
+  iconStatus?: 'answer' | 'back' | 'edit' | 'eliminate' | 'more' | 'password' | 'multimedia'
   children?: React.ReactNode
   rightIcon?: boolean
   withoutColor?: boolean
@@ -12,7 +13,8 @@ export interface propsTertiaryBtn {
 
 export function BtnTertiary({
   children,
-  rightIcon = false,
+  iconStatus = 'multimedia',
+  rightIcon,
   withoutColor = false,
   m = '0',
   onClick,
@@ -21,8 +23,20 @@ export function BtnTertiary({
   const blue = vars('colors-main-deepSkyBlue')
   const white = vars('colors-neutral-white')
   const colorIcon = withoutColor ? gray : blue
-  const rIcon = rightIcon ? <Multimedia color={colorIcon} /> : undefined
-  const lIcon = !rightIcon ? <Multimedia color={colorIcon} /> : undefined
+
+  const btnIcons = {
+    answer: <TextBubble color={colorIcon} />,
+    back: <GoBack color={colorIcon} />,
+    edit: <Pen color={colorIcon} />,
+    eliminate: <TrashCan color={colorIcon} />,
+    more: <PlusSign color={colorIcon} />,
+    password: <Password color={colorIcon} />,
+    multimedia: <Multimedia color={colorIcon} />,
+  }
+
+  const icon = btnIcons[iconStatus] ?? btnIcons.multimedia
+  const rIcon = rightIcon ? icon : undefined
+  const lIcon = !rightIcon ? icon : undefined
 
   return (
     <Button

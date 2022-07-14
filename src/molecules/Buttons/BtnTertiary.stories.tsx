@@ -54,6 +54,43 @@ const Template: ComponentStory<typeof BtnTertiary> = (args) => {
       </BtnTertiary>
 
       <BtnTertiary m="0 0 8px">Left icon blue</BtnTertiary>
+
+      <Box
+        fontSize=".75rem"
+        fontWeight="400"
+        fontFamily="Roboto"
+        lineHeight=".875rem"
+        margin="0 0 4px"
+      >
+        Other icons
+      </Box>
+      <BtnTertiary iconStatus="answer">Answer</BtnTertiary>
+      <BtnTertiary iconStatus="edit">Edit</BtnTertiary>
+      <BtnTertiary iconStatus="eliminate">Eliminate</BtnTertiary>
+      <BtnTertiary iconStatus="back">Go back</BtnTertiary>
+      <BtnTertiary iconStatus="more">More</BtnTertiary>
+      <BtnTertiary iconStatus="password">Password</BtnTertiary>
+      <BtnTertiary>Default</BtnTertiary>
+      <br />
+      <BtnTertiary withoutColor iconStatus="answer">
+        Answer
+      </BtnTertiary>
+      <BtnTertiary withoutColor iconStatus="edit">
+        Edit
+      </BtnTertiary>
+      <BtnTertiary withoutColor iconStatus="eliminate">
+        Eliminate
+      </BtnTertiary>
+      <BtnTertiary withoutColor iconStatus="back">
+        Go back
+      </BtnTertiary>
+      <BtnTertiary withoutColor iconStatus="more">
+        More
+      </BtnTertiary>
+      <BtnTertiary withoutColor iconStatus="password">
+        Password
+      </BtnTertiary>
+      <BtnTertiary withoutColor>Default</BtnTertiary>
     </>
   )
 }
