@@ -18,6 +18,8 @@ export function BtnSecondary({
   onClick,
   rightIcon,
   size = 'regular',
+  type = 'button',
+  tabIndex,
 }: propsBaseBtns): JSX.Element {
   return (
     <Btn
@@ -37,6 +39,8 @@ export function BtnSecondary({
       rightIcon={rightIcon}
       size={size}
       touchDark
+      type={type}
+      tabIndex={tabIndex}
     >
       {children}
     </Btn>

@@ -17,6 +17,8 @@ export function BtnPrimary({
   onClick,
   rightIcon,
   size = 'regular',
+  type = 'button',
+  tabIndex,
 }: propsBaseBtns): JSX.Element {
   return (
     <Btn
@@ -28,6 +30,8 @@ export function BtnPrimary({
       onClick={onClick}
       rightIcon={rightIcon}
       size={size}
+      type={type}
+      tabIndex={tabIndex}
     >
       {children}
     </Btn>
