@@ -19,8 +19,9 @@ export interface propsBaseBtns {
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   rightIcon?: React.ReactElement
   size?: 'regular' | 'small'
-  type?: 'button' | 'submit' | 'reset' | undefined
+  type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
+  id?: string
 }
 interface props extends propsBaseBtns {
   bg?: colorScheme
@@ -58,6 +59,7 @@ export function Btn({
   touchDark = false,
   type = 'button',
   tabIndex,
+  id,
 }: props): JSX.Element {
   let showChildren = children ?? null
   if (!children && !rightIcon && !leftIcon) {
@@ -81,6 +83,7 @@ export function Btn({
     >
       <Ripples color={touchColor}>
         <Button
+          id={id}
           fontWeight="500"
           fontSize={size === 'regular' ? 'medium' : 'small'}
           bg={colorMain}
