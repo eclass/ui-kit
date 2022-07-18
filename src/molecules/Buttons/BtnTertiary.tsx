@@ -8,6 +8,9 @@ export interface propsTertiaryBtn {
   rightIcon?: boolean
   withoutColor?: boolean
   m?: string
+  type?: 'button' | 'submit' | 'reset'
+  tabIndex?: number
+  id?: string
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
@@ -17,6 +20,9 @@ export function BtnTertiary({
   rightIcon,
   withoutColor = false,
   m = '0',
+  type = 'button',
+  tabIndex,
+  id,
   onClick,
 }: propsTertiaryBtn): JSX.Element {
   const gray = vars('colors-neutral-gray')
@@ -40,6 +46,9 @@ export function BtnTertiary({
 
   return (
     <Button
+      id={id}
+      type={type}
+      tabIndex={tabIndex}
       height="24px"
       background={white}
       fontFamily="Roboto"

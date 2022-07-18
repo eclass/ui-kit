@@ -19,9 +19,11 @@ export function BtnPrimary({
   size = 'regular',
   type = 'button',
   tabIndex,
+  id,
 }: propsBaseBtns): JSX.Element {
   return (
     <Btn
+      id={id}
       disabled={disabled}
       isFullWidth={isFullWidth}
       isLoading={isLoading}

@@ -20,9 +20,11 @@ export function BtnSecondary({
   size = 'regular',
   type = 'button',
   tabIndex,
+  id,
 }: propsBaseBtns): JSX.Element {
   return (
     <Btn
+      id={id}
       bg={{
         main: vars('colors-main-veryLightBlue'),
         hover: vars('colors-main-linkWater'),
