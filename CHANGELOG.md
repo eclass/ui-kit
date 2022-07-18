@@ -1,3 +1,10 @@
+## [1.10.2](https://github.com/eclass/ui-kit/compare/v1.10.1...v1.10.2) (2022-07-18)
+
+
+### Bug Fixes
+
+* **molecules:** nuevos props botones ([#477](https://github.com/eclass/ui-kit/issues/477)) ([0c44293](https://github.com/eclass/ui-kit/commit/0c4429381d0ed4a867352d7adbaa28025e2fbf01))
+
 ## [1.10.1](https://github.com/eclass/ui-kit/compare/v1.10.0...v1.10.1) (2022-07-14)
 
 
