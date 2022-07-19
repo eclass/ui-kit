@@ -1,4 +1,5 @@
 export { Btn } from './Buttons/Btn'
-export * from './Buttons/BtnPrimary'
-export * from './Buttons/BtnSecondary'
-export * from './Buttons/BtnTertiary'
+export { BtnPrimary } from './Buttons/BtnPrimary'
+export { BtnSecondary } from './Buttons/BtnSecondary'
+export { BtnTertiary } from './Buttons/BtnTertiary'
+export { BtnLink } from './Buttons/BtnLink'
