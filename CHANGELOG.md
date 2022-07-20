@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/eclass/ui-kit/compare/v1.10.2...v1.11.0) (2022-07-20)
+
+
+### Features
+
+* **molecules:** botón link sin ícono para sección 'mi perfil' ([#479](https://github.com/eclass/ui-kit/issues/479)) ([a39991b](https://github.com/eclass/ui-kit/commit/a39991bf27f4d4039e60baae70d5f74062acbe32))
+
 ## [1.10.2](https://github.com/eclass/ui-kit/compare/v1.10.1...v1.10.2) (2022-07-18)
 
 
