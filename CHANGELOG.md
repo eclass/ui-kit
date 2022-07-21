@@ -1,3 +1,10 @@
+## [1.11.1](https://github.com/eclass/ui-kit/compare/v1.11.0...v1.11.1) (2022-07-21)
+
+
+### Bug Fixes
+
+* **molecules:** cambios botones nuevos ([#482](https://github.com/eclass/ui-kit/issues/482)) ([50d162c](https://github.com/eclass/ui-kit/commit/50d162c79141d6d4c39be376ba3c79c7e5d19d27))
+
 # [1.11.0](https://github.com/eclass/ui-kit/compare/v1.10.2...v1.11.0) (2022-07-20)
 
 
