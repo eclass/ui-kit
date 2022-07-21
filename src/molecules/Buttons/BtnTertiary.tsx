@@ -50,7 +50,7 @@ export function BtnTertiary({
       type={type}
       tabIndex={tabIndex}
       height="24px"
-      background={white}
+      background="transparent"
       fontFamily="Roboto"
       fontStyle="normal"
       fontWeight="500"
@@ -58,6 +58,10 @@ export function BtnTertiary({
       lineHeight="16px"
       textDecorationLine="underline"
       borderRadius="12px"
+      paddingTop={vars('space-xxs')}
+      paddingBottom={vars('space-xxs')}
+      paddingLeft={vars('space-xs')}
+      paddingRight={vars('space-xs')}
       color={gray}
       rightIcon={rIcon}
       leftIcon={lIcon}

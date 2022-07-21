@@ -66,6 +66,7 @@ export function Btn({
     showChildren = 'Button'
   }
 
+  const paddingTopBottom = '.75rem' // xxs + xs spacial units
   const borderRadius = rounded ? '12px' : vars('radii-small')
   const colorMain = bg?.main ?? vars('colors-main-deepSkyBlue')
   const touchColor = touchDark ? 'rgba(160, 160, 160, 0.2)' : 'rgba(255, 255, 255, 0.2)'
@@ -102,8 +103,12 @@ export function Btn({
           }}
           type={type}
           tabIndex={tabIndex}
-          paddingTop={size === 'regular' ? vars('space-xs') : vars('space-xxs')}
-          paddingBottom={size === 'regular' ? vars('space-xs') : vars('space-xxs')}
+          paddingTop={
+            size === 'regular' ? paddingTopBottom : onlyIcon ? vars('space-xs') : vars('space-xxs')
+          }
+          paddingBottom={
+            size === 'regular' ? paddingTopBottom : onlyIcon ? vars('space-xs') : vars('space-xxs')
+          }
           paddingLeft={size === 'regular' ? vars('space-s') : vars('space-xs')}
           paddingRight={size === 'regular' ? vars('space-s') : vars('space-xs')}
           position="relative"

@@ -13,6 +13,8 @@ export function BtnLink({ children, m = '0', onClick, id }: props): JSX.Element 
     <Box
       as="button"
       id={id}
+      backgroundColor="transparent"
+      borderStyle="none"
       width="fit-content"
       padding=".25em"
       fontFamily="Roboto"
