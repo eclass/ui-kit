@@ -50,7 +50,7 @@ export function BtnTertiary({
       type={type}
       tabIndex={tabIndex}
       height="24px"
-      background={white}
+      background="transparent"
       fontFamily="Roboto"
       fontStyle="normal"
       fontWeight="500"
