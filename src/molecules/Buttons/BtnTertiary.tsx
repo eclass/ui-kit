@@ -1,9 +1,18 @@
 import { vars } from '@theme'
 import { Button } from '@chakra-ui/react'
-import { GoBack, Password, Pen, PlusSign, TextBubble, TrashCan, Multimedia } from '@/atoms/Icons'
+import {
+  GoBack,
+  Password,
+  Pen,
+  PlusSign,
+  TextBubble,
+  TrashCan,
+  Multimedia,
+  AcademicRecord,
+} from '@/atoms/Icons'
 
 export interface propsTertiaryBtn {
-  iconStatus?: 'answer' | 'back' | 'edit' | 'eliminate' | 'more' | 'password' | 'multimedia'
+  iconStatus?: 'answer' | 'back' | 'edit' | 'delete' | 'more' | 'password' | 'multimedia' | 'record'
   children?: React.ReactNode
   rightIcon?: boolean
   withoutColor?: boolean
@@ -34,10 +43,11 @@ export function BtnTertiary({
     answer: <TextBubble color={colorIcon} />,
     back: <GoBack color={colorIcon} />,
     edit: <Pen color={colorIcon} />,
-    eliminate: <TrashCan color={colorIcon} />,
+    delete: <TrashCan color={colorIcon} />,
     more: <PlusSign color={colorIcon} />,
     password: <Password color={colorIcon} />,
     multimedia: <Multimedia color={colorIcon} />,
+    record: <AcademicRecord color={colorIcon} />,
   }
 
   const icon = btnIcons[iconStatus] ?? btnIcons.multimedia
