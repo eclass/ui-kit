@@ -66,10 +66,11 @@ const Template: ComponentStory<typeof BtnTertiary> = (args) => {
       </Box>
       <BtnTertiary iconStatus="answer">Answer</BtnTertiary>
       <BtnTertiary iconStatus="edit">Edit</BtnTertiary>
-      <BtnTertiary iconStatus="eliminate">Eliminate</BtnTertiary>
+      <BtnTertiary iconStatus="delete">Eliminate</BtnTertiary>
       <BtnTertiary iconStatus="back">Go back</BtnTertiary>
       <BtnTertiary iconStatus="more">More</BtnTertiary>
       <BtnTertiary iconStatus="password">Password</BtnTertiary>
+      <BtnTertiary iconStatus="record">Academic Record</BtnTertiary>
       <BtnTertiary>Default</BtnTertiary>
       <br />
       <BtnTertiary withoutColor iconStatus="answer">
@@ -78,7 +79,7 @@ const Template: ComponentStory<typeof BtnTertiary> = (args) => {
       <BtnTertiary withoutColor iconStatus="edit">
         Edit
       </BtnTertiary>
-      <BtnTertiary withoutColor iconStatus="eliminate">
+      <BtnTertiary withoutColor iconStatus="delete">
         Eliminate
       </BtnTertiary>
       <BtnTertiary withoutColor iconStatus="back">
@@ -88,6 +89,9 @@ const Template: ComponentStory<typeof BtnTertiary> = (args) => {
         More
       </BtnTertiary>
       <BtnTertiary withoutColor iconStatus="password">
+        Password
+      </BtnTertiary>
+      <BtnTertiary withoutColor iconStatus="record">
         Password
       </BtnTertiary>
       <BtnTertiary withoutColor>Default</BtnTertiary>
