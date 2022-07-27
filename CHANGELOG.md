@@ -1,3 +1,11 @@
+## [1.11.2](https://github.com/eclass/ui-kit/compare/v1.11.1...v1.11.2) (2022-07-27)
+
+
+### Bug Fixes
+
+* **molecules:** cambios botones nuevos ([#483](https://github.com/eclass/ui-kit/issues/483)) ([f96123d](https://github.com/eclass/ui-kit/commit/f96123d013d507117971435fc41efedc2122b20a)), closes [#479](https://github.com/eclass/ui-kit/issues/479)
+* **tertiary-btn:** nuevo icono ([#484](https://github.com/eclass/ui-kit/issues/484)) ([3ae1820](https://github.com/eclass/ui-kit/commit/3ae1820d028a6cf7238f0787afd48512147b6542))
+
 ## [1.11.1](https://github.com/eclass/ui-kit/compare/v1.11.0...v1.11.1) (2022-07-21)
 
 
