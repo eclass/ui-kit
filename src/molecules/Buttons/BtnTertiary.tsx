@@ -9,10 +9,22 @@ import {
   TrashCan,
   Multimedia,
   AcademicRecord,
+  Download,
+  VerticalLine,
 } from '@/atoms/Icons'
 
 export interface propsTertiaryBtn {
-  iconStatus?: 'answer' | 'back' | 'edit' | 'delete' | 'more' | 'password' | 'multimedia' | 'record'
+  iconStatus?:
+    | 'answer'
+    | 'back'
+    | 'edit'
+    | 'delete'
+    | 'more'
+    | 'password'
+    | 'multimedia'
+    | 'record'
+    | 'download'
+    | 'noIcon'
   children?: React.ReactNode
   rightIcon?: boolean
   withoutColor?: boolean
@@ -20,6 +32,7 @@ export interface propsTertiaryBtn {
   type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
   id?: string
+  separation?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
@@ -32,27 +45,31 @@ export function BtnTertiary({
   type = 'button',
   tabIndex,
   id,
+  separation = false,
   onClick,
 }: propsTertiaryBtn): JSX.Element {
   const gray = vars('colors-neutral-gray')
   const blue = vars('colors-main-deepSkyBlue')
   const white = vars('colors-neutral-white')
-  const colorIcon = withoutColor ? gray : blue
+  const colorIcon = withoutColor ? vars('colors-main-blueGrey') : blue
 
   const btnIcons = {
     answer: <TextBubble color={colorIcon} />,
     back: <GoBack color={colorIcon} />,
-    edit: <Pen color={colorIcon} />,
     delete: <TrashCan color={colorIcon} />,
+    download: <Download color={colorIcon} />,
+    edit: <Pen color={colorIcon} />,
     more: <PlusSign color={colorIcon} />,
-    password: <Password color={colorIcon} />,
     multimedia: <Multimedia color={colorIcon} />,
+    password: <Password color={colorIcon} />,
     record: <AcademicRecord color={colorIcon} />,
+    noIcon: <></>,
   }
 
   const icon = btnIcons[iconStatus] ?? btnIcons.multimedia
   const rIcon = rightIcon ? icon : undefined
   const lIcon = !rightIcon ? icon : undefined
+  const verticalLine = separation ? <VerticalLine m="0 0 0 8px" /> : undefined
 
   return (
     <Button
@@ -70,7 +87,7 @@ export function BtnTertiary({
       borderRadius="12px"
       paddingTop={vars('space-xxs')}
       paddingBottom={vars('space-xxs')}
-      paddingLeft={vars('space-xs')}
+      paddingLeft={!separation ? vars('space-xs') : '0'}
       paddingRight={vars('space-xs')}
       color={gray}
       rightIcon={rIcon}
@@ -80,8 +97,14 @@ export function BtnTertiary({
       _hover={{
         color: blue,
       }}
-      _focus={{
+      _focusVisible={{
         boxShadow: `inset 0 0 0 2px ${blue}, inset 0 0 0 4px ${white}`,
+      }}
+      _focus={{
+        boxShadow: 'none',
+      }}
+      _active={{
+        bg: 'transparent',
       }}
       sx={{
         '&:hover': {
@@ -92,6 +115,7 @@ export function BtnTertiary({
       }}
     >
       {children}
+      {verticalLine}
     </Button>
   )
 }
