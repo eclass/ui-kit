@@ -1,3 +1,10 @@
+## [1.11.3](https://github.com/eclass/ui-kit/compare/v1.11.2...v1.11.3) (2022-07-29)
+
+
+### Bug Fixes
+
+* **tertiary-btn:** correcciones botón terciario ([#485](https://github.com/eclass/ui-kit/issues/485)) ([ef105e9](https://github.com/eclass/ui-kit/commit/ef105e961cc96de48ac85a64b32aba8185af9ff6))
+
 ## [1.11.2](https://github.com/eclass/ui-kit/compare/v1.11.1...v1.11.2) (2022-07-27)
 
 
