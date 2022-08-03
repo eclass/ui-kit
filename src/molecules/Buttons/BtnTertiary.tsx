@@ -10,7 +10,6 @@ import {
   Multimedia,
   AcademicRecord,
   Download,
-  VerticalLine,
 } from '@/atoms/Icons'
 
 export interface propsTertiaryBtn {
@@ -32,7 +31,7 @@ export interface propsTertiaryBtn {
   type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
   id?: string
-  separation?: boolean
+
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
@@ -45,7 +44,7 @@ export function BtnTertiary({
   type = 'button',
   tabIndex,
   id,
-  separation = false,
+
   onClick,
 }: propsTertiaryBtn): JSX.Element {
   const gray = vars('colors-neutral-gray')
@@ -69,7 +68,6 @@ export function BtnTertiary({
   const icon = btnIcons[iconStatus] ?? btnIcons.multimedia
   const rIcon = rightIcon ? icon : undefined
   const lIcon = !rightIcon ? icon : undefined
-  const verticalLine = separation ? <VerticalLine m="0 0 0 8px" /> : undefined
 
   return (
     <Button
@@ -87,7 +85,7 @@ export function BtnTertiary({
       borderRadius="12px"
       paddingTop={vars('space-xxs')}
       paddingBottom={vars('space-xxs')}
-      paddingLeft={!separation ? vars('space-xs') : '0'}
+      paddingLeft={vars('space-xs')}
       paddingRight={vars('space-xs')}
       color={gray}
       rightIcon={rIcon}
@@ -115,7 +113,6 @@ export function BtnTertiary({
       }}
     >
       {children}
-      {verticalLine}
     </Button>
   )
 }
