@@ -1,3 +1,10 @@
+## [1.11.4](https://github.com/eclass/ui-kit/compare/v1.11.3...v1.11.4) (2022-08-03)
+
+
+### Bug Fixes
+
+* **tertiary-btn:** eliminación de línea vertical en componente ([#486](https://github.com/eclass/ui-kit/issues/486)) ([db81af6](https://github.com/eclass/ui-kit/commit/db81af6ae2d9aecba42866246459b1f2f07a01d7))
+
 ## [1.11.3](https://github.com/eclass/ui-kit/compare/v1.11.2...v1.11.3) (2022-07-29)
 
 
