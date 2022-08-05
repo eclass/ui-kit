@@ -1,3 +1,10 @@
+## [1.11.5](https://github.com/eclass/ui-kit/compare/v1.11.4...v1.11.5) (2022-08-05)
+
+
+### Bug Fixes
+
+* **icons:** cambio en ancho de viewbox iconos password y go-back ([#487](https://github.com/eclass/ui-kit/issues/487)) ([3da7736](https://github.com/eclass/ui-kit/commit/3da773692726d60d59f375168cf5c62f461cb638))
+
 ## [1.11.4](https://github.com/eclass/ui-kit/compare/v1.11.3...v1.11.4) (2022-08-03)
 
 
