@@ -1,3 +1,10 @@
+## [1.11.7](https://github.com/eclass/ui-kit/compare/v1.11.6...v1.11.7) (2022-08-09)
+
+
+### Bug Fixes
+
+* **molecules:** btn lineHeight ([#489](https://github.com/eclass/ui-kit/issues/489)) ([1763e48](https://github.com/eclass/ui-kit/commit/1763e48e029118952b29380248ddf44849b4e11e))
+
 ## [1.11.6](https://github.com/eclass/ui-kit/compare/v1.11.5...v1.11.6) (2022-08-09)
 
 
