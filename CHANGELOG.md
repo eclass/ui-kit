@@ -1,3 +1,10 @@
+## [1.11.6](https://github.com/eclass/ui-kit/compare/v1.11.5...v1.11.6) (2022-08-09)
+
+
+### Bug Fixes
+
+* **base-btn:** altura mínima para botones regulares y small ([#488](https://github.com/eclass/ui-kit/issues/488)) ([5f6b2a9](https://github.com/eclass/ui-kit/commit/5f6b2a92f293dfef3b25309a2e5fb59656069f53))
+
 ## [1.11.5](https://github.com/eclass/ui-kit/compare/v1.11.4...v1.11.5) (2022-08-05)
 
 
