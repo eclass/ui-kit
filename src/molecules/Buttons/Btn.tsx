@@ -94,6 +94,7 @@ export function Btn({
           className={onlyIcon}
           disabled={disabled}
           height="auto"
+          minHeight={size === 'regular' ? '2.7rem' : '1.474rem'}
           iconSpacing={vars('space-xs')}
           isActive={false}
           isLoading={isLoading}
