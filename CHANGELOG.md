@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/eclass/ui-kit/compare/v1.11.7...v1.12.0) (2022-08-11)
+
+
+### Features
+
+* **docs:** creación del readme ([#491](https://github.com/eclass/ui-kit/issues/491)) ([e23aa4d](https://github.com/eclass/ui-kit/commit/e23aa4d6f0a1f7bd89a2984c5b8beebd9d9f3bc3))
+
 ## [1.11.7](https://github.com/eclass/ui-kit/compare/v1.11.6...v1.11.7) (2022-08-09)
 
 
