@@ -93,7 +93,7 @@ export function BtnTertiary({
       m={m}
       onClick={onClick}
       _hover={{
-        color: blue,
+        color: `${blue}`,
       }}
       _focusVisible={{
         boxShadow: `inset 0 0 0 2px ${blue}, inset 0 0 0 4px ${white}`,
@@ -107,7 +107,13 @@ export function BtnTertiary({
       sx={{
         '&:hover': {
           'svg path': {
-            fill: blue,
+            fill: `${blue}`,
+          },
+          '@media (hover: none)': {
+            color: `${gray}`,
+            'svg path': {
+              fill: colorIcon,
+            },
           },
         },
       }}
