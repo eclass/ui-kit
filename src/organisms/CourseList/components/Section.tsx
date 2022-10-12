@@ -4,10 +4,8 @@ import { Box, Heading, Link, List, HStack, Text, ListItem, Flex } from '@chakra-
 import { CourseBoxContext } from '../CourseBox'
 import { DateStatus } from './DateStatus'
 import { IconSelection } from './IconSelection'
-import { Label } from '@atoms'
 import { vars } from '@theme'
-
-const ID_QUALIFIED = 7
+import { CourseStatus } from './CourseStatus'
 
 export function Section(): JSX.Element | null {
   const { name, dateStatus, information, progress, status } = React.useContext(CourseBoxContext)
@@ -41,21 +39,7 @@ export function Section(): JSX.Element | null {
         {name}
       </Heading>
       <Flex mt="1rem" justify="space-between">
-        <Flex>
-          <IconSelection type={progress.icon} progressValue={progress.progress} />
-          <Text m="0" ml=".625rem" fontSize=".875rem" lineHeight="1.125rem">
-            {progress?.label}
-          </Text>
-        </Flex>
-        {status?.id === ID_QUALIFIED && progress?.finalGrade && progress?.finalGrade.length > 0 && (
-          <Label
-            size="sm"
-            bg={progress.isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
-            color={vars('colors-neutral-white')}
-          >
-            {progress?.finalGrade}
-          </Label>
-        )}
+        <CourseStatus progress={progress} status={status} />
       </Flex>
       {information != null && information?.length > 0 && (
         <List
