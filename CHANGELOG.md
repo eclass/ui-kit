@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/eclass/ui-kit/compare/v1.12.0...v1.13.0) (2022-10-13)
+
+
+### Features
+
+* **organisms:** exporto componente que da el estado del curso ([#493](https://github.com/eclass/ui-kit/issues/493)) ([d312903](https://github.com/eclass/ui-kit/commit/d3129031c824a0e7a2d0b33158bfcb89e1b4ba3e))
+
 # [1.12.0](https://github.com/eclass/ui-kit/compare/v1.11.7...v1.12.0) (2022-08-11)
 
 
