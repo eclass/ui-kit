@@ -94,8 +94,8 @@ export function Btn({
           className={onlyIcon}
           disabled={disabled}
           height="auto"
+          minHeight={size === 'regular' ? '2.813rem' : '2rem'}
           lineHeight="initial"
-          minHeight={size === 'regular' ? '2.7rem' : '1.474rem'}
           iconSpacing={vars('space-xs')}
           isActive={false}
           isLoading={isLoading}
@@ -125,6 +125,9 @@ export function Btn({
             cursor: 'not-allowed',
           }}
           _focus={{
+            boxShadow: 'none',
+          }}
+          _focusVisible={{
             boxShadow: `inset 0 0 0 2px ${borderColorActive[0]}, inset 0 0 0 4px ${borderColorActive[1]}`,
           }}
           _hover={{
