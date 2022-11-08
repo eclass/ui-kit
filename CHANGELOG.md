@@ -1,3 +1,10 @@
+## [1.13.1](https://github.com/eclass/ui-kit/compare/v1.13.0...v1.13.1) (2022-11-08)
+
+
+### Bug Fixes
+
+* **buttons:** modificación tamaño y focus botones primarios y secundarios ([#494](https://github.com/eclass/ui-kit/issues/494)) ([a2aafa6](https://github.com/eclass/ui-kit/commit/a2aafa6703304dc0b9a2995a9057d1afd0f11e07))
+
 # [1.13.0](https://github.com/eclass/ui-kit/compare/v1.12.0...v1.13.0) (2022-10-13)
 
 
