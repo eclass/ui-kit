@@ -1,6 +1,7 @@
 import { vars } from '@theme'
 import { Button } from '@chakra-ui/react'
 import {
+  GoAhead,
   GoBack,
   Password,
   Pen,
@@ -15,6 +16,7 @@ import {
 export interface propsTertiaryBtn {
   iconStatus?:
     | 'answer'
+    | 'ahead'
     | 'back'
     | 'edit'
     | 'delete'
@@ -53,6 +55,7 @@ export function BtnTertiary({
   const colorIcon = withoutColor ? vars('colors-main-blueGrey') : blue
 
   const btnIcons = {
+    ahead: <GoAhead color={colorIcon} />,
     answer: <TextBubble color={colorIcon} />,
     back: <GoBack color={colorIcon} />,
     delete: <TrashCan color={colorIcon} />,
