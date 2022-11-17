@@ -1,3 +1,10 @@
+# [1.14.0](https://github.com/eclass/ui-kit/compare/v1.13.1...v1.14.0) (2022-11-17)
+
+
+### Features
+
+* **atoms:** add new icon ([#496](https://github.com/eclass/ui-kit/issues/496)) ([b93139e](https://github.com/eclass/ui-kit/commit/b93139ed765115f0970cdce322efebc7f6c759bb))
+
 ## [1.13.1](https://github.com/eclass/ui-kit/compare/v1.13.0...v1.13.1) (2022-11-08)
 
 
