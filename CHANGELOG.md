@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/eclass/ui-kit/compare/v1.14.0...v1.14.1) (2022-11-18)
+
+
+### Bug Fixes
+
+* **PTA-1954:** ancho mínimo y comportamiento disabled ([#497](https://github.com/eclass/ui-kit/issues/497)) ([cc5500d](https://github.com/eclass/ui-kit/commit/cc5500d020822dfe88ae0b8750b4825b37e34531))
+
 # [1.14.0](https://github.com/eclass/ui-kit/compare/v1.13.1...v1.14.0) (2022-11-17)
 
 
