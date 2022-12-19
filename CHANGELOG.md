@@ -1,3 +1,10 @@
+# [1.15.0](https://github.com/eclass/ui-kit/compare/v1.14.1...v1.15.0) (2022-12-19)
+
+
+### Features
+
+* **atoms:** exporto iconos ([#501](https://github.com/eclass/ui-kit/issues/501)) ([b1636a1](https://github.com/eclass/ui-kit/commit/b1636a15a9e48955bdf7eee21262050729c2cce6))
+
 ## [1.14.1](https://github.com/eclass/ui-kit/compare/v1.14.0...v1.14.1) (2022-11-18)
 
 
