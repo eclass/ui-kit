@@ -16,6 +16,8 @@ export const colors = {
   secondary: {
     pumpkin: '#FF7A14',
     polishedBronze: '#CD7F32',
+    cornsilk: '#FFF5DF',
+    linen: '#F8ECE0',
   },
   alert: {
     deepSkyBlue: main.deepSkyBlue,
