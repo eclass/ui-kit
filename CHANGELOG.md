@@ -1,3 +1,10 @@
+# [1.16.0](https://github.com/eclass/ui-kit/compare/v1.15.0...v1.16.0) (2023-01-16)
+
+
+### Features
+
+* **secondary:** add secondary colors ([#503](https://github.com/eclass/ui-kit/issues/503)) ([42c2bfe](https://github.com/eclass/ui-kit/commit/42c2bfeb765037a51f75f9544f55f9ffbbd4098a))
+
 # [1.15.0](https://github.com/eclass/ui-kit/compare/v1.14.1...v1.15.0) (2022-12-19)
 
 
