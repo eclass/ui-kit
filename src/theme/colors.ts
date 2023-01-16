@@ -15,6 +15,7 @@ export const colors = {
   main,
   secondary: {
     pumpkin: '#FF7A14',
+    polishedBronze: '#CD7F32',
   },
   alert: {
     deepSkyBlue: main.deepSkyBlue,
