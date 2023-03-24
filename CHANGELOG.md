@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/eclass/ui-kit/compare/v1.17.0...v1.18.0) (2023-03-24)
+
+
+### Features
+
+* **new-tooltip:** nuevo componente, stories y test ([8a0bb87](https://github.com/eclass/ui-kit/commit/8a0bb87eee64ed396505082c05b26fae56634b91))
+
 # [1.17.0](https://github.com/eclass/ui-kit/compare/v1.16.0...v1.17.0) (2023-01-16)
 
 
