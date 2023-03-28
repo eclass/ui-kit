@@ -21,7 +21,9 @@ export const TooltipLabel: FC<TooltipProps> = ({
       sx={{
         bg: vars('colors-neutral-darkCharcoal'),
         borderRadius: '10px',
+        color: `${vars('colors-neutral-white')} !important`,
         fontSize: '12px',
+        fontWeight: '400',
         maxWidth: '170px',
         padding: '8px',
 
