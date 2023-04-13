@@ -1,3 +1,10 @@
+## [1.18.2](https://github.com/eclass/ui-kit/compare/v1.18.1...v1.18.2) (2023-04-13)
+
+
+### Bug Fixes
+
+* **tooltip:** cambio de nombre, seteo color e inclusión classname ([9f839ee](https://github.com/eclass/ui-kit/commit/9f839eee38007a5c6f4aaa977baa0e1035aecf88))
+
 # [1.18.0](https://github.com/eclass/ui-kit/compare/v1.17.0...v1.18.0) (2023-03-24)
 
 
