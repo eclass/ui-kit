@@ -3,14 +3,16 @@ import { Tooltip, PlacementWithLogical } from '@chakra-ui/react'
 import { vars } from '@/theme'
 
 interface TooltipProps {
+  className?: string
   label?: React.ReactNode
   isDisabled?: boolean
   m?: string
   placement?: PlacementWithLogical
 }
 
-export const TooltipLabel: FC<TooltipProps> = ({
+export const NewTooltip: FC<TooltipProps> = ({
   children,
+  className = 'tooltip',
   label,
   isDisabled = false,
   m,
@@ -21,7 +23,7 @@ export const TooltipLabel: FC<TooltipProps> = ({
       sx={{
         bg: vars('colors-neutral-darkCharcoal'),
         borderRadius: '10px',
-        color: `${vars('colors-neutral-white')} !important`,
+        color: 'white !important',
         fontSize: '12px',
         fontWeight: '400',
         maxWidth: '170px',
@@ -31,6 +33,7 @@ export const TooltipLabel: FC<TooltipProps> = ({
           bg: `${vars('colors-neutral-darkCharcoal')} !important`,
         },
       }}
+      className={className}
       closeOnClick
       label={label}
       m={m}
