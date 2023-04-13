@@ -1,14 +1,14 @@
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
-import { TooltipLabel } from './Tooltip'
+import { NewTooltip } from './NewTooltip'
 
 describe('Tooltip', () => {
   test('default', async () => {
     render(
-      <TooltipLabel label="Visible Tooltip">
+      <NewTooltip label="Visible Tooltip">
         <span data-testid="trigger">Tooltip Test</span>
-      </TooltipLabel>
+      </NewTooltip>
     )
 
     userEvent.hover(screen.getByTestId('trigger'))

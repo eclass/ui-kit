@@ -3,11 +3,11 @@ import { Box, Button, HStack, VStack } from '@chakra-ui/react'
 import { ComponentStory, Meta } from '@storybook/react'
 
 import { BtnLink } from '../Buttons/BtnLink'
-import { TooltipLabel } from './Tooltip'
+import { NewTooltip } from './NewTooltip'
 
 const meta: Meta = {
   title: 'Molecules/Tooltip',
-  component: TooltipLabel,
+  component: NewTooltip,
   argTypes: {
     label: { type: { name: 'string', required: true } },
     isDisabled: { type: { name: 'boolean', required: false } },
@@ -18,19 +18,19 @@ const meta: Meta = {
 
 export default meta
 
-const Template: ComponentStory<typeof TooltipLabel> = (args) => {
+const Template: ComponentStory<typeof NewTooltip> = (args) => {
   return (
     <>
       <Box fontSize="14px" m=" 4px 16px">
         Demo default settings
       </Box>
       <HStack gap="20px" m="0 0 20px 16px">
-        <TooltipLabel label="Demo Tooltip">
+        <NewTooltip label="Demo Tooltip">
           <Profile />
-        </TooltipLabel>
-        <TooltipLabel label="Demo Tooltip">
+        </NewTooltip>
+        <NewTooltip label="Demo Tooltip">
           <BtnLink>Demo</BtnLink>
-        </TooltipLabel>
+        </NewTooltip>
       </HStack>
 
       <Box fontSize="14px" m="16px">
@@ -38,73 +38,73 @@ const Template: ComponentStory<typeof TooltipLabel> = (args) => {
       </Box>
       <VStack alignItems="flex-start" m="16px" spacing={6}>
         <HStack spacing={6}>
-          <TooltipLabel label="Auto start" placement="auto-start">
+          <NewTooltip label="Auto start" placement="auto-start">
             <Button>Auto-Start</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Auto" placement="auto">
+          <NewTooltip label="Auto" placement="auto">
             <Button>Auto</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Auto end" placement="auto-end">
+          <NewTooltip label="Auto end" placement="auto-end">
             <Button>Auto-End</Button>
-          </TooltipLabel>
+          </NewTooltip>
         </HStack>
 
         <HStack spacing={6}>
-          <TooltipLabel label="Top start" placement="top-start">
+          <NewTooltip label="Top start" placement="top-start">
             <Button>Top-Start</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Top" placement="top">
+          <NewTooltip label="Top" placement="top">
             <Button>Top</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Top end" placement="top-end">
+          <NewTooltip label="Top end" placement="top-end">
             <Button>Top-End</Button>
-          </TooltipLabel>
+          </NewTooltip>
         </HStack>
 
         <HStack spacing={6}>
-          <TooltipLabel label="Right start" placement="right-start">
+          <NewTooltip label="Right start" placement="right-start">
             <Button>Right-Start</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Right" placement="right">
+          <NewTooltip label="Right" placement="right">
             <Button>Right</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Right end" placement="right-end">
+          <NewTooltip label="Right end" placement="right-end">
             <Button>Right-End</Button>
-          </TooltipLabel>
+          </NewTooltip>
         </HStack>
 
         <HStack spacing={6}>
-          <TooltipLabel label="Bottom start" placement="bottom-start">
+          <NewTooltip label="Bottom start" placement="bottom-start">
             <Button>Bottom Start</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Bottom" placement="bottom">
+          <NewTooltip label="Bottom" placement="bottom">
             <Button>Bottom</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Bottom end" placement="bottom-end">
+          <NewTooltip label="Bottom end" placement="bottom-end">
             <Button>Bottom End</Button>
-          </TooltipLabel>
+          </NewTooltip>
         </HStack>
 
         <HStack spacing={6}>
-          <TooltipLabel label="Left start" placement="left-start">
+          <NewTooltip label="Left start" placement="left-start">
             <Button>Left-Start</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Left" placement="left">
+          <NewTooltip label="Left" placement="left">
             <Button>Left</Button>
-          </TooltipLabel>
+          </NewTooltip>
 
-          <TooltipLabel label="Left end" placement="left-end">
+          <NewTooltip label="Left end" placement="left-end">
             <Button>Left-End</Button>
-          </TooltipLabel>
+          </NewTooltip>
         </HStack>
       </VStack>
     </>
