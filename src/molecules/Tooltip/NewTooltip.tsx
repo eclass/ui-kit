@@ -7,6 +7,7 @@ interface TooltipProps {
   label?: React.ReactNode
   isDisabled?: boolean
   m?: string
+  maxWidth?: string
   placement?: PlacementWithLogical
 }
 
@@ -16,6 +17,7 @@ export const NewTooltip: FC<TooltipProps> = ({
   label,
   isDisabled = false,
   m,
+  maxWidth = '200px',
   placement = 'bottom',
 }) => {
   return (
@@ -26,7 +28,7 @@ export const NewTooltip: FC<TooltipProps> = ({
         color: 'white !important',
         fontSize: '12px',
         fontWeight: '400',
-        maxWidth: '170px',
+        maxWidth: maxWidth,
         padding: '8px',
 
         '.chakra-tooltip__arrow': {
