@@ -1,3 +1,10 @@
+## [1.18.3](https://github.com/eclass/ui-kit/compare/v1.18.2...v1.18.3) (2023-05-19)
+
+
+### Bug Fixes
+
+* **tooltip:** ajuste de ancho máximo ([5ba3ccd](https://github.com/eclass/ui-kit/commit/5ba3ccd6b6bccc69a46e270a4db1b8a6981dd760))
+
 ## [1.18.2](https://github.com/eclass/ui-kit/compare/v1.18.1...v1.18.2) (2023-04-13)
 
 
