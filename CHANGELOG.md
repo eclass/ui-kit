@@ -1,3 +1,10 @@
+## [1.18.4](https://github.com/eclass/ui-kit/compare/v1.18.3...v1.18.4) (2023-05-19)
+
+
+### Bug Fixes
+
+* **update:** actualizado types de la api ([#512](https://github.com/eclass/ui-kit/issues/512)) ([d94069a](https://github.com/eclass/ui-kit/commit/d94069a06337a320d1dcd44557a9429971da3fbd))
+
 ## [1.18.3](https://github.com/eclass/ui-kit/compare/v1.18.2...v1.18.3) (2023-05-19)
 
 
