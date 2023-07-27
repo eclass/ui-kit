@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box, Center, Text, useDisclosure } from '@chakra-ui/react'
 
-import { CourseBoxContext } from '../CourseBox'
+import { CourseBoxContext } from '../Boxes/BoxTraditional'
 import { ArrowRight } from '@icons'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
@@ -36,7 +36,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
     >
       {isCourseActive(action.enabled, Profile?.id) ? (
         <>
-          {hasFinanzeFreezed ? (
+          {hasFinanzeFreezed && modalPaymentText ? (
             <Box
               color={vars('colors-main-deepSkyBlue')}
               backgroundColor="transparent"
@@ -78,13 +78,15 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
           {action.text}
         </Text>
       )}
-      <PaymentModal
-        isOpen={isOpen}
-        onClose={onClose}
-        showOverlay={overlay}
-        onOpen={onOpen}
-        modalPaymentText={modalPaymentText}
-      />
+      {modalPaymentText && (
+        <PaymentModal
+          isOpen={isOpen}
+          onClose={onClose}
+          showOverlay={overlay}
+          onOpen={onOpen}
+          modalPaymentText={modalPaymentText}
+        />
+      )}
     </Center>
   )
 }

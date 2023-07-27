@@ -11,9 +11,10 @@ interface PaymentText {
 export interface WrapperCoursesProps {
   courses: AcademicList[]
   m?: string
-  modalPaymentText: PaymentText
+  modalPaymentText?: PaymentText
+  typeBox?: 'TRADITIONAL' | 'TRADITIONAL_LANDSCAPE' | 'IMAGE_LARGE' | 'IMAGE_SMALL'
 }
 
 export interface FooterProps {
-  modalPaymentText: PaymentText
+  modalPaymentText?: PaymentText
 }

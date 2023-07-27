@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Box, Heading, Link, List, HStack, Text, ListItem, Flex } from '@chakra-ui/react'
 
-import { CourseBoxContext } from '../CourseBox'
+import { CourseBoxContext } from '../Boxes/BoxTraditional'
 import { DateStatus } from './DateStatus'
 import { IconSelection } from './IconSelection'
 import { vars } from '@theme'
