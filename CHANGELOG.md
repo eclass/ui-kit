@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/eclass/ui-kit/compare/v1.18.4...v1.19.0) (2023-08-01)
+
+
+### Features
+
+* **PDYE-252:** nuevo componente caja imagen + lógica tipo de caja en course list ([#513](https://github.com/eclass/ui-kit/issues/513)) ([370bc17](https://github.com/eclass/ui-kit/commit/370bc17876d6c940d80ebdf647a512b45f246061))
+
 ## [1.18.4](https://github.com/eclass/ui-kit/compare/v1.18.3...v1.18.4) (2023-05-19)
 
 
