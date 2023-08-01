@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { LinkBox, Box, Flex, LinkOverlay } from '@chakra-ui/react'
 
-import { Header, Section, Footer } from './components'
+import { Header, Section, Footer } from '../components'
 import { Ripples } from '@atoms'
 import { vars } from '@theme'
-import { isCourseActive } from './utils'
-import * as Type from './types'
+import { isCourseActive } from '../utils'
+import * as Type from '../types'
 
 export const CourseBoxContext = React.createContext<Partial<Type.AcademicList>>({})
 
@@ -17,12 +17,12 @@ function WithRipples({ enabled, children }: WithRipplesProps): JSX.Element {
   return enabled ? <Ripples>{children}</Ripples> : <>{children}</>
 }
 
-interface CourseBoxProps {
+interface IBoxTraditional {
   data: Type.AcademicList
-  modalPaymentText: Type.PaymentText
+  modalPaymentText?: Type.PaymentText
 }
 
-export function CourseBox({ data, modalPaymentText }: CourseBoxProps): JSX.Element {
+export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX.Element {
   const cssActive = {
     boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
   }
@@ -42,7 +42,7 @@ export function CourseBox({ data, modalPaymentText }: CourseBoxProps): JSX.Eleme
       >
         <WithRipples enabled={isCourseActive(data.action?.enabled ?? false, data.Profile?.id)}>
           <Flex direction="column" justify="space-between" h="100%">
-            <Box>
+            <Box className="CourseList-TraditionalBox">
               {!data.hasFinanzeFreezed &&
                 isCourseActive(data.action?.enabled ?? false, data.Profile?.id) && (
                   <LinkOverlay href={data.action?.href} isExternal={data.action?.targetBlank} />
@@ -58,4 +58,4 @@ export function CourseBox({ data, modalPaymentText }: CourseBoxProps): JSX.Eleme
   )
 }
 
-CourseBox.displayName = 'CourseBox'
+BoxTraditional.displayName = 'BoxTraditional'

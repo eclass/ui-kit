@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
-import { CourseBox } from './CourseBox'
+import { Boxes } from './Boxes'
 import * as Type from './types'
 
 export const columnGap = 1.25 // 20px
@@ -18,6 +18,7 @@ export function CourseList({
   courses,
   modalPaymentText,
   m = '0 auto',
+  typeBox = 'TRADITIONAL',
 }: Type.WrapperCoursesProps): JSX.Element | null {
   if (courses === undefined) {
     return null
@@ -33,7 +34,7 @@ export function CourseList({
       w="100%"
     >
       {courses?.map((course: Type.AcademicList) => (
-        <CourseBox key={course.id} data={course} modalPaymentText={modalPaymentText} />
+        <Boxes data={course} type={typeBox} modalPaymentText={modalPaymentText} key={course.id} />
       ))}
     </Box>
   )
