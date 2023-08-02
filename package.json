@@ -71,7 +71,7 @@
     "@testing-library/dom": "8.12.0",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "12.1.5",
-    "@testing-library/user-event": "13.5.0",
+    "@testing-library/user-event": "14.4.3",
     "@types/eclass__api": "git+ssh://git@gitlab.com/eclass/types-eclass-api.git#v3.104.6",
     "@types/eclass__sequelize-models": "git+ssh://git@gitlab.com/eclass/types-sequelize-models.git#v5.38.3",
     "@types/jest": "27.4.1",
