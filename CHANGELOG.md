@@ -1,3 +1,10 @@
+## [1.19.1](https://github.com/eclass/ui-kit/compare/v1.19.0...v1.19.1) (2023-08-02)
+
+
+### Bug Fixes
+
+* **imagebox:** margen cero para textos ([#515](https://github.com/eclass/ui-kit/issues/515)) ([54fc38e](https://github.com/eclass/ui-kit/commit/54fc38e3022b75dd3f256ac92f1f96a2445bb581))
+
 # [1.19.0](https://github.com/eclass/ui-kit/compare/v1.18.4...v1.19.0) (2023-08-01)
 
 
