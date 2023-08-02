@@ -60,7 +60,15 @@ export function BoxImage({
             <LinkOverlay href={data?.action?.href} isExternal={data?.action?.targetBlank} />
           )}
         <Box className="textBox" bottom="20px" display="flex" flexDirection="column" gap="8px">
-          <Box as="h2" className="courseName" fontWeight="700" fontSize="16px" lineHeight="21px">
+          <Box
+            as="h2"
+            className="courseName"
+            fontWeight="700"
+            fontSize="16px"
+            lineHeight="21px"
+            marginBlockEnd="0"
+            margin="0"
+          >
             {title}
           </Box>
 
@@ -72,6 +80,7 @@ export function BoxImage({
                 fontSize="14px"
                 fontWeight="400"
                 lineHeight="12px"
+                margin="0"
                 key={index}
               >
                 {item.text}
