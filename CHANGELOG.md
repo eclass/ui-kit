@@ -1,3 +1,10 @@
+## [1.19.2](https://github.com/eclass/ui-kit/compare/v1.19.1...v1.19.2) (2023-08-02)
+
+
+### Bug Fixes
+
+* **courselist:** descripción de props ([#516](https://github.com/eclass/ui-kit/issues/516)) ([15d3841](https://github.com/eclass/ui-kit/commit/15d38411ce5bb98ad584197360cd3db6bde6bcf5))
+
 ## [1.19.1](https://github.com/eclass/ui-kit/compare/v1.19.0...v1.19.1) (2023-08-02)
 
 
