@@ -13,20 +13,24 @@ beforeEach(() => {
 })
 
 describe('Btn', () => {
-  test('init', () => {
+  const user = userEvent.setup()
+
+  test('init', async () => {
     render(<Btn {...props}>Lorem</Btn>)
     const button = screen.getByRole('button')
     expect(screen.getByText(/Lorem/)).toBeInTheDocument()
 
-    userEvent.click(button)
+    await user.click(button)
     expect(button).toHaveFocus()
     expect(props.onClick).toHaveBeenCalledTimes(1)
   })
+
   test('dafault', () => {
     render(<Btn />)
     expect(screen.getByText(/Button/)).toBeInTheDocument()
   })
-  test('disabled', () => {
+
+  test('disabled', async () => {
     render(
       <Btn {...props} disabled>
         Lorem
@@ -35,10 +39,11 @@ describe('Btn', () => {
     const button = screen.getByRole('button')
     expect(button).toBeDisabled()
 
-    userEvent.click(button)
+    await user.click(button)
     expect(props.onClick).toHaveBeenCalledTimes(0)
   })
-  test('is loading', () => {
+
+  test('is loading', async () => {
     render(
       <Btn {...props} isLoading>
         Lorem
@@ -48,9 +53,10 @@ describe('Btn', () => {
     expect(screen.getByTestId('loaderAsync')).toBeInTheDocument()
     expect(screen.queryByText(/Lorem/)).not.toBeVisible()
 
-    userEvent.click(button)
+    await user.click(button)
     expect(props.onClick).toHaveBeenCalledTimes(0)
   })
+
   test('with icon', () => {
     render(<Btn leftIcon={<Profile />}>Lorem</Btn>)
     expect(screen.getByTitle('icon-profile')).toBeInTheDocument()
