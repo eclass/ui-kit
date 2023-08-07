@@ -15,6 +15,7 @@ export function BtnLink({ children, m = '0', onClick, id }: props): JSX.Element 
       id={id}
       backgroundColor="transparent"
       borderStyle="none"
+      className="linkButton"
       width="fit-content"
       padding=".25em"
       fontFamily="Roboto"
