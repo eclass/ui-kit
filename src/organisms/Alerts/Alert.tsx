@@ -1,17 +1,10 @@
-import { Close, ErrorWhite, InfoWhite, SuccessWhite, WarningWhite } from '@/atoms/Icons'
+import { Box, HStack } from '@chakra-ui/react'
+import 'react-toastify/dist/ReactToastify.css'
+
+import { ErrorWhite, InfoWhite, SuccessWhite, WarningWhite } from '@/atoms/Icons'
 import { BtnPrimary } from '@/molecules'
 import { vars } from '@/theme'
-import { Box, HStack } from '@chakra-ui/react'
-
-interface IAlertProps {
-  children: React.ReactChild | React.ReactChild[]
-  buttonText?: string
-  buttonIcon?: React.ReactElement
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void
-  state: 'error' | 'info' | 'success' | 'warning'
-  type: 'flash' | 'static'
-  m?: string
-}
+import { IAlertProps } from './types.d'
 
 export function Alert({
   children,
@@ -40,6 +33,7 @@ export function Alert({
       bg: vars('colors-alert-pale'),
     },
   }
+
   return (
     <Box
       backgroundColor={alertStates[state].bg}
@@ -50,18 +44,6 @@ export function Alert({
       margin={m}
       position="relative"
     >
-      {type === 'flash' && (
-        <Box
-          className="closeIcon"
-          display="flex"
-          position="absolute"
-          top="16px"
-          right="12px"
-          cursor="pointer"
-        >
-          <Close />
-        </Box>
-      )}
       <HStack>
         <Box
           className="iconContainer"
@@ -74,7 +56,15 @@ export function Alert({
         >
           {alertStates[state].icon}
         </Box>
-        {children}
+        <Box
+          fontFamily="Roboto"
+          fontSize="16px"
+          fontWeight="400"
+          lineHeight="28px"
+          color={vars('colors-neutral-darkCharcoal')}
+        >
+          {children}
+        </Box>
         {type === 'static' && buttonText && (
           <BtnPrimary leftIcon={buttonIcon} onClick={onClick}>
             {buttonText}

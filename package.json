@@ -124,8 +124,9 @@
     "@emotion/styled": "11.8.1",
     "@fontsource/lora": "4.5.13",
     "@fontsource/roboto": "4.5.8",
-    "framer-motion": "6.2.8",
     "@types/eclass-api": "git+ssh://git@gitlab.com/eclass/types-eclass-api.git#v3.104.6",
-    "react-ripples": "2.2.1"
+    "framer-motion": "6.2.8",
+    "react-ripples": "2.2.1",
+    "react-toastify": "^9.1.3"
   }
 }
