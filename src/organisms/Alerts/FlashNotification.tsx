@@ -1,58 +1,41 @@
-import { Box, Button } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { ToastContainer, toast, Slide } from 'react-toastify'
+import { useCallback, useEffect } from 'react'
 import 'react-toastify/dist/ReactToastify.css'
 
-import { ErrorWhite, InfoWhite, SuccessWhite, WarningWhite } from '@/atoms/Icons'
 import { IFlashNotificationProps } from './types.d'
 import { vars } from '@/theme'
+import { alertStates } from './utils/alertStates'
+import { handleTime } from './utils/handleTime'
+
+/**
+ * Componente de notificación flash que se muestra centrada en la parte superior de la pantalla.
+ * Para implementarlo, se usa en conjunto con el hook useFlashNotification.
+ * @example Llamado useFlashNotification y asignación de props
+ * const { show, active, config } = useFlashNotification({
+ *  state: 'info',
+ *   message: 'Respuesta guardada',
+ *})
+ * @example Definición de trigger que activa la notificación
+ * <button onClick={() => { active()}}> Activar notificación </button>
+ * @example Componente FlashNotification recibiendo argumentos
+ * <FlashNotification {...config} show={show} />
+ */
 
 export function FlashNotification({
   message,
-  duration = 3000,
   state,
-  position = 'top-center',
+  show,
   m,
 }: IFlashNotificationProps): JSX.Element {
-  const alertStates = {
-    success: {
-      icon: <SuccessWhite />,
-      bg: vars('colors-alert-ice'),
-    },
-    error: {
-      icon: <ErrorWhite />,
-      bg: vars('colors-alert-veryLightPinkThree'),
-    },
-    info: {
-      icon: <InfoWhite />,
-      bg: vars('colors-alert-veryLightBlue'),
-    },
-    warning: {
-      icon: <WarningWhite />,
-      bg: vars('colors-alert-pale'),
-    },
-  }
-
-  function countWords(input: string): number {
-    const wordCount = input.match(/(\w+)/g)?.length ?? 0
-    return wordCount
-  }
-
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-  const showToastMessage = () => {
-    if (message && countWords(message) > 5) {
-      duration = 6000
-    } else {
-      duration = 3000
-    }
-
-    console.log(countWords(message))
+  const showToastMessage = useCallback(() => {
     toast(
       <Box display="flex" alignItems="center">
         {alertStates[state].icon} {message}
       </Box>,
       {
-        position: position,
-        autoClose: duration,
+        position: 'top-center',
+        autoClose: handleTime(message),
         hideProgressBar: true,
         closeOnClick: false,
         pauseOnHover: false,
@@ -61,7 +44,14 @@ export function FlashNotification({
         theme: 'colored',
       }
     )
-  }
+  }, [message, state])
+
+  useEffect(() => {
+    if (show) {
+      showToastMessage()
+    }
+  }, [show, showToastMessage])
+
   return (
     <Box
       width="max-content"
@@ -102,11 +92,7 @@ export function FlashNotification({
         },
       }}
     >
-      <Button onClick={showToastMessage}>hola</Button>
-
       <ToastContainer transition={Slide} />
     </Box>
   )
 }
-
-FlashNotification.displayName = 'FlashNotification'

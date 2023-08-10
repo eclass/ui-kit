@@ -1,23 +1,54 @@
+type TState = 'error' | 'info' | 'success' | 'warning'
 export interface IAlertProps {
+  /**
+   * Mensaje de alerta
+   */
   children?: React.ReactChild | React.ReactChild[]
+  /**
+   * Texto del botón
+   */
   buttonText?: string
+  /**
+   * Ícono del botón
+   */
   buttonIcon?: React.ReactElement
+  /**
+   * Función del botón
+   */
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
-  state: 'error' | 'info' | 'success' | 'warning'
+  /**
+   * Estado que define color e ícono de la alerta
+   * @exampe
+   * 'error'
+   * 'info'
+   * 'success'
+   * 'warning'
+   */
+  state: TState
+  /**
+   * Margen
+   */
   m?: string
 }
 
 export interface IFlashNotificationProps {
-  duration?: number
+  /**
+   * Margen
+   */
   m?: string
+  /**
+   * Mensaje que muestra la notificación
+   */
   message: string
-  state: 'error' | 'info' | 'success' | 'warning'
-  position?:
-    | 'top-center'
-    | 'top-right'
-    | 'top-left'
-    | 'bottom-center'
-    | 'bottom-right'
-    | 'bottom-right'
-    | 'bottom-left'
+  /**
+   * Estado que define color e ícono de la alerta
+   * @exampe
+   * 'error'
+   * 'info'
+   * 'success'
+   * 'warning'
+   * @
+   */
+  state: TState
+  show?: boolean
 }
