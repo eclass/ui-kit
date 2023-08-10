@@ -4,6 +4,14 @@ export interface IAlertProps {
   buttonIcon?: React.ReactElement
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   state: 'error' | 'info' | 'success' | 'warning'
+  m?: string
+}
+
+export interface IFlashNotificationProps {
+  duration?: number
+  m?: string
+  message: string
+  state: 'error' | 'info' | 'success' | 'warning'
   position?:
     | 'top-center'
     | 'top-right'
@@ -12,6 +20,4 @@ export interface IAlertProps {
     | 'bottom-right'
     | 'bottom-right'
     | 'bottom-left'
-  type: 'flash' | 'static'
-  m?: string
 }

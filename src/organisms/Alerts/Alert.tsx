@@ -12,7 +12,6 @@ export function Alert({
   buttonIcon,
   onClick,
   state,
-  type,
   m,
 }: IAlertProps): JSX.Element {
   const alertStates = {
@@ -38,7 +37,7 @@ export function Alert({
     <Box
       backgroundColor={alertStates[state].bg}
       borderRadius="8px"
-      padding="24px 16px"
+      padding="16px"
       width="max-content"
       maxWidth="796px"
       margin={m}
@@ -65,7 +64,7 @@ export function Alert({
         >
           {children}
         </Box>
-        {type === 'static' && buttonText && (
+        {buttonText && (
           <BtnPrimary leftIcon={buttonIcon} onClick={onClick}>
             {buttonText}
           </BtnPrimary>

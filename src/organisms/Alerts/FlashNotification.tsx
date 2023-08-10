@@ -3,10 +3,16 @@ import { ToastContainer, toast, Slide } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
 import { ErrorWhite, InfoWhite, SuccessWhite, WarningWhite } from '@/atoms/Icons'
-import { IAlertProps } from './types.d'
+import { IFlashNotificationProps } from './types.d'
 import { vars } from '@/theme'
 
-export function FlashNotification({ children, state, position, m }: IAlertProps): JSX.Element {
+export function FlashNotification({
+  message,
+  duration = 3000,
+  state,
+  position = 'top-center',
+  m,
+}: IFlashNotificationProps): JSX.Element {
   const alertStates = {
     success: {
       icon: <SuccessWhite />,
@@ -25,18 +31,31 @@ export function FlashNotification({ children, state, position, m }: IAlertProps)
       bg: vars('colors-alert-pale'),
     },
   }
+
+  function countWords(input: string): number {
+    const wordCount = input.match(/(\w+)/g)?.length ?? 0
+    return wordCount
+  }
+
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   const showToastMessage = () => {
+    if (message && countWords(message) > 5) {
+      duration = 6000
+    } else {
+      duration = 3000
+    }
+
+    console.log(countWords(message))
     toast(
-      <Box>
-        {alertStates[state].icon} {children}
+      <Box display="flex" alignItems="center">
+        {alertStates[state].icon} {message}
       </Box>,
       {
         position: position,
-        autoClose: false,
+        autoClose: duration,
         hideProgressBar: true,
         closeOnClick: false,
-        pauseOnHover: true,
+        pauseOnHover: false,
         draggable: true,
         progress: undefined,
         theme: 'colored',
@@ -55,14 +74,14 @@ export function FlashNotification({ children, state, position, m }: IAlertProps)
 
         '.Toastify__toast': {
           borderRadius: '8px',
-          padding: '24px 16px',
+          padding: '16px',
           width: 'auto',
           backgroundColor: alertStates[state].bg,
           boxShadow: 'none',
         },
 
         '.Toastify__close-button': {
-          color: vars('colors-neutral-darkCharcoal'),
+          color: vars('colors-main-blueGrey'),
           position: 'absolute',
           top: '16px',
           right: '12px',
