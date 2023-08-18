@@ -1,7 +1,7 @@
 import { Box, HStack } from '@chakra-ui/react'
 import 'react-toastify/dist/ReactToastify.css'
 
-import { BtnPrimary } from '@/molecules'
+import { BtnLink, BtnPrimary } from '@/molecules'
 import { vars } from '@/theme'
 import { IAlertProps } from './types.d'
 import { alertStates } from './utils/alertStates'
@@ -25,6 +25,7 @@ export function Alert({
   children,
   buttonText,
   buttonIcon,
+  buttonLink = false,
   onClick,
   state,
   m,
@@ -39,7 +40,13 @@ export function Alert({
       margin={m}
       position="relative"
     >
-      <HStack>
+      <HStack
+        sx={{
+          '.linkButton': {
+            fontSize: '16px',
+          },
+        }}
+      >
         <Box
           className="iconContainer"
           marginRight="10px"
@@ -59,8 +66,9 @@ export function Alert({
           color={vars('colors-neutral-darkCharcoal')}
         >
           {children}
+          {buttonText && onClick && buttonLink && <BtnLink onClick={onClick}>{buttonText}</BtnLink>}
         </Box>
-        {buttonText && onClick && (
+        {buttonText && onClick && !buttonLink && (
           <BtnPrimary leftIcon={buttonIcon} onClick={onClick}>
             {buttonText}
           </BtnPrimary>

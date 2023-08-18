@@ -13,6 +13,10 @@ export interface IAlertProps {
    */
   buttonIcon?: React.ReactElement
   /**
+   * Boolean que determina si el botón es tipo link
+   */
+  buttonLink?: boolean
+  /**
    * Función del botón
    */
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
