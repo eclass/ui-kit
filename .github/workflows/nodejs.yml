@@ -19,9 +19,14 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Add Know Hosts
         run: |
+          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+        shell: bash
+      - name: Remove package-lock.json and node_modules
+        run: |
           rm -f package-lock.json
           rm -rf node_modules
-        shell: bash
+      - name: Install dependencies and regenerate package-lock.json
+        run: npm install
       - name: Clean install on CI
         run: npm ci
       - name: Linter code check
@@ -43,8 +48,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Add Know Hosts
         run: |
-          rm -f package-lock.json
-          rm -rf node_modules
+          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
       - name: Clean install on CI
         run: npm ci
@@ -70,8 +74,7 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Add Know Hosts
         run: |
-          rm -f package-lock.json
-          rm -rf node_modules
+          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
       - name: Clean install on CI
         run: npm ci
