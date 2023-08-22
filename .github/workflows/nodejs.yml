@@ -19,6 +19,8 @@ jobs:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Add Know Hosts
         run: |
+          rm -f package-lock.json
+          rm -rf node_modules
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
       - name: Clean install on CI
@@ -35,13 +37,15 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '12.22.6'
+          node-version: '12.22.12'
           cache: 'npm'
       - uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Add Know Hosts
         run: |
+          rm -f package-lock.json
+          rm -rf node_modules
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
       - name: Clean install on CI
@@ -61,13 +65,15 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '12.22.6'
+          node-version: '12.22.12'
           cache: 'npm'
       - uses: webfactory/ssh-agent@v0.5.4
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Add Know Hosts
         run: |
+          rm -f package-lock.json
+          rm -rf node_modules
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
       - name: Clean install on CI
