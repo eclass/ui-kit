@@ -10,7 +10,7 @@ module.exports = {
     '@storybook/addon-essentials'
   ],
   core: {
-    builder: 'storybook-builder-vite',
+    builder: '@storybook/builder-vite',
   },
   typescript: {
     check: true
