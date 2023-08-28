@@ -1,3 +1,17 @@
+# [1.21.0](https://github.com/eclass/ui-kit/compare/v1.20.0...v1.21.0) (2023-08-28)
+
+
+### Bug Fixes
+
+* **package:** quito package.lock ([5ff6d6f](https://github.com/eclass/ui-kit/commit/5ff6d6f4e1a1316d5cc54934db789c3d1389796c))
+
+
+### Features
+
+* **alerts:** nuevos componentes y lógica para alerta embebida y notificación flash ([#548](https://github.com/eclass/ui-kit/issues/548)) ([c12e70f](https://github.com/eclass/ui-kit/commit/c12e70fb216d221983a3b510af5b945c19b29996))
+* **renovate:** correction yml to push ([00499af](https://github.com/eclass/ui-kit/commit/00499af6b2906f3b7618748681b504958bead50e))
+* **update:** se mergea los cambios con main y node 14 ([#553](https://github.com/eclass/ui-kit/issues/553)) ([f01dd84](https://github.com/eclass/ui-kit/commit/f01dd849a714431d65b58e737dc5576a7c7f959b))
+
 # [1.20.0](https://github.com/eclass/ui-kit/compare/v1.19.2...v1.20.0) (2023-08-28)
 
 
