@@ -72,22 +72,21 @@ export function BoxImage({
             {title}
           </Box>
 
-          {data?.information?.map((item, index) =>
-            item.icon === 'certificate' ? (
-              <Box
-                as="p"
-                className="certificateText"
-                fontSize="14px"
-                fontWeight="400"
-                lineHeight="12px"
-                margin="0"
-                key={index}
-              >
-                {item.text}
-              </Box>
-            ) : (
-              <></>
-            )
+          {data?.information?.map(
+            (item, index) =>
+              item.icon === 'certificate' && (
+                <Box
+                  as="p"
+                  className="certificateText"
+                  fontSize="14px"
+                  fontWeight="400"
+                  lineHeight="12px"
+                  margin="0"
+                  key={index}
+                >
+                  {item.text}
+                </Box>
+              )
           )}
         </Box>
       </Box>

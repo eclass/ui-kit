@@ -8,4 +8,3 @@ yarn-error.log
 docs
 .eslintcache
 tsconfig.tsbuildinfo
-package-lock.json
