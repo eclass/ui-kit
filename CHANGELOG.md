@@ -1,3 +1,16 @@
+# [1.20.0](https://github.com/eclass/ui-kit/compare/v1.19.2...v1.20.0) (2023-08-28)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @chakra-ui/react to v1.8.9 ([#526](https://github.com/eclass/ui-kit/issues/526)) ([388e6d6](https://github.com/eclass/ui-kit/commit/388e6d6d06c60c20176671c9980bdab3c8764aed))
+* **deps:** update fontsource monorepo ([#527](https://github.com/eclass/ui-kit/issues/527)) ([a0d5fca](https://github.com/eclass/ui-kit/commit/a0d5fca1525640f9ade3854e2aab6fb0f40cdf92))
+
+
+### Features
+
+* **node:** se actualiza uikit a node  14.21.3 ([#550](https://github.com/eclass/ui-kit/issues/550)) ([b6fa055](https://github.com/eclass/ui-kit/commit/b6fa055b5b18a334ed7e2062adb8cbbd31c8a0a7))
+
 ## [1.19.2](https://github.com/eclass/ui-kit/compare/v1.19.1...v1.19.2) (2023-08-02)
 
 
