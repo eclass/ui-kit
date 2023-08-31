@@ -1,3 +1,10 @@
+## [1.21.1](https://github.com/eclass/ui-kit/compare/v1.21.0...v1.21.1) (2023-08-31)
+
+
+### Bug Fixes
+
+* **alerts:** corrección ancho y botón ([#554](https://github.com/eclass/ui-kit/issues/554)) ([ecfe1b7](https://github.com/eclass/ui-kit/commit/ecfe1b7827625675041e179f7d335550bb88a27c))
+
 # [1.21.0](https://github.com/eclass/ui-kit/compare/v1.20.0...v1.21.0) (2023-08-28)
 
 
