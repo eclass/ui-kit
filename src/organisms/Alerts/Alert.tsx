@@ -1,4 +1,4 @@
-import { Box, HStack } from '@chakra-ui/react'
+import { Box, HStack, useMediaQuery } from '@chakra-ui/react'
 
 import { BtnLink, BtnPrimary } from '@/molecules'
 import { vars } from '@/theme'
@@ -27,21 +27,44 @@ export function Alert({
   buttonText,
   buttonIcon,
   buttonLink = false,
+  isFlash = false,
   onClick,
   state,
   m,
 }: IAlertProps): JSX.Element {
+  const [isMobile] = useMediaQuery('(max-width: 425px)')
+
+  const handleClick = (): any => {
+    if (onClick) {
+      onClick()
+    }
+  }
+
+  let buttonType: undefined | 'link' | 'normal'
+  if (buttonText) {
+    buttonType = buttonLink ? 'link' : 'normal'
+  }
+
   return (
     <Box
+      className={isFlash ? 'flashNotification' : 'embeddedAlert'}
+      alignItems={!isMobile ? 'center' : 'unset'}
       backgroundColor={alertStates[state].bg}
       borderRadius="8px"
-      padding={canDismiss ? '16px 28px 16px 16px' : '16px'}
-      width="max-content"
-      maxWidth="796px"
+      display="flex"
+      flexFlow={isMobile ? 'column' : 'row'}
+      gap={!isFlash ? '16px' : ''}
+      justifyContent={!isMobile ? 'space-between' : ''}
       margin={m}
+      width="100%"
+      maxWidth="796px"
+      p="1rem"
+      pr={canDismiss ? '1.75rem' : '1rem'}
       position="relative"
     >
       <HStack
+        gap="10px"
+        className="alertContent"
         sx={{
           '.linkButton': {
             fontSize: '16px',
@@ -50,7 +73,6 @@ export function Alert({
       >
         <Box
           className="iconContainer"
-          marginRight="10px"
           sx={{
             svg: {
               width: 'auto',
@@ -67,30 +89,31 @@ export function Alert({
           color={vars('colors-neutral-darkCharcoal')}
         >
           {children}
-          {buttonText && onClick && buttonLink && <BtnLink onClick={onClick}>{buttonText}</BtnLink>}
+          {buttonType === 'link' && <BtnLink onClick={handleClick}>{buttonText}</BtnLink>}
         </Box>
-        {buttonText && onClick && !buttonLink && (
-          <BtnPrimary leftIcon={buttonIcon} onClick={onClick}>
-            {buttonText}
-          </BtnPrimary>
-        )}
-        {canDismiss && (
-          <Box
-            cursor="pointer"
-            marginLeft="12px"
-            sx={{
-              svg: {
-                position: 'absolute',
-                top: '16px',
-                right: '12px',
-              },
-            }}
-            onClick={onClick}
-          >
-            <Close />
-          </Box>
-        )}
       </HStack>
+
+      {buttonType === 'normal' && (
+        <BtnPrimary isFullWidth={!!isMobile} leftIcon={buttonIcon} onClick={handleClick}>
+          {buttonText}
+        </BtnPrimary>
+      )}
+      {canDismiss && (
+        <Box
+          cursor="pointer"
+          marginLeft="12px"
+          sx={{
+            svg: {
+              position: 'absolute',
+              top: '16px',
+              right: '12px',
+            },
+          }}
+          onClick={onClick}
+        >
+          <Close />
+        </Box>
+      )}
     </Box>
   )
 }
