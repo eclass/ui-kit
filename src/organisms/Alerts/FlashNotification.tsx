@@ -30,7 +30,7 @@ export function FlashNotification({
   const showToast = useCallback(() => {
     toast(
       (t) => (
-        <Alert state={state} canDismiss onClick={() => toast.dismiss(t.id)}>
+        <Alert isFlash state={state} canDismiss onClick={() => toast.dismiss(t.id)}>
           {message}
         </Alert>
       ),

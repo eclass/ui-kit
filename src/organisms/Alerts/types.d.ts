@@ -21,9 +21,13 @@ export interface IAlertProps {
    */
   buttonLink?: boolean
   /**
+   * Para notificación flash
+   */
+  isFlash?: boolean
+  /**
    * Función del botón
    */
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void
+  onClick?: () => void
   /**
    * Estado que define color e ícono de la alerta
    * @exampe
