@@ -36,20 +36,12 @@
     "serve": "vite preview",
     "test": "jest --coverage",
     "test-local": "jest --watch",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook -o docs/ ",
     "lint": "npm run format && npm run eslint",
     "format": "prettier --write 'src/**/*.{ts,tsx,mdx}'",
     "eslint": "eslint 'src/**/*.{ts,tsx,mdx}' --fix --cache",
     "lint:check": "eslint 'src/**/*.{ts,tsx,mdx}'",
     "ts-compile-check": "tsc -p tsconfig.json",
-    "deploy-storybook": "storybook-to-ghpages",
     "prepare": "ts-patch install -s && node ./prepare.js"
-  },
-  "storybook-deployer": {
-    "gitUsername": "SeGonzalezR",
-    "gitEmail": "sebastian@gonzalezr.cl",
-    "commitMessage": "docs(story): deploy storybook [skip ci]"
   },
   "publishConfig": {
     "access": "public"
@@ -63,12 +55,6 @@
     "@commitlint/config-conventional": "13.2.0",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/git": "9.0.1",
-    "@storybook/addon-actions": "6.4.19",
-    "@storybook/addon-essentials": "6.4.19",
-    "@storybook/addon-links": "6.4.19",
-    "@storybook/builder-vite": "^0.1.41",
-    "@storybook/react": "6.4.19",
-    "@storybook/storybook-deployer": "2.8.16",
     "@testing-library/dom": "8.20.1",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "12.1.5",
