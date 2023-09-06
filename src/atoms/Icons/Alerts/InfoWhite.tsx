@@ -2,7 +2,7 @@ import { Base, BaseProps } from '../Base'
 
 export function InfoWhite(props: BaseProps): JSX.Element {
   return (
-    <Base {...props} w="53" h="45" viewBox="0 0 53 45">
+    <Base {...props} w="53" h="45" viewBox="0 0 53 45" title="infoIcon">
       <svg fill="none">
         <path
           d="M21.642 44.047C33.5945 44.047 43.284 34.3575 43.284 22.405C43.284 10.4525 33.5945 0.763 21.642 0.763C9.68945 0.763 0 10.4525 0 22.405C0 34.3575 9.68945 44.047 21.642 44.047Z"
