@@ -1,3 +1,11 @@
+# [1.22.0](https://github.com/eclass/ui-kit/compare/v1.21.2...v1.22.0) (2023-09-07)
+
+
+### Features
+
+* **alerts:** test ([#557](https://github.com/eclass/ui-kit/issues/557)) ([3375b32](https://github.com/eclass/ui-kit/commit/3375b32d444440507448a5f4dab0938f81aa9d7a))
+* **PDYE-282:** quito storybook de main ([#555](https://github.com/eclass/ui-kit/issues/555)) ([8d0d9d2](https://github.com/eclass/ui-kit/commit/8d0d9d23ddec4823f664badff2677cee9d7f6140))
+
 ## [1.21.2](https://github.com/eclass/ui-kit/compare/v1.21.1...v1.21.2) (2023-09-01)
 
 
