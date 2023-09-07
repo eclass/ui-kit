@@ -100,6 +100,7 @@ export function Alert({
       )}
       {canDismiss && (
         <Box
+          data-testid="closeButton"
           cursor="pointer"
           marginLeft="12px"
           sx={{
