@@ -50,5 +50,3 @@ export function Label({
     </Box>
   )
 }
-
-Label.displayName = 'Label'
