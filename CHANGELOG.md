@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/eclass/ui-kit/compare/v1.22.0...v1.23.0) (2023-09-08)
+
+
+### Features
+
+* **documentation:** nueva forma de documentar componentes ([#537](https://github.com/eclass/ui-kit/issues/537)) ([a210612](https://github.com/eclass/ui-kit/commit/a210612c416af19003acbf4dd75e3e25ad9b198f))
+
 # [1.22.0](https://github.com/eclass/ui-kit/compare/v1.21.2...v1.22.0) (2023-09-07)
 
 
