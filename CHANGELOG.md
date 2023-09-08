@@ -1,3 +1,10 @@
+# [1.25.0](https://github.com/eclass/ui-kit/compare/v1.24.0...v1.25.0) (2023-09-08)
+
+
+### Features
+
+* **docu:** deploy documentation ([#566](https://github.com/eclass/ui-kit/issues/566)) ([13791d5](https://github.com/eclass/ui-kit/commit/13791d5ceec87ba38c2c13539052a49d0a1787a0))
+
 # [1.24.0](https://github.com/eclass/ui-kit/compare/v1.23.0...v1.24.0) (2023-09-08)
 
 
