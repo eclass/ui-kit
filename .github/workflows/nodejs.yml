@@ -79,4 +79,4 @@ jobs:
       - name: Deploy to GH Pages
         env:
           GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy-storybook -- --source-branch=main
+        run: npm run dev
