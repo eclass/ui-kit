@@ -17,5 +17,3 @@ export function Ripples({ children, color = 'rgba(204,204,204,0.2)' }: any): JSX
     </ReactRipples>
   )
 }
-
-Ripples.displayName = 'Ripples'

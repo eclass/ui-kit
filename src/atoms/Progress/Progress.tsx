@@ -26,5 +26,3 @@ export function Progress({ value = 0 }: ProgressProps): JSX.Element {
     />
   )
 }
-
-Progress.displayName = 'Progress'
