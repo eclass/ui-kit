@@ -51,6 +51,8 @@ jobs:
       - name: Clean install on CI
         run: npm ci
       - name: Build library
+        env: 
+          VITE_REACT_DEPLOY_DOCUMENTATION: ${{secrets.VITE_REACT_DEPLOY_DOCUMENTATION}}
         run: npm run build
       - name: Release version
         run: npx semantic-release@18
@@ -77,5 +79,6 @@ jobs:
       - name: Deploy to GH Pages with vite server
         env:
           GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
+          VITE_REACT_DEPLOY_DOCUMENTATION: ${{secrets.VITE_REACT_DEPLOY_DOCUMENTATION}}
         run: npm run deploy
 
