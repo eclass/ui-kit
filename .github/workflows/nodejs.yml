@@ -76,7 +76,8 @@ jobs:
         shell: bash
       - name: Clean install on CI
         run: npm ci
-      - name: Deploy to GH Pages with vite server
+      - name: Create build pages develop
         env:
           GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
-        run: npm run dev
+          DOCUMENTATION: ${{secrets.VITE_REACT_DEPLOY_DOCUMENTATION}}
+        run: npm run build
