@@ -7,12 +7,27 @@ import { Documentation } from './documentation'
 
 import { theme } from './theme'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <ChakraProvider theme={theme}>
-      {/* <Playground /> */}
-      <Documentation />
-    </ChakraProvider>
-  </React.StrictMode>,
-  document.getElementById('root')
-)
+if (import.meta.env.VITE_REACT_DEPLOY_DOCUMENTATION === 'DOCUMENTATION') {
+  ReactDOM.render(
+    <React.StrictMode>
+      <ChakraProvider theme={theme}>
+        {/* <Playground /> */}
+        <Documentation />
+      </ChakraProvider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  )
+} else {
+  import('./index')
+  // ReactDOM.render(
+  //   // <React.StrictMode>
+  //   //   <h1>HOLA</h1>
+  //   // </React.StrictMode>,
+  //   // document.getElementById('root')
+  //   <React.StrictMode>
+  //     <h1>HOLA</h1>
+  //     {/* {modulesExports} */}
+  //   </React.StrictMode>,
+  //   document.getElementById('root')
+  // )
+}
