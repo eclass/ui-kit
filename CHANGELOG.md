@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/eclass/ui-kit/compare/v1.25.0...v1.26.0) (2023-09-10)
+
+
+### Features
+
+* **update:** change yml for deploy ([#571](https://github.com/eclass/ui-kit/issues/571)) ([c9daf20](https://github.com/eclass/ui-kit/commit/c9daf2081458bbbb0b87dcddc1666789512a9869))
+
 # [1.25.0](https://github.com/eclass/ui-kit/compare/v1.24.0...v1.25.0) (2023-09-08)
 
 
