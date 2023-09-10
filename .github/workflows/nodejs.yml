@@ -74,10 +74,8 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages/v3
-        with:
+      - name: Deploy to GH Pages with vite server
+        env:
           GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
-          DOCUMENTATION: ${{secrets.VITE_REACT_DEPLOY_DOCUMENTATION}}
-          publish_dir: ./dist
+        run: npm run deploy
 
