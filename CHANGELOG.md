@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/eclass/ui-kit/compare/v1.27.0...v1.28.0) (2023-09-13)
+
+
+### Features
+
+* **yml:** configuration jobs to deploy gh-pages ([#578](https://github.com/eclass/ui-kit/issues/578)) ([c97e552](https://github.com/eclass/ui-kit/commit/c97e5521ccc5266bca5a9a91279c9126c89bece4))
+
 # [1.27.0](https://github.com/eclass/ui-kit/compare/v1.26.0...v1.27.0) (2023-09-13)
 
 
