@@ -26,7 +26,14 @@ jobs:
       - name: Install dependencies and regenerate package-lock.json
         run: npm install
       - name: Clean install on CI
-        run: npm ci
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
       - name: Linter code check
         run: npm run lint:check
       - name: Testing JEST
@@ -49,7 +56,14 @@ jobs:
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
       - name: Clean install on CI
-        run: npm ci
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
       - name: Build library
         run: npm run build
       - name: Release version
@@ -57,12 +71,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          
+
   build-pages:
     name: Build to GitHub Pages
     needs: release
     runs-on: ubuntu-latest
-    env: 
+    env:
       VITE_REACT_DEPLOY_DOCUMENTATION: DOCUMENTATION
 
     steps:
@@ -82,7 +96,14 @@ jobs:
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
       - name: Clean install on CI
-        run: npm ci
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
       - name: Generate new Build to Pages
         run: npm run build
       - name: Upload deploy-ready build files
@@ -92,61 +113,75 @@ jobs:
           path: ./dist
 
   deploy-pages:
-      name: Deploy GitHub Pages
-      needs: build-pages
-      runs-on: ubuntu-latest
-      if: github.ref == 'refs/heads/main'
+    name: Deploy GitHub Pages
+    needs: build-pages
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
 
-      env: 
-        VITE_REACT_DEPLOY_DOCUMENTATION: DOCUMENTATION
+    env:
+      VITE_REACT_DEPLOY_DOCUMENTATION: DOCUMENTATION
 
-      steps:
-        - name: Download artifact
-          uses: actions/download-artifact@v3
-          with:
-            name: deploy-files
-            path: ./dist
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: deploy-files
+          path: ./dist
 
-        # - uses: actions/checkout@v3
-        # - uses: actions/setup-node@v3
-        #   with:
-        #     node-version: 14.21.3
-        #     cache: 'npm'
-        # - uses: webfactory/ssh-agent@v0.7.0
-        #   with:
-        #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        # - name: Add Know Hosts
-        #   run: |
-        #     ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-        #   shell: bash
-        # - name: Clean install on CI
-        #   run: npm ci
-        # - name: Generate new Build to Pages
-        #   run: npm run build
-        # - name: Download artifact
-        #   uses: actions/download-artifact@v3
-        #   with:
-        #     name: 
-        # - name: Setup Node
-        # - uses: actions/checkout@v3
-        # - uses: actions/setup-node@v3
-        #   with:
-        #     node-version: 14.21.3
-        #     cache: 'npm'
-        - uses: webfactory/ssh-agent@v0.7.0
-          with:
-            ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        - name: Add Know Hosts
-          run: |
-            ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-          shell: bash
-        # - name: Clean install on CI
-        #   run: npm ci
-          
-        - name: Deploy to GitHub Pages
-          uses: peaceiris/actions-gh-pages@v3
-          env: 
-            GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
-          with:
-            github_token: ${{ secrets.GITHUB_TOKEN }}
-            publish_dir: ./dist
+      # - uses: actions/checkout@v3
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 14.21.3
+      #     cache: 'npm'
+      # - uses: webfactory/ssh-agent@v0.7.0
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      # - name: Add Know Hosts
+      #   run: |
+      #     ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+      #   shell: bash
+      # - name: Clean install on CI
+      #   run: |
+      # if [ -e yarn.lock ]; then
+      # yarn install --frozen-lockfile
+      # elif [ -e package-lock.json ]; then
+      # npm ci
+      # else
+      # npm i
+      # fi
+      # - name: Generate new Build to Pages
+      #   run: npm run build
+      # - name: Download artifact
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name:
+      # - name: Setup Node
+      # - uses: actions/checkout@v3
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 14.21.3
+      #     cache: 'npm'
+      - uses: webfactory/ssh-agent@v0.7.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Add Know Hosts
+        run: |
+          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+        shell: bash
+      # - name: Clean install on CI
+      #   run: |
+      # if [ -e yarn.lock ]; then
+      # yarn install --frozen-lockfile
+      # elif [ -e package-lock.json ]; then
+      # npm ci
+      # else
+      # npm i
+      # fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        env:
+          GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
