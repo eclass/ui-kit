@@ -13,6 +13,7 @@ const buildEnv = process.env.VITE_REACT_DEPLOY_DOCUMENTATION ?? 'PRODUCTION'
 if (buildEnv === 'DOCUMENTATION') {
   myDefineConfig = {
     plugins: [react(), tsconfigPaths()],
+    base: '/@eclass-ui-kit/',
     build: {
       sourcemap: true,
     },
