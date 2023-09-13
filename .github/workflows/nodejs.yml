@@ -127,25 +127,15 @@ jobs:
         #   uses: actions/download-artifact@v3
         #   with:
         #     name: 
-        - name: Setup Node
-          uses: actions/setup-node@v3
-          with:
-            node-version: 14.21.3
-            cache: 'npm'
         - uses: webfactory/ssh-agent@v0.7.0
           with:
             ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        - name: Add Know Hosts
-          run: |
-            ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-          shell: bash
-        - name: Clean install on CI
-          run: npm ci
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           
         - name: Deploy to GitHub Pages
           uses: peaceiris/actions-gh-pages@v3
-          env: 
-            GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
           with:
-            GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
+            github_token: eclass:${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./dist
