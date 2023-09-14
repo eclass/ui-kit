@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/eclass/ui-kit/compare/v1.29.0...v1.30.0) (2023-09-14)
+
+
+### Features
+
+* **doc:** correction dependencies ([#583](https://github.com/eclass/ui-kit/issues/583)) ([b4066ab](https://github.com/eclass/ui-kit/commit/b4066ab82b709c52d649b48612e007f470054022))
+
 # [1.29.0](https://github.com/eclass/ui-kit/compare/v1.28.0...v1.29.0) (2023-09-14)
 
 
