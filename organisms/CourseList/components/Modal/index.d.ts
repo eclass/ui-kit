@@ -1,1 +1,0 @@
-export { PaymentModal } from './PaymentModal';

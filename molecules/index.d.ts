@@ -1,6 +1,0 @@
-export { Btn } from './Buttons/Btn';
-export { BtnPrimary } from './Buttons/BtnPrimary';
-export { BtnSecondary } from './Buttons/BtnSecondary';
-export { BtnTertiary } from './Buttons/BtnTertiary';
-export { BtnLink } from './Buttons/BtnLink';
-export { NewTooltip } from './Tooltip/NewTooltip';
