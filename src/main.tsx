@@ -19,15 +19,4 @@ if (import.meta.env.VITE_REACT_DEPLOY_DOCUMENTATION === 'DOCUMENTATION') {
   )
 } else {
   import('./index')
-  // ReactDOM.render(
-  //   // <React.StrictMode>
-  //   //   <h1>HOLA</h1>
-  //   // </React.StrictMode>,
-  //   // document.getElementById('root')
-  //   <React.StrictMode>
-  //     <h1>HOLA</h1>
-  //     {/* {modulesExports} */}
-  //   </React.StrictMode>,
-  //   document.getElementById('root')
-  // )
 }
