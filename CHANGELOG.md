@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/eclass/ui-kit/compare/v1.28.0...v1.29.0) (2023-09-14)
+
+
+### Features
+
+* **release:** correction release of build deploy ([#581](https://github.com/eclass/ui-kit/issues/581)) ([6057aed](https://github.com/eclass/ui-kit/commit/6057aed90065752d3c6f9e1bcfb925452b7e1b73))
+
 # [1.28.0](https://github.com/eclass/ui-kit/compare/v1.27.0...v1.28.0) (2023-09-13)
 
 
