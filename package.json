@@ -66,7 +66,7 @@
     "@types/eclass__api": "git+ssh://git@gitlab.com/eclass/types-eclass-api.git#v3.108.0",
     "@types/eclass__sequelize-models": "git+ssh://git@gitlab.com/eclass/types-sequelize-models.git#v5.40.0",
     "@types/jest": "27.5.2",
-    "@types/react": "17.0.64",
+    "@types/react": "17.0.65",
     "@types/react-dom": "17.0.20",
     "@typescript-eslint/eslint-plugin": "5.17.0",
     "@typescript-eslint/parser": "5.17.0",
@@ -123,7 +123,7 @@
     "react-ripples": "2.2.1"
   },
   "resolutions": {
-    "@types/react": "17.0.2",
-    "@types/react-dom": "17.0.2"
+    "@types/react": "17.0.65",
+    "@types/react-dom": "17.0.20"
   }
 }
