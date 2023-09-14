@@ -43,7 +43,7 @@
     "ts-compile-check": "tsc -p tsconfig.json",
     "prepare": "ts-patch install -s && node ./prepare.js",
     "preinstall": "npm install --package-lock-only --ignore-scripts && npx npm-force-resolutions",
-    "deploy": "gh-pages -d dist"
+    "deploy": "VITE_REACT_DEPLOY_DOCUMENTATION=DOCUMENTATION vite build"
   },
   "publishConfig": {
     "access": "public"
