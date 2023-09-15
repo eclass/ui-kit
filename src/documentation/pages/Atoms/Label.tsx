@@ -7,7 +7,7 @@ export const ViewLabel = (): JSX.Element => {
     <>
       <MyHeading>Label</MyHeading>
       <MyText>
-        Eate componente permite asignar y mostrar rápidamente información relevante sobre elementos
+        Este componente permite asignar y mostrar rápidamente información relevante sobre elementos
         individuales, proporcionando una forma visualmente efectiva de categorizar, destacar o
         etiquetar contenido.
       </MyText>
