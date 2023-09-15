@@ -21,19 +21,12 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
-      - name: Remove package-lock.json
-        run: rm -rf package-lock.json
-      - name: Install dependencies and regenerate package-lock.json
-        run: npm install
+      - name: Regenerate package-lock.json
+        run: npm i
+      - name: Clean node_modules after regenerate
+        run: rm -rf node_modules
       - name: Clean install on CI
-        run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
+        run: npm ci
       - name: Linter code check
         run: npm run lint:check
       - name: Testing JEST
@@ -55,15 +48,12 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
+      - name: Regenerate package-lock.json
+        run: npm i
+      - name: Clean node_modules after regenerate
+        run: rm -rf node_modules
       - name: Clean install on CI
-        run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
+        run: npm ci
       - name: Build library
         run: npm run build
       - name: Release version
@@ -95,15 +85,12 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
+      - name: Regenerate package-lock.json
+        run: npm i
+      - name: Clean node_modules after regenerate
+        run: rm -rf node_modules
       - name: Clean install on CI
-        run: |
-          if [ -e yarn.lock ]; then
-          yarn install --frozen-lockfile
-          elif [ -e package-lock.json ]; then
-          npm ci
-          else
-          npm i
-          fi
+        run: npm ci
       - name: Generate new Build to Pages
         run: npm run deploy
       - name: Upload deploy-ready build files
