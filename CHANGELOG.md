@@ -1,3 +1,15 @@
+# [1.31.0](https://github.com/eclass/ui-kit/compare/v1.30.0...v1.31.0) (2023-09-15)
+
+
+### Bug Fixes
+
+* **alert:** margin interno ([#585](https://github.com/eclass/ui-kit/issues/585)) ([f0601da](https://github.com/eclass/ui-kit/commit/f0601da77a9d46a974d4adc7e952124ba62a953b))
+
+
+### Features
+
+* **package:** remove package-lock in machine and regenerate ([#588](https://github.com/eclass/ui-kit/issues/588)) ([ad24982](https://github.com/eclass/ui-kit/commit/ad249825cd796f568cf929df1c1254ba6cb73069))
+
 # [1.30.0](https://github.com/eclass/ui-kit/compare/v1.29.0...v1.30.0) (2023-09-14)
 
 
