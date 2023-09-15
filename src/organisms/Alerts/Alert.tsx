@@ -1,4 +1,4 @@
-import { Box, HStack, useMediaQuery } from '@chakra-ui/react'
+import { Box, useMediaQuery } from '@chakra-ui/react'
 
 import { BtnLink, BtnPrimary } from '@/molecules'
 import { vars } from '@/theme'
@@ -47,7 +47,7 @@ export function Alert({
 
   return (
     <Box
-      className={isFlash ? 'flashNotification' : 'embeddedAlert'}
+      className={isFlash ? 'flashNotification' : 'e_alert'}
       alignItems={!isMobile ? 'center' : 'unset'}
       backgroundColor={alertStates[state].bg}
       borderRadius="8px"
@@ -62,9 +62,10 @@ export function Alert({
       pr={canDismiss ? '1.75rem' : '1rem'}
       position="relative"
     >
-      <HStack
+      <Box
         gap="10px"
         className="alertContent"
+        display="flex"
         sx={{
           '.linkButton': {
             fontSize: '16px',
@@ -81,17 +82,20 @@ export function Alert({
         >
           {alertStates[state].icon}
         </Box>
-        <Box
-          fontFamily="Roboto"
-          fontSize="16px"
-          fontWeight="400"
-          lineHeight="28px"
-          color={vars('colors-neutral-darkCharcoal')}
-        >
-          {children}
+        <Box display="flex" alignItems="center">
+          <Box
+            as="p"
+            fontFamily="Roboto"
+            fontSize="16px"
+            fontWeight="400"
+            lineHeight="28px"
+            color={vars('colors-neutral-darkCharcoal')}
+          >
+            {children}
+          </Box>
           {buttonType === 'link' && <BtnLink onClick={handleClick}>{buttonText}</BtnLink>}
         </Box>
-      </HStack>
+      </Box>
 
       {buttonType === 'normal' && (
         <BtnPrimary isFullWidth={!!isMobile} leftIcon={buttonIcon} onClick={handleClick}>
