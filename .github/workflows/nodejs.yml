@@ -35,7 +35,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: package-lock
-          path: package-lock.json
+          path: ./package-lock.json
   release:
     if: github.ref == 'refs/heads/main'
     needs: test
@@ -57,7 +57,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: package-lock
-          path: package-lock.json
+          path: ./package-lock.json
       - name: Clean node_modules after regenerate
         run: rm -rf node_modules
       - name: Clean install on CI
@@ -97,7 +97,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: package-lock
-          path: package-lock.json
+          path: ./package-lock.json
       - name: Clean node_modules after regenerate
         run: rm -rf node_modules
       - name: Clean install on CI
