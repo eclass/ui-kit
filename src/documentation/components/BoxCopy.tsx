@@ -1,5 +1,5 @@
-import { Box, BoxProps, useClipboard } from '@chakra-ui/react'
-import { FC } from 'react'
+import { Box, type BoxProps, useClipboard } from '@chakra-ui/react'
+import { type FC } from 'react'
 
 interface IBoxCopy extends BoxProps {
   text: string
