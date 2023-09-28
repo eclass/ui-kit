@@ -1,3 +1,11 @@
+# [1.32.0](https://github.com/eclass/ui-kit/compare/v1.31.0...v1.32.0) (2023-09-28)
+
+
+### Features
+
+* **update:** change versions of vite, node, react and all library ([#599](https://github.com/eclass/ui-kit/issues/599)) ([7924760](https://github.com/eclass/ui-kit/commit/792476003f67bfb0dae00a2962853b6f62a0286f))
+* **update:** change versions of vite, node, react and all librarys ([#593](https://github.com/eclass/ui-kit/issues/593)) ([38de1c6](https://github.com/eclass/ui-kit/commit/38de1c670ec3eb63eb544425dd4a98eb92689c19))
+
 # [1.31.0](https://github.com/eclass/ui-kit/compare/v1.30.0...v1.31.0) (2023-09-15)
 
 
