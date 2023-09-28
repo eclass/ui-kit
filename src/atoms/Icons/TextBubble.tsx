@@ -1,4 +1,4 @@
-import { Base, BaseProps } from './Base'
+import { Base, type BaseProps } from './Base'
 
 export function TextBubble(props: BaseProps): JSX.Element {
   return (

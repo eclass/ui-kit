@@ -5,7 +5,7 @@ import { Header, Section, Footer } from '../components'
 import { Ripples } from '@atoms'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
-import * as Type from '../types'
+import type * as Type from '../types'
 
 export const CourseBoxContext = React.createContext<Partial<Type.AcademicList>>({})
 

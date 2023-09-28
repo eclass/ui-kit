@@ -10,7 +10,7 @@ describe('Tooltip', () => {
     render(
       <NewTooltip label="Visible Tooltip">
         <span data-testid="trigger">Tooltip Test</span>
-      </NewTooltip>
+      </NewTooltip>,
     )
 
     await user.hover(screen.getByTestId('trigger'))

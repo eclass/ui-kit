@@ -1,4 +1,4 @@
-import { Base, BaseProps } from './Base'
+import { Base, type BaseProps } from './Base'
 
 export function Password(props: BaseProps): JSX.Element {
   return (

@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
+import UserEvent from '@testing-library/user-event'
 
 import { BtnTertiary } from './BtnTertiary'
 
 const props = {
   onClick: jest.fn(),
+  rightIcon: false,
+  withoutColor: false,
+  m: '0',
+  tabIndex: 1,
+  id: '1',
 }
 
 beforeEach(() => {
@@ -12,7 +17,7 @@ beforeEach(() => {
 })
 
 describe('BtnTertiary', () => {
-  const user = userEvent.setup()
+  const user = UserEvent.setup()
 
   test('init', async () => {
     render(<BtnTertiary {...props}>Lorem</BtnTertiary>)
