@@ -31,11 +31,7 @@ jobs:
         run: npm run lint:check
       - name: Testing JEST
         run: npm run test
-      - name: Upload package-lock.json regenerate
-        uses: actions/upload-artifact@v3
-        with:
-          name: package-lock
-          path: ./package-lock.json
+
   release:
     if: github.ref == 'refs/heads/main'
     needs: test
@@ -53,11 +49,8 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
-      - name: Download artifact package-lock.json
-        uses: actions/download-artifact@v3
-        with:
-          name: package-lock
-          path: ./package-lock.json
+      - name: Regenerate package-lock.json
+        run: npm i
       - name: Clean node_modules after regenerate
         run: rm -rf node_modules
       - name: Clean install on CI
@@ -93,11 +86,8 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
-      - name: Download artifact package-lock.json
-        uses: actions/download-artifact@v3
-        with:
-          name: package-lock
-          path: ./package-lock.json
+      - name: Regenerate package-lock.json
+        run: npm i
       - name: Clean node_modules after regenerate
         run: rm -rf node_modules
       - name: Clean install on CI
