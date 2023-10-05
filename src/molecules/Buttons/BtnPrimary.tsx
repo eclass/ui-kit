@@ -1,4 +1,4 @@
-import { Btn, propsBaseBtns } from './Btn'
+import { Btn, type propsBaseBtns } from './Btn'
 
 /**
  * Componente BtnPrimary

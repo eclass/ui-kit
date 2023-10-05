@@ -6,16 +6,16 @@ interface ICode {
   language?: string
 }
 export const Code = ({ text, language = 'jsx' }: ICode): JSX.Element => {
+  const codeBlockProps = {
+    theme: atomOneDark,
+    text,
+    language,
+    codeBlock: true,
+    showLineNumbers: false,
+  }
   return (
     <Box m="1rem 0">
-      <CopyBlock
-        theme={atomOneDark}
-        // @ts-expect-error
-        text={text}
-        language={language}
-        codeBlock
-        showLineNumbers={false}
-      />
+      <CopyBlock {...codeBlockProps} />
     </Box>
   )
 }
