@@ -1,6 +1,6 @@
 import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
 import { BtnPrimary, BtnSecondary, BtnTertiary, BtnLink } from '@/molecules'
-import { Password } from '@/atoms/Icons'
+import { GoAhead, Password } from '@/atoms/Icons'
 
 export const Buttons = (): JSX.Element => {
   return (
@@ -96,6 +96,11 @@ export const Buttons = (): JSX.Element => {
 <BtnTertiary iconStatus='download'>download</BtnTertiary>
 <BtnTertiary iconStatus='noIcon'>noIcon</BtnTertiary>"
       />
+      <MyTittle>Iconos Custom</MyTittle>
+      <ListComponent>
+        <BtnTertiary iconCustom={<GoAhead />}>custom</BtnTertiary>
+      </ListComponent>
+      <Code text="<BtnTertiary iconCustom={<GoAhead />} >custom</BtnTertiary>" />
     </>
   )
 }

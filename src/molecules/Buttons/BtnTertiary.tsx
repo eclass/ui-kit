@@ -26,6 +26,9 @@ export interface propsTertiaryBtn {
     | 'record'
     | 'download'
     | 'noIcon'
+
+  /** Se permite agregar un nuevo icono, para casos en que no sirvan los de la lista definida */
+  iconCustom?: JSX.Element
   children?: React.ReactNode
   rightIcon?: boolean
   withoutColor?: boolean
@@ -40,6 +43,7 @@ export interface propsTertiaryBtn {
 export function BtnTertiary({
   children,
   iconStatus = 'multimedia',
+  iconCustom,
   rightIcon,
   withoutColor = false,
   m = '0',
@@ -68,7 +72,10 @@ export function BtnTertiary({
     noIcon: <></>,
   }
 
-  const icon = btnIcons[iconStatus] ?? btnIcons.multimedia
+  let icon = btnIcons[iconStatus] ?? btnIcons.multimedia
+  if (iconCustom) {
+    icon = iconCustom
+  }
   const rIcon = rightIcon ? icon : undefined
   const lIcon = !rightIcon ? icon : undefined
 
