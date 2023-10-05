@@ -1,3 +1,10 @@
+## [1.33.1](https://github.com/eclass/ui-kit/compare/v1.33.0...v1.33.1) (2023-10-05)
+
+
+### Bug Fixes
+
+* **tertiary:** icono custom fix ([#605](https://github.com/eclass/ui-kit/issues/605)) ([d81006e](https://github.com/eclass/ui-kit/commit/d81006ec428794b5bc1ba0c0d40ae471b851d321))
+
 # [1.30.0](https://github.com/eclass/ui-kit/compare/v1.29.0...v1.30.0) (2023-09-14)
 
 
