@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/eclass/ui-kit/compare/v1.32.0...v1.33.0) (2023-10-05)
+
+
+### Features
+
+* **tertiary:** icono custom ([#604](https://github.com/eclass/ui-kit/issues/604)) ([0ec4a9f](https://github.com/eclass/ui-kit/commit/0ec4a9f9748a1e904d9cbaf93db71ccd97bf879f))
+
 # [1.32.0](https://github.com/eclass/ui-kit/compare/v1.31.0...v1.32.0) (2023-09-28)
 
 
