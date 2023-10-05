@@ -1,0 +1,2 @@
+import{j as s,B as m,v as r}from"./index-25596fbb.js";function l({children:i,bg:t=r("colors-icon-ripeMango"),color:n=r("colors-neutral-darkCharcoal"),size:o="md",m:a="0"}){const e={md:{borderRadius:"0.25em",fontWeight:"400",p:"0.25em 0.84em"},sm:{borderRadius:"0.42em",fontWeight:"700",p:"0.17em 0.67em"}};return s.jsx(m,{bg:t,borderRadius:e[o].borderRadius,color:n,display:"inline-block",fontSize:"0.75rem",fontWeight:e[o].fontWeight,lineHeight:".875rem",m:a,p:e[o].p,children:i})}export{l as L};
+//# sourceMappingURL=Label-94c489fa.js.map
