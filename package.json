@@ -47,7 +47,7 @@
     "access": "public"
   },
   "devDependencies": {
-    "@commitlint/cli": "17.7.1",
+    "@commitlint/cli": "17.7.2",
     "@commitlint/config-conventional": "17.7.0",
     "@fontsource/lora": "4.5.13",
     "@fontsource/roboto": "4.5.8",
