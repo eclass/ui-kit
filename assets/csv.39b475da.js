@@ -1,0 +1,2 @@
+function u(r,o){return o.forEach(function(e){e&&typeof e!="string"&&!Array.isArray(e)&&Object.keys(e).forEach(function(t){if(t!=="default"&&!(t in r)){var n=Object.getOwnPropertyDescriptor(e,t);Object.defineProperty(r,t,n.get?n:{enumerable:!0,get:function(){return e[t]}})}})}),Object.freeze(Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}))}var c=a;a.displayName="csv";a.aliases=[];function a(r){r.languages.csv={value:/[^\r\n,"]+|"(?:[^"]|"")*"(?!")/,punctuation:/,/}}var i=u({__proto__:null,default:c},[c]);export{i as c};
+//# sourceMappingURL=csv.39b475da.js.map
