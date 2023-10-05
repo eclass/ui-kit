@@ -13,7 +13,7 @@ import {
 
 import { vars } from '@theme'
 import { AlertInfo } from '@/atoms/Icons'
-import type * as Type from '../../types'
+import * as Type from '../../types'
 
 interface PaymentModalProps {
   isOpen: boolean

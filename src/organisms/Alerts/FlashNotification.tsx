@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react'
 import { useCallback, useEffect } from 'react'
 import { toast, Toaster } from 'react-hot-toast'
 
-import { type IFlashNotificationProps } from './types.d'
+import { IFlashNotificationProps } from './types.d'
 import { alertStates } from './utils/alertStates'
 import { handleTime } from './utils/handleTime'
 import { Alert } from './Alert'
@@ -30,21 +30,14 @@ export function FlashNotification({
   const showToast = useCallback(() => {
     toast(
       (t) => (
-        <Alert
-          isFlash
-          state={state}
-          canDismiss
-          onClick={() => {
-            toast.dismiss(t.id)
-          }}
-        >
+        <Alert isFlash state={state} canDismiss onClick={() => toast.dismiss(t.id)}>
           {message}
         </Alert>
       ),
       {
         duration: handleTime(message),
         id: alertStates[state].id,
-      },
+      }
     )
   }, [message, state])
 

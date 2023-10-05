@@ -4,7 +4,7 @@ import { useLocation, Outlet } from 'react-router-dom'
 
 import { CloseIcon } from './CloseIcon'
 import { HamburgerIcon } from './HamburgerIcon'
-import { type IRoute, routes } from '../utils/routes'
+import { IRoute, routes } from '../utils/routes'
 import { Logo } from './Logo'
 import { Nav } from './Nav'
 import { vars } from '@/theme'
@@ -91,9 +91,7 @@ export const Layout = (): JSX.Element => {
             cursor="pointer"
             display="grid"
             h="2.5rem"
-            onClick={() => {
-              setShowNav(!showNav)
-            }}
+            onClick={() => setShowNav(!showNav)}
             padding=".5rem"
             placeContent="center"
             shadow={vars('shadows-sm')}

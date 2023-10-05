@@ -1,5 +1,5 @@
-import { type FC, type ReactElement } from 'react'
-import { Tooltip, type PlacementWithLogical } from '@chakra-ui/react'
+import { FC } from 'react'
+import { Tooltip, PlacementWithLogical } from '@chakra-ui/react'
 import { vars } from '@/theme'
 
 interface TooltipProps {
@@ -9,7 +9,6 @@ interface TooltipProps {
   m?: string
   maxWidth?: string
   placement?: PlacementWithLogical
-  children?: ReactElement
 }
 
 export const NewTooltip: FC<TooltipProps> = ({
@@ -29,7 +28,7 @@ export const NewTooltip: FC<TooltipProps> = ({
         color: 'white !important',
         fontSize: '12px',
         fontWeight: '400',
-        maxWidth,
+        maxWidth: maxWidth,
         padding: '8px',
 
         '.chakra-tooltip__arrow': {

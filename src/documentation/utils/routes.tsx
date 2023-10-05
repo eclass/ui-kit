@@ -24,7 +24,7 @@ const Tooltip = React.lazy(async () => await import('../pages/Molecules/Tooltip'
 /** ORGANISMS */
 const Alerts = React.lazy(async () => await import('../pages/Organisms/Alerts'))
 const FlashNotification = React.lazy(
-  async () => await import('../pages/Organisms/FlashNotification'),
+  async () => await import('../pages/Organisms/FlashNotification')
 )
 const CourseList = React.lazy(async () => await import('../pages/Organisms/CourseList'))
 

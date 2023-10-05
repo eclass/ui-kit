@@ -92,8 +92,7 @@ export function Btn({
           borderRadius={borderRadius}
           color={color}
           className={onlyIcon}
-          // disabled={disabled && isLoading ? false : disabled}
-          isDisabled={disabled && isLoading ? false : disabled}
+          disabled={disabled && isLoading ? false : disabled}
           height="auto"
           minHeight={size === 'regular' ? '2.813rem' : '2rem'}
           minWidth={size === 'regular' ? '9rem' : 'auto'}
@@ -116,7 +115,7 @@ export function Btn({
           paddingLeft={size === 'regular' ? vars('space-s') : vars('space-xs')}
           paddingRight={size === 'regular' ? vars('space-s') : vars('space-xs')}
           position="relative"
-          width={isFullWidth ? 'full' : 'auto'}
+          isFullWidth={isFullWidth}
           rightIcon={rightIcon}
           spinner={<Loader fill={fillLoader} />}
           _active={{

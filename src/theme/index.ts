@@ -9,7 +9,7 @@ export const theme = extendTheme({
   colors,
   ...utils,
   ...typography,
-  styles,
+  styles: styles,
 })
 
 export const vars = (value: string): string => `var(--chakra-${value})`

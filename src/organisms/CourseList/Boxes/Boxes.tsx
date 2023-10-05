@@ -1,4 +1,4 @@
-import { type AcademicList, type WrapperCoursesProps } from '../types'
+import { AcademicList, WrapperCoursesProps } from '../types'
 import { BoxTraditional } from './BoxTraditional'
 import { BoxImage } from './BoxImage'
 

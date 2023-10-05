@@ -1,8 +1,8 @@
 import { vars } from '@/theme'
 import { Box, Divider, Heading, Text } from '@chakra-ui/react'
-import { type ReactElement, type FC } from 'react'
+import { FC } from 'react'
 
-export const MyHeading = ({ children }: { children: ReactElement | any }): JSX.Element => {
+export const MyHeading: FC = ({ children }): JSX.Element => {
   return (
     <>
       <Heading as="h1" size="2xl">
@@ -15,7 +15,6 @@ export const MyHeading = ({ children }: { children: ReactElement | any }): JSX.E
 
 interface IMyTittle {
   divider?: boolean
-  children: ReactElement | any
 }
 
 export const MyTittle: FC<IMyTittle> = ({ children, divider = true }): JSX.Element => {
@@ -29,13 +28,12 @@ export const MyTittle: FC<IMyTittle> = ({ children, divider = true }): JSX.Eleme
   )
 }
 
-export const MyText = ({ children }: { children: ReactElement | any }): JSX.Element => {
+export const MyText: FC = ({ children }): JSX.Element => {
   return <Text>{children}</Text>
 }
 
 interface IMyLink {
   href: string
-  children: ReactElement | any
 }
 export const MyLink: FC<IMyLink> = ({ children, href }): JSX.Element => {
   return (

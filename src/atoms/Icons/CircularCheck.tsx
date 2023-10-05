@@ -1,4 +1,4 @@
-import { Base, type BaseProps } from './Base'
+import { Base, BaseProps } from './Base'
 
 export function CircularCheck(props: BaseProps): JSX.Element {
   return (

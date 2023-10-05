@@ -8,7 +8,7 @@ describe('<TinyAlert />', () => {
 
     expect(screen.getByText('Info')).toBeInTheDocument()
     expect(screen.queryByTestId('TinyAlert-Box')).toHaveStyle(
-      'background: vars colors-neutral-darkCharcoal',
+      'background: vars colors-neutral-darkCharcoal'
     )
   })
   test('error label', () => {
@@ -16,7 +16,7 @@ describe('<TinyAlert />', () => {
 
     expect(screen.getByText('Error')).toBeInTheDocument()
     expect(screen.getByTestId('TinyAlert-Box')).toHaveStyle(
-      'background: vars colors-alert-veryLightPinkThree',
+      'background: vars colors-alert-veryLightPinkThree'
     )
   })
   test('warning label', () => {
@@ -24,7 +24,7 @@ describe('<TinyAlert />', () => {
 
     expect(screen.getByText('Warning')).toBeInTheDocument()
     expect(screen.getByTestId('TinyAlert-Box')).toHaveStyle(
-      'background: vars colors-neutral-darkCharcoal',
+      'background: vars colors-neutral-darkCharcoal'
     )
   })
   test('success label', () => {

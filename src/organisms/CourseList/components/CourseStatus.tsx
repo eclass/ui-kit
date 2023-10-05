@@ -1,5 +1,5 @@
 import { Flex, Text } from '@chakra-ui/react'
-import { type ProgressCourse, type StatusCourse } from '@eclass/api'
+import { ProgressCourse, StatusCourse } from '@eclass/api'
 
 import { Label } from '@/atoms'
 import { vars } from '@/theme'

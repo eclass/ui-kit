@@ -34,8 +34,7 @@
     }
   ],
   "rules": {
-    "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/consistent-type-imports": "error"
+    "@typescript-eslint/strict-boolean-expressions": "off"
   },
   "settings": {
     "mdx/code-blocks": true,

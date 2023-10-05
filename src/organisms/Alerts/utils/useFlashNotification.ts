@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { type IFlashNotificationProps } from '../types'
+import { IFlashNotificationProps } from '../types'
 import { handleTime } from './handleTime'
 
 /**
@@ -30,9 +30,7 @@ export const useFlashNotification = ({ state, message }: IFlashNotificationProps
       const timeOut = setTimeout(() => {
         setShow(false)
       }, handleTime(message))
-      return () => {
-        clearTimeout(timeOut)
-      }
+      return () => clearTimeout(timeOut)
     }
   }, [message, show])
 

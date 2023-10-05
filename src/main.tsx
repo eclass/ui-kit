@@ -1,5 +1,5 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom/client'
+import * as ReactDOM from 'react-dom'
 import { ChakraProvider } from '@chakra-ui/react'
 
 import { Documentation } from './documentation'
@@ -8,14 +8,14 @@ import { Documentation } from './documentation'
 import { theme } from './theme'
 
 if (import.meta.env.VITE_REACT_DEPLOY_DOCUMENTATION === 'DOCUMENTATION') {
-  const contentRoot = document.getElementById('root') as HTMLElement
-  ReactDOM.createRoot(contentRoot).render(
+  ReactDOM.render(
     <React.StrictMode>
       <ChakraProvider theme={theme}>
         {/* <Playground /> */}
         <Documentation />
       </ChakraProvider>
     </React.StrictMode>,
+    document.getElementById('root')
   )
 } else {
   import('./index')

@@ -1,4 +1,4 @@
-import { Base, type BaseProps } from '../Base'
+import { Base, BaseProps } from '../Base'
 
 export function SuccessWhite(props: BaseProps): JSX.Element {
   return (
