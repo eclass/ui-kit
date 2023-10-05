@@ -2,7 +2,7 @@ import { Box, LinkOverlay } from '@chakra-ui/react'
 
 import { vars } from '@theme'
 import { Ripples } from '@atoms'
-import type * as Type from '../types'
+import * as Type from '../types'
 import { isCourseActive } from '../utils'
 
 interface ImageBoxProps {
@@ -86,7 +86,7 @@ export function BoxImage({
                 >
                   {item.text}
                 </Box>
-              ),
+              )
           )}
         </Box>
       </Box>

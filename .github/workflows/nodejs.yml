@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [16, 18, 20]
+        node: [14.21.3]
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -31,7 +31,6 @@ jobs:
         run: npm run lint:check
       - name: Testing JEST
         run: npm run test
-
   release:
     if: github.ref == 'refs/heads/main'
     needs: test
@@ -40,7 +39,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18.18.0
+          node-version: 14.21.3
           cache: 'npm'
       - uses: webfactory/ssh-agent@v0.7.0
         with:
@@ -77,7 +76,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18.18.0
+          node-version: 14.21.3
           cache: 'npm'
       - uses: webfactory/ssh-agent@v0.7.0
         with:

@@ -2,7 +2,7 @@ import { Box, useMediaQuery } from '@chakra-ui/react'
 
 import { BtnLink, BtnPrimary } from '@/molecules'
 import { vars } from '@/theme'
-import { type IAlertProps } from './types.d'
+import { IAlertProps } from './types.d'
 import { alertStates } from './utils/alertStates'
 import { Close } from '@/atoms/Icons'
 

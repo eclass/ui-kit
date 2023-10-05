@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { Btn } from './Btn'
@@ -15,12 +15,14 @@ beforeEach(() => {
 describe('Btn', () => {
   const user = userEvent.setup()
 
-  test('Btn can click', () => {
-    const handleClick = jest.fn()
-    render(<Btn onClick={handleClick}>Lorem</Btn>)
-    const button = screen.getByText('Lorem')
-    fireEvent.click(button)
-    expect(handleClick).toHaveBeenCalledTimes(1)
+  test('init', async () => {
+    render(<Btn {...props}>Lorem</Btn>)
+    const button = screen.getByRole('button')
+    expect(screen.getByText(/Lorem/)).toBeInTheDocument()
+
+    await user.click(button)
+    expect(button).toHaveFocus()
+    expect(props.onClick).toHaveBeenCalledTimes(1)
   })
 
   test('dafault', () => {
@@ -32,7 +34,7 @@ describe('Btn', () => {
     render(
       <Btn {...props} disabled>
         Lorem
-      </Btn>,
+      </Btn>
     )
     const button = screen.getByRole('button')
     expect(button).toBeDisabled()
@@ -45,7 +47,7 @@ describe('Btn', () => {
     render(
       <Btn {...props} isLoading>
         Lorem
-      </Btn>,
+      </Btn>
     )
     const button = screen.getByRole('button')
     expect(screen.getByTestId('loaderAsync')).toBeInTheDocument()

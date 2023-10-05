@@ -1,7 +1,6 @@
 import { Icon as IconChakra } from '@chakra-ui/react'
 
 import { vars } from '@theme'
-import { type ReactElement } from 'react'
 
 export interface BaseProps {
   w?: string
@@ -12,7 +11,7 @@ export interface BaseProps {
 }
 interface IconProps extends BaseProps {
   viewBox?: string
-  children: ReactElement | ReactElement[]
+  children: React.ReactChild | React.ReactChild[]
   title?: string
 }
 

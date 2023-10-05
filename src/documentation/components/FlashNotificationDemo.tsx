@@ -1,5 +1,5 @@
 import { FlashNotification, useFlashNotification } from '@/organisms'
-import { type IFlashNotificationProps } from '@/organisms/Alerts/types'
+import { IFlashNotificationProps } from '@/organisms/Alerts/types'
 import { Box, Button } from '@chakra-ui/react'
 
 export default function FlashNotificationDemo({
@@ -7,8 +7,8 @@ export default function FlashNotificationDemo({
   message,
 }: IFlashNotificationProps): JSX.Element {
   const { show, active, config } = useFlashNotification({
-    state,
-    message,
+    state: state,
+    message: message,
   })
   return (
     <Box>

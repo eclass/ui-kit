@@ -1,8 +1,7 @@
-import { type FC, type ReactElement } from 'react'
+import { FC } from 'react'
 import { Box } from '@chakra-ui/react'
 
 interface IListComponent {
-  children: ReactElement | any
   gap?: string
   m?: string
 }

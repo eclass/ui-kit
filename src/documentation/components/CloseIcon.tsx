@@ -1,4 +1,4 @@
-import { Base, type BaseProps } from '@/atoms/Icons/Base'
+import { Base, BaseProps } from '@/atoms/Icons/Base'
 
 export function CloseIcon(props: BaseProps): JSX.Element {
   return (
