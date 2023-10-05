@@ -26,9 +26,11 @@ export interface propsTertiaryBtn {
     | 'record'
     | 'download'
     | 'noIcon'
+
+  /** Se permite agregar un nuevo icono, para casos en que no sirvan los de la lista definida */
+  iconCustom?: JSX.Element
   children?: React.ReactNode
   rightIcon?: boolean
-  iconCustom?: JSX.Element
   withoutColor?: boolean
   m?: string
   type?: 'button' | 'submit' | 'reset'

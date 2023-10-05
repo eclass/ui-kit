@@ -6,7 +6,7 @@ import { ArrowRight } from '@icons'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
 import { PaymentModal } from './Modal'
-import * as Type from '../types'
+import type * as Type from '../types'
 
 export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | null {
   const { action, Profile, hasFinanzeFreezed } = React.useContext(CourseBoxContext)

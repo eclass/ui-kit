@@ -1,4 +1,4 @@
-import { Base, BaseProps } from './Base'
+import { Base, type BaseProps } from './Base'
 
 export function PlusSign(props: BaseProps): JSX.Element {
   return (

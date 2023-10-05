@@ -3,7 +3,7 @@ import { Box } from '@chakra-ui/react'
 
 import { vars } from '@/theme'
 import { ArrowRight } from '../../atoms/Icons/ArrowRight'
-import { IRoute } from '../utils/routes'
+import { type IRoute } from '../utils/routes'
 
 export const Nav = ({ route }: { route: IRoute }): JSX.Element => {
   const { pathname } = useLocation()

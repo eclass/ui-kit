@@ -1,4 +1,4 @@
-import { AcademicBox } from '@eclass/api'
+import { type AcademicBox } from '@eclass/api'
 
 export type AcademicList = AcademicBox
 
