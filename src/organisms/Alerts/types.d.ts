@@ -21,6 +21,10 @@ export interface IAlertProps {
    */
   buttonLink?: boolean
   /**
+   * Ancho al 100% del contenedot
+   */
+  fullWidth?: boolean
+  /**
    * Para notificación flash
    */
   isFlash?: boolean
