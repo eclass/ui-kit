@@ -27,6 +27,7 @@ export function Alert({
   buttonText,
   buttonIcon,
   buttonLink = false,
+  fullWidth = false,
   isFlash = false,
   onClick,
   state,
@@ -56,16 +57,16 @@ export function Alert({
       gap={!isFlash ? '16px' : ''}
       justifyContent={!isMobile ? 'space-between' : ''}
       margin={m}
-      width="100%"
-      maxWidth="796px"
+      width={fullWidth ? '100%' : 'fit-content'}
+      maxWidth={fullWidth ? 'none' : '796px'}
       p="1rem"
       pr={canDismiss ? '1.75rem' : '1rem'}
       position="relative"
     >
       <Box
-        gap="10px"
         className="alertContent"
         display="flex"
+        gap="10px"
         sx={{
           '.linkButton': {
             fontSize: '16px',
@@ -85,6 +86,7 @@ export function Alert({
         <Box display="flex" alignItems="center">
           <Box
             as="p"
+            alignSelf="center"
             fontFamily="Roboto"
             fontSize="16px"
             fontWeight="400"
