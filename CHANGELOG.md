@@ -1,3 +1,10 @@
+## [1.33.2](https://github.com/eclass/ui-kit/compare/v1.33.1...v1.33.2) (2023-10-19)
+
+
+### Bug Fixes
+
+* **PDYE-408-alerts:** corrección de estilo componente alerta ([#607](https://github.com/eclass/ui-kit/issues/607)) ([ea13bf1](https://github.com/eclass/ui-kit/commit/ea13bf183e2f730f08cde38e7fd78a96732baf77))
+
 ## [1.33.1](https://github.com/eclass/ui-kit/compare/v1.33.0...v1.33.1) (2023-10-05)
 
 
