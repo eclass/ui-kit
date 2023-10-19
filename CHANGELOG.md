@@ -1,3 +1,10 @@
+## [1.34.1](https://github.com/eclass/ui-kit/compare/v1.34.0...v1.34.1) (2023-10-19)
+
+
+### Bug Fixes
+
+* **preinstall:** correction fix ([#610](https://github.com/eclass/ui-kit/issues/610)) ([8a5fb25](https://github.com/eclass/ui-kit/commit/8a5fb2589af329dc658f41021907cca90efb1594))
+
 # [1.34.0](https://github.com/eclass/ui-kit/compare/v1.33.2...v1.34.0) (2023-10-19)
 
 
