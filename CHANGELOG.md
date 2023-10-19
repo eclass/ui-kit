@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/eclass/ui-kit/compare/v1.33.2...v1.34.0) (2023-10-19)
+
+
+### Features
+
+* **changelog:** return semantic-release changelog ([#609](https://github.com/eclass/ui-kit/issues/609)) ([681e419](https://github.com/eclass/ui-kit/commit/681e4192e1d34a9a842201aa7b331270962965fc))
+
 ## [1.33.2](https://github.com/eclass/ui-kit/compare/v1.33.1...v1.33.2) (2023-10-19)
 
 
