@@ -1,3 +1,10 @@
+# [1.35.0](https://github.com/eclass/ui-kit/compare/v1.34.1...v1.35.0) (2023-12-18)
+
+
+### Features
+
+* **tooltip:** agregamos booleano de open a tooltip y pressed a btntertiary ([#612](https://github.com/eclass/ui-kit/issues/612)) ([6e4e926](https://github.com/eclass/ui-kit/commit/6e4e9262993c509395406336eeaf74b19d1d168c))
+
 ## [1.34.1](https://github.com/eclass/ui-kit/compare/v1.34.0...v1.34.1) (2023-10-19)
 
 
