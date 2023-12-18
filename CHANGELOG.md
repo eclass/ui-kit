@@ -1,3 +1,10 @@
+# [1.36.0](https://github.com/eclass/ui-kit/compare/v1.35.0...v1.36.0) (2023-12-18)
+
+
+### Features
+
+* **molecules:** agregamos eventos de mouse a boton terciario ([#613](https://github.com/eclass/ui-kit/issues/613)) ([f5b5d9e](https://github.com/eclass/ui-kit/commit/f5b5d9eb602f79fbf9bf6fdea1b059f0707a749f))
+
 # [1.35.0](https://github.com/eclass/ui-kit/compare/v1.34.1...v1.35.0) (2023-12-18)
 
 
