@@ -9,6 +9,7 @@ interface TooltipProps {
   m?: string
   maxWidth?: string
   placement?: PlacementWithLogical
+  isOpen?: boolean | undefined
 }
 
 export const NewTooltip: FC<TooltipProps> = ({
@@ -19,9 +20,11 @@ export const NewTooltip: FC<TooltipProps> = ({
   m,
   maxWidth = '200px',
   placement = 'bottom',
+  isOpen,
 }) => {
   return (
     <Tooltip
+      isOpen={isOpen}
       sx={{
         bg: vars('colors-neutral-darkCharcoal'),
         borderRadius: '10px',

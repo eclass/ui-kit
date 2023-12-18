@@ -34,7 +34,7 @@ export interface propsTertiaryBtn {
   type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
   id?: string
-
+  activeWhenPress?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
@@ -48,7 +48,7 @@ export function BtnTertiary({
   type = 'button',
   tabIndex,
   id,
-
+  activeWhenPress = false,
   onClick,
 }: propsTertiaryBtn): JSX.Element {
   const gray = vars('colors-neutral-gray')
@@ -107,6 +107,7 @@ export function BtnTertiary({
         boxShadow: `inset 0 0 0 2px ${blue}, inset 0 0 0 4px ${white}`,
       }}
       _focus={{
+        color: activeWhenPress ? `${blue}` : 'inherit',
         boxShadow: 'none',
       }}
       _active={{
@@ -122,6 +123,11 @@ export function BtnTertiary({
             'svg path': {
               fill: colorIcon,
             },
+          },
+        },
+        '&:focus': {
+          'svg path': {
+            fill: activeWhenPress ? `${blue}` : '',
           },
         },
       }}
