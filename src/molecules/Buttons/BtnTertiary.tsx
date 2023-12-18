@@ -36,6 +36,8 @@ export interface propsTertiaryBtn {
   id?: string
   activeWhenPress?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
+  onMouseEnter?: (e: React.MouseEvent<HTMLElement>) => void
+  onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
 export function BtnTertiary({
@@ -50,6 +52,8 @@ export function BtnTertiary({
   id,
   activeWhenPress = false,
   onClick,
+  onMouseEnter,
+  onMouseLeave,
 }: propsTertiaryBtn): JSX.Element {
   const gray = vars('colors-neutral-gray')
   const blue = vars('colors-main-deepSkyBlue')
@@ -100,6 +104,8 @@ export function BtnTertiary({
       leftIcon={lIcon}
       m={m}
       onClick={onClick}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
       _hover={{
         color: `${blue}`,
       }}
@@ -107,7 +113,7 @@ export function BtnTertiary({
         boxShadow: `inset 0 0 0 2px ${blue}, inset 0 0 0 4px ${white}`,
       }}
       _focus={{
-        color: activeWhenPress ? `${blue}` : 'inherit',
+        color: activeWhenPress ? `${blue} !important` : 'inherit',
         boxShadow: 'none',
       }}
       _active={{
