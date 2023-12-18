@@ -101,6 +101,14 @@ export const Buttons = (): JSX.Element => {
         <BtnTertiary iconCustom={<GoAhead />}>custom</BtnTertiary>
       </ListComponent>
       <Code text="<BtnTertiary iconCustom={<GoAhead />} >custom</BtnTertiary>" />
+      <MyTittle>Activo al presionar</MyTittle>
+      <MyText>
+        El <code>BtnTertiary</code> puede tener una propiedad  <code>activeWhenPress</code> booleano el cual indica que al presionar o mantener focus queda azul brillante o activo:
+      </MyText>
+      <ListComponent>
+        <BtnTertiary activeWhenPress iconCustom={<GoAhead />}>custom</BtnTertiary>
+      </ListComponent>
+      <Code text="<BtnTertiary activeWhenPress iconCustom={<GoAhead />} >custom</BtnTertiary>" />
     </>
   )
 }

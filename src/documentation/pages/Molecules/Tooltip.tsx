@@ -1,8 +1,11 @@
 import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
 import { NewTooltip } from '../../../molecules/Tooltip/NewTooltip'
 import { BtnPrimary } from '@/molecules'
+import { useDisclosure } from '@chakra-ui/react'
 
 export const ViewTooltip = (): JSX.Element => {
+  const { isOpen, onToggle } = useDisclosure()
+
   return (
     <>
       <MyHeading>Tooltip</MyHeading>
@@ -59,6 +62,22 @@ export const ViewTooltip = (): JSX.Element => {
 <NewTooltip label="Left" placement="left">
   <BtnPrimary>Left</BtnPrimary>
 </NewTooltip>`}
+      />
+       <MyTittle>Activar al Click</MyTittle>
+      <MyText>
+        El componente tiene un prop booleano <code>isOpen</code> que se utiliza para mantener abierto o cerrado el tooltip en caso de utilizar  <code>onClick</code>, usando el hook  <code>useDisclosure()</code>
+      </MyText>
+      <ListComponent>
+        <NewTooltip label="Default" isOpen={isOpen}>
+          <BtnPrimary onClick={onToggle}>Presionar para mostrar</BtnPrimary>
+        </NewTooltip>
+      </ListComponent>
+      <Code
+        text={`
+        const { isOpen, onToggle } = useDisclosure()
+        <NewTooltip label="Default" isOpen={isOpen}>
+          <BtnPrimary onClick={onToggle}>Presionar para mostrar</BtnPrimary>
+        </NewTooltip>`}
       />
     </>
   )
