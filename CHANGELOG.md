@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/eclass/ui-kit/compare/v1.36.0...v1.37.0) (2024-01-12)
+
+
+### Features
+
+* **molecules:** btn-link puede ser un elemento a ([#614](https://github.com/eclass/ui-kit/issues/614)) ([1ff2070](https://github.com/eclass/ui-kit/commit/1ff2070e6bbb7ed66837387d2a7db66126c49e8a))
+
 # [1.36.0](https://github.com/eclass/ui-kit/compare/v1.35.0...v1.36.0) (2023-12-18)
 
 
