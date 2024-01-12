@@ -112,6 +112,25 @@ export const Buttons = (): JSX.Element => {
         </BtnTertiary>
       </ListComponent>
       <Code text="<BtnTertiary activeWhenPress iconCustom={<GoAhead />} >custom</BtnTertiary>" />
+
+      <MyTittle>BtnLink</MyTittle>
+      <MyText>
+        El <code>BtnLink</code> tiene la opción de ser un elemento (<code>button</code>) o un
+        elemento (<code>a</code>), si la elección es esto último es necesario pasarle la url que
+        desea abrir con (<code>href</code>), por defecto en una pestaña nueva.
+      </MyText>
+      <ListComponent>
+        <BtnLink>Button</BtnLink>
+        <BtnLink as="a" href="https://ui-kit.eclass.com/">
+          Enlace ui-kit
+        </BtnLink>
+      </ListComponent>
+      <Code text="<BtnLink>Button</BtnLink>" />
+      <Code
+        text={`<BtnLink as="a" href="https://ui-kit.eclass.com/">
+  Enlace ui-kit
+</BtnLink>`}
+      />
     </>
   )
 }
