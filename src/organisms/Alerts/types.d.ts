@@ -45,6 +45,10 @@ export interface IAlertProps {
    * Margen
    */
   m?: string
+
+  // agrega el link al final del texto
+  endTextLink?: string
+  onClickLink?: () => void
 }
 
 export interface IFlashNotificationProps {

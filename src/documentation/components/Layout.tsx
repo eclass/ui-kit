@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Box, useMediaQuery } from '@chakra-ui/react'
+import { Box, useMediaQuery, Center } from '@chakra-ui/react'
 import { useLocation, Outlet } from 'react-router-dom'
 
 import { CloseIcon } from './CloseIcon'
@@ -8,6 +8,7 @@ import { IRoute, routes } from '../utils/routes'
 import { Logo } from './Logo'
 import { Nav } from './Nav'
 import { vars } from '@/theme'
+import { version } from 'package.json'
 
 export const Layout = (): JSX.Element => {
   const [showNav, setShowNav] = useState(false)
@@ -129,6 +130,7 @@ export const Layout = (): JSX.Element => {
           }}
         >
           <Logo />
+          <Center>Ultima version: {version}</Center>
           {routes.map((route: IRoute) => {
             return <Nav key={route.label} route={route} />
           })}
