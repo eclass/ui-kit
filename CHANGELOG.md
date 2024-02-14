@@ -1,3 +1,10 @@
+# [1.38.0](https://github.com/eclass/ui-kit/compare/v1.37.0...v1.38.0) (2024-02-14)
+
+
+### Features
+
+* **PDYE-598:** se agrega alert y modal con documentacion uikit ([#616](https://github.com/eclass/ui-kit/issues/616)) ([158c430](https://github.com/eclass/ui-kit/commit/158c4301a41aac5ac1c67c9aa1f7225393889a06))
+
 # [1.37.0](https://github.com/eclass/ui-kit/compare/v1.36.0...v1.37.0) (2024-01-12)
 
 
