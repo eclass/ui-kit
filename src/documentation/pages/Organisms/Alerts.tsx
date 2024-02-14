@@ -95,6 +95,80 @@ export const ViewAlert = (): JSX.Element => {
 <Alert state="error" buttonLink buttonText="Click me" onClick={() => {}}> Texto </Alert>
 <Alert state="warning" buttonLink buttonText="Click me" onClick={() => {}}> Texto </Alert>'
       />
+      <MyTittle>Alertas con botón link y boton primario</MyTittle>
+      <MyText>
+        Esta alerta recibe un state de alerta entre: <code>warning, error, success, info </code>.
+        Adicionalmente recibe un link al final del texto y un botón primario.
+      </MyText>
+      <ListComponent>
+        <Alert
+          state="info"
+          buttonText="Ir al registro"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="visita el Centro de ayuda"
+        >
+          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
+          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
+          evitar problemas o contratiempos. Para mas informacion,
+        </Alert>
+        <Alert
+          state="success"
+          buttonText="Ir al registro"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="visita el Centro de ayuda"
+        >
+          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
+          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
+          evitar problemas o contratiempos. Para mas informacion,
+        </Alert>
+        <Alert
+          state="error"
+          buttonText="Ir al registro"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="visita el Centro de ayuda"
+        >
+          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
+          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
+          evitar problemas o contratiempos. Para mas informacion,
+        </Alert>
+        <Alert
+          state="warning"
+          buttonText="Ir al registro"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="visita el Centro de ayuda"
+          fullWidth
+        >
+          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
+          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
+          evitar problemas o contratiempos. Para mas informacion,
+        </Alert>
+      </ListComponent>
+      <MyTittle>Types de Alert</MyTittle>
+      <MyText>Tipos implementados en el Alert</MyText>
+      <Code
+        text={`interface IAlertProps {
+          children?: React.ReactChild | React.ReactChild[]
+          canDismiss?: boolean // Muestra el botón para cerrar
+          buttonText?: string // Texto del botón
+          buttonIcon?: React.ReactElement // Ícono del botón
+          buttonLink?: boolean // Boolean que determina si el botón es tipo link
+          fullWidth?: boolean // Ancho al 100% del contenedot
+          isFlash?: boolean // Para notificación flash
+          
+          onClick?: () => void // Funcion del boton estandard
+          // Estado que define color e ícono de la alerta
+          state: 'error' | 'info' | 'success' | 'warning'
+          m?: string // Margen
+        
+          // agrega el link al final del texto
+          endTextLink?: string
+          onClickLink?: () => void
+        }`}
+      />
     </>
   )
 }

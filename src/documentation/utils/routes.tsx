@@ -27,6 +27,7 @@ const FlashNotification = React.lazy(
   async () => await import('../pages/Organisms/FlashNotification')
 )
 const CourseList = React.lazy(async () => await import('../pages/Organisms/CourseList'))
+const ModalAlert = React.lazy(async () => await import('../pages/Organisms/ModalAlert'))
 
 /**
  * Rutas que tiene el proyecto con el respectivo link en la navegación.
@@ -147,5 +148,10 @@ export const routes: IRoute[] = [
     path: '/molecules/courselist',
     label: 'CourseList',
     component: <CourseList />,
+  },
+  {
+    path: '/molecules/modalalert',
+    label: 'ModalAlert',
+    component: <ModalAlert />,
   },
 ]

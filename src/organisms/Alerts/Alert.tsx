@@ -32,6 +32,8 @@ export function Alert({
   onClick,
   state,
   m,
+  endTextLink,
+  onClickLink,
 }: IAlertProps): JSX.Element {
   const [isMobile] = useMediaQuery('(max-width: 425px)')
 
@@ -93,7 +95,10 @@ export function Alert({
             lineHeight="28px"
             color={vars('colors-neutral-darkCharcoal')}
           >
-            {children}
+            <p>
+              {children}
+              {endTextLink && onClickLink && <BtnLink onClick={onClickLink}>{endTextLink}</BtnLink>}
+            </p>
           </Box>
           {buttonType === 'link' && <BtnLink onClick={handleClick}>{buttonText}</BtnLink>}
         </Box>
