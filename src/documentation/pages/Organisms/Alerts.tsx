@@ -89,64 +89,113 @@ export const ViewAlert = (): JSX.Element => {
         </Alert>
       </ListComponent>
 
-      <Code
-        text='<Alert state="info" buttonLink buttonText="Click me" onClick={() => {}}> Texto </Alert>
-<Alert state="success" buttonLink buttonText="Click me" onClick={() => {}}> Texto </Alert>
-<Alert state="error" buttonLink buttonText="Click me" onClick={() => {}}> Texto </Alert>
-<Alert state="warning" buttonLink buttonText="Click me" onClick={() => {}}> Texto </Alert>'
-      />
-      <MyTittle>Alertas con botón link y boton primario</MyTittle>
+      <MyTittle>Alertas con botón link y boton primario,</MyTittle>
       <MyText>
         Esta alerta recibe un state de alerta entre: <code>warning, error, success, info </code>.
-        Adicionalmente recibe un link al final del texto y un botón primario.
+        Adicionalmente recibe un link al final del texto y un botón primario. si se quiere que el
+        componente ocupe todo el ancho de la pantalla se debe agregar el <code>fullWidth</code>{' '}
+        mencionado en los types.
       </MyText>
       <ListComponent>
         <Alert
           state="info"
-          buttonText="Ir al registro"
+          buttonText="Register"
           onClick={() => {}}
           onClickLink={() => {}}
-          endTextLink="visita el Centro de ayuda"
+          endTextLink="Second link"
+          fullWidth
         >
-          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
-          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
-          evitar problemas o contratiempos. Para mas informacion,
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
         </Alert>
         <Alert
           state="success"
-          buttonText="Ir al registro"
+          buttonText="Register"
           onClick={() => {}}
           onClickLink={() => {}}
-          endTextLink="visita el Centro de ayuda"
+          endTextLink="Second link"
+          fullWidth
         >
-          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
-          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
-          evitar problemas o contratiempos. Para mas informacion,
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
         </Alert>
         <Alert
           state="error"
-          buttonText="Ir al registro"
+          buttonText="Register"
           onClick={() => {}}
           onClickLink={() => {}}
-          endTextLink="visita el Centro de ayuda"
+          endTextLink="Second link"
+          fullWidth
         >
-          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
-          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
-          evitar problemas o contratiempos. Para mas informacion,
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
         </Alert>
         <Alert
           state="warning"
-          buttonText="Ir al registro"
+          buttonText="Register"
           onClick={() => {}}
           onClickLink={() => {}}
-          endTextLink="visita el Centro de ayuda"
+          endTextLink="Second link"
           fullWidth
         >
-          <b>Para realizar tus evaluaciones monitoreadas debes registrarte en SMOWL.</b>. Es
-          importante que lo hagas <b>al menos 72 horas antes de tu primera evaluacion</b> para
-          evitar problemas o contratiempos. Para mas informacion,
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
         </Alert>
       </ListComponent>
+      <Code
+        text={`<Alert
+          state="info"
+          buttonText="Register"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="Second link"
+          fullWidth
+        >
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
+        </Alert>
+        <Alert
+          state="success"
+          buttonText="Register"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="Second link"
+          fullWidth
+        >
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
+        </Alert>
+        <Alert
+          state="error"
+          buttonText="Register"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="Second link"
+          fullWidth
+        >
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
+        </Alert>
+        <Alert
+          state="warning"
+          buttonText="Register"
+          onClick={() => {}}
+          onClickLink={() => {}}
+          endTextLink="Second link"
+          fullWidth
+        >
+          Lorem <b>ipsum dolor</b>, sit amet consectetur adipisicing elit. Quia nemo vel facere
+          itaque, molestiae expedita quidem <b>provident cumque voluptas accusamus</b> explicabo
+          iure aspernatur optio amet illo maxime, totam incidunt maiores.
+        </Alert>`}
+      />
       <MyTittle>Types de Alert</MyTittle>
       <MyText>Tipos implementados en el Alert</MyText>
       <Code
