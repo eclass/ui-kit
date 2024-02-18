@@ -1,3 +1,10 @@
+## [1.39.4](https://github.com/eclass/ui-kit/compare/v1.39.3...v1.39.4) (2024-02-18)
+
+
+### Bug Fixes
+
+* **modal:** detail modal with margin in topline ([#621](https://github.com/eclass/ui-kit/issues/621)) ([27049ae](https://github.com/eclass/ui-kit/commit/27049ae4ece7a5d592992dedc4794bc11a3761cd))
+
 ## [1.39.3](https://github.com/eclass/ui-kit/compare/v1.39.2...v1.39.3) (2024-02-18)
 
 
