@@ -95,10 +95,8 @@ export function Alert({
             lineHeight="28px"
             color={vars('colors-neutral-darkCharcoal')}
           >
-            <p>
-              {children}
-              {endTextLink && onClickLink && <BtnLink onClick={onClickLink}>{endTextLink}</BtnLink>}
-            </p>
+            {children}
+            {endTextLink && onClickLink && <BtnLink onClick={onClickLink}>{endTextLink}</BtnLink>}
           </Box>
           {buttonType === 'link' && <BtnLink onClick={handleClick}>{buttonText}</BtnLink>}
         </Box>
