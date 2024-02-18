@@ -1,3 +1,10 @@
+## [1.39.3](https://github.com/eclass/ui-kit/compare/v1.39.2...v1.39.3) (2024-02-18)
+
+
+### Bug Fixes
+
+* **modal:** correction problems with props modal general ([#620](https://github.com/eclass/ui-kit/issues/620)) ([ae20931](https://github.com/eclass/ui-kit/commit/ae20931358f9dbb2fb627bb87cce6dee1df00870))
+
 ## [1.39.2](https://github.com/eclass/ui-kit/compare/v1.39.1...v1.39.2) (2024-02-18)
 
 
