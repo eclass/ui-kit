@@ -1,3 +1,10 @@
+## [1.39.2](https://github.com/eclass/ui-kit/compare/v1.39.1...v1.39.2) (2024-02-18)
+
+
+### Bug Fixes
+
+* **modal:** correction resolution of modal ([#619](https://github.com/eclass/ui-kit/issues/619)) ([8d2894b](https://github.com/eclass/ui-kit/commit/8d2894b0b26ebcc456ca78236b8405b05683e1e0))
+
 ## [1.39.1](https://github.com/eclass/ui-kit/compare/v1.39.0...v1.39.1) (2024-02-18)
 
 
