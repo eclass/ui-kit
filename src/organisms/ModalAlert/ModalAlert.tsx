@@ -20,7 +20,6 @@ export function ModalAlert({
   description,
   optionsButton,
 }: ModalAlertProps): JSX.Element {
-  // const [isOpen, setIsOpen] = useState(showModal)
   const [isDesktop] = useMediaQuery('(min-width: 650px)')
 
   const showBorder = optionsButton.length > 1
