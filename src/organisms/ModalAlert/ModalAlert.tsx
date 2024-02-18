@@ -35,14 +35,16 @@ export function ModalAlert({
     >
       <ModalOverlay />
       <ModalContent>
-        <Box alignItems="center" justifyContent="center" textAlign="center" py={8}>
+        <Box alignItems="center" justifyContent="center" textAlign="center" py="2rem">
           <Box display="flex" justifyContent="center">
             {alertStates[typeAlert].icon}
           </Box>
-          <ModalHeader>{title}</ModalHeader>
-          <ModalBody>{description}</ModalBody>
+          <ModalHeader py="1rem">{title}</ModalHeader>
+          <ModalBody py="0.5rem" px="2rem">
+            {description}
+          </ModalBody>
         </Box>
-        <Divider colorScheme="E6E6E6" size="2" opacity="1" />
+        <Divider colorScheme="#E6E6E6" size="2" opacity="1" />
         <ModalFooter justifyContent="center" padding="0">
           {optionsButton.map((option, index) => {
             return (
@@ -50,7 +52,7 @@ export function ModalAlert({
                 key={index}
                 width="99%"
                 textAlign="center"
-                padding="4"
+                padding="1rem"
                 borderLeftWidth={showBorder && option.id === optionsButton[1].id ? '1px' : '0'}
                 borderLeftColor="#E6E6E6"
               >
