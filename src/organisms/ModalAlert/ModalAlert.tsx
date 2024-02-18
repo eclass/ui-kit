@@ -8,7 +8,6 @@ import {
   ModalBody,
   Box,
   useMediaQuery,
-  Divider,
 } from '@chakra-ui/react'
 import { alertStates } from '../Alerts/utils/alertStates'
 import { ModalAlertProps } from './types'
@@ -43,7 +42,14 @@ export function ModalAlert({
         bottom="0"
       />
       <ModalContent>
-        <Box alignItems="center" justifyContent="center" textAlign="center" py="2rem">
+        <Box
+          alignItems="center"
+          justifyContent="center"
+          textAlign="center"
+          py="2rem"
+          borderBottom="1px solid #E6E6E6"
+          marginY="3.75rem"
+        >
           <Box display="flex" justifyContent="center">
             {alertStates[typeAlert].icon}
           </Box>
@@ -52,7 +58,6 @@ export function ModalAlert({
             {description}
           </ModalBody>
         </Box>
-        <Divider colorScheme="#E6E6E6" size="2" opacity="1" margin="0" padding="0" />
         <ModalFooter justifyContent="center" padding="0">
           {optionsButton.map((option, index) => {
             return (
