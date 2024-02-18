@@ -32,8 +32,16 @@ export function ModalAlert({
       closeOnEsc={false}
       closeOnOverlayClick={false}
       size={isDesktop ? 'xl' : 'sm'}
+      isCentered={false}
     >
-      <ModalOverlay />
+      <ModalOverlay
+        bg="rgba(0, 0, 0, 0.5)"
+        position="fixed"
+        top="0"
+        left="0"
+        right="0"
+        bottom="0"
+      />
       <ModalContent>
         <Box alignItems="center" justifyContent="center" textAlign="center" py="2rem">
           <Box display="flex" justifyContent="center">
@@ -44,7 +52,7 @@ export function ModalAlert({
             {description}
           </ModalBody>
         </Box>
-        <Divider colorScheme="#E6E6E6" size="2" opacity="1" />
+        <Divider colorScheme="#E6E6E6" size="2" opacity="1" margin="0" padding="0" />
         <ModalFooter justifyContent="center" padding="0">
           {optionsButton.map((option, index) => {
             return (
