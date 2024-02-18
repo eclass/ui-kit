@@ -1,3 +1,10 @@
+## [1.39.5](https://github.com/eclass/ui-kit/compare/v1.39.4...v1.39.5) (2024-02-18)
+
+
+### Bug Fixes
+
+* **modal:** update changes correction css ([#622](https://github.com/eclass/ui-kit/issues/622)) ([842ce38](https://github.com/eclass/ui-kit/commit/842ce381303d4aad759b02b52e64e5f5aa7af6d8))
+
 ## [1.39.4](https://github.com/eclass/ui-kit/compare/v1.39.3...v1.39.4) (2024-02-18)
 
 
