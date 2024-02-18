@@ -1,3 +1,10 @@
+## [1.39.1](https://github.com/eclass/ui-kit/compare/v1.39.0...v1.39.1) (2024-02-18)
+
+
+### Bug Fixes
+
+* **proctoring:** correction paragraph ([#618](https://github.com/eclass/ui-kit/issues/618)) ([5c98213](https://github.com/eclass/ui-kit/commit/5c982138f85bfb2a79052a48febf0e8594f43e45))
+
 # [1.39.0](https://github.com/eclass/ui-kit/compare/v1.38.0...v1.39.0) (2024-02-14)
 
 
