@@ -1,3 +1,10 @@
+## [1.39.6](https://github.com/eclass/ui-kit/compare/v1.39.5...v1.39.6) (2024-02-19)
+
+
+### Bug Fixes
+
+* **modal:** details of get type ([#623](https://github.com/eclass/ui-kit/issues/623)) ([4bf25cf](https://github.com/eclass/ui-kit/commit/4bf25cf3ee14447ab6ed37a6a08060bff6664fe4))
+
 ## [1.39.5](https://github.com/eclass/ui-kit/compare/v1.39.4...v1.39.5) (2024-02-18)
 
 
