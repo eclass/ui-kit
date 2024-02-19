@@ -66,8 +66,9 @@ export function ModalAlert({
                 padding="1rem"
                 borderLeftWidth={showBorder && option.id === optionsButton[1].id ? '1px' : '0'}
                 borderLeftColor="#E6E6E6"
+                onClick={() => option.action()}
               >
-                <BtnLink textDecorationLine={false} fontSize="1rem" onClick={() => option.action()}>
+                <BtnLink textDecorationLine={false} fontSize="1rem">
                   {option.label}
                 </BtnLink>
               </Box>
