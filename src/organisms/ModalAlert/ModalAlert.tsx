@@ -22,6 +22,12 @@ export function ModalAlert({
 }: ModalAlertProps): JSX.Element {
   const [isDesktop] = useMediaQuery('(min-width: 650px)')
 
+  const modalStyles = {
+    content: {
+      top: '3.75rem',
+    },
+  }
+
   const showBorder = optionsButton.length > 1
   return (
     <Modal
@@ -39,8 +45,9 @@ export function ModalAlert({
         left="0"
         right="0"
         bottom="0"
+        zIndex="998"
       />
-      <ModalContent>
+      <ModalContent zIndex="999" sx={modalStyles.content}>
         <Box
           alignItems="center"
           justifyContent="center"
