@@ -47,7 +47,6 @@ export function ModalAlert({
           textAlign="center"
           py="2rem"
           borderBottom="1px solid #E6E6E6"
-          marginY="3.75rem"
         >
           <Box display="flex" justifyContent="center">
             {alertStates[typeAlert].icon}
