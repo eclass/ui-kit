@@ -1,3 +1,10 @@
+## [1.39.7](https://github.com/eclass/ui-kit/compare/v1.39.6...v1.39.7) (2024-02-19)
+
+
+### Bug Fixes
+
+* **modal:** details of widh button modal ([#624](https://github.com/eclass/ui-kit/issues/624)) ([4514650](https://github.com/eclass/ui-kit/commit/4514650031ad95a16ca46d10b76eda994fa0151c))
+
 ## [1.39.6](https://github.com/eclass/ui-kit/compare/v1.39.5...v1.39.6) (2024-02-19)
 
 
