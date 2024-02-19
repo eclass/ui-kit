@@ -1,3 +1,10 @@
+## [1.39.9](https://github.com/eclass/ui-kit/compare/v1.39.8...v1.39.9) (2024-02-19)
+
+
+### Bug Fixes
+
+* **modal:** correction centererd and top position ([#626](https://github.com/eclass/ui-kit/issues/626)) ([5f708a2](https://github.com/eclass/ui-kit/commit/5f708a272bc12f293de79bca9a05d4cd8fe54d3f))
+
 ## [1.39.8](https://github.com/eclass/ui-kit/compare/v1.39.7...v1.39.8) (2024-02-19)
 
 
