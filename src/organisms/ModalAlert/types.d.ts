@@ -13,6 +13,9 @@ export interface ModalAlertProps {
 
   /** Opciones del boton */
   optionsButton: optionsButton[]
+
+  /** Posición del modal */
+  top?: string
 }
 
 interface optionsButton {
