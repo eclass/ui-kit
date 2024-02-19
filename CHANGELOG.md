@@ -1,3 +1,10 @@
+## [1.39.8](https://github.com/eclass/ui-kit/compare/v1.39.7...v1.39.8) (2024-02-19)
+
+
+### Bug Fixes
+
+* **modal:** se intenta justar nuevamente el centrado del modal ([#625](https://github.com/eclass/ui-kit/issues/625)) ([4bf230a](https://github.com/eclass/ui-kit/commit/4bf230a4d34e0166a3277664098c9009c166ff53))
+
 ## [1.39.7](https://github.com/eclass/ui-kit/compare/v1.39.6...v1.39.7) (2024-02-19)
 
 
