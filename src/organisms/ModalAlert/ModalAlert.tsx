@@ -19,18 +19,20 @@ export function ModalAlert({
   title,
   description,
   optionsButton,
+  top,
 }: ModalAlertProps): JSX.Element {
   const [isDesktop] = useMediaQuery('(min-width: 650px)')
 
   const modalStyles = {
     content: {
-      top: '3.75rem',
+      top: top,
     },
   }
 
   const showBorder = optionsButton.length > 1
   return (
     <Modal
+      id="modal-alert"
       isOpen={showModal}
       onClose={() => {}}
       closeOnEsc={false}

@@ -27,6 +27,7 @@ export interface ModalAlertProps {
   title?: string // Titulo del modal
   description?: string // Mensaje del modal
   optionsButton: optionsButton[] // Boton del modal en array
+  top?: string // Posición del modal
 }
 // Propiedades del boton
 interface optionsButton {
