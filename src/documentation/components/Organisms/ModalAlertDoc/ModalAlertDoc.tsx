@@ -7,7 +7,7 @@ export function ModalAlertDoc(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false)
   const optionsModal: ModalAlertProps = {
     showModal: isOpen,
-    typeAlert: 'info',
+    typeAlert: 'success',
     title: '¿Seguro que deseas borrar esta pregunta?',
     description: 'Por favor escoge otro horario.',
     optionsButton: [
