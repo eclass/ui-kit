@@ -1,3 +1,10 @@
+# [1.40.0](https://github.com/eclass/ui-kit/compare/v1.39.9...v1.40.0) (2024-02-27)
+
+
+### Features
+
+* **icon:** se agregan los iconos de alerta con fondo ([#627](https://github.com/eclass/ui-kit/issues/627)) ([9c98c0b](https://github.com/eclass/ui-kit/commit/9c98c0b2460d0daa41e4e9654b9e5f52804bbe4c))
+
 ## [1.39.9](https://github.com/eclass/ui-kit/compare/v1.39.8...v1.39.9) (2024-02-19)
 
 
