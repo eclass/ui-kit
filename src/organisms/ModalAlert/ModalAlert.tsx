@@ -9,7 +9,7 @@ import {
   Box,
   useMediaQuery,
 } from '@chakra-ui/react'
-import { alertStates } from '../Alerts/utils/alertStates'
+import { alertColorStates } from '../Alerts/utils/alertStates'
 import { ModalAlertProps } from './types'
 import { BtnLink } from '@/molecules'
 
@@ -58,7 +58,7 @@ export function ModalAlert({
           borderBottom="1px solid #E6E6E6"
         >
           <Box display="flex" justifyContent="center">
-            {alertStates[typeAlert].icon}
+            {alertColorStates[typeAlert].icon}
           </Box>
           <ModalHeader py="1rem">{title}</ModalHeader>
           <ModalBody py="0.5rem" px="2rem">
