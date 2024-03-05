@@ -9,7 +9,7 @@ export interface ModalAlertProps {
   title?: string
 
   /** Mensaje del modal */
-  description?: string
+  description?: string | any
 
   /** Opciones del boton */
   optionsButton: optionsButton[]
