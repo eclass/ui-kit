@@ -73,6 +73,14 @@ export function Alert({
           '.linkButton': {
             fontSize: '16px',
           },
+          a: {
+            fontWeight: '500',
+            color: vars('colors-main-deepSkyBlue'),
+            textDecoration: 'underline',
+          },
+          'a:hover': {
+            color: vars('colors-neutral-darkCharcoal'),
+          },
         }}
       >
         <Box
