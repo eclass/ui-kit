@@ -1,3 +1,10 @@
+## [1.40.3](https://github.com/eclass/ui-kit/compare/v1.40.2...v1.40.3) (2024-03-05)
+
+
+### Bug Fixes
+
+* **test:** add modal info test responsive ([#630](https://github.com/eclass/ui-kit/issues/630)) ([7940c68](https://github.com/eclass/ui-kit/commit/7940c689b8ab95d0b93d3de280fddee8fcde6a6f))
+
 ## [1.40.2](https://github.com/eclass/ui-kit/compare/v1.40.1...v1.40.2) (2024-03-05)
 
 
