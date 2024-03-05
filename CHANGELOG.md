@@ -1,3 +1,10 @@
+## [1.40.1](https://github.com/eclass/ui-kit/compare/v1.40.0...v1.40.1) (2024-03-05)
+
+
+### Bug Fixes
+
+* **alert:** se agrega css forzado para links a ([#628](https://github.com/eclass/ui-kit/issues/628)) ([9c92021](https://github.com/eclass/ui-kit/commit/9c920219265dfa776568d6d6f9d6ee778bc2c6e6))
+
 # [1.40.0](https://github.com/eclass/ui-kit/compare/v1.39.9...v1.40.0) (2024-02-27)
 
 
