@@ -1,3 +1,10 @@
+## [1.40.2](https://github.com/eclass/ui-kit/compare/v1.40.1...v1.40.2) (2024-03-05)
+
+
+### Bug Fixes
+
+* **modal:** type of description add any ([#629](https://github.com/eclass/ui-kit/issues/629)) ([8b40e3f](https://github.com/eclass/ui-kit/commit/8b40e3fb2b24e329ac5eb85ed30bfebf7f8882a2))
+
 ## [1.40.1](https://github.com/eclass/ui-kit/compare/v1.40.0...v1.40.1) (2024-03-05)
 
 
