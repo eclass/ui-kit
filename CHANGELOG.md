@@ -1,3 +1,10 @@
+# [1.41.0](https://github.com/eclass/ui-kit/compare/v1.40.3...v1.41.0) (2024-04-04)
+
+
+### Features
+
+* **molecules:** props sx a newtooltip ([#631](https://github.com/eclass/ui-kit/issues/631)) ([4bbf263](https://github.com/eclass/ui-kit/commit/4bbf263c8755515e9107fe1263fb004193e354eb))
+
 ## [1.40.3](https://github.com/eclass/ui-kit/compare/v1.40.2...v1.40.3) (2024-03-05)
 
 
