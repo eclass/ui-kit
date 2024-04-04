@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Tooltip, PlacementWithLogical } from '@chakra-ui/react'
+import { Tooltip, PlacementWithLogical, CSSObject } from '@chakra-ui/react'
 import { vars } from '@/theme'
 
 interface TooltipProps {
@@ -10,6 +10,7 @@ interface TooltipProps {
   maxWidth?: string
   placement?: PlacementWithLogical
   isOpen?: boolean | undefined
+  sx?: CSSObject | undefined
 }
 
 export const NewTooltip: FC<TooltipProps> = ({
@@ -21,6 +22,7 @@ export const NewTooltip: FC<TooltipProps> = ({
   maxWidth = '200px',
   placement = 'bottom',
   isOpen,
+  sx,
 }) => {
   return (
     <Tooltip
@@ -37,6 +39,7 @@ export const NewTooltip: FC<TooltipProps> = ({
         '.chakra-tooltip__arrow': {
           bg: `${vars('colors-neutral-darkCharcoal')} !important`,
         },
+        ...sx,
       }}
       className={className}
       closeOnClick
