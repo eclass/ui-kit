@@ -1,3 +1,10 @@
+## [1.41.3](https://github.com/eclass/ui-kit/compare/v1.41.2...v1.41.3) (2024-04-08)
+
+
+### Bug Fixes
+
+* **molecules:** nuevo deploy ([#633](https://github.com/eclass/ui-kit/issues/633)) ([0703e97](https://github.com/eclass/ui-kit/commit/0703e974d3ce668e29038e7fb186ca72088ec462))
+
 ## [1.41.2](https://github.com/eclass/ui-kit/compare/v1.41.1...v1.41.2) (2024-04-08)
 
 
