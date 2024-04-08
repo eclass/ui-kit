@@ -1,3 +1,10 @@
+## [1.41.2](https://github.com/eclass/ui-kit/compare/v1.41.1...v1.41.2) (2024-04-08)
+
+
+### Bug Fixes
+
+* **deploy:** muestro documentacion ([b95ffd6](https://github.com/eclass/ui-kit/commit/b95ffd6ce41dad69fe5395034b88d16e0d699952))
+
 ## [1.41.1](https://github.com/eclass/ui-kit/compare/v1.41.0...v1.41.1) (2024-04-08)
 
 
