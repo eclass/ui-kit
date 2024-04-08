@@ -35,7 +35,6 @@ export const NewTooltip: FC<TooltipProps> = ({
         fontWeight: '400',
         maxWidth: maxWidth,
         padding: '8px',
-
         '.chakra-tooltip__arrow': {
           bg: `${vars('colors-neutral-darkCharcoal')} !important`,
         },
