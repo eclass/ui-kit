@@ -1,3 +1,10 @@
+## [1.41.1](https://github.com/eclass/ui-kit/compare/v1.41.0...v1.41.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* **molecule:** btn tertiary icon ([#632](https://github.com/eclass/ui-kit/issues/632)) ([527a542](https://github.com/eclass/ui-kit/commit/527a54268ad55d778105f25cc9d8d0bd7e0626c0))
+
 # [1.41.0](https://github.com/eclass/ui-kit/compare/v1.40.3...v1.41.0) (2024-04-04)
 
 
