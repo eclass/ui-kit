@@ -74,10 +74,14 @@ export function BtnTertiary({
     noIcon: <></>,
   }
 
-  let icon = btnIcons[iconStatus] ?? btnIcons.multimedia
+  let icon
+  if (btnIcons[iconStatus] && iconStatus !== 'noIcon') {
+    icon = btnIcons[iconStatus]
+  }
   if (iconCustom) {
     icon = iconCustom
   }
+
   const rIcon = rightIcon ? icon : undefined
   const lIcon = !rightIcon ? icon : undefined
 
@@ -95,6 +99,7 @@ export function BtnTertiary({
       lineHeight="16px"
       textDecorationLine="underline"
       borderRadius="12px"
+      gap="0.5rem"
       paddingTop={vars('space-xxs')}
       paddingBottom={vars('space-xxs')}
       paddingLeft={vars('space-xs')}
@@ -120,21 +125,8 @@ export function BtnTertiary({
         bg: 'transparent',
       }}
       sx={{
-        '&:hover': {
-          'svg path': {
-            fill: `${blue}`,
-          },
-          '@media (hover: none)': {
-            color: `${gray}`,
-            'svg path': {
-              fill: colorIcon,
-            },
-          },
-        },
-        '&:focus': {
-          'svg path': {
-            fill: activeWhenPress ? `${blue}` : '',
-          },
+        '>span': {
+          mr: 0,
         },
       }}
     >
