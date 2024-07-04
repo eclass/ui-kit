@@ -7,7 +7,23 @@ import { Btn, propsBaseBtns } from './Btn'
  *
  * @example <BtnPrimary>Lorem</BtnPrimary>
  */
+
+type XOR<T, U> = T | U extends object
+  ? (T extends U ? never : T) | (U extends T ? never : U)
+  : T | U
+interface ButtonWithTextProps extends propsBaseBtns {
+  children: React.ReactNode
+  ariaLabel?: string
+}
+
+interface ButtonWithoutTextProps extends propsBaseBtns {
+  children?: React.ReactNode
+  ariaLabel: string
+}
+
+type PrimaryButtonProps = XOR<ButtonWithTextProps, ButtonWithoutTextProps>
 export function BtnPrimary({
+  ariaLabel,
   children,
   disabled = false,
   isFullWidth = false,
@@ -20,9 +36,10 @@ export function BtnPrimary({
   type = 'button',
   tabIndex,
   id,
-}: propsBaseBtns): JSX.Element {
+}: PrimaryButtonProps): JSX.Element {
   return (
     <Btn
+      ariaLabel={ariaLabel}
       id={id}
       disabled={disabled}
       isFullWidth={isFullWidth}

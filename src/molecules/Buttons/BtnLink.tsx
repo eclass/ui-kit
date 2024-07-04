@@ -2,25 +2,29 @@ import { vars } from '@theme'
 import { Box } from '@chakra-ui/react'
 
 export interface props {
-  children?: React.ReactNode
-  m?: string
   as?: 'button' | 'a'
-  onClick?: (e: React.MouseEvent<HTMLElement>) => void
-  id?: string
-  href?: string
-  textDecorationLine?: boolean
+  ariaLabel?: string
+  children?: React.ReactNode
   fontSize?: string | '0.875rem'
+  href?: string
+  id?: string
+  m?: string
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void
+  tabIndex?: number
+  textDecorationLine?: boolean
 }
 
 export function BtnLink({
+  as = 'button',
+  ariaLabel,
   children,
+  fontSize = '0.875rem',
+  href = '',
+  id,
   m = '0',
   onClick,
-  id,
-  as = 'button',
-  href = '',
+  tabIndex,
   textDecorationLine = true,
-  fontSize = '0.875rem',
 }: props): JSX.Element {
   const typeButton = {
     button: {
@@ -35,19 +39,23 @@ export function BtnLink({
   return (
     <Box
       as={as}
+      aria-label={ariaLabel}
       id={id}
+      role="button"
       backgroundColor="transparent"
       borderStyle="none"
       className="linkButton"
-      width="fit-content"
-      padding=".25em"
+      color={vars('colors-main-deepSkyBlue')}
       fontFamily="Roboto"
       fontStyle="normal"
       fontWeight="500"
       fontSize={fontSize}
       lineHeight="1rem"
+      onClick={onClick}
+      padding=".25em"
+      tabIndex={tabIndex}
       textDecorationLine={textDecorationLine ? 'underline' : 'none'}
-      color={vars('colors-main-deepSkyBlue')}
+      width="fit-content"
       m={m}
       _hover={{
         color: vars('colors-neutral-darkCharcoal'),

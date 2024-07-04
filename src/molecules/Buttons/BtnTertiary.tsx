@@ -13,7 +13,13 @@ import {
   Download,
 } from '@/atoms/Icons'
 
+type XOR<T, U> = T | U extends object
+  ? (T extends U ? never : T) | (U extends T ? never : U)
+  : T | U
 export interface propsTertiaryBtn {
+  activeWhenPress?: boolean
+  id?: string
+  iconCustom?: JSX.Element
   iconStatus?:
     | 'answer'
     | 'ahead'
@@ -26,35 +32,44 @@ export interface propsTertiaryBtn {
     | 'record'
     | 'download'
     | 'noIcon'
-  children?: React.ReactNode
-  rightIcon?: boolean
-  iconCustom?: JSX.Element
-  withoutColor?: boolean
   m?: string
-  type?: 'button' | 'submit' | 'reset'
-  tabIndex?: number
-  id?: string
-  activeWhenPress?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   onMouseEnter?: (e: React.MouseEvent<HTMLElement>) => void
   onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void
+  rightIcon?: boolean
+  type?: 'button' | 'submit' | 'reset'
+  tabIndex?: number
+  withoutColor?: boolean
 }
 
+interface ButtonWithTextProps extends propsTertiaryBtn {
+  children: React.ReactNode
+  ariaLabel?: string
+}
+
+interface ButtonWithoutTextProps extends propsTertiaryBtn {
+  children?: React.ReactNode
+  ariaLabel: string
+}
+
+type ButtonProps = XOR<ButtonWithTextProps, ButtonWithoutTextProps>
+
 export function BtnTertiary({
+  ariaLabel,
+  activeWhenPress = false,
   children,
+  id,
   iconStatus = 'multimedia',
   iconCustom,
-  rightIcon,
-  withoutColor = false,
   m = '0',
-  type = 'button',
-  tabIndex,
-  id,
-  activeWhenPress = false,
   onClick,
   onMouseEnter,
   onMouseLeave,
-}: propsTertiaryBtn): JSX.Element {
+  rightIcon,
+  type = 'button',
+  tabIndex,
+  withoutColor = false,
+}: ButtonProps): JSX.Element {
   const gray = vars('colors-neutral-gray')
   const blue = vars('colors-main-deepSkyBlue')
   const white = vars('colors-neutral-white')
@@ -87,30 +102,32 @@ export function BtnTertiary({
 
   return (
     <Button
+      aria-label={ariaLabel}
       id={id}
+      role="button"
       type={type}
       tabIndex={tabIndex}
-      height="24px"
       background="transparent"
+      borderRadius="12px"
+      color={gray}
       fontFamily="Roboto"
       fontStyle="normal"
       fontWeight="500"
       fontSize="14px"
-      lineHeight="16px"
-      textDecorationLine="underline"
-      borderRadius="12px"
       gap="0.5rem"
-      paddingTop={vars('space-xxs')}
-      paddingBottom={vars('space-xxs')}
-      paddingLeft={vars('space-xs')}
-      paddingRight={vars('space-xs')}
-      color={gray}
-      rightIcon={rIcon}
+      height="24px"
+      lineHeight="16px"
       leftIcon={lIcon}
+      rightIcon={rIcon}
       m={m}
       onClick={onClick}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      paddingTop={vars('space-xxs')}
+      paddingBottom={vars('space-xxs')}
+      paddingLeft={vars('space-xs')}
+      paddingRight={vars('space-xs')}
+      textDecorationLine="underline"
       _hover={{
         color: `${blue}`,
       }}

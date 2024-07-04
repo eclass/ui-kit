@@ -8,7 +8,23 @@ import { vars } from '@theme'
  *
  * @example <BtnSecondary>Lorem</BtnSecondary>
  */
+
+type XOR<T, U> = T | U extends object
+  ? (T extends U ? never : T) | (U extends T ? never : U)
+  : T | U
+interface ButtonWithTextProps extends propsBaseBtns {
+  children: React.ReactNode
+  ariaLabel?: string
+}
+
+interface ButtonWithoutTextProps extends propsBaseBtns {
+  children?: React.ReactNode
+  ariaLabel: string
+}
+
+type SecondaryButtonProps = XOR<ButtonWithTextProps, ButtonWithoutTextProps>
 export function BtnSecondary({
+  ariaLabel,
   children,
   disabled = false,
   isFullWidth = false,
@@ -21,18 +37,19 @@ export function BtnSecondary({
   type = 'button',
   tabIndex,
   id,
-}: propsBaseBtns): JSX.Element {
+}: SecondaryButtonProps): JSX.Element {
   return (
     <Btn
+      ariaLabel={ariaLabel}
       id={id}
       bg={{
         main: vars('colors-main-veryLightBlue'),
         hover: vars('colors-main-linkWater'),
       }}
-      fillLoader={vars('colors-main-deepSkyBlue')}
       borderColorActive={[vars('colors-main-deepSkyBlue'), vars('colors-neutral-white')]}
       color={vars('colors-main-deepSkyBlue')}
       disabled={disabled}
+      fillLoader={vars('colors-main-deepSkyBlue')}
       isFullWidth={isFullWidth}
       isLoading={isLoading}
       leftIcon={leftIcon}
