@@ -10,6 +10,7 @@ interface colorScheme {
 }
 
 export interface propsBaseBtns {
+  ariaLabel?: string
   children?: React.ReactNode
   disabled?: boolean
   isFullWidth?: boolean
@@ -42,24 +43,25 @@ interface props extends propsBaseBtns {
  * @example <Btn>Lorem</Btn>
  */
 export function Btn({
+  ariaLabel,
   bg,
   borderColorActive = [vars('colors-main-deepSkyBlue'), vars('colors-neutral-white')],
   children,
   color = vars('colors-neutral-white'),
   disabled = false,
   fillLoader = vars('colors-neutral-white'),
+  id,
   isFullWidth = false,
+  isLoading = false,
   leftIcon,
   m = '0',
-  isLoading = false,
   onClick,
   rightIcon,
   rounded = false,
   size = 'regular',
   touchDark = false,
   type = 'button',
-  tabIndex,
-  id,
+  tabIndex = 0,
 }: props): JSX.Element {
   let showChildren = children ?? null
   if (!children && !rightIcon && !leftIcon) {
@@ -84,28 +86,29 @@ export function Btn({
     >
       <Ripples color={touchColor}>
         <Button
+          aria-label={ariaLabel}
           id={id}
-          fontWeight="500"
-          fontSize={size === 'regular' ? 'medium' : 'small'}
+          role="button"
           bg={colorMain}
-          size={size === 'regular' ? 'md' : 'sm'}
           borderRadius={borderRadius}
           color={color}
           className={onlyIcon}
           disabled={disabled && isLoading ? false : disabled}
+          fontWeight="500"
+          fontSize={size === 'regular' ? 'medium' : 'small'}
           height="auto"
-          minHeight={size === 'regular' ? '2.813rem' : '2rem'}
-          minWidth={size === 'regular' ? '9rem' : 'auto'}
-          lineHeight="initial"
           iconSpacing={vars('space-xs')}
           isActive={false}
           isLoading={isLoading}
+          isFullWidth={isFullWidth}
+          lineHeight="initial"
           leftIcon={leftIcon}
+          minHeight={size === 'regular' ? '2.813rem' : '2rem'}
+          minWidth={size === 'regular' ? '9rem' : 'auto'}
           onClick={(e: React.MouseEvent<HTMLElement>) => {
             !isLoading && !disabled && onClick?.(e)
           }}
-          type={type}
-          tabIndex={tabIndex}
+          position="relative"
           paddingTop={
             size === 'regular' ? paddingTopBottom : onlyIcon ? vars('space-xs') : vars('space-xxs')
           }
@@ -114,10 +117,11 @@ export function Btn({
           }
           paddingLeft={size === 'regular' ? vars('space-s') : vars('space-xs')}
           paddingRight={size === 'regular' ? vars('space-s') : vars('space-xs')}
-          position="relative"
-          isFullWidth={isFullWidth}
           rightIcon={rightIcon}
+          type={type}
+          size={size === 'regular' ? 'md' : 'sm'}
           spinner={<Loader fill={fillLoader} />}
+          tabIndex={disabled || isLoading ? -1 : tabIndex}
           _active={{
             bg: bg?.main ?? vars('colors-main-azureRadiance'),
           }}

@@ -25,7 +25,7 @@ export function Base({
   title,
 }: IconProps): JSX.Element {
   return (
-    <IconChakra w={w} h={h} viewBox={viewBox} color={color} m={m}>
+    <IconChakra w={w} h={h} viewBox={viewBox} color={color} m={m} aria-label=" " aria-hidden>
       <title>icon{title && `-${title}`}</title>
       {children}
     </IconChakra>
