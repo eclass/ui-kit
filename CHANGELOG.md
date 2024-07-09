@@ -1,3 +1,10 @@
+# [1.42.0](https://github.com/eclass/ui-kit/compare/v1.41.3...v1.42.0) (2024-07-09)
+
+
+### Features
+
+* **PDYE-809:** implamentacion, prueba y revision de atributos de accesibilidad en componentes tipo boton ([#635](https://github.com/eclass/ui-kit/issues/635)) ([c421c59](https://github.com/eclass/ui-kit/commit/c421c59f4feefc7373023f34b013b7e41bbd8902))
+
 ## [1.41.3](https://github.com/eclass/ui-kit/compare/v1.41.2...v1.41.3) (2024-04-08)
 
 
