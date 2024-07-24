@@ -19,6 +19,7 @@ export interface propsBaseBtns {
   isLoading?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   rightIcon?: React.ReactElement
+  role?: 'button' | 'link'
   size?: 'regular' | 'small'
   type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
@@ -57,6 +58,7 @@ export function Btn({
   m = '0',
   onClick,
   rightIcon,
+  role = 'button',
   rounded = false,
   size = 'regular',
   touchDark = false,
@@ -88,7 +90,7 @@ export function Btn({
         <Button
           aria-label={ariaLabel}
           id={id}
-          role="button"
+          role={role}
           bg={colorMain}
           borderRadius={borderRadius}
           color={color}

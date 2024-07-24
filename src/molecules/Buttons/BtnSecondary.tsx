@@ -33,6 +33,7 @@ export function BtnSecondary({
   isLoading = false,
   onClick,
   rightIcon,
+  role = 'button',
   size = 'regular',
   type = 'button',
   tabIndex,
@@ -56,6 +57,7 @@ export function BtnSecondary({
       m={m}
       onClick={onClick}
       rightIcon={rightIcon}
+      role={role}
       size={size}
       touchDark
       type={type}
