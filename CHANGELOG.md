@@ -1,3 +1,10 @@
+## [1.42.1](https://github.com/eclass/ui-kit/compare/v1.42.0...v1.42.1) (2024-07-24)
+
+
+### Bug Fixes
+
+* **PDYE-849:** role botones ([#636](https://github.com/eclass/ui-kit/issues/636)) ([8d055e1](https://github.com/eclass/ui-kit/commit/8d055e1af450b0ae926e437ab3cab3e4e9f6e6cc))
+
 # [1.42.0](https://github.com/eclass/ui-kit/compare/v1.41.3...v1.42.0) (2024-07-09)
 
 
