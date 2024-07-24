@@ -37,6 +37,7 @@ export interface propsTertiaryBtn {
   onMouseEnter?: (e: React.MouseEvent<HTMLElement>) => void
   onMouseLeave?: (e: React.MouseEvent<HTMLElement>) => void
   rightIcon?: boolean
+  role?: 'button' | 'link'
   type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
   withoutColor?: boolean
@@ -66,6 +67,7 @@ export function BtnTertiary({
   onMouseEnter,
   onMouseLeave,
   rightIcon,
+  role = 'button',
   type = 'button',
   tabIndex,
   withoutColor = false,
@@ -104,7 +106,7 @@ export function BtnTertiary({
     <Button
       aria-label={ariaLabel}
       id={id}
-      role="button"
+      role={role}
       type={type}
       tabIndex={tabIndex}
       background="transparent"

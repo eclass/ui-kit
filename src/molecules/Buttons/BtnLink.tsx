@@ -10,12 +10,13 @@ export interface props {
   id?: string
   m?: string
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
+  role?: 'button' | 'link'
   tabIndex?: number
   textDecorationLine?: boolean
 }
 
 export function BtnLink({
-  as = 'button',
+  as = 'a',
   ariaLabel,
   children,
   fontSize = '0.875rem',
@@ -23,6 +24,7 @@ export function BtnLink({
   id,
   m = '0',
   onClick,
+  role = 'link',
   tabIndex,
   textDecorationLine = true,
 }: props): JSX.Element {
@@ -41,7 +43,7 @@ export function BtnLink({
       as={as}
       aria-label={ariaLabel}
       id={id}
-      role="button"
+      role={role}
       backgroundColor="transparent"
       borderStyle="none"
       className="linkButton"

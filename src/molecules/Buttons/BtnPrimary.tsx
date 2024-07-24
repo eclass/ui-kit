@@ -32,6 +32,7 @@ export function BtnPrimary({
   isLoading = false,
   onClick,
   rightIcon,
+  role = 'button',
   size = 'regular',
   type = 'button',
   tabIndex,
@@ -48,6 +49,7 @@ export function BtnPrimary({
       m={m}
       onClick={onClick}
       rightIcon={rightIcon}
+      role={role}
       size={size}
       type={type}
       tabIndex={tabIndex}
