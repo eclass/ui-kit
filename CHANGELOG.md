@@ -1,3 +1,10 @@
+# [1.43.0](https://github.com/eclass/ui-kit/compare/v1.42.1...v1.43.0) (2024-10-14)
+
+
+### Features
+
+* **PCV-1095:** se agregan los recursos ([#637](https://github.com/eclass/ui-kit/issues/637)) ([6787307](https://github.com/eclass/ui-kit/commit/678730798af56d5394a9e280ef01ec83d2950c8f))
+
 ## [1.42.1](https://github.com/eclass/ui-kit/compare/v1.42.0...v1.42.1) (2024-07-24)
 
 
