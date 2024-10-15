@@ -1,3 +1,10 @@
+# [1.44.0](https://github.com/eclass/ui-kit/compare/v1.43.0...v1.44.0) (2024-10-15)
+
+
+### Features
+
+* **PCV-1094:** se agrega la caja eventos ([#638](https://github.com/eclass/ui-kit/issues/638)) ([7885994](https://github.com/eclass/ui-kit/commit/7885994789b60033ac96fdf82eb78bb259dd48fe))
+
 # [1.43.0](https://github.com/eclass/ui-kit/compare/v1.42.1...v1.43.0) (2024-10-14)
 
 
