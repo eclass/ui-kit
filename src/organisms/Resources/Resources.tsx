@@ -11,7 +11,7 @@ interface ResourcesProps {
   resourceDetail: string
   resourceTextDownload: string
   resourceLink: string
-  resourceNameFile: string
+  targetBlank?: boolean
 }
 
 export const Resources: FC<ResourcesProps> = ({
@@ -21,63 +21,71 @@ export const Resources: FC<ResourcesProps> = ({
   resourceDetail,
   resourceTextDownload,
   resourceLink,
-  resourceNameFile,
+  targetBlank,
 }) => {
   return (
-    <Box
-      width="285px"
-      height="147px"
-      borderRadius="8px"
-      border="1px"
-      borderColor={vars('colors-neutral-platinum')}
-      justifyContent="center"
-      textAlign="center"
-      display="grid"
-      gap="8px"
-      padding={4}
+    <Link
+      href={resourceLink}
+      target={targetBlank ? '_blank' : '_self'}
+      rel={targetBlank ? 'noopener noreferrer' : undefined}
+      _hover={{ textDecoration: 'none' }}
     >
-      <Box>
-        <Icons type={resourceType} />
+      <Box
+        width="285px"
+        height="147px"
+        borderRadius="8px"
+        border="1px"
+        borderColor={vars('colors-neutral-platinum')}
+        justifyContent="center"
+        textAlign="center"
+        display="grid"
+        gap="8px"
+        padding={4}
+        transition="box-shadow 0.3s ease-in-out"
+        _hover={{ shadow: 'sm' }}
+        cursor="pointer"
+      >
+        <Box>
+          <Icons type={resourceType} />
+        </Box>
+        <Box>
+          <Text
+            fontFamily="Roboto"
+            fontWeight="700"
+            lineHeight="21px"
+            fontSize="16px"
+            color="#555555"
+          >
+            {resourceTitle}
+          </Text>
+        </Box>
+        <Box>
+          <Text
+            fontFamily="Roboto"
+            fontWeight="400"
+            lineHeight="14px"
+            fontSize="12px"
+            color="#555555"
+          >
+            {resourceDetail}
+          </Text>
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center">
+          <Text
+            fontFamily="Roboto"
+            fontWeight="500"
+            fontSize="14px"
+            lineHeight="16px"
+            color={vars('colors-neutral-gray')}
+            textDecoration="underline"
+            gap="8px"
+            display="flex"
+          >
+            <Download color={vars('colors-main-deepSkyBlue')} />
+            {resourceTextDownload}
+          </Text>
+        </Box>
       </Box>
-      <Box>
-        <Text
-          fontFamily="Roboto"
-          fontWeight="700"
-          lineHeight="21px"
-          fontSize="16px"
-          color="#555555"
-        >
-          {resourceTitle}
-        </Text>
-      </Box>
-      <Box>
-        <Text
-          fontFamily="Roboto"
-          fontWeight="400"
-          lineHeight="14px"
-          fontSize="12px"
-          color="#555555"
-        >
-          {resourceDetail}
-        </Text>
-      </Box>
-      <Box display="flex" alignItems="center" justifyContent="center">
-        <Link
-          href={resourceLink}
-          fontFamily="Roboto"
-          fontWeight="500"
-          fontSize="14px"
-          lineHeight="16px"
-          color={vars('colors-neutral-gray')}
-          download={resourceNameFile}
-          textDecoration="underline"
-          gap="8px"
-          display="flex"
-        >
-          <Download color={vars('colors-main-deepSkyBlue')} />
-          {resourceTextDownload}
-        </Link>
-      </Box>
-    </Box>
+    </Link>
   )
 }

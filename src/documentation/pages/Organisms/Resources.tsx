@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { Box } from '@chakra-ui/react'
 import { MyHeading, MyText, MyTittle, MyLink, Code } from '@/documentation/components'
 import { Resources } from '@/organisms/Resources'
 
@@ -10,7 +11,6 @@ const dataFakeEvents = [
     resourceDetail: 'Fechas importantes de tus cursos',
     resourceLink: 'https://www.oas.org/juridico/spanish/mesicic2_col_ley_30_sp.pdf',
     resourceTextDownload: 'Descargar',
-    resourceNameFile: 'Calendario semestral',
   },
   {
     id: '1',
@@ -19,7 +19,6 @@ const dataFakeEvents = [
     resourceDetail: 'Fechas importantes de tus cursos',
     resourceLink: 'https://www.oas.org/juridico/spanish/mesicic2_col_ley_30_sp.pdf',
     resourceTextDownload: 'Descargar',
-    resourceNameFile: 'Calendario semestral',
   },
 ]
 
@@ -28,7 +27,7 @@ const ResourcesPage: FC = () => {
     <>
       <MyHeading>Resource</MyHeading>
       <MyText>
-        Los recursos son casos que se usan para mostrar información relevante para el usuario del
+        Los recursos son cajas que se usan para mostrar información relevante para el usuario del
         recurso disponible para descargar, estos estan en diferentes formatos y estan adaptados para
         que segun sea el formato definido en{' '}
         <MyLink href="https://www.figma.com/design/DFrZMrJAQIQdzJnIYxD5Qm/Cajas-curso-CV%2FV8?node-id=2871-5674&node-type=frame&t=Yckoe1FoUThTM8DA-0">
@@ -55,9 +54,10 @@ const ResourcesPage: FC = () => {
 `}
       />
       <Code text="import { Resources } from '@eclass/ui-kit'" />
-
-      <Resources {...dataFakeEvents[0]} />
-      <Resources {...dataFakeEvents[1]} />
+      <Box display="flex" gap="8px">
+        <Resources {...dataFakeEvents[0]} />
+        <Resources {...dataFakeEvents[1]} />
+      </Box>
 
       <MyTittle>Tipos de iconos en los recursos disponibles</MyTittle>
       <MyText>
