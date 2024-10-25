@@ -1,3 +1,10 @@
+# [1.45.0](https://github.com/eclass/ui-kit/compare/v1.44.0...v1.45.0) (2024-10-25)
+
+
+### Features
+
+* **PCV-1094:** se agrega la caja eventos y recursos corrigiendo colores ([#639](https://github.com/eclass/ui-kit/issues/639)) ([0975822](https://github.com/eclass/ui-kit/commit/09758220a8f2760e744aed5922039c936a2129aa))
+
 # [1.44.0](https://github.com/eclass/ui-kit/compare/v1.43.0...v1.44.0) (2024-10-15)
 
 
