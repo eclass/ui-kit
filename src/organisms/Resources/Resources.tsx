@@ -3,6 +3,7 @@ import { Box, Text, Link } from '@chakra-ui/react'
 import { Icons } from './Icons'
 import { vars } from '@/theme'
 import { Download } from '@/atoms/Icons'
+import { Ripples } from '@/atoms'
 
 interface ResourcesProps {
   id: string | number
@@ -31,69 +32,70 @@ export const Resources: FC<ResourcesProps> = ({
       href={resourceLink}
       target={targetBlank ? '_blank' : '_self'}
       rel={targetBlank ? 'noopener noreferrer' : undefined}
-      _hover={{ textDecoration: 'none' }}
-      display="contents"
+      transition="box-shadow 0.3s"
+      _active={cssActive}
+      _hover={cssActive}
+      _focus={cssActive}
+      cursor="pointer"
+      borderRadius={vars('radii-big')}
+      border={vars('borders-light')}
+      overflow="hidden"
     >
-      <Box
-        width="285px"
-        height="147px"
-        borderRadius={vars('radii-big')}
-        border={vars('borders-light')}
-        justifyContent="center"
-        textAlign="center"
-        display="grid"
-        gap="8px"
-        padding="1rem"
-        transition="box-shadow .3s"
-        _active={cssActive}
-        _hover={cssActive}
-        _focus={cssActive}
-        cursor="pointer"
-      >
-        <Box>
-          <Icons type={resourceType} />
+      <Ripples>
+        <Box
+          width="285px"
+          height="147px"
+          justifyContent="center"
+          textAlign="center"
+          display="grid"
+          gap="8px"
+          padding="1rem"
+        >
+          <Box>
+            <Icons type={resourceType} />
+          </Box>
+          <Box>
+            <Text
+              fontFamily="Roboto"
+              fontWeight="700"
+              lineHeight="21px"
+              fontSize="16px"
+              color="#555555"
+              m="0px"
+            >
+              {resourceTitle}
+            </Text>
+          </Box>
+          <Box>
+            <Text
+              fontFamily="Roboto"
+              fontWeight="400"
+              lineHeight="14px"
+              fontSize="12px"
+              color="#555555"
+              m="0px"
+            >
+              {resourceDetail}
+            </Text>
+          </Box>
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <Text
+              fontFamily="Roboto"
+              fontWeight="500"
+              fontSize="14px"
+              lineHeight="16px"
+              color={vars('colors-neutral-gray')}
+              textDecoration="underline"
+              gap="8px"
+              display="flex"
+              m="0px"
+            >
+              <Download color={vars('colors-main-deepSkyBlue')} />
+              {resourceTextDownload}
+            </Text>
+          </Box>
         </Box>
-        <Box>
-          <Text
-            fontFamily="Roboto"
-            fontWeight="700"
-            lineHeight="21px"
-            fontSize="16px"
-            color="#555555"
-            m="0px"
-          >
-            {resourceTitle}
-          </Text>
-        </Box>
-        <Box>
-          <Text
-            fontFamily="Roboto"
-            fontWeight="400"
-            lineHeight="14px"
-            fontSize="12px"
-            color="#555555"
-            m="0px"
-          >
-            {resourceDetail}
-          </Text>
-        </Box>
-        <Box display="flex" alignItems="center" justifyContent="center">
-          <Text
-            fontFamily="Roboto"
-            fontWeight="500"
-            fontSize="14px"
-            lineHeight="16px"
-            color={vars('colors-neutral-gray')}
-            textDecoration="underline"
-            gap="8px"
-            display="flex"
-            m="0px"
-          >
-            <Download color={vars('colors-main-deepSkyBlue')} />
-            {resourceTextDownload}
-          </Text>
-        </Box>
-      </Box>
+      </Ripples>
     </Link>
   )
 }
