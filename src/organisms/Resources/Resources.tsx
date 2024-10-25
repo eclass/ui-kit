@@ -23,6 +23,9 @@ export const Resources: FC<ResourcesProps> = ({
   resourceLink,
   targetBlank,
 }) => {
+  const cssActive = {
+    boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
+  }
   return (
     <Link
       href={resourceLink}
@@ -41,8 +44,10 @@ export const Resources: FC<ResourcesProps> = ({
         display="grid"
         gap="8px"
         padding="1rem"
-        transition="box-shadow 0.3s ease-in-out"
-        _hover={{ shadow: 'sm' }}
+        transition="box-shadow .3s"
+        _active={cssActive}
+        _hover={cssActive}
+        _focus={cssActive}
         cursor="pointer"
       >
         <Box>
