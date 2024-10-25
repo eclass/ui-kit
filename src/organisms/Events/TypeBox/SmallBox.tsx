@@ -14,6 +14,9 @@ export const SmallBox: FC<ItemsEventsProps> = ({
   eventImage,
   targetBlank,
 }) => {
+  const cssActive = {
+    boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
+  }
   return (
     <Link
       key={id}
@@ -33,8 +36,10 @@ export const SmallBox: FC<ItemsEventsProps> = ({
         display="flex"
         flexDirection="column"
         cursor="pointer"
-        transition="box-shadow 0.3s ease-in-out"
-        _hover={{ shadow: 'sm' }}
+        transition="box-shadow .3s"
+        _active={cssActive}
+        _hover={cssActive}
+        _focus={cssActive}
       >
         <Box
           flex="1"

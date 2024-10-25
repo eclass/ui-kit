@@ -15,6 +15,9 @@ export const LargeBox: FC<ItemsEventsProps> = ({
   targetBlank,
   isMobile,
 }) => {
+  const cssActive = {
+    boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
+  }
   return (
     <Link
       key={id}
@@ -26,8 +29,10 @@ export const LargeBox: FC<ItemsEventsProps> = ({
     >
       <Flex
         cursor="pointer"
-        transition="box-shadow 0.3s ease-in-out"
-        _hover={{ shadow: 'sm' }}
+        transition="box-shadow .3s"
+        _active={cssActive}
+        _hover={cssActive}
+        _focus={cssActive}
         w="fit-content"
         borderRadius={vars('radii-big')}
         display={isMobile ? 'block' : 'flex'}
