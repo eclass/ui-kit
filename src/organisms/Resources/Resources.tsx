@@ -29,18 +29,18 @@ export const Resources: FC<ResourcesProps> = ({
       target={targetBlank ? '_blank' : '_self'}
       rel={targetBlank ? 'noopener noreferrer' : undefined}
       _hover={{ textDecoration: 'none' }}
+      display="contents"
     >
       <Box
         width="285px"
         height="147px"
-        borderRadius="8px"
-        border="1px"
-        borderColor={vars('colors-neutral-platinum')}
+        borderRadius={vars('radii-big')}
+        border={vars('borders-light')}
         justifyContent="center"
         textAlign="center"
         display="grid"
         gap="8px"
-        padding={4}
+        padding="1rem"
         transition="box-shadow 0.3s ease-in-out"
         _hover={{ shadow: 'sm' }}
         cursor="pointer"
@@ -55,6 +55,7 @@ export const Resources: FC<ResourcesProps> = ({
             lineHeight="21px"
             fontSize="16px"
             color="#555555"
+            m="0px"
           >
             {resourceTitle}
           </Text>
@@ -66,6 +67,7 @@ export const Resources: FC<ResourcesProps> = ({
             lineHeight="14px"
             fontSize="12px"
             color="#555555"
+            m="0px"
           >
             {resourceDetail}
           </Text>
@@ -80,6 +82,7 @@ export const Resources: FC<ResourcesProps> = ({
             textDecoration="underline"
             gap="8px"
             display="flex"
+            m="0px"
           >
             <Download color={vars('colors-main-deepSkyBlue')} />
             {resourceTextDownload}

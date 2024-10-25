@@ -22,14 +22,14 @@ export const LargeBox: FC<ItemsEventsProps> = ({
       _hover={{ textDecoration: 'none' }}
       target={targetBlank ? '_blank' : '_self'}
       rel={targetBlank ? 'noopener noreferrer' : undefined}
-      display="inline-block"
+      display="contents"
     >
       <Flex
         cursor="pointer"
         transition="box-shadow 0.3s ease-in-out"
         _hover={{ shadow: 'sm' }}
         w="fit-content"
-        borderRadius="8px"
+        borderRadius={vars('radii-big')}
         display={isMobile ? 'block' : 'flex'}
       >
         <Box
@@ -43,8 +43,7 @@ export const LargeBox: FC<ItemsEventsProps> = ({
           width={isMobile ? '285px' : '305px'}
           minHeight={isMobile ? '160px' : '168px'}
           borderRadius={isMobile ? '0 0 8px 8px' : '0 8px 8px 0'}
-          border="1px"
-          borderColor={vars('colors-neutral-platinum')}
+          border={vars('borders-light')}
           display="flex"
           flexDirection="column"
           cursor="pointer"
@@ -54,13 +53,13 @@ export const LargeBox: FC<ItemsEventsProps> = ({
             <Box display="flex" alignItems="center" gap="4px">
               <Calendar color={vars('colors-main-ziggurat')} />
               <Text fontWeight="400">{startDate}</Text>
-              <Text color={vars('colors-neutral-platinum')}>|</Text>
+              <Text color={vars('borders-light')}>|</Text>
               <Clock color={vars('colors-main-ziggurat')} />
               <Text>{startTime}</Text>
             </Box>
           </Box>
           <Box
-            borderTop={`1px solid ${vars('colors-neutral-platinum')}`}
+            borderTop={`${vars('borders-light')}`}
             width="100%"
             height="50px"
             padding="12px"

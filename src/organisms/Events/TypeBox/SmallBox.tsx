@@ -21,14 +21,13 @@ export const SmallBox: FC<ItemsEventsProps> = ({
       _hover={{ textDecoration: 'none' }}
       target={targetBlank ? '_blank' : '_self'}
       rel={targetBlank ? 'noopener noreferrer' : undefined}
-      display="inline-block"
+      display="contents"
     >
       <Box
         width="286px"
         height="247px"
-        borderRadius="8px"
-        border="1px"
-        borderColor={vars('colors-neutral-platinum')}
+        borderRadius={vars('radii-big')}
+        border={vars('borders-light')}
         justifyContent="center"
         textAlign="center"
         display="flex"
@@ -56,13 +55,17 @@ export const SmallBox: FC<ItemsEventsProps> = ({
             display="grid"
             gap="8px"
           >
-            <Text fontWeight="700">{eventTitle}</Text>
+            <Text fontWeight="700" m="0px">
+              {eventTitle}
+            </Text>
             <Box display="flex" alignItems="center" gap="4px">
               <Calendar />
-              <Text fontWeight="400">{startDate}</Text>
-              <Text>|</Text>
+              <Text fontWeight="400" m="0px">
+                {startDate}
+              </Text>
+              <Text m="0px">|</Text>
               <Clock />
-              <Text>{startTime}</Text>
+              <Text m="0px">{startTime}</Text>
             </Box>
           </Box>
         </Box>
