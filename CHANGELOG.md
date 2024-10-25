@@ -1,3 +1,10 @@
+## [1.45.2](https://github.com/eclass/ui-kit/compare/v1.45.1...v1.45.2) (2024-10-25)
+
+
+### Bug Fixes
+
+* **PCV-1094:** se corrige hover caja ripple ([#641](https://github.com/eclass/ui-kit/issues/641)) ([bf212b8](https://github.com/eclass/ui-kit/commit/bf212b829ce889bbd400a10190c297f2e6e1adc9))
+
 ## [1.45.1](https://github.com/eclass/ui-kit/compare/v1.45.0...v1.45.1) (2024-10-25)
 
 
