@@ -1,4 +1,0 @@
-import{B as e}from"./BoxCopy.5eb7aec8.js";import{j as a,F as r,a as s,M as d,b as t,v as o,C as m}from"./index.ffa94048.js";import{L as n}from"./ListComponent.05aa5d71.js";const l=()=>a(r,{children:[s(d,{children:"Shadows \xA7 Elevation"}),s(t,{children:"Algunos de nuestros componentes necesitan separarse del resto de la interfaz para ello se dispone de las sombras, que est\xE1n reservadas para estos componentes (por ejemplo, men\xFA desplegable o modales)."}),a(n,{gap:"5rem",m:"3rem 0 !important",children:[s(e,{h:"5.5rem",w:"5.5rem",boxShadow:o("shadows-sm"),text:"shadows-sm"}),s(e,{h:"5.5rem",w:"5.5rem",boxShadow:o("shadows-md"),text:"shadows-md"}),s(e,{h:"5.5rem",w:"5.5rem",boxShadow:o("shadows-lg"),text:"shadows-lg"})]}),s(m,{text:`<Box boxShadow={vars('shadows-sm')} />
-<Box boxShadow={vars('shadows-md')} />
-<Box boxShadow={vars('shadows-lg')} />`})]});export{l as ViewShadowsElevation,l as default};
-//# sourceMappingURL=ShadowsElevation.43238fc8.js.map
