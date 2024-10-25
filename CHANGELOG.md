@@ -1,3 +1,10 @@
+## [1.45.1](https://github.com/eclass/ui-kit/compare/v1.45.0...v1.45.1) (2024-10-25)
+
+
+### Bug Fixes
+
+* **PCV-1094:** se corrige hover para cajas ([#640](https://github.com/eclass/ui-kit/issues/640)) ([65ed941](https://github.com/eclass/ui-kit/commit/65ed9415bf85d6bb44f68da902036890b81f87b4))
+
 # [1.45.0](https://github.com/eclass/ui-kit/compare/v1.44.0...v1.45.0) (2024-10-25)
 
 
