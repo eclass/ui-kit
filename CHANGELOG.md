@@ -1,3 +1,10 @@
+## [1.45.3](https://github.com/eclass/ui-kit/compare/v1.45.2...v1.45.3) (2024-10-26)
+
+
+### Bug Fixes
+
+* **PCV-1094:** se corrige hover caja ripple para eventos y colores ([#642](https://github.com/eclass/ui-kit/issues/642)) ([89a3236](https://github.com/eclass/ui-kit/commit/89a32363dd7913e14b73beda8f29149f937a9709))
+
 ## [1.45.2](https://github.com/eclass/ui-kit/compare/v1.45.1...v1.45.2) (2024-10-25)
 
 
