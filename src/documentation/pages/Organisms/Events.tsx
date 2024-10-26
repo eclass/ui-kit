@@ -84,7 +84,9 @@ isMobile?: boolean // Si es mobile o no
       />
       <i>Se deja en espanol debido a que Event es una funcion nativa</i>
       <Code text="import { Eventos } from '@eclass/ui-kit'" />
-      <Eventos {...dataFakeEvents[2]} />
+      <Box display="grid" gap="16px">
+        <Eventos {...dataFakeEvents[2]} />
+      </Box>
       <MyTittle>Estados</MyTittle>
       <MyText>Existen 3 posibles estados que definen el diseño del evento.</MyText>
       <Box display="grid" gap="16px">
