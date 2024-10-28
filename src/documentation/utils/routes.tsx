@@ -20,6 +20,7 @@ const TinyAlert = React.lazy(async () => await import('../pages/Atoms/TinyAlert'
 /** MOLECULES */
 const Buttons = React.lazy(async () => await import('../pages/Molecules/Buttons'))
 const Tooltip = React.lazy(async () => await import('../pages/Molecules/Tooltip'))
+const UserWay = React.lazy(async () => await import('../pages/Molecules/UserWay'))
 
 /** ORGANISMS */
 const Alerts = React.lazy(async () => await import('../pages/Organisms/Alerts'))
@@ -130,6 +131,11 @@ export const routes: IRoute[] = [
     path: '/molecules/tooltip',
     label: 'Tooltip',
     component: <Tooltip />,
+  },
+  {
+    path: '/molecules/userway',
+    label: 'UserWay',
+    component: <UserWay />,
   },
   /** ****************************** */
   {
