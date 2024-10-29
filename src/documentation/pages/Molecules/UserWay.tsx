@@ -10,7 +10,7 @@ export const ViewUserWay = (): JSX.Element => {
         verifica que esté listo antes de poder ejecutarlo y maneja el click del botón.
       </MyText>
       <Code text="import { UserWay } from '@eclass/ui-kit'" />
-      <UserWay />
+      <UserWay accountId="06mvMZzmO4" />
       <MyTittle>Props y atributos</MyTittle>
       <MyText>
         El componente puede recibir 2 parámetros opcionales que definen atributos del script:

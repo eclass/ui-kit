@@ -13,7 +13,7 @@ declare global {
 }
 
 interface IUserWay {
-  accountId?: string
+  accountId: string
   color?: string
 }
 
@@ -35,7 +35,7 @@ const waitForUserWay = async (): Promise<void> => {
   })
 }
 
-export function UserWay({ accountId = '06mvMZzmO4', color = '#0189FF' }: IUserWay): JSX.Element {
+export function UserWay({ accountId, color = '#0189FF' }: IUserWay): JSX.Element {
   const [isUserWayReady, setIsUserWayReady] = useState(false)
 
   useEffect(() => {
@@ -76,7 +76,7 @@ export function UserWay({ accountId = '06mvMZzmO4', color = '#0189FF' }: IUserWa
       alignItems="center"
       bg={vars('colors-main-blueGrey')}
       borderRadius="100%"
-      border="none"
+      border="1px solid transparent"
       display="flex"
       height="30px"
       id="customTrigger"
