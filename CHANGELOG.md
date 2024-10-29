@@ -1,3 +1,10 @@
+## [1.46.1](https://github.com/eclass/ui-kit/compare/v1.46.0...v1.46.1) (2024-10-29)
+
+
+### Bug Fixes
+
+* **userway:** documentacion ([#645](https://github.com/eclass/ui-kit/issues/645)) ([f76bc18](https://github.com/eclass/ui-kit/commit/f76bc18fddf09e5d92f5a9eb485dae726536d722))
+
 # [1.46.0](https://github.com/eclass/ui-kit/compare/v1.45.3...v1.46.0) (2024-10-28)
 
 
