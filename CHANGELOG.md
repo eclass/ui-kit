@@ -1,3 +1,10 @@
+# [1.46.0](https://github.com/eclass/ui-kit/compare/v1.45.3...v1.46.0) (2024-10-28)
+
+
+### Features
+
+* **userway:** componente widget accesibilidad ([#643](https://github.com/eclass/ui-kit/issues/643)) ([43ff698](https://github.com/eclass/ui-kit/commit/43ff698babeb3543dfa826a87f1fbb2a3ef5395f))
+
 ## [1.45.3](https://github.com/eclass/ui-kit/compare/v1.45.2...v1.45.3) (2024-10-26)
 
 
