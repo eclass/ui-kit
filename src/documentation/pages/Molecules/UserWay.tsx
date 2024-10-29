@@ -6,14 +6,14 @@ export const ViewUserWay = (): JSX.Element => {
     <>
       <MyHeading>UserWay</MyHeading>
       <MyText>
-        Trigger personalizado para el widget de accesibilidad UserWay. Carga el script del widget,
-        verifica que esté listo antes de poder ejecutarlo y maneja el click del botón.
+        Trigger personalizado para el widget gratuito de accesibilidad UserWay. Carga el script del
+        widget, verifica que esté listo antes de poder ejecutarlo y maneja el click del botón.
       </MyText>
       <Code text="import { UserWay } from '@eclass/ui-kit'" />
       <UserWay accountId="ejemploID03" />
       <MyTittle>Props y atributos</MyTittle>
       <MyText>
-        El componente puede recibir 2 parámetros opcionales que definen atributos del script:
+        El componente puede recibir 2 parámetros que definen atributos del script:
         <li>
           <b>accountId:</b> id de la cuenta vinculada al script.
         </li>
@@ -21,7 +21,10 @@ export const ViewUserWay = (): JSX.Element => {
           <b>color:</b> color del menú del widget.
         </li>
       </MyText>
-      <MyText>Ambos parámetros vienen predefinidos con un valor por default.</MyText>
+      <MyText>
+        El parámetro de color viene predefinido con un valor por default, el de accountId es
+        requerido y siempre debe incluirse.
+      </MyText>
       <Code text="<UserWay accountId='IdDeCuenta34' color='#0189FF'/>" />
     </>
   )
