@@ -1,3 +1,10 @@
+## [1.46.2](https://github.com/eclass/ui-kit/compare/v1.46.1...v1.46.2) (2024-10-30)
+
+
+### Bug Fixes
+
+* **userway:** se deja id fijo ([#646](https://github.com/eclass/ui-kit/issues/646)) ([322f967](https://github.com/eclass/ui-kit/commit/322f967b376d1704a6c6a2ba19352ed5c7bc40c7))
+
 ## [1.46.1](https://github.com/eclass/ui-kit/compare/v1.46.0...v1.46.1) (2024-10-29)
 
 
