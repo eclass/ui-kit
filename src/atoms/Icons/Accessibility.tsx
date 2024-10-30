@@ -9,7 +9,7 @@ export function Accessibility(props: BaseProps): JSX.Element {
         viewBox="0 0 16 16"
         fill="none"
         stroke="#60798E"
-        strokeWidth={0.5}
+        strokeWidth={0.3}
       >
         <path
           fillRule="evenodd"

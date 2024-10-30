@@ -13,7 +13,6 @@ declare global {
 }
 
 interface IUserWay {
-  accountId: string
   color?: string
 }
 
@@ -35,7 +34,7 @@ const waitForUserWay = async (): Promise<void> => {
   })
 }
 
-export function UserWay({ accountId, color = '#0189FF' }: IUserWay): JSX.Element {
+export function UserWay({ color = '#0189FF' }: IUserWay): JSX.Element {
   const [isUserWayReady, setIsUserWayReady] = useState(false)
 
   useEffect(() => {
@@ -45,7 +44,7 @@ export function UserWay({ accountId, color = '#0189FF' }: IUserWay): JSX.Element
       script.id = 'userway-script'
       script.src = 'https://cdn.userway.org/widget.js'
       script.async = true
-      script.setAttribute('data-account', accountId)
+      script.setAttribute('data-account', '06mvMZzmO4')
       script.setAttribute('data-color', color)
       script.setAttribute('data-trigger', 'customTrigger')
       document.body.appendChild(script)
@@ -60,7 +59,7 @@ export function UserWay({ accountId, color = '#0189FF' }: IUserWay): JSX.Element
       .catch((error) => {
         console.error('Failed to load UserWay:', error)
       })
-  }, [accountId, color])
+  }, [color])
 
   const handleButtonClick = (): void => {
     if (isUserWayReady && window?.UserWay?.widgetOpen) {
