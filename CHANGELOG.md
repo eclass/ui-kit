@@ -1,3 +1,10 @@
+## [1.46.3](https://github.com/eclass/ui-kit/compare/v1.46.2...v1.46.3) (2024-11-07)
+
+
+### Bug Fixes
+
+* **PDYE-974:** nuevo botón userway ([#647](https://github.com/eclass/ui-kit/issues/647)) ([2ce8073](https://github.com/eclass/ui-kit/commit/2ce8073cc39ba1e7e2618563e3070588b3282317))
+
 ## [1.46.2](https://github.com/eclass/ui-kit/compare/v1.46.1...v1.46.2) (2024-10-30)
 
 
