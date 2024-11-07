@@ -3,14 +3,7 @@ import { Base, BaseProps } from './Base'
 export function Accessibility(props: BaseProps): JSX.Element {
   return (
     <Base {...props}>
-      <svg
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
-        fill="none"
-        stroke="#60798E"
-        strokeWidth={0.3}
-      >
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
