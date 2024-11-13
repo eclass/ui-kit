@@ -1,3 +1,10 @@
+## [1.46.4](https://github.com/eclass/ui-kit/compare/v1.46.3...v1.46.4) (2024-11-13)
+
+
+### Bug Fixes
+
+* **events:** se remueve gradiente para caja eventos grandes ([#648](https://github.com/eclass/ui-kit/issues/648)) ([09572a3](https://github.com/eclass/ui-kit/commit/09572a3cc737437637a0abdb49ebb0ff212bfa62))
+
 ## [1.46.3](https://github.com/eclass/ui-kit/compare/v1.46.2...v1.46.3) (2024-11-07)
 
 
