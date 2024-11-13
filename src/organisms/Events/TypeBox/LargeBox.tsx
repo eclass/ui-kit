@@ -54,18 +54,26 @@ export const LargeBox: FC<ItemsEventsProps> = ({
             <Box
               width="inherit"
               height="100%"
-              padding="4"
+              padding="16px"
               color="#555555"
               gap="16px"
               display="grid"
             >
-              <Text fontWeight="700">{eventTitle}</Text>
+              <Text fontWeight="700" m="0px" p="0px">
+                {eventTitle}
+              </Text>
               <Box display="flex" alignItems="center" gap="4px">
                 <Calendar color={vars('colors-main-ziggurat')} />
-                <Text fontWeight="400">{startDate}</Text>
-                <Text color={vars('borders-light')}>|</Text>
+                <Text fontWeight="400" m="0px" p="0px">
+                  {startDate}
+                </Text>
+                <Text color={vars('borders-light')} m="0px" p="0px">
+                  |
+                </Text>
                 <Clock color={vars('colors-main-ziggurat')} />
-                <Text>{startTime}</Text>
+                <Text m="0px" p="0px">
+                  {startTime}
+                </Text>
               </Box>
             </Box>
             <Box
