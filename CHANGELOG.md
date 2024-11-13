@@ -1,3 +1,10 @@
+## [1.46.5](https://github.com/eclass/ui-kit/compare/v1.46.4...v1.46.5) (2024-11-13)
+
+
+### Bug Fixes
+
+* **events:** se ajusta margenes para la caja, para que soporten cv ([#649](https://github.com/eclass/ui-kit/issues/649)) ([ab7ce65](https://github.com/eclass/ui-kit/commit/ab7ce6578cb37ec91938301e29da591a7bad71a3))
+
 ## [1.46.4](https://github.com/eclass/ui-kit/compare/v1.46.3...v1.46.4) (2024-11-13)
 
 
