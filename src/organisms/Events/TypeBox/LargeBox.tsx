@@ -38,7 +38,7 @@ export const LargeBox: FC<ItemsEventsProps> = ({
           <Box
             width="285px"
             height={isMobile ? '140px' : '168px'}
-            bgImage={`linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,1) 100%), url(${eventImage})`}
+            bgImage={`url(${eventImage})`}
             backgroundSize="cover"
             borderRadius={isMobile ? '8px 8px 0px 0px' : '8px 0 0 8px'}
           />
