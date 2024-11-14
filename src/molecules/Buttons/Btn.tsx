@@ -51,7 +51,7 @@ export function Btn({
   color = vars('colors-neutral-white'),
   disabled = false,
   fillLoader = vars('colors-neutral-white'),
-  id,
+  id = undefined,
   isFullWidth = false,
   isLoading = false,
   leftIcon,
