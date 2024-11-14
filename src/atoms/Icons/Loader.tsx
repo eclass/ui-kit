@@ -1,3 +1,5 @@
+import { uniqueId } from '@/services'
+
 interface props {
   fill?: string
 }
@@ -6,7 +8,7 @@ export function Loader({ fill = '#fff' }: props): JSX.Element {
   return (
     <div className="loaderAsync" data-testid="loaderAsync">
       <svg
-        id="prefix__eXySq0EBKm11"
+        id={uniqueId()}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 38 20"
         shapeRendering="geometricPrecision"

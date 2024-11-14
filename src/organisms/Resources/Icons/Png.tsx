@@ -1,7 +1,10 @@
 import { FC } from 'react'
 import { Icon } from '@chakra-ui/react'
 
+import { uniqueId } from '@/services'
+
 export const Png: FC = () => {
+  const id = `clip${uniqueId()}`
   return (
     <Icon
       width="32px"
@@ -10,7 +13,7 @@ export const Png: FC = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath="url(#clip0_2871_5695)">
+      <g clipPath={`url(#${id})`}>
         <path d="M20 1V9H28" stroke="#B0CFE0" strokeWidth="2" strokeMiterlimit="10" />
         <path
           d="M28 13V9L20 1H4V13"
@@ -47,7 +50,7 @@ export const Png: FC = () => {
         />
       </g>
       <defs>
-        <clipPath id="clip0_2871_5695">
+        <clipPath id={id}>
           <rect width="32" height="32" fill="white" />
         </clipPath>
       </defs>

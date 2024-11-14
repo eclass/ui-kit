@@ -1,9 +1,11 @@
+import { uniqueId } from '@/services'
 import { Base, BaseProps } from './Base'
 
 export function TinyAlertError(props: BaseProps): JSX.Element {
+  const id = `clip${uniqueId()}`
   return (
     <Base {...props} w="12px" h="12px" viewBox="0 0 12 12">
-      <g clipPath="url(#clip0_2165_6683)">
+      <g clipPath={`url(#${id})`}>
         <circle cx="6" cy="6" r="6" fill="#CC0000" />
         <path
           fillRule="evenodd"
@@ -13,7 +15,7 @@ export function TinyAlertError(props: BaseProps): JSX.Element {
         />
       </g>
       <defs>
-        <clipPath id="clip0_2165_6683">
+        <clipPath id={id}>
           <rect width="12px" height="12px" fill="white" />
         </clipPath>
       </defs>
