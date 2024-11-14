@@ -1,3 +1,10 @@
+## [1.46.6](https://github.com/eclass/ui-kit/compare/v1.46.5...v1.46.6) (2024-11-14)
+
+
+### Bug Fixes
+
+* **ids:** genera ids unicos en iconos ([#650](https://github.com/eclass/ui-kit/issues/650)) ([959f1da](https://github.com/eclass/ui-kit/commit/959f1da4eae4e54dd5d4248fb05b1fec239fa58d))
+
 ## [1.46.5](https://github.com/eclass/ui-kit/compare/v1.46.4...v1.46.5) (2024-11-13)
 
 
