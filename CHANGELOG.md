@@ -1,3 +1,10 @@
+# [1.47.0](https://github.com/eclass/ui-kit/compare/v1.46.6...v1.47.0) (2024-11-26)
+
+
+### Features
+
+* **PDYE-988:** función cookie ([#651](https://github.com/eclass/ui-kit/issues/651)) ([a147216](https://github.com/eclass/ui-kit/commit/a147216bb6afe2b0d50e8bcbcccf8e3dfbe8dde5))
+
 ## [1.46.6](https://github.com/eclass/ui-kit/compare/v1.46.5...v1.46.6) (2024-11-14)
 
 
