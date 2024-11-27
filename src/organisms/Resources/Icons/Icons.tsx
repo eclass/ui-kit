@@ -17,6 +17,7 @@ import {
   Wav,
   Xls,
   Xlsx,
+  Url,
 } from './index'
 
 interface IconsProps {
@@ -77,6 +78,8 @@ export const Icons: FC<IconsProps> = ({ type }) => {
       return <Mp4 />
     case 'mkv':
       return <Mkv />
+    case 'url':
+      return <Url />
     default:
       return null
   }
