@@ -1,3 +1,10 @@
+# [1.48.0](https://github.com/eclass/ui-kit/compare/v1.47.0...v1.48.0) (2024-11-27)
+
+
+### Features
+
+* **resource-url:** se agrega nuevo tipo de recurso tipo url ([#652](https://github.com/eclass/ui-kit/issues/652)) ([8c9021a](https://github.com/eclass/ui-kit/commit/8c9021af9288cd17121617b38d31e724624d3ae8))
+
 # [1.47.0](https://github.com/eclass/ui-kit/compare/v1.46.6...v1.47.0) (2024-11-26)
 
 
