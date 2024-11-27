@@ -13,12 +13,20 @@ const dataFakeEvents = [
     resourceTextDownload: 'Descargar',
   },
   {
-    id: '1',
+    id: '2',
     resourceType: 'pdf',
     resourceTitle: 'Calendario semestral',
     resourceDetail: 'Fechas importantes de tus cursos',
     resourceLink: 'https://www.oas.org/juridico/spanish/mesicic2_col_ley_30_sp.pdf',
     resourceTextDownload: 'Descargar',
+  },
+  {
+    id: '3',
+    resourceType: 'url',
+    resourceTitle: 'Enlace recomendado 1',
+    resourceDetail: 'El fundador de OpenAI habla sobre el futuro ',
+    resourceLink: 'https://www.oas.org/juridico/spanish/mesicic2_col_ley_30_sp.pdf',
+    resourceTextDownload: 'Ir al recurso',
   },
 ]
 
@@ -58,11 +66,19 @@ const ResourcesPage: FC = () => {
         <Resources {...dataFakeEvents[0]} />
         <Resources {...dataFakeEvents[1]} />
       </Box>
+      <MyTittle>Recurso de tipo url</MyTittle>
+      <MyText>
+        En el caso de que el recurso sea un enlace, el icono se mostrara con un icono de enlace con
+        solo usar resourceType = 'url'
+      </MyText>
+      <Box display="flex" gap="8px">
+        <Resources {...dataFakeEvents[2]} />
+      </Box>
 
       <MyTittle>Tipos de iconos en los recursos disponibles</MyTittle>
       <MyText>
         Existen varios tipos de iconos disponibles: Png, Gif, Ppt, Pptx, Doc, Docx, Xls, Xlsx, Csv,
-        Pdf, Mp4, Avi, Mkv, Mp3, Wav,
+        Pdf, Mp4, Avi, Mkv, Mp3, Wav, Url
       </MyText>
 
       <MyTittle>Modo de uso</MyTittle>

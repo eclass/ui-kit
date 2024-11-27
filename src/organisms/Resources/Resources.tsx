@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { Box, Text, Link } from '@chakra-ui/react'
 import { Icons } from './Icons'
 import { vars } from '@/theme'
-import { Download } from '@/atoms/Icons'
+import { Download, DiagonalArrow } from '@/atoms/Icons'
 import { Ripples } from '@/atoms'
 
 interface ResourcesProps {
@@ -90,7 +90,11 @@ export const Resources: FC<ResourcesProps> = ({
               display="flex"
               m="0px"
             >
-              <Download color={vars('colors-main-deepSkyBlue')} />
+              {resourceType === 'url' ? (
+                <DiagonalArrow color={vars('colors-main-deepSkyBlue')} />
+              ) : (
+                <Download color={vars('colors-main-deepSkyBlue')} />
+              )}
               {resourceTextDownload}
             </Text>
           </Box>
