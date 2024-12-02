@@ -1,3 +1,10 @@
+## [1.49.2](https://github.com/eclass/ui-kit/compare/v1.49.1...v1.49.2) (2024-12-02)
+
+
+### Bug Fixes
+
+* **coursefuture:** se corrige zindex que no funciona en cv ([#657](https://github.com/eclass/ui-kit/issues/657)) ([81c0dde](https://github.com/eclass/ui-kit/commit/81c0ddefbdf912002ce388e155fe13b86d21e3d1))
+
 ## [1.49.1](https://github.com/eclass/ui-kit/compare/v1.49.0...v1.49.1) (2024-12-02)
 
 
