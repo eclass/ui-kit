@@ -1,3 +1,10 @@
+## [1.49.1](https://github.com/eclass/ui-kit/compare/v1.49.0...v1.49.1) (2024-12-02)
+
+
+### Bug Fixes
+
+* **coursefuture:** se agrega link directo de image en url para box ([#656](https://github.com/eclass/ui-kit/issues/656)) ([239b322](https://github.com/eclass/ui-kit/commit/239b3229e5c0f4890d90b6e4be0f9e7457539e94))
+
 # [1.49.0](https://github.com/eclass/ui-kit/compare/v1.48.0...v1.49.0) (2024-12-02)
 
 
