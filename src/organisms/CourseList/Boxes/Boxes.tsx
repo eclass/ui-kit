@@ -6,15 +6,9 @@ interface IBoxes {
   type: WrapperCoursesProps['typeBox']
   modalPaymentText: WrapperCoursesProps['modalPaymentText']
   data: ExtendAcademicList
-  soonCourse?: WrapperCoursesProps['soonCourse']
 }
-export const Boxes = ({
-  type = 'TRADITIONAL',
-  data,
-  modalPaymentText,
-  soonCourse,
-}: IBoxes): JSX.Element => {
-  const common = { data, modalPaymentText, soonCourse }
+export const Boxes = ({ type = 'TRADITIONAL', data, modalPaymentText }: IBoxes): JSX.Element => {
+  const common = { data, modalPaymentText }
 
   const commonImg = {
     data,
