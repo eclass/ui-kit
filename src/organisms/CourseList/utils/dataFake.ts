@@ -871,6 +871,42 @@ export const dataStates: any = {
       show: true,
       text: 'Próximamente',
     },
+    labels: [],
+  },
+  proximamente2: {
+    ...dataBase,
+    id: 23,
+    hasFinanzeFreezed: false,
+    status: {
+      ...dataBase.status,
+      id: 3,
+      name: 'inscripcion',
+    },
+    progress: {
+      ...dataBase.progress,
+      label: 'Tu curso iniciara el Lunes 16 de Enero de 2023',
+      icon: 'schedule',
+    },
+    dateStatus: {
+      ...dataBase.dateStatus,
+      hasDates: true,
+    },
+    information: [
+      {
+        icon: 'certificate',
+        text: 'Certificado por ACHS',
+        href: '',
+      },
+    ],
+    action: {
+      ...dataBase.action,
+      text: 'Ver informacion del curso',
+      targetBlank: true,
+    },
+    soonCourse: {
+      show: true,
+      text: 'Próximamente',
+    },
     labels: [
       {
         id: 'OBLIGATORY',
