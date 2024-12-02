@@ -1,3 +1,16 @@
+# [1.49.0](https://github.com/eclass/ui-kit/compare/v1.48.0...v1.49.0) (2024-12-02)
+
+
+### Bug Fixes
+
+* **coursefuture:** se corrige el type del course ([#654](https://github.com/eclass/ui-kit/issues/654)) ([c0260da](https://github.com/eclass/ui-kit/commit/c0260dae25331bdbfa1450ad7843ade83b28d8b2))
+* **coursefuture:** se corrige el type del course ([#655](https://github.com/eclass/ui-kit/issues/655)) ([f87dcb9](https://github.com/eclass/ui-kit/commit/f87dcb94a9a55c7dba52697050894c32b72fa014))
+
+
+### Features
+
+* **PDYE-994:** se agrega caja curso futura con validaciones ([#653](https://github.com/eclass/ui-kit/issues/653)) ([d73738c](https://github.com/eclass/ui-kit/commit/d73738c3d44f4f20835b275222bf94accf053f9e))
+
 # [1.48.0](https://github.com/eclass/ui-kit/compare/v1.47.0...v1.48.0) (2024-11-27)
 
 

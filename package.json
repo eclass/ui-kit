@@ -1,7 +1,7 @@
 {
   "name": "@eclass/ui-kit",
   "description": "Elementos UI transversales eClass",
-  "version": "1.48.0",
+  "version": "1.49.0",
   "files": [
     "dist"
   ],
