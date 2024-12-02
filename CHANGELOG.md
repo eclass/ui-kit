@@ -1,3 +1,10 @@
+## [1.49.3](https://github.com/eclass/ui-kit/compare/v1.49.2...v1.49.3) (2024-12-02)
+
+
+### Bug Fixes
+
+* **coursefuture:** se corrige el zindex para usuarios admin ([#658](https://github.com/eclass/ui-kit/issues/658)) ([af24317](https://github.com/eclass/ui-kit/commit/af24317eaab9b265207d72bf0dfd3894fe7d858b))
+
 ## [1.49.2](https://github.com/eclass/ui-kit/compare/v1.49.1...v1.49.2) (2024-12-02)
 
 
