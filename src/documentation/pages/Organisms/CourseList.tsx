@@ -34,6 +34,24 @@ export const ViewCourseList = (): JSX.Element => {
       <Code text='<CourseList courses={courses} typeBox="IMAGE_SMALL" />' />
       <CourseList courses={[dataFake[18]]} typeBox="IMAGE_SMALL" />
 
+      <MyTittle>Caja curso con fecha futura</MyTittle>
+      <MyText>
+        Si el curso tiene una fecha futura, se muestra el contenido de la imagen opacada y un aviso
+        ajustado a la traduccion de proximamante.
+      </MyText>
+      <Code
+        text="//Formato adicional
+soonCourse: {
+show: true,
+text: 'Próximamente',
+}"
+      />
+      <MyText>
+        El componente funciona tanto para back como para front, se agrego con la intencion de que a
+        futuro pueda controlarse directamente desde back si se requiere
+      </MyText>
+      <CourseList courses={[dataFake[21]]} typeBox="TRADITIONAL" />
+
       <MyTittle>Datos a mostrar</MyTittle>
       <MyText>
         Lo datos que muestra cada curso depende netamente de la información que venga, dejo unos

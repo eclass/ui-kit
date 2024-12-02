@@ -1,6 +1,9 @@
 import { AcademicBox } from '@eclass/api'
 
-export type AcademicList = AcademicBox
+export type ExtendAcademicList = AcademicBox & {
+  show?: true
+  text?: string
+}
 
 interface PaymentText {
   title: string
@@ -30,6 +33,7 @@ export interface WrapperCoursesProps {
 
   /** Especificación de tipo de caja curso a mostrar. Por default se muestra el tipo TRADITIONAL */
   typeBox?: 'TRADITIONAL' | 'TRADITIONAL_LANDSCAPE' | 'IMAGE_LARGE' | 'IMAGE_SMALL'
+  soonCourse?: Sooncourse
 }
 
 export interface FooterProps {

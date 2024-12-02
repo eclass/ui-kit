@@ -7,7 +7,7 @@ import { vars } from '@theme'
 import { isCourseActive } from '../utils'
 import * as Type from '../types'
 
-export const CourseBoxContext = React.createContext<Partial<Type.AcademicList>>({})
+export const CourseBoxContext = React.createContext<Partial<Type.ExtendAcademicList>>({})
 
 interface WithRipplesProps {
   enabled: boolean
@@ -18,7 +18,7 @@ function WithRipples({ enabled, children }: WithRipplesProps): JSX.Element {
 }
 
 interface IBoxTraditional {
-  data: Type.AcademicList
+  data: Type.ExtendAcademicList
   modalPaymentText?: Type.PaymentText
 }
 
