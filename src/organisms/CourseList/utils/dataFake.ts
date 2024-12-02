@@ -94,7 +94,7 @@ export const dataStates: any = {
   },
   inscripcionFutura: {
     ...dataBase,
-    id: 1,
+    id: 2,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -125,7 +125,7 @@ export const dataStates: any = {
   },
   inscripcionFinalizo: {
     ...dataBase,
-    id: 1,
+    id: 3,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -158,7 +158,7 @@ export const dataStates: any = {
     ...dataBase,
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-utec-square.jpg',
     background: 'https://cdn.eclass.com/img/cursos/default1.png',
-    id: 2,
+    id: 4,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -190,7 +190,7 @@ export const dataStates: any = {
   },
   preInscripcion2: {
     ...dataBase,
-    id: 3,
+    id: 5,
     hasFinanzeFreezed: false,
     logo: '',
     status: {
@@ -224,7 +224,7 @@ export const dataStates: any = {
   inscripcion: {
     ...dataBase,
     background: 'https://cdn.eclass.com/img/cursos/default2.png',
-    id: 4,
+    id: 6,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -255,7 +255,7 @@ export const dataStates: any = {
   },
   inscripcion2: {
     ...dataBase,
-    id: 5,
+    id: 7,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -290,7 +290,7 @@ export const dataStates: any = {
   },
   noDisponible: {
     ...dataBase,
-    id: 6,
+    id: 8,
     hasFinanzeFreezed: false,
     logo: '',
     background: 'https://cdn.eclass.com/img/cursos/default2.png',
@@ -327,7 +327,7 @@ export const dataStates: any = {
     ...dataBase,
     background: 'https://cdn.eclass.com/img/cursos/default3.png',
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
-    id: 7,
+    id: 9,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -361,7 +361,7 @@ export const dataStates: any = {
     ...dataBase,
     background: 'https://cdn.eclass.com/img/cursos/default3.png',
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
-    id: 57,
+    id: 10,
     hasFinanzeFreezed: false,
     Profile: {
       id: 1,
@@ -397,7 +397,7 @@ export const dataStates: any = {
   },
   activado: {
     ...dataBase,
-    id: 8,
+    id: 11,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -437,7 +437,7 @@ export const dataStates: any = {
   },
   sinEstudiar: {
     ...dataBase,
-    id: 9,
+    id: 12,
     hasFinanzeFreezed: false,
     logo: '',
     status: {
@@ -478,7 +478,7 @@ export const dataStates: any = {
   },
   sinEstudiar2: {
     ...dataBase,
-    id: 10,
+    id: 13,
     hasFinanzeFreezed: false,
     background: 'https://cdn.eclass.com/img/cursos/default2.png',
     status: {
@@ -519,7 +519,7 @@ export const dataStates: any = {
   },
   sinEstudiar3: {
     ...dataBase,
-    id: 11,
+    id: 14,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -560,7 +560,7 @@ export const dataStates: any = {
   sinEstudiar4: {
     ...dataBase,
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-uandes-square.jpg',
-    id: 12,
+    id: 15,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -600,7 +600,7 @@ export const dataStates: any = {
   },
   continuar: {
     ...dataBase,
-    id: 13,
+    id: 16,
     hasFinanzeFreezed: true,
     status: {
       ...dataBase.status,
@@ -641,7 +641,7 @@ export const dataStates: any = {
   },
   continuar2: {
     ...dataBase,
-    id: 14,
+    id: 17,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -681,7 +681,7 @@ export const dataStates: any = {
   pendiente: {
     ...dataBase,
     background: 'https://cdn.eclass.com/img/cursos/default3.png',
-    id: 15,
+    id: 18,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -718,7 +718,7 @@ export const dataStates: any = {
   },
   terminado: {
     ...dataBase,
-    id: 16,
+    id: 19,
     hasFinanzeFreezed: false,
     status: {
       ...dataBase.status,
@@ -758,7 +758,7 @@ export const dataStates: any = {
   terminado2: {
     ...dataBase,
     logo: 'https://cdn.eclass.com/img/productos/logos/logo-eclass-academy-square.jpg',
-    id: 17,
+    id: 20,
     hasFinanzeFreezed: false,
     Profile: {
       id: 1,
@@ -801,7 +801,7 @@ export const dataStates: any = {
   },
   terminado3: {
     ...dataBase,
-    id: 18,
+    id: 21,
     hasFinanzeFreezed: false,
     logo: '',
     status: {
@@ -836,6 +836,47 @@ export const dataStates: any = {
       text: 'Ir a mi curso',
     },
     labels: [],
+  },
+  proximamente: {
+    ...dataBase,
+    id: 22,
+    hasFinanzeFreezed: false,
+    status: {
+      ...dataBase.status,
+      id: 3,
+      name: 'inscripcion',
+    },
+    progress: {
+      ...dataBase.progress,
+      label: 'Tu curso iniciara el Lunes 16 de Enero de 2023',
+      icon: 'schedule',
+    },
+    dateStatus: {
+      ...dataBase.dateStatus,
+      hasDates: true,
+    },
+    information: [
+      {
+        icon: 'certificate',
+        text: 'Certificado por ACHS',
+        href: '',
+      },
+    ],
+    action: {
+      ...dataBase.action,
+      text: 'Ver informacion del curso',
+      targetBlank: true,
+    },
+    soonCourse: {
+      show: true,
+      text: 'Próximamente',
+    },
+    labels: [
+      {
+        id: 'OBLIGATORY',
+        text: 'Obligatorio',
+      },
+    ],
   },
 }
 

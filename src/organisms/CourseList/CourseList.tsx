@@ -33,7 +33,7 @@ export function CourseList({
       m={m}
       w="100%"
     >
-      {courses?.map((course: Type.AcademicList) => (
+      {courses?.map((course: Type.ExtendAcademicList) => (
         <Boxes data={course} type={typeBox} modalPaymentText={modalPaymentText} key={course.id} />
       ))}
     </Box>

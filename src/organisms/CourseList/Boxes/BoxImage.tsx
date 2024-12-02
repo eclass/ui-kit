@@ -8,7 +8,7 @@ import { isCourseActive } from '../utils'
 interface ImageBoxProps {
   backgroundImg: string
   title: string
-  data?: Type.AcademicList
+  data?: Type.ExtendAcademicList
   size?: 'large' | 'small'
   m?: string
 }
@@ -33,7 +33,6 @@ export function BoxImage({
     large: '286px',
     small: '197px',
   }
-
   return (
     <WithRipples enabled={isCourseActive(data?.action?.enabled ?? false, data?.Profile?.id)}>
       <Box

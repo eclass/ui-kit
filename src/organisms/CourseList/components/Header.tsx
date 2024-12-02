@@ -9,19 +9,38 @@ import { Profile } from '@icons'
 const STUDENT = 4
 
 export function Header(): JSX.Element {
-  const { background, labels, logo, logoAlt, Profile: profile } = React.useContext(CourseBoxContext)
+  const {
+    background,
+    labels,
+    logo,
+    logoAlt,
+    Profile: profile,
+    soonCourse,
+  } = React.useContext(CourseBoxContext)
 
   return (
     <Box
       as="header"
-      bgImg={background}
       bgPos="center"
       bgSize="cover"
       height="8.75rem"
       borderBottom={vars('borders-light')}
       pos="relative"
+      _before={{
+        content: '""',
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        width: '100%',
+        height: '100%',
+        backgroundImage: background,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        opacity: soonCourse?.show ?? false ? 0.3 : 1,
+        zIndex: -1,
+      }}
     >
-      <Box p="1rem">
+      <Box p="1rem" display="flex" gap="0.625rem">
         {profile?.id !== STUDENT && (
           <Label bg={vars('colors-neutral-white')} m="0 0 .625rem 0">
             <Flex>
@@ -40,6 +59,11 @@ export function Header(): JSX.Element {
                 {item.text}
               </Label>
             ))}
+          </Stack>
+        )}
+        {soonCourse?.show && soonCourse?.text && (
+          <Stack direction="row" spacing=".625rem" wrap="wrap">
+            <Label>{soonCourse.text}</Label>
           </Stack>
         )}
       </Box>
