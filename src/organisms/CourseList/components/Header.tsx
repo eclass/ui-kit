@@ -33,7 +33,7 @@ export function Header(): JSX.Element {
         left: 0,
         width: '100%',
         height: '100%',
-        backgroundImage: background,
+        backgroundImage: `url(${background ?? ''})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         opacity: soonCourse?.show ?? false ? 0.3 : 1,
