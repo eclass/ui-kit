@@ -21,8 +21,6 @@ export function Header(): JSX.Element {
   return (
     <Box
       as="header"
-      bgPos="center"
-      bgSize="cover"
       height="8.75rem"
       borderBottom={vars('borders-light')}
       pos="relative"
@@ -37,7 +35,7 @@ export function Header(): JSX.Element {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         opacity: soonCourse?.show ?? false ? 0.3 : 1,
-        zIndex: -1,
+        zIndex: 0,
       }}
     >
       <Box p="1rem" display="flex" gap="0.625rem">
@@ -50,7 +48,7 @@ export function Header(): JSX.Element {
           </Label>
         )}
         {labels !== undefined && labels.length > 0 && (
-          <Stack direction="row" spacing=".625rem" wrap="wrap">
+          <Stack direction="row" spacing=".625rem" wrap="wrap" zIndex={2}>
             {labels.map((item, index) => (
               <Label
                 key={index}
@@ -62,7 +60,7 @@ export function Header(): JSX.Element {
           </Stack>
         )}
         {soonCourse?.show && soonCourse?.text && (
-          <Stack direction="row" spacing=".625rem" wrap="wrap">
+          <Stack direction="row" spacing=".625rem" wrap="wrap" zIndex={2}>
             <Label>{soonCourse.text}</Label>
           </Stack>
         )}
