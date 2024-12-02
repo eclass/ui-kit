@@ -1,8 +1,10 @@
 import { AcademicBox } from '@eclass/api'
 
 export type ExtendAcademicList = AcademicBox & {
-  show?: true
-  text?: string
+  soonCourse?: {
+    show?: true
+    text?: string
+  }
 }
 
 interface PaymentText {
