@@ -38,7 +38,7 @@ export function Header(): JSX.Element {
         zIndex: 0,
       }}
     >
-      <Box p="1rem" display="flex" gap="0.625rem">
+      <Box p="1rem" display="flex" gap="0.625rem" position="absolute" zIndex={2}>
         {profile?.id !== STUDENT && (
           <Label bg={vars('colors-neutral-white')} m="0 0 .625rem 0">
             <Flex>
@@ -78,6 +78,7 @@ export function Header(): JSX.Element {
           overflow="hidden"
           borderRadius={vars('radii-small')}
           w="6.25rem"
+          zIndex={2}
         >
           <Image src={logo} alt={logoAlt ?? 'logo'} maxHeight="3.5rem" maxWidth="6.25rem" />
         </Center>
