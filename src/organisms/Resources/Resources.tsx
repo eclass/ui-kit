@@ -4,6 +4,7 @@ import { Icons } from './Icons'
 import { vars } from '@/theme'
 import { Download, DiagonalArrow } from '@/atoms/Icons'
 import { Ripples } from '@/atoms'
+import { StandardBackground } from './StandardBackground'
 
 interface ResourcesProps {
   id: string | number
@@ -27,6 +28,31 @@ export const Resources: FC<ResourcesProps> = ({
   const cssActive = {
     boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
   }
+
+  const colorFill = (): string => {
+    const colorMap: { [key: string]: string } = {
+      jpeg: '#FFBC27',
+      jpg: '#FFBC27',
+      png: '#FFBC27',
+      gif: '#FFBC27',
+      ppt: '#FF7A14',
+      pptx: '#FF7A14',
+      doc: '#0189FF',
+      docx: '#0189FF',
+      csv: '#28A745',
+      xls: '#28A745',
+      xlsx: '#28A745',
+      pdf: '#CC0000',
+      mp4: '#56CCF2',
+      avi: '#56CCF2',
+      mkv: '#56CCF2',
+      mp3: '#9B51E0',
+      wav: '#9B51E0',
+      url: '#1E2DFF',
+    }
+
+    return colorMap[resourceType as keyof typeof colorMap] || '#FFBC27'
+  }
   return (
     <Link
       href={resourceLink}
@@ -44,16 +70,35 @@ export const Resources: FC<ResourcesProps> = ({
       <Ripples>
         <Box
           width="285px"
-          height="147px"
+          height="139px"
+          justifyContent="center"
+          textAlign="center"
+          alignItems="center"
+          display="grid"
+          padding="1rem"
+        >
+          <Icons type={resourceType} />
+          <Box
+            position="absolute"
+            width="100%"
+            height="100%"
+            zIndex="-1"
+            top="0px"
+            left="0px"
+            opacity="0.8"
+          >
+            <StandardBackground colorFill={colorFill()} />
+          </Box>
+        </Box>
+        <Box
+          width="285px"
+          height="107px"
           justifyContent="center"
           textAlign="center"
           display="grid"
-          gap="8px"
+          // gap="8px"
           padding="1rem"
         >
-          <Box>
-            <Icons type={resourceType} />
-          </Box>
           <Box>
             <Text
               fontFamily="Roboto"

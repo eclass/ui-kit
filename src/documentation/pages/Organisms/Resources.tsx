@@ -22,6 +22,22 @@ const dataFakeEvents = [
   },
   {
     id: '3',
+    resourceType: 'ppt',
+    resourceTitle: 'Calendario semestral',
+    resourceDetail: 'Fechas importantes de tus cursos',
+    resourceLink: 'https://www.oas.org/juridico/spanish/mesicic2_col_ley_30_sp.pdf',
+    resourceTextDownload: 'Descargar',
+  },
+  {
+    id: '4',
+    resourceType: 'doc',
+    resourceTitle: 'Calendario semestral',
+    resourceDetail: 'Fechas importantes de tus cursos',
+    resourceLink: 'https://www.oas.org/juridico/spanish/mesicic2_col_ley_30_sp.pdf',
+    resourceTextDownload: 'Descargar',
+  },
+  {
+    id: '5',
     resourceType: 'url',
     resourceTitle: 'Enlace recomendado 1',
     resourceDetail: 'El fundador de OpenAI habla sobre el futuro ',
@@ -66,13 +82,17 @@ const ResourcesPage: FC = () => {
         <Resources {...dataFakeEvents[0]} />
         <Resources {...dataFakeEvents[1]} />
       </Box>
+      <Box display="flex" gap="8px">
+        <Resources {...dataFakeEvents[2]} />
+        <Resources {...dataFakeEvents[3]} />
+      </Box>
       <MyTittle>Recurso de tipo url</MyTittle>
       <MyText>
         En el caso de que el recurso sea un enlace, el icono se mostrara con un icono de enlace con
         solo usar resourceType = 'url'
       </MyText>
       <Box display="flex" gap="8px">
-        <Resources {...dataFakeEvents[2]} />
+        <Resources {...dataFakeEvents[4]} />
       </Box>
 
       <MyTittle>Tipos de iconos en los recursos disponibles</MyTittle>
