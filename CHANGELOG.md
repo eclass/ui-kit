@@ -1,3 +1,10 @@
+## [1.50.1](https://github.com/eclass/ui-kit/compare/v1.50.0...v1.50.1) (2025-01-13)
+
+
+### Bug Fixes
+
+* se corrige margin para cada linea prueba cv ([#660](https://github.com/eclass/ui-kit/issues/660)) ([7a849fe](https://github.com/eclass/ui-kit/commit/7a849fe49bd291c07695f970898eaf1f8c461f5d))
+
 # [1.50.0](https://github.com/eclass/ui-kit/compare/v1.49.3...v1.50.0) (2025-01-13)
 
 
