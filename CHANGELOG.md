@@ -1,3 +1,10 @@
+# [1.50.0](https://github.com/eclass/ui-kit/compare/v1.49.3...v1.50.0) (2025-01-13)
+
+
+### Features
+
+* se crea caja recurso con fondos de colores por tipo de archivo ([#659](https://github.com/eclass/ui-kit/issues/659)) ([cd53b73](https://github.com/eclass/ui-kit/commit/cd53b73a469b92bcd782506e56de1c2b4f95878e))
+
 ## [1.49.3](https://github.com/eclass/ui-kit/compare/v1.49.2...v1.49.3) (2024-12-02)
 
 
