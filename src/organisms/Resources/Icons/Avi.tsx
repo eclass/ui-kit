@@ -7,48 +7,53 @@ export const Avi: FC = () => {
   const id = `clip${uniqueId()}`
   return (
     <Icon
-      width="32px"
-      height="32px"
-      viewBox="0 0 32 32"
+      width="70px"
+      height="70px"
+      viewBox="0 0 70 70"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clipPath={`url(#${id})`}>
-        <path d="M20 1V9H28" stroke="#B0CFE0" strokeWidth="2" strokeMiterlimit="10" />
+      <g clipPath="url(#clip0_3171_3696)">
         <path
-          d="M28 13V9L20 1H4V13"
-          stroke="#B0CFE0"
-          strokeWidth="2"
+          d="M43.75 2.1875V19.6875H61.25"
+          stroke="white"
+          strokeWidth="4"
+          strokeMiterlimit="10"
+        />
+        <path
+          d="M61.25 28.4375V19.6875L43.75 2.1875H8.75V28.4375"
+          stroke="white"
+          strokeWidth="4"
           strokeMiterlimit="10"
           strokeLinecap="square"
         />
         <path
-          d="M4 27V31H28V27"
-          stroke="#B0CFE0"
-          strokeWidth="2"
+          d="M8.75 59.0625V67.8125H61.25V59.0625"
+          stroke="white"
+          strokeWidth="4"
           strokeMiterlimit="10"
           strokeLinecap="square"
         />
         <path
-          d="M13 23L12.7 21.9H10.8L10.6 23H8.90002L10.8 17.3H12.9L14.8 23H13ZM12.4 20.7L12.2 19.8C12.1 19.6 12.1 19.3 12 19C11.9 18.7 11.9 18.4 11.8 18.3C11.8 18.4 11.7 18.7 11.7 19C11.7 19.3 11.5 19.9 11.2 20.8H12.4V20.7Z"
-          fill="#B0CFE0"
+          d="M28.4375 50.3125L27.7812 47.9063H23.625L23.1875 50.3125H19.4688L23.625 37.8438H28.2188L32.375 50.3125H28.4375ZM27.125 45.2813L26.6875 43.3125C26.4688 42.875 26.4688 42.2188 26.25 41.5625C26.0313 40.9063 26.0313 40.25 25.8125 40.0312C25.8125 40.25 25.5938 40.9063 25.5938 41.5625C25.5938 42.2188 25.1563 43.5312 24.5 45.5H27.125V45.2813Z"
+          fill="white"
         />
         <path
-          d="M18.6 17.3H20.3L18.4 23H16.6L14.7 17.3H16.4L17.2 20.2C17.4 20.8 17.4 21.3 17.5 21.5C17.5 21.3 17.6 21.1 17.6 20.8C17.6 20.5 17.7 20.3 17.7 20.2L18.6 17.3Z"
-          fill="#B0CFE0"
+          d="M40.6875 37.8438H44.4062L40.25 50.3125H36.3125L32.1562 37.8438H35.875L37.625 44.1875C38.0625 45.5 38.0625 46.5938 38.2813 47.0313C38.2813 46.5938 38.5 46.1562 38.5 45.5C38.5 44.8438 38.7188 44.4063 38.7188 44.1875L40.6875 37.8438Z"
+          fill="white"
         />
-        <path d="M20.9 23V17.3H22.5V23H20.9Z" fill="#B0CFE0" />
+        <path d="M45.7188 50.3125V37.8438H49.2188V50.3125H45.7188Z" fill="white" />
         <path
-          d="M31 13H1V27H31V13Z"
-          stroke="#B0CFE0"
-          strokeWidth="2"
+          d="M67.8125 28.4375H2.1875V59.0625H67.8125V28.4375Z"
+          stroke="white"
+          strokeWidth="4"
           strokeMiterlimit="10"
           strokeLinecap="square"
         />
       </g>
       <defs>
         <clipPath id={id}>
-          <rect width="32" height="32" fill="white" />
+          <rect width="70px" height="70px" fill="white" />
         </clipPath>
       </defs>
     </Icon>
