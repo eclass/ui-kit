@@ -92,11 +92,11 @@ export const Resources: FC<ResourcesProps> = ({
         </Box>
         <Box
           width="285px"
-          height="107px"
+          height="auto"
           justifyContent="center"
           textAlign="center"
           display="grid"
-          // gap="8px"
+          gap="8px"
           padding="1rem"
         >
           <Box>

@@ -39,8 +39,8 @@ const dataFakeEvents = [
   {
     id: '5',
     resourceType: 'url',
-    resourceTitle: 'Enlace recomendado 1',
-    resourceDetail: 'El fundador de OpenAI habla sobre el futuro ',
+    resourceTitle: 'Seminario Principios de Agilidad y Transforamcion Digital',
+    resourceDetail: 'Ingresa con la siguiente clave: EEClas.2025',
     resourceLink: 'https://www.oas.org/juridico/spanish/mesicic2_col_ley_30_sp.pdf',
     resourceTextDownload: 'Ir al recurso',
   },
