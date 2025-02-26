@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react'
 import { NotificationIcon } from './NotificationIcon'
 import { Ripples } from '@/atoms'
 import { Calendar, Clock } from '../Events/Icons'
+import { format, parseISO } from 'date-fns'
 
 interface IEventList {
   hasNotification?: boolean
@@ -11,8 +12,7 @@ interface IEventList {
   courseName: string
   courseTranslation: string
   courseid?: number
-  eventDate: any
-  eventTime: any
+  start: any
 }
 
 export const EventsList = ({
@@ -22,9 +22,15 @@ export const EventsList = ({
   courseName,
   courseTranslation,
   color,
-  eventDate,
-  eventTime,
+  start
 }: IEventList) => {
+
+  // Convertir la fecha sin ajustar zona horaria
+  const parsedDate = typeof start === 'string' ? parseISO(start) : start
+
+  // Formatos de fecha y hora
+  const formattedDate = format(parsedDate, 'EEE d MMM')
+  const formattedTime = format(parsedDate, 'h:mm a')
 
   const border = `1px solid #E8E8E8` 
 
@@ -66,7 +72,7 @@ export const EventsList = ({
               }
             }}>
               <Calendar/>
-              <span>{eventDate}</span>
+              <span>{formattedDate}</span>
             </Box>
             <Box paddingLeft="8px" sx={{
               'path': {
@@ -74,12 +80,12 @@ export const EventsList = ({
               }
             }}>
               <Clock /> 
-              <span>{eventTime}</span>
+              <span>{formattedTime}</span>
             </Box>
           </Box>
           {isDropdown && (
             <Box display="flex" alignItems="center" gap="4px" lineHeight="19px">
-              <Box h="10px" w="10px" bg={color} borderRadius={'50%'} />
+              <Box h="10px" w="10px" bg={color ? color : 'red'} borderRadius={'50%'} />
               <Box as="span" color={'#808080'} fontSize="14px"> 
                 <strong>{courseTranslation}</strong> {courseName}
               </Box>
@@ -90,3 +96,4 @@ export const EventsList = ({
     </Ripples>
   )
 }
+

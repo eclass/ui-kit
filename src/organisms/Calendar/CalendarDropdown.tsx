@@ -1,6 +1,7 @@
-import { Box, Menu, MenuButton, MenuGroup, MenuItem, MenuList, useMediaQuery } from '@chakra-ui/react'
+import { Box, Menu, MenuButton, MenuGroup, MenuItem, MenuList, useMediaQuery, forwardRef } from '@chakra-ui/react'
+import { addDays, isAfter, isTomorrow, parseISO, startOfDay } from 'date-fns'
 import { createGlobalStyle } from 'styled-components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { CalendarButtonIcon } from './CalendarButtonIcon'
 import { BtnSecondary, NewTooltip } from '@/molecules'
@@ -8,29 +9,13 @@ import { NotificationIcon } from './NotificationIcon'
 import { NoEventsIcon } from './NoEventsIcon'
 import { EventsList } from './EventList'
 
-interface IEvent {
-    id: number
-    start: string
-    end: string
-    associated_resource: {
-      id: number
-      name: string
-    }
-    course: {
-      id: number
-      name: string
-    }
-}
   
 interface ICalendarDropdownProps {
-  m?: string
-  events?: IEvent[]
-  seenEvents?: string[]
-  todayEvents: any
-  tomorrowEvents: any
-  upcomingEvents: any
-  noEvents: boolean
+  courseText: string
   onClick: () => void
+  m?: string
+  menuPosition?: string
+  events?: any
 }
 
 const HiddenBackground = createGlobalStyle`
@@ -42,16 +27,31 @@ const HiddenBackground = createGlobalStyle`
 export const CalendarDropdown = ({
   m,
   events,
-  seenEvents,
-  todayEvents,
-  tomorrowEvents,
-  upcomingEvents,
-  noEvents,
-  onClick
+  onClick,
+  menuPosition,
+  courseText
 }: ICalendarDropdownProps) => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
   const [isTooltipDisabled, setTooltipDisabled] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
+
+  const today = startOfDay(new Date())
+  const tomorrow = addDays(today, 1)
+  const todayEvents = events?.filter(
+      (event: { start: string }) => startOfDay(parseISO(event.start)).getTime() === today.getTime())
+  const tomorrowEvents = events?.filter((event: { start: string }) => isTomorrow(parseISO(event.start)))
+  const upcomingEvents = events?.filter((event: { start: string }) => isAfter(startOfDay(parseISO(event.start)), tomorrow))
+  const noEvents = events?.length === 0
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      setTooltipDisabled(true)
+    } else {
+      const timer = setTimeout(() => setTooltipDisabled(false), 300)
+      return () => clearTimeout(timer)
+    }
+  }, [isMenuOpen])
+
 
   return (
     <Box
@@ -60,18 +60,23 @@ export const CalendarDropdown = ({
       m={m}
       sx={{
         '>div': {
-          transform: 'translate3d(6px, 40px, 0px) !important',
+          transform: menuPosition ? menuPosition : 'translate3d(6px, 40px, 0px) !important',
         },
         '.chakra-menu__menu-list': {
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
           ml: isMobile ? '-22px' : '0',
-          left: isMobile ? '-22px' : '0',
+          left: isMobile ? '-22px' : 'unset',
           width: isMobile ? '100vw' : '500px',
-          height: isMobile ? 'auto' : '560px',
+          height: isMobile ? 'auto' : 'auto',
+          maxHeight: '560px',
+          animation: 'none !important',
+          transition: 'none !important',
+          transform: 'none !important',
+          opacity: '1 !important',
         },
       }}>
-      <Menu onOpen={() => setMenuOpen(true)} onClose={() => setMenuOpen(false)}>
+      <Menu onOpen={() => setMenuOpen(true)} onClose={() => setMenuOpen(false)} computePositionOnMount placement="bottom-end">
         {({ isOpen }) => (
           <>
             {isOpen && isMobile && <HiddenBackground />}
@@ -84,12 +89,16 @@ export const CalendarDropdown = ({
                 width="30px"
                 sx={{
                   '>span': {
+                    alignSelf: 'baseline',
                     justifyItems: 'center',
-                    paddingBottom: '1px'
                   },
-                }}>
+                  '.notification': {
+                    position: 'absolute'
+                  }
+                }}
+              >
                 <CalendarButtonIcon />
-                {/* <NotificationIcon /> */}
+                <NotificationIcon />
               </MenuButton>
             </NewTooltip>
             <MenuList
@@ -150,7 +159,7 @@ export const CalendarDropdown = ({
                   {/* {t('CalendarGoto')} */}
                 </BtnSecondary>
               )}
-              {todayEvents.length > 0 && (
+              {todayEvents && todayEvents.length > 0 && (
                 <MenuGroup title="Hoy">
                   {todayEvents.map((event: any) => {
                     return (
@@ -163,17 +172,16 @@ export const CalendarDropdown = ({
                           name={event.associated_resource.name}
                           courseid={event.course.id}
                           courseName={event.course.name}
-                          eventDate={event.start}
-                          eventTime={event.end}
+                          start={event.start}
                           isDropdown
-                          courseTranslation={'Curso'}
+                          courseTranslation={courseText}
                         />
                       </MenuItem>
                     )
                   })}
                 </MenuGroup>
               )}
-              {tomorrowEvents.length > 0 && (
+              {tomorrowEvents && tomorrowEvents.length > 0 && (
                 <MenuGroup title="Mañana">
                   {tomorrowEvents.map((event: any) => {
                     return (
@@ -186,8 +194,7 @@ export const CalendarDropdown = ({
                           name={event.associated_resource.name}
                           courseid={event.course.id}
                           courseName={event.course.name}
-                          eventDate={event.start}
-                          eventTime={event.end}
+                          start={event.start}
                           isDropdown
                           courseTranslation={'Curso'}
                         />
@@ -209,8 +216,7 @@ export const CalendarDropdown = ({
                           name={event.associated_resource.name}
                           courseid={event.course.id}
                           courseName={event.course.name}
-                          eventDate={event.start}
-                          eventTime={event.end}
+                          start={event.start}
                           isDropdown
                           courseTranslation={'Curso'}
                         />
