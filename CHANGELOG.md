@@ -1,3 +1,11 @@
+# [1.51.0](https://github.com/eclass/ui-kit/compare/v1.50.1...v1.51.0) (2025-03-05)
+
+
+### Features
+
+* **PDYE-1116:** avance dropdown uikit y prueba con mock data ([#662](https://github.com/eclass/ui-kit/issues/662)) ([a7e7913](https://github.com/eclass/ui-kit/commit/a7e79137c52816112590ce037d1e85b6f017a443))
+* **PDYE-1116:** componentes menu dropdown calendario ([#661](https://github.com/eclass/ui-kit/issues/661)) ([c0fdaf7](https://github.com/eclass/ui-kit/commit/c0fdaf7944ec07fcaeadf2369180d584083a58da))
+
 ## [1.50.1](https://github.com/eclass/ui-kit/compare/v1.50.0...v1.50.1) (2025-01-13)
 
 
