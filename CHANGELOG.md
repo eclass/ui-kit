@@ -1,3 +1,10 @@
+## [1.51.3](https://github.com/eclass/ui-kit/compare/v1.51.2...v1.51.3) (2025-03-05)
+
+
+### Bug Fixes
+
+* **PDYE-1119:** exports calendario ([#666](https://github.com/eclass/ui-kit/issues/666)) ([ed8886e](https://github.com/eclass/ui-kit/commit/ed8886ec5d6929fe79af5da18de2e9950da0ee5a))
+
 ## [1.51.2](https://github.com/eclass/ui-kit/compare/v1.51.1...v1.51.2) (2025-03-05)
 
 
