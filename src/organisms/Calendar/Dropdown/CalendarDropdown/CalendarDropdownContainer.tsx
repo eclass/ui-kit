@@ -52,6 +52,7 @@ export const CalendarDropdownContainer = ({
         },
 
         '.chakra-menu__menu-list': {
+          padding: '0',
           position: 'absolute',
           width: isMobile ? '100vw' : '500px',
           maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',

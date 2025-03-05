@@ -20,15 +20,16 @@ export const Header = ({ text, isMobile }: { text?: string; isMobile: boolean })
         {text ?? 'Próximas fechas importantes de tus cursos'}
       </Box>
       <Box
+        className="arrow"
         aria-hidden
         borderBottom="12px solid #5C5C5C"
         borderLeft="14px solid transparent"
         borderRight="14px solid transparent"
-        className="arrow"
+        display={isMobile ? 'none' : 'block'}
         height="0"
-        position="absolute"
-        right={isMobile ? '71px' : '61px'}
-        top="-9px"
+        position="fixed"
+        right={isMobile ? '71px' : '-437px'}
+        top={isMobile ? '54px' : '-9px'}
         width="0"
       />
     </>
