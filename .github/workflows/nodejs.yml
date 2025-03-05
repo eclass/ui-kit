@@ -17,7 +17,7 @@ jobs:
       - uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
+      - name: Add Known Hosts
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
@@ -31,10 +31,13 @@ jobs:
         run: npm run lint:check
       - name: Testing JEST
         run: npm run test
+
   release:
     if: github.ref == 'refs/heads/main'
     needs: test
     runs-on: ubuntu-latest
+    outputs:
+      new_version: ${{ steps.get_version.outputs.VERSION }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -44,7 +47,7 @@ jobs:
       - uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
+      - name: Add Known Hosts
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
@@ -54,13 +57,16 @@ jobs:
         run: rm -rf node_modules
       - name: Clean install on CI
         run: npm ci
-      - name: Build library
-        run: npm run build
       - name: Release version
+        id: semantic_release
         run: npx semantic-release@18
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Get new version
+        id: get_version
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
 
   build-pages:
     name: Build to GitHub Pages
@@ -81,7 +87,7 @@ jobs:
       - uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
+      - name: Add Known Hosts
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
@@ -91,8 +97,10 @@ jobs:
         run: rm -rf node_modules
       - name: Clean install on CI
         run: npm ci
+
       - name: Generate new Build to Pages
-        run: npm run deploy
+        run: VITE_APP_VERSION=${{ needs.release.outputs.new_version }} npm run deploy
+
       - name: Upload deploy-ready build files
         uses: actions/upload-artifact@v4
         with:
@@ -118,7 +126,7 @@ jobs:
       - uses: webfactory/ssh-agent@v0.7.0
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
+      - name: Add Known Hosts
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
