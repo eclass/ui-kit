@@ -1,3 +1,10 @@
+## [1.51.5](https://github.com/eclass/ui-kit/compare/v1.51.4...v1.51.5) (2025-03-05)
+
+
+### Bug Fixes
+
+* exports para nueva version de ts ([#668](https://github.com/eclass/ui-kit/issues/668)) ([8f1e175](https://github.com/eclass/ui-kit/commit/8f1e17513705b0af07e1b4ca2571c4558da00f24))
+
 ## [1.51.4](https://github.com/eclass/ui-kit/compare/v1.51.3...v1.51.4) (2025-03-05)
 
 
