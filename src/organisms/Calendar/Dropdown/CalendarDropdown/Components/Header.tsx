@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
-export const Header = ({ text, isMobile }: { text?: string; isMobile: boolean }) => {
+export const Header = ({ text, isMobile }: { text?: string; isMobile: boolean }): JSX.Element => {
   return (
     <>
       <Box
@@ -15,7 +15,8 @@ export const Header = ({ text, isMobile }: { text?: string; isMobile: boolean })
         position="absolute"
         width={isMobile ? '100vw' : '100%'}
         top={0}
-        zIndex="1">
+        zIndex="1"
+      >
         {text ?? 'Próximas fechas importantes de tus cursos'}
       </Box>
       <Box

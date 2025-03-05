@@ -16,7 +16,13 @@ interface EventsProps {
   colors: any
 }
 
-export const Events = ({ events, text, redirecToCalendar, isMobile, colors }: EventsProps) => {
+export const Events = ({
+  events,
+  text,
+  redirecToCalendar,
+  isMobile,
+  colors,
+}: EventsProps): JSX.Element => {
   const { today, tomorrow, next } = events
   return (
     <Box
@@ -85,7 +91,7 @@ interface EventsGroupProps {
   colors: any
 }
 
-const EventsGroup = ({ title, events, text, colors }: EventsGroupProps) => {
+const EventsGroup = ({ title, events, text, colors }: EventsGroupProps): JSX.Element => {
   if (!events || (events && events.length === 0)) return <></>
   return (
     <Box

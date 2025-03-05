@@ -24,24 +24,21 @@ export const EventsList = ({
   text,
   date,
   hours,
-}: IEventList) => {
-  const border = "1px solid #E8E8E8"
+}: IEventList): JSX.Element => {
+  const border = '1px solid #E8E8E8'
   const bgColor = color || '#82504A'
 
   return (
     // <Ripples>
-    <Box
-      className="eventsList"
-      borderTop={border}
-      padding="16px 24px"
-    >
+    <Box className="eventsList" borderTop={border} padding="16px 24px">
       <Box display="flex" flexDirection="column" gap="8px">
         <Box
           lineHeight="21px"
           display="flex"
           justifyContent="space-between"
           alignItems="center"
-          fontSize="16px">
+          fontSize="16px"
+        >
           {name} {hasNotification && <NotificationIcon />}
         </Box>
         <Box
@@ -55,13 +52,14 @@ export const EventsList = ({
             span: {
               verticalAlign: 'middle',
             },
-          }}>
+          }}
+        >
           <Box paddingRight="8px" borderRight={border}>
-            <Calendar/>
+            <Calendar />
             <span>{date}</span>
           </Box>
           <Box paddingLeft="8px">
-            <Clock/>
+            <Clock />
             <span>{hours}</span>
           </Box>
         </Box>

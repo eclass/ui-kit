@@ -1,9 +1,8 @@
-
 import { MenuButton } from '@chakra-ui/react'
 
 import { CalendarButtonIcon } from '../Icons/CalendarButtonIcon'
 import { NotificationIcon } from '../../../EventsList/NotificationIcon'
-import { NewTooltip } from '@/molecules';
+import { NewTooltip } from '@/molecules'
 
 interface IGoToCalendar {
   hasNew: boolean
@@ -11,7 +10,7 @@ interface IGoToCalendar {
   tooltipDisabled: boolean
 }
 
-export const GoToCalendar = ({ hasNew, text, tooltipDisabled }:IGoToCalendar ) => {
+export const GoToCalendar = ({ hasNew, text, tooltipDisabled }: IGoToCalendar): JSX.Element => {
   return (
     <NewTooltip label={text ?? 'Calendario'} m="2px 0 0 0" isDisabled={tooltipDisabled}>
       <MenuButton
@@ -29,9 +28,10 @@ export const GoToCalendar = ({ hasNew, text, tooltipDisabled }:IGoToCalendar ) =
           '.notification': {
             position: 'absolute',
             top: '-1px',
-            right: '-1px'
+            right: '-1px',
           },
-        }}>
+        }}
+      >
         <CalendarButtonIcon />
         {hasNew && <NotificationIcon />}
       </MenuButton>

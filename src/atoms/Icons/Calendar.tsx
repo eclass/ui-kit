@@ -13,5 +13,4 @@ export function Calendar(props: BaseProps): JSX.Element {
   )
 }
 
-
-Calendar.displayName = 'Calendar' 
+Calendar.displayName = 'Calendar'

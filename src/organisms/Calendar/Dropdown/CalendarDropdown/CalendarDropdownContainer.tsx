@@ -36,6 +36,20 @@ export const CalendarDropdownContainer = ({
     tooltip: t('Calendar'),
   }
 
+  // const text = {
+  //   buttonCalendar: 'CalendarGoto',
+  //   course: 'CalendarCourse',
+  //   empty: 'CalendarDontEvent',
+  //   events: {
+  //     today: 'CalendarToday',
+  //     tomorrow: 'CalendarTomorrow',
+  //     next: 'CalendarNext',
+  //   },
+  //   header: 'CalendarNextDates',
+  //   loading: 'Cargando',
+  //   tooltip: 'Calendar',
+  // }
+
   // Resuelve tooltip que se mantiene visible al cerrar el menu
   useEffect(() => {
     if (isMenuOpen) {
@@ -81,31 +95,32 @@ export const CalendarDropdownContainer = ({
         '.react-ripples': {
           width: 'inherit',
         },
-      }}>
+      }}
+    >
       <Menu autoSelect={false} onOpen={() => setMenuOpen(true)} onClose={onClose}>
-          <>
-            <GoToCalendar
-              hasNew={hasNew ?? false}
-              text={text.tooltip}
-              tooltipDisabled={isTooltipDisabled}
-            />
-            <MenuList>
-              <Header text={text.header} isMobile={isMobile} />
-              {loading ? (
-                <Loading text={text.loading} />
-              ) : events.length === 0 || empty ? (
-                <Empty text={text.empty} />
-              ) : (
-                <Events
-                  colors={colors}
-                  events={all}
-                  text={text}
-                  redirecToCalendar={redirectToCalendar}
-                  isMobile={isMobile}
-                />
-              )}
-            </MenuList>
-          </>
+        <>
+          <GoToCalendar
+            hasNew={hasNew ?? false}
+            text={text.tooltip}
+            tooltipDisabled={isTooltipDisabled}
+          />
+          <MenuList>
+            <Header text={text.header} isMobile={isMobile} />
+            {loading ? (
+              <Loading text={text.loading} />
+            ) : events.length === 0 || empty ? (
+              <Empty text={text.empty} />
+            ) : (
+              <Events
+                colors={colors}
+                events={all}
+                text={text}
+                redirecToCalendar={redirectToCalendar}
+                isMobile={isMobile}
+              />
+            )}
+          </MenuList>
+        </>
       </Menu>
     </Box>
   )
