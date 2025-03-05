@@ -1,3 +1,10 @@
+## [1.51.6](https://github.com/eclass/ui-kit/compare/v1.51.5...v1.51.6) (2025-03-05)
+
+
+### Bug Fixes
+
+* se detecta la version en produccion de github actions ([#669](https://github.com/eclass/ui-kit/issues/669)) ([608d9f3](https://github.com/eclass/ui-kit/commit/608d9f371b0e86c3a4aac1243cb5d4ec2d833351))
+
 ## [1.51.5](https://github.com/eclass/ui-kit/compare/v1.51.4...v1.51.5) (2025-03-05)
 
 
