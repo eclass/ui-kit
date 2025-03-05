@@ -1,3 +1,10 @@
+## [1.51.1](https://github.com/eclass/ui-kit/compare/v1.51.0...v1.51.1) (2025-03-05)
+
+
+### Bug Fixes
+
+* dropdown deploy ([#663](https://github.com/eclass/ui-kit/issues/663)) ([549aa81](https://github.com/eclass/ui-kit/commit/549aa81c1224c0eb2a7dd79a2aea259903c35d19))
+
 # [1.51.0](https://github.com/eclass/ui-kit/compare/v1.50.1...v1.51.0) (2025-03-05)
 
 
