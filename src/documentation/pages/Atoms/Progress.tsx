@@ -1,5 +1,5 @@
-import { Progress } from '@atoms'
-import { MyHeading, MyText, ListComponent, Code } from '@/documentation/components'
+import { Progress } from 'atoms'
+import { MyHeading, MyText, ListComponent, Code } from 'documentation/components'
 
 export const ViewProgress = (): JSX.Element => {
   return (

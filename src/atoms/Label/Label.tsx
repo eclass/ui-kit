@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react'
 
-import { vars } from '@theme'
+import { vars } from 'theme'
 
 export interface LabelProps {
   children: React.ReactChild

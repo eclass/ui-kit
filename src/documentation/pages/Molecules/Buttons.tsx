@@ -1,6 +1,6 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
-import { BtnPrimary, BtnSecondary, BtnTertiary, BtnLink } from '@/molecules'
-import { GoAhead, Password } from '@/atoms/Icons'
+import { ListComponent, MyHeading, MyText, MyTittle, Code } from 'documentation/components'
+import { BtnPrimary, BtnSecondary, BtnTertiary, BtnLink } from 'molecules'
+import { GoAhead, Password } from 'atoms/Icons'
 
 export const Buttons = (): JSX.Element => {
   return (

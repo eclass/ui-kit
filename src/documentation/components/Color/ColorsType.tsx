@@ -1,5 +1,5 @@
-import { BoxColor } from '@/documentation/components/Color/BoxColor'
-import { colors } from '@/theme/colors'
+import { BoxColor } from 'documentation/components/Color/BoxColor'
+import { colors } from 'theme/colors'
 import { Box } from '@chakra-ui/react'
 
 export const ColorsType = ({

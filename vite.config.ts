@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
 import path from 'path'
+import { version } from './package.json'
 
 // https://vitejs.dev/config/
 
@@ -15,10 +16,16 @@ if (buildEnv === 'DOCUMENTATION') {
     build: {
       sourcemap: true,
     },
+    define : {
+      _APP_VERSION_: JSON.stringify(version),
+    }
   }
 } else {
   myDefineConfig = {
     plugins: [react(), tsconfigPaths()],
+    define : {
+      _APP_VERSION_: JSON.stringify(version),
+    },
     build: {
       lib: {
         entry: path.resolve(__dirname, 'src/index.ts'),

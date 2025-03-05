@@ -2,8 +2,8 @@ import * as React from 'react'
 import { LinkBox, Box, Flex, LinkOverlay } from '@chakra-ui/react'
 
 import { Header, Section, Footer } from '../components'
-import { Ripples } from '@atoms'
-import { vars } from '@theme'
+import { Ripples } from 'atoms'
+import { vars } from 'theme'
 import { isCourseActive } from '../utils'
 import * as Type from '../types'
 

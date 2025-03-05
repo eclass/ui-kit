@@ -1,4 +1,4 @@
-import { vars } from '@theme'
+import { vars } from 'theme'
 import { Button } from '@chakra-ui/react'
 import {
   GoAhead,
@@ -11,7 +11,7 @@ import {
   Multimedia,
   AcademicRecord,
   Download,
-} from '@/atoms/Icons'
+} from 'atoms/Icons'
 
 type XOR<T, U> = T | U extends object
   ? (T extends U ? never : T) | (U extends T ? never : U)

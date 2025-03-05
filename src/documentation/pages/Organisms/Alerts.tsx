@@ -1,6 +1,6 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
-import { Alert } from '@/organisms'
-import { Profile } from '@/atoms/Icons'
+import { ListComponent, MyHeading, MyText, MyTittle, Code } from 'documentation/components'
+import { Alert } from 'organisms'
+import { Profile } from 'atoms/Icons'
 
 export const ViewAlert = (): JSX.Element => {
   return (

@@ -1,4 +1,4 @@
-import { vars } from '@theme'
+import { vars } from 'theme'
 import { Box } from '@chakra-ui/react'
 
 export interface props {

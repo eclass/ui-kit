@@ -1,4 +1,4 @@
-import { vars } from '@/theme'
+import { vars } from 'theme'
 import { Box, Divider, Heading, Text } from '@chakra-ui/react'
 import { FC } from 'react'
 

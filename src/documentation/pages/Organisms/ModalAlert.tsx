@@ -1,8 +1,8 @@
-import { MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
-import { ModalAlertDoc } from '@/documentation/components/Organisms'
-// import { ModalAlert } from '@/organisms'
+import { MyHeading, MyText, MyTittle, Code } from 'documentation/components'
+import { ModalAlertDoc } from 'documentation/components/Organisms'
+// import { ModalAlert } from 'organisms'
 // ModalAlertDoc
-// import { dataFake } from '@/organisms/CourseList/utils'
+// import { dataFake } from 'organisms/CourseList/utils'
 
 export const ViewModalAlert = (): JSX.Element => {
   return (

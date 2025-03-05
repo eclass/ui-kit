@@ -1,5 +1,5 @@
-import { MyHeading, MyText, Code } from '@/documentation/components'
-import { UserWay } from '@/molecules/UserWay/UserWay'
+import { MyHeading, MyText, Code } from 'documentation/components'
+import { UserWay } from 'molecules/UserWay/UserWay'
 
 export const ViewUserWay = (): JSX.Element => {
   return (

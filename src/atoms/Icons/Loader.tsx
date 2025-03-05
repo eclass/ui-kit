@@ -1,4 +1,4 @@
-import { uniqueId } from '@/services'
+import { uniqueId } from 'services'
 
 interface props {
   fill?: string

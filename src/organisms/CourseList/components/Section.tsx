@@ -4,7 +4,7 @@ import { Box, Heading, Link, List, HStack, Text, ListItem, Flex } from '@chakra-
 import { CourseBoxContext } from '../Boxes/BoxTraditional'
 import { DateStatus } from './DateStatus'
 import { IconSelection } from './IconSelection'
-import { vars } from '@theme'
+import { vars } from 'theme'
 import { CourseStatus } from './CourseStatus'
 
 export function Section(): JSX.Element | null {

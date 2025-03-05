@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Box } from '@chakra-ui/react'
 
-import { vars } from '@/theme'
+import { vars } from 'theme'
 
 export const Notes: FC = ({ children }): JSX.Element => {
   return (

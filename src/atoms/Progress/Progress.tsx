@@ -1,6 +1,6 @@
 import { CircularProgress } from '@chakra-ui/react'
 
-import { vars } from '@theme'
+import { vars } from 'theme'
 
 interface ProgressProps {
   value: number

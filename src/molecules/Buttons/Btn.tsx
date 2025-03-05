@@ -1,8 +1,8 @@
 import { Box, Button } from '@chakra-ui/react'
 import Ripples from 'react-ripples'
 
-import { vars } from '@theme'
-import { Loader } from '@icons'
+import { vars } from 'theme'
+import { Loader } from 'atoms/Icons'
 
 interface colorScheme {
   main: string

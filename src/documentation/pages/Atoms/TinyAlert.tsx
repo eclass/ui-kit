@@ -1,5 +1,5 @@
-import { TinyAlert } from '@atoms'
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { TinyAlert } from 'atoms'
+import { ListComponent, MyHeading, MyText, MyTittle, Code } from 'documentation/components'
 
 export const ViewTinyAlert = (): JSX.Element => {
   return (

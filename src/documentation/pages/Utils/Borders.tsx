@@ -1,14 +1,7 @@
 import { Box } from '@chakra-ui/react'
 
-import {
-  ListComponent,
-  MyHeading,
-  MyText,
-  MyTittle,
-  BoxCopy,
-  Code,
-} from '@/documentation/components'
-import { vars } from '@/theme'
+import { ListComponent, MyHeading, MyText, MyTittle, BoxCopy, Code } from 'documentation/components'
+import { vars } from 'theme'
 
 export const ViewBorders = (): JSX.Element => {
   return (

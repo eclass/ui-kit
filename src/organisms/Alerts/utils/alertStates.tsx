@@ -7,8 +7,8 @@ import {
   InfoColor,
   SuccessColor,
   WarningColor,
-} from '@/atoms/Icons'
-import { vars } from '@/theme'
+} from 'atoms/Icons'
+import { vars } from 'theme'
 
 export const alertStates = {
   success: {

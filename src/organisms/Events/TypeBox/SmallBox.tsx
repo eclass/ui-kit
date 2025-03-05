@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { Box, Text, Link } from '@chakra-ui/react'
-import { vars } from '@/theme'
+import { vars } from 'theme'
 import { ItemsEventsProps } from '../EventsTypes'
 import { Calendar, Clock } from '../Icons'
-import { Ripples } from '@/atoms'
+import { Ripples } from 'atoms'
 
 export const SmallBox: FC<ItemsEventsProps> = ({
   id,

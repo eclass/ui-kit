@@ -1,4 +1,4 @@
-import { Base, BaseProps } from '@/atoms/Icons/Base'
+import { Base, BaseProps } from 'atoms/Icons/Base'
 
 export function HamburgerIcon(props: BaseProps): JSX.Element {
   return (

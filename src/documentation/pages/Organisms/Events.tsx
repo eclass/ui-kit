@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
-import { Eventos } from '@/organisms/Events'
+import { MyHeading, MyText, MyTittle, Code } from 'documentation/components'
+import { Eventos } from 'organisms/Events'
 import { Box } from '@chakra-ui/react'
 
 const dataFakeEvents = [

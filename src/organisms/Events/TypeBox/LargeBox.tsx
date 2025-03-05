@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { Box, Flex, Text, Link } from '@chakra-ui/react'
 import { ItemsEventsProps } from '../EventsTypes'
-import { vars } from '@/theme'
+import { vars } from 'theme'
 import { Calendar, Clock } from '../Icons'
-import { Ripples } from '@/atoms'
+import { Ripples } from 'atoms'
 
 export const LargeBox: FC<ItemsEventsProps> = ({
   id,

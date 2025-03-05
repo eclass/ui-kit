@@ -1,5 +1,5 @@
-import { Calendar } from '@/atoms/Icons/Calendar'
-import { Clock } from '@/atoms/Icons/Clock'
+import { Calendar } from 'atoms/Icons/Calendar'
+import { Clock } from 'atoms/Icons/Clock'
 import { Box } from '@chakra-ui/react'
 
 import { NotificationIcon } from './NotificationIcon'

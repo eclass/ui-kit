@@ -1,8 +1,8 @@
 import { Box } from '@chakra-ui/react'
 
-import { Ripples } from '@atoms'
-import { vars } from '@/theme'
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { Ripples } from 'atoms'
+import { vars } from 'theme'
+import { ListComponent, MyHeading, MyText, MyTittle, Code } from 'documentation/components'
 
 export const ViewRipples = (): JSX.Element => {
   return (

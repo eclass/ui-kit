@@ -1,4 +1,4 @@
-import { uniqueId } from '@/services'
+import { uniqueId } from 'services'
 import { Base, BaseProps } from './Base'
 
 export function TinyAlertError(props: BaseProps): JSX.Element {

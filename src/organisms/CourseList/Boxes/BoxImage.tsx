@@ -1,7 +1,7 @@
 import { Box, LinkOverlay } from '@chakra-ui/react'
 
-import { vars } from '@theme'
-import { Ripples } from '@atoms'
+import { vars } from 'theme'
+import { Ripples } from 'atoms'
 import * as Type from '../types'
 import { isCourseActive } from '../utils'
 

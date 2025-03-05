@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { Btn } from './Btn'
-import { Profile } from '@icons'
+import { Profile } from 'atoms/Icons'
 
 const props = {
   onClick: jest.fn(),

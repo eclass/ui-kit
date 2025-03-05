@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { Box, Text, Link } from '@chakra-ui/react'
 import { Icons } from './Icons'
-import { vars } from '@/theme'
-import { Download, DiagonalArrow } from '@/atoms/Icons'
-import { Ripples } from '@/atoms'
+import { vars } from 'theme'
+import { Download, DiagonalArrow } from 'atoms/Icons'
+import { Ripples } from 'atoms'
 import { StandardBackground } from './StandardBackground'
 
 interface ResourcesProps {

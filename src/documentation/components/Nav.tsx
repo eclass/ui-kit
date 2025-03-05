@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { Box } from '@chakra-ui/react'
 
-import { vars } from '@/theme'
+import { vars } from 'theme'
 import { ArrowRight } from '../../atoms/Icons/ArrowRight'
 import { IRoute } from '../utils/routes'
 

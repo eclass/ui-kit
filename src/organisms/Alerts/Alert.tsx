@@ -1,10 +1,10 @@
 import { Box, useMediaQuery } from '@chakra-ui/react'
 
-import { BtnLink, BtnPrimary } from '@/molecules'
-import { vars } from '@/theme'
+import { BtnLink, BtnPrimary } from 'molecules'
+import { vars } from 'theme'
 import { IAlertProps } from './types.d'
 import { alertStates } from './utils/alertStates'
-import { Close } from '@/atoms/Icons'
+import { Close } from 'atoms/Icons'
 
 /**
  * Componente de alerta embebida que puede tener 4 estados diferentes.
