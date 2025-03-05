@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 
-import { BoxCopy, MyHeading, MyText, Code } from '@/documentation/components'
-import { vars } from '@/theme'
+import { BoxCopy, MyHeading, MyText, Code } from 'documentation/components'
+import { vars } from 'theme'
 
 export const ViewSpacialUnits = (): JSX.Element => {
   const sizes = [

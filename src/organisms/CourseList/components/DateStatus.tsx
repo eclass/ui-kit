@@ -1,6 +1,6 @@
 import { Text } from '@chakra-ui/react'
 
-import { vars } from '@theme'
+import { vars } from 'theme'
 
 interface DateStatusProps {
   date?: string

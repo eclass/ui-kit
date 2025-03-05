@@ -1,5 +1,5 @@
 import { Btn, propsBaseBtns } from './Btn'
-import { vars } from '@theme'
+import { vars } from 'theme'
 
 /**
  * Componente BtnSecondary

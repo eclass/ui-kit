@@ -1,6 +1,6 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { ListComponent, MyHeading, MyText, MyTittle, Code } from 'documentation/components'
 import { NewTooltip } from '../../../molecules/Tooltip/NewTooltip'
-import { BtnPrimary } from '@/molecules'
+import { BtnPrimary } from 'molecules'
 import { useDisclosure } from '@chakra-ui/react'
 
 export const ViewTooltip = (): JSX.Element => {

@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import { vars } from '@theme'
+import { vars } from 'theme'
 
 import { TinyAlertInfo, TinyAlertError, TinyAlertWarning, TinyAlertSuccess } from '../Icons'
 

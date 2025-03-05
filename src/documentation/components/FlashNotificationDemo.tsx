@@ -1,5 +1,5 @@
-import { FlashNotification, useFlashNotification } from '@/organisms'
-import { IFlashNotificationProps } from '@/organisms/Alerts/types'
+import { FlashNotification, useFlashNotification } from 'organisms'
+import { IFlashNotificationProps } from 'organisms/Alerts/types'
 import { Box, Button } from '@chakra-ui/react'
 
 export default function FlashNotificationDemo({

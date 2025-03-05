@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 import { alertColorStates } from '../Alerts/utils/alertStates'
 import { ModalAlertProps } from './types'
-import { BtnLink } from '@/molecules'
+import { BtnLink } from 'molecules'
 
 export function ModalAlert({
   showModal,

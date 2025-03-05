@@ -1,6 +1,6 @@
-import { MyHeading, MyText, MyTittle, MyLink, Code } from '@/documentation/components'
-import { CourseList } from '@/organisms'
-import { dataFake } from '@/organisms/CourseList/utils'
+import { MyHeading, MyText, MyTittle, MyLink, Code } from 'documentation/components'
+import { CourseList } from 'organisms'
+import { dataFake } from 'organisms/CourseList/utils'
 
 export const ViewCourseList = (): JSX.Element => {
   return (

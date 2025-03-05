@@ -7,8 +7,7 @@ import { HamburgerIcon } from './HamburgerIcon'
 import { IRoute, routes } from '../utils/routes'
 import { Logo } from './Logo'
 import { Nav } from './Nav'
-import { vars } from '@/theme'
-import { version } from 'package.json'
+import { vars } from 'theme'
 
 export const Layout = (): JSX.Element => {
   const [showNav, setShowNav] = useState(false)
@@ -130,7 +129,8 @@ export const Layout = (): JSX.Element => {
           }}
         >
           <Logo />
-          <Center>Ultima version: {version}</Center>
+
+          <Center>Ultima version: {_APP_VERSION_}</Center>
           {routes.map((route: IRoute) => {
             return <Nav key={route.label} route={route} />
           })}

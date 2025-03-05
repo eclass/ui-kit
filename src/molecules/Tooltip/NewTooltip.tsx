@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Tooltip, PlacementWithLogical, CSSObject } from '@chakra-ui/react'
-import { vars } from '@/theme'
+import { vars } from 'theme'
 
 interface TooltipProps {
   className?: string

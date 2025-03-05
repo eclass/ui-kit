@@ -1,7 +1,7 @@
 import { Box } from '@chakra-ui/react'
 
-import { Accessibility } from '@/atoms/Icons/Accessibility'
-import { vars } from '@theme'
+import { Accessibility } from 'atoms/Icons/Accessibility'
+import { vars } from 'theme'
 
 export function UserWay(): JSX.Element {
   const triggerWidget = (): void => {

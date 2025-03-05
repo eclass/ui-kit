@@ -16,7 +16,7 @@
     "incremental": true,
     "jsx": "react-jsx",
     "importHelpers": true,
-    "baseUrl": ".",
+    "baseUrl": "./src/",
     "paths": {
       "@/*": ["src/*"],
       "@atoms": ["src/atoms"],

@@ -2,7 +2,7 @@ import { MenuButton } from '@chakra-ui/react'
 
 import { CalendarButtonIcon } from '../Icons/CalendarButtonIcon'
 import { NotificationIcon } from '../../../EventsList/NotificationIcon'
-import { NewTooltip } from '@/molecules'
+import { NewTooltip } from 'molecules'
 
 interface IGoToCalendar {
   hasNew: boolean

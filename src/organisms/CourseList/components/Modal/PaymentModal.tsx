@@ -11,8 +11,8 @@ import {
   Text,
 } from '@chakra-ui/react'
 
-import { vars } from '@theme'
-import { AlertInfo } from '@/atoms/Icons'
+import { vars } from 'theme'
+import { AlertInfo } from 'atoms/Icons'
 import * as Type from '../../types'
 
 interface PaymentModalProps {

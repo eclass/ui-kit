@@ -1,5 +1,5 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
-import FlashNotificationDemo from '@/documentation/components/FlashNotificationDemo'
+import { ListComponent, MyHeading, MyText, MyTittle, Code } from 'documentation/components'
+import FlashNotificationDemo from 'documentation/components/FlashNotificationDemo'
 
 export const ViewFlashNotification = (): JSX.Element => {
   return (

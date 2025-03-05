@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { ModalAlert } from '@/organisms'
-import { BtnPrimary } from '@/molecules'
-import { ModalAlertProps } from '@/organisms/ModalAlert/types'
+import { ModalAlert } from 'organisms'
+import { BtnPrimary } from 'molecules'
+import { ModalAlertProps } from 'organisms/ModalAlert/types'
 
 export function ModalAlertDoc(): JSX.Element {
   const [isOpen, setIsOpen] = useState(false)

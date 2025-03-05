@@ -1,5 +1,5 @@
-import { ColorsType } from '@/documentation/components/Color/ColorsType'
-import { MyHeading, MyText, MyTittle } from '@/documentation/components/'
+import { ColorsType } from 'documentation/components/Color/ColorsType'
+import { MyHeading, MyText, MyTittle } from 'documentation/components/'
 
 export const Colors = (): JSX.Element => {
   return (

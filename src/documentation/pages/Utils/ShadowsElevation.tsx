@@ -1,5 +1,5 @@
-import { BoxCopy, ListComponent, MyHeading, MyText, Code } from '@/documentation/components'
-import { vars } from '@/theme'
+import { BoxCopy, ListComponent, MyHeading, MyText, Code } from 'documentation/components'
+import { vars } from 'theme'
 
 export const ViewShadowsElevation = (): JSX.Element => {
   return (

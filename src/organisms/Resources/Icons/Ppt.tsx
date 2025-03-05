@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { Icon } from '@chakra-ui/react'
 
-import { uniqueId } from '@/services'
+import { uniqueId } from 'services'
 
 export const Ppt: FC = () => {
   const id = `clip${uniqueId()}`

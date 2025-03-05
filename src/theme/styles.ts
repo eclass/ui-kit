@@ -1,4 +1,4 @@
-// import { vars } from '@theme'
+// import { vars } from 'theme'
 
 export const styles = {
   global: (props: any) => ({

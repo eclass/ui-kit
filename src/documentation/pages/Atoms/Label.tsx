@@ -1,6 +1,6 @@
-import { Label } from '@atoms'
-import { vars } from '@/theme'
-import { MyHeading, MyText, MyTittle, ListComponent, Code } from '@/documentation/components/'
+import { Label } from 'atoms'
+import { vars } from 'theme'
+import { MyHeading, MyText, MyTittle, ListComponent, Code } from 'documentation/components/'
 
 export const ViewLabel = (): JSX.Element => {
   return (

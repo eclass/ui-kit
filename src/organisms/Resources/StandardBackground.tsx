@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { uniqueId } from '@/services'
+import { uniqueId } from 'services'
 
 interface StandardBackgroundProps {
   colorFill: string

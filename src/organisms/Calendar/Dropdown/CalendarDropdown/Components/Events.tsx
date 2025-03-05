@@ -1,4 +1,4 @@
-import { BtnSecondary } from '@/molecules'
+import { BtnSecondary } from 'molecules'
 import { Box, MenuGroup } from '@chakra-ui/react'
 import { Key } from 'react'
 
