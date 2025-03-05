@@ -56,21 +56,21 @@ export const CalendarDropdownContainer = ({
       zIndex={4}
       className="calendarDropdown"
       mr="24px"
+      position="relative"
       sx={{
         '>div': {
-          transform: 'translate(6px, 40px)!important',
+          transform: 'translate3d(-409px, 38px, 0px) !important',
         },
         '.chakra-menu__menu-list': {
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
-          ml: isMobile ? '-22px' : '0',
-          left: isMobile ? '-22px' : '0',
           width: isMobile ? '100vw' : '500px',
           height: isMobile || empty ? 'auto' : '560px',
           animation: 'none !important',
           transition: 'none !important',
           transform: 'none !important',
           opacity: '1 !important',
+          position: 'absolute',
         },
         '.chakra-menu__group__title': {
           fontSize: '18px',
@@ -81,13 +81,8 @@ export const CalendarDropdownContainer = ({
         '.react-ripples': {
           width: 'inherit',
         },
-                // Añadir un estilo condicional para ocultar el fondo cuando sea móvil
-                '#ViewContainer': isMobile && isMenuOpen ? {
-                  display: 'none',
-                } : {},
       }}>
       <Menu autoSelect={false} onOpen={() => setMenuOpen(true)} onClose={onClose}>
-        {({ isOpen }) => (
           <>
             <GoToCalendar
               hasNew={hasNew ?? false}
@@ -111,7 +106,6 @@ export const CalendarDropdownContainer = ({
               )}
             </MenuList>
           </>
-        )}
       </Menu>
     </Box>
   )
