@@ -1,3 +1,10 @@
+## [1.51.4](https://github.com/eclass/ui-kit/compare/v1.51.3...v1.51.4) (2025-03-05)
+
+
+### Bug Fixes
+
+* se cambia la forma de exporta por cambios de la version de ts ([#667](https://github.com/eclass/ui-kit/issues/667)) ([21ad1d6](https://github.com/eclass/ui-kit/commit/21ad1d61a4b9da840f6a4243e9f24947a8f1a714))
+
 ## [1.51.3](https://github.com/eclass/ui-kit/compare/v1.51.2...v1.51.3) (2025-03-05)
 
 
