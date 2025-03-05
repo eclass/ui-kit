@@ -1,4 +1,3 @@
-
 import { BtnSecondary } from '@/molecules'
 import { Box, MenuGroup } from '@chakra-ui/react'
 import { Key } from 'react'
@@ -7,14 +6,14 @@ import { EventsList } from '../../../EventsList/EventsList'
 
 interface EventsProps {
   events: {
-    today: Event[];
-    tomorrow: Event[];
-    next: Event[];
-  };
-  text: any;
-  redirecToCalendar: () => void;
-  isMobile: boolean;
-  colors: any;
+    today: Event[]
+    tomorrow: Event[]
+    next: Event[]
+  }
+  text: any
+  redirecToCalendar: () => void
+  isMobile: boolean
+  colors: any
 }
 
 export const Events = ({ events, text, redirecToCalendar, isMobile, colors }: EventsProps) => {
@@ -30,7 +29,8 @@ export const Events = ({ events, text, redirecToCalendar, isMobile, colors }: Ev
         '.calendar-events-group': {
           borderBottom: '1px solid #E8E8E8',
         },
-      }}>
+      }}
+    >
       {redirecToCalendar && (
         <Box
           sx={{
@@ -41,7 +41,8 @@ export const Events = ({ events, text, redirecToCalendar, isMobile, colors }: Ev
               minW: 'fit-content',
               minH: 'fit-content',
             },
-          }}>
+          }}
+        >
           <BtnSecondary onClick={redirecToCalendar} m="72px 0 0 24px">
             {text.buttonCalendar ?? 'Ir a Mi Calendario'}
           </BtnSecondary>
@@ -69,19 +70,19 @@ export const Events = ({ events, text, redirecToCalendar, isMobile, colors }: Ev
   )
 }
 interface Event {
-  id: Key | null | undefined;
-  associated_resource: { name: any };
-  course: { name: string | undefined };
-  formatedDate: { start: string; hours: string };
-  course_id: string | number;
-  isNew: boolean | undefined;
+  id: Key | null | undefined
+  associated_resource: { name: any }
+  course: { name: string | undefined }
+  formatedDate: { start: string; hours: string }
+  course_id: string | number
+  isNew: boolean | undefined
 }
 
 interface EventsGroupProps {
-  title: string;
-  events: Event[];
-  text: any;
-  colors: any;
+  title: string
+  events: Event[]
+  text: any
+  colors: any
 }
 
 const EventsGroup = ({ title, events, text, colors }: EventsGroupProps) => {
@@ -97,44 +98,54 @@ const EventsGroup = ({ title, events, text, colors }: EventsGroupProps) => {
         '.chakra-menu__menuitem > div': {
           w: '100%',
         },
-      }}>
+      }}
+    >
       <MenuGroup title={title}>
-        {events.map((event: { id: Key | null | undefined; associated_resource: { name: any }; course: { name: string | undefined }; formatedDate: { start: string; hours: string }; course_id: string | number; isNew: boolean | undefined }) => {
-          return (
-            <Box // Una vez que el evento se comporte como link, se debe cambiar Box a MenuItem y aplicar el efecto de focus
-              bg="#FFFFFF"
-              border="none"
-              cursor="default"
-              padding="0"
-              key={event.id}
-              _hover={{
-                boxShadow: 'none !important',
-                cursor: 'default !important',
-                bg: 'none !important',
-              }}
-              _focus={{
-                background: 'none !important',
-                boxShadow: 'none !important',
-              }}
-              // _focus={{
-              //   background: 'none !important',
-              //   boxShadow: `inset 0px 0.5px 0px 3px ${vars('colors-icon-deepSkyBlue')}`,
-              // }}
-            >
-              <EventsList
+        {events.map(
+          (event: {
+            id: Key | null | undefined
+            associated_resource: { name: any }
+            course: { name: string | undefined }
+            formatedDate: { start: string; hours: string }
+            course_id: string | number
+            isNew: boolean | undefined
+          }) => {
+            return (
+              <Box // Una vez que el evento se comporte como link, se debe cambiar Box a MenuItem y aplicar el efecto de focus
+                bg="#FFFFFF"
+                border="none"
+                cursor="default"
+                padding="0"
                 key={event.id}
-                name={event.associated_resource.name || ''}
-                courseName={event.course.name}
-                date={event.formatedDate.start}
-                hours={event.formatedDate.hours}
-                color={event.course_id && colors?.[event.course_id]}
-                text={text.events.course}
-                hasNotification={event.isNew}
-                isDropdown
-              />
-            </Box>
-          )
-        })}
+                _hover={{
+                  boxShadow: 'none !important',
+                  cursor: 'default !important',
+                  bg: 'none !important',
+                }}
+                _focus={{
+                  background: 'none !important',
+                  boxShadow: 'none !important',
+                }}
+                // _focus={{
+                //   background: 'none !important',
+                //   boxShadow: `inset 0px 0.5px 0px 3px ${vars('colors-icon-deepSkyBlue')}`,
+                // }}
+              >
+                <EventsList
+                  key={event.id}
+                  name={event.associated_resource.name || ''}
+                  courseName={event.course.name}
+                  date={event.formatedDate.start}
+                  hours={event.formatedDate.hours}
+                  color={event.course_id && colors?.[event.course_id]}
+                  text={text.events.course}
+                  hasNotification={event.isNew}
+                  isDropdown
+                />
+              </Box>
+            )
+          }
+        )}
       </MenuGroup>
     </Box>
   )
