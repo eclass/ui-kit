@@ -10,7 +10,7 @@ export interface IEventList {
   name: string
   color?: string
   courseName?: string
-  text?: string
+  text: string
   date: string
   hours: string
 }
