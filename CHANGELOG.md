@@ -1,3 +1,10 @@
+## [1.51.2](https://github.com/eclass/ui-kit/compare/v1.51.1...v1.51.2) (2025-03-05)
+
+
+### Bug Fixes
+
+* **actions:** se actualiza los actions para github pages ([#664](https://github.com/eclass/ui-kit/issues/664)) ([2e9810f](https://github.com/eclass/ui-kit/commit/2e9810f72f70d89ffc0afaf140d1ec2f348eb5c8))
+
 ## [1.51.1](https://github.com/eclass/ui-kit/compare/v1.51.0...v1.51.1) (2025-03-05)
 
 
