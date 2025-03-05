@@ -15,21 +15,21 @@ export const CalendarDropdownContainer = ({
   now,
   redirectToCalendar,
   courseColors: colors,
-}: ICalendarDropdown) => {
+}: ICalendarDropdown): JSX.Element => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
   const { closeAndMarkSeen, empty, hasNew, ...all } = useParseEvents(events, now)
 
   const [isTooltipDisabled, setTooltipDisabled] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
 
-  const text={
+  const text = {
     buttonCalendar: t('CalendarGoto'),
     course: t('CalendarCourse'),
     empty: t('CalendarDontEvent'),
     events: {
-    today: t('CalendarToday'),
-    tomorrow: t('CalendarTomorrow'),
-    next: t('CalendarNext'),
+      today: t('CalendarToday'),
+      tomorrow: t('CalendarTomorrow'),
+      next: t('CalendarNext'),
     },
     header: t('CalendarNextDates'),
     loading: t('Cargando'),
