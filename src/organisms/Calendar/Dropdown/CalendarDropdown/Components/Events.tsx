@@ -3,6 +3,7 @@ import { Box, MenuGroup } from '@chakra-ui/react'
 import { Key } from 'react'
 
 import { EventsList } from '../../../EventsList/EventsList'
+import { Text } from '../../types'
 
 interface EventsProps {
   events: {
@@ -10,7 +11,7 @@ interface EventsProps {
     tomorrow: Event[]
     next: Event[]
   }
-  text: any
+  text: Text
   redirecToCalendar: () => void
   isMobile: boolean
   colors: any
@@ -50,25 +51,25 @@ export const Events = ({
           }}
         >
           <BtnSecondary onClick={redirecToCalendar} m="72px 0 0 24px">
-            {text.buttonCalendar ?? 'Ir a Mi Calendario'}
+            {text?.buttonCalendar ?? 'Ir a Mi Calendario'}
           </BtnSecondary>
         </Box>
       )}
       <EventsGroup
         colors={colors}
-        text={text}
+        text={text.course}
         title={text?.events?.today ?? 'Hoy'}
         events={today}
       />
       <EventsGroup
         colors={colors}
-        text={text}
+        text={text.course}
         title={text?.events?.tomorrow ?? 'Mañana'}
         events={tomorrow}
       />
       <EventsGroup
         colors={colors}
-        text={text}
+        text={text.course}
         title={text?.events?.next ?? 'Próximos'}
         events={next}
       />
@@ -87,7 +88,7 @@ interface Event {
 interface EventsGroupProps {
   title: string
   events: Event[]
-  text: any
+  text: string
   colors: any
 }
 
@@ -144,7 +145,7 @@ const EventsGroup = ({ title, events, text, colors }: EventsGroupProps): JSX.Ele
                   date={event.formatedDate.start}
                   hours={event.formatedDate.hours}
                   color={event.course_id && colors?.[event.course_id]}
-                  text={text.events.course}
+                  text={text}
                   hasNotification={event.isNew}
                   isDropdown
                 />

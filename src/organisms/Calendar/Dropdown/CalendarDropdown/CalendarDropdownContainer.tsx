@@ -11,7 +11,7 @@ import { ICalendarDropdown } from '../types'
 export const CalendarDropdownContainer = ({
   events,
   loading,
-  t,
+  text,
   now,
   redirectToCalendar,
   courseColors: colors,
@@ -21,20 +21,6 @@ export const CalendarDropdownContainer = ({
 
   const [isTooltipDisabled, setTooltipDisabled] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
-
-  const text = {
-    buttonCalendar: t('CalendarGoto'),
-    course: t('CalendarCourse'),
-    empty: t('CalendarDontEvent'),
-    events: {
-      today: t('CalendarToday'),
-      tomorrow: t('CalendarTomorrow'),
-      next: t('CalendarNext'),
-    },
-    header: t('CalendarNextDates'),
-    loading: t('Cargando'),
-    tooltip: t('Calendar'),
-  }
 
   // Resuelve tooltip que se mantiene visible al cerrar el menu
   useEffect(() => {
@@ -59,18 +45,23 @@ export const CalendarDropdownContainer = ({
       position="relative"
       sx={{
         '>div': {
-          transform: 'translate3d(-409px, 38px, 0px) !important',
+          position: isMobile ? 'fixed !important' : 'absolute',
+          left: isMobile ? '0 !important' : 'auto',
+          top: isMobile ? '62px !important' : 'auto',
+          transform: isMobile ? 'none !important' : 'translate3d(-409px, 38px, 0px) !important',
         },
+
         '.chakra-menu__menu-list': {
+          position: 'absolute',
+          width: isMobile ? '100vw' : '500px',
+          maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
+          overflowY: isMobile ? 'auto' : 'hidden',
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
-          width: isMobile ? '100vw' : '500px',
-          height: isMobile || empty ? 'auto' : '560px',
           animation: 'none !important',
           transition: 'none !important',
           transform: 'none !important',
           opacity: '1 !important',
-          position: 'absolute',
         },
         '.chakra-menu__group__title': {
           fontSize: '18px',
@@ -87,15 +78,18 @@ export const CalendarDropdownContainer = ({
         <>
           <GoToCalendar
             hasNew={hasNew ?? false}
-            text={text.tooltip}
+            text={text?.tooltip || 'Ir a Mi Calendario'}
             tooltipDisabled={isTooltipDisabled}
           />
           <MenuList>
-            <Header text={text.header} isMobile={isMobile} />
+            <Header
+              text={text?.header || 'Próximas fechas importantes de tus cursos'}
+              isMobile={isMobile}
+            />
             {loading ? (
-              <Loading text={text.loading} />
+              <Loading text={text?.loading || 'Cargando'} />
             ) : events.length === 0 || empty ? (
-              <Empty text={text.empty} />
+              <Empty text={text?.empty || 'Aún no tienes eventos en tu calendario'} />
             ) : (
               <Events
                 colors={colors}

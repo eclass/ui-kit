@@ -24,11 +24,25 @@ interface Event {
 
 export type Events = Event[]
 
+export interface Text {
+  buttonCalendar: string
+  course: string
+  empty: string
+  events: {
+    today: string
+    tomorrow: string
+    next: string
+  }
+  header: string
+  loading: string
+  tooltip: string
+}
+
 interface ICalendarDropdown {
   courseColors?: Record<string, string>
   events: any
   loading?: boolean
   now: string
   redirectToCalendar: () => void
-  t?: Function
+  text: Text
 }

@@ -3,7 +3,7 @@ import { ICalendarDropdown } from './types'
 
 export const CalendarDropdown = ({
   redirectToCalendar,
-  t,
+  text,
   courseColors,
   now,
   events,
@@ -19,7 +19,7 @@ export const CalendarDropdown = ({
       now={isoDate}
       courseColors={courseColors}
       redirectToCalendar={redirectToCalendar}
-      t={t}
+      text={text}
     />
   )
 }
