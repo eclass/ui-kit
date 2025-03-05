@@ -1,4 +1,4 @@
-export const CalendarButtonIcon = () => (
+export const CalendarButtonIcon = (): JSX.Element => (
   <svg width={16} height={16} fill="none">
     <path
       fill="#fff"

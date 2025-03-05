@@ -36,20 +36,6 @@ export const CalendarDropdownContainer = ({
     tooltip: t('Calendar'),
   }
 
-  // const text = {
-  //   buttonCalendar: 'CalendarGoto',
-  //   course: 'CalendarCourse',
-  //   empty: 'CalendarDontEvent',
-  //   events: {
-  //     today: 'CalendarToday',
-  //     tomorrow: 'CalendarTomorrow',
-  //     next: 'CalendarNext',
-  //   },
-  //   header: 'CalendarNextDates',
-  //   loading: 'Cargando',
-  //   tooltip: 'Calendar',
-  // }
-
   // Resuelve tooltip que se mantiene visible al cerrar el menu
   useEffect(() => {
     if (isMenuOpen) {
@@ -60,7 +46,7 @@ export const CalendarDropdownContainer = ({
     }
   }, [isMenuOpen])
 
-  const onClose = () => {
+  const onClose = (): void => {
     closeAndMarkSeen()
     setMenuOpen(false)
   }
@@ -126,6 +112,6 @@ export const CalendarDropdownContainer = ({
   )
 }
 
-const Loading = ({ text }: { text?: string }) => {
+const Loading = ({ text }: { text?: string }): JSX.Element => {
   return <div>{text ?? 'Loading...'}</div>
 }

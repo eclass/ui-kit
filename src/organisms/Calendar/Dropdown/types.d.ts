@@ -23,3 +23,12 @@ interface Event {
 }
 
 export type Events = Event[]
+
+interface ICalendarDropdown {
+  courseColors?: Record<string, string>
+  events: any
+  loading?: boolean
+  now: string
+  redirectToCalendar: () => void
+  t?: Function
+}

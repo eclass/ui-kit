@@ -5,7 +5,17 @@ const STORAGE_TODAY_EVENT = 'todayEvents'
 const STORAGE_SEEN_EVENT = 'seenEvents'
 const STORAGE_HAS_NEW = 'hasNewEvents'
 
-export const useParseEvents = (events: any[], now: string) => {
+export const useParseEvents = (
+  events: any[],
+  now: string
+): {
+  today: any[]
+  tomorrow: any[]
+  next: any[]
+  hasNew: boolean
+  closeAndMarkSeen: () => void
+  empty: boolean
+} => {
   const [todayEvents, setTodayEvents] = useState<any[]>([])
   const [tomorrowEvents, setTomorrowEvents] = useState<any[]>([])
   const [nextEvents, setNextEvents] = useState<any[]>([])
@@ -16,8 +26,8 @@ export const useParseEvents = (events: any[], now: string) => {
     const today = startOfDay(parseNow)
     const tomorrow = addDays(today, 1)
 
-    const storedTodayEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_TODAY_EVENT) || '[]')
-    const storedSeenEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_SEEN_EVENT) || '[]')
+    const storedTodayEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_TODAY_EVENT) ?? '[]')
+    const storedSeenEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_SEEN_EVENT) ?? '[]')
 
     let newEvents = false
     const todayList: any[] = []
@@ -58,8 +68,8 @@ export const useParseEvents = (events: any[], now: string) => {
   }, [events, now])
 
   // Función para marcar todos los eventos de hoy como vistos
-  const closeAndMarkSeen = () => {
-    const storedSeenEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_SEEN_EVENT) || '[]')
+  const closeAndMarkSeen = (): void => {
+    const storedSeenEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_SEEN_EVENT) ?? '[]')
     const updatedSeenEvents = Array.from(
       new Set([...storedSeenEvent, ...todayEvents.map((e) => e.id)])
     )
@@ -84,7 +94,7 @@ export const useParseEvents = (events: any[], now: string) => {
   }
 }
 
-export const cleanEventsStorage = () => {
+export const cleanEventsStorage = (): void => {
   localStorage.removeItem(STORAGE_TODAY_EVENT)
   localStorage.removeItem(STORAGE_SEEN_EVENT)
   localStorage.removeItem(STORAGE_HAS_NEW)

@@ -26,6 +26,7 @@ export const EventsList = ({
   hours,
 }: IEventList): JSX.Element => {
   const border = '1px solid #E8E8E8'
+  // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
   const bgColor = color || '#82504A'
 
   return (
@@ -69,7 +70,7 @@ export const EventsList = ({
               h="10px"
               w="10px"
               bg={bgColor}
-              borderRadius={'50%'}
+              borderRadius="50%"
               display="block"
               alignSelf="flex-start"
               mt="4px"

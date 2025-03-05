@@ -1,4 +1,4 @@
-export const NoEventsIcon = () => (
+export const NoEventsIcon = (): JSX.Element => (
   <svg width={197} height={197} fill="none">
     <g clipPath="url(#a)">
       <path
