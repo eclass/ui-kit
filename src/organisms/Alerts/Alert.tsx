@@ -15,7 +15,7 @@ import { Close } from '@/atoms/Icons'
  * state='info'
  * buttonName='Texto botón'
  * buttonIcon={<Multimedia />}
- * onClick={() => alert('hola')}
+ * onClick={() => alert('hola ')}
  * m='0 20px'>
  * Mensaje
  * </Alert>
