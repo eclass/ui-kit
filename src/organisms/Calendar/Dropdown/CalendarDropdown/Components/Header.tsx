@@ -1,13 +1,14 @@
 import { Box } from '@chakra-ui/react'
+import { vars } from '@theme'
 
 export const Header = ({ text, isMobile }: { text?: string; isMobile: boolean }): JSX.Element => {
   return (
     <>
       <Box
         as="header"
-        bg="#5C5C5C"
+        bg={vars('colors-neutral-davysGrey') ?? '#5C5C5C'}
         borderRadius={isMobile ? 'none' : '10px 10px 0 0'}
-        color="#FFFFFF"
+        color={vars('colors-neutral-white') ?? '#FFFFFF'}
         fontSize="14px"
         fontWeight="500"
         lineHeight="normal"
@@ -22,7 +23,7 @@ export const Header = ({ text, isMobile }: { text?: string; isMobile: boolean })
       <Box
         className="arrow"
         aria-hidden
-        borderBottom="12px solid #5C5C5C"
+        borderBottom={`12px solid ${vars('colors-neutral-davysGrey')}` ?? '12px solid #5C5C5C'}
         borderLeft="14px solid transparent"
         borderRight="14px solid transparent"
         display={isMobile ? 'none' : 'block'}

@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react'
+import { vars } from '@theme'
 
 import { NoEventsIcon } from '../Icons/NoEventsIcon'
 
@@ -12,7 +13,11 @@ export const Empty = ({ text }: { text?: string }): JSX.Element => {
       padding="104px 0px 64px"
     >
       <NoEventsIcon />
-      <Box fontSize="20px" fontWeight={700} color="#2F2F2F">
+      <Box
+        fontSize="20px"
+        fontWeight="700"
+        color={vars('colors-neutral-darkCharcoal') || '#2F2F2F'}
+      >
         {text ?? 'Aún no tienes eventos en tu calendario'}
       </Box>
     </Box>

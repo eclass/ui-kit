@@ -39,6 +39,7 @@ export interface Text {
 }
 
 interface ICalendarDropdown {
+  m?: string
   courseColors?: Record<string, string>
   events: any
   loading?: boolean
