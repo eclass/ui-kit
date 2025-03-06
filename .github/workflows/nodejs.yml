@@ -37,7 +37,7 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     outputs:
-      new_version: ${{ steps.get_version.outputs.VERSION }} # Salida de la versión
+      new_version: ${{ steps.get_version.outputs.VERSION }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -51,25 +51,28 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
-      - name: Install dependencies
+      - name: Regenerate package-lock.json
+        run: npm i
+      - name: Clean node_modules after regenerate
+        run: rm -rf node_modules
+      - name: Clean install on CI
         run: npm ci
-
-      - name: Run semantic-release
+      - name: Release version
         id: semantic_release
-        run: |
-          VERSION=$(npx semantic-release@18 | grep -oP 'Published release \K[0-9]+\.[0-9]+\.[0-9]+')
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
-          echo "VERSION=$VERSION" >> $GITHUB_OUTPUT
+        run: npx semantic-release@18
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: Verify version
-        run: echo "Nuueva version publicada:" ${{ env.VERSION }}
+      - name: Get new version
+        id: get_version
+        run: echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
 
   build-pages:
     name: Build to GitHub Pages
     needs: release
     runs-on: ubuntu-latest
     env:
-      VITE_APP_VERSION: ${{ needs.release.outputs.new_version }}
       VITE_REACT_DEPLOY_DOCUMENTATION: DOCUMENTATION
 
     steps:
@@ -88,15 +91,15 @@ jobs:
         run: |
           ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
         shell: bash
-      - name: Install dependencies
+      - name: Regenerate package-lock.json
+        run: npm i
+      - name: Clean node_modules after regenerate
+        run: rm -rf node_modules
+      - name: Clean install on CI
         run: npm ci
 
-      # Verificar que la versión esté correctamente asignada
-      - name: Show VITE_APP_VERSION
-        run: echo "Building version:" ${{ env.VITE_APP_VERSION }}
-
       - name: Generate new Build to Pages
-        run: npm run deploy
+        run: VITE_APP_VERSION=${{ needs.release.outputs.new_version }} npm run deploy
 
       - name: Upload deploy-ready build files
         uses: actions/upload-artifact@v4
