@@ -93,9 +93,3 @@ export const useParseEvents = (
     empty,
   }
 }
-
-export const cleanEventsStorage = (): void => {
-  localStorage.removeItem(STORAGE_TODAY_EVENT)
-  localStorage.removeItem(STORAGE_SEEN_EVENT)
-  localStorage.removeItem(STORAGE_HAS_NEW)
-}

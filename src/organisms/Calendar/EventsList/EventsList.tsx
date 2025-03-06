@@ -1,6 +1,7 @@
 import { Calendar } from '@/atoms/Icons/Calendar'
 import { Clock } from '@/atoms/Icons/Clock'
 import { Box } from '@chakra-ui/react'
+import { vars } from '@theme'
 
 import { NotificationIcon } from './NotificationIcon'
 
@@ -25,7 +26,7 @@ export const EventsList = ({
   date,
   hours,
 }: IEventList): JSX.Element => {
-  const border = '1px solid #E8E8E8'
+  const border = `1px solid ${vars('colors-neutral-platinum')}` ?? '1px solid #E8E8E8'
   // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
   const bgColor = color || '#82504A'
 
@@ -75,7 +76,7 @@ export const EventsList = ({
               alignSelf="flex-start"
               mt="4px"
             />
-            <Box as="span" color="#808080" fontSize="14px">
+            <Box as="span" color={vars('colors-neutral-gray') ?? '#808080'} fontSize="14px">
               <strong>{text ?? 'Curso'}:</strong> {courseName}
             </Box>
           </Box>

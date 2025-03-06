@@ -8,12 +8,14 @@ export const CalendarDropdown = ({
   now,
   events,
   loading,
+  m,
 }: ICalendarDropdown): JSX.Element => {
   const date = new Date(now)
   const isoDate = date.toISOString()
 
   return (
     <CalendarDropdownContainer
+      m={m}
       events={events}
       loading={loading}
       now={isoDate}

@@ -15,6 +15,7 @@ export const CalendarDropdownContainer = ({
   now,
   redirectToCalendar,
   courseColors: colors,
+  m,
 }: ICalendarDropdown): JSX.Element => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
   const { closeAndMarkSeen, empty, hasNew, ...all } = useParseEvents(events, now)
@@ -32,6 +33,33 @@ export const CalendarDropdownContainer = ({
     }
   }, [isMenuOpen])
 
+  // Función que oculta el contenido de fondo al abrir el menú en formato mobile.
+  // Para el caso de v8 se usa el id del contenedor y para CV la clase.
+  // En ambos casos es un cambio que se aplica sólo cuando el menú está abierto y en dispositivos móviles.
+  useEffect(() => {
+    const viewContainer = document.getElementById('ViewContainer')
+
+    if (viewContainer) {
+      // Si existe #ViewContainer, lo ocultamos o mostramos
+      viewContainer.style.display = isMenuOpen ? 'none' : ''
+    } else {
+      // Si #ViewContainer no existe, aplicamos la lógica de .main
+      const mainElement = document.querySelector('.main')
+      if (!mainElement) return
+
+      const firstChild = mainElement.firstElementChild
+      if (!firstChild || !(firstChild instanceof HTMLElement)) return
+
+      const headerElement = firstChild.querySelector('header.header')
+      if (!headerElement) return
+
+      const targetElement = headerElement.nextElementSibling
+      if (!targetElement || !(targetElement instanceof HTMLElement)) return
+
+      targetElement.style.display = isMenuOpen ? 'none' : ''
+    }
+  }, [isMenuOpen])
+
   const onClose = (): void => {
     closeAndMarkSeen()
     setMenuOpen(false)
@@ -41,7 +69,7 @@ export const CalendarDropdownContainer = ({
     <Box
       zIndex={4}
       className="calendarDropdown"
-      mr="24px"
+      m={m}
       position="relative"
       sx={{
         '>div': {
@@ -57,6 +85,7 @@ export const CalendarDropdownContainer = ({
           width: isMobile ? '100vw' : '500px',
           maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
           overflowY: isMobile ? 'auto' : 'hidden',
+          background: 'white',
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
           animation: 'none !important',
@@ -66,6 +95,7 @@ export const CalendarDropdownContainer = ({
         },
         '.chakra-menu__group__title': {
           fontSize: '18px',
+          fontWeight: '700',
           lineHeight: '31px',
           margin: '32px 0 0',
           padding: '0 0 8px 24px',

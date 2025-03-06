@@ -1,6 +1,7 @@
 import { BtnSecondary } from '@/molecules'
 import { Box, MenuGroup } from '@chakra-ui/react'
 import { Key } from 'react'
+import { vars } from '@theme'
 
 import { EventsList } from '../../../EventsList/EventsList'
 import { Text } from '../../types'
@@ -34,7 +35,7 @@ export const Events = ({
       pb="32px"
       sx={{
         '.calendar-events-group': {
-          borderBottom: '1px solid #E8E8E8',
+          borderBottom: `1px solid ${vars('colors-neutral-platinum')}` ?? '1px solid #E8E8E8',
         },
       }}
     >
@@ -50,7 +51,7 @@ export const Events = ({
             },
           }}
         >
-          <BtnSecondary onClick={redirecToCalendar} m="72px 0 0 24px">
+          <BtnSecondary onClick={redirecToCalendar} m="72px 0 0 24px" id="RedirectButton">
             {text?.buttonCalendar ?? 'Ir a Mi Calendario'}
           </BtnSecondary>
         </Box>
@@ -99,7 +100,7 @@ const EventsGroup = ({ title, events, text, colors }: EventsGroupProps): JSX.Ele
       className="calendar-events-group"
       _focus={{
         background: 'none !important',
-        border: '1px solid #0189FF',
+        border: `1px solid ${vars('colors-icon-deepSkyBlue')}` ?? '1px solid #0189FF',
       }}
       sx={{
         '.chakra-menu__menuitem > div': {
@@ -119,7 +120,7 @@ const EventsGroup = ({ title, events, text, colors }: EventsGroupProps): JSX.Ele
           }) => {
             return (
               <Box // Una vez que el evento se comporte como link, se debe cambiar Box a MenuItem y aplicar el efecto de focus
-                bg="#FFFFFF"
+                bg={vars('colors-neutral-white') ?? '#FFFFFF'}
                 border="none"
                 cursor="default"
                 padding="0"
