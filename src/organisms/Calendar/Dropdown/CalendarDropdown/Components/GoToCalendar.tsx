@@ -9,13 +9,22 @@ interface IGoToCalendar {
   hasNew: boolean
   text: string
   tooltipDisabled: boolean
+  onlyToCalendar?: boolean
+  onClick?: () => void
 }
 
-export const GoToCalendar = ({ hasNew, text, tooltipDisabled }: IGoToCalendar): JSX.Element => {
+export const GoToCalendar = ({
+  hasNew,
+  text,
+  tooltipDisabled,
+  onlyToCalendar,
+  onClick,
+}: IGoToCalendar): JSX.Element => {
   return (
     <NewTooltip label={text ?? 'Calendario'} m="2px 0 0 0" isDisabled={tooltipDisabled}>
       <MenuButton
-        background={vars('colors-main-blueGrey') ?? '#60798E'}
+        onClick={() => onlyToCalendar && onClick && onClick()}
+        background={vars('colors-main-blueGrey') || '#60798E'}
         border="1px solid transparent"
         borderRadius="100%"
         height="30px"
@@ -35,7 +44,7 @@ export const GoToCalendar = ({ hasNew, text, tooltipDisabled }: IGoToCalendar): 
         }}
       >
         <CalendarButtonIcon />
-        {hasNew && <NotificationIcon />}
+        {!onlyToCalendar && hasNew && <NotificationIcon />}
       </MenuButton>
     </NewTooltip>
   )

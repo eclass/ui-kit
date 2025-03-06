@@ -8,6 +8,7 @@ export const CalendarDropdown = ({
   now,
   events,
   loading,
+  onlyToCalendar = false,
   m,
 }: ICalendarDropdown): JSX.Element => {
   const date = new Date(now)
@@ -22,6 +23,7 @@ export const CalendarDropdown = ({
       courseColors={courseColors}
       redirectToCalendar={redirectToCalendar}
       text={text}
+      onlyToCalendar={onlyToCalendar}
     />
   )
 }
