@@ -1,3 +1,10 @@
+## [1.51.8](https://github.com/eclass/ui-kit/compare/v1.51.7...v1.51.8) (2025-03-06)
+
+
+### Bug Fixes
+
+* nuevo tag de correccion a version publicada ([#680](https://github.com/eclass/ui-kit/issues/680)) ([c7b4e1c](https://github.com/eclass/ui-kit/commit/c7b4e1c51f8c20e1fd4a96a8894c098f8449b12e))
+
 ## [1.51.7](https://github.com/eclass/ui-kit/compare/v1.51.6...v1.51.7) (2025-03-06)
 
 
