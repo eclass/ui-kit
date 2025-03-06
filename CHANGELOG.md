@@ -4,6 +4,14 @@
 ### Bug Fixes
 
 * **PDYE-1136:** ajustes visuales menu dropdown ([#675](https://github.com/eclass/ui-kit/issues/675)) ([518c546](https://github.com/eclass/ui-kit/commit/518c5460fd23d9f0b3b107a99d4d29c5f5b697e7))
+* update tags in file ([#676](https://github.com/eclass/ui-kit/issues/676)) ([5c56b84](https://github.com/eclass/ui-kit/commit/5c56b84370a10b3dbe3e5fc9cf8d075d7daaa267))
+
+## [1.51.5](https://github.com/eclass/ui-kit/compare/v1.51.4...v1.51.5) (2025-03-06)
+
+
+### Bug Fixes
+
+* **PDYE-1136:** ajustes visuales menu dropdown ([#675](https://github.com/eclass/ui-kit/issues/675)) ([518c546](https://github.com/eclass/ui-kit/commit/518c5460fd23d9f0b3b107a99d4d29c5f5b697e7))
 
 ## [1.51.4](https://github.com/eclass/ui-kit/compare/v1.51.3...v1.51.4) (2025-03-05)
 
