@@ -12,7 +12,7 @@ interface EventsProps {
     tomorrow: Event[]
     next: Event[]
   }
-  text: Text
+  text?: Text
   redirecToCalendar: () => void
   isMobile: boolean
   colors: any
@@ -58,19 +58,19 @@ export const Events = ({
       )}
       <EventsGroup
         colors={colors}
-        text={text.course}
+        text={text?.course ?? ''}
         title={text?.events?.today ?? 'Hoy'}
         events={today}
       />
       <EventsGroup
         colors={colors}
-        text={text.course}
+        text={text?.course ?? ''}
         title={text?.events?.tomorrow ?? 'Mañana'}
         events={tomorrow}
       />
       <EventsGroup
         colors={colors}
-        text={text.course}
+        text={text?.course ?? ''}
         title={text?.events?.next ?? 'Próximos'}
         events={next}
       />

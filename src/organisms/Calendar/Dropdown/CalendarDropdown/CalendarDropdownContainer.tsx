@@ -15,6 +15,7 @@ export const CalendarDropdownContainer = ({
   now,
   redirectToCalendar,
   courseColors: colors,
+  onlyToCalendar,
   m,
 }: ICalendarDropdown): JSX.Element => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
@@ -109,28 +110,32 @@ export const CalendarDropdownContainer = ({
         <>
           <GoToCalendar
             hasNew={hasNew ?? false}
-            text={text?.tooltip || 'Ir a Mi Calendario'}
+            text={text?.tooltip ?? 'Ir a Mi Calendario'}
             tooltipDisabled={isTooltipDisabled}
+            onlyToCalendar={onlyToCalendar}
+            onClick={redirectToCalendar}
           />
-          <MenuList>
-            <Header
-              text={text?.header || 'Próximas fechas importantes de tus cursos'}
-              isMobile={isMobile}
-            />
-            {loading ? (
-              <Loading text={text?.loading || 'Cargando'} />
-            ) : events.length === 0 || empty ? (
-              <Empty text={text?.empty || 'Aún no tienes eventos en tu calendario'} />
-            ) : (
-              <Events
-                colors={colors}
-                events={all}
-                text={text}
-                redirecToCalendar={redirectToCalendar}
+          {!onlyToCalendar && (
+            <MenuList>
+              <Header
+                text={text?.header ?? 'Próximas fechas importantes de tus cursos'}
                 isMobile={isMobile}
               />
-            )}
-          </MenuList>
+              {loading ? (
+                <Loading text={text?.loading ?? 'Cargando'} />
+              ) : events.length === 0 || empty ? (
+                <Empty text={text?.empty ?? 'Aún no tienes eventos en tu calendario'} />
+              ) : (
+                <Events
+                  colors={colors}
+                  events={all}
+                  text={text}
+                  redirecToCalendar={redirectToCalendar}
+                  isMobile={isMobile}
+                />
+              )}
+            </MenuList>
+          )}
         </>
       </Menu>
     </Box>
