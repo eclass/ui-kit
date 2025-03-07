@@ -1,5 +1,6 @@
 interface AssociatedResource {
   id: number
+  name: string
 }
 
 interface Course {
@@ -12,7 +13,7 @@ interface FormattedDate {
   hours: string
 }
 
-interface Event {
+export interface Event {
   id: number
   course_id: number
   start: string
@@ -20,6 +21,7 @@ interface Event {
   associated_resource: AssociatedResource
   course: Course
   formatedDate: FormattedDate
+  isNew?: boolean
 }
 
 export type Events = Event[]

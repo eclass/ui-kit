@@ -14,7 +14,7 @@ export const CalendarDropdownContainer = ({
   text,
   now,
   redirectToCalendar,
-  courseColors: colors,
+  courseColors,
   onlyToCalendar,
   m,
 }: ICalendarDropdown): JSX.Element => {
@@ -38,6 +38,8 @@ export const CalendarDropdownContainer = ({
   // Para el caso de v8 se usa el id del contenedor y para CV la clase.
   // En ambos casos es un cambio que se aplica sólo cuando el menú está abierto y en dispositivos móviles.
   useEffect(() => {
+    if (!isMobile || onlyToCalendar) return // Si es mobile  o no abre menu no se ejecuta
+
     const viewContainer = document.getElementById('ViewContainer')
 
     if (viewContainer) {
@@ -127,7 +129,7 @@ export const CalendarDropdownContainer = ({
                 <Empty text={text?.empty ?? 'Aún no tienes eventos en tu calendario'} />
               ) : (
                 <Events
-                  colors={colors}
+                  colors={courseColors}
                   events={all}
                   text={text}
                   redirecToCalendar={redirectToCalendar}
