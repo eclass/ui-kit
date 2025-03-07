@@ -1,3 +1,10 @@
+## [1.51.12](https://github.com/eclass/ui-kit/compare/v1.51.11...v1.51.12) (2025-03-07)
+
+
+### Bug Fixes
+
+* **PDYE-1136:** correccion para boton iphone ([#690](https://github.com/eclass/ui-kit/issues/690)) ([b1aa597](https://github.com/eclass/ui-kit/commit/b1aa5978738ca1d34eeebcba26a089c4405a6ea3))
+
 ## [1.51.11](https://github.com/eclass/ui-kit/compare/v1.51.10...v1.51.11) (2025-03-07)
 
 
