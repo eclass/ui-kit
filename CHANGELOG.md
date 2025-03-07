@@ -1,3 +1,33 @@
+## [1.51.8](https://github.com/eclass/ui-kit/compare/v1.51.7...v1.51.8) (2025-03-06)
+
+
+### Bug Fixes
+
+* nuevo tag de correccion a version publicada ([#680](https://github.com/eclass/ui-kit/issues/680)) ([c7b4e1c](https://github.com/eclass/ui-kit/commit/c7b4e1c51f8c20e1fd4a96a8894c098f8449b12e))
+
+## [1.51.7](https://github.com/eclass/ui-kit/compare/v1.51.6...v1.51.7) (2025-03-06)
+
+
+### Bug Fixes
+
+* version tag added ([#679](https://github.com/eclass/ui-kit/issues/679)) ([716032c](https://github.com/eclass/ui-kit/commit/716032c8e4e1c52e16621173b5d1802060eda482))
+
+## [1.51.6](https://github.com/eclass/ui-kit/compare/v1.51.5...v1.51.6) (2025-03-06)
+
+
+### Bug Fixes
+
+* tag de version para dependencias ([#678](https://github.com/eclass/ui-kit/issues/678)) ([a846eec](https://github.com/eclass/ui-kit/commit/a846eecb50f3fcc64483b60c8e3fa17d430c32ac))
+
+## [1.51.5](https://github.com/eclass/ui-kit/compare/v1.51.4...v1.51.5) (2025-03-06)
+
+
+### Bug Fixes
+
+* **PDYE-1136:** ajustes visuales menu dropdown ([#675](https://github.com/eclass/ui-kit/issues/675)) ([518c546](https://github.com/eclass/ui-kit/commit/518c5460fd23d9f0b3b107a99d4d29c5f5b697e7))
+* **tag:** tagnames correction release ([#677](https://github.com/eclass/ui-kit/issues/677)) ([6b296fa](https://github.com/eclass/ui-kit/commit/6b296fac01717863923a016a8ca4a66f6e55a718))
+* update tags in file ([#676](https://github.com/eclass/ui-kit/issues/676)) ([5c56b84](https://github.com/eclass/ui-kit/commit/5c56b84370a10b3dbe3e5fc9cf8d075d7daaa267))
+
 ## [1.51.4](https://github.com/eclass/ui-kit/compare/v1.51.3...v1.51.4) (2025-03-05)
 
 

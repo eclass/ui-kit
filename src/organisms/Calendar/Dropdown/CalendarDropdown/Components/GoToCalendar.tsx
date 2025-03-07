@@ -24,7 +24,7 @@ export const GoToCalendar = ({
     <NewTooltip label={text ?? 'Calendario'} m="2px 0 0 0" isDisabled={tooltipDisabled}>
       <MenuButton
         onClick={() => onlyToCalendar && onClick && onClick()}
-        background={vars('colors-main-blueGrey') || '#60798E'}
+        background={vars('colors-main-blueGrey') ?? '#60798E'}
         border="1px solid transparent"
         borderRadius="100%"
         height="30px"
