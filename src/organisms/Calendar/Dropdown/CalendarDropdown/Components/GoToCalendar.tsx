@@ -30,13 +30,16 @@ export const GoToCalendar = ({
         height="30px"
         width="30px"
         position="relative"
+        _hover={{
+          bg: 'rgba(96, 121, 142, 0.8)',
+        }}
         sx={{
           '>span': {
             lineHeight: '0',
             justifyItems: 'center',
             alignContent: 'center',
           },
-          '.notification': {
+          '.goToCalendarNotification': {
             position: 'absolute',
             top: '-1px',
             right: '-1px',

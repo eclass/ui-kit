@@ -26,12 +26,9 @@ export const EventsList = ({
   date,
   hours,
 }: IEventList): JSX.Element => {
-  const border = `1px solid ${vars('colors-neutral-platinum')}` ?? '1px solid #E8E8E8'
-  // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
-  const bgColor = color || '#82504A'
+  const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
 
   return (
-    // <Ripples>
     <Box className="eventsList" borderTop={border} padding="16px 24px">
       <Box display="flex" flexDirection="column" gap="8px">
         <Box
@@ -70,7 +67,7 @@ export const EventsList = ({
             <Box
               h="10px"
               w="10px"
-              bg={bgColor}
+              bg={color}
               borderRadius="50%"
               display="block"
               alignSelf="flex-start"
@@ -83,6 +80,5 @@ export const EventsList = ({
         )}
       </Box>
     </Box>
-    // </Ripples>
   )
 }

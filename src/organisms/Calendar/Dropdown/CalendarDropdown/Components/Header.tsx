@@ -23,7 +23,7 @@ export const Header = ({ text, isMobile }: { text?: string; isMobile: boolean })
       <Box
         className="arrow"
         aria-hidden
-        borderBottom={`12px solid ${vars('colors-neutral-davysGrey')}` ?? '12px solid #5C5C5C'}
+        borderBottom={`12px solid ${vars('colors-neutral-davysGrey') ?? '#5C5C5C'}`}
         borderLeft="14px solid transparent"
         borderRight="14px solid transparent"
         display={isMobile ? 'none' : 'block'}
