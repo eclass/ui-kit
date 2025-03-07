@@ -4,7 +4,7 @@ export const NotificationIcon = (): JSX.Element => (
     width="8px"
     height="9px"
     fill="none"
-    className="notification"
+    className="goToCalendarNotification"
   >
     <circle cx="4px" cy="4.5px" r="4px" fill="#FF7A14" />
   </svg>
