@@ -1,3 +1,10 @@
+## [1.51.11](https://github.com/eclass/ui-kit/compare/v1.51.10...v1.51.11) (2025-03-07)
+
+
+### Bug Fixes
+
+* orden y correcciones dropdown calendario ([#689](https://github.com/eclass/ui-kit/issues/689)) ([03f2743](https://github.com/eclass/ui-kit/commit/03f274337e8d488e48f2ff93fd463c20d825ff2f))
+
 ## [1.51.10](https://github.com/eclass/ui-kit/compare/v1.51.9...v1.51.10) (2025-03-07)
 
 
