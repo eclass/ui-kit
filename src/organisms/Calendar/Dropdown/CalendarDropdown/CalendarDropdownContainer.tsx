@@ -62,7 +62,7 @@ export const CalendarDropdownContainer = ({
 
       targetElement.style.display = isMenuOpen ? 'none' : ''
     }
-  }, [isMenuOpen])
+  }, [isMobile, isMenuOpen, onlyToCalendar])
 
   const onClose = (): void => {
     closeAndMarkSeen()
