@@ -1,3 +1,12 @@
+## [1.51.10](https://github.com/eclass/ui-kit/compare/v1.51.9...v1.51.10) (2025-03-07)
+
+
+### Bug Fixes
+
+* **PDYE-1136:** orden archivos y cambio notificacion ([#685](https://github.com/eclass/ui-kit/issues/685)) ([9b3d3e3](https://github.com/eclass/ui-kit/commit/9b3d3e397c7f12c878118dbe469caf8652b385e6))
+* **PDYE-1136:** orden archivos y correcciones estilo ([#687](https://github.com/eclass/ui-kit/issues/687)) ([fe62e2d](https://github.com/eclass/ui-kit/commit/fe62e2dfa2dc7d246a8c308fadc112c6d753298d))
+* version tag correction ([#688](https://github.com/eclass/ui-kit/issues/688)) ([a1c8bc7](https://github.com/eclass/ui-kit/commit/a1c8bc786b596e87883ac3cc66ce3ca2da930a1b))
+
 ## [1.51.9](https://github.com/eclass/ui-kit/compare/v1.51.8...v1.51.9) (2025-03-07)
 
 
