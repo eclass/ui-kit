@@ -1,3 +1,10 @@
+## [1.51.9](https://github.com/eclass/ui-kit/compare/v1.51.8...v1.51.9) (2025-03-07)
+
+
+### Bug Fixes
+
+* **PDYE-1136:** boton sin menu va directo a calendario ([#683](https://github.com/eclass/ui-kit/issues/683)) ([2854f86](https://github.com/eclass/ui-kit/commit/2854f866c60fdb36149cb7d8613a3043b99b02c3))
+
 ## [1.51.8](https://github.com/eclass/ui-kit/compare/v1.51.7...v1.51.8) (2025-03-06)
 
 
