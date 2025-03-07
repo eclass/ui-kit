@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Box, Menu, MenuList, useMediaQuery } from '@chakra-ui/react'
+import { vars } from '@theme'
 
 import { useParseEvents } from './services/parseEvents'
 import { GoToCalendar } from './Components/GoToCalendar'
@@ -71,10 +72,23 @@ export const CalendarDropdownContainer = ({
   return (
     <Box
       zIndex={4}
-      className="calendarDropdown"
+      className={`calendarDropdown ${hasNew && !onlyToCalendar ? 'hasNew' : ''}`}
       m={m}
       position="relative"
       sx={{
+        // Se genera pseudo elemento que actúa como ícono de notificación
+        '&.hasNew::before': {
+          background: vars('colors-secondary-pumpkin') ?? '#FF7A14',
+          borderRadius: '50%',
+          content: '""',
+          display: 'block',
+          height: '8px',
+          width: '8px',
+          position: 'absolute',
+          right: '0',
+          top: '0',
+          zIndex: '1',
+        },
         '>div': {
           position: isMobile ? 'fixed !important' : 'absolute',
           left: isMobile ? '0 !important' : 'auto',
@@ -111,7 +125,6 @@ export const CalendarDropdownContainer = ({
       <Menu autoSelect={false} onOpen={() => setMenuOpen(true)} onClose={onClose}>
         <>
           <GoToCalendar
-            hasNew={hasNew ?? false}
             text={text?.tooltip ?? 'Ir a Mi Calendario'}
             tooltipDisabled={isTooltipDisabled}
             onlyToCalendar={onlyToCalendar}
