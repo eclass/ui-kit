@@ -17,6 +17,8 @@ export const GoToCalendar = ({
   onlyToCalendar,
   onClick,
 }: IGoToCalendar): JSX.Element => {
+  const activeBg = vars('colors-main-deepSkyBlue') ?? '#0189FF'
+
   return (
     <NewTooltip label={text ?? 'Calendario'} m="2px 0 0 0" isDisabled={tooltipDisabled}>
       <MenuButton
@@ -29,6 +31,12 @@ export const GoToCalendar = ({
         padding="0 !important"
         margin="0 !important"
         position="relative"
+        _active={{
+          bg: activeBg,
+          '&:hover': {
+            bg: activeBg,
+          },
+        }}
         _hover={{
           bg: 'rgba(96, 121, 142, 0.8)',
         }}
