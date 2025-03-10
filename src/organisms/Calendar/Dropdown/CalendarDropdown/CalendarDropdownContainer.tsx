@@ -121,7 +121,7 @@ export const CalendarDropdownContainer = ({
           width: isMobile ? '100vw' : '500px',
           maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
           overflowY: isMobile ? 'auto' : 'hidden',
-          background: 'white',
+          background: 'transparent',
           border: 'none',
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
@@ -156,19 +156,21 @@ export const CalendarDropdownContainer = ({
                 text={text?.header ?? 'Próximas fechas importantes de tus cursos'}
                 isMobile={isMobile}
               />
-              {loading ? (
-                <Loading text={text?.loading ?? 'Cargando'} />
-              ) : events.length === 0 || empty ? (
-                <Empty text={text?.empty ?? 'Aún no tienes eventos en tu calendario'} />
-              ) : (
-                <Events
-                  colors={courseColors}
-                  events={all}
-                  text={text}
-                  redirecToCalendar={redirectToCalendar}
-                  isMobile={isMobile}
-                />
-              )}
+              <Box bg={vars('colors-neutral-white') ?? '#FFF'}>
+                {loading ? (
+                  <Loading text={text?.loading ?? 'Cargando'} />
+                ) : events.length === 0 || empty ? (
+                  <Empty text={text?.empty ?? 'Aún no tienes eventos en tu calendario'} />
+                ) : (
+                  <Events
+                    colors={courseColors}
+                    events={all}
+                    text={text}
+                    redirecToCalendar={redirectToCalendar}
+                    isMobile={isMobile}
+                  />
+                )}
+              </Box>
             </MenuList>
           )}
         </>
