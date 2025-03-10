@@ -1,3 +1,10 @@
+## [1.51.14](https://github.com/eclass/ui-kit/compare/v1.51.13...v1.51.14) (2025-03-10)
+
+
+### Bug Fixes
+
+* **PDYE-1136:** color boton activo ([#692](https://github.com/eclass/ui-kit/issues/692)) ([c2e8b4d](https://github.com/eclass/ui-kit/commit/c2e8b4d5b111130ed9f652c40c9dced78eaca1ba))
+
 ## [1.51.13](https://github.com/eclass/ui-kit/compare/v1.51.12...v1.51.13) (2025-03-10)
 
 
