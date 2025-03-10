@@ -73,9 +73,26 @@ export const CalendarDropdownContainer = ({
     <Box
       zIndex={4}
       className={`calendarDropdown ${hasNew && !onlyToCalendar ? 'hasNew' : ''}`}
+      width="30px"
+      height="30px"
       m={m}
       position="relative"
       sx={{
+        // Pseudo-elemento para la flecha
+        '&::after': {
+          content: '""',
+          position: 'absolute',
+          width: '0',
+          height: '0',
+          borderColor: `transparent transparent ${vars('colors-neutral-davysGrey') ?? '#5C5C5C'}
+          transparent`,
+          borderStyle: 'solid',
+          borderWidth: '0 11px 10px 11px',
+          top: isMobile ? '30px' : '30px',
+          right: isMobile ? '3px' : '15px',
+          display: isMenuOpen && !isMobile ? 'block' : 'none',
+          transform: isMobile ? 'none' : 'translateX(50%)',
+        },
         // Se genera pseudo elemento que actúa como ícono de notificación
         '&.hasNew::before': {
           background: vars('colors-secondary-pumpkin') ?? '#FF7A14',
@@ -99,10 +116,13 @@ export const CalendarDropdownContainer = ({
         '.chakra-menu__menu-list': {
           padding: '0',
           position: 'absolute',
+          left: isMobile ? 'auto' : '-30px',
+          top: isMobile ? '-6px !important' : 'auto',
           width: isMobile ? '100vw' : '500px',
           maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
           overflowY: isMobile ? 'auto' : 'hidden',
           background: 'white',
+          border: 'none',
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
           animation: 'none !important',
