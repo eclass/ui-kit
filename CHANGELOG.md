@@ -1,3 +1,10 @@
+## [1.51.15](https://github.com/eclass/ui-kit/compare/v1.51.14...v1.51.15) (2025-03-10)
+
+
+### Bug Fixes
+
+* **PDYE-1117:** background del dropdown de los eventos ([#693](https://github.com/eclass/ui-kit/issues/693)) ([8e9a71a](https://github.com/eclass/ui-kit/commit/8e9a71a2aedbbba0ba2289ed2ea01df22fba151e))
+
 ## [1.51.14](https://github.com/eclass/ui-kit/compare/v1.51.13...v1.51.14) (2025-03-10)
 
 
