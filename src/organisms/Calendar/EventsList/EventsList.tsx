@@ -65,13 +65,17 @@ export const EventsList = ({
         {isDropdown && (
           <Box display="flex" alignItems="center" gap="4px" lineHeight="19px">
             <Box
-              h="10px"
-              w="10px"
+              alignSelf="flex-start"
               bg={color}
               borderRadius="50%"
               display="block"
-              alignSelf="flex-start"
+              h="10px"
               mt="4px"
+              maxH="10px"
+              maxW="10px"
+              minH="10px"
+              minW="10px"
+              w="10px"
             />
             <Box as="span" color={vars('colors-neutral-gray') ?? '#808080'} fontSize="14px">
               <strong>{text ?? 'Curso'}:</strong> {courseName}
