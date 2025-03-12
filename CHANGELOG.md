@@ -1,3 +1,10 @@
+## [1.51.16](https://github.com/eclass/ui-kit/compare/v1.51.15...v1.51.16) (2025-03-12)
+
+
+### Bug Fixes
+
+* **PDYE-1142:** evito que se deformen los colores del curso ([#694](https://github.com/eclass/ui-kit/issues/694)) ([a81f77d](https://github.com/eclass/ui-kit/commit/a81f77dde9d885e9cad2b2587a770042e5c75c2b))
+
 ## [1.51.15](https://github.com/eclass/ui-kit/compare/v1.51.14...v1.51.15) (2025-03-10)
 
 
