@@ -1,3 +1,10 @@
+## [1.51.18](https://github.com/eclass/ui-kit/compare/v1.51.17...v1.51.18) (2025-03-13)
+
+
+### Bug Fixes
+
+* se agrega export de types en package ([#697](https://github.com/eclass/ui-kit/issues/697)) ([408ddbb](https://github.com/eclass/ui-kit/commit/408ddbbea8b25760a107261d3411844b96668a0b))
+
 ## [1.51.17](https://github.com/eclass/ui-kit/compare/v1.51.16...v1.51.17) (2025-03-13)
 
 
