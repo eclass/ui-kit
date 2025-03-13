@@ -11,8 +11,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
+    "isolatedModules": false,
     "incremental": true,
     "jsx": "react-jsx",
     "importHelpers": true,
@@ -28,7 +27,12 @@
     },
     "plugins": [
       { "transform": "typescript-transform-paths", "afterDeclarations": true }
-    ]
+    ],
+    "declaration": true,
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "dist",
+    "noEmit": false
   },
   "include": ["src", "test", "vite.config.ts"],
   "exclude": ["jest.config.js", ".eslintrc.js", "prepare.js"]
