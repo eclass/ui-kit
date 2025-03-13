@@ -1,3 +1,10 @@
+## [1.51.19](https://github.com/eclass/ui-kit/compare/v1.51.18...v1.51.19) (2025-03-13)
+
+
+### Bug Fixes
+
+* se agrega compatibilidad para react19 prueba1 ([#698](https://github.com/eclass/ui-kit/issues/698)) ([5b22df0](https://github.com/eclass/ui-kit/commit/5b22df09bf7a8bacd74ad1c1db72b3068e0f579f))
+
 ## [1.51.18](https://github.com/eclass/ui-kit/compare/v1.51.17...v1.51.18) (2025-03-13)
 
 
