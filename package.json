@@ -11,7 +11,8 @@
   "exports": {
     ".": {
       "import": "./dist/eclass-ui-kit.es.js",
-      "require": "./dist/eclass-ui-kit.umd.js"
+      "require": "./dist/eclass-ui-kit.umd.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "license": "MIT",
