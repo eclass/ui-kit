@@ -90,7 +90,7 @@ export const CalendarDropdownContainer = ({
           borderWidth: '0 11px 10px 11px',
           top: isMobile ? '30px' : '30px',
           right: isMobile ? '3px' : '15px',
-          display: isMenuOpen && !isMobile ? 'block' : 'none',
+          display: isMenuOpen ? 'block' : 'none',
           transform: isMobile ? 'none' : 'translateX(50%)',
         },
         // Se genera pseudo elemento que actúa como ícono de notificación
