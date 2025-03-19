@@ -1,3 +1,10 @@
+## [1.51.21](https://github.com/eclass/ui-kit/compare/v1.51.20...v1.51.21) (2025-03-19)
+
+
+### Bug Fixes
+
+* **PDYE-1146:** calendario, centrar flecha ([#700](https://github.com/eclass/ui-kit/issues/700)) ([eb7b434](https://github.com/eclass/ui-kit/commit/eb7b43433bf354224ac68a21eea900943aa8407c))
+
 ## [1.51.20](https://github.com/eclass/ui-kit/compare/v1.51.19...v1.51.20) (2025-03-19)
 
 
