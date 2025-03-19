@@ -80,18 +80,19 @@ export const CalendarDropdownContainer = ({
       sx={{
         // Pseudo-elemento para la flecha
         '&::after': {
-          content: '""',
-          position: 'absolute',
-          width: '0',
-          height: '0',
-          borderColor: `transparent transparent ${vars('colors-neutral-davysGrey') ?? '#5C5C5C'}
-          transparent`,
+          borderColor: `transparent transparent ${
+            vars('colors-neutral-davysGrey') ?? '#5C5C5C'
+          } transparent`,
           borderStyle: 'solid',
           borderWidth: '0 11px 10px 11px',
-          top: isMobile ? '30px' : '30px',
-          right: isMobile ? '3px' : '15px',
+          content: '""',
           display: isMenuOpen ? 'block' : 'none',
-          transform: isMobile ? 'none' : 'translateX(50%)',
+          height: '0',
+          left: '50%',
+          position: 'absolute',
+          top: '30px',
+          transform: 'translateX(-50%)',
+          width: '0',
         },
         // Se genera pseudo elemento que actúa como ícono de notificación
         '&.hasNew::before': {
@@ -107,28 +108,28 @@ export const CalendarDropdownContainer = ({
           zIndex: '1',
         },
         '>div': {
-          position: isMobile ? 'fixed !important' : 'absolute',
           left: isMobile ? '0 !important' : 'auto',
+          position: isMobile ? 'fixed !important' : 'absolute',
           top: isMobile ? '62px !important' : 'auto',
           transform: isMobile ? 'none !important' : 'translate3d(-409px, 38px, 0px) !important',
         },
 
         '.chakra-menu__menu-list': {
-          padding: '0',
-          position: 'absolute',
-          left: isMobile ? 'auto' : '-30px',
-          top: isMobile ? '-6px !important' : 'auto',
-          width: isMobile ? '100vw' : '500px',
-          maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
-          overflowY: isMobile ? 'auto' : 'hidden',
+          animation: 'none !important',
           background: 'transparent',
           border: 'none',
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
-          animation: 'none !important',
-          transition: 'none !important',
-          transform: 'none !important',
+          left: isMobile ? 'auto' : '-30px',
+          maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
           opacity: '1 !important',
+          overflowY: isMobile ? 'auto' : 'hidden',
+          padding: '0',
+          position: 'absolute',
+          top: isMobile ? '-6px !important' : 'auto',
+          transform: 'none !important',
+          transition: 'none !important',
+          width: isMobile ? '100vw' : '500px',
         },
         '.chakra-menu__group__title': {
           fontSize: '18px',
