@@ -1,3 +1,10 @@
+## [1.51.20](https://github.com/eclass/ui-kit/compare/v1.51.19...v1.51.20) (2025-03-19)
+
+
+### Bug Fixes
+
+* **PDYE-1146:** calendario, muestro flecha en mobile ([#699](https://github.com/eclass/ui-kit/issues/699)) ([82196b2](https://github.com/eclass/ui-kit/commit/82196b24317576fa4c87c58092e8c8a5cb55b320))
+
 ## [1.51.19](https://github.com/eclass/ui-kit/compare/v1.51.18...v1.51.19) (2025-03-13)
 
 
