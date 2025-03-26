@@ -18,6 +18,7 @@ export const CalendarDropdownContainer = ({
   courseColors,
   onlyToCalendar,
   m,
+  clickEvent,
 }: ICalendarDropdown): JSX.Element => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
   const { closeAndMarkSeen, empty, hasNew, ...all } = useParseEvents(events, now)
@@ -169,6 +170,7 @@ export const CalendarDropdownContainer = ({
                     text={text}
                     redirecToCalendar={redirectToCalendar}
                     isMobile={isMobile}
+                    clickEvent={clickEvent}
                   />
                 )}
               </Box>

@@ -1,17 +1,29 @@
-import { EventsList } from '@/organisms/Calendar'
 import { Box, MenuGroup } from '@chakra-ui/react'
+
+import { EventsList } from '@/organisms/Calendar'
 import { vars } from '@theme'
-import { Event } from '../../types'
+import { Event, ICalendarDropdown } from '../../types'
 
 interface IEventsGroupProps {
   title: string
   events: Event[]
   text: string
   colors?: Record<string, string>
+  clickEvent?: ICalendarDropdown['clickEvent']
 }
 
-export const EventsGroup = ({ title, events, text, colors }: IEventsGroupProps): JSX.Element => {
+export const EventsGroup = ({
+  title,
+  events,
+  text,
+  colors,
+  clickEvent,
+}: IEventsGroupProps): JSX.Element => {
   if (!events || (events && events.length === 0)) return <></>
+
+  const handleClick = (event: Event): void => {
+    clickEvent?.(event)
+  }
   return (
     <Box
       className="calendar-events-group"
@@ -57,6 +69,7 @@ export const EventsGroup = ({ title, events, text, colors }: IEventsGroupProps):
                 text={text}
                 hasNotification={event.isNew}
                 isDropdown
+                clickEvent={() => handleClick(event)}
               />
             </Box>
           )
