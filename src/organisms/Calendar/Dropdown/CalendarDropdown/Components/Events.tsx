@@ -2,7 +2,7 @@ import { BtnSecondary } from '@/molecules'
 import { Box } from '@chakra-ui/react'
 import { vars } from '@theme'
 
-import { Text, Event } from '../../types'
+import { Text, Event, ICalendarDropdown } from '../../types'
 import { EventsGroup } from './EventsGroup'
 
 interface IEventsProps {
@@ -15,6 +15,7 @@ interface IEventsProps {
   redirecToCalendar: () => void
   isMobile: boolean
   colors?: Record<string, string>
+  clickEvent?: ICalendarDropdown['clickEvent']
 }
 
 export const Events = ({
@@ -23,6 +24,7 @@ export const Events = ({
   redirecToCalendar,
   isMobile,
   colors,
+  clickEvent,
 }: IEventsProps): JSX.Element => {
   const { today, tomorrow, next } = events
   return (
@@ -60,18 +62,21 @@ export const Events = ({
         text={text?.course ?? ''}
         title={text?.events?.today ?? 'Hoy'}
         events={today}
+        clickEvent={clickEvent}
       />
       <EventsGroup
         colors={colors}
         text={text?.course ?? ''}
         title={text?.events?.tomorrow ?? 'Mañana'}
         events={tomorrow}
+        clickEvent={clickEvent}
       />
       <EventsGroup
         colors={colors}
         text={text?.course ?? ''}
         title={text?.events?.next ?? 'Próximos'}
         events={next}
+        clickEvent={clickEvent}
       />
     </Box>
   )

@@ -49,4 +49,5 @@ interface ICalendarDropdown {
   redirectToCalendar: () => void
   text?: Text
   onlyToCalendar?: boolean
+  clickEvent?: (event: Event) => void
 }
