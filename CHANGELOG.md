@@ -1,3 +1,10 @@
+# [1.52.0](https://github.com/eclass/ui-kit/compare/v1.51.21...v1.52.0) (2025-03-26)
+
+
+### Features
+
+* **PDYE-1162:** eventos clickeables ([#701](https://github.com/eclass/ui-kit/issues/701)) ([0105d41](https://github.com/eclass/ui-kit/commit/0105d41f61763344ad2366b9f639df40eccfcf31))
+
 ## [1.51.21](https://github.com/eclass/ui-kit/compare/v1.51.20...v1.51.21) (2025-03-19)
 
 
