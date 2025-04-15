@@ -1,3 +1,10 @@
+## [1.52.2](https://github.com/eclass/ui-kit/compare/v1.52.1...v1.52.2) (2025-04-15)
+
+
+### Bug Fixes
+
+* se hace reduccin del bundle probando la configuracion sugerida ([#704](https://github.com/eclass/ui-kit/issues/704)) ([bc3e083](https://github.com/eclass/ui-kit/commit/bc3e08326010dfa4b8d9f532a04d72acb39b3091))
+
 ## [1.52.1](https://github.com/eclass/ui-kit/compare/v1.52.0...v1.52.1) (2025-04-15)
 
 
