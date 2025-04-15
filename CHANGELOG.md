@@ -1,3 +1,24 @@
+# [1.52.0](https://github.com/eclass/ui-kit/compare/v1.51.21...v1.52.0) (2025-03-26)
+
+
+### Features
+
+* **PDYE-1162:** eventos clickeables ([#701](https://github.com/eclass/ui-kit/issues/701)) ([0105d41](https://github.com/eclass/ui-kit/commit/0105d41f61763344ad2366b9f639df40eccfcf31))
+
+## [1.51.21](https://github.com/eclass/ui-kit/compare/v1.51.20...v1.51.21) (2025-03-19)
+
+
+### Bug Fixes
+
+* **PDYE-1146:** calendario, centrar flecha ([#700](https://github.com/eclass/ui-kit/issues/700)) ([eb7b434](https://github.com/eclass/ui-kit/commit/eb7b43433bf354224ac68a21eea900943aa8407c))
+
+## [1.51.20](https://github.com/eclass/ui-kit/compare/v1.51.19...v1.51.20) (2025-03-19)
+
+
+### Bug Fixes
+
+* **PDYE-1146:** calendario, muestro flecha en mobile ([#699](https://github.com/eclass/ui-kit/issues/699)) ([82196b2](https://github.com/eclass/ui-kit/commit/82196b24317576fa4c87c58092e8c8a5cb55b320))
+
 ## [1.51.19](https://github.com/eclass/ui-kit/compare/v1.51.18...v1.51.19) (2025-03-13)
 
 
