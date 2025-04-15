@@ -1,1 +1,1 @@
-export * from './ModalAlert'
+export { ModalAlert } from './ModalAlert'
