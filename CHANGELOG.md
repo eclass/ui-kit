@@ -1,3 +1,11 @@
+## [1.52.1](https://github.com/eclass/ui-kit/compare/v1.52.0...v1.52.1) (2025-04-15)
+
+
+### Bug Fixes
+
+* correccion de exports para ui kit ([#702](https://github.com/eclass/ui-kit/issues/702)) ([7b6ae92](https://github.com/eclass/ui-kit/commit/7b6ae920f643331777e6989e019739791f2675e6))
+* correccion de exports para ui kit ([#703](https://github.com/eclass/ui-kit/issues/703)) ([9fdffc3](https://github.com/eclass/ui-kit/commit/9fdffc36e4311ce3ae9d0d37f05994bac2d20a82))
+
 # [1.52.0](https://github.com/eclass/ui-kit/compare/v1.51.21...v1.52.0) (2025-03-26)
 
 
