@@ -50,7 +50,11 @@
   },
   "peerDependencies": {
     "react": "^16.8 || 17.x || ^18.0.0 || ^19.0.0",
-    "react-dom": "^16.8 || 17.x || ^18.0.0 || ^19.0.0"
+    "react-dom": "^16.8 || 17.x || ^18.0.0 || ^19.0.0",
+    "@chakra-ui/react": "^1.8.9",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.2.8"
   },
   "devDependencies": {
     "@commitlint/cli": "13.2.1",
@@ -127,5 +131,6 @@
   "resolutions": {
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2"
-  }
+  },
+  "sideEffects": false
 }
