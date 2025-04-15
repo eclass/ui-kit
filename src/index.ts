@@ -1,4 +1,3 @@
-// src/index.ts
 // Átomos
 export { Label } from './atoms/Label/Label'
 export { Progress } from './atoms/Progress/Progress'
