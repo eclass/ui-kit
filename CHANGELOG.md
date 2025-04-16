@@ -1,3 +1,11 @@
+## [1.52.3](https://github.com/eclass/ui-kit/compare/v1.52.2...v1.52.3) (2025-04-16)
+
+
+### Bug Fixes
+
+* correccion de variable ([#706](https://github.com/eclass/ui-kit/issues/706)) ([1282517](https://github.com/eclass/ui-kit/commit/128251728f71d3194677b4dbb45788ddc3554b38))
+* se agrega division de configuracion de vite para documentacion ([#705](https://github.com/eclass/ui-kit/issues/705)) ([6f4ecd4](https://github.com/eclass/ui-kit/commit/6f4ecd49285e608e423bcecdf4853623b78c5cca))
+
 ## [1.52.2](https://github.com/eclass/ui-kit/compare/v1.52.1...v1.52.2) (2025-04-15)
 
 
