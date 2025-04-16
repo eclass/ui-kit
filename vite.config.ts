@@ -4,7 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 import path from 'path'
 
 // VITE_REACT_DEPLOY_DOCUMENTATION viene de tu script "deploy"
-const isDocs = import.meta.env.VITE_REACT_DEPLOY_DOCUMENTATION === 'DOCUMENTATION'
+const isDocs = process.env.VITE_REACT_DEPLOY_DOCUMENTATION === 'DOCUMENTATION'
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
