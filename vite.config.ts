@@ -14,7 +14,6 @@ export default defineConfig({
     ...(isDocs
       ? {
           // build de la web de componentes
-          outDir: 'dist-docs',
           sourcemap: true,
           rollupOptions: {
             external: [],       // empaquetar todo
