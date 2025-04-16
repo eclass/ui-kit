@@ -1,3 +1,10 @@
+## [1.52.4](https://github.com/eclass/ui-kit/compare/v1.52.3...v1.52.4) (2025-04-16)
+
+
+### Bug Fixes
+
+* cambio de configuracion para el outdist ([#707](https://github.com/eclass/ui-kit/issues/707)) ([1b20a46](https://github.com/eclass/ui-kit/commit/1b20a4672f1dd7d4fbed65a645743355fc5eb8cf))
+
 ## [1.52.3](https://github.com/eclass/ui-kit/compare/v1.52.2...v1.52.3) (2025-04-16)
 
 
