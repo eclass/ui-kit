@@ -30,12 +30,7 @@ export const EventsList = ({
 }: IEventList): JSX.Element => {
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
 
-  const initOrEnd = [
-    'end-course',
-    'init-course',
-    'init-course-flexible',
-    'end-course-flexible',
-  ].includes(type)
+  const initOrEnd = ['end-course', 'init-course', 'init-course-flexible', 'end-course-flexible'].includes(type)
 
   const dateTextStyle = {
     fontSize: '18px',

@@ -11,6 +11,7 @@ interface IEventsGroupProps {
 }
 
 export const EventsGroup = ({ title, events, text, colors }: IEventsGroupProps): JSX.Element => {
+
   if (!events || (events && events.length === 0)) return <></>
   return (
     <Box
