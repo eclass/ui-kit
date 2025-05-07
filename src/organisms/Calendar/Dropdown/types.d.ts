@@ -9,8 +9,9 @@ interface Course {
 }
 
 interface FormattedDate {
-  start: string
-  hours: string
+  day: string
+  date: string
+  time: string
 }
 
 export interface Event {
@@ -22,6 +23,7 @@ export interface Event {
   course: Course
   formatedDate: FormattedDate
   isNew?: boolean
+  type: string
 }
 
 export type Events = Event[]
@@ -49,5 +51,4 @@ interface ICalendarDropdown {
   redirectToCalendar: () => void
   text?: Text
   onlyToCalendar?: boolean
-  clickEvent?: (event: Event) => void
 }

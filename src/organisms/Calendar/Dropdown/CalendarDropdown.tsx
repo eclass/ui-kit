@@ -10,7 +10,6 @@ export const CalendarDropdown = ({
   loading,
   onlyToCalendar = false,
   m,
-  clickEvent,
 }: ICalendarDropdown): JSX.Element => {
   const date = new Date(now)
   const isoDate = date.toISOString()
@@ -25,7 +24,6 @@ export const CalendarDropdown = ({
       redirectToCalendar={redirectToCalendar}
       text={text}
       onlyToCalendar={onlyToCalendar}
-      clickEvent={clickEvent}
     />
   )
 }
