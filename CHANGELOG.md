@@ -1,3 +1,10 @@
+## [1.52.6](https://github.com/eclass/ui-kit/compare/v1.52.5...v1.52.6) (2025-05-11)
+
+
+### Bug Fixes
+
+* **PDYE-1216:** nuevo diseño componente evento y revert evento clickable ([#711](https://github.com/eclass/ui-kit/issues/711)) ([55f6021](https://github.com/eclass/ui-kit/commit/55f60219fb6c77ae6cc170c95f320312e7fbd1ed))
+
 ## [1.52.4](https://github.com/eclass/ui-kit/compare/v1.52.3...v1.52.4) (2025-04-16)
 
 
