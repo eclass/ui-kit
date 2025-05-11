@@ -3,6 +3,7 @@ import { vars } from '@theme'
 
 import { NotificationIcon } from './NotificationIcon'
 
+//Nuevo componente que recibe el texto de día y hora en tres partes
 export interface IEventList {
   color?: string
   courseName?: string
