@@ -58,7 +58,7 @@ export const EventsGroup = ({ title, events, text, colors }: IEventsGroupProps):
                 text={text}
                 type={event.type}
                 hasNotification={event.isNew}
-                showsCourseName
+                showCourse
               />
             </Box>
           )
