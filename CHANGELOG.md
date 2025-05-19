@@ -1,3 +1,10 @@
+## [1.52.7](https://github.com/eclass/ui-kit/compare/v1.52.6...v1.52.7) (2025-05-19)
+
+
+### Bug Fixes
+
+* **PDYE-1230:** evento mobile ([#712](https://github.com/eclass/ui-kit/issues/712)) ([0fb854d](https://github.com/eclass/ui-kit/commit/0fb854db3ac8994a4f14aa28839ef8f41fbeda09))
+
 ## [1.52.6](https://github.com/eclass/ui-kit/compare/v1.52.5...v1.52.6) (2025-05-11)
 
 
