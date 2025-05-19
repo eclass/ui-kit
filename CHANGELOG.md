@@ -1,3 +1,10 @@
+## [1.52.8](https://github.com/eclass/ui-kit/compare/v1.52.7...v1.52.8) (2025-05-19)
+
+
+### Bug Fixes
+
+* **PDYE-1230:** evento con nombre unidad ([#713](https://github.com/eclass/ui-kit/issues/713)) ([2d835cb](https://github.com/eclass/ui-kit/commit/2d835cb38ac52068b752f7a6a142e9f68d853a6c))
+
 ## [1.52.7](https://github.com/eclass/ui-kit/compare/v1.52.6...v1.52.7) (2025-05-19)
 
 
