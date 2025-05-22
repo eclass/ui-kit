@@ -1,4 +1,4 @@
-import { BtnSecondary } from '@/molecules'
+import { BtnPrimary } from '@/molecules'
 import { Box } from '@chakra-ui/react'
 import { vars } from '@theme'
 
@@ -50,9 +50,9 @@ export const Events = ({
             },
           }}
         >
-          <BtnSecondary onClick={redirecToCalendar} m="72px 0 0 24px" id="RedirectButton">
+          <BtnPrimary onClick={redirecToCalendar} m="72px 0 0 24px" id="RedirectButton">
             {text?.buttonCalendar ?? 'Ir a Mi Calendario'}
-          </BtnSecondary>
+          </BtnPrimary>
         </Box>
       )}
       <EventsGroup
