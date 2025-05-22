@@ -1,3 +1,10 @@
+## [1.52.9](https://github.com/eclass/ui-kit/compare/v1.52.8...v1.52.9) (2025-05-22)
+
+
+### Bug Fixes
+
+* **PDYE-1230:** ancho y alto circulo curso evento ([#714](https://github.com/eclass/ui-kit/issues/714)) ([a73e2ad](https://github.com/eclass/ui-kit/commit/a73e2adbb7b1b19e42b4b2038896805e093370a6))
+
 ## [1.52.8](https://github.com/eclass/ui-kit/compare/v1.52.7...v1.52.8) (2025-05-19)
 
 
