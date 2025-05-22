@@ -119,7 +119,9 @@ export const EventsList = ({
 
         {showCourse && !initOrEnd && (
           <Box display="flex" gap="4px" alignItems="baseline">
-            {isMobile && <Box height="10px" width="10px" bg={color} borderRadius="50%" />}
+            {isMobile && (
+              <Box minH="10px" minW="10px" maxH="10px" maxW="10px" bg={color} borderRadius="50%" />
+            )}
 
             <Box as="span" sx={detailTextStyle}>
               <strong>{text ? `${text}:` : 'Curso:'}</strong> {courseName}
