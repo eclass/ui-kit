@@ -1,3 +1,10 @@
+## [1.52.11](https://github.com/eclass/ui-kit/compare/v1.52.10...v1.52.11) (2025-05-28)
+
+
+### Bug Fixes
+
+* **PDYE-1248:** nuevo link mas eventos proximos ([#716](https://github.com/eclass/ui-kit/issues/716)) ([8f6ff75](https://github.com/eclass/ui-kit/commit/8f6ff750a60ea1ea0adba9f94edf18722d51506f))
+
 ## [1.52.10](https://github.com/eclass/ui-kit/compare/v1.52.9...v1.52.10) (2025-05-22)
 
 
