@@ -57,7 +57,7 @@ export const EventsList = ({
   }
 
   return (
-    <Box className="eventsList" borderTop={border} p="16px 24px" display="flex" gap="12px">
+    <Box className="eventsList" borderTop={border} p="16px" display="flex" gap="12px">
       <Box
         bg={color}
         minW="80px"

@@ -15,11 +15,13 @@ export const useParseEvents = (
   hasNew: boolean
   closeAndMarkSeen: () => void
   empty: boolean
+  hasMoreNext: boolean
 } => {
   const [todayEvents, setTodayEvents] = useState<any[]>([])
   const [tomorrowEvents, setTomorrowEvents] = useState<any[]>([])
   const [nextEvents, setNextEvents] = useState<any[]>([])
   const [hasNew, setHasNew] = useState(false)
+  const [hasMoreNext, setHasMoreNext] = useState(false)
 
   useEffect(() => {
     const parseNow = parseISO(now)
@@ -57,6 +59,7 @@ export const useParseEvents = (
 
     let next = [...nextList]
     if (nextList.length > 5) {
+      setHasMoreNext(true)
       next = next.slice(0, 5)
     }
     setNextEvents(next)
@@ -91,5 +94,6 @@ export const useParseEvents = (
     hasNew,
     closeAndMarkSeen,
     empty,
+    hasMoreNext,
   }
 }

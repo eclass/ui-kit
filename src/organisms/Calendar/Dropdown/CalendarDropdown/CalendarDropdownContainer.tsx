@@ -20,7 +20,7 @@ export const CalendarDropdownContainer = ({
   m,
 }: ICalendarDropdown): JSX.Element => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
-  const { closeAndMarkSeen, empty, hasNew, ...all } = useParseEvents(events, now)
+  const { closeAndMarkSeen, empty, hasNew, hasMoreNext, ...all } = useParseEvents(events, now)
 
   const [isTooltipDisabled, setTooltipDisabled] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
@@ -136,7 +136,7 @@ export const CalendarDropdownContainer = ({
           fontWeight: '700',
           lineHeight: '31px',
           margin: '32px 0 0',
-          padding: '0 0 8px 24px',
+          padding: '0 0 8px 16px',
         },
         '.react-ripples': {
           width: 'inherit',
@@ -164,6 +164,7 @@ export const CalendarDropdownContainer = ({
                   <Empty text={text?.empty ?? 'Aún no tienes eventos en tu calendario'} />
                 ) : (
                   <Events
+                    hasMoreNext={hasMoreNext}
                     colors={courseColors}
                     events={all}
                     text={text}
