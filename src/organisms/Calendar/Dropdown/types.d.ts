@@ -39,6 +39,10 @@ export interface Text {
   }
   header: string
   loading: string
+  seeMore: {
+    see: string
+    link: string
+  }
   tooltip: string
 }
 
