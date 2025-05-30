@@ -51,7 +51,7 @@ export const EventsList = ({
   const detailTextStyle = {
     color: vars('colors-neutral-gray') ?? '#808080',
     fontSize: '14px',
-    display: 'flex',
+    display: 'inline',
     gap: '4px',
     lineHeight: 'normal',
   }
@@ -60,9 +60,9 @@ export const EventsList = ({
     <Box className="eventsList" borderTop={border} p="16px" display="flex" gap="12px">
       <Box
         bg={color}
-        minW="80px"
+        minW="108px"
         minH="80px"
-        maxW="80px"
+        maxW="108px"
         maxH="80px"
         borderRadius="4px"
         p="8px"
