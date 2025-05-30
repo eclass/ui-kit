@@ -35,7 +35,14 @@ export function Section(): JSX.Element | null {
           <DateStatus date={dateStatus.end} />
         </HStack>
       )}
-      <Heading as="h2" fontSize="1rem" mt=".3125rem" fontWeight="700" lineHeight="1.3">
+      <Heading
+        as="h2"
+        fontFamily="Roboto"
+        fontSize="1rem"
+        mt=".3125rem"
+        fontWeight="700"
+        lineHeight="1.3"
+      >
         {name}
       </Heading>
       <Flex mt="1rem" justify="space-between">
