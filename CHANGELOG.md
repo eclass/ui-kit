@@ -1,3 +1,10 @@
+## [1.52.12](https://github.com/eclass/ui-kit/compare/v1.52.11...v1.52.12) (2025-05-30)
+
+
+### Bug Fixes
+
+* **PDYE-1256:** modificacion ancho caja evento ([#717](https://github.com/eclass/ui-kit/issues/717)) ([882adaa](https://github.com/eclass/ui-kit/commit/882adaac3936e1770094712d8c149718703e9f2c))
+
 ## [1.52.11](https://github.com/eclass/ui-kit/compare/v1.52.10...v1.52.11) (2025-05-28)
 
 
