@@ -1,3 +1,10 @@
+## [1.52.13](https://github.com/eclass/ui-kit/compare/v1.52.12...v1.52.13) (2025-05-30)
+
+
+### Bug Fixes
+
+* **PDYE-1256:** correccion fuente de texto caja curso ([#718](https://github.com/eclass/ui-kit/issues/718)) ([8e6f3c6](https://github.com/eclass/ui-kit/commit/8e6f3c62f5ab6f6e442b55f0d459f9f736462e15))
+
 ## [1.52.12](https://github.com/eclass/ui-kit/compare/v1.52.11...v1.52.12) (2025-05-30)
 
 
