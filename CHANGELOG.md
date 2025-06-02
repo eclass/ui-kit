@@ -1,3 +1,10 @@
+## [1.52.14](https://github.com/eclass/ui-kit/compare/v1.52.13...v1.52.14) (2025-06-02)
+
+
+### Bug Fixes
+
+* **PDYE-1256:** cambio dimensiones y fontsize evento ([#719](https://github.com/eclass/ui-kit/issues/719)) ([1537f12](https://github.com/eclass/ui-kit/commit/1537f12194fb1ffdb192aad7c4068117448c09b8))
+
 ## [1.52.13](https://github.com/eclass/ui-kit/compare/v1.52.12...v1.52.13) (2025-05-30)
 
 
