@@ -42,7 +42,7 @@ export const EventsList = ({
   ].includes(type)
 
   const dateTextStyle = {
-    fontSize: '18px',
+    fontSize: '14px',
     fontWeight: '700',
     color: vars('colors-neutral-white'),
     lineHeight: '100%',
@@ -60,10 +60,10 @@ export const EventsList = ({
     <Box className="eventsList" borderTop={border} p="16px" display="flex" gap="12px">
       <Box
         bg={color}
-        minW="108px"
-        minH="80px"
-        maxW="108px"
-        maxH="80px"
+        minW="88px"
+        minH="74px"
+        maxW="88px"
+        maxH="72px"
         borderRadius="4px"
         p="8px"
         display="flex"
@@ -76,15 +76,7 @@ export const EventsList = ({
         <Box as="span" sx={dateTextStyle}>
           {date}
         </Box>
-        <Box
-          as="span"
-          fontSize="14px"
-          fontWeight="700"
-          color={vars('colors-neutral-white')}
-          lineHeight="normal"
-        >
-          {time}
-        </Box>
+        <Box sx={dateTextStyle}>{time}</Box>
       </Box>
 
       <Box display="flex" flexDirection="column" gap="8px" w="100%">
