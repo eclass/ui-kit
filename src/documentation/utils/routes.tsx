@@ -5,8 +5,8 @@ const Instalation = React.lazy(async () => await import('../pages/Instalation'))
 
 /** UTILS */
 // const Layout = React.lazy(async () => await import('../pages/Utils/Layout'))
-const Colors = React.lazy(async () => await import('../pages/Utils/Colors'))
 const Borders = React.lazy(async () => await import('../pages/Utils/Borders'))
+const Colors = React.lazy(async () => await import('../pages/Utils/Colors'))
 const ShadowsElevation = React.lazy(async () => await import('../pages/Utils/ShadowsElevation'))
 const SpacialUnits = React.lazy(async () => await import('../pages/Utils/SpacialUnits'))
 
@@ -27,9 +27,11 @@ const Alerts = React.lazy(async () => await import('../pages/Organisms/Alerts'))
 const FlashNotification = React.lazy(
   async () => await import('../pages/Organisms/FlashNotification')
 )
+const CalendarDropdown = React.lazy(async () => await import('../pages/Organisms/CalendarDropdown'))
 const CourseList = React.lazy(async () => await import('../pages/Organisms/CourseList'))
-const ModalAlert = React.lazy(async () => await import('../pages/Organisms/ModalAlert'))
 const Events = React.lazy(async () => await import('../pages/Organisms/Events'))
+const EventsList = React.lazy(async () => await import('../pages/Organisms/EventsList'))
+const ModalAlert = React.lazy(async () => await import('../pages/Organisms/ModalAlert'))
 const Resources = React.lazy(async () => await import('../pages/Organisms/Resources'))
 
 /**
@@ -61,6 +63,11 @@ export const routes: IRoute[] = [
   },
   /** ****************************** */
   {
+    path: '/utils/borders',
+    label: 'Borders',
+    component: <Borders />,
+  },
+  {
     path: '/utils/colors',
     label: 'Colores',
     component: <Colors />,
@@ -74,11 +81,6 @@ export const routes: IRoute[] = [
     path: '/utils/spacial-units',
     label: 'Spacial units',
     component: <SpacialUnits />,
-  },
-  {
-    path: '/utils/borders',
-    label: 'Borders',
-    component: <Borders />,
   },
   {
     path: '/utils/shadows-elevation',
@@ -148,24 +150,34 @@ export const routes: IRoute[] = [
     component: <Alerts />,
   },
   {
-    path: '/organisms/flash-notification',
-    label: 'Flash Notification',
-    component: <FlashNotification />,
+    path: '/organisms/calendardropdown',
+    label: 'Calendar Dropdown',
+    component: <CalendarDropdown />,
   },
   {
     path: '/organisms/courselist',
-    label: 'CourseList',
+    label: 'Course List',
     component: <CourseList />,
-  },
-  {
-    path: '/organisms/modalalert',
-    label: 'ModalAlert',
-    component: <ModalAlert />,
   },
   {
     path: '/organisms/events',
     label: 'Events',
     component: <Events />,
+  },
+  {
+    path: '/organisms/eventslist',
+    label: 'Events List',
+    component: <EventsList />,
+  },
+  {
+    path: '/organisms/flash-notification',
+    label: 'Flash Notification',
+    component: <FlashNotification />,
+  },
+  {
+    path: '/organisms/modalalert',
+    label: 'Modal Alert',
+    component: <ModalAlert />,
   },
   {
     path: '/organisms/resource',

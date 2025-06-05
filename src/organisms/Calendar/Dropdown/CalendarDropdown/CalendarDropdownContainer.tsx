@@ -10,14 +10,14 @@ import { Events } from './Components/Events'
 import { ICalendarDropdown } from '../types'
 
 export const CalendarDropdownContainer = ({
+  courseColors,
   events,
   loading,
-  text,
-  now,
-  redirectToCalendar,
-  courseColors,
-  onlyToCalendar,
   m,
+  now,
+  onlyToCalendar,
+  redirectToCalendar,
+  text,
 }: ICalendarDropdown): JSX.Element => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
   const { closeAndMarkSeen, empty, hasNew, hasMoreNext, ...all } = useParseEvents(events, now)
@@ -154,8 +154,8 @@ export const CalendarDropdownContainer = ({
           {!onlyToCalendar && (
             <MenuList>
               <Header
-                text={text?.header ?? 'Próximas fechas importantes de tus cursos'}
                 isMobile={isMobile}
+                text={text?.header ?? 'Próximas fechas importantes de tus cursos'}
               />
               <Box bg={vars('colors-neutral-white') ?? '#FFF'}>
                 {loading ? (
@@ -164,12 +164,12 @@ export const CalendarDropdownContainer = ({
                   <Empty text={text?.empty ?? 'Aún no tienes eventos en tu calendario'} />
                 ) : (
                   <Events
-                    hasMoreNext={hasMoreNext}
                     colors={courseColors}
                     events={all}
-                    text={text}
-                    redirecToCalendar={redirectToCalendar}
+                    hasMoreNext={hasMoreNext}
                     isMobile={isMobile}
+                    redirecToCalendar={redirectToCalendar}
+                    text={text}
                   />
                 )}
               </Box>

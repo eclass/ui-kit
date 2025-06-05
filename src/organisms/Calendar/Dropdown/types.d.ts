@@ -15,14 +15,15 @@ interface FormattedDate {
 }
 
 export interface Event {
-  id: number
-  course_id: number
-  start: string
-  end: string
   associated_resource: AssociatedResource
   course: Course
+  course_id: number
+  end: string
+  start: string
   formatedDate: FormattedDate
+  id: number
   isNew?: boolean
+  translatedTitle: string
   type: string
 }
 
@@ -47,12 +48,12 @@ export interface Text {
 }
 
 interface ICalendarDropdown {
-  m?: string
   courseColors?: Record<string, string>
   events: any
   loading?: boolean
+  m?: string
   now: string
+  onlyToCalendar?: boolean
   redirectToCalendar: () => void
   text?: Text
-  onlyToCalendar?: boolean
 }

@@ -4,7 +4,7 @@ import {
   ListComponent,
   MyHeading,
   MyText,
-  MyTittle,
+  MyTitle,
   BoxCopy,
   Code,
 } from '@/documentation/components'
@@ -38,7 +38,7 @@ export const ViewBorders = (): JSX.Element => {
 <Box border={vars('borders-white')} />`}
       />
 
-      <MyTittle>Radio</MyTittle>
+      <MyTitle>Radio</MyTitle>
       <ListComponent>
         <BoxBorder borderRadius="radii-small" />
         <BoxBorder borderRadius="radii-big" />

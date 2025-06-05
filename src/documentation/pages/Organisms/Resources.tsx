@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Box } from '@chakra-ui/react'
-import { MyHeading, MyText, MyTittle, MyLink, Code } from '@/documentation/components'
+import { MyHeading, MyText, MyTitle, MyLink, Code } from '@/documentation/components'
 import { Resources } from '@/organisms/Resources'
 
 const dataFakeEvents = [
@@ -63,7 +63,7 @@ const ResourcesPage: FC = () => {
           correspondiente)
         </i>
       </MyText>
-      <MyTittle>Types Definidos</MyTittle>
+      <MyTitle>Types Definidos</MyTitle>
       <MyText>El componente Resources requiere el siguiente typado:</MyText>
       <Code
         text={`interface ResourcesProps {
@@ -86,7 +86,7 @@ const ResourcesPage: FC = () => {
         <Resources {...dataFakeEvents[2]} />
         <Resources {...dataFakeEvents[3]} />
       </Box>
-      <MyTittle>Recurso de tipo url</MyTittle>
+      <MyTitle>Recurso de tipo url</MyTitle>
       <MyText>
         En el caso de que el recurso sea un enlace, el icono se mostrara con un icono de enlace con
         solo usar resourceType = 'url'
@@ -95,13 +95,13 @@ const ResourcesPage: FC = () => {
         <Resources {...dataFakeEvents[4]} />
       </Box>
 
-      <MyTittle>Tipos de iconos en los recursos disponibles</MyTittle>
+      <MyTitle>Tipos de iconos en los recursos disponibles</MyTitle>
       <MyText>
         Existen varios tipos de iconos disponibles: Png, Gif, Ppt, Pptx, Doc, Docx, Xls, Xlsx, Csv,
         Pdf, Mp4, Avi, Mkv, Mp3, Wav, Url
       </MyText>
 
-      <MyTittle>Modo de uso</MyTittle>
+      <MyTitle>Modo de uso</MyTitle>
 
       <MyText>
         El recurso se utiliza de manera bastante simple siguiendo el siguiente ejemplo:

@@ -1,4 +1,4 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { ListComponent, MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 import { NewTooltip } from '../../../molecules/Tooltip/NewTooltip'
 import { BtnPrimary } from '@/molecules'
 import { useDisclosure } from '@chakra-ui/react'
@@ -24,7 +24,7 @@ export const ViewTooltip = (): JSX.Element => {
 </NewTooltip>`}
       />
 
-      <MyTittle>Posiciones</MyTittle>
+      <MyTitle>Posiciones</MyTitle>
       <MyText>
         Se ofrece posiciones predefinidos que se adaptan a tus necesidades de diseño y presentación,
         por defecto toma el valor de <code>bottom</code>.
@@ -63,7 +63,7 @@ export const ViewTooltip = (): JSX.Element => {
   <BtnPrimary>Left</BtnPrimary>
 </NewTooltip>`}
       />
-      <MyTittle>Activar al Click</MyTittle>
+      <MyTitle>Activar al Click</MyTitle>
       <MyText>
         El componente tiene un prop booleano <code>isOpen</code> que se utiliza para mantener
         abierto o cerrado el tooltip en caso de utilizar <code>onClick</code>, usando el hook{' '}

@@ -1,4 +1,4 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { ListComponent, MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 import { Alert } from '@/organisms'
 import { Profile } from '@/atoms/Icons'
 
@@ -16,7 +16,7 @@ export const ViewAlert = (): JSX.Element => {
       </MyText>
       <Code text="import { Alert } from '@eclass/ui-kit'" />
 
-      <MyTittle>Estados</MyTittle>
+      <MyTitle>Estados</MyTitle>
       <MyText>Existen 4 posibles estados que definen el ícono y color de la alerta.</MyText>
       <ListComponent>
         <Alert state="info">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Alert>
@@ -31,7 +31,7 @@ export const ViewAlert = (): JSX.Element => {
 <Alert state="warning">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Alert>'
       />
 
-      <MyTittle>Alertas con botón primario</MyTittle>
+      <MyTitle>Alertas con botón primario</MyTitle>
       <MyText>
         Las alertas embebidas con botón se utilizan en contextos en los que además de que el usuario
         pueda visualizar cada vez que lo necesite el feedback o estado de una solicitud al sistema,
@@ -66,7 +66,7 @@ export const ViewAlert = (): JSX.Element => {
 <Alert state="warning" buttonText="Click me" onClick={() => {}}> Texto </Alert>'
       />
 
-      <MyTittle>Alertas con botón link</MyTittle>
+      <MyTitle>Alertas con botón link</MyTitle>
       <MyText>
         Opcionalmente, el botón puede ser del tipo link.Para esto, la alerta debe recibir los
         argumentos de:
@@ -89,7 +89,7 @@ export const ViewAlert = (): JSX.Element => {
         </Alert>
       </ListComponent>
 
-      <MyTittle>Alertas con botón link y boton primario,</MyTittle>
+      <MyTitle>Alertas con botón link y boton primario,</MyTitle>
       <MyText>
         Esta alerta recibe un state de alerta entre: <code>warning, error, success, info </code>.
         Adicionalmente recibe un link al final del texto y un botón primario. si se quiere que el
@@ -196,7 +196,7 @@ export const ViewAlert = (): JSX.Element => {
           iure aspernatur optio amet illo maxime, totam incidunt maiores.
         </Alert>`}
       />
-      <MyTittle>Types de Alert</MyTittle>
+      <MyTitle>Types de Alert</MyTitle>
       <MyText>Tipos implementados en el Alert</MyText>
       <Code
         text={`interface IAlertProps {

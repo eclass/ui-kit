@@ -6,25 +6,25 @@ import { Text, Event } from '../../types'
 import { EventsGroup } from './EventsGroup'
 
 interface IEventsProps {
+  colors?: Record<string, string>
   events: {
     today: Event[]
     tomorrow: Event[]
     next: Event[]
   }
-  text?: Text
-  redirecToCalendar: () => void
-  isMobile: boolean
-  colors?: Record<string, string>
   hasMoreNext?: boolean
+  isMobile: boolean
+  redirecToCalendar: () => void
+  text?: Text
 }
 
 export const Events = ({
-  events,
-  text,
-  redirecToCalendar,
-  isMobile,
   colors,
+  events,
   hasMoreNext,
+  isMobile,
+  redirecToCalendar,
+  text,
 }: IEventsProps): JSX.Element => {
   const { today, tomorrow, next } = events
 
@@ -60,25 +60,25 @@ export const Events = ({
       )}
       <EventsGroup
         colors={colors}
+        events={today}
         text={text?.course ?? ''}
         title={text?.events?.today ?? 'Hoy'}
-        events={today}
       />
       <EventsGroup
         colors={colors}
+        events={tomorrow}
         text={text?.course ?? ''}
         title={text?.events?.tomorrow ?? 'Mañana'}
-        events={tomorrow}
       />
       <EventsGroup
-        hasMoreNext={hasMoreNext}
         colors={colors}
+        events={next}
+        hasMoreNext={hasMoreNext}
+        redirect={redirecToCalendar}
         textSeeMore={text?.seeMore.see ?? 'Ver más fechas en'}
         textLinkMore={text?.seeMore.link ?? 'Mi calendario'}
         text={text?.course ?? ''}
         title={text?.events?.next ?? 'Próximos'}
-        events={next}
-        redirect={redirecToCalendar}
       />
     </Box>
   )

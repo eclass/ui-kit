@@ -1,4 +1,4 @@
-import { MyHeading, MyText, MyTittle, MyLink, Code } from '@/documentation/components'
+import { MyHeading, MyText, MyTitle, MyLink, Code } from '@/documentation/components'
 import { CourseList } from '@/organisms'
 import { dataFake } from '@/organisms/CourseList/utils'
 
@@ -21,7 +21,7 @@ export const ViewCourseList = (): JSX.Element => {
       />
       <CourseList courses={[dataFake[18]]} />
 
-      <MyTittle>Tipos de Caja curso</MyTittle>
+      <MyTitle>Tipos de Caja curso</MyTitle>
       <MyText>
         Actualmente existen tres formatos en que se muestran las cajas. El tipo que se define es a
         nuvel de listado de cursos, por lo que no se puede poner distintos tipos dentro de el
@@ -34,7 +34,7 @@ export const ViewCourseList = (): JSX.Element => {
       <Code text='<CourseList courses={courses} typeBox="IMAGE_SMALL" />' />
       <CourseList courses={[dataFake[18]]} typeBox="IMAGE_SMALL" />
 
-      <MyTittle>Caja curso con fecha futura</MyTittle>
+      <MyTitle>Caja curso con fecha futura</MyTitle>
       <MyText>
         Si el curso tiene una fecha futura, se muestra el contenido de la imagen opacada y un aviso
         ajustado a la traduccion de proximamante.
@@ -52,7 +52,7 @@ text: 'Próximamente',
       </MyText>
       <CourseList courses={[dataFake[21]]} typeBox="TRADITIONAL" />
 
-      <MyTittle>Datos a mostrar</MyTittle>
+      <MyTitle>Datos a mostrar</MyTitle>
       <MyText>
         Lo datos que muestra cada curso depende netamente de la información que venga, dejo unos
         ejemplos con los que se armo este componente.

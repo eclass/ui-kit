@@ -1,4 +1,4 @@
-import { MyHeading, MyText, MyTittle, Code } from '../components'
+import { MyHeading, MyText, MyTitle, Code } from '../components'
 
 export const Instalation = (): JSX.Element => {
   return (
@@ -10,7 +10,7 @@ export const Instalation = (): JSX.Element => {
         language="text"
         text="npm install @eclass/ui-kit @chakra-ui/react @emotion/react @emotion/styled framer-motion"
       />
-      <MyTittle>Implementación</MyTittle>
+      <MyTitle>Implementación</MyTitle>
       <MyText>Ejemplo de implementación en código.</MyText>
       <Code
         text={`import { ChakraProvider } from '@chakra-ui/react'

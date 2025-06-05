@@ -1,8 +1,5 @@
-import { MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 import { ModalAlertDoc } from '@/documentation/components/Organisms'
-// import { ModalAlert } from '@/organisms'
-// ModalAlertDoc
-// import { dataFake } from '@/organisms/CourseList/utils'
 
 export const ViewModalAlert = (): JSX.Element => {
   return (
@@ -17,7 +14,7 @@ export const ViewModalAlert = (): JSX.Element => {
         hara el portal desde el root de la aplicacion, asegurando que siempre se muestre por encima
         de cualquier componente
       </MyText>
-      <MyTittle>Types definidos</MyTittle>
+      <MyTitle>Types definidos</MyTitle>
       <MyText>La modal se comporta bajo los siguientes types:</MyText>
       <Code
         text={`//Propiedades del modal
@@ -39,7 +36,7 @@ interface optionsButton {
       />
       El componente se importa de la siguiente manera:
       <Code text="import { ModalAlert } from '@eclass/ui-kit'" />
-      <MyTittle>Modo de uso</MyTittle>
+      <MyTitle>Modo de uso</MyTitle>
       <MyText>
         El modal tipo <code>info</code> con 2 opciones
       </MyText>
