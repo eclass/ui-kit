@@ -1,3 +1,10 @@
+# [1.53.0](https://github.com/eclass/ui-kit/compare/v1.52.14...v1.53.0) (2025-06-06)
+
+
+### Features
+
+* **PDYE-1270:** docu eventslist y calendardropdown ([#720](https://github.com/eclass/ui-kit/issues/720)) ([0f95b7c](https://github.com/eclass/ui-kit/commit/0f95b7c2a033b484d4fa9b64ed422968d3c80762))
+
 ## [1.52.14](https://github.com/eclass/ui-kit/compare/v1.52.13...v1.52.14) (2025-06-02)
 
 
