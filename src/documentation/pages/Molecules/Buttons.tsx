@@ -1,4 +1,4 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { ListComponent, MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 import { BtnPrimary, BtnSecondary, BtnTertiary, BtnLink } from '@/molecules'
 import { GoAhead, Password } from '@/atoms/Icons'
 
@@ -12,7 +12,7 @@ export const Buttons = (): JSX.Element => {
       </MyText>
       <Code text="import { BtnPrimary } from '@eclass/ui-kit'" />
 
-      <MyTittle>Tipos definidos</MyTittle>
+      <MyTitle>Tipos definidos</MyTitle>
       <MyText>
         Se liberan estos cuatro tipos de botones, de los cuales dos visualmente son botones y los
         otros son como tipo links{' '}
@@ -30,7 +30,7 @@ export const Buttons = (): JSX.Element => {
 <BtnLink>Link</BtnLink>"
       />
 
-      <MyTittle>Estados</MyTittle>
+      <MyTitle>Estados</MyTitle>
       <MyText>
         Listado con los tipos de estados que puede tener el botón bajo ciertas condiciones.
       </MyText>
@@ -49,7 +49,7 @@ export const Buttons = (): JSX.Element => {
 <BtnPrimary disabled>Disabled</BtnPrimary>"
       />
 
-      <MyTittle>Tamaños</MyTittle>
+      <MyTitle>Tamaños</MyTitle>
       <MyText>
         Por defecto el tamaño del botón es <code>regular</code> pero tienes las siguientes opciones
         de tamaño.
@@ -65,7 +65,7 @@ export const Buttons = (): JSX.Element => {
 <BtnPrimary isFullWidth>isFullWidth</BtnPrimary>"
       />
 
-      <MyTittle>Tipos Tertiary</MyTittle>
+      <MyTitle>Tipos Tertiary</MyTitle>
       <MyText>
         El <code>BtnTertiary</code> tiene tipos definidos que son los siguientes:
       </MyText>
@@ -96,12 +96,12 @@ export const Buttons = (): JSX.Element => {
 <BtnTertiary iconStatus='download'>download</BtnTertiary>
 <BtnTertiary iconStatus='noIcon'>noIcon</BtnTertiary>"
       />
-      <MyTittle>Iconos Custom</MyTittle>
+      <MyTitle>Iconos Custom</MyTitle>
       <ListComponent>
         <BtnTertiary iconCustom={<GoAhead />}>custom</BtnTertiary>
       </ListComponent>
       <Code text="<BtnTertiary iconCustom={<GoAhead />} >custom</BtnTertiary>" />
-      <MyTittle>Activo al presionar</MyTittle>
+      <MyTitle>Activo al presionar</MyTitle>
       <MyText>
         El <code>BtnTertiary</code> puede tener una propiedad <code>activeWhenPress</code> booleano
         el cual indica que al presionar o mantener focus queda azul brillante o activo:
@@ -113,7 +113,7 @@ export const Buttons = (): JSX.Element => {
       </ListComponent>
       <Code text="<BtnTertiary activeWhenPress iconCustom={<GoAhead />} >custom</BtnTertiary>" />
 
-      <MyTittle>BtnLink</MyTittle>
+      <MyTitle>BtnLink</MyTitle>
       <MyText>
         El <code>BtnLink</code> tiene la opción de ser un elemento (<code>button</code>) o un
         elemento (<code>a</code>), si la elección es esto último es necesario pasarle la url que

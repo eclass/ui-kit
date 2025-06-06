@@ -13,11 +13,11 @@ export const MyHeading: FC = ({ children }): JSX.Element => {
   )
 }
 
-interface IMyTittle {
+interface IMyTitle {
   divider?: boolean
 }
 
-export const MyTittle: FC<IMyTittle> = ({ children, divider = true }): JSX.Element => {
+export const MyTitle: FC<IMyTitle> = ({ children, divider = true }): JSX.Element => {
   return (
     <>
       {divider && <Divider m="3rem 0" />}

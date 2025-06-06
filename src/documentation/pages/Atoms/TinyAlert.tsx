@@ -1,5 +1,5 @@
 import { TinyAlert } from '@atoms'
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { ListComponent, MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 
 export const ViewTinyAlert = (): JSX.Element => {
   return (
@@ -13,7 +13,7 @@ export const ViewTinyAlert = (): JSX.Element => {
       <TinyAlert status="success" />
       <Code text='<TinyAlert status="success" />' />
 
-      <MyTittle>Status</MyTittle>
+      <MyTitle>Status</MyTitle>
       <MyText>
         El componente ofrece una variedad de tipos predefinidos que se adaptan a diferentes
         necesidades de diseño. Cada tipo tiene su propio propósito y apariencia, lo que te permite

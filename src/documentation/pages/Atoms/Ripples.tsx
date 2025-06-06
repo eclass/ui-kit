@@ -2,7 +2,7 @@ import { Box } from '@chakra-ui/react'
 
 import { Ripples } from '@atoms'
 import { vars } from '@/theme'
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { ListComponent, MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 
 export const ViewRipples = (): JSX.Element => {
   return (
@@ -16,7 +16,7 @@ export const ViewRipples = (): JSX.Element => {
         <Ripples />
       </Box>
       <Code text="<Ripples>Contenido</Ripples>" />
-      <MyTittle>Personalizar</MyTittle>
+      <MyTitle>Personalizar</MyTitle>
       <MyText>
         Se permite personalizar el color del efecto de onda. Puedes elegir el color que mejor se
         adapte al diseño de tu aplicación. Además, el componente incluye un valor por defecto para

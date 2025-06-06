@@ -2,28 +2,28 @@ import { CalendarDropdownContainer } from './CalendarDropdown/CalendarDropdownCo
 import { ICalendarDropdown } from './types'
 
 export const CalendarDropdown = ({
-  redirectToCalendar,
-  text,
   courseColors,
-  now,
   events,
   loading,
-  onlyToCalendar = false,
   m,
+  now,
+  onlyToCalendar = false,
+  redirectToCalendar,
+  text,
 }: ICalendarDropdown): JSX.Element => {
   const date = new Date(now)
   const isoDate = date.toISOString()
 
   return (
     <CalendarDropdownContainer
-      m={m}
+      courseColors={courseColors}
       events={events}
       loading={loading}
+      m={m}
       now={isoDate}
-      courseColors={courseColors}
+      onlyToCalendar={onlyToCalendar}
       redirectToCalendar={redirectToCalendar}
       text={text}
-      onlyToCalendar={onlyToCalendar}
     />
   )
 }

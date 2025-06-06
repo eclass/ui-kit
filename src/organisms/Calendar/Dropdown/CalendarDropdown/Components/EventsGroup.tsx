@@ -5,27 +5,28 @@ import { vars } from '@theme'
 import { Event } from '../../types'
 
 interface IEventsGroupProps {
-  title: string
+  colors?: Record<string, string>
   events: Event[]
+  hasMoreNext?: boolean
+  redirect?: () => void
   text: string
   textSeeMore?: string
   textLinkMore?: string
-  colors?: Record<string, string>
-  redirect?: () => void
-  hasMoreNext?: boolean
+  title: string
 }
 
 export const EventsGroup = ({
-  title,
+  colors,
   events,
+  hasMoreNext,
+  title,
+  redirect,
   text,
   textSeeMore,
   textLinkMore,
-  colors,
-  redirect,
-  hasMoreNext,
 }: IEventsGroupProps): JSX.Element => {
   if (!events || (events && events.length === 0)) return <></>
+
   return (
     <>
       <Box
@@ -62,7 +63,7 @@ export const EventsGroup = ({
               >
                 <EventsList
                   key={event.id}
-                  name={event.associated_resource.name || ''}
+                  name={event.translatedTitle}
                   courseName={event.course.name}
                   day={event.formatedDate.day}
                   date={event.formatedDate.date}

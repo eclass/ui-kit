@@ -1,6 +1,6 @@
 import { Label } from '@atoms'
 import { vars } from '@/theme'
-import { MyHeading, MyText, MyTittle, ListComponent, Code } from '@/documentation/components/'
+import { MyHeading, MyText, MyTitle, ListComponent, Code } from '@/documentation/components/'
 
 export const ViewLabel = (): JSX.Element => {
   return (
@@ -15,7 +15,7 @@ export const ViewLabel = (): JSX.Element => {
       <Label>Etiqueta</Label>
       <Code text="<Label>Etiqueta</Label>" />
 
-      <MyTittle>Color de fondo y texto</MyTittle>
+      <MyTitle>Color de fondo y texto</MyTitle>
       <MyText>
         Tiene por defecto un color de fondo y de texto pero este se puede personalizar según tus
         necesidades de diseño y resaltar información de manera efectiva:
@@ -41,7 +41,7 @@ export const ViewLabel = (): JSX.Element => {
 <Label bg={vars('colors-neutral-davysGrey')} color={vars('colors-icon-ripeMango')}>davysGrey</Label>`}
       />
 
-      <MyTittle>Tamaños</MyTittle>
+      <MyTitle>Tamaños</MyTitle>
       <MyText>
         Se ofrece dos tamaños predefinidos que se adaptan a tus necesidades de diseño y
         presentación, por defecto toma el valor de <code>md</code>.

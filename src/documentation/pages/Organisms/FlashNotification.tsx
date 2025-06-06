@@ -1,4 +1,4 @@
-import { ListComponent, MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { ListComponent, MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 import FlashNotificationDemo from '@/documentation/components/FlashNotificationDemo'
 
 export const ViewFlashNotification = (): JSX.Element => {
@@ -32,7 +32,7 @@ export const ViewFlashNotification = (): JSX.Element => {
       </MyText>
       <Code text="import { FlashNotification, useFlashNotification } from '@eclass/ui-kit'" />
 
-      <MyTittle>Estados</MyTittle>
+      <MyTitle>Estados</MyTitle>
       <MyText>Existen 4 posibles estados que definen el ícono y color de la notificación.</MyText>
       <ListComponent>
         <FlashNotificationDemo state="info" message="Mensaje informativo" />

@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { MyHeading, MyText, MyTittle, Code } from '@/documentation/components'
+import { MyHeading, MyText, MyTitle, Code } from '@/documentation/components'
 import { Eventos } from '@/organisms/Events'
 import { Box } from '@chakra-ui/react'
 
@@ -58,7 +58,7 @@ const EventsPage: FC = () => {
         <strong> LARGE_EVENTS</strong> y <strong> SMALL_EVENTS.</strong>
         LARGE_EVENTS: contiene un responsive para mobile y desktop.
       </MyText>
-      <MyTittle>Types Definidos</MyTittle>
+      <MyTitle>Types Definidos</MyTitle>
       <MyText>El componente Eventos requiere el siguiente typado:</MyText>
 
       <Code
@@ -87,7 +87,7 @@ isMobile?: boolean // Si es mobile o no
       <Box display="grid" gap="16px">
         <Eventos {...dataFakeEvents[2]} />
       </Box>
-      <MyTittle>Estados</MyTittle>
+      <MyTitle>Estados</MyTitle>
       <MyText>Existen 3 posibles estados que definen el diseño del evento.</MyText>
       <Box display="grid" gap="16px">
         <MyText>
@@ -103,7 +103,7 @@ isMobile?: boolean // Si es mobile o no
         </MyText>
         <Eventos {...dataFakeEvents[2]} />
       </Box>
-      <MyTittle>Modo de uso</MyTittle>
+      <MyTitle>Modo de uso</MyTitle>
       <MyText>
         El Evento se utiliza de manera bastante simple siguiendo el siguiente ejemplo:
       </MyText>
