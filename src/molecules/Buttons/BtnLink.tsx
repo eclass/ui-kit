@@ -12,6 +12,7 @@ export interface props {
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   role?: 'button' | 'link'
   tabIndex?: number
+  target?: '_blank' | '_self'
   textDecorationLine?: boolean
 }
 
@@ -26,15 +27,17 @@ export function BtnLink({
   onClick,
   role = 'link',
   tabIndex,
+  target = '_blank',
   textDecorationLine = true,
 }: props): JSX.Element {
   const typeButton = {
     button: {
       onClick,
+      target: target,
     },
     a: {
       href,
-      target: '_blank',
+      target: target,
     },
   }
 

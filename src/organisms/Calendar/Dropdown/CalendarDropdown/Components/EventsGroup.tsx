@@ -88,7 +88,9 @@ export const EventsGroup = ({
           <Box as="span" fontSize="14px">
             {textSeeMore}
           </Box>{' '}
-          <BtnLink onClick={redirect}>{textLinkMore}</BtnLink>
+          <BtnLink onClick={redirect} target="_self">
+            {textLinkMore}
+          </BtnLink>
         </Box>
       )}
     </>
