@@ -1,3 +1,10 @@
+## [1.53.1](https://github.com/eclass/ui-kit/compare/v1.53.0...v1.53.1) (2025-06-11)
+
+
+### Bug Fixes
+
+* **PDYE-1281:** se agrega target a boton link ([#721](https://github.com/eclass/ui-kit/issues/721)) ([56ad352](https://github.com/eclass/ui-kit/commit/56ad35291cbcf53411f0d95786488a6f832cc624))
+
 # [1.53.0](https://github.com/eclass/ui-kit/compare/v1.52.14...v1.53.0) (2025-06-06)
 
 
