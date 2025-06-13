@@ -98,7 +98,6 @@ export const EventsList = ({
         >
           <span>{name}</span>
           {hasNotification && <NotificationIcon />}
-          <NotificationIcon />
         </Box>
 
         {showCourse && !initOrEnd && (
