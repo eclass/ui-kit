@@ -1,3 +1,10 @@
+## [1.53.2](https://github.com/eclass/ui-kit/compare/v1.53.1...v1.53.2) (2025-06-13)
+
+
+### Bug Fixes
+
+* **PDYE-1288:** ajuste alineacion notificacion evento ([#723](https://github.com/eclass/ui-kit/issues/723)) ([665e0c4](https://github.com/eclass/ui-kit/commit/665e0c4197dbe063a9400faccc441d830a31263d))
+
 ## [1.53.1](https://github.com/eclass/ui-kit/compare/v1.53.0...v1.53.1) (2025-06-11)
 
 
