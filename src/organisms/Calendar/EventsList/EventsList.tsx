@@ -42,9 +42,9 @@ export const EventsList = ({
   ].includes(type)
 
   const dateTextStyle = {
+    color: vars('colors-neutral-white'),
     fontSize: '14px',
     fontWeight: '700',
-    color: vars('colors-neutral-white'),
     lineHeight: '100%',
   }
 
@@ -81,14 +81,24 @@ export const EventsList = ({
 
       <Box display="flex" flexDirection="column" gap="8px" w="100%">
         <Box
-          lineHeight="21px"
-          display="flex"
-          justifyContent="space-between"
           alignItems="center"
+          display="flex"
           fontSize="16px"
           fontWeight="700"
+          justifyContent="space-between"
+          lineHeight="21px"
+          sx={{
+            '>span': {
+              width: 'calc(100% - 12px)',
+            },
+            '>svg': {
+              alignSelf: 'flex-start',
+            },
+          }}
         >
-          {name} {hasNotification && <NotificationIcon />}
+          <span>{name}</span>
+          {hasNotification && <NotificationIcon />}
+          <NotificationIcon />
         </Box>
 
         {showCourse && !initOrEnd && (
