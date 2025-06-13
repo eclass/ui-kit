@@ -1,3 +1,10 @@
+## [1.53.3](https://github.com/eclass/ui-kit/compare/v1.53.2...v1.53.3) (2025-06-13)
+
+
+### Bug Fixes
+
+* **PDYE-1288:** notificacion condicional ([#725](https://github.com/eclass/ui-kit/issues/725)) ([fa5c22b](https://github.com/eclass/ui-kit/commit/fa5c22b2ad0e64bba32a54c53a31447f0e4f7fef))
+
 ## [1.53.2](https://github.com/eclass/ui-kit/compare/v1.53.1...v1.53.2) (2025-06-13)
 
 
