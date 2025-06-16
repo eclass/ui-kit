@@ -5,6 +5,14 @@ import { HelpIcon } from '@/molecules/NavBarButtons/Icons/HelpIcon'
 import { CalendarButtonIcon } from './Icons/CalendarButtonIcon'
 import { Accessibility } from '@/atoms/Icons/Accessibility'
 
+/**
+ * Componente que muestra botones de la barra de navegación. Recibe los siguientes props:
+ * @param {string} [buttonName] - Nombre del botón. Si no se proporciona, se usa un valor predeterminado según el tipo de botón.
+ * @param {boolean} [onlyLink] - Si es `true`, el botón no ejecuta ninguna acción al hacer clic, solo actúa como un enlace.
+ * @param {function} onClick - Función que se ejecuta al hacer clic en el botón.
+ * @param {'calendar' | 'help' | 'accessibility'} [type] - Tipo de botón que determina el icono y el texto a mostrar.
+ */
+
 export interface ButtonProps {
   buttonName?: string
   onlyLink?: boolean

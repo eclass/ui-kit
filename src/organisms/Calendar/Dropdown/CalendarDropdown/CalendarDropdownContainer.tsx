@@ -73,7 +73,7 @@ export const CalendarDropdownContainer = ({
     <Box
       zIndex={4}
       className={`calendarDropdown ${hasNew && !onlyToCalendar ? 'hasNew' : ''}`}
-      width="30px"
+      width="fit-content"
       height="30px"
       m={m}
       position="relative"
@@ -88,7 +88,7 @@ export const CalendarDropdownContainer = ({
           content: '""',
           display: isMenuOpen ? 'block' : 'none',
           height: '0',
-          left: '50%',
+          left: '14%',
           position: 'absolute',
           top: '30px',
           transform: 'translateX(-50%)',
@@ -146,7 +146,7 @@ export const CalendarDropdownContainer = ({
       <Menu autoSelect={false} onOpen={() => setMenuOpen(true)} onClose={onClose}>
         <>
           <GoToCalendar
-            text={text?.tooltip ?? 'Ir a Mi Calendario'}
+            text={text?.tooltip ?? 'Calendario'}
             tooltipDisabled={isTooltipDisabled}
             onlyToCalendar={onlyToCalendar}
             onClick={redirectToCalendar}

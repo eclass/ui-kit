@@ -1,8 +1,7 @@
 import { MenuButton } from '@chakra-ui/react'
-import { vars } from '@theme'
 
-import { CalendarButtonIcon } from '../../../../../molecules/NavBarButtons/Icons/CalendarButtonIcon'
-import { NewTooltip } from '@/molecules'
+import { vars } from '@theme'
+import { NavBarButton, NewTooltip } from '@/molecules'
 
 interface IGoToCalendar {
   text: string
@@ -18,39 +17,39 @@ export const GoToCalendar = ({
   onClick,
 }: IGoToCalendar): JSX.Element => {
   const activeBg = vars('colors-main-deepSkyBlue') ?? '#0189FF'
+  const hoverBg = 'rgba(96, 121, 142, 0.8)'
 
   return (
-    <NewTooltip label={text ?? 'Calendario'} m="2px 0 0 0" isDisabled={tooltipDisabled}>
+    <NewTooltip
+      label={text ?? 'Calendario'}
+      m="2px 0 0 -59px"
+      isDisabled={tooltipDisabled}
+      transform="translateX(-10px) !important"
+    >
       <MenuButton
         onClick={() => onlyToCalendar && onClick && onClick()}
-        background={vars('colors-main-blueGrey') ?? '#60798E'}
-        border="1px solid transparent"
-        borderRadius="100%"
-        height="30px !important"
-        width="30px !important"
-        padding="0 !important"
-        margin="0 !important"
         position="relative"
-        _active={{
-          bg: activeBg,
-          '&:hover': {
-            bg: activeBg,
-          },
-        }}
-        _hover={{
-          bg: 'rgba(96, 121, 142, 0.8)',
-        }}
         sx={{
-          '>span': {
-            display: 'grid',
-            alignContent: 'center',
-            h: '16px!important',
-            justifyItems: 'center',
-            lineHeight: '0',
+          _hover: {
+            '.icon': {
+              bg: hoverBg,
+            },
+            '.text': {
+              color: vars('colors-neutral-white'),
+            },
+          },
+
+          _active: {
+            '.icon': {
+              bg: onlyToCalendar ? hoverBg : activeBg,
+            },
+            '.text': {
+              color: vars('colors-neutral-white'),
+            },
           },
         }}
       >
-        <CalendarButtonIcon />
+        <NavBarButton type="calendar" onClick={() => {}} buttonName={text.toUpperCase()} />
       </MenuButton>
     </NewTooltip>
   )

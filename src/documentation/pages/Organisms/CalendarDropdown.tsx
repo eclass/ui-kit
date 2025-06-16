@@ -22,10 +22,10 @@ export const CalendarDropdownPage = (): JSX.Element => {
       </MyText>
 
       <Box
-        bg={vars('colors-neutral-darkCharcoal')}
+        bg="rgb(34, 34, 34)"
         border={`1px solid ${vars('colors-neutral-platinum')}`}
         display="flex"
-        justifyContent="end"
+        justifyContent="center"
         p="10px"
       >
         <CalendarDropdown
