@@ -20,9 +20,15 @@ export const GoToCalendar = ({
   const hoverBg = 'rgba(96, 121, 142, 0.8)'
 
   return (
-    <NewTooltip label={text ?? 'Calendario'} m="2px 0 0 0" isDisabled={tooltipDisabled}>
+    <NewTooltip
+      label={text ?? 'Calendario'}
+      m="2px 0 0 -59px"
+      isDisabled={tooltipDisabled}
+      transform="translateX(-10px) !important"
+    >
       <MenuButton
         onClick={() => onlyToCalendar && onClick && onClick()}
+        position="relative"
         sx={{
           _hover: {
             '.icon': {
@@ -43,7 +49,7 @@ export const GoToCalendar = ({
           },
         }}
       >
-        <NavBarButton type="calendar" onClick={() => {}} />
+        <NavBarButton type="calendar" onClick={() => {}} buttonName={text.toUpperCase()} />
       </MenuButton>
     </NewTooltip>
   )

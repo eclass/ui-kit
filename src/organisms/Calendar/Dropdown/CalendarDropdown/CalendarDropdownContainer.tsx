@@ -146,7 +146,7 @@ export const CalendarDropdownContainer = ({
       <Menu autoSelect={false} onOpen={() => setMenuOpen(true)} onClose={onClose}>
         <>
           <GoToCalendar
-            text={text?.tooltip ?? 'Ir a Mi Calendario'}
+            text={text?.tooltip ?? 'Calendario'}
             tooltipDisabled={isTooltipDisabled}
             onlyToCalendar={onlyToCalendar}
             onClick={redirectToCalendar}

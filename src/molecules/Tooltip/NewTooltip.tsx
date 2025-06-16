@@ -11,6 +11,7 @@ interface TooltipProps {
   placement?: PlacementWithLogical
   isOpen?: boolean | undefined
   sx?: CSSObject | undefined
+  transform?: string
 }
 
 export const NewTooltip: FC<TooltipProps> = ({
@@ -23,6 +24,7 @@ export const NewTooltip: FC<TooltipProps> = ({
   placement = 'bottom',
   isOpen,
   sx,
+  transform,
 }) => {
   return (
     <Tooltip
@@ -35,6 +37,7 @@ export const NewTooltip: FC<TooltipProps> = ({
         fontWeight: '400',
         maxWidth: maxWidth,
         padding: '8px',
+        transform: transform ?? '',
         '.chakra-tooltip__arrow': {
           bg: `${vars('colors-neutral-darkCharcoal')} !important`,
         },
