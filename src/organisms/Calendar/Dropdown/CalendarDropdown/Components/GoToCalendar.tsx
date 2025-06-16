@@ -1,7 +1,7 @@
 import { MenuButton } from '@chakra-ui/react'
 import { vars } from '@theme'
 
-import { CalendarButtonIcon } from '../Icons/CalendarButtonIcon'
+import { CalendarButtonIcon } from '../../../../../molecules/NavBarButtons/Icons/CalendarButtonIcon'
 import { NewTooltip } from '@/molecules'
 
 interface IGoToCalendar {
