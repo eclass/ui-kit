@@ -1,3 +1,10 @@
+## [1.53.4](https://github.com/eclass/ui-kit/compare/v1.53.3...v1.53.4) (2025-06-16)
+
+
+### Bug Fixes
+
+* **PDYE-1297:** reemplazo de boton dropdown calendario por nuevo comp… ([#727](https://github.com/eclass/ui-kit/issues/727)) ([e65f005](https://github.com/eclass/ui-kit/commit/e65f00550eaf3e3d6306119765c80a47d2d84a98))
+
 ## [1.53.3](https://github.com/eclass/ui-kit/compare/v1.53.2...v1.53.3) (2025-06-13)
 
 
