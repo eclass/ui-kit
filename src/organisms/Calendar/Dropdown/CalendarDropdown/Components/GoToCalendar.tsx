@@ -1,56 +1,43 @@
 import { MenuButton } from '@chakra-ui/react'
 
 import { vars } from '@theme'
-import { NavBarButton, NewTooltip } from '@/molecules'
+import { NavBarButton } from '@/molecules'
 
 interface IGoToCalendar {
   text: string
-  tooltipDisabled: boolean
   onlyToCalendar?: boolean
   onClick?: () => void
 }
 
-export const GoToCalendar = ({
-  text,
-  tooltipDisabled,
-  onlyToCalendar,
-  onClick,
-}: IGoToCalendar): JSX.Element => {
+export const GoToCalendar = ({ text, onlyToCalendar, onClick }: IGoToCalendar): JSX.Element => {
   const activeBg = vars('colors-main-deepSkyBlue') ?? '#0189FF'
   const hoverBg = 'rgba(96, 121, 142, 0.8)'
 
   return (
-    <NewTooltip
-      label={text ?? 'Calendario'}
-      m="2px 0 0 -59px"
-      isDisabled={tooltipDisabled}
-      transform="translateX(-10px) !important"
-    >
-      <MenuButton
-        onClick={() => onlyToCalendar && onClick && onClick()}
-        position="relative"
-        sx={{
-          _hover: {
-            '.icon': {
-              bg: hoverBg,
-            },
-            '.text': {
-              color: vars('colors-neutral-white'),
-            },
+    <MenuButton
+      onClick={() => onlyToCalendar && onClick && onClick()}
+      position="relative"
+      sx={{
+        _hover: {
+          '.icon': {
+            bg: hoverBg,
           },
+          '.text': {
+            color: vars('colors-neutral-white'),
+          },
+        },
 
-          _active: {
-            '.icon': {
-              bg: onlyToCalendar ? hoverBg : activeBg,
-            },
-            '.text': {
-              color: vars('colors-neutral-white'),
-            },
+        _active: {
+          '.icon': {
+            bg: onlyToCalendar ? hoverBg : activeBg,
           },
-        }}
-      >
-        <NavBarButton type="calendar" onClick={() => {}} buttonName={text.toUpperCase()} />
-      </MenuButton>
-    </NewTooltip>
+          '.text': {
+            color: vars('colors-neutral-white'),
+          },
+        },
+      }}
+    >
+      <NavBarButton as="div" type="calendar" buttonName={text.toUpperCase()} />
+    </MenuButton>
   )
 }

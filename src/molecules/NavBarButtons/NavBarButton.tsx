@@ -7,6 +7,7 @@ import { Accessibility } from '@/atoms/Icons/Accessibility'
 
 /**
  * Componente que muestra botones de la barra de navegación. Recibe los siguientes props:
+ * @param {('button' | 'a' | 'div')} [as='button'] - Tipo de elemento HTML que se renderiza. Por defecto es un botón.
  * @param {string} [buttonName] - Nombre del botón. Si no se proporciona, se usa un valor predeterminado según el tipo de botón.
  * @param {boolean} [onlyLink] - Si es `true`, el botón no ejecuta ninguna acción al hacer clic, solo actúa como un enlace.
  * @param {function} onClick - Función que se ejecuta al hacer clic en el botón.
@@ -14,13 +15,20 @@ import { Accessibility } from '@/atoms/Icons/Accessibility'
  */
 
 export interface ButtonProps {
+  as?: 'button' | 'a' | 'div'
   buttonName?: string
   onlyLink?: boolean
-  onClick: () => void
+  onClick?: () => void
   type: 'calendar' | 'help' | 'accessibility'
 }
 
-export const NavBarButton = ({ buttonName, onlyLink, onClick, type }: ButtonProps): JSX.Element => {
+export const NavBarButton = ({
+  as = 'button',
+  buttonName,
+  onlyLink,
+  onClick,
+  type,
+}: ButtonProps): JSX.Element => {
   const buttonType = {
     accessibility: {
       icon: <Accessibility />,
@@ -49,7 +57,8 @@ export const NavBarButton = ({ buttonName, onlyLink, onClick, type }: ButtonProp
 
   return (
     <Box
-      as="button"
+      as={as}
+      className="nav-bar-button"
       id={isAccessibility ? 'UserWayButton' : ''}
       onClick={isAccessibility ? triggerWidget : onClick}
       sx={{
