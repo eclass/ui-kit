@@ -1,28 +1,18 @@
-import {
-  Box,
-  Button,
-  Heading,
-  Modal,
-  ModalBody,
-  ModalCloseButton,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-  ModalOverlay,
-  useDisclosure,
-} from '@chakra-ui/react'
-import { vars } from './theme'
-import { BtnPrimary, BtnSecondary } from './molecules'
+import { Box, Button, Heading, useDisclosure } from '@chakra-ui/react'
+import { Modal } from './organisms/Modals/Modal/Modal'
+import { ModalAlert } from './organisms'
 
 export function Playground(): JSX.Element {
   const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen: isOpen2, onOpen: onOpen2, onClose: onClose2 } = useDisclosure()
+  const { isOpen: isOpen3, onOpen: onOpen3, onClose: onClose3 } = useDisclosure()
   return (
     <Box p="5rem 1rem">
       <Heading as="h1" size="sm">
         eClass Design System Playground
       </Heading>
       <Button onClick={onOpen}>Open Modal</Button>
-      <Hola
+      <Modal
         isOpen={isOpen}
         onClose={onClose}
         title="Confirmación"
@@ -31,131 +21,53 @@ export function Playground(): JSX.Element {
           { type: 'secondary', action: () => onClose(), text: 'Cancelar' },
         ]}
       >
-        <>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sed nam aspernatur dolores
-            saepe laudantium dicta dignissimos assumenda accusamus expedita adipisci, ipsum vel
-            exercitationem enim suscipit. Qui nihil quo quis.
-          </p>
-        </>
-      </Hola>
-    </Box>
-  )
-}
-
-interface HolaProps extends React.FC {
-  children: JSX.Element
-  title?: string
-  isOpen: boolean
-  onClose: () => void
-  /** Por defecto es false, si esta activo se quita el margin del contenido */
-  withoutMargin?: boolean
-  buttons?: Array<{ type?: 'primary' | 'secondary'; action: () => void; text: string }>
-  /** Si es un solo botón tiene la opción de centrar este  */
-  buttonsCenter?: boolean
-  /** Por defecto esta activo y permite cerrar el modal haciendo click fuera del modal */
-  closeOnOverlayClick?: boolean
-}
-const Hola = ({
-  children,
-  title,
-  isOpen,
-  onClose,
-  withoutMargin = false,
-  buttons,
-  buttonsCenter,
-  closeOnOverlayClick = true,
-}: HolaProps): JSX.Element => {
-  const px = '24px'
-  const py = '32px'
-
-  return (
-    <>
-      <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-        closeOnOverlayClick={closeOnOverlayClick}
-        motionPreset="scale" // "slideInBottom" | "slideInRight" | "scale" | "none"
-        scrollBehavior="inside" // este es el comportamiento del scroll al abrir el modal
-        // size="full" // este es el tamaño del modal
-      >
-        <ModalOverlay bg={vars('colors-neutral-darkCharcoal')} opacity="0.3!important" />
-        <ModalContent
-          minH="300px"
-          maxH="100dvh"
-          boxShadow={vars('shadows-lg')}
-          borderRadius="8px"
-          mt="10vh" // con esto se puede ajustar la posición del modal desde la parte superior
-        >
-          <ModalHeader
-            borderTopRadius="8px"
-            bg={vars('colors-main-deepSkyBlue')}
-            color={vars('colors-neutral-white')}
-            paddingY={px}
-            fontSize="20px"
-            fontWeight={700}
-            fontFamily="Roboto"
-            lineHeight={1}
-          >
-            {title}
-          </ModalHeader>
-          <ModalCloseButton
-            color={vars('colors-neutral-white')}
-            w="12px"
-            h="12px"
-            top={0}
-            right={0}
-            p="22px"
-            _focus={{
-              boxShadow: 'none',
-            }}
-          />
-          {children && (
-            <ModalBody px={withoutMargin ? 0 : px} pt={py} pb={0}>
-              {children}
-            </ModalBody>
-          )}
-
-          <ModalButtons px={px} py={py} buttons={buttons} buttonsCenter={buttonsCenter} />
-        </ModalContent>
+        <p>fdf</p>
+        <p>
+          alumnos, además de definir el uso de la plataforma de estudio. 1) El material del programa
+          de estudio estará disponible en una plataforma tecnológica a la que cada alumno podrá
+          acceder en la siguiente dirección: http://cursos.eclass.cl 2) Las credenciales de acceso
+          que recibe el alumno para ingresar a su programa de estudio, son personales e
+          intransferibles. 3) Al aceptar estos términos y condiciones, el alumno se compromete a
+          realizar el programa en el que se encuentra inscrito y a revisar los siguientes
+          documentos: Reglamento Académico, Manual del Alumno e Información del Programa.Estos
+          documentos estarán disponibles en la plataforma de estudio, y contienen toda la
+          información académica del programa. 4) El alumno se compromete a utilizar los materiales y
+          medios tecnológicos de eClass exclusivamente con fines educativos en el marco del programa
+          de estudio. Se deja constancia que la alumnos, además de definir el uso de la plataforma
+          de estudio. 5) El material del programa de estudio estará disponible en una plataforma
+          tecnológica a la que cada alumno podrá acceder en la siguiente dirección:
+          http://cursos.eclass.cl 2) Las credenciales de acceso que recibe el alumno para ingresar a
+          su programa de estudio, son personales e intransferibles. 3) Al aceptar estos términos y
+          condiciones, el alumno se compromete a realizar el programa en el que se encuentra
+          inscrito y a revisar los siguientes documentos: Reglamento Académico, Manual del Alumno e
+          Información del Programa.Estos documentos estarán disponibles en la plataforma de estudio,
+          y contienen toda la información académica del programa. 4) El alumno se compromete a
+          utilizar los materiales y medios tecnológicos de eClass exclusivamente con fines
+          educativos en el marco del programa de estudio. Se deja constancia que la
+        </p>
       </Modal>
-    </>
-  )
-}
 
-interface IModalButtons {
-  px: string
-  py: string
-  buttons: HolaProps['buttons']
-  buttonsCenter?: HolaProps['buttonsCenter']
-}
-const ModalButtons = ({ px, py, buttons, buttonsCenter }: IModalButtons): JSX.Element => {
-  if (!buttons || (buttons && buttons.length === 0)) {
-    return <></>
-  }
-  return (
-    <>
-      <ModalFooter
-        px={px}
-        py={py}
-        justifyContent={buttonsCenter ? 'center' : 'flex-start'}
-        gap="24px"
-      >
-        {buttons.map((button, index) => {
-          if (button?.type === 'secondary') {
-            return (
-              <BtnSecondary key={index} onClick={() => button.action()}>
-                {button.text}
-              </BtnSecondary>
-            )
-          }
-          return (
-            <BtnPrimary key={index} onClick={() => button.action()}>
-              {button.text}
-            </BtnPrimary>
-          )
-        })}
-      </ModalFooter>
-    </>
+      <Button onClick={onOpen2}>Open ModalAlert</Button>
+      <ModalAlert
+        isOpen={isOpen2}
+        onClose={onClose2}
+        type="info"
+        status="success"
+        title="¿Seguro que deseas borrar esta pregunta?"
+        description="Por favor escoge otro horario."
+        buttons={[
+          { action: () => {}, text: 'Opciones más largas' },
+          { action: () => onClose2(), text: 'Cancelar' },
+        ]}
+      />
+      <Button onClick={onOpen3}>Open ModalAlert loading</Button>
+      <ModalAlert
+        isOpen={isOpen3}
+        onClose={onClose3}
+        type="loading"
+        title="Descargando documento"
+        description="Se está preparando el archivo. Esto podría tardar un momento."
+      />
+    </Box>
   )
 }

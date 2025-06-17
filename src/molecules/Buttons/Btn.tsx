@@ -80,6 +80,7 @@ export function Btn({
     <Box
       margin={m}
       sx={{
+        w: isFullWidth ? '100%' : 'auto',
         '.react-ripples': {
           borderRadius,
           display: `${isFullWidth ? 'grid' : 'inline-flex!important'}`,
