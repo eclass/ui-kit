@@ -22,18 +22,7 @@ export const CalendarDropdownContainer = ({
   const [isMobile] = useMediaQuery('(max-width: 577px)')
   const { closeAndMarkSeen, empty, hasNew, hasMoreNext, ...all } = useParseEvents(events, now)
 
-  const [isTooltipDisabled, setTooltipDisabled] = useState(false)
   const [isMenuOpen, setMenuOpen] = useState(false)
-
-  // Resuelve tooltip que se mantiene visible al cerrar el menu
-  useEffect(() => {
-    if (isMenuOpen) {
-      setTooltipDisabled(true)
-    } else {
-      const timer = setTimeout(() => setTooltipDisabled(false), 300)
-      return () => clearTimeout(timer)
-    }
-  }, [isMenuOpen])
 
   // Función que oculta el contenido de fondo al abrir el menú en formato mobile.
   // Para el caso de v8 se usa el id del contenedor y para CV la clase.
@@ -147,7 +136,6 @@ export const CalendarDropdownContainer = ({
         <>
           <GoToCalendar
             text={text?.tooltip ?? 'Calendario'}
-            tooltipDisabled={isTooltipDisabled}
             onlyToCalendar={onlyToCalendar}
             onClick={redirectToCalendar}
           />
