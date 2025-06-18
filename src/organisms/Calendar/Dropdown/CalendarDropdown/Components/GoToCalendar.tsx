@@ -22,7 +22,8 @@ export const GoToCalendar = ({ text, onlyToCalendar, onClick }: IGoToCalendar): 
           '.nav-bar-icon': {
             bg: hoverBg,
           },
-          '.nav-bar-text': {
+          '.nav-bar-text': {   
+
             color: vars('colors-neutral-white'),
           },
         },
@@ -32,6 +33,7 @@ export const GoToCalendar = ({ text, onlyToCalendar, onClick }: IGoToCalendar): 
             bg: onlyToCalendar ? hoverBg : activeBg,
           },
           '.nav-bar-text': {
+
             color: vars('colors-neutral-white'),
           },
         },

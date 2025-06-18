@@ -1,3 +1,10 @@
+## [1.53.5](https://github.com/eclass/ui-kit/compare/v1.53.4...v1.53.5) (2025-06-17)
+
+
+### Bug Fixes
+
+* **PDYE-1297:** se quita tooltip ([#728](https://github.com/eclass/ui-kit/issues/728)) ([09f8942](https://github.com/eclass/ui-kit/commit/09f8942334dfb11cff9331c49e1b67708c08f242))
+
 ## [1.53.4](https://github.com/eclass/ui-kit/compare/v1.53.3...v1.53.4) (2025-06-16)
 
 
