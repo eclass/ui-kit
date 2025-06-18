@@ -7,6 +7,7 @@ export const ModalButtons = ({
   buttons,
   buttonsCenter,
   buttonsColumn,
+  buttonsInside,
   isDesktop,
   px,
   py,
@@ -22,8 +23,9 @@ export const ModalButtons = ({
       flexDirection={buttonFull ? 'column' : 'row'}
       gap="24px"
       justifyContent={buttonsCenter ? 'center' : 'flex-start'}
-      px={px}
-      py={py}
+      pb={buttonsInside ? 0 : py}
+      pt={py}
+      px={buttonsInside ? 0 : px}
     >
       {buttons.map((button, index) => {
         if (button?.type === 'secondary') {

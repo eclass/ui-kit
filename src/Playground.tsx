@@ -21,7 +21,6 @@ export function Playground(): JSX.Element {
           { type: 'secondary', action: () => onClose(), text: 'Cancelar' },
         ]}
       >
-        <p>fdf</p>
         <p>
           alumnos, además de definir el uso de la plataforma de estudio. 1) El material del programa
           de estudio estará disponible en una plataforma tecnológica a la que cada alumno podrá

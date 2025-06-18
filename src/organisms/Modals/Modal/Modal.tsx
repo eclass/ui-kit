@@ -1,4 +1,5 @@
 import {
+  Box,
   Modal as ChakraModal,
   ModalBody,
   ModalCloseButton,
@@ -16,8 +17,10 @@ export const Modal = ({
   buttons,
   buttonsCenter,
   buttonsColumn = true,
+  buttonsInside,
   children,
   closeOnOverlayClick = true,
+  fixedSubtitle,
   isOpen,
   onClose,
   title,
@@ -59,6 +62,7 @@ export const Modal = ({
             fontSize={isDesktop ? '20px' : '18px'}
             fontWeight={700}
             lineHeight={1}
+            mb={withoutMargin ? 0 : '32px'}
             paddingY={px}
             textAlign="center"
           >
@@ -75,20 +79,39 @@ export const Modal = ({
               boxShadow: 'none',
             }}
           />
+          {fixedSubtitle?.trim() && (
+            <Box as="p" fontSize="14px" lineHeight="19px" mb="32px" textAlign="center" px={px}>
+              {fixedSubtitle}
+            </Box>
+          )}
           {children && (
-            <ModalBody px={withoutMargin ? 0 : px} pt={py} pb={0}>
+            <ModalBody px={withoutMargin ? 0 : px} py={0} mb={buttonsInside ? '32px' : 0}>
               {children}
+
+              {buttonsInside && buttons && buttons.length > 0 && (
+                <ModalButtons
+                  buttons={buttons}
+                  buttonsCenter={buttonsCenter}
+                  buttonsColumn={buttonsColumn}
+                  buttonsInside
+                  isDesktop={isDesktop}
+                  px={px}
+                  py={py}
+                />
+              )}
             </ModalBody>
           )}
 
-          <ModalButtons
-            px={px}
-            py={py}
-            buttons={buttons}
-            buttonsCenter={buttonsCenter}
-            buttonsColumn={buttonsColumn}
-            isDesktop={isDesktop}
-          />
+          {!buttonsInside && (
+            <ModalButtons
+              buttons={buttons}
+              buttonsCenter={buttonsCenter}
+              buttonsColumn={buttonsColumn}
+              isDesktop={isDesktop}
+              px={px}
+              py={py}
+            />
+          )}
         </ModalContent>
       </ChakraModal>
     </>

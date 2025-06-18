@@ -48,6 +48,7 @@ export const ModalAlert = ({
             alignItems="center"
             textAlign="center"
             gap="16px"
+            fontFamily="Roboto"
           >
             {type === 'loading' ? (
               <Loading />
@@ -56,8 +57,16 @@ export const ModalAlert = ({
                 {alertColorStates[status ?? 'info'].icon}
               </Box>
             )}
-            {title && <p>{title}</p>}
-            {description && <p>{description}</p>}
+            {title && (
+              <Box as="p" fontWeight="700" fontSize={isDesktop ? '20px' : '18px'} lineHeight="24px">
+                {title}
+              </Box>
+            )}
+            {description && (
+              <Box as="p" fontSize="16px" lineHeight="24px">
+                {description}
+              </Box>
+            )}
           </ModalBody>
           {buttons?.length && (
             <Box
@@ -65,10 +74,14 @@ export const ModalAlert = ({
               borderTop={`1px solid ${vars('colors-neutral-platinum')}`}
               sx={{
                 button: {
-                  w: '100%',
                   borderRight: `1px solid ${vars('colors-neutral-platinum')}`,
+                  fontFamily: 'Roboto',
+                  fontSize: '16px',
+                  fontWeight: 500,
+                  lineHeight: '21px',
                   p: '16px',
                   textDecor: 'none',
+                  width: '100%',
                   '&:last-child': {
                     borderRight: 'none',
                   },
