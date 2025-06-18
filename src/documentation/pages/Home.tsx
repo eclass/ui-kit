@@ -45,7 +45,6 @@ export const Home = (): JSX.Element => {
             loading: 'hola',
             buttonCalendar: 'hola',
           }}
-          clickEvent={(e) => console.log(e)}
         />
       </Box>
 

@@ -30,7 +30,8 @@
     "Sebastián González Riffo <sebastian@gonzalezr.cl>"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "VITE_APP_MODE=playground vite",
+    "docu": "vite",
     "build": "tsc && vite build && npm run build:types && npm run copy-dts",
     "build:types": "tsc -p tsconfig.types.json",
     "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" dist",

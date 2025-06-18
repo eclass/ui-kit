@@ -68,24 +68,30 @@ export const Modal = ({
           >
             {title}
           </ModalHeader>
-          <ModalCloseButton
-            color={vars('colors-neutral-white')}
-            h="12px"
-            p="22px"
-            right={0}
-            top={0}
-            w="12px"
-            _focus={{
-              boxShadow: 'none',
-            }}
-          />
+          {closeOnOverlayClick && (
+            <ModalCloseButton
+              color={vars('colors-neutral-white')}
+              h="12px"
+              p="22px"
+              right={0}
+              top={0}
+              w="12px"
+              _focus={{
+                boxShadow: 'none',
+              }}
+            />
+          )}
           {fixedSubtitle?.trim() && (
-            <Box as="p" fontSize="14px" lineHeight="19px" mb="32px" textAlign="center" px={px}>
+            <Box as="p" fontSize="14px" lineHeight="19px" mb={py} textAlign="center" px={px}>
               {fixedSubtitle}
             </Box>
           )}
           {children && (
-            <ModalBody px={withoutMargin ? 0 : px} py={0} mb={buttonsInside ? '32px' : 0}>
+            <ModalBody
+              px={withoutMargin ? 0 : px}
+              py={0}
+              mb={buttons?.length === 0 ? py : buttonsInside ? py : 0}
+            >
               {children}
 
               {buttonsInside && buttons && buttons.length > 0 && (

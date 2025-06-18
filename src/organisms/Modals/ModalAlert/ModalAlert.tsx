@@ -68,7 +68,7 @@ export const ModalAlert = ({
               </Box>
             )}
           </ModalBody>
-          {buttons?.length && (
+          {type === 'info' && buttons?.length && (
             <Box
               display="flex"
               borderTop={`1px solid ${vars('colors-neutral-platinum')}`}
