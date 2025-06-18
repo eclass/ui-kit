@@ -19,19 +19,19 @@ export const GoToCalendar = ({ text, onlyToCalendar, onClick }: IGoToCalendar): 
       position="relative"
       sx={{
         _hover: {
-          '.icon': {
+          '.nav-bar-icon': {
             bg: hoverBg,
           },
-          '.text': {
+          '.nav-bar-text': {
             color: vars('colors-neutral-white'),
           },
         },
 
         _active: {
-          '.icon': {
+          '.nav-bar-icon': {
             bg: onlyToCalendar ? hoverBg : activeBg,
           },
-          '.text': {
+          '.nav-bar-text': {
             color: vars('colors-neutral-white'),
           },
         },

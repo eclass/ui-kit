@@ -62,31 +62,32 @@ export const NavBarButton = ({
       id={isAccessibility ? 'UserWayButton' : ''}
       onClick={isAccessibility ? triggerWidget : onClick}
       sx={{
+        cursor: 'pointer',
         display: 'flex',
         gap: '8px',
         h: '30px',
         maxH: '30px',
 
         _hover: {
-          '.icon': {
+          '.nav-bar-icon': {
             bg: hoverBg,
           },
-          '.text': {
+          '.nav-bar-text': {
             color: vars('colors-neutral-white'),
           },
         },
 
         _active: {
-          '.icon': {
+          '.nav-bar-icon': {
             // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
             bg: onlyLink || isAccessibility ? hoverBg : activeBg,
           },
-          '.text': {
+          '.nav-bar-text': {
             color: vars('colors-neutral-white'),
           },
         },
 
-        '.icon': {
+        '.nav-bar-icon': {
           alignItems: 'center',
           bg: vars('colors-main-blueGrey'),
           borderRadius: '100%',
@@ -99,19 +100,17 @@ export const NavBarButton = ({
           width: '30px',
         },
 
-        '.text': {
+        '.nav-bar-text': {
           alignContent: 'center',
+          color: vars('colors-neutral-silverSand'),
           fontSize: '12px',
           fontWeight: '500',
-          forntFamily: 'Roboto',
-          color: vars('colors-neutral-silverSand'),
+          fontFamily: 'Roboto',
         },
       }}
     >
-      <Box className="icon">{buttonType[type].icon}</Box>
-      <Box as="span" className="text">
-        {buttonType[type].text}
-      </Box>
+      <Box className="nav-bar-icon">{buttonType[type].icon}</Box>
+      <Box className="nav-bar-text">{buttonType[type].text}</Box>
     </Box>
   )
 }
