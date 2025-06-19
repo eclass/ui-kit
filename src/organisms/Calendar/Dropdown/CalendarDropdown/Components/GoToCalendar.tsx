@@ -18,6 +18,8 @@ export const GoToCalendar = ({ text, onlyToCalendar, onClick }: IGoToCalendar): 
       onClick={() => onlyToCalendar && onClick && onClick()}
       position="relative"
       sx={{
+        background: 'none',
+        border: '1px transparent',
         _hover: {
           '.nav-bar-icon': {
             bg: hoverBg,

@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, useMediaQuery } from '@chakra-ui/react'
 
 import { vars } from '@theme'
 import { HelpIcon } from '@/molecules/NavBarButtons/Icons/HelpIcon'
@@ -29,6 +29,8 @@ export const NavBarButton = ({
   onClick,
   type,
 }: ButtonProps): JSX.Element => {
+  const [isMobile] = useMediaQuery('(max-width: 640px)')
+
   const buttonType = {
     accessibility: {
       icon: <Accessibility />,
@@ -62,11 +64,14 @@ export const NavBarButton = ({
       id={isAccessibility ? 'UserWayButton' : ''}
       onClick={isAccessibility ? triggerWidget : onClick}
       sx={{
+        background: 'none !important',
+        border: '1px transparent !important',
         cursor: 'pointer',
         display: 'flex',
         gap: '8px',
         h: '30px',
         maxH: '30px',
+        p: '0',
 
         _hover: {
           '.nav-bar-icon': {
@@ -110,7 +115,7 @@ export const NavBarButton = ({
       }}
     >
       <Box className="nav-bar-icon">{buttonType[type].icon}</Box>
-      <Box className="nav-bar-text">{buttonType[type].text}</Box>
+      {!isMobile && <Box className="nav-bar-text">{buttonType[type].text}</Box>}
     </Box>
   )
 }
