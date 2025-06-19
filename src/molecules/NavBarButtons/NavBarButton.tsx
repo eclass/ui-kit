@@ -64,8 +64,10 @@ export const NavBarButton = ({
       id={isAccessibility ? 'UserWayButton' : ''}
       onClick={isAccessibility ? triggerWidget : onClick}
       sx={{
+
         background: 'none !important',
         border: '1px transparent !important',
+
         cursor: 'pointer',
         display: 'flex',
         gap: '8px',
@@ -116,6 +118,7 @@ export const NavBarButton = ({
     >
       <Box className="nav-bar-icon">{buttonType[type].icon}</Box>
       {!isMobile && <Box className="nav-bar-text">{buttonType[type].text}</Box>}
+
     </Box>
   )
 }

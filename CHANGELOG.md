@@ -1,3 +1,10 @@
+## [1.53.6](https://github.com/eclass/ui-kit/compare/v1.53.5...v1.53.6) (2025-06-18)
+
+
+### Bug Fixes
+
+* **PDYE-1297:** cambio classnames ([#730](https://github.com/eclass/ui-kit/issues/730)) ([8606bf3](https://github.com/eclass/ui-kit/commit/8606bf3f3ebab204f4230eb2ff28f338bbe60161))
+
 ## [1.53.5](https://github.com/eclass/ui-kit/compare/v1.53.4...v1.53.5) (2025-06-17)
 
 
