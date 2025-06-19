@@ -1,3 +1,10 @@
+## [1.53.7](https://github.com/eclass/ui-kit/compare/v1.53.6...v1.53.7) (2025-06-19)
+
+
+### Bug Fixes
+
+* **PDYE-1297:** reajuste fondo, borde y posicion boton ([#732](https://github.com/eclass/ui-kit/issues/732)) ([8bc4c17](https://github.com/eclass/ui-kit/commit/8bc4c1701c2b34e708a1e43f7465cb6a0824407d))
+
 ## [1.53.6](https://github.com/eclass/ui-kit/compare/v1.53.5...v1.53.6) (2025-06-18)
 
 
