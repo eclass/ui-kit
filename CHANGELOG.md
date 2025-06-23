@@ -1,3 +1,10 @@
+## [1.53.8](https://github.com/eclass/ui-kit/compare/v1.53.7...v1.53.8) (2025-06-23)
+
+
+### Bug Fixes
+
+* **PDYE-1298:** posicion icono notificacion calendario ([#733](https://github.com/eclass/ui-kit/issues/733)) ([e9d59d8](https://github.com/eclass/ui-kit/commit/e9d59d886eb33fd156292fa485df066db51353a7))
+
 ## [1.53.7](https://github.com/eclass/ui-kit/compare/v1.53.6...v1.53.7) (2025-06-19)
 
 
