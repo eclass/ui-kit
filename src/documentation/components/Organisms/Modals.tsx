@@ -1,6 +1,6 @@
 import { useDisclosure } from '@chakra-ui/react'
 import { BtnPrimary } from '@/molecules'
-import { Modal, ModalAlert } from '@/organisms'
+import { Modal, ModalAlertNew } from '@/organisms'
 
 export const ModalDemo = ({
   type,
@@ -96,12 +96,12 @@ export const ModalAlertDemo = ({
 
   const text = {
     info: {
-      button: 'ModalAlert',
+      button: 'ModalAlertNew',
       title: '¿Seguro que deseas borrar esta pregunta?',
       description: 'Por favor escoge otro horario.',
     },
     loading: {
-      button: 'ModalAlert Loading',
+      button: 'ModalAlertNew Loading',
       title: 'Descargando documento',
       description: 'Se está preparando el archivo. Esto podría tardar un momento.',
     },
@@ -109,7 +109,7 @@ export const ModalAlertDemo = ({
   return (
     <>
       <BtnPrimary onClick={onOpen}>{status ?? button}</BtnPrimary>
-      <ModalAlert
+      <ModalAlertNew
         isOpen={isOpen}
         onClose={onClose}
         type={type === 'loading' ? 'loading' : 'info'}

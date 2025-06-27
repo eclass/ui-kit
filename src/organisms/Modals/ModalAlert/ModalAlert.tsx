@@ -13,7 +13,7 @@ import { Loading } from './Loading'
 import { alertColorStates } from '@/organisms/Alerts/utils/alertStates'
 import { vars } from '@/theme'
 
-export const ModalAlert = ({
+export const ModalAlertNew = ({
   type,
   isOpen,
   onClose,
@@ -27,7 +27,7 @@ export const ModalAlert = ({
   return (
     <>
       <ChakraModal
-        closeOnOverlayClick // debo cambiar al terminar
+        closeOnOverlayClick={false}
         isOpen={isOpen}
         motionPreset="scale"
         onClose={onClose}

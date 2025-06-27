@@ -4,14 +4,14 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "strict": false,
     "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
+    "module": "CommonJS",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
-    "isolatedModules": false,
+    "isolatedModules": true,
     "incremental": true,
     "jsx": "react-jsx",
     "importHelpers": true,
@@ -34,6 +34,6 @@
     "outDir": "dist",
     "noEmit": false
   },
-  "include": ["src", "test", "vite.config.ts"],
+  "include": ["src/**/*", "test/**/*", "vite.config.ts"],
   "exclude": ["jest.config.js", ".eslintrc.js", "prepare.js"]
 }
