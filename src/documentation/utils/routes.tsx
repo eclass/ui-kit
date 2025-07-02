@@ -29,9 +29,10 @@ const FlashNotification = React.lazy(
 )
 const CalendarDropdown = React.lazy(async () => await import('../pages/Organisms/CalendarDropdown'))
 const CourseList = React.lazy(async () => await import('../pages/Organisms/CourseList'))
+const ModalAlert = React.lazy(async () => await import('../pages/Organisms/ModalAlert'))
+const Modals = React.lazy(async () => await import('../pages/Organisms/Modals'))
 const Events = React.lazy(async () => await import('../pages/Organisms/Events'))
 const EventsList = React.lazy(async () => await import('../pages/Organisms/EventsList'))
-const ModalAlert = React.lazy(async () => await import('../pages/Organisms/ModalAlert'))
 const Resources = React.lazy(async () => await import('../pages/Organisms/Resources'))
 
 /**
@@ -158,6 +159,16 @@ export const routes: IRoute[] = [
     path: '/organisms/courselist',
     label: 'Course List',
     component: <CourseList />,
+  },
+  {
+    path: '/organisms/modalalert',
+    label: 'ModalAlert',
+    component: <ModalAlert />,
+  },
+  {
+    path: '/organisms/modals',
+    label: 'Modals',
+    component: <Modals />,
   },
   {
     path: '/organisms/events',
