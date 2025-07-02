@@ -1,4 +1,4 @@
-import { MyHeading, MyText, MyTittle, Code, ListComponent } from '@/documentation/components'
+import { MyHeading, MyText, MyTitle, Code, ListComponent } from '@/documentation/components'
 import { ModalAlertDemo, ModalDemo } from '@/documentation/components/Organisms/Modals'
 
 export const ViewModals = (): JSX.Element => {
@@ -15,7 +15,7 @@ export const ViewModals = (): JSX.Element => {
         <ModalAlertDemo button="Open ModalAlert" />
       </ListComponent>
 
-      <MyTittle>Tipo Modal</MyTittle>
+      <MyTitle>Tipo Modal</MyTitle>
       <MyText>
         Es el Modal tradicional para mostrar contenido, que incluye una cabecera, contenido y una
         botonera con <strong>acciones</strong>.
@@ -51,7 +51,7 @@ export function View(){
     </>)
 }`}
       />
-      <MyTittle>Variantes del tipo Modal</MyTittle>
+      <MyTitle>Variantes del tipo Modal</MyTitle>
       <MyText>
         Variantes del modal dependiendo de sus <strong>props</strong>. El valor de los props va
         definido en sus tipos.
@@ -66,7 +66,7 @@ export function View(){
         <ModalDemo type="closeOnOverlayClick" />
       </ListComponent>
 
-      <MyTittle>Tipo ModalAlert</MyTittle>
+      <MyTitle>Tipo ModalAlert</MyTitle>
       <MyText>
         Es el modal que se utiliza a modo de alerta para el usuario, el cual posee información
         reducida y también puede contar con botones. Este componente tiene dos visualizaciones
@@ -105,7 +105,7 @@ export function View(){
     </>)
 }`}
       />
-      <MyTittle>Variantes del tipo ModalAlert</MyTittle>
+      <MyTitle>Variantes del tipo ModalAlert</MyTitle>
       <MyText>
         Las variantes del modal son dos, como ejemplificamos más arriba. Sin embargo, cada una
         también puede variar; por ejemplo, se pueden <strong>omitir los textos</strong> pasados como
