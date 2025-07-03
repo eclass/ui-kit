@@ -1,3 +1,16 @@
+# [1.54.0](https://github.com/eclass/ui-kit/compare/v1.53.8...v1.54.0) (2025-07-03)
+
+
+### Bug Fixes
+
+* **modal:** correcion de test ([ccd82e4](https://github.com/eclass/ui-kit/commit/ccd82e4da195492877ff1cba0efaa6835d0c1c17))
+* **modals:** corrijo documentación ([ddf9d95](https://github.com/eclass/ui-kit/commit/ddf9d95023e56c1cdaa294332c9c97c58d2bd20b))
+
+
+### Features
+
+* **PDYE-1293:** modals ([#734](https://github.com/eclass/ui-kit/issues/734)) ([21d93c2](https://github.com/eclass/ui-kit/commit/21d93c2a01ad80853aa7724468db335e09eb0984))
+
 ## [1.53.8](https://github.com/eclass/ui-kit/compare/v1.53.7...v1.53.8) (2025-06-23)
 
 
