@@ -1,3 +1,10 @@
+## [1.54.1](https://github.com/eclass/ui-kit/compare/v1.54.0...v1.54.1) (2025-07-03)
+
+
+### Bug Fixes
+
+* **modal:** agrego loading y scroll completo ([b7d0ea3](https://github.com/eclass/ui-kit/commit/b7d0ea31f0d587133736a30239811c943ea89dc2))
+
 # [1.54.0](https://github.com/eclass/ui-kit/compare/v1.53.8...v1.54.0) (2025-07-03)
 
 
