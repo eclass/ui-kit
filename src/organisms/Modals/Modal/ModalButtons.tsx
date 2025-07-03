@@ -1,7 +1,9 @@
-import { ModalFooter } from '@chakra-ui/react'
+import { ModalFooter, ModalFooterProps } from '@chakra-ui/react'
 
 import { BtnPrimary, BtnSecondary } from '@/molecules'
 import { IModalButtons } from '../types'
+
+const StyledModalFooter = ModalFooter as React.FC<ModalFooterProps>
 
 export const ModalButtons = ({
   buttons,
@@ -18,8 +20,11 @@ export const ModalButtons = ({
 
   const buttonFull = !isDesktop && buttonsColumn
 
+  const hasLoading = buttons.some((button) => button.isLoading)
+
   return (
-    <ModalFooter
+    <StyledModalFooter
+      as="footer"
       flexDirection={buttonFull ? 'column' : 'row'}
       gap="24px"
       justifyContent={buttonsCenter ? 'center' : 'flex-start'}
@@ -30,17 +35,29 @@ export const ModalButtons = ({
       {buttons.map((button, index) => {
         if (button?.type === 'secondary') {
           return (
-            <BtnSecondary key={index} onClick={() => button.action()} isFullWidth={buttonFull}>
+            <BtnSecondary
+              key={index}
+              onClick={() => button.action()}
+              isFullWidth={buttonFull}
+              isLoading={button.isLoading}
+              disabled={button.isDisabled ?? hasLoading}
+            >
               {button.text}
             </BtnSecondary>
           )
         }
         return (
-          <BtnPrimary key={index} onClick={() => button.action()} isFullWidth={buttonFull}>
+          <BtnPrimary
+            key={index}
+            onClick={() => button.action()}
+            isFullWidth={buttonFull}
+            isLoading={button.isLoading}
+            disabled={button.isDisabled ?? hasLoading}
+          >
             {button.text}
           </BtnPrimary>
         )
       })}
-    </ModalFooter>
+    </StyledModalFooter>
   )
 }

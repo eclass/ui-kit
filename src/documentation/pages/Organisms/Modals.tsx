@@ -57,6 +57,7 @@ export function View(){
         definido en sus tipos.
       </MyText>
       <ListComponent>
+        <ModalDemo type="inside" />
         <ModalDemo type="withoutButtons" />
         <ModalDemo type="buttonsCenter" />
         <ModalDemo type="buttonsColumn" />

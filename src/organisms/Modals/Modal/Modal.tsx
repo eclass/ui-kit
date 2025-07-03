@@ -25,32 +25,44 @@ export const Modal = ({
   onClose,
   title,
   withoutMargin = false,
+  scrollBehavior = 'outside',
 }: IModal): JSX.Element => {
   const py = '32px'
   const px = '24px'
 
   const [isDesktop] = useMediaQuery('(min-width: 641px)')
+  const hasLoading = buttons?.length && buttons.some((button) => button.isLoading)
+
+  const handleClose = (): void => {
+    if (hasLoading) return
+    return onClose()
+  }
+
+  const isInside = scrollBehavior === 'inside'
 
   return (
     <>
       <ChakraModal
-        closeOnOverlayClick={closeOnOverlayClick}
+        closeOnOverlayClick={hasLoading ? false : closeOnOverlayClick}
         isOpen={isOpen}
         motionPreset="scale"
-        onClose={onClose}
-        scrollBehavior="inside"
+        onClose={handleClose}
+        scrollBehavior={scrollBehavior}
       >
         <ModalOverlay />
         <ModalContent
-          maxH="100dvh"
+          maxH={isInside ? '100dvh' : 'auto'}
           minH="300px"
           padding={0}
           width="100%"
           sx={{
             borderRadius: isDesktop ? '8px' : 0,
             height: isDesktop ? 'auto' : '100dvh',
-            margin: isDesktop ? '10vh auto 0' : 0, // se debe que top tendrá el modal
-            maxH: isDesktop ? '80dvh' : '100dvh',
+            mt: isDesktop ? '48px' : 0,
+            marginX: isDesktop ? 'auto' : 0,
+            mb: 0,
+            // mb: isDesktop && !isInside ? '48px' : 0,
+            maxH: isInside ? 'calc(100dvh - 96px)' : 'auto',
             maxWidth: isDesktop ? '600px' : '100%',
           }}
         >

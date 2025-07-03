@@ -6,6 +6,7 @@ export const ModalDemo = ({
   type,
 }: {
   type?:
+    | 'inside'
     | 'withoutButtons'
     | 'buttonsCenter'
     | 'buttonsColumn'
@@ -25,6 +26,7 @@ export const ModalDemo = ({
     fixedSubtitle: 'Subtitulo fijo (fixedSubtitle="")',
     withoutMargin: 'Sin margin (withoutMargin)',
     closeOnOverlayClick: 'Cerrar solo en botones (closeOnOverlayClick)',
+    inside: 'Scroll dentro del modal (inside)',
   }
 
   return (
@@ -38,6 +40,7 @@ export const ModalDemo = ({
         buttonsCenter={type === 'buttonsCenter'}
         buttonsColumn={type !== 'buttonsColumn'}
         buttonsInside={type === 'buttonsInside'}
+        scrollBehavior={['buttonsInside', 'inside'].includes(type ?? '') ? 'inside' : 'outside'}
         withoutMargin={type === 'withoutMargin'}
         closeOnOverlayClick={type !== 'closeOnOverlayClick'}
         buttons={
@@ -65,14 +68,19 @@ export const ModalDemo = ({
           de estudio. Se deja constancia que la alumnos, además de definir el uso de la plataforma
           de estudio. 5) El material del programa de estudio estará disponible en una plataforma
           tecnológica a la que cada alumno podrá acceder en la siguiente dirección:
-          http://cursos.eclass.cl 2) Las credenciales de acceso que recibe el alumno para ingresar a
-          su programa de estudio, son personales e intransferibles. 3) Al aceptar estos términos y
-          condiciones, el alumno se compromete a realizar el programa en el que se encuentra
-          inscrito y a revisar los siguientes documentos: Reglamento Académico, Manual del Alumno e
-          Información del Programa.Estos documentos estarán disponibles en la plataforma de estudio,
-          y contienen toda la información académica del programa. 4) El alumno se compromete a
-          utilizar los materiales y medios tecnológicos de eClass exclusivamente con fines
-          educativos en el marco del programa de estudio. Se deja constancia que la
+          http://cursos.eclass.cl
+          {['buttonsInside', 'inside'].includes(type ?? '') && (
+            <>
+              2) Las credenciales de acceso que recibe el alumno para ingresar a su programa de
+              estudio, son personales e intransferibles. 3) Al aceptar estos términos y condiciones,
+              el alumno se compromete a realizar el programa en el que se encuentra inscrito y a
+              revisar los siguientes documentos: Reglamento Académico, Manual del Alumno e
+              Información del Programa.Estos documentos estarán disponibles en la plataforma de
+              estudio, y contienen toda la información académica del programa. 4) El alumno se
+              compromete a utilizar los materiales y medios tecnológicos de eClass exclusivamente
+              con fines educativos en el marco del programa de estudio. Se deja constancia que la
+            </>
+          )}
         </p>
       </Modal>
     </>

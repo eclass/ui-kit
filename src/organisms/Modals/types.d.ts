@@ -1,5 +1,11 @@
 export interface IModal {
-  buttons?: Array<{ type?: 'primary' | 'secondary'; action: () => void; text: string }>
+  buttons?: Array<{
+    type?: 'primary' | 'secondary'
+    action: () => void
+    text: string
+    isLoading?: boolean
+    isDisabled?: boolean
+  }>
   /** Si es un solo botón tiene la opción de centrar este  */
   buttonsCenter?: boolean
   /** muestran en columna en mobile, por defecto es true */
@@ -16,6 +22,8 @@ export interface IModal {
   title?: string
   /** Si esta activo se quita el margin del contenido */
   withoutMargin?: boolean
+  /** Como quiero el scroll, dentro del modal o el modal incluido (por defecto es el último) */
+  scrollBehavior?: 'inside' | 'outside'
 }
 
 export interface IModalButtons {

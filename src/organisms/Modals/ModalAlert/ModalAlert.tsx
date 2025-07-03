@@ -31,6 +31,7 @@ export const ModalAlertNew = ({
         isOpen={isOpen}
         motionPreset="scale"
         onClose={onClose}
+        closeOnEsc={type !== 'loading'}
       >
         <ModalOverlay />
         <ModalContent

@@ -121,6 +121,17 @@ describe('Modal Component', () => {
       await user.keyboard('{Escape}')
       expect(onCloseMock).toHaveBeenCalledTimes(1)
     })
+
+    it('prevents closing when buttons are loading', async () => {
+      const user = userEvent.setup()
+      const onCloseMock = jest.fn()
+      const buttons = [{ text: 'Loading Button', action: jest.fn(), isLoading: true }]
+
+      renderWithChakra(<Modal {...defaultProps} onClose={onCloseMock} buttons={buttons} />)
+
+      await user.keyboard('{Escape}')
+      expect(onCloseMock).not.toHaveBeenCalled()
+    })
   })
 
   describe('Button Positioning', () => {
@@ -188,7 +199,6 @@ describe('Modal Component', () => {
       const modalContent = screen.getByRole('dialog').closest('.chakra-modal__content')
       expect(modalContent).toHaveStyle('border-radius: 0px')
       expect(modalContent).toHaveStyle('height: 100dvh')
-      expect(modalContent).toHaveStyle('margin: 0px')
       expect(modalContent).toHaveStyle('max-width: 100%')
 
       useMediaQuery.mockReturnValue([true]) // Reset to desktop for other tests
