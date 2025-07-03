@@ -66,7 +66,10 @@ describe('ModalAlertNew Component', () => {
     const modalContainer = document.querySelector('.chakra-modal__content-container')
 
     expect(modalContainer).toBeInTheDocument()
-    await userEvent.click(modalContainer)
+
+    if (modalContainer) {
+      await userEvent.click(modalContainer)
+    }
     expect(onCloseMock).not.toHaveBeenCalled()
   })
 })
