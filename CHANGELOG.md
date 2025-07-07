@@ -1,3 +1,10 @@
+## [1.54.2](https://github.com/eclass/ui-kit/compare/v1.54.1...v1.54.2) (2025-07-07)
+
+
+### Bug Fixes
+
+* **global:** recupero estilo de botones globales ([f41d910](https://github.com/eclass/ui-kit/commit/f41d9100a59246d5bfe93ef218bf493adb108377))
+
 ## [1.54.1](https://github.com/eclass/ui-kit/compare/v1.54.0...v1.54.1) (2025-07-03)
 
 
