@@ -1,3 +1,10 @@
+## [1.54.3](https://github.com/eclass/ui-kit/compare/v1.54.2...v1.54.3) (2025-07-07)
+
+
+### Bug Fixes
+
+* **modals:** exporto modales nuevos ([15a04af](https://github.com/eclass/ui-kit/commit/15a04afe18185731bafb5f03de346b7437a86559))
+
 ## [1.54.2](https://github.com/eclass/ui-kit/compare/v1.54.1...v1.54.2) (2025-07-07)
 
 
