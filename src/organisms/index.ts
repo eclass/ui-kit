@@ -1,6 +1,6 @@
 export * from './CourseList'
 export * from './Alerts'
-// export * from './ModalAlert'
+export * from './ModalAlert'
 export * from './Events'
 export * from './Resources'
 export * from './Calendar'
