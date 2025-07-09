@@ -64,6 +64,7 @@ export const NavBarButton = ({
       id={isAccessibility ? 'UserWayButton' : ''}
       onClick={isAccessibility ? triggerWidget : onClick}
       sx={{
+        alignItems: 'center',
         background: 'none !important',
         border: '1px transparent !important',
         cursor: 'pointer',
