@@ -1,3 +1,10 @@
+## [1.54.4](https://github.com/eclass/ui-kit/compare/v1.54.3...v1.54.4) (2025-07-09)
+
+
+### Bug Fixes
+
+* **PDYE-1328:** alineacion de items botones barra ([#736](https://github.com/eclass/ui-kit/issues/736)) ([c7880cc](https://github.com/eclass/ui-kit/commit/c7880cc4fd65b1c6f82b9dba9701b6beae060113))
+
 ## [1.54.3](https://github.com/eclass/ui-kit/compare/v1.54.2...v1.54.3) (2025-07-07)
 
 
