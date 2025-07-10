@@ -1,2 +1,3 @@
 export { Modal } from './Modal/Modal'
-export { ModalAlertNew } from './ModalAlert/ModalAlert'
+export { ModalButtons, ModalContent } from './Modal/ModalButtons'
+export { ModalAlertNew, ModalAlertButtons } from './ModalAlert/ModalAlert'

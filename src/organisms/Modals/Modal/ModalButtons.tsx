@@ -1,26 +1,32 @@
-import { ModalFooter, ModalFooterProps } from '@chakra-ui/react'
+import {
+  ModalFooter,
+  ModalFooterProps,
+  ModalBody,
+  useMediaQuery,
+  ModalBodyProps,
+} from '@chakra-ui/react'
 
-import { BtnPrimary, BtnSecondary } from '@/molecules'
 import { IModalButtons } from '../types'
+import { uiKitModalIsDesktop } from './Modal'
 
 const StyledModalFooter = ModalFooter as React.FC<ModalFooterProps>
+const StyledModalBody = ModalBody as React.FC<ModalBodyProps>
 
+/**
+ * Componente que renderiza los botones de un modal.
+ * @example
+ * <ModalButtons>
+ *  <BtnPrimary as="button" onClick={() => onClose()}>Aceptar</BtnPrimary>
+ *  <BtnSecondary as="button" onClick={() => onClose()}>Cancelar</BtnSecondary>
+ * </ModalButtons>
+ */
 export const ModalButtons = ({
-  buttons,
+  children,
   buttonsCenter,
   buttonsColumn,
-  buttonsInside,
-  isDesktop,
-  px,
-  py,
 }: IModalButtons): JSX.Element => {
-  if (!buttons || (buttons && buttons.length === 0)) {
-    return <></>
-  }
-
+  const [isDesktop] = useMediaQuery(`(min-width: ${uiKitModalIsDesktop}px)`)
   const buttonFull = !isDesktop && buttonsColumn
-
-  const hasLoading = buttons.some((button) => button.isLoading)
 
   return (
     <StyledModalFooter
@@ -28,36 +34,31 @@ export const ModalButtons = ({
       flexDirection={buttonFull ? 'column' : 'row'}
       gap="24px"
       justifyContent={buttonsCenter ? 'center' : 'flex-start'}
-      pb={buttonsInside ? 0 : py}
-      pt={py}
-      px={buttonsInside ? 0 : px}
+      px={isDesktop && (!buttonsCenter || !buttonsColumn) ? '24px' : '0'}
+      pt="32px"
+      pb={0}
+      className="uikit-modalButtons"
+      sx={{
+        '&>div, &>div>.react-ripples, &>div>.react-ripples>button': {
+          width: isDesktop ? 'auto' : '100%',
+        },
+      }}
     >
-      {buttons.map((button, index) => {
-        if (button?.type === 'secondary') {
-          return (
-            <BtnSecondary
-              key={index}
-              onClick={() => button.action()}
-              isFullWidth={buttonFull}
-              isLoading={button.isLoading}
-              disabled={button.isDisabled ?? hasLoading}
-            >
-              {button.text}
-            </BtnSecondary>
-          )
-        }
-        return (
-          <BtnPrimary
-            key={index}
-            onClick={() => button.action()}
-            isFullWidth={buttonFull}
-            isLoading={button.isLoading}
-            disabled={button.isDisabled ?? hasLoading}
-          >
-            {button.text}
-          </BtnPrimary>
-        )
-      })}
+      {children}
     </StyledModalFooter>
+  )
+}
+
+export const ModalContent = ({
+  children,
+  pb = '32px',
+}: {
+  children: React.ReactNode
+  pb?: string
+}): JSX.Element => {
+  return (
+    <StyledModalBody pt={0} pb={pb} className="uikit-modalContent">
+      {children}
+    </StyledModalBody>
   )
 }

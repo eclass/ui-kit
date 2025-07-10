@@ -8,7 +8,7 @@ import {
 } from '@chakra-ui/react'
 
 import { IModalAlert } from '../types'
-import { BtnLink } from '@/molecules'
+
 import { Loading } from './Loading'
 import { alertColorStates } from '@/organisms/Alerts/utils/alertStates'
 import { vars } from '@/theme'
@@ -17,9 +17,9 @@ export const ModalAlertNew = ({
   type,
   isOpen,
   onClose,
+  children,
   title,
   description,
-  buttons,
   status,
 }: IModalAlert): JSX.Element => {
   const [isDesktop] = useMediaQuery('(min-width: 641px)')
@@ -69,35 +69,44 @@ export const ModalAlertNew = ({
               </Box>
             )}
           </ModalBody>
-          {type === 'info' && buttons?.length && (
-            <Box
-              display="flex"
-              borderTop={`1px solid ${vars('colors-neutral-platinum')}`}
-              sx={{
-                button: {
-                  borderRight: `1px solid ${vars('colors-neutral-platinum')}`,
-                  fontFamily: 'Roboto',
-                  fontSize: '16px',
-                  fontWeight: 500,
-                  lineHeight: '21px',
-                  p: '16px',
-                  textDecor: 'none',
-                  width: '100%',
-                  '&:last-child': {
-                    borderRight: 'none',
-                  },
-                },
-              }}
-            >
-              {buttons.map((button, index) => (
-                <BtnLink as="button" key={index} onClick={() => button.action()}>
-                  {button.text}
-                </BtnLink>
-              ))}
-            </Box>
-          )}
+          {type !== 'loading' && children ? children : <></>}
         </ModalContent>
       </ChakraModal>
     </>
+  )
+}
+
+/**
+ * Componente que renderiza los botones de un modal alert.
+ * @example
+ * <ModalAlertButtons>
+ *  <BtnLink as="button" onClick={() => onClose()}>Cancelar</BtnLink>
+ *  <BtnLink as="button" onClick={() => onClose()}>Aceptar</BtnLink>
+ * </ModalAlertButtons>
+ */
+export const ModalAlertButtons = ({ children }: { children: React.ReactNode }): JSX.Element => {
+  return (
+    <Box
+      display="flex"
+      w="100%"
+      borderTop={`1px solid ${vars('colors-neutral-platinum')}`}
+      sx={{
+        button: {
+          borderRight: `1px solid ${vars('colors-neutral-platinum')}`,
+          fontFamily: 'Roboto',
+          fontSize: '16px',
+          fontWeight: 500,
+          lineHeight: '21px',
+          p: '16px',
+          textDecor: 'none',
+          width: '100%',
+          '&:last-child': {
+            borderRight: 'none',
+          },
+        },
+      }}
+    >
+      {children}
+    </Box>
   )
 }
