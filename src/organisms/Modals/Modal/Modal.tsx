@@ -1,23 +1,19 @@
 import {
   Box,
   Modal as ChakraModal,
-  ModalBody,
   ModalCloseButton,
-  ModalContent,
+  ModalContent as ChakraModalContent,
   ModalHeader,
   ModalOverlay,
   useMediaQuery,
 } from '@chakra-ui/react'
 
 import { vars } from '@/theme'
-import { ModalButtons } from './ModalButtons'
 import { IModal } from '../types'
 
+export const uiKitModalIsDesktop = 641
+
 export const Modal = ({
-  buttons,
-  buttonsCenter,
-  buttonsColumn = true,
-  buttonsInside,
   children,
   closeOnOverlayClick = true,
   fixedSubtitle,
@@ -26,44 +22,53 @@ export const Modal = ({
   title,
   withoutMargin = false,
   scrollBehavior = 'outside',
+  fixedButtons = false,
 }: IModal): JSX.Element => {
   const py = '32px'
   const px = '24px'
 
-  const [isDesktop] = useMediaQuery('(min-width: 641px)')
-  const hasLoading = buttons?.length && buttons.some((button) => button.isLoading)
+  const [isDesktop] = useMediaQuery(`(min-width: ${uiKitModalIsDesktop}px)`)
 
-  const handleClose = (): void => {
-    if (hasLoading) return
-    return onClose()
-  }
-
-  const isInside = scrollBehavior === 'inside'
+  const isInside = scrollBehavior === 'inside' || fixedButtons
 
   return (
     <>
       <ChakraModal
-        closeOnOverlayClick={hasLoading ? false : closeOnOverlayClick}
+        closeOnOverlayClick={closeOnOverlayClick}
+        closeOnEsc={closeOnOverlayClick}
         isOpen={isOpen}
         motionPreset="scale"
-        onClose={handleClose}
-        scrollBehavior={scrollBehavior}
+        onClose={onClose}
+        scrollBehavior={isInside ? 'inside' : 'outside'}
       >
         <ModalOverlay />
-        <ModalContent
+        <ChakraModalContent
           maxH={isInside ? '100dvh' : 'auto'}
-          minH="300px"
+          minH={isDesktop ? '300px' : '100dvh'}
           padding={0}
           width="100%"
           sx={{
+            bgColor: vars('colors-neutral-white'),
             borderRadius: isDesktop ? '8px' : 0,
-            height: isDesktop ? 'auto' : '100dvh',
             mt: isDesktop ? '48px' : 0,
             marginX: isDesktop ? 'auto' : 0,
             mb: 0,
-            // mb: isDesktop && !isInside ? '48px' : 0,
             maxH: isInside ? 'calc(100dvh - 96px)' : 'auto',
             maxWidth: isDesktop ? '600px' : '100%',
+            ...(fixedButtons && {
+              '.uikit-modalContent': {
+                pb: 0,
+              },
+              '.uikit-modalButtons': {
+                py: py,
+              },
+            }),
+            ...(withoutMargin && {
+              '.uikit-modalContent': {
+                pt: 0,
+                px: 0,
+              },
+            }),
           }}
         >
           <ModalHeader
@@ -98,39 +103,8 @@ export const Modal = ({
               {fixedSubtitle}
             </Box>
           )}
-          {children && (
-            <ModalBody
-              px={withoutMargin ? 0 : px}
-              py={0}
-              mb={buttons?.length === 0 ? py : buttonsInside ? py : 0}
-            >
-              {children}
-
-              {buttonsInside && buttons && buttons.length > 0 && (
-                <ModalButtons
-                  buttons={buttons}
-                  buttonsCenter={buttonsCenter}
-                  buttonsColumn={buttonsColumn}
-                  buttonsInside
-                  isDesktop={isDesktop}
-                  px={px}
-                  py={py}
-                />
-              )}
-            </ModalBody>
-          )}
-
-          {!buttonsInside && (
-            <ModalButtons
-              buttons={buttons}
-              buttonsCenter={buttonsCenter}
-              buttonsColumn={buttonsColumn}
-              isDesktop={isDesktop}
-              px={px}
-              py={py}
-            />
-          )}
-        </ModalContent>
+          {children}
+        </ChakraModalContent>
       </ChakraModal>
     </>
   )

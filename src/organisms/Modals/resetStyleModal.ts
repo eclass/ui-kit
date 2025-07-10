@@ -7,5 +7,6 @@ export const overlay = {
 }
 export const dialog = {
   boxShadow: shadows.lg,
+  bg: colors.neutral.white,
   borderRadius: radii.big,
 }
