@@ -1,3 +1,10 @@
+## [1.54.5](https://github.com/eclass/ui-kit/compare/v1.54.4...v1.54.5) (2025-07-14)
+
+
+### Bug Fixes
+
+* **PDYE-1327:** modifico como se estructuran los botones en los modals ([#737](https://github.com/eclass/ui-kit/issues/737)) ([1d9aa23](https://github.com/eclass/ui-kit/commit/1d9aa23179beed71c282562b0979dc469a0d1cfd))
+
 ## [1.54.4](https://github.com/eclass/ui-kit/compare/v1.54.3...v1.54.4) (2025-07-09)
 
 
