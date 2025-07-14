@@ -1,17 +1,4 @@
 export interface IModal {
-  buttons?: Array<{
-    type?: 'primary' | 'secondary'
-    action: () => void
-    text: string
-    isLoading?: boolean
-    isDisabled?: boolean
-  }>
-  /** Si es un solo botón tiene la opción de centrar este  */
-  buttonsCenter?: boolean
-  /** muestran en columna en mobile, por defecto es true */
-  buttonsColumn?: boolean
-  /** Si esta activo los botones se muestran dentro del contenido, le afecta el scroll */
-  buttonsInside?: boolean
   children: React.ReactNode
   /** Por defecto esta activo y permite cerrar el modal haciendo click fuera del modal */
   closeOnOverlayClick?: boolean
@@ -24,24 +11,25 @@ export interface IModal {
   withoutMargin?: boolean
   /** Como quiero el scroll, dentro del modal o el modal incluido (por defecto es el último) */
   scrollBehavior?: 'inside' | 'outside'
+  /** Si esta activo se fija el footer */
+  fixedButtons?: boolean
 }
 
 export interface IModalButtons {
-  buttons: IModal['buttons']
-  buttonsCenter?: IModal['buttonsCenter']
-  buttonsColumn?: IModal['buttonsColumn']
-  buttonsInside?: boolean
+  children: React.ReactNode
+  buttonsCenter?: boolean
+  px?: string | number
+  py?: string | number
+  buttonsColumn?: boolean
   isDesktop?: boolean
-  px: string
-  py: string
 }
 
 export interface IModalAlert {
+  children?: React.ReactNode
   isOpen: boolean
   onClose: () => void
   title?: string
   description?: string
   type: 'info' | 'loading'
   status?: 'success' | 'error' | 'warning' | 'info'
-  buttons?: Array<{ action: () => void; text: string }>
 }

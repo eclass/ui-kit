@@ -38,24 +38,6 @@ describe('ModalAlertNew Component', () => {
     expect(screen.getByTestId('loading-svg')).toBeInTheDocument() // Assuming Loading component has data-testid="loading-svg"
   })
 
-  it('renders buttons and calls action on click', async () => {
-    const actionMock = jest.fn()
-    renderWithChakra(
-      <ModalAlertNew
-        isOpen
-        onClose={() => {}}
-        title="Test Title"
-        type="info"
-        status="info"
-        buttons={[{ text: 'Action Button', action: actionMock }]}
-      />
-    )
-    const button = screen.getByText('Action Button')
-    expect(button).toBeInTheDocument()
-    await userEvent.click(button)
-    expect(actionMock).toHaveBeenCalledTimes(1)
-  })
-
   it('calls onClose when overlay is clicked', async () => {
     const onCloseMock = jest.fn()
     renderWithChakra(
@@ -71,5 +53,23 @@ describe('ModalAlertNew Component', () => {
       await userEvent.click(modalContainer)
     }
     expect(onCloseMock).not.toHaveBeenCalled()
+  })
+
+  it('renders children when provided and type is not loading', () => {
+    renderWithChakra(
+      <ModalAlertNew isOpen onClose={() => {}} title="Test Title" type="info" status="info">
+        <div>Test Children Content</div>
+      </ModalAlertNew>
+    )
+    expect(screen.getByText('Test Children Content')).toBeInTheDocument()
+  })
+
+  it('does not render children when type is loading', () => {
+    renderWithChakra(
+      <ModalAlertNew isOpen onClose={() => {}} title="Test Title" type="loading" status="info">
+        <div>Test Children Content</div>
+      </ModalAlertNew>
+    )
+    expect(screen.queryByText('Test Children Content')).not.toBeInTheDocument()
   })
 })

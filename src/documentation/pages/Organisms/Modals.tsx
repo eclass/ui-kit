@@ -17,8 +17,10 @@ export const ViewModals = (): JSX.Element => {
 
       <MyTitle>Tipo Modal</MyTitle>
       <MyText>
-        Es el Modal tradicional para mostrar contenido, que incluye una cabecera, contenido y una
-        botonera con <strong>acciones</strong>.
+        Es el Modal tradicional para mostrar contenido, que incluye una cabecera, contenido y
+        footer. En el componente <strong>ModalContent</strong> va todo lo que quieras visualizar en
+        el modal este puede contener hasta los botones <strong>ModalButtons</strong>, igualmente lo
+        botones pueden ir por fuera para cuando necesitas que no esten dentro del scroll.
       </MyText>
       <MyText>El componente se importa de la siguiente manera:</MyText>
       <Code text="import { Modal } from '@eclass/ui-kit'" />
@@ -27,28 +29,25 @@ export const ViewModals = (): JSX.Element => {
       </ListComponent>
       <Code
         text={`
-import { Modal } from '@eclass/ui-kit'
-import { useDisclosure } from '@chakra-ui/react'
-import { Button } from '@chakra-ui/react'
+import { Modal, ModalContent, ModalButtons } from '@eclass/ui-kit'
 
 export function View(){
   const { isOpen, onOpen, onClose } = useDisclosure()
-
   return (
-    <>
-      <Button onClick={onOpen}>Abrir Modal</Button>
       <Modal
         isOpen={isOpen}
         onClose={onClose}
         title="Confirmación"
-        buttons={[
-          { action: () => onClose(), text: 'Guardar' },
-          { type: 'secondary', action: () => onClose(), text: 'Cancelar' },
-        ]}
       >
-        <p>Contenido del modal...</p>
+        <ModalContent>
+          <p>Contenido del modal...</p>
+          <ModalButtons>
+            <BtnPrimary onClick={onClose}>Guardar</BtnPrimary>
+            <BtnSecondary onClick={onClose}>Cancelar</BtnSecondary>
+          </ModalButtons>
+        </ModalContent>
       </Modal>
-    </>)
+    )
 }`}
       />
       <MyTitle>Variantes del tipo Modal</MyTitle>
@@ -57,14 +56,16 @@ export function View(){
         definido en sus tipos.
       </MyText>
       <ListComponent>
-        <ModalDemo type="inside" />
         <ModalDemo type="withoutButtons" />
-        <ModalDemo type="buttonsCenter" />
-        <ModalDemo type="buttonsColumn" />
-        <ModalDemo type="buttonsInside" />
+        <ModalDemo type="inside" />
+        <ModalDemo type="buttonsOutside" />
+        <ModalDemo type="closeOnOverlayClick" />
+
         <ModalDemo type="fixedSubtitle" />
         <ModalDemo type="withoutMargin" />
-        <ModalDemo type="closeOnOverlayClick" />
+
+        <ModalDemo type="buttonsCenter" />
+        <ModalDemo type="buttonsColumn" />
       </ListComponent>
 
       <MyTitle>Tipo ModalAlert</MyTitle>
