@@ -1,3 +1,11 @@
+## [1.54.6](https://github.com/eclass/ui-kit/compare/v1.54.5...v1.54.6) (2025-07-15)
+
+
+### Bug Fixes
+
+* **PDYE-1327:** ancho del modal ([cd5d168](https://github.com/eclass/ui-kit/commit/cd5d168e4f4dfe712d9fb68e98e740e31e18effc))
+* **PDYE-1327:** correcion padding botones modal ([b059a5c](https://github.com/eclass/ui-kit/commit/b059a5c5c3c74fa04096db99737ff86cdf7003d8))
+
 ## [1.54.5](https://github.com/eclass/ui-kit/compare/v1.54.4...v1.54.5) (2025-07-14)
 
 
