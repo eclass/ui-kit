@@ -19,7 +19,13 @@ export { UserWayCookie } from './molecules/UserWay/UserWayCookie'
 // Organismos
 export { CourseList, CourseStatus, dataFake, maxWidthCoursesList } from './organisms/CourseList'
 export { Alert, FlashNotification, useFlashNotification } from './organisms/Alerts'
-export { Modal, ModalAlertNew } from './organisms/Modals'
+export {
+  Modal,
+  ModalAlertNew,
+  ModalButtons,
+  ModalContent,
+  ModalAlertButtons,
+} from './organisms/Modals'
 export { ModalAlert } from './organisms/ModalAlert'
 export { Eventos } from './organisms/Events'
 export { Resources } from './organisms/Resources'
