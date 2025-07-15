@@ -54,7 +54,7 @@ export const Modal = ({
             marginX: isDesktop ? 'auto' : 0,
             mb: 0,
             maxH: isInside ? 'calc(100dvh - 96px)' : 'auto',
-            maxWidth: isDesktop ? '600px' : '100%',
+            maxWidth: isDesktop ? '690px' : '100%',
             ...(fixedButtons && {
               '.uikit-modalContent': {
                 pb: 0,
