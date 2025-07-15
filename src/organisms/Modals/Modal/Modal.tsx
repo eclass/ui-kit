@@ -61,12 +61,16 @@ export const Modal = ({
               },
               '.uikit-modalButtons': {
                 py: py,
+                px: px,
               },
             }),
             ...(withoutMargin && {
               '.uikit-modalContent': {
                 pt: 0,
                 px: 0,
+              },
+              '.uikit-modalButtons': {
+                px: px,
               },
             }),
           }}

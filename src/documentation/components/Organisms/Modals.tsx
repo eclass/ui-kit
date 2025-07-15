@@ -54,7 +54,7 @@ const ModalDemoDefault = (): JSX.Element => {
 
   return (
     <>
-      <BtnPrimary onClick={onOpen}>Open Modal11111</BtnPrimary>
+      <BtnPrimary onClick={onOpen}>Open Modal</BtnPrimary>
       <Modal isOpen={isOpen} onClose={onClose} title="Confirmación">
         <ModalContent>
           <p>{text}</p>
