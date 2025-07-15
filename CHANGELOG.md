@@ -1,3 +1,10 @@
+## [1.54.7](https://github.com/eclass/ui-kit/compare/v1.54.6...v1.54.7) (2025-07-15)
+
+
+### Bug Fixes
+
+* **PDYE-1327:** exporto componenetes complementarios del modal ([3c30d96](https://github.com/eclass/ui-kit/commit/3c30d96328250cb6551d57e692f1498d695f5e1b))
+
 ## [1.54.6](https://github.com/eclass/ui-kit/compare/v1.54.5...v1.54.6) (2025-07-15)
 
 
