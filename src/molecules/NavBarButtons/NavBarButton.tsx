@@ -63,6 +63,11 @@ export const NavBarButton = ({
       className="nav-bar-button"
       id={isAccessibility ? 'UserWayButton' : ''}
       onClick={isAccessibility ? triggerWidget : onClick}
+      _focusVisible={{
+        outline: `3px solid ${vars('colors-alert-deepSkyBlue')}`,
+        borderRadius: '2px',
+      }}
+      tabIndex={0}
       sx={{
         alignItems: 'center',
         background: 'none !important',
@@ -115,8 +120,14 @@ export const NavBarButton = ({
         },
       }}
     >
-      <Box className="nav-bar-icon">{buttonType[type].icon}</Box>
-      {!isMobile && <Box className="nav-bar-text">{buttonType[type].text}</Box>}
+      <Box className="nav-bar-icon" tabIndex={-1}>
+        {buttonType[type].icon}
+      </Box>
+      {!isMobile && (
+        <Box className="nav-bar-text" tabIndex={-1}>
+          {buttonType[type].text}
+        </Box>
+      )}
     </Box>
   )
 }
