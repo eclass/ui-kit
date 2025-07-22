@@ -26,6 +26,7 @@ export function CourseList({
 
   return (
     <Box
+      className="courseListBox"
       display="grid"
       gridColumnGap={`${columnGap}rem`}
       gridRowGap="1.75rem"

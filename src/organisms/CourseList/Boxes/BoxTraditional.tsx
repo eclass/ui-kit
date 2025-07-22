@@ -30,6 +30,7 @@ export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX
   return (
     <CourseBoxContext.Provider value={data}>
       <LinkBox
+        className="linkBoxTraditional"
         as="article"
         border={vars('borders-light')}
         borderRadius={vars('radii-big')}
@@ -37,15 +38,21 @@ export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX
         transition="box-shadow .3s"
         _active={cssActive}
         _hover={cssActive}
-        _focus={cssActive}
         overflow="hidden"
+        tabIndex={0}
+        role="link"
       >
         <WithRipples enabled={isCourseActive(data.action?.enabled ?? false, data.Profile?.id)}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box className="CourseList-TraditionalBox">
               {!data.hasFinanzeFreezed &&
                 isCourseActive(data.action?.enabled ?? false, data.Profile?.id) && (
-                  <LinkOverlay href={data.action?.href} isExternal={data.action?.targetBlank} />
+                  <LinkOverlay
+                    href={data.action?.href}
+                    isExternal={data.action?.targetBlank}
+                    tabIndex={-1}
+                    className="linkOverlay"
+                  />
                 )}
               <Header />
               <Section />
