@@ -1,3 +1,10 @@
+## [1.54.8](https://github.com/eclass/ui-kit/compare/v1.54.7...v1.54.8) (2025-07-22)
+
+
+### Bug Fixes
+
+* **PDYE-1342:** focus y clases courselist para probar en v8 ([#738](https://github.com/eclass/ui-kit/issues/738)) ([9530e15](https://github.com/eclass/ui-kit/commit/9530e153c7ed348b98476dc8e6ecb9c95ee5ed98))
+
 ## [1.54.7](https://github.com/eclass/ui-kit/compare/v1.54.6...v1.54.7) (2025-07-15)
 
 
