@@ -33,11 +33,14 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
       p="1rem"
       borderTop="1px solid"
       borderTopColor={vars('colors-neutral-platinum')}
+      tabIndex={0}
+      className="footerButtonBox"
     >
       {isCourseActive(action.enabled, Profile?.id) ? (
         <>
           {hasFinanzeFreezed && modalPaymentText ? (
             <Box
+              className="uno"
               color={vars('colors-main-deepSkyBlue')}
               backgroundColor="transparent"
               fontWeight="500"
@@ -56,6 +59,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
             </Box>
           ) : (
             <Text
+              className="dos"
               color={vars('colors-main-deepSkyBlue')}
               fontWeight="500"
               mr={action.hasIcon ? '1.5rem' : '0'}
@@ -70,6 +74,7 @@ export function Footer({ modalPaymentText }: Type.FooterProps): JSX.Element | nu
         </>
       ) : (
         <Text
+          className="tres"
           fontWeight="500"
           lineHeight="1.172rem"
           color={vars('colors-neutral-spanishGrey')}
