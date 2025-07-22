@@ -1,3 +1,10 @@
+## [1.54.9](https://github.com/eclass/ui-kit/compare/v1.54.8...v1.54.9) (2025-07-22)
+
+
+### Bug Fixes
+
+* **PDYE-1342:** focus visible de listado cursos y botones barra transversal ([#739](https://github.com/eclass/ui-kit/issues/739)) ([489131b](https://github.com/eclass/ui-kit/commit/489131b99aeccaf3b542d8f72a3c6069f9c1224f))
+
 ## [1.54.8](https://github.com/eclass/ui-kit/compare/v1.54.7...v1.54.8) (2025-07-22)
 
 
