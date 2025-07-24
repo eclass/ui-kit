@@ -15,6 +15,7 @@ export const GoToCalendar = ({ text, onlyToCalendar, onClick }: IGoToCalendar): 
 
   return (
     <MenuButton
+      tabIndex={-1}
       onClick={() => onlyToCalendar && onClick && onClick()}
       position="relative"
       sx={{
