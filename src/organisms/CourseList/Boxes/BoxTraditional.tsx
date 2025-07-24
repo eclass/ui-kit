@@ -6,6 +6,7 @@ import { Ripples } from '@atoms'
 import { vars } from '@theme'
 import { isCourseActive } from '../utils'
 import * as Type from '../types'
+import { useEnterNavigate } from '../utils/useEnterNavigate'
 
 export const CourseBoxContext = React.createContext<Partial<Type.ExtendAcademicList>>({})
 
@@ -25,6 +26,8 @@ export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX
   const isClickable = isCourseActive(data.action?.enabled ?? false, data.Profile?.id)
   const hasHref = !!data.action?.href
 
+  useEnterNavigate()
+
   const cssActive = {
     boxShadow: `0 2px 7px 0 ${vars('colors-neutral-silverSand')}`,
   }
@@ -33,6 +36,7 @@ export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX
     <CourseBoxContext.Provider value={data}>
       <LinkBox
         as="article"
+        className="focusable-link"
         border={vars('borders-light')}
         borderRadius={vars('radii-big')}
         cursor={isClickable ? 'pointer' : 'default'}
@@ -43,14 +47,21 @@ export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX
         _focusWithin={{
           boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')} inset`,
         }}
-        tabIndex={!hasHref && isClickable ? 0 : undefined}
-        role="link"
+        tabIndex={0}
+        role={hasHref ? 'link' : undefined}
+        data-href={hasHref ? data.action?.href : undefined}
       >
-        <WithRipples enabled={isCourseActive(data.action?.enabled ?? false, data.Profile?.id)}>
+        <WithRipples enabled={isClickable}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box className="CourseList-TraditionalBox">
               {isClickable && hasHref && (
-                <LinkOverlay href={data.action?.href} isExternal={data.action?.targetBlank} />
+                <LinkOverlay
+                  className="course-link-overlay"
+                  bg="gray"
+                  href={data.action?.href}
+                  isExternal={data.action?.targetBlank}
+                  tabIndex={-1}
+                />
               )}
               <Header />
               <Section />
