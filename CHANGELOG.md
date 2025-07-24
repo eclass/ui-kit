@@ -1,3 +1,10 @@
+## [1.54.10](https://github.com/eclass/ui-kit/compare/v1.54.9...v1.54.10) (2025-07-24)
+
+
+### Bug Fixes
+
+* **PDYE-1342:** respuesta a presionar enter ([#740](https://github.com/eclass/ui-kit/issues/740)) ([757edef](https://github.com/eclass/ui-kit/commit/757edefa2072a363bcf579f4ccbea04247d0c0ec))
+
 ## [1.54.9](https://github.com/eclass/ui-kit/compare/v1.54.8...v1.54.9) (2025-07-22)
 
 
