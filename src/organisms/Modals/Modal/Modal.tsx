@@ -51,8 +51,8 @@ export const Modal = ({
             bgColor: vars('colors-neutral-white'),
             borderRadius: isDesktop ? '8px' : 0,
             mt: isDesktop ? '48px' : 0,
+            mb: isDesktop ? '48px' : 0,
             marginX: isDesktop ? 'auto' : 0,
-            mb: 0,
             maxH: isInside ? 'calc(100dvh - 96px)' : 'auto',
             maxWidth: isDesktop ? '690px' : '100%',
             ...(fixedButtons && {
