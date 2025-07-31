@@ -55,6 +55,16 @@ export const Modal = ({
             marginX: isDesktop ? 'auto' : 0,
             maxH: isInside ? 'calc(100dvh - 96px)' : 'auto',
             maxWidth: isDesktop ? '690px' : '100%',
+            '.chakra-modal__close-btn': {
+              '&:hover': {
+                bg: 'transparent',
+              },
+              '&:focus-visible': {
+                boxShadow: `inset 0 0 0 2px ${vars(
+                  'colors-alert-deepSkyBlue'
+                )}, inset 0 0 0 4px ${vars('colors-neutral-white')}`,
+              },
+            },
             ...(fixedButtons && {
               '.uikit-modalContent': {
                 pb: 0,
