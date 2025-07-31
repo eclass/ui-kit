@@ -1,3 +1,10 @@
+## [1.54.11](https://github.com/eclass/ui-kit/compare/v1.54.10...v1.54.11) (2025-07-31)
+
+
+### Bug Fixes
+
+* **PDYE-1358:** margen inferior modal ([#741](https://github.com/eclass/ui-kit/issues/741)) ([b023ea0](https://github.com/eclass/ui-kit/commit/b023ea0d50854d2b60c7cb47e102b8da8f22d186))
+
 ## [1.54.10](https://github.com/eclass/ui-kit/compare/v1.54.9...v1.54.10) (2025-07-24)
 
 
