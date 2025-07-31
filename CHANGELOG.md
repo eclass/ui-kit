@@ -1,3 +1,10 @@
+## [1.54.12](https://github.com/eclass/ui-kit/compare/v1.54.11...v1.54.12) (2025-07-31)
+
+
+### Bug Fixes
+
+* **PDYE-1358:** estilos hover y focus modal ([#742](https://github.com/eclass/ui-kit/issues/742)) ([12b4f62](https://github.com/eclass/ui-kit/commit/12b4f62da154b8f886f7bedc54fe4b2a116d8b66))
+
 ## [1.54.11](https://github.com/eclass/ui-kit/compare/v1.54.10...v1.54.11) (2025-07-31)
 
 
