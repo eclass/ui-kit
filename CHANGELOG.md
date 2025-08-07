@@ -1,3 +1,10 @@
+## [1.54.13](https://github.com/eclass/ui-kit/compare/v1.54.12...v1.54.13) (2025-08-07)
+
+
+### Bug Fixes
+
+* **PDYE-1327:** modal, estilos del boton cerrar ([0116f0a](https://github.com/eclass/ui-kit/commit/0116f0a83a5e471090f6d4e4d5e525f37acdf787))
+
 ## [1.54.12](https://github.com/eclass/ui-kit/compare/v1.54.11...v1.54.12) (2025-07-31)
 
 
