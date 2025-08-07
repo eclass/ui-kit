@@ -1,0 +1,6 @@
+import{a as e,B as r,v as o,S as s,j as c,F as l,M as d,b as n,C as i}from"./index.938f310f.js";function u(){const a=()=>{const t=document.getElementById("userWayTrigger");t!=null&&t.click&&t.click()};return e(r,{as:"button",alignItems:"center",bg:o("colors-main-blueGrey"),borderRadius:"100%",border:"1px solid transparent",display:"flex",height:"30px",id:"UserWayButton",justifyContent:"center",padding:"0 8px",width:"30px",_hover:{background:"rgba(96, 121, 142, 0.8)"},onClick:a,children:e(s,{})})}const m=()=>c(l,{children:[e(d,{children:"UserWay"}),e(n,{children:"Bot\xF3n personalizado para el widget gratuito de accesibilidad UserWay. Contiene los estilos base del elemento customizado y una funci\xF3n que detecta un bot\xF3n localizado en el archivo index.html implementado en el sitio."}),e(u,{}),e(i,{text:"import { UserWay } from '@eclass/ui-kit' <UserWay/>"}),e(n,{children:"Al hacer click en este componente, se activa el bot\xF3n html que act\xFAa como trigger del widget. Es importante que el bot\xF3n al que apunta la funci\xF3n, tenga el id 'userWayTrigger'."}),e(i,{text:`function triggerWidget() {
+const buttonB = document.getElementById('userWayTrigger')
+if (buttonB?.click) {
+buttonB.click() 
+}} `})]});export{m as ViewUserWay,m as default};
+//# sourceMappingURL=UserWay.7d5a2490.js.map
