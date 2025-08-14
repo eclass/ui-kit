@@ -1,3 +1,10 @@
+## [1.54.14](https://github.com/eclass/ui-kit/compare/v1.54.13...v1.54.14) (2025-08-14)
+
+
+### Bug Fixes
+
+* **PDYE-1379:** margenes en texto del modal alert ([470ebfd](https://github.com/eclass/ui-kit/commit/470ebfdf481f197fc4e64c2367a5dbde73687d17))
+
 ## [1.54.13](https://github.com/eclass/ui-kit/compare/v1.54.12...v1.54.13) (2025-08-07)
 
 
