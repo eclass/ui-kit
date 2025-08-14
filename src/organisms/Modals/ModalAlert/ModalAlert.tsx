@@ -59,12 +59,18 @@ export const ModalAlertNew = ({
               </Box>
             )}
             {title && (
-              <Box as="p" fontWeight="700" fontSize={isDesktop ? '20px' : '18px'} lineHeight="24px">
+              <Box
+                as="p"
+                fontWeight="700"
+                fontSize={isDesktop ? '20px' : '18px'}
+                lineHeight="24px"
+                mb={0}
+              >
                 {title}
               </Box>
             )}
             {description && (
-              <Box as="p" fontSize="16px" lineHeight="24px">
+              <Box as="p" fontSize="16px" lineHeight="24px" mb={0}>
                 {description}
               </Box>
             )}
