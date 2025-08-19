@@ -95,13 +95,14 @@ export function Alert({
         </Box>
         <Box display="flex" alignItems="center">
           <Box
-            as="p"
             alignSelf="center"
+            as="p"
+            color={vars('colors-neutral-darkCharcoal')}
             fontFamily="Roboto"
             fontSize="16px"
             fontWeight="400"
             lineHeight="28px"
-            color={vars('colors-neutral-darkCharcoal')}
+            mb="0"
           >
             {children}
             {endTextLink && onClickLink && <BtnLink onClick={onClickLink}>{endTextLink}</BtnLink>}
