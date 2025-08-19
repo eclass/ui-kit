@@ -1,3 +1,10 @@
+## [1.54.15](https://github.com/eclass/ui-kit/compare/v1.54.14...v1.54.15) (2025-08-19)
+
+
+### Bug Fixes
+
+* **alert:** quito margin a elemento p ([ecb5427](https://github.com/eclass/ui-kit/commit/ecb5427419d621362853dd1444f5aab2d173b5cb))
+
 ## [1.54.14](https://github.com/eclass/ui-kit/compare/v1.54.13...v1.54.14) (2025-08-14)
 
 
