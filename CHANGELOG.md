@@ -1,3 +1,10 @@
+## [1.54.16](https://github.com/eclass/ui-kit/compare/v1.54.15...v1.54.16) (2025-08-27)
+
+
+### Bug Fixes
+
+* **courselist:** tamaño de nota se rompe con mucho texto ([35e9d0e](https://github.com/eclass/ui-kit/commit/35e9d0e9b5afc09688ce1f9d8a0666f3921bf95e))
+
 ## [1.54.15](https://github.com/eclass/ui-kit/compare/v1.54.14...v1.54.15) (2025-08-19)
 
 
