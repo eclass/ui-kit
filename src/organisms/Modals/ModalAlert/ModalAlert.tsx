@@ -93,6 +93,7 @@ export const ModalAlertNew = ({
 export const ModalAlertButtons = ({ children }: { children: React.ReactNode }): JSX.Element => {
   return (
     <Box
+      autoFocus={false}
       display="flex"
       w="100%"
       borderTop={`1px solid ${vars('colors-neutral-platinum')}`}

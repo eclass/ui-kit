@@ -44,6 +44,7 @@ export function BtnLink({
   return (
     <Box
       as={as}
+      autoFocus={false}
       aria-label={ariaLabel}
       id={id}
       role={role}
