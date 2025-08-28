@@ -89,6 +89,7 @@ export function Btn({
     >
       <Ripples color={touchColor}>
         <Button
+          autoFocus={false}
           aria-label={ariaLabel}
           id={id}
           role={role}
