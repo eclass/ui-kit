@@ -1,3 +1,10 @@
+## [1.54.17](https://github.com/eclass/ui-kit/compare/v1.54.16...v1.54.17) (2025-08-28)
+
+
+### Bug Fixes
+
+* **PDYE-1395:** auto focus false a botones y modal alert ([#743](https://github.com/eclass/ui-kit/issues/743)) ([c6fcdb6](https://github.com/eclass/ui-kit/commit/c6fcdb65a3d045047f336ee6d081c829d04182af))
+
 ## [1.54.16](https://github.com/eclass/ui-kit/compare/v1.54.15...v1.54.16) (2025-08-27)
 
 
