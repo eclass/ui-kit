@@ -40,6 +40,7 @@ export const Modal = ({
         motionPreset="scale"
         onClose={onClose}
         scrollBehavior={isInside ? 'inside' : 'outside'}
+        autoFocus={false}
       >
         <ModalOverlay />
         <ChakraModalContent
