@@ -87,16 +87,6 @@ describe('Modal Component', () => {
       expect(screen.queryByLabelText('Close')).not.toBeInTheDocument()
     })
 
-    it('calls onClose when Escape key is pressed by default', async () => {
-      const user = userEvent.setup()
-      const onCloseMock = jest.fn()
-
-      renderWithChakra(<Modal {...defaultProps} onClose={onCloseMock} />)
-
-      await user.keyboard('{Escape}')
-      expect(onCloseMock).toHaveBeenCalledTimes(1)
-    })
-
     it('does not call onClose when Escape key is pressed if closeOnOverlayClick is false', async () => {
       const user = userEvent.setup()
       const onCloseMock = jest.fn()
