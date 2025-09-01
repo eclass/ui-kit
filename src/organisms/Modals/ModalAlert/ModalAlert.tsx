@@ -32,6 +32,7 @@ export const ModalAlertNew = ({
         motionPreset="scale"
         onClose={onClose}
         closeOnEsc={type !== 'loading'}
+        autoFocus={false}
       >
         <ModalOverlay />
         <ModalContent
