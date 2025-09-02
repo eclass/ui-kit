@@ -35,6 +35,9 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: test
     runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+      issues: write 
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
