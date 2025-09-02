@@ -13,6 +13,7 @@ export interface IModal {
   scrollBehavior?: 'inside' | 'outside'
   /** Si esta activo se fija el footer */
   fixedButtons?: boolean
+  autoFocus?: boolean
 }
 
 export interface IModalButtons {
@@ -25,6 +26,7 @@ export interface IModalButtons {
 }
 
 export interface IModalAlert {
+  autoFocus?: boolean
   children?: React.ReactNode
   isOpen: boolean
   onClose: () => void
