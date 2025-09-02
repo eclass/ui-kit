@@ -1,3 +1,12 @@
+## [1.54.18](https://github.com/eclass/ui-kit/compare/v1.54.17...v1.54.18) (2025-09-02)
+
+
+### Bug Fixes
+
+* **PDYE-1395:** auto focus false para modal base ([#744](https://github.com/eclass/ui-kit/issues/744)) ([eca98cd](https://github.com/eclass/ui-kit/commit/eca98cd80e9996423b1beaa8aff6333bdb173080))
+* **PDYE-1395:** auto focus props ([#745](https://github.com/eclass/ui-kit/issues/745)) ([847f47e](https://github.com/eclass/ui-kit/commit/847f47ee61199c57683b0592a96e47d4ec4951b9))
+* **PDYE-1395:** permisos de escritura release ([#746](https://github.com/eclass/ui-kit/issues/746)) ([68ed8e8](https://github.com/eclass/ui-kit/commit/68ed8e8e754bc90ccc306db92a4223573ab19513))
+
 ## [1.54.17](https://github.com/eclass/ui-kit/compare/v1.54.16...v1.54.17) (2025-08-28)
 
 
