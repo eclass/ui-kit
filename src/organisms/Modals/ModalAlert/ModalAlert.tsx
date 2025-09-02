@@ -14,6 +14,7 @@ import { alertColorStates } from '@/organisms/Alerts/utils/alertStates'
 import { vars } from '@/theme'
 
 export const ModalAlertNew = ({
+  autoFocus = false,
   type,
   isOpen,
   onClose,
@@ -32,7 +33,7 @@ export const ModalAlertNew = ({
         motionPreset="scale"
         onClose={onClose}
         closeOnEsc={type !== 'loading'}
-        autoFocus={false}
+        autoFocus={autoFocus}
       >
         <ModalOverlay />
         <ModalContent

@@ -23,6 +23,7 @@ export const Modal = ({
   withoutMargin = false,
   scrollBehavior = 'outside',
   fixedButtons = false,
+  autoFocus = false,
 }: IModal): JSX.Element => {
   const py = '32px'
   const px = '24px'
@@ -40,7 +41,7 @@ export const Modal = ({
         motionPreset="scale"
         onClose={onClose}
         scrollBehavior={isInside ? 'inside' : 'outside'}
-        autoFocus={false}
+        autoFocus={autoFocus}
       >
         <ModalOverlay />
         <ChakraModalContent
