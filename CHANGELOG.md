@@ -1,3 +1,10 @@
+## [1.54.19](https://github.com/eclass/ui-kit/compare/v1.54.18...v1.54.19) (2025-09-25)
+
+
+### Bug Fixes
+
+* **PDYE-1434:** de focusWithin a focusVisible CourseList ([#747](https://github.com/eclass/ui-kit/issues/747)) ([1af63fd](https://github.com/eclass/ui-kit/commit/1af63fd933ec892854a22f3bf10129783aa33c60))
+
 ## [1.54.18](https://github.com/eclass/ui-kit/compare/v1.54.17...v1.54.18) (2025-09-02)
 
 
