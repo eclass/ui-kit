@@ -1,4 +1,4 @@
-import { Box, LinkOverlay } from '@chakra-ui/react'
+import { Box, LinkBox, LinkOverlay } from '@chakra-ui/react'
 
 import { vars } from '@theme'
 import { Ripples } from '@atoms'
@@ -35,8 +35,12 @@ export function BoxImage({
   }
   return (
     <WithRipples enabled={isCourseActive(data?.action?.enabled ?? false, data?.Profile?.id)}>
-      <Box
+      <LinkBox
         className="CourseList-ImageBox"
+        _focusVisible={{
+          boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')} inset`,
+        }}
+        tabIndex={0}
         sx={{
           backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,1) 100%), url(${backgroundImg})`,
           color: vars('colors-neutral-white'),
@@ -52,12 +56,23 @@ export function BoxImage({
           margin: m,
           justifyContent: 'end',
           textAlign: 'left',
+
+          a: {
+            '&:active': {
+              boxShadow: 'none',
+            },
+          },
         }}
       >
         {!data?.hasFinanzeFreezed &&
           isCourseActive(data?.action?.enabled ?? false, data?.Profile?.id) && (
-            <LinkOverlay href={data?.action?.href} isExternal={data?.action?.targetBlank} />
+            <LinkOverlay
+              href={data?.action?.href}
+              isExternal={data?.action?.targetBlank}
+              tabIndex={-1}
+            />
           )}
+
         <Box className="textBox" bottom="20px" display="flex" flexDirection="column" gap="8px">
           <Box
             as="h2"
@@ -88,7 +103,7 @@ export function BoxImage({
               )
           )}
         </Box>
-      </Box>
+      </LinkBox>
     </WithRipples>
   )
 }

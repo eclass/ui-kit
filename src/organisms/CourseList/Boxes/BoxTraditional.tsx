@@ -43,8 +43,7 @@ export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX
         transition="box-shadow .3s"
         overflow="hidden"
         _hover={cssActive}
-        _active={cssActive}
-        _focusWithin={{
+        _focusVisible={{
           boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')} inset`,
         }}
         tabIndex={0}
