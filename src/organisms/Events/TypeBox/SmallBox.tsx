@@ -27,7 +27,9 @@ export const SmallBox: FC<ItemsEventsProps> = ({
       transition="box-shadow .3s"
       _active={cssActive}
       _hover={cssActive}
-      _focus={cssActive}
+      _focusVisible={{
+        boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')}`,
+      }}
       width="286px"
       height="247px"
       borderRadius={vars('radii-big')}

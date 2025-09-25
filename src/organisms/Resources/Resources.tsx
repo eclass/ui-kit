@@ -61,7 +61,9 @@ export const Resources: FC<ResourcesProps> = ({
       transition="box-shadow 0.3s"
       _active={cssActive}
       _hover={cssActive}
-      _focus={cssActive}
+      _focusVisible={{
+        boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')}`,
+      }}
       cursor="pointer"
       borderRadius={vars('radii-big')}
       border={vars('borders-light')}
