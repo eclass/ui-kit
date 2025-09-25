@@ -31,7 +31,9 @@ export const LargeBox: FC<ItemsEventsProps> = ({
       borderRadius={vars('radii-big')}
       _active={cssActive}
       _hover={cssActive}
-      _focus={cssActive}
+      _focusVisible={{
+        boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')}`,
+      }}
     >
       <Ripples>
         <Flex cursor="pointer" w="fit-content" display={isMobile ? 'block' : 'flex'}>
