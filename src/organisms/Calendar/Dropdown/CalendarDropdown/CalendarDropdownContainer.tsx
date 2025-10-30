@@ -92,7 +92,7 @@ export const CalendarDropdownContainer = ({
           height: '8px',
           width: '8px',
           position: 'absolute',
-          right: '80px',
+          left: '22px',
           top: '0',
           zIndex: '1',
         },
