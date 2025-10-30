@@ -1,3 +1,10 @@
+## [1.54.21](https://github.com/eclass/ui-kit/compare/v1.54.20...v1.54.21) (2025-10-30)
+
+
+### Bug Fixes
+
+* **calendar:** posicion del punto de notificacion en boton calendario ([#749](https://github.com/eclass/ui-kit/issues/749)) ([d7184d0](https://github.com/eclass/ui-kit/commit/d7184d02ec743a1d19285ef6127a0be17aab1690))
+
 ## [1.54.20](https://github.com/eclass/ui-kit/compare/v1.54.19...v1.54.20) (2025-09-25)
 
 
