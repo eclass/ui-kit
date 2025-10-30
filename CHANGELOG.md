@@ -1,3 +1,10 @@
+## [1.54.22](https://github.com/eclass/ui-kit/compare/v1.54.21...v1.54.22) (2025-10-30)
+
+
+### Bug Fixes
+
+* **ci:** corregir permisos y token en deploy de GitHub Pages ([a93e35c](https://github.com/eclass/ui-kit/commit/a93e35c8399e8a074590c5f011a3d06148201dcb))
+
 ## [1.54.21](https://github.com/eclass/ui-kit/compare/v1.54.20...v1.54.21) (2025-10-30)
 
 
