@@ -2,6 +2,10 @@ name: Node.js CI
 
 on: [push, pull_request]
 
+# 🔐 Da permisos de escritura a todo el workflow (necesario para hacer push a gh-pages)
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -31,13 +35,14 @@ jobs:
         run: npm run lint:check
       - name: Testing JEST
         run: npm run test
+
   release:
     if: github.ref == 'refs/heads/main'
     needs: test
     runs-on: ubuntu-latest
     permissions:
-      contents: write 
-      issues: write 
+      contents: write
+      issues: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -118,18 +123,8 @@ jobs:
           name: deploy-files
           path: ./dist
 
-      - uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
-        run: |
-          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-        shell: bash
-
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
-        env:
-          GH_TOKEN: eclass:${{ secrets.GITHUB_TOKEN }}
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
