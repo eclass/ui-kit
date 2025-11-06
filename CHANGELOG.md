@@ -1,3 +1,10 @@
+## [1.54.23](https://github.com/eclass/ui-kit/compare/v1.54.22...v1.54.23) (2025-11-06)
+
+
+### Bug Fixes
+
+* **PDYE-1435:** focus recursos y eventos ([#750](https://github.com/eclass/ui-kit/issues/750)) ([1075a31](https://github.com/eclass/ui-kit/commit/1075a3149455d89f472241b501806bb31d38b67a))
+
 ## [1.54.22](https://github.com/eclass/ui-kit/compare/v1.54.21...v1.54.22) (2025-10-30)
 
 
