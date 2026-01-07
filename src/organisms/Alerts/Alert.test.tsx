@@ -1,5 +1,4 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-// TODO: utilizar userEvent
 
 import { Alert } from './Alert'
 

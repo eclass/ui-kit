@@ -1,5 +1,5 @@
 import { vars } from '@theme'
-import { Button } from '@chakra-ui/react'
+import { Button, CSSObject } from '@chakra-ui/react'
 import {
   GoAhead,
   GoBack,
@@ -41,6 +41,7 @@ export interface propsTertiaryBtn {
   type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
   withoutColor?: boolean
+  sx?: CSSObject
 }
 
 interface ButtonWithTextProps extends propsTertiaryBtn {
@@ -71,6 +72,7 @@ export function BtnTertiary({
   type = 'button',
   tabIndex,
   withoutColor = false,
+  sx,
 }: ButtonProps): JSX.Element {
   const gray = vars('colors-neutral-gray')
   const blue = vars('colors-main-deepSkyBlue')
@@ -147,6 +149,7 @@ export function BtnTertiary({
         '>span': {
           mr: 0,
         },
+        ...sx,
       }}
     >
       {children}

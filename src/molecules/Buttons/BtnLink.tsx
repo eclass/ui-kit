@@ -1,5 +1,5 @@
 import { vars } from '@theme'
-import { Box } from '@chakra-ui/react'
+import { Box, CSSObject } from '@chakra-ui/react'
 
 export interface props {
   as?: 'button' | 'a'
@@ -14,6 +14,7 @@ export interface props {
   tabIndex?: number
   target?: '_blank' | '_self'
   textDecorationLine?: boolean
+  sx?: CSSObject
 }
 
 export function BtnLink({
@@ -29,6 +30,7 @@ export function BtnLink({
   tabIndex,
   target = '_blank',
   textDecorationLine = true,
+  sx,
 }: props): JSX.Element {
   const typeButton = {
     button: {
@@ -68,6 +70,7 @@ export function BtnLink({
         cursor: 'pointer',
       }}
       {...typeButton[as]}
+      sx={sx}
     >
       {children}
     </Box>

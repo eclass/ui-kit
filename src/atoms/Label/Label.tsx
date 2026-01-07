@@ -1,13 +1,14 @@
-import { Box } from '@chakra-ui/react'
+import { Box, CSSObject } from '@chakra-ui/react'
 
 import { vars } from '@theme'
 
 export interface LabelProps {
-  children: React.ReactChild
+  children: React.ReactNode
   bg?: string
   color?: string
   size?: 'md' | 'sm'
   m?: string
+  sx?: CSSObject
 }
 
 /**
@@ -20,6 +21,7 @@ export function Label({
   color = vars('colors-neutral-darkCharcoal'),
   size = 'md',
   m = '0',
+  sx,
 }: LabelProps): JSX.Element {
   const config = {
     md: {
@@ -45,6 +47,7 @@ export function Label({
       lineHeight=".875rem"
       m={m}
       p={config[size].p}
+      sx={sx}
     >
       {children}
     </Box>

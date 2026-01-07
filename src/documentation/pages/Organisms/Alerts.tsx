@@ -200,7 +200,7 @@ export const ViewAlert = (): JSX.Element => {
       <MyText>Tipos implementados en el Alert</MyText>
       <Code
         text={`interface IAlertProps {
-          children?: React.ReactChild | React.ReactChild[]
+          children?: React.ReactNode
           canDismiss?: boolean // Muestra el botón para cerrar
           buttonText?: string // Texto del botón
           buttonIcon?: React.ReactElement // Ícono del botón

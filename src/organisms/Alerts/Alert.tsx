@@ -1,4 +1,6 @@
 import { Box, useMediaQuery } from '@chakra-ui/react'
+import DOMPurifyLib from 'dompurify'
+import ReactParser from 'html-react-parser'
 
 import { BtnLink, BtnPrimary } from '@/molecules'
 import { vars } from '@/theme'
@@ -28,25 +30,28 @@ export function Alert({
   buttonIcon,
   buttonLink = false,
   fullWidth = false,
+  maxContent = false,
   isFlash = false,
   onClick,
   state,
   m,
   endTextLink,
   onClickLink,
+  sx,
 }: IAlertProps): JSX.Element {
   const [isMobile] = useMediaQuery('(max-width: 425px)')
 
-  const handleClick = (): any => {
-    if (onClick) {
-      onClick()
-    }
+  const handleClick = (): void => {
+    onClick?.()
   }
 
   let buttonType: undefined | 'link' | 'normal'
   if (buttonText) {
     buttonType = buttonLink ? 'link' : 'normal'
   }
+
+  const content =
+    typeof children === 'string' ? ReactParser(DOMPurifyLib.sanitize(children)) : children
 
   return (
     <Box
@@ -56,14 +61,15 @@ export function Alert({
       borderRadius="8px"
       display="flex"
       flexFlow={isMobile ? 'column' : 'row'}
-      gap={!isFlash ? '16px' : ''}
-      justifyContent={!isMobile ? 'space-between' : ''}
+      gap={!isFlash ? '16px' : undefined}
+      justifyContent={!isMobile ? 'space-between' : undefined}
       margin={m}
-      width={fullWidth ? '100%' : 'fit-content'}
+      width={maxContent ? 'max-content' : fullWidth ? '100%' : 'fit-content'}
       maxWidth={fullWidth ? 'none' : '796px'}
       p="1rem"
       pr={canDismiss ? '1.75rem' : '1rem'}
       position="relative"
+      sx={sx}
     >
       <Box
         display="flex"
@@ -104,7 +110,7 @@ export function Alert({
             lineHeight="28px"
             mb="0"
           >
-            {children}
+            {content}
             {endTextLink && onClickLink && <BtnLink onClick={onClickLink}>{endTextLink}</BtnLink>}
           </Box>
           {buttonType === 'link' && <BtnLink onClick={handleClick}>{buttonText}</BtnLink>}

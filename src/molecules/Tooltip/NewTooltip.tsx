@@ -10,7 +10,7 @@ interface TooltipProps {
   maxWidth?: string
   placement?: PlacementWithLogical
   isOpen?: boolean | undefined
-  sx?: CSSObject | undefined
+  sx?: CSSObject
   transform?: string
 }
 

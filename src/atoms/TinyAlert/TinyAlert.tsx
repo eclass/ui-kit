@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/react'
+import { Box, CSSObject } from '@chakra-ui/react'
 import { vars } from '@theme'
 
 import { TinyAlertInfo, TinyAlertError, TinyAlertWarning, TinyAlertSuccess } from '../Icons'
@@ -7,6 +7,7 @@ export interface props {
   status: 'success' | 'error' | 'info' | 'warning' | 'answered' | 'pending' | 'omitted' | 'new'
   text?: string
   margin?: string
+  sx?: CSSObject
 }
 
 /**
@@ -16,7 +17,7 @@ export interface props {
  * <TinyAlert status="info" />
  */
 
-export function TinyAlert({ status, text, margin = '0' }: props): JSX.Element | null {
+export function TinyAlert({ status, text, margin = '0', sx }: props): JSX.Element | null {
   const alerts = {
     success: {
       icon: <TinyAlertSuccess />,
@@ -84,6 +85,7 @@ export function TinyAlert({ status, text, margin = '0' }: props): JSX.Element | 
       width="fit-content"
       borderRadius=".25rem"
       className="TinyAlert-Box"
+      sx={sx}
     >
       {alerts[status].icon && (
         <Box

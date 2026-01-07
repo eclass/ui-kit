@@ -10,6 +10,14 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/test/jest-setup.ts'],
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
   roots: ['<rootDir>'],
+  maxWorkers: '50%',
+  cacheDirectory: '<rootDir>/.jest-cache',
+  globals: {
+    'ts-jest': {
+      diagnostics: false,
+      isolatedModules: true,
+    },
+  },
   modulePaths: tsConfig.compilerOptions ? [tsConfig.compilerOptions.baseUrl] : [],
   moduleNameMapper: {
     ...(tsConfig.compilerOptions && tsConfig.compilerOptions.paths

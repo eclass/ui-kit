@@ -11,7 +11,7 @@ export interface BaseProps {
 }
 interface IconProps extends BaseProps {
   viewBox?: string
-  children: React.ReactChild | React.ReactChild[]
+  children: React.ReactNode
   title?: string
 }
 
