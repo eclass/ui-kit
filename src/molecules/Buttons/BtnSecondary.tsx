@@ -38,6 +38,7 @@ export function BtnSecondary({
   type = 'button',
   tabIndex,
   id,
+  sx,
 }: SecondaryButtonProps): JSX.Element {
   return (
     <Btn
@@ -62,6 +63,7 @@ export function BtnSecondary({
       touchDark
       type={type}
       tabIndex={tabIndex}
+      sx={sx}
     >
       {children}
     </Btn>

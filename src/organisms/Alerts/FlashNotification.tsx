@@ -1,5 +1,4 @@
-import { Box } from '@chakra-ui/react'
-import { useCallback, useEffect } from 'react'
+import { useCallback, useEffect, useRef } from 'react'
 import { toast, Toaster } from 'react-hot-toast'
 
 import { IFlashNotificationProps } from './types.d'
@@ -20,44 +19,58 @@ import { Alert } from './Alert'
  * @example Componente FlashNotification recibiendo argumentos
  * <FlashNotification {...config} show={show} />
  */
-
 export function FlashNotification({
   message,
   state,
   show,
-  m,
-}: IFlashNotificationProps): JSX.Element {
+  maxContent,
+}: IFlashNotificationProps): null {
+  const hasShownRef = useRef(false)
+
   const showToast = useCallback(() => {
     toast(
       (t) => (
-        <Alert isFlash state={state} canDismiss onClick={() => toast.dismiss(t.id)}>
+        <Alert
+          isFlash
+          state={state}
+          canDismiss
+          onClick={() => toast.dismiss(t.id)}
+          maxContent={maxContent}
+        >
           {message}
         </Alert>
       ),
       {
-        duration: handleTime(message),
         id: alertStates[state].id,
+        duration: handleTime(message),
       }
     )
-  }, [message, state])
+  }, [message, state, maxContent])
 
   useEffect(() => {
-    if (show) {
+    if (show && !hasShownRef.current) {
       showToast()
+      hasShownRef.current = true
+    }
+
+    if (!show) {
+      hasShownRef.current = false
     }
   }, [show, showToast])
 
-  return (
-    <Box>
-      <Toaster
-        toastOptions={{
-          className: 'toastContainer',
-          style: {
-            background: 'transparent',
-            boxShadow: 'none',
-          },
-        }}
-      />
-    </Box>
-  )
+  return null
 }
+
+export const FlashNotificationGlobal = (): JSX.Element => (
+  <Toaster
+    position="top-center"
+    toastOptions={{
+      className: 'toastContainer',
+      style: {
+        background: 'transparent',
+        boxShadow: 'none',
+        zIndex: 1500,
+      },
+    }}
+  />
+)

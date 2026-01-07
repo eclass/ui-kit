@@ -16,7 +16,7 @@ interface ImageBoxProps {
 // Componente que agrega efecto al hacer click
 interface WithRipplesProps {
   enabled: boolean
-  children: React.ReactChild
+  children: React.ReactNode
 }
 function WithRipples({ enabled, children }: WithRipplesProps): JSX.Element {
   return enabled ? <Ripples>{children}</Ripples> : <>{children}</>

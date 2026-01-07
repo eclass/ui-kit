@@ -37,6 +37,7 @@ export function BtnPrimary({
   type = 'button',
   tabIndex,
   id,
+  sx,
 }: PrimaryButtonProps): JSX.Element {
   return (
     <Btn
@@ -53,6 +54,7 @@ export function BtnPrimary({
       size={size}
       type={type}
       tabIndex={tabIndex}
+      sx={sx}
     >
       {children}
     </Btn>

@@ -35,7 +35,11 @@ export const ViewFlashNotification = (): JSX.Element => {
       <MyTitle>Estados</MyTitle>
       <MyText>Existen 4 posibles estados que definen el ícono y color de la notificación.</MyText>
       <ListComponent>
-        <FlashNotificationDemo state="info" message="Mensaje informativo" />
+        <FlashNotificationDemo
+          maxContent
+          state="info"
+          message="<b>¡Grupo creado!</b><br />Tu grupo ha sido creado. Ahora puedes invitar a tus compañeros."
+        />
         <FlashNotificationDemo state="success" message="Mensaje de éxito" />
         <FlashNotificationDemo state="error" message="Mensaje de error" />
         <FlashNotificationDemo state="warning" message="Mensaje de advertencia" />

@@ -1,4 +1,4 @@
-import { Box, Button } from '@chakra-ui/react'
+import { Box, Button, CSSObject } from '@chakra-ui/react'
 import Ripples from 'react-ripples'
 
 import { vars } from '@theme'
@@ -24,6 +24,7 @@ export interface propsBaseBtns {
   type?: 'button' | 'submit' | 'reset'
   tabIndex?: number
   id?: string
+  sx?: CSSObject
 }
 interface props extends propsBaseBtns {
   bg?: colorScheme
@@ -64,6 +65,7 @@ export function Btn({
   touchDark = false,
   type = 'button',
   tabIndex = 0,
+  sx,
 }: props): JSX.Element {
   let showChildren = children ?? null
   if (!children && !rightIcon && !leftIcon) {
@@ -153,6 +155,7 @@ export function Btn({
             span: {
               h: '1rem',
             },
+            ...sx,
           }}
         >
           {showChildren}
