@@ -16,6 +16,16 @@ export interface IModal {
   autoFocus?: boolean
 }
 
+export interface IModalContentBase {
+  isInside: boolean
+  fixedButtons: IModal['fixedButtons']
+  withoutMargin: IModal['withoutMargin']
+  title?: IModal['title']
+  closeOnOverlayClick: IModal['closeOnOverlayClick']
+  fixedSubtitle?: IModal['fixedSubtitle']
+  children: React.ReactNode
+}
+
 export interface IModalButtons {
   children: React.ReactNode
   buttonsCenter?: boolean
@@ -34,4 +44,12 @@ export interface IModalAlert {
   description?: string
   type: 'info' | 'loading'
   status?: 'success' | 'error' | 'warning' | 'info'
+}
+
+export interface IModalAlertContent {
+  type: IModalAlert['type']
+  title?: IModalAlert['title']
+  description?: IModalAlert['description']
+  status?: IModalAlert['status']
+  children: React.ReactNode
 }

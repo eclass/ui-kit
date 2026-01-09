@@ -4,6 +4,9 @@ import { ModalAlertDemo, ModalDemo } from '@/documentation/components/Organisms/
 export const ViewModals = (): JSX.Element => {
   return (
     <>
+      <div>
+        <p>ejemplo multiple</p>
+      </div>
       <MyHeading>Modales</MyHeading>
       <MyText>
         Para los modales, tenemos dos tipos de componentes: Modal y ModalAlert. Cada uno tiene sus{' '}
