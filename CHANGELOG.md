@@ -1,3 +1,10 @@
+# [1.55.0](https://github.com/eclass/ui-kit/compare/v1.54.23...v1.55.0) (2026-01-12)
+
+
+### Features
+
+* **organisms:** ajustes en comportamiento de flashNotification ([#751](https://github.com/eclass/ui-kit/issues/751)) ([2f30e37](https://github.com/eclass/ui-kit/commit/2f30e37a59b454a6f8ba95fc6055b45b69169b29))
+
 ## [1.54.23](https://github.com/eclass/ui-kit/compare/v1.54.22...v1.54.23) (2025-11-06)
 
 
