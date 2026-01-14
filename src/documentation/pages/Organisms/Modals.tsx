@@ -1,5 +1,9 @@
 import { MyHeading, MyText, MyTitle, Code, ListComponent } from '@/documentation/components'
-import { ModalAlertDemo, ModalDemo } from '@/documentation/components/Organisms/Modals'
+import {
+  ModalAlertDemo,
+  ModalDemo,
+  ModalMultipleDemo,
+} from '@/documentation/components/Organisms/Modals'
 
 export const ViewModals = (): JSX.Element => {
   return (
@@ -131,6 +135,72 @@ export function View(){
           withoutDescription
         />
       </ListComponent>
+      <MyTitle>Tipo ModalMultiple</MyTitle>
+      <MyText>
+        Es un componente unificador que permite renderizar dos tipos de modal distintos dentro de un
+        mismo flujo: <br />
+        <br /> <strong>modal</strong> → Modal tradicional (contenido libre, cabecera, footer,
+        botones, scroll).
+        <br /> <strong>modalAlert / modalLoading</strong> → Modal de alerta o de carga, con
+        contenido reducido y foco en la acción del usuario. <br />
+        <br /> Está pensado para casos donde el estado del modal cambia (por ejemplo,
+        confirmaciones, advertencias o pasos intermedios) sin necesidad de cerrar y volver a abrir
+        otro modal.
+      </MyText>
+      <ListComponent>
+        <ModalMultipleDemo />
+      </ListComponent>
+      <Code
+        text={`
+import { 
+  ModalMultiple, 
+  ModalMultipleProps, 
+  BtnPrimary, 
+  BtnSecondary, 
+  ModalContent, 
+  ModalButtons, 
+  ModalAlertButtons, 
+  BtnLink 
+} from '@eclass/ui-kit'
+import { useDisclosure } from '@chakra-ui/react'
+
+export function View(){
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [type, setType] = useState<ModalMultipleProps['type']>('modal')
+
+  return (
+    <>
+      <BtnPrimary onClick={onOpen}>ModalMultiple</BtnPrimary>
+      <ModalMultiple
+        type={type}
+        isOpen={isOpen}
+        onClose={onClose}
+        title={type === 'modal' ? 'Confirmación' : '¿Seguro que deseas borrar esta pregunta?'}
+        status="info"
+        description="Por favor escoge otro horario."
+      >
+        {type === 'modal' ? (
+          <ModalContent>
+            <p>alumnos, además de definir el uso de la plataforma de estudio.</p>
+            <ModalButtons>
+              <BtnPrimary onClick={() => setType('modalAlert')}>Guardar</BtnPrimary>
+              <BtnSecondary onClick={() => onClose()}>Cancelar</BtnSecondary>
+            </ModalButtons>
+          </ModalContent>
+        ) : (
+          <ModalAlertButtons>
+            <BtnLink as="button" onClick={() => setType('modal')}>
+              Aceptar
+            </BtnLink>
+            <BtnLink as="button" onClick={() => onClose()}>
+              Cancelar
+            </BtnLink>
+          </ModalAlertButtons>
+        )}
+      </ModalMultiple>
+    </>)
+}`}
+      />
     </>
   )
 }
