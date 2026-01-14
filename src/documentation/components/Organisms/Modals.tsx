@@ -8,6 +8,8 @@ import {
   ModalButtons,
   ModalContent,
 } from '@/organisms/Modals/'
+import { ModalMultiple, ModalMultipleProps } from '@/organisms/Modals/ModalMultiple/ModalMultiple'
+import { useState } from 'react'
 
 export const ModalDemo = ({
   type,
@@ -295,6 +297,43 @@ export const ModalAlertDemo = ({
           </BtnLink>
         </ModalAlertButtons>
       </ModalAlertNew>
+    </>
+  )
+}
+
+export const ModalMultipleDemo = (): JSX.Element => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [type, setType] = useState<ModalMultipleProps['type']>('modal')
+  return (
+    <>
+      <BtnPrimary onClick={onOpen}>ModalMultiple</BtnPrimary>
+      <ModalMultiple
+        type={type}
+        isOpen={isOpen}
+        onClose={onClose}
+        title={type === 'modal' ? 'Confirmación' : '¿Seguro que deseas borrar esta pregunta?'}
+        status="info"
+        description="Por favor escoge otro horario."
+      >
+        {type === 'modal' ? (
+          <ModalContent>
+            <p>alumnos, además de definir el uso de la plataforma de estudio.</p>
+            <ModalButtons>
+              <BtnPrimary onClick={() => setType('modal')}>Guardar</BtnPrimary>
+              <BtnSecondary onClick={() => onClose()}>Cancelar</BtnSecondary>
+            </ModalButtons>
+          </ModalContent>
+        ) : (
+          <ModalAlertButtons>
+            <BtnLink as="button" onClick={() => setType('modal')}>
+              Aceptar
+            </BtnLink>
+            <BtnLink as="button" onClick={() => onClose()}>
+              Cancelar
+            </BtnLink>
+          </ModalAlertButtons>
+        )}
+      </ModalMultiple>
     </>
   )
 }

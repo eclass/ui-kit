@@ -1,63 +1,22 @@
-import {
-  Box,
-  ModalCloseButton,
-  ModalContent as ChakraModalContent,
-  ModalHeader,
-  useMediaQuery,
-} from '@chakra-ui/react'
+import { Box, ModalCloseButton, ModalHeader, useMediaQuery } from '@chakra-ui/react'
 
 import { vars } from '@/theme'
 import { IModalContentBase } from '../types'
 import { uiKitModalIsDesktop } from './Modal'
 
 export const ModalContentBase = ({
-  isInside,
-  fixedButtons,
-  withoutMargin,
-  title,
+  children,
   closeOnOverlayClick,
   fixedSubtitle,
-  children,
+  title,
+  withoutMargin,
 }: IModalContentBase): JSX.Element => {
   const [isDesktop] = useMediaQuery(`(min-width: ${uiKitModalIsDesktop}px)`)
   const py = '32px'
   const px = '24px'
 
   return (
-    <ChakraModalContent
-      maxH={isInside ? '100dvh' : 'auto'}
-      minH={isDesktop ? '300px' : '100dvh'}
-      padding={0}
-      width="100%"
-      sx={{
-        bgColor: vars('colors-neutral-white'),
-        borderRadius: isDesktop ? '8px' : 0,
-        mt: isDesktop ? '48px' : 0,
-        mb: isDesktop ? '48px' : 0,
-        marginX: isDesktop ? 'auto' : 0,
-        maxH: isInside ? 'calc(100dvh - 96px)' : 'auto',
-        maxWidth: isDesktop ? '690px' : '100%',
-
-        ...(fixedButtons && {
-          '.uikit-modalContent': {
-            pb: 0,
-          },
-          '.uikit-modalButtons': {
-            py: py,
-            px: px,
-          },
-        }),
-        ...(withoutMargin && {
-          '.uikit-modalContent': {
-            pt: 0,
-            px: 0,
-          },
-          '.uikit-modalButtons': {
-            px: px,
-          },
-        }),
-      }}
-    >
+    <>
       <ModalHeader
         bg={vars('colors-main-deepSkyBlue')}
         borderTopRadius={isDesktop ? '8px' : 0}
@@ -98,6 +57,6 @@ export const ModalContentBase = ({
         </Box>
       )}
       {children}
-    </ChakraModalContent>
+    </>
   )
 }

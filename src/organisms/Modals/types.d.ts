@@ -17,13 +17,12 @@ export interface IModal {
 }
 
 export interface IModalContentBase {
-  isInside: boolean
-  fixedButtons: IModal['fixedButtons']
-  withoutMargin: IModal['withoutMargin']
-  title?: IModal['title']
-  closeOnOverlayClick: IModal['closeOnOverlayClick']
-  fixedSubtitle?: IModal['fixedSubtitle']
   children: React.ReactNode
+  closeOnOverlayClick: IModal['closeOnOverlayClick']
+  fixedButtons: IModal['fixedButtons']
+  fixedSubtitle?: IModal['fixedSubtitle']
+  title?: IModal['title']
+  withoutMargin: IModal['withoutMargin']
 }
 
 export interface IModalButtons {

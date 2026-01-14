@@ -1,9 +1,9 @@
-import { Box, Modal as ChakraModal, ModalOverlay } from '@chakra-ui/react'
+import { Box, Modal as ChakraModal, ModalContent, ModalOverlay } from '@chakra-ui/react'
 
 import { IModalAlert } from '../types'
-
 import { vars } from '@/theme'
 import { ModalAlertContent } from './ModalAlertContent'
+import { useModalAlertConfig } from './useModalAlertConfig'
 
 export const ModalAlertNew = ({
   autoFocus = false,
@@ -15,6 +15,7 @@ export const ModalAlertNew = ({
   description,
   status,
 }: IModalAlert): JSX.Element => {
+  const modalConfig = useModalAlertConfig()
   return (
     <>
       <ChakraModal
@@ -26,9 +27,11 @@ export const ModalAlertNew = ({
         autoFocus={autoFocus}
       >
         <ModalOverlay />
-        <ModalAlertContent type={type} title={title} description={description} status={status}>
-          {children}
-        </ModalAlertContent>
+        <ModalContent {...modalConfig.contentProps}>
+          <ModalAlertContent type={type} title={title} description={description} status={status}>
+            {children}
+          </ModalAlertContent>
+        </ModalContent>
       </ChakraModal>
     </>
   )

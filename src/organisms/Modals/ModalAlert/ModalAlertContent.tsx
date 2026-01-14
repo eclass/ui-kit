@@ -1,4 +1,4 @@
-import { Box, ModalBody, ModalContent, useMediaQuery } from '@chakra-ui/react'
+import { Box, ModalBody, useMediaQuery } from '@chakra-ui/react'
 
 import { IModalAlertContent } from '../types'
 
@@ -15,14 +15,7 @@ export const ModalAlertContent = ({
   const [isDesktop] = useMediaQuery('(min-width: 641px)')
 
   return (
-    <ModalContent
-      borderRadius="8px"
-      p={0}
-      m="10vh auto 0"
-      sx={{
-        maxWidth: isDesktop ? '589px' : '343px',
-      }}
-    >
+    <>
       <ModalBody
         p="32px"
         display="flex"
@@ -57,6 +50,6 @@ export const ModalAlertContent = ({
         )}
       </ModalBody>
       {type !== 'loading' && children ? children : <></>}
-    </ModalContent>
+    </>
   )
 }

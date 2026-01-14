@@ -1,9 +1,14 @@
-import { Modal as ChakraModal, ModalOverlay } from '@chakra-ui/react'
+import { Modal as ChakraModal, ModalOverlay, ModalContent } from '@chakra-ui/react'
 
 import { IModal } from '../types'
 import { ModalContentBase } from './ModalContentBase'
+import { useModalConfig } from './useModalConfig'
 
 export const uiKitModalIsDesktop = 641
+export const ModalPadding = {
+  py: '32px',
+  px: '24px',
+}
 
 export const Modal = ({
   children,
@@ -19,29 +24,36 @@ export const Modal = ({
 }: IModal): JSX.Element => {
   const isInside = scrollBehavior === 'inside' || fixedButtons
 
+  const modalConfig = useModalConfig({
+    closeOnOverlayClick,
+    scrollBehavior,
+    fixedButtons,
+    withoutMargin,
+  })
+
   return (
-    <>
-      <ChakraModal
-        closeOnOverlayClick={closeOnOverlayClick}
-        closeOnEsc={closeOnOverlayClick}
-        isOpen={isOpen}
-        motionPreset="scale"
-        onClose={onClose}
-        scrollBehavior={isInside ? 'inside' : 'outside'}
-        autoFocus={autoFocus}
-        blockScrollOnMount={false}
-      >
-        <ModalOverlay />
+    <ChakraModal
+      closeOnOverlayClick={modalConfig.closeOnOverlayClick}
+      closeOnEsc={modalConfig.closeOnEsc}
+      isOpen={isOpen}
+      motionPreset="scale"
+      onClose={onClose}
+      scrollBehavior={isInside ? 'inside' : 'outside'}
+      autoFocus={autoFocus}
+      blockScrollOnMount={false}
+    >
+      <ModalOverlay />
+      <ModalContent {...modalConfig.contentProps}>
         <ModalContentBase
-          isInside={isInside}
           fixedButtons={fixedButtons}
           withoutMargin={withoutMargin}
           title={title}
           closeOnOverlayClick={closeOnOverlayClick}
           fixedSubtitle={fixedSubtitle}
-          children={children}
-        />
-      </ChakraModal>
-    </>
+        >
+          {children}
+        </ModalContentBase>
+      </ModalContent>
+    </ChakraModal>
   )
 }
