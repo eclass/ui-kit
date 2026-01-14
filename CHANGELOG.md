@@ -1,3 +1,11 @@
+## [1.55.1](https://github.com/eclass/ui-kit/compare/v1.55.0...v1.55.1) (2026-01-14)
+
+
+### Bug Fixes
+
+* **organisms:** exportar tipos de forma global ([8be26db](https://github.com/eclass/ui-kit/commit/8be26db1c3f45b301808db9eaadc6c63107a43ed))
+* **organisms:** exportar tipos de modal multiple ([1086ded](https://github.com/eclass/ui-kit/commit/1086ded0ae1563cdfb87fa0154a1cf33400b491d))
+
 # [1.55.0](https://github.com/eclass/ui-kit/compare/v1.54.23...v1.55.0) (2026-01-12)
 
 
