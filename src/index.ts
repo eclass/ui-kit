@@ -26,8 +26,8 @@ export {
   ModalContent,
   ModalAlertButtons,
   ModalMultiple,
-  ModalMultipleProps,
 } from './organisms/Modals'
+export type { ModalMultipleProps } from './organisms/Modals'
 export { ModalAlert } from './organisms/ModalAlert'
 export { Eventos } from './organisms/Events'
 export { Resources } from './organisms/Resources'
