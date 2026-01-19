@@ -18,6 +18,7 @@ export const CalendarDropdownContainer = ({
   onlyToCalendar,
   redirectToCalendar,
   text,
+  alert = false,
 }: ICalendarDropdown): JSX.Element => {
   const [isMobile] = useMediaQuery('(max-width: 577px)')
   const { closeAndMarkSeen, empty, hasNew, hasMoreNext, ...all } = useParseEvents(events, now)

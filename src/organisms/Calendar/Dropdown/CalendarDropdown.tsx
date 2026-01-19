@@ -10,6 +10,7 @@ export const CalendarDropdown = ({
   onlyToCalendar = false,
   redirectToCalendar,
   text,
+  alert = false,
 }: ICalendarDropdown): JSX.Element => {
   const date = new Date(now)
   const isoDate = date.toISOString()
@@ -24,6 +25,7 @@ export const CalendarDropdown = ({
       onlyToCalendar={onlyToCalendar}
       redirectToCalendar={redirectToCalendar}
       text={text}
+      alert={alert}
     />
   )
 }

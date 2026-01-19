@@ -319,7 +319,7 @@ export const ModalMultipleDemo = (): JSX.Element => {
           <ModalContent>
             <p>alumnos, además de definir el uso de la plataforma de estudio.</p>
             <ModalButtons>
-              <BtnPrimary onClick={() => setType('modal')}>Guardar</BtnPrimary>
+              <BtnPrimary onClick={() => setType('modalAlert')}>Guardar</BtnPrimary>
               <BtnSecondary onClick={() => onClose()}>Cancelar</BtnSecondary>
             </ModalButtons>
           </ModalContent>
