@@ -1,3 +1,10 @@
+## [1.55.2](https://github.com/eclass/ui-kit/compare/v1.55.1...v1.55.2) (2026-01-19)
+
+
+### Bug Fixes
+
+* **organisms:** calendar dropdown con marca para el alerts ([3753460](https://github.com/eclass/ui-kit/commit/37534604d7c43795822a507a49d6e7349b94ed0f))
+
 ## [1.55.1](https://github.com/eclass/ui-kit/compare/v1.55.0...v1.55.1) (2026-01-14)
 
 
