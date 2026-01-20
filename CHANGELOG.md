@@ -1,3 +1,10 @@
+## [1.55.3](https://github.com/eclass/ui-kit/compare/v1.55.2...v1.55.3) (2026-01-20)
+
+
+### Bug Fixes
+
+* **ci:** corregir checkout para permitir semantic-release ([2dcd2e9](https://github.com/eclass/ui-kit/commit/2dcd2e9eed7f72ad3e2f37114bdf3fab49e2861e))
+
 ## [1.55.2](https://github.com/eclass/ui-kit/compare/v1.55.1...v1.55.2) (2026-01-19)
 
 
