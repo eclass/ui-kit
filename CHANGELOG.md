@@ -1,3 +1,11 @@
+## [1.55.4](https://github.com/eclass/ui-kit/compare/v1.55.3...v1.55.4) (2026-01-27)
+
+
+### Bug Fixes
+
+* **ci:** ensure semantic-release reads all tags and supports private gitlab deps ([516532b](https://github.com/eclass/ui-kit/commit/516532b2a4095c4e58231e5f731128f1322a74e5))
+* **versiones:** corrige workflow de release para publicar en npm ([9dece96](https://github.com/eclass/ui-kit/commit/9dece96a636be7a99756b6bdc09099f58853a93e))
+
 ## [1.55.3](https://github.com/eclass/ui-kit/compare/v1.55.2...v1.55.3) (2026-01-20)
 
 
