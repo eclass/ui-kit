@@ -2,7 +2,6 @@ name: Node.js CI
 
 on: [push, pull_request]
 
-# 🔐 Da permisos de escritura a todo el workflow (necesario para hacer push a gh-pages)
 permissions:
   contents: write
 
@@ -12,29 +11,23 @@ jobs:
     strategy:
       matrix:
         node: [14.21.3]
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-      - uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
-        run: |
-          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-        shell: bash
-      - name: Regenerate package-lock.json
-        run: npm i
-      - name: Clean node_modules after regenerate
-        run: rm -rf node_modules
+
       - name: Clean install on CI
         run: npm ci
+
       - name: Linter code check
         run: npm run lint:check
+
       - name: Testing JEST
         run: npm run test
 
@@ -45,29 +38,24 @@ jobs:
     permissions:
       contents: write
       issues: write
+
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
+
       - uses: actions/setup-node@v4
         with:
           node-version: 14.21.3
           cache: 'npm'
-      - uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
-        run: |
-          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-        shell: bash
-      - name: Regenerate package-lock.json
-        run: npm i
-      - name: Clean node_modules after regenerate
-        run: rm -rf node_modules
+
       - name: Clean install on CI
         run: npm ci
+
       - name: Build library
         run: npm run build
+
       - name: Release version
         run: npx semantic-release@18
         env:
@@ -82,30 +70,21 @@ jobs:
       VITE_REACT_DEPLOY_DOCUMENTATION: DOCUMENTATION
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: Setup Node
-        uses: actions/setup-node@v4
+
+      - uses: actions/setup-node@v4
         with:
           node-version: 14.21.3
           cache: 'npm'
-      - uses: webfactory/ssh-agent@v0.7.0
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-      - name: Add Know Hosts
-        run: |
-          ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
-        shell: bash
-      - name: Regenerate package-lock.json
-        run: npm i
-      - name: Clean node_modules after regenerate
-        run: rm -rf node_modules
+
       - name: Clean install on CI
         run: npm ci
+
       - name: Generate new Build to Pages
         run: npm run deploy
+
       - name: Upload deploy-ready build files
         uses: actions/upload-artifact@v4
         with:
