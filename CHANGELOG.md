@@ -1,3 +1,10 @@
+## [1.55.5](https://github.com/eclass/ui-kit/compare/v1.55.4...v1.55.5) (2026-01-27)
+
+
+### Bug Fixes
+
+* **ci:** sincroniza la rama antes de ejecutar semantic-release ([2f5b51e](https://github.com/eclass/ui-kit/commit/2f5b51efa3f1ccaed32c633878eb4102181f3098))
+
 ## [1.55.4](https://github.com/eclass/ui-kit/compare/v1.55.3...v1.55.4) (2026-01-27)
 
 
