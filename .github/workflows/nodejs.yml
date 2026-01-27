@@ -61,6 +61,11 @@ jobs:
           fetch-depth: 0
 
       # 🔥 IMPORTANTE PARA VERSIONES CORRECTAS
+      - name: Ensure branch is up to date
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+
       - name: Fetch all tags
         run: git fetch --tags --force
 
