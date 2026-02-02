@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef } from 'react'
+import { Portal } from '@chakra-ui/react'
+import { useCallback, useEffect } from 'react'
 import { toast, Toaster } from 'react-hot-toast'
 
 import { IFlashNotificationProps } from './types.d'
@@ -19,14 +20,14 @@ import { Alert } from './Alert'
  * @example Componente FlashNotification recibiendo argumentos
  * <FlashNotification {...config} show={show} />
  */
+
 export function FlashNotification({
   message,
   state,
   show,
-  maxContent,
-}: IFlashNotificationProps): null {
-  const hasShownRef = useRef(false)
-
+  m,
+  width,
+}: IFlashNotificationProps): JSX.Element {
   const showToast = useCallback(() => {
     toast(
       (t) => (
@@ -35,42 +36,37 @@ export function FlashNotification({
           state={state}
           canDismiss
           onClick={() => toast.dismiss(t.id)}
-          maxContent={maxContent}
+          width={width}
+          m={m}
         >
           {message}
         </Alert>
       ),
       {
+        duration: state === 'success' ? handleTime(message) : Infinity,
         id: alertStates[state].id,
-        duration: handleTime(message),
       }
     )
-  }, [message, state, maxContent])
+  }, [message, state, width, m])
 
   useEffect(() => {
-    if (show && !hasShownRef.current) {
+    if (show) {
       showToast()
-      hasShownRef.current = true
-    }
-
-    if (!show) {
-      hasShownRef.current = false
     }
   }, [show, showToast])
 
-  return null
+  return (
+    <Portal>
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          className: 'toastContainer',
+          style: {
+            background: 'transparent',
+            boxShadow: 'none',
+          },
+        }}
+      />
+    </Portal>
+  )
 }
-
-export const FlashNotificationGlobal = (): JSX.Element => (
-  <Toaster
-    position="top-center"
-    toastOptions={{
-      className: 'toastContainer',
-      style: {
-        background: 'transparent',
-        boxShadow: 'none',
-        zIndex: 1500,
-      },
-    }}
-  />
-)

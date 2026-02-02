@@ -38,6 +38,7 @@ export function Alert({
   endTextLink,
   onClickLink,
   sx,
+  width,
 }: IAlertProps): JSX.Element {
   const [isMobile] = useMediaQuery('(max-width: 425px)')
 
@@ -64,8 +65,9 @@ export function Alert({
       gap={!isFlash ? '16px' : undefined}
       justifyContent={!isMobile ? 'space-between' : undefined}
       margin={m}
-      width={maxContent ? 'max-content' : fullWidth ? '100%' : 'fit-content'}
-      maxWidth={fullWidth ? 'none' : '796px'}
+      mx={isFlash ? 'auto' : undefined}
+      width={width ?? (maxContent ? 'max-content' : fullWidth ? '100%' : 'fit-content')}
+      maxWidth={fullWidth ? 'none' : width ?? maxContent ? 'none' : '796px'}
       p="1rem"
       pr={canDismiss ? '1.75rem' : '1rem'}
       position="relative"
