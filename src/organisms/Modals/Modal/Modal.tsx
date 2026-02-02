@@ -40,7 +40,6 @@ export const Modal = ({
       onClose={onClose}
       scrollBehavior={isInside ? 'inside' : 'outside'}
       autoFocus={autoFocus}
-      blockScrollOnMount={false}
     >
       <ModalOverlay />
       <ModalContent {...modalConfig.contentProps}>
