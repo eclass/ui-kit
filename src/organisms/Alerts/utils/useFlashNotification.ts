@@ -19,12 +19,7 @@ import { handleTime } from './handleTime'
  * <FlashNotification {...config} show={show} />
  */
 
-export const useFlashNotification = ({
-  state,
-  message,
-  maxContent,
-  width,
-}: IFlashNotificationProps): any => {
+export const useFlashNotification = ({ state, message, width }: IFlashNotificationProps): any => {
   // Estado que maneja si la notificación debe mostrarse.
   const [show, setShow] = useState(false)
 
@@ -54,7 +49,6 @@ export const useFlashNotification = ({
     config: {
       state,
       message,
-      maxContent,
       width,
     },
   }

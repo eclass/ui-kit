@@ -17,29 +17,30 @@ export const ViewFlashNotification = (): JSX.Element => {
       <MyText>
         <b>Tiempo de permanencia y auto-cerrado:</b>
         <br />
-        La duración de la notificación depende de su estado y la longitud del mensaje (basado en una
-        velocidad de lectura de 150 palabras por minuto):
+        La duración de la notificación depende de su estado y la longitud del mensaje. El sistema
+        calcula el tiempo necesario para leer el contenido basado en una velocidad promedio de{' '}
+        <b>150 palabras por minuto</b>:
         <li>
-          <b>Estado Success:</b> Se cierra automáticamente tras el tiempo calculado para su lectura
-          (mínimo 3 segundos).
+          <b>Estado Success:</b> Se cierra automáticamente tras el tiempo calculado (con un mínimo
+          de 3 segundos garantizados).
         </li>
         <li>
-          <b>Otros Estados (Error, Warning, Info):</b> Permanecen visibles de forma persistente y
-          requieren que el usuario las cierre manualmente mediante la "X" integrada.
+          <b>Otros Estados (Error, Warning, Info):</b> Permanecen visibles de forma persistente.
+          Esto asegura que el usuario tenga tiempo suficiente para leer errores o advertencias
+          críticas y requiere un cierre manual mediante la "X".
         </li>
       </MyText>
 
-      <MyTitle>Ancho del Contenido y Centrado</MyTitle>
+      <MyTitle>Ancho y Centrado</MyTitle>
       <MyText>
-        Mediante la propiedad <b>maxContent</b>, la notificación tomará exactamente el ancho de su
-        contenido y se mantendrá perfectamente centrada en la pantalla. Alternativamente, puedes
-        pasar un ancho fijo mediante <b>width</b>.
+        Por defecto, la notificación toma un ancho de <b>max-content</b> (se ajusta al texto) y se
+        mantiene perfectamente centrada en la parte superior de la pantalla. Si deseas un control
+        más específico, puedes pasar un ancho fijo mediante la propiedad <b>width</b>.
       </MyText>
       <ListComponent>
         <FlashNotificationDemo
-          maxContent
-          state="success"
-          message="Notificación ajustada al ancho del contenido"
+          state="error"
+          message="<strong>El grupo ya está completo</strong><br/>Lo sentimos, no es posible unirte porque el grupo acaba de alcanzar su límite de integrantes."
         />
         <FlashNotificationDemo
           state="info"
@@ -47,19 +48,53 @@ export const ViewFlashNotification = (): JSX.Element => {
           width="600px"
         />
       </ListComponent>
+      <Code
+        text={`// Notificación con ancho automático (max-content)
+<FlashNotification
+  state="error"
+  show={show}
+  message="Mensaje con ancho automático..."
+/>
 
-      <MyTitle>Implementación</MyTitle>
+// Notificación con ancho fijo
+<FlashNotification
+  state="info"
+  show={show}
+  width="600px"
+  message="Mensaje con ancho fijo de 600px"
+/>`}
+      />
+
+      <MyTitle>Implementación Singleton</MyTitle>
       <MyText>
-        El componente de FlashNotification se implementa en conjunto con el hook
-        useFlashNotification:
+        No es necesario añadir un contenedor de <i>Toaster</i> manualmente en tu aplicación. El
+        componente <b>FlashNotification</b> gestiona automáticamente una única instancia global
+        (Singleton), asegurando que las notificaciones no se dupliquen ni se pisen, incluso si el
+        componente se usa en múltiples lugares de tu proyecto.
       </MyText>
-      <Code text="import { FlashNotification, useFlashNotification } from '@eclass/ui-kit'" />
+
+      <Code
+        text={`import { FlashNotification, useFlashNotification } from '@eclass/ui-kit'
+
+const MyComponent = () => {
+  const { show, active, config } = useFlashNotification({
+    state: 'success',
+    message: '¡Cambios guardados con éxito!',
+  })
+
+  return (
+    <>
+      <Button onClick={active}>Guardar</Button>
+      <FlashNotification {...config} show={show} />
+    </>
+  )
+}`}
+      />
 
       <MyTitle>Estados</MyTitle>
       <MyText>Existen 4 posibles estados que definen el ícono y color de la notificación.</MyText>
       <ListComponent>
         <FlashNotificationDemo
-          maxContent
           state="info"
           message="<b>¡Grupo creado!</b><br />Tu grupo ha sido creado. Ahora puedes invitar a tus compañeros."
         />
@@ -67,19 +102,6 @@ export const ViewFlashNotification = (): JSX.Element => {
         <FlashNotificationDemo state="error" message="Mensaje de error (Persistente)" />
         <FlashNotificationDemo state="warning" message="Mensaje de advertencia (Persistente)" />
       </ListComponent>
-      <Code
-        text="// Se define la constante que llama a useNotificationFlash y contiene el estado y mensaje
-const { show, active, config } = useFlashNotification({
-  state: 'info',
-  message: 'Mensaje informativo',
-  maxContent: true, // Se ajusta al ancho del texto
-  width: '400px',   // Opcional: anula maxContent si se provee
-})
-// Se pasa la función active al elemento que activará la notificación
-<Button onClick={ () => {active()} } > {state} </Button>
-// Se le dan los argumentos de config al componente de FlashNotification
-<FlashNotification {...config} show={show} />"
-      />
     </>
   )
 }

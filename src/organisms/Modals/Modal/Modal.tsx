@@ -1,4 +1,4 @@
-import { Modal as ChakraModal, ModalOverlay, ModalContent } from '@chakra-ui/react'
+import { Modal as ChakraModal, ModalOverlay, ModalContent, Box } from '@chakra-ui/react'
 
 import { IModal } from '../types'
 import { ModalContentBase } from './ModalContentBase'
@@ -40,19 +40,33 @@ export const Modal = ({
       onClose={onClose}
       scrollBehavior={isInside ? 'inside' : 'outside'}
       autoFocus={autoFocus}
+      blockScrollOnMount={false}
     >
       <ModalOverlay />
-      <ModalContent {...modalConfig.contentProps}>
-        <ModalContentBase
-          fixedButtons={fixedButtons}
-          withoutMargin={withoutMargin}
-          title={title}
-          closeOnOverlayClick={closeOnOverlayClick}
-          fixedSubtitle={fixedSubtitle}
-        >
-          {children}
-        </ModalContentBase>
-      </ModalContent>
+      <Box
+        sx={{
+          ...(isInside && {
+            '.uikit-modalContent': {
+              pb: '16px !important',
+            },
+            '.uikit-modalButtons': {
+              boxShadow: '0px 4px 16px 0px #5C5C5C33',
+            },
+          }),
+        }}
+      >
+        <ModalContent {...modalConfig.contentProps}>
+          <ModalContentBase
+            fixedButtons={fixedButtons}
+            withoutMargin={withoutMargin}
+            title={title}
+            closeOnOverlayClick={closeOnOverlayClick}
+            fixedSubtitle={fixedSubtitle}
+          >
+            {children}
+          </ModalContentBase>
+        </ModalContent>
+      </Box>
     </ChakraModal>
   )
 }
