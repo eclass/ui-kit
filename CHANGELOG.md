@@ -1,3 +1,10 @@
+# [1.56.0](https://github.com/eclass/ui-kit/compare/v1.55.5...v1.56.0) (2026-02-02)
+
+
+### Features
+
+* **alerts:** actualizar FlashNotification con ancho, centrado y auto-cerrado ([#755](https://github.com/eclass/ui-kit/issues/755)) ([34dd677](https://github.com/eclass/ui-kit/commit/34dd67737cfa448c641d98628083bac6ce2dc7ac))
+
 ## [1.55.5](https://github.com/eclass/ui-kit/compare/v1.55.4...v1.55.5) (2026-01-27)
 
 
