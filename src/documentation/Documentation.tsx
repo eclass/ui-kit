@@ -5,7 +5,6 @@ import { routes } from './utils/routes'
 import { Home, NoMatch } from './pages'
 import { Layout } from './components'
 import { Box } from '@chakra-ui/react'
-import { FlashNotificationGlobal } from '@/organisms/Alerts/FlashNotification'
 
 export const Documentation = (): JSX.Element => {
   React.useEffect(() => {
@@ -17,7 +16,6 @@ export const Documentation = (): JSX.Element => {
 
   return (
     <Box w="100%" overflowX="hidden">
-      <FlashNotificationGlobal />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />}>

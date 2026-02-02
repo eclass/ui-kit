@@ -1,16 +1,13 @@
-/* Método que cuenta la cantidad de palabras del mensaje de alerta o notificación
-y según eso calcula el tiempo que durará en pantalla */
-
 export const handleTime = (message: string): number => {
-  // Se recibe el mensaje y se retorna la cantidad de palabras
-  function countWords(input: string): number {
-    const wordCount = input.match(/(\w+)/g)?.length ?? 0
-    return wordCount
-  }
-  // Por defecto la duración es de 3seg, si el mensaje tiene más de 5 palabras, se cambia a 6
-  let time = 3000
-  if (message && countWords(message) > 5) {
-    time = 6000
-  }
-  return time
+  if (!message) return 3000
+
+  const words = message.trim().split(/\s+/).length
+  const wordsPerMinute = 150
+  const baseMinutes = words / wordsPerMinute
+
+  // Convertimos a milisegundos: minutos * 60 segundos * 1000 ms
+  const totalMs = Math.round(baseMinutes * 60 * 1000)
+
+  // Aseguramos un mínimo de 3 segundos para mensajes muy cortos
+  return Math.max(3000, totalMs)
 }

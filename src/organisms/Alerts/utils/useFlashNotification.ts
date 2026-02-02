@@ -23,6 +23,7 @@ export const useFlashNotification = ({
   state,
   message,
   maxContent,
+  width,
 }: IFlashNotificationProps): any => {
   // Estado que maneja si la notificación debe mostrarse.
   const [show, setShow] = useState(false)
@@ -31,12 +32,13 @@ export const useFlashNotification = ({
   useEffect(() => {
     // Si la notificación se está mostrando, se determina el tiempo tras el cual se ocultará.
     if (show) {
+      const duration = state === 'success' ? handleTime(message) : 1000
       const timeOut = setTimeout(() => {
         setShow(false)
-      }, handleTime(message))
+      }, duration)
       return () => clearTimeout(timeOut)
     }
-  }, [message, show])
+  }, [message, show, state])
 
   // Función que activa la notificación
   const active = (): any => {
@@ -53,6 +55,7 @@ export const useFlashNotification = ({
       state,
       message,
       maxContent,
+      width,
     },
   }
 }

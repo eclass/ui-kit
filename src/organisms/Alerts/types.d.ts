@@ -52,6 +52,7 @@ export interface IAlertProps {
   endTextLink?: string
   onClickLink?: () => void
   maxContent?: boolean
+  width?: string
   sx?: CSSObject
 }
 
@@ -76,4 +77,5 @@ export interface IFlashNotificationProps {
   state: TState
   show?: boolean
   maxContent?: boolean
+  width?: string
 }
