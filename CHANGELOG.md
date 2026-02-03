@@ -1,3 +1,15 @@
+# [1.57.0](https://github.com/eclass/ui-kit/compare/v1.56.0...v1.57.0) (2026-02-03)
+
+
+### Bug Fixes
+
+* **alerts:** implementar singleton en FlashNotification y corregir duplicados en el DOM ([70f594a](https://github.com/eclass/ui-kit/commit/70f594a08853ce861798129711587661145ccd25))
+
+
+### Features
+
+* habilitar el bloqueo de scroll al abrir el Modal ([34cb7d8](https://github.com/eclass/ui-kit/commit/34cb7d8aaf67e00e9d208419d2899625517d957b))
+
 # [1.56.0](https://github.com/eclass/ui-kit/compare/v1.55.5...v1.56.0) (2026-02-02)
 
 
