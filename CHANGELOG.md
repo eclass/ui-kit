@@ -1,3 +1,10 @@
+## [1.57.1](https://github.com/eclass/ui-kit/compare/v1.57.0...v1.57.1) (2026-02-03)
+
+
+### Bug Fixes
+
+* **varios:** habilitar soporte HTML en alertas y estado deshabilitado en BtnLink ([4a977b7](https://github.com/eclass/ui-kit/commit/4a977b73bc9ef2631fb7fd8e360b165e2e032a36))
+
 # [1.57.0](https://github.com/eclass/ui-kit/compare/v1.56.0...v1.57.0) (2026-02-03)
 
 
