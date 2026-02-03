@@ -1,4 +1,6 @@
 import { Box, ModalBody, useMediaQuery } from '@chakra-ui/react'
+import DOMPurifyLib from 'dompurify'
+import ReactParser from 'html-react-parser'
 
 import { IModalAlertContent } from '../types'
 
@@ -13,6 +15,9 @@ export const ModalAlertContent = ({
   children,
 }: IModalAlertContent): JSX.Element => {
   const [isDesktop] = useMediaQuery('(min-width: 641px)')
+
+  const descriptionParsed =
+    typeof description === 'string' ? ReactParser(DOMPurifyLib.sanitize(description)) : description
 
   return (
     <>
@@ -45,7 +50,7 @@ export const ModalAlertContent = ({
         )}
         {description && (
           <Box as="p" fontSize="16px" lineHeight="24px" mb={0}>
-            {description}
+            {descriptionParsed}
           </Box>
         )}
       </ModalBody>

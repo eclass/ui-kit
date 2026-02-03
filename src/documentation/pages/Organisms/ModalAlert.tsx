@@ -22,7 +22,7 @@ export interface ModalAlertProps {
   showModal: boolean // Muestra/Oculta el modal
   typeAlert: 'success' | 'error' | 'warning' | 'info' // Tipos de alerta
   title?: string // Titulo del modal
-  description?: string // Mensaje del modal
+  description?: string // Mensaje del modal (admite etiquetas HTML básicas sanitizadas)
   optionsButton: optionsButton[] // Boton del modal en array
   top?: string // Posición del modal
 }

@@ -65,6 +65,26 @@ export const ViewFlashNotification = (): JSX.Element => {
 />`}
       />
 
+      <MyTitle>Soporte HTML</MyTitle>
+      <MyText>
+        La propiedad <b>message</b> admite etiquetas HTML básicas para dar formato al contenido,
+        como <b>&lt;b&gt;</b>, <b>&lt;strong&gt;</b>, <b>&lt;i&gt;</b> y <b>&lt;br /&gt;</b>. El
+        contenido es sanitizado automáticamente antes de ser renderizado.
+      </MyText>
+      <ListComponent>
+        <FlashNotificationDemo
+          state="info"
+          message="Puedes usar <b>negritas</b>, <i>itálicas</i> y<br/>saltos de línea."
+        />
+      </ListComponent>
+      <Code
+        text={`<FlashNotification
+  state="info"
+  show={show}
+  message="Uso de <b>HTML</b> para mejorar el <i>feedback</i>."
+/>`}
+      />
+
       <MyTitle>Implementación Singleton</MyTitle>
       <MyText>
         No es necesario añadir un contenedor de <i>Toaster</i> manualmente en tu aplicación. El
@@ -101,6 +121,71 @@ const MyComponent = () => {
         <FlashNotificationDemo state="success" message="Mensaje de éxito (Auto-cerrado)" />
         <FlashNotificationDemo state="error" message="Mensaje de error (Persistente)" />
         <FlashNotificationDemo state="warning" message="Mensaje de advertencia (Persistente)" />
+      </ListComponent>
+
+      <MyTitle>Propiedades</MyTitle>
+      <MyText>
+        El componente <b>FlashNotification</b> acepta las siguientes propiedades:
+      </MyText>
+      <ListComponent>
+        <div style={{ width: '100%', overflowX: 'auto' }}>
+          <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left' }}>
+            <thead>
+              <tr style={{ borderBottom: '1px solid #E2E8F0' }}>
+                <th style={{ padding: '8px' }}>Propiedad</th>
+                <th style={{ padding: '8px' }}>Tipo</th>
+                <th style={{ padding: '8px' }}>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style={{ borderBottom: '1px solid #EDF2F7' }}>
+                <td style={{ padding: '8px' }}>
+                  <code>state</code>
+                </td>
+                <td style={{ padding: '8px' }}>
+                  <code>'success' | 'error' | 'info' | 'warning'</code>
+                </td>
+                <td style={{ padding: '8px' }}>Define el color, icono y comportamiento.</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid #EDF2F7' }}>
+                <td style={{ padding: '8px' }}>
+                  <code>message</code>
+                </td>
+                <td style={{ padding: '8px' }}>
+                  <code>string</code>
+                </td>
+                <td style={{ padding: '8px' }}>El texto o HTML que se mostrará.</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid #EDF2F7' }}>
+                <td style={{ padding: '8px' }}>
+                  <code>show</code>
+                </td>
+                <td style={{ padding: '8px' }}>
+                  <code>boolean</code>
+                </td>
+                <td style={{ padding: '8px' }}>Controla la visibilidad.</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid #EDF2F7' }}>
+                <td style={{ padding: '8px' }}>
+                  <code>width</code>
+                </td>
+                <td style={{ padding: '8px' }}>
+                  <code>string</code>
+                </td>
+                <td style={{ padding: '8px' }}>Ancho fijo (ej: '400px').</td>
+              </tr>
+              <tr style={{ borderBottom: '1px solid #EDF2F7' }}>
+                <td style={{ padding: '8px' }}>
+                  <code>m</code>
+                </td>
+                <td style={{ padding: '8px' }}>
+                  <code>string</code>
+                </td>
+                <td style={{ padding: '8px' }}>Margen CSS adicional.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </ListComponent>
     </>
   )

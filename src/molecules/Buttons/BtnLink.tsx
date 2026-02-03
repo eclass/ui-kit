@@ -8,6 +8,7 @@ export interface props {
   fontSize?: string | '0.875rem'
   href?: string
   id?: string
+  isDisable?: boolean
   m?: string
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
   role?: 'button' | 'link'
@@ -24,6 +25,7 @@ export function BtnLink({
   fontSize = '0.875rem',
   href = '',
   id,
+  isDisable = false,
   m = '0',
   onClick,
   role = 'link',
@@ -34,7 +36,7 @@ export function BtnLink({
 }: props): JSX.Element {
   const typeButton = {
     button: {
-      onClick,
+      onClick: isDisable ? undefined : onClick,
       target: target,
     },
     a: {
@@ -45,22 +47,24 @@ export function BtnLink({
 
   return (
     <Box
+      aria-label={ariaLabel}
       as={as}
       autoFocus={false}
-      aria-label={ariaLabel}
-      id={id}
-      role={role}
       backgroundColor="transparent"
       borderStyle="none"
       className="linkButton"
       color={vars('colors-main-deepSkyBlue')}
+      cursor={isDisable ? 'not-allowed' : 'pointer'}
       fontFamily="Roboto"
+      fontSize={fontSize}
       fontStyle="normal"
       fontWeight="500"
-      fontSize={fontSize}
+      id={id}
       lineHeight="1rem"
-      onClick={onClick}
+      onClick={isDisable ? undefined : onClick}
+      opacity={isDisable ? 0.5 : 1}
       padding=".25em"
+      role={role}
       tabIndex={tabIndex}
       textDecorationLine={textDecorationLine ? 'underline' : 'none'}
       width="fit-content"

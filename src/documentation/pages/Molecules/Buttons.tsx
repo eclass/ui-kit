@@ -117,10 +117,12 @@ export const Buttons = (): JSX.Element => {
       <MyText>
         El <code>BtnLink</code> tiene la opción de ser un elemento (<code>button</code>) o un
         elemento (<code>a</code>), si la elección es esto último es necesario pasarle la url que
-        desea abrir con (<code>href</code>), por defecto en una pestaña nueva.
+        desea abrir con (<code>href</code>), por defecto en una pestaña nueva. También cuenta con
+        una propiedad <code>isDisable</code> para deshabilitar la interacción.
       </MyText>
       <ListComponent>
         <BtnLink>Button</BtnLink>
+        <BtnLink isDisable>Disabled</BtnLink>
         <BtnLink as="a" href="https://ui-kit.eclass.com/">
           Enlace ui-kit
         </BtnLink>
