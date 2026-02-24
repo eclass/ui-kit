@@ -71,6 +71,7 @@ export function Alert({
       p="1rem"
       pr={canDismiss ? '1.75rem' : '1rem'}
       position="relative"
+      boxShadow={isFlash ? '0px 2px 8px 0px #5C5C5C33' : ''}
       sx={sx}
     >
       <Box
