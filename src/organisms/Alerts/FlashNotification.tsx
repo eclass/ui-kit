@@ -36,7 +36,7 @@ export function FlashNotification({
   m,
 }: IFlashNotificationProps): JSX.Element {
   const [shouldRenderToaster, setShouldRenderToaster] = useState(false)
-  const [isMobile] = useMediaQuery('(max-width: 425px)')
+  const [isMobile] = useMediaQuery('(max-width: 440px)')
 
   useEffect(() => {
     // Si no hay un Toaster registrado globalmente en la ventana, esta instancia lo toma.
@@ -62,6 +62,7 @@ export function FlashNotification({
               // La librería agrega un margin por defecto, que no pude quitar.
               margin: '-4px -10px',
               borderRadius: 0,
+              w: '100vw!important',
             }),
           }}
         >
