@@ -1,3 +1,10 @@
+## [1.57.3](https://github.com/eclass/ui-kit/compare/v1.57.2...v1.57.3) (2026-02-24)
+
+
+### Bug Fixes
+
+* **organisms:** flashnotification breakpoint mobile ([bac4b95](https://github.com/eclass/ui-kit/commit/bac4b950acc516c256b0c4e577ee59679ef32d43))
+
 ## [1.57.2](https://github.com/eclass/ui-kit/compare/v1.57.1...v1.57.2) (2026-02-24)
 
 
