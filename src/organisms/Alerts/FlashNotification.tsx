@@ -5,6 +5,7 @@ import { IFlashNotificationProps } from './types.d'
 import { alertStates } from './utils/alertStates'
 import { handleTime } from './utils/handleTime'
 import { Alert } from './Alert'
+import { useMediaQuery } from '@chakra-ui/react'
 
 /**
  * Componente de notificación flash que se muestra centrada en la parte superior de la pantalla.
@@ -33,9 +34,9 @@ export function FlashNotification({
   state,
   show,
   m,
-  width,
 }: IFlashNotificationProps): JSX.Element {
   const [shouldRenderToaster, setShouldRenderToaster] = useState(false)
+  const [isMobile] = useMediaQuery('(max-width: 425px)')
 
   useEffect(() => {
     // Si no hay un Toaster registrado globalmente en la ventana, esta instancia lo toma.
@@ -53,9 +54,16 @@ export function FlashNotification({
           state={state}
           canDismiss
           onClick={() => toast.dismiss(t.id)}
-          width={width}
-          maxContent={!width}
           m={m}
+          sx={{
+            w: 'initial',
+            maxWidth: 'initial',
+            ...(isMobile && {
+              // La librería agrega un margin por defecto, que no pude quitar.
+              margin: '-4px -10px',
+              borderRadius: 0,
+            }),
+          }}
         >
           {message}
         </Alert>
@@ -65,7 +73,7 @@ export function FlashNotification({
         id: alertStates[state].id,
       }
     )
-  }, [message, state, width, m])
+  }, [message, state, m])
 
   useEffect(() => {
     if (show) {
@@ -83,8 +91,19 @@ export function FlashNotification({
             style: {
               background: 'transparent',
               boxShadow: 'none',
-              maxWidth: width ?? 'max-content',
+              maxWidth: '100vw',
+              padding: 0,
+              margin: 0,
             },
+          }}
+          containerStyle={{
+            left: 0,
+            right: 0,
+            ...(isMobile && {
+              top: 0,
+            }),
+            padding: 0,
+            margin: 0,
           }}
         />
       )}

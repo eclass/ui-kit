@@ -76,5 +76,4 @@ export interface IFlashNotificationProps {
    */
   state: TState
   show?: boolean
-  width?: string
 }

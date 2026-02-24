@@ -31,40 +31,6 @@ export const ViewFlashNotification = (): JSX.Element => {
         </li>
       </MyText>
 
-      <MyTitle>Ancho y Centrado</MyTitle>
-      <MyText>
-        Por defecto, la notificación toma un ancho de <b>max-content</b> (se ajusta al texto) y se
-        mantiene perfectamente centrada en la parte superior de la pantalla. Si deseas un control
-        más específico, puedes pasar un ancho fijo mediante la propiedad <b>width</b>.
-      </MyText>
-      <ListComponent>
-        <FlashNotificationDemo
-          state="error"
-          message="<strong>El grupo ya está completo</strong><br/>Lo sentimos, no es posible unirte porque el grupo acaba de alcanzar su límite de integrantes."
-        />
-        <FlashNotificationDemo
-          state="info"
-          message="Notificación con ancho fijo de 600px"
-          width="600px"
-        />
-      </ListComponent>
-      <Code
-        text={`// Notificación con ancho automático (max-content)
-<FlashNotification
-  state="error"
-  show={show}
-  message="Mensaje con ancho automático..."
-/>
-
-// Notificación con ancho fijo
-<FlashNotification
-  state="info"
-  show={show}
-  width="600px"
-  message="Mensaje con ancho fijo de 600px"
-/>`}
-      />
-
       <MyTitle>Soporte HTML</MyTitle>
       <MyText>
         La propiedad <b>message</b> admite etiquetas HTML básicas para dar formato al contenido,
