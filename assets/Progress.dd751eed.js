@@ -1,0 +1,3 @@
+import{j as a,F as n,a as e,M as t,b as d,P as r,C as o}from"./index.41f09d57.js";import{L as s}from"./ListComponent.a309178f.js";const u=()=>a(n,{children:[e(t,{children:"Progress"}),e(d,{children:"Progress permite visualizar el avance o el progreso de una tarea o proceso. Este componente toma como entrada un n\xFAmero, denominado value, el cual est\xE1 cuidadosamente restringido dentro de un rango predefinido de 0 a 100."}),e(s,{children:e(r,{value:25})}),e(o,{text:"<Progress value={25} />"}),a(s,{children:[e(r,{value:-10}),e(r,{value:200})]}),e(o,{text:`<Progress value={-10} />
+<Progress value={200} />`})]});export{u as ViewProgress,u as default};
+//# sourceMappingURL=Progress.dd751eed.js.map
