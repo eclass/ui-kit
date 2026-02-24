@@ -1,3 +1,10 @@
+## [1.57.2](https://github.com/eclass/ui-kit/compare/v1.57.1...v1.57.2) (2026-02-24)
+
+
+### Bug Fixes
+
+* **organisms:** ajustes visuales flashNotification ([#756](https://github.com/eclass/ui-kit/issues/756)) ([bf4d5d7](https://github.com/eclass/ui-kit/commit/bf4d5d7646ae4de4be3c9835926a87f3f285aa20))
+
 ## [1.57.1](https://github.com/eclass/ui-kit/compare/v1.57.0...v1.57.1) (2026-02-03)
 
 
