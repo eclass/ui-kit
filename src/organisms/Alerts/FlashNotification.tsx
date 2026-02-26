@@ -70,7 +70,7 @@ export function FlashNotification({
         </Alert>
       ),
       {
-        duration: state === 'success' ? handleTime(message) : Infinity,
+        duration: ['success', 'info'].includes(state) ? handleTime(message) : Infinity,
         id: alertStates[state].id,
       }
     )

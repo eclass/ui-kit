@@ -21,8 +21,8 @@ export const ViewFlashNotification = (): JSX.Element => {
         calcula el tiempo necesario para leer el contenido basado en una velocidad promedio de{' '}
         <b>150 palabras por minuto</b>:
         <li>
-          <b>Estado Success:</b> Se cierra automáticamente tras el tiempo calculado (con un mínimo
-          de 3 segundos garantizados).
+          <b>Estado Success e Info:</b> Se cierra automáticamente tras el tiempo calculado (con un
+          mínimo de 3 segundos garantizados).
         </li>
         <li>
           <b>Otros Estados (Error, Warning, Info):</b> Permanecen visibles de forma persistente.
