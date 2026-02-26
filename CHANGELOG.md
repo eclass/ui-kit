@@ -1,3 +1,10 @@
+## [1.57.4](https://github.com/eclass/ui-kit/compare/v1.57.3...v1.57.4) (2026-02-26)
+
+
+### Bug Fixes
+
+* **organisms:** flashNotification el info se cierra solo ([832466c](https://github.com/eclass/ui-kit/commit/832466c5505a41e343b866d52df30f168c1e3a2f))
+
 ## [1.57.3](https://github.com/eclass/ui-kit/compare/v1.57.2...v1.57.3) (2026-02-24)
 
 
