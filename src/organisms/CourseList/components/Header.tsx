@@ -7,6 +7,10 @@ import { vars } from '@theme'
 import { Profile } from '@icons'
 
 const STUDENT = 4
+const LABEL_STYLES: Record<string, { bg?: string }> = {
+  ADMIN: { bg: vars('colors-main-linkWater') },
+  NEW: { bg: vars('colors-secondary-pumpkin') },
+}
 
 export function Header(): JSX.Element {
   const {
@@ -49,14 +53,15 @@ export function Header(): JSX.Element {
         )}
         {labels !== undefined && labels.length > 0 && (
           <Stack direction="row" spacing=".625rem" wrap="wrap" zIndex={2}>
-            {labels.map((item, index) => (
-              <Label
-                key={index}
-                bg={item.id === 'NEW' ? vars('colors-secondary-pumpkin') : undefined}
-              >
-                {item.text}
-              </Label>
-            ))}
+            {labels.map((item, index) => {
+              const labelStyle = LABEL_STYLES[item.id]
+
+              return (
+                <Label key={index} bg={labelStyle?.bg}>
+                  {item.text}
+                </Label>
+              )
+            })}
           </Stack>
         )}
         {soonCourse?.show && soonCourse?.text && (
