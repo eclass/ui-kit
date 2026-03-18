@@ -1,3 +1,10 @@
+## [1.57.5](https://github.com/eclass/ui-kit/compare/v1.57.4...v1.57.5) (2026-03-18)
+
+
+### Bug Fixes
+
+* **organisms:** agregar estilo para label ADMIN en CourseList ([#757](https://github.com/eclass/ui-kit/issues/757)) ([ad6f3a4](https://github.com/eclass/ui-kit/commit/ad6f3a455be05b5858c26345e9bdc5a57b0115f4))
+
 ## [1.57.4](https://github.com/eclass/ui-kit/compare/v1.57.3...v1.57.4) (2026-02-26)
 
 
