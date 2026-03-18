@@ -286,6 +286,10 @@ export const dataStates: any = {
         id: 'NEW',
         text: 'Nuevo',
       },
+      {
+        id: 'ADMIN',
+        text: 'Curso madre',
+      },
     ],
   },
   noDisponible: {
