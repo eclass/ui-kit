@@ -1,3 +1,10 @@
+## [1.57.6](https://github.com/eclass/ui-kit/compare/v1.57.5...v1.57.6) (2026-03-18)
+
+
+### Bug Fixes
+
+* **organisms:** quito margin en label del listado de curso ([d9fc793](https://github.com/eclass/ui-kit/commit/d9fc7930558c1c7ac346ad6858786a50bfcf6892))
+
 ## [1.57.5](https://github.com/eclass/ui-kit/compare/v1.57.4...v1.57.5) (2026-03-18)
 
 
