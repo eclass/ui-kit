@@ -44,7 +44,7 @@ export function Header(): JSX.Element {
     >
       <Box p="1rem" display="flex" gap="0.625rem" position="absolute" zIndex={2}>
         {profile?.id !== STUDENT && (
-          <Label bg={vars('colors-neutral-white')} m="0 0 .625rem 0">
+          <Label bg={vars('colors-neutral-white')}>
             <Flex>
               <Profile m="0 .25rem 0 0" />
               {profile?.name}
