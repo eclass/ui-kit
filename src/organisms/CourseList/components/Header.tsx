@@ -45,7 +45,7 @@ export function Header(): JSX.Element {
       <Box p="1rem" display="flex" gap="0.625rem" position="absolute" zIndex={2}>
         {profile?.id !== STUDENT && (
           <Label bg={vars('colors-neutral-white')}>
-            <Flex>
+            <Flex alignItems="center">
               <Profile m="0 .25rem 0 0" />
               {profile?.name}
             </Flex>
@@ -57,7 +57,11 @@ export function Header(): JSX.Element {
               const labelStyle = LABEL_STYLES[item.id]
 
               return (
-                <Label key={index} bg={labelStyle?.bg}>
+                <Label
+                  key={index}
+                  bg={labelStyle?.bg}
+                  sx={{ display: 'flex', alignItems: 'center' }}
+                >
                   {item.text}
                 </Label>
               )

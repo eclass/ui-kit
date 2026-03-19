@@ -47,38 +47,45 @@ export function BtnLink({
 
   return (
     <Box
+      {...stylesBtnLink}
       aria-label={ariaLabel}
       as={as}
       autoFocus={false}
-      backgroundColor="transparent"
-      borderStyle="none"
       className="linkButton"
-      color={vars('colors-main-deepSkyBlue')}
       cursor={isDisable ? 'not-allowed' : 'pointer'}
-      fontFamily="Roboto"
       fontSize={fontSize}
-      fontStyle="normal"
-      fontWeight="500"
       id={id}
-      lineHeight="1rem"
       onClick={isDisable ? undefined : onClick}
       opacity={isDisable ? 0.5 : 1}
-      padding=".25em"
       role={role}
       tabIndex={tabIndex}
       textDecorationLine={textDecorationLine ? 'underline' : 'none'}
-      width="fit-content"
       m={m}
-      _hover={{
-        color: vars('colors-neutral-darkCharcoal'),
-        cursor: 'pointer',
-      }}
       {...typeButton[as]}
       sx={sx}
     >
       {children}
     </Box>
   )
+}
+
+export const stylesBtnLink = {
+  backgroundColor: 'transparent',
+  borderStyle: 'none',
+  color: vars('colors-main-deepSkyBlue'),
+  cursor: 'pointer',
+  fontFamily: 'Roboto',
+  fontSize: '1rem',
+  fontStyle: 'normal',
+  fontWeight: '500',
+  lineHeight: '1rem',
+  padding: '.25em',
+  textDecorationLine: 'underline',
+  width: 'fit-content',
+  _hover: {
+    color: vars('colors-neutral-darkCharcoal'),
+    cursor: 'pointer',
+  },
 }
 
 BtnLink.displayName = 'BtnLink'

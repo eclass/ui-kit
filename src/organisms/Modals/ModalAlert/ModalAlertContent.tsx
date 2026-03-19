@@ -6,6 +6,7 @@ import { IModalAlertContent } from '../types'
 
 import { Loading } from './Loading'
 import { alertColorStates } from '@/organisms/Alerts/utils/alertStates'
+import { stylesBtnLink } from '@/molecules/Buttons/BtnLink'
 
 export const ModalAlertContent = ({
   type,
@@ -49,7 +50,17 @@ export const ModalAlertContent = ({
           </Box>
         )}
         {description && (
-          <Box as="p" fontSize="16px" lineHeight="24px" mb={0}>
+          <Box
+            as="p"
+            fontSize="16px"
+            lineHeight="24px"
+            mb={0}
+            sx={{
+              a: {
+                ...stylesBtnLink,
+              },
+            }}
+          >
             {descriptionParsed}
           </Box>
         )}
