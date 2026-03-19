@@ -1,3 +1,10 @@
+## [1.57.8](https://github.com/eclass/ui-kit/compare/v1.57.7...v1.57.8) (2026-03-19)
+
+
+### Bug Fixes
+
+* **organisms:** ajustes visuales en links de modal y labels de courseList ([08f14cb](https://github.com/eclass/ui-kit/commit/08f14cb896a129cdea3c1d92315936e75f0d21a2))
+
 ## [1.57.7](https://github.com/eclass/ui-kit/compare/v1.57.6...v1.57.7) (2026-03-19)
 
 
