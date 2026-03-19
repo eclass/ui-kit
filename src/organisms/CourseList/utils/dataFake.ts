@@ -397,7 +397,12 @@ export const dataStates: any = {
       ...dataBase.action,
       enabled: false,
     },
-    labels: [],
+    labels: [
+      {
+        id: 'ADMIN',
+        text: 'Curso madre',
+      },
+    ],
   },
   activado: {
     ...dataBase,
