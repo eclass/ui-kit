@@ -45,9 +45,11 @@ export function Section(): JSX.Element | null {
       >
         {name}
       </Heading>
-      <Flex mt="1rem" justify="space-between" alignItems="flex-start">
-        <CourseStatus progress={progress} status={status} />
-      </Flex>
+      {progress?.label !== undefined && (
+        <Flex mt="1rem" justify="space-between" alignItems="flex-start">
+          <CourseStatus progress={progress} status={status} />
+        </Flex>
+      )}
       {information != null && information?.length > 0 && (
         <List
           spacing=".625rem"
