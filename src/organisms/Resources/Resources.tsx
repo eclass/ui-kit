@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Box, Text, Link } from '@chakra-ui/react'
+import { Box, Text, Link, TextProps, LinkProps } from '@chakra-ui/react'
 import { Icons } from './Icons'
 import { vars } from '@/theme'
 import { Download, DiagonalArrow } from '@/atoms/Icons'
@@ -15,6 +15,9 @@ interface ResourcesProps {
   resourceLink: string
   targetBlank?: boolean
 }
+
+const StyledText = Text as React.FC<TextProps>
+const StyledLink = Link as React.FC<LinkProps>
 
 export const Resources: FC<ResourcesProps> = ({
   id,
@@ -54,7 +57,7 @@ export const Resources: FC<ResourcesProps> = ({
     return colorMap[resourceType as keyof typeof colorMap] || '#FFBC27'
   }
   return (
-    <Link
+    <StyledLink
       href={resourceLink}
       target={targetBlank ? '_blank' : '_self'}
       rel={targetBlank ? 'noopener noreferrer' : undefined}
@@ -77,7 +80,6 @@ export const Resources: FC<ResourcesProps> = ({
           textAlign="center"
           alignItems="center"
           display="grid"
-          padding="1rem"
         >
           <Icons type={resourceType} />
           <Box
@@ -102,7 +104,7 @@ export const Resources: FC<ResourcesProps> = ({
           padding="1rem"
         >
           <Box>
-            <Text
+            <StyledText
               fontFamily="Roboto"
               fontWeight="700"
               lineHeight="21px"
@@ -111,10 +113,10 @@ export const Resources: FC<ResourcesProps> = ({
               m="0px"
             >
               {resourceTitle}
-            </Text>
+            </StyledText>
           </Box>
           <Box>
-            <Text
+            <StyledText
               fontFamily="Roboto"
               fontWeight="400"
               lineHeight="14px"
@@ -123,10 +125,10 @@ export const Resources: FC<ResourcesProps> = ({
               m="0px"
             >
               {resourceDetail}
-            </Text>
+            </StyledText>
           </Box>
           <Box display="flex" alignItems="center" justifyContent="center">
-            <Text
+            <StyledText
               fontFamily="Roboto"
               fontWeight="500"
               fontSize="14px"
@@ -143,10 +145,10 @@ export const Resources: FC<ResourcesProps> = ({
                 <Download color={vars('colors-main-deepSkyBlue')} />
               )}
               {resourceTextDownload}
-            </Text>
+            </StyledText>
           </Box>
         </Box>
       </Ripples>
-    </Link>
+    </StyledLink>
   )
 }
