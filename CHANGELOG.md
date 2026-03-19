@@ -1,3 +1,10 @@
+## [1.57.7](https://github.com/eclass/ui-kit/compare/v1.57.6...v1.57.7) (2026-03-19)
+
+
+### Bug Fixes
+
+* **organisms:** courseList si no le paso progress no muestra nada ([04a5aa3](https://github.com/eclass/ui-kit/commit/04a5aa37d5c937b07a5fe632b28a718646ae0716))
+
 ## [1.57.6](https://github.com/eclass/ui-kit/compare/v1.57.5...v1.57.6) (2026-03-18)
 
 
