@@ -1,3 +1,10 @@
+## [1.57.9](https://github.com/eclass/ui-kit/compare/v1.57.8...v1.57.9) (2026-03-19)
+
+
+### Bug Fixes
+
+* **PDYE-1762:** cambio de icono en recurso de link ([#760](https://github.com/eclass/ui-kit/issues/760)) ([604d832](https://github.com/eclass/ui-kit/commit/604d832c41abbfb2024810598d14e7956766c94d))
+
 ## [1.57.8](https://github.com/eclass/ui-kit/compare/v1.57.7...v1.57.8) (2026-03-19)
 
 
