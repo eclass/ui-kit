@@ -270,7 +270,7 @@ export const ModalAlertDemo = ({
       button: 'ModalAlertNew',
       title: '¿Seguro que deseas borrar esta pregunta?',
       description:
-        'Por favor escoge otro horario.  dirección: <a href="http://cursos.eclass.cl">http://cursos.eclass.cl</a>',
+        'Por favor escoge otro horario.  dirección: <a href="http://cursos.eclass.cl" target="_blank" rel="noopener noreferrer">http://cursos.eclass.cl</a>',
     },
     loading: {
       button: 'ModalAlertNew Loading',
