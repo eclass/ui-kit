@@ -117,6 +117,11 @@ export function View(){
         también puede variar; por ejemplo, se pueden <strong>omitir los textos</strong> pasados como
         props, y en el ModalAlert normal el icono varía según los estados definidos.
       </MyText>
+      <MyText>
+        Si la prop <strong>description</strong> se envía como string, admite HTML sanitizado. En el
+        caso de los enlaces con <code>target="_blank"</code>, el componente preserva el target y
+        agrega <code>rel="noopener noreferrer"</code> para abrir links externos de forma segura.
+      </MyText>
       <ListComponent>
         <ModalAlertDemo status="success" />
         <ModalAlertDemo status="error" />
