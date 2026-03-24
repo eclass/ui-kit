@@ -43,7 +43,9 @@ export const ModalAlertContent = ({
   const [isDesktop] = useMediaQuery('(min-width: 641px)')
 
   const descriptionParsed =
-    typeof description === 'string' ? ReactParser(sanitizeModalDescription(description)) : description
+    typeof description === 'string'
+      ? ReactParser(sanitizeModalDescription(description))
+      : description
 
   return (
     <>

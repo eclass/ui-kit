@@ -74,7 +74,7 @@ export function FlashNotification({
         id: alertStates[state].id,
       }
     )
-  }, [message, state, m])
+  }, [message, state, m, isMobile])
 
   useEffect(() => {
     if (show) {
