@@ -79,7 +79,9 @@ describe('ModalAlertNew Component', () => {
         isOpen
         onClose={() => {}}
         title="Test Title"
-        description={'Visita <a href="https://example.com" target="_blank" rel="nofollow">este enlace</a>'}
+        description={
+          'Visita <a href="https://example.com" target="_blank" rel="nofollow">este enlace</a>'
+        }
         type="info"
         status="info"
       >
@@ -101,7 +103,7 @@ describe('ModalAlertNew Component', () => {
         isOpen
         onClose={() => {}}
         title="Test Title"
-        description={<span>Custom Description Node</span> as unknown as string}
+        description={(<span>Custom Description Node</span>) as unknown as string}
         type="info"
         status="info"
       />
