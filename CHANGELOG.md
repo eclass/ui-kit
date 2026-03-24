@@ -1,3 +1,11 @@
+## [1.57.10](https://github.com/eclass/ui-kit/compare/v1.57.9...v1.57.10) (2026-03-24)
+
+
+### Bug Fixes
+
+* **organisms:** asegurar links externos en ModalAlert ([#761](https://github.com/eclass/ui-kit/issues/761)) ([2f0d9bd](https://github.com/eclass/ui-kit/commit/2f0d9bddc94ae61fe4d857d7f0c86a412c8b53c1))
+* **organisms:** corregir formato de modal alert y dependencia en flashNotification ([#762](https://github.com/eclass/ui-kit/issues/762)) ([8114b08](https://github.com/eclass/ui-kit/commit/8114b081142523a71ff9ef86873959ceba9f92a3))
+
 ## [1.57.9](https://github.com/eclass/ui-kit/compare/v1.57.8...v1.57.9) (2026-03-19)
 
 
