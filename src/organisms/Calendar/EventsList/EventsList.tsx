@@ -10,6 +10,7 @@ export interface IEventList {
   date: string
   name: string
   hasNotification?: boolean
+  onClick?: () => void
   showCourse?: boolean
   showUnit?: boolean
   time: string
@@ -25,6 +26,7 @@ export const EventsList = ({
   date,
   name,
   hasNotification,
+  onClick,
   showCourse,
   showUnit,
   time,
@@ -57,7 +59,14 @@ export const EventsList = ({
   }
 
   return (
-    <Box className="eventsList" borderTop={border} p="16px" display="flex" gap="12px">
+    <Box
+      className="eventsList"
+      borderTop={border}
+      p="16px"
+      display="flex"
+      gap="12px"
+      onClick={onClick}
+    >
       <Box
         bg={color}
         minW="88px"

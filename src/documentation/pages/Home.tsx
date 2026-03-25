@@ -50,6 +50,7 @@ export const Home = (): JSX.Element => {
             loading: 'hola',
             buttonCalendar: 'hola',
           }}
+          onClickEvent={(event) => console.log('Evento clickeado:', event)}
         />
       </Box>
 

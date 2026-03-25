@@ -48,6 +48,7 @@ export interface Text {
 }
 
 interface ICalendarDropdown {
+  onClickEvent?: (event?: Event) => void
   courseColors?: Record<string, string>
   events: any
   loading?: boolean
