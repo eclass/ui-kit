@@ -1,3 +1,10 @@
+# [1.58.0](https://github.com/eclass/ui-kit/compare/v1.57.10...v1.58.0) (2026-03-25)
+
+
+### Features
+
+* **calendar-dropdown:** agregar callback opcional al hacer click en eventos ([#763](https://github.com/eclass/ui-kit/issues/763)) ([5edcc20](https://github.com/eclass/ui-kit/commit/5edcc20ec4b5841200eaaa145060f52f5b843154))
+
 ## [1.57.10](https://github.com/eclass/ui-kit/compare/v1.57.9...v1.57.10) (2026-03-24)
 
 
