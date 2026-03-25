@@ -31,6 +31,7 @@ export const CalendarDropdownPage = (): JSX.Element => {
         <CalendarDropdown
           events={events}
           now="2025-01-01T02:59:00.000Z"
+          onClickEvent={(event) => console.log('Evento clickeado:', event)}
           redirectToCalendar={() => {}}
         />
       </Box>
@@ -51,11 +52,70 @@ interface ICalendarDropdown {
   events: any // Lista de eventos
   loading?: boolean // Indica si los eventos están cargando
   now: string // Fecha y hora actual
+  onClickEvent?: (event?: Event) => void // Callback al presionar un evento del dropdown
   redirectToCalendar: () => void // Función que redirige al calendario
   text?: Text // Lista de textos usados en el componente
   onlyToCalendar?: boolean // Si es true, no despliega el menú, solo redirige al calendario, usado en campus virtual
 }
                 `}
+      />
+
+      <MyTitle>onClickEvent</MyTitle>
+      <MyText>
+        El prop <strong>onClickEvent</strong> es opcional. Si se envía, se ejecuta al presionar
+        cualquiera de los eventos del dropdown y entrega hacia arriba la información completa del
+        evento seleccionado.
+      </MyText>
+      <Code
+        text={`
+<CalendarDropdown
+  events={events}
+  now="2025-01-01T02:59:00.000Z"
+  redirectToCalendar={() => {}}
+  onClickEvent={(event) => {
+    console.log('Evento seleccionado:', event)
+  }}
+/>
+        `}
+      />
+      <MyText>La función también puede enviarse sin usar el parámetro:</MyText>
+      <Code
+        text={`
+<CalendarDropdown
+  events={events}
+  now="2025-01-01T02:59:00.000Z"
+  redirectToCalendar={() => {}}
+  onClickEvent={() => {
+    console.log('Se hizo click en un evento')
+  }}
+/>
+        `}
+      />
+      <MyText>El objeto recibido en el callback tiene una estructura como esta:</MyText>
+      <Code
+        text={`
+{
+  id: 4205,
+  course_id: 40711,
+  start: '2025-05-28T04:01:00.000Z',
+  end: '2025-05-28T05:01:00.000Z',
+  type: 'work-release',
+  translatedTitle: 'Inicio del plazo para realizar "Caso 2: Evaluado (con grupo de notas y sin rúbrica)"',
+  associated_resource: {
+    id: 1,
+    name: 'Inicio del plazo para realizar "Caso 2: Evaluado (con grupo de notas y sin rúbrica)"',
+  },
+  course: {
+    id: 40711,
+    name: '[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesoss',
+  },
+  formatedDate: {
+    day: 'miércoles',
+    date: '28 may',
+    time: '0:01 hrs.',
+  },
+}
+        `}
       />
 
       <MyTitle>Textos</MyTitle>

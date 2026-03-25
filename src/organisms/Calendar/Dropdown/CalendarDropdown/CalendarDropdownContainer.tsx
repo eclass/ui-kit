@@ -10,6 +10,7 @@ import { Events } from './Components/Events'
 import { ICalendarDropdown } from '../types'
 
 export const CalendarDropdownContainer = ({
+  onClickEvent,
   courseColors,
   events,
   loading,
@@ -157,6 +158,7 @@ export const CalendarDropdownContainer = ({
                     events={all}
                     hasMoreNext={hasMoreNext}
                     isMobile={isMobile}
+                    onClickEvent={onClickEvent}
                     redirecToCalendar={redirectToCalendar}
                     text={text}
                   />

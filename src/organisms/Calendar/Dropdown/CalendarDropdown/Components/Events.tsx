@@ -14,6 +14,7 @@ interface IEventsProps {
   }
   hasMoreNext?: boolean
   isMobile: boolean
+  onClickEvent?: (event?: Event) => void
   redirecToCalendar: () => void
   text?: Text
 }
@@ -23,6 +24,7 @@ export const Events = ({
   events,
   hasMoreNext,
   isMobile,
+  onClickEvent,
   redirecToCalendar,
   text,
 }: IEventsProps): JSX.Element => {
@@ -61,12 +63,14 @@ export const Events = ({
       <EventsGroup
         colors={colors}
         events={today}
+        onClickEvent={onClickEvent}
         text={text?.course ?? ''}
         title={text?.events?.today ?? 'Hoy'}
       />
       <EventsGroup
         colors={colors}
         events={tomorrow}
+        onClickEvent={onClickEvent}
         text={text?.course ?? ''}
         title={text?.events?.tomorrow ?? 'Mañana'}
       />
@@ -74,6 +78,7 @@ export const Events = ({
         colors={colors}
         events={next}
         hasMoreNext={hasMoreNext}
+        onClickEvent={onClickEvent}
         redirect={redirecToCalendar}
         textSeeMore={text?.seeMore.see ?? 'Ver más fechas en'}
         textLinkMore={text?.seeMore.link ?? 'Mi calendario'}

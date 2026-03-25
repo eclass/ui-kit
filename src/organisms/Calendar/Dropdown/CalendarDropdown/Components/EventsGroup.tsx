@@ -8,6 +8,7 @@ interface IEventsGroupProps {
   colors?: Record<string, string>
   events: Event[]
   hasMoreNext?: boolean
+  onClickEvent?: (event?: Event) => void
   redirect?: () => void
   text: string
   textSeeMore?: string
@@ -19,6 +20,7 @@ export const EventsGroup = ({
   colors,
   events,
   hasMoreNext,
+  onClickEvent,
   title,
   redirect,
   text,
@@ -48,12 +50,12 @@ export const EventsGroup = ({
               <Box
                 bg={vars('colors-neutral-white') ?? '#FFFFFF'}
                 border="none"
-                cursor="default"
+                cursor={onClickEvent ? 'pointer' : 'default'}
                 padding="0"
                 key={event.id}
                 _hover={{
                   boxShadow: 'none !important',
-                  cursor: 'default !important',
+                  cursor: onClickEvent ? 'pointer !important' : 'default !important',
                   bg: 'none !important',
                 }}
                 _focus={{
@@ -76,6 +78,7 @@ export const EventsGroup = ({
                   text={text}
                   type={event.type}
                   hasNotification={event.isNew}
+                  onClick={onClickEvent ? () => onClickEvent(event) : undefined}
                   showCourse
                 />
               </Box>
