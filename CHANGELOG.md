@@ -1,3 +1,10 @@
+## [1.58.1](https://github.com/eclass/ui-kit/compare/v1.58.0...v1.58.1) (2026-03-25)
+
+
+### Bug Fixes
+
+* **calendar-dropdown:** mostrar cursor pointer en eventos clickeables ([171274b](https://github.com/eclass/ui-kit/commit/171274b5bec7d78f27d7d4bb8f11ac8ac58ff79b))
+
 # [1.58.0](https://github.com/eclass/ui-kit/compare/v1.57.10...v1.58.0) (2026-03-25)
 
 
