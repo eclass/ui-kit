@@ -62,6 +62,7 @@ export const EventsList = ({
     <Box
       className="eventsList"
       borderTop={border}
+      cursor={onClick ? 'pointer' : 'default'}
       p="16px"
       display="flex"
       gap="12px"
