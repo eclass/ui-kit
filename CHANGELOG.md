@@ -1,3 +1,10 @@
+## [1.58.3](https://github.com/eclass/ui-kit/compare/v1.58.2...v1.58.3) (2026-03-26)
+
+
+### Bug Fixes
+
+* **calendar-dropdown:** proteger acceso a localStorage en parseEvents ([#765](https://github.com/eclass/ui-kit/issues/765)) ([08c5fa2](https://github.com/eclass/ui-kit/commit/08c5fa228b994837ea428900cea95baaec1ffc11))
+
 ## [1.58.2](https://github.com/eclass/ui-kit/compare/v1.58.1...v1.58.2) (2026-03-26)
 
 
