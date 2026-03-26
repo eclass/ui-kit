@@ -1,10 +1,10 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import { render, screen } from '@testing-library/react'
+import { render, RenderResult, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { EventsList } from './EventsList'
 
-const renderComponent = (onClick?: () => void) =>
+const renderComponent = (onClick?: () => void): RenderResult =>
   render(
     <ChakraProvider>
       <EventsList
@@ -29,11 +29,7 @@ describe('EventsList', () => {
 
     renderComponent(onClick)
 
-    const eventItem = screen.getByText('Evento demo').closest('.eventsList')
-
-    expect(eventItem).not.toBeNull()
-
-    await user.click(eventItem!)
+    await user.click(screen.getByText('Evento demo'))
 
     expect(onClick).toHaveBeenCalledTimes(1)
   })
