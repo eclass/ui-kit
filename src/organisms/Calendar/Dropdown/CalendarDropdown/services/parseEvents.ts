@@ -5,6 +5,47 @@ const STORAGE_TODAY_EVENT = 'todayEvents'
 const STORAGE_SEEN_EVENT = 'seenEvents'
 const STORAGE_HAS_NEW = 'hasNewEvents'
 
+// El dropdown guarda estado en localStorage para recordar:
+// - todayEvents: ids de eventos que aparecieron hoy
+// - seenEvents: ids de eventos de hoy que el usuario ya vio
+// - hasNewEvents: bandera para mostrar el indicador visual de "nuevo"
+const getStorage = (): Storage | null => {
+  if (typeof window === 'undefined') return null
+
+  try {
+    return window.localStorage
+  } catch {
+    return null
+  }
+}
+
+const readStorageArray = (key: string): number[] => {
+  const storage = getStorage()
+  if (!storage) return []
+
+  try {
+    const value = storage.getItem(key)
+    if (!value) return []
+
+    const parsed = JSON.parse(value)
+
+    return Array.isArray(parsed) ? parsed : []
+  } catch {
+    return []
+  }
+}
+
+const writeStorageValue = (key: string, value: unknown): void => {
+  const storage = getStorage()
+  if (!storage) return
+
+  try {
+    storage.setItem(key, JSON.stringify(value))
+  } catch {
+    // Ignore storage write failures so the dropdown remains usable.
+  }
+}
+
 export const useParseEvents = (
   events: any[],
   now: string
@@ -28,12 +69,15 @@ export const useParseEvents = (
     const today = startOfDay(parseNow)
     const tomorrow = addDays(today, 1)
 
-    const storedTodayEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_TODAY_EVENT) ?? '[]')
-    const storedSeenEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_SEEN_EVENT) ?? '[]')
+    const storedTodayEvent = readStorageArray(STORAGE_TODAY_EVENT)
+    const storedSeenEvent = readStorageArray(STORAGE_SEEN_EVENT)
 
     let newEvents = false
+    // todayList: eventos que ocurren hoy y pueden marcarse como nuevos/no vistos.
     const todayList: any[] = []
+    // tomorrowList: eventos del dia siguiente, solo para agruparlos en la UI.
     const tomorrowList: any[] = []
+    // nextList: eventos posteriores a manana; luego se limita a 5 para el dropdown.
     const nextList: any[] = []
 
     events.forEach((event) => {
@@ -61,24 +105,26 @@ export const useParseEvents = (
     if (nextList.length > 5) {
       setHasMoreNext(true)
       next = next.slice(0, 5)
+    } else {
+      setHasMoreNext(false)
     }
     setNextEvents(next)
 
     setHasNew(newEvents)
 
-    localStorage.setItem(STORAGE_TODAY_EVENT, JSON.stringify(storedTodayEvent))
-    localStorage.setItem(STORAGE_HAS_NEW, JSON.stringify(newEvents))
+    writeStorageValue(STORAGE_TODAY_EVENT, storedTodayEvent)
+    writeStorageValue(STORAGE_HAS_NEW, newEvents)
   }, [events, now])
 
   // Función para marcar todos los eventos de hoy como vistos
   const closeAndMarkSeen = (): void => {
-    const storedSeenEvent: number[] = JSON.parse(localStorage.getItem(STORAGE_SEEN_EVENT) ?? '[]')
+    const storedSeenEvent = readStorageArray(STORAGE_SEEN_EVENT)
     const updatedSeenEvents = Array.from(
       new Set([...storedSeenEvent, ...todayEvents.map((e) => e.id)])
     )
 
-    localStorage.setItem(STORAGE_SEEN_EVENT, JSON.stringify(updatedSeenEvents))
-    localStorage.setItem(STORAGE_HAS_NEW, JSON.stringify(false))
+    writeStorageValue(STORAGE_SEEN_EVENT, updatedSeenEvents)
+    writeStorageValue(STORAGE_HAS_NEW, false)
     setTimeout(() => {
       setTodayEvents(todayEvents.map((el) => ({ ...el, isNew: false })))
     }, 300)
