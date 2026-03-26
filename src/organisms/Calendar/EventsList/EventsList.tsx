@@ -35,6 +35,7 @@ export const EventsList = ({
   unitName,
 }: IEventList): JSX.Element => {
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
+  const isClickable = Boolean(onClick)
 
   const initOrEnd = [
     'end-course',
@@ -62,11 +63,11 @@ export const EventsList = ({
     <Box
       className="eventsList"
       borderTop={border}
-      cursor={onClick ? 'pointer' : 'default'}
-      p="16px"
       display="flex"
       gap="12px"
+      cursor={isClickable ? 'pointer' : 'default'}
       onClick={onClick}
+      p="16px"
     >
       <Box
         bg={color}

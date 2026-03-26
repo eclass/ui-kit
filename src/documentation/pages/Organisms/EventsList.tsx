@@ -126,6 +126,7 @@ interface IEventList {
   time: string // Hora
   name: string // Nombre del evento
   hasNotification?: boolean // Indica si el evento tiene notificación
+  onClick?: () => void // Permite usar el item como elemento clickeable
   showCourse?: boolean // Indica si se muestra el curso
   showUnit?: boolean // Indica si se muestra la unidad
   courseName?: string // Nombre del curso
