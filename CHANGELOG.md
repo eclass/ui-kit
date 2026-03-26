@@ -1,3 +1,10 @@
+## [1.58.2](https://github.com/eclass/ui-kit/compare/v1.58.1...v1.58.2) (2026-03-26)
+
+
+### Bug Fixes
+
+* **calendar-dropdown:** exponer onClick en EventsList y soportar click nativo ([6142585](https://github.com/eclass/ui-kit/commit/614258557056abfd7626b31b82cf3a27e977e7bd))
+
 ## [1.58.1](https://github.com/eclass/ui-kit/compare/v1.58.0...v1.58.1) (2026-03-25)
 
 
