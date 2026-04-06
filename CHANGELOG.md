@@ -1,3 +1,10 @@
+## [1.58.4](https://github.com/eclass/ui-kit/compare/v1.58.3...v1.58.4) (2026-04-06)
+
+
+### Bug Fixes
+
+* **calendar-dropdown:** aplicar fondo hover en EventsList ([#768](https://github.com/eclass/ui-kit/issues/768)) ([cb58de2](https://github.com/eclass/ui-kit/commit/cb58de29d9fb8cd2205ff31012c36902ea67a2be))
+
 ## [1.58.3](https://github.com/eclass/ui-kit/compare/v1.58.2...v1.58.3) (2026-03-26)
 
 
