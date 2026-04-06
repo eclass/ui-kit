@@ -35,6 +35,7 @@ export const EventsList = ({
   unitName,
 }: IEventList): JSX.Element => {
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
+  const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
   const isClickable = Boolean(onClick)
 
   const initOrEnd = [
@@ -68,6 +69,8 @@ export const EventsList = ({
       cursor={isClickable ? 'pointer' : 'default'}
       onClick={onClick}
       p="16px"
+      transition="background-color 0.2s ease"
+      _hover={isClickable ? { bg: hoverBg } : undefined}
     >
       <Box
         bg={color}
