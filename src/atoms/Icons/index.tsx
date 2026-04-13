@@ -1,6 +1,7 @@
 export * from './AcademicRecord'
 export * from './AlertInfo'
 export * from './ArrowRight'
+export * from './Calendar'
 export * from './Certificate'
 export * from './CircularCheck'
 export * from './CircularInformation'
