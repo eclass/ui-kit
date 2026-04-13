@@ -1,3 +1,10 @@
+# [1.59.0](https://github.com/eclass/ui-kit/compare/v1.58.4...v1.59.0) (2026-04-13)
+
+
+### Features
+
+* **dropdown:** agregamos dropdown user primera version ([#769](https://github.com/eclass/ui-kit/issues/769)) ([2f198aa](https://github.com/eclass/ui-kit/commit/2f198aa9f4cfb5fa5dc847e76f97ec7b87f74ac0))
+
 ## [1.58.4](https://github.com/eclass/ui-kit/compare/v1.58.3...v1.58.4) (2026-04-06)
 
 
