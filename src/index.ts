@@ -32,6 +32,8 @@ export { ModalAlert } from './organisms/ModalAlert'
 export { Eventos } from './organisms/Events'
 export { Resources } from './organisms/Resources'
 export { CalendarDropdown, EventsList } from './organisms/Calendar'
+export { UserDropdownMenu } from './organisms/User'
+export type { AccesibleProfileMenuProps, ProfileMenuItem } from './organisms/User'
 
 // Tema
 export { theme, vars } from './theme'

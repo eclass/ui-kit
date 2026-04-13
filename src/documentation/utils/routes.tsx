@@ -18,6 +18,7 @@ const Ripples = React.lazy(async () => await import('../pages/Atoms/Ripples'))
 const TinyAlert = React.lazy(async () => await import('../pages/Atoms/TinyAlert'))
 
 /** MOLECULES */
+const Avatar = React.lazy(async () => await import('../pages/Molecules/Avatar'))
 const Buttons = React.lazy(async () => await import('../pages/Molecules/Buttons'))
 const Tooltip = React.lazy(async () => await import('../pages/Molecules/Tooltip'))
 const UserWay = React.lazy(async () => await import('../pages/Molecules/UserWay'))
@@ -34,6 +35,7 @@ const Modals = React.lazy(async () => await import('../pages/Organisms/Modals'))
 const Events = React.lazy(async () => await import('../pages/Organisms/Events'))
 const EventsList = React.lazy(async () => await import('../pages/Organisms/EventsList'))
 const Resources = React.lazy(async () => await import('../pages/Organisms/Resources'))
+const UserDropdown = React.lazy(async () => await import('../pages/Organisms/UserDropdown'))
 
 /**
  * Rutas que tiene el proyecto con el respectivo link en la navegación.
@@ -126,6 +128,11 @@ export const routes: IRoute[] = [
   },
   /** ****************************** */
   {
+    path: '/molecules/avatar',
+    label: 'Avatar',
+    component: <Avatar />,
+  },
+  {
     path: '/molecules/buttons',
     label: 'Buttons',
     component: <Buttons />,
@@ -154,6 +161,11 @@ export const routes: IRoute[] = [
     path: '/organisms/calendardropdown',
     label: 'Calendar Dropdown',
     component: <CalendarDropdown />,
+  },
+  {
+    path: '/organisms/userdropdown',
+    label: 'User Dropdown',
+    component: <UserDropdown />,
   },
   {
     path: '/organisms/courselist',
