@@ -1,3 +1,10 @@
+## [1.59.2](https://github.com/eclass/ui-kit/compare/v1.59.1...v1.59.2) (2026-04-14)
+
+
+### Bug Fixes
+
+* **dropdown:** correccion link border ([#771](https://github.com/eclass/ui-kit/issues/771)) ([b5a6297](https://github.com/eclass/ui-kit/commit/b5a62971cf1a9bf3190ca06d937ee143df7163f8))
+
 ## [1.59.1](https://github.com/eclass/ui-kit/compare/v1.59.0...v1.59.1) (2026-04-14)
 
 
