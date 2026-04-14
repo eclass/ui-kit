@@ -27,8 +27,7 @@ export type { ProfileMenuItemType }
 
 export interface ProfileMenuItem {
   label: string
-  icon?: React.ReactNode
-  type?: ProfileMenuItemType
+  type: ProfileMenuItemType
   href?: string
   onClick?: () => void
 }
@@ -55,7 +54,7 @@ const StyledMenuList = MenuList as React.ForwardRefExoticComponent<
 const StyledHeading = Heading as React.FC<HeadingProps>
 const StyledMenuItem = MenuItem as React.FC<MenuItemProps & LinkProps>
 
-export const UserDropdownMenu = ({
+export const UserDropdown = ({
   userInfo,
   menuItems,
   isOpen: controlledIsOpen,
@@ -97,22 +96,31 @@ export const UserDropdownMenu = ({
           top: '30px',
           width: '0',
         },
+        '>div': {
+          left: isMobile ? '0 !important' : 'auto',
+          position: isMobile ? 'fixed !important' : 'absolute',
+          top: isMobile ? '52px !important' : 'auto',
+          transform: isMobile ? 'none !important' : 'auto',
+        },
         '.chakra-menu__menu-list': {
           animation: 'none !important',
           background: vars('colors-neutral-davysGrey'),
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
+          maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
           opacity: '1 !important',
+          overflowY: isMobile ? 'auto' : 'hidden',
           padding: '15px 0 0',
           position: 'absolute',
-          right: isMobile ? '-16px' : '-8px',
+          right: isMobile ? 'auto' : '-8px',
+          top: isMobile ? '3px !important' : 'auto',
           transform: 'none !important',
           transition: 'none !important',
           width: isMobile ? '100vw' : '290px',
         },
 
         '.content': {
-          height: isMobile ? '100vh' : 'auto',
+          height: isMobile ? '100%' : 'auto',
           borderRadius: !isMobile ? '10px' : '0',
           bg: vars('colors-neutral-white'),
           '>button': {
@@ -133,11 +141,12 @@ export const UserDropdownMenu = ({
       >
         {() => (
           <>
-            <NewTooltip label="Mi perfil" isDisabled={isTooltipDisabled} m="7px 0 0 0">
+            <NewTooltip label="Mi perfil" isDisabled={isTooltipDisabled}>
               <StyledMenuButton
                 background="transparent"
                 border="transparent"
                 height="30px"
+                lineHeight="0"
                 p="0"
                 _focusVisible={{
                   boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')}`,
@@ -167,15 +176,15 @@ export const UserDropdownMenu = ({
 
               <Box className="content">
                 {menuItems.map((item) => {
-                  const { label, icon, type, href, onClick } = item
-                  const view = getMenuItemIcon(type, icon)
+                  const { label, type, href, onClick } = item
+                  const view = getMenuItemIcon(type)
                   const isLogout = type === 'logout'
 
                   return (
                     <StyledMenuItem
                       aria-label={onClick ? 'Botón' : `Vínculo, ${label}`}
                       key={label}
-                      as={onClick ? 'button' : Link}
+                      as={isLogout || onClick ? 'button' : Link}
                       href={onClick ? undefined : href}
                       onClick={onClick}
                       icon={view ? <>{view}</> : undefined}
