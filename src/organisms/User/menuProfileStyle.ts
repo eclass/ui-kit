@@ -24,6 +24,7 @@ export const profileStyle = {
       background: vars('colors-neutral-cultured'),
       MenuItemShadow: 'none',
       boxShadow: 'none',
+      textDecoration: 'none',
     },
     _focus: {
       boxShadow: `0 0 0 3px ${vars('colors-icon-deepSkyBlue')} inset`,

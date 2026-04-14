@@ -15,6 +15,13 @@ export const useHideBackgroundOnMobile = (isOpen: boolean): boolean => {
   useEffect(() => {
     if (!isMobile) return
 
+    // Bloqueamos el scroll del body mientras el menú esté abierto
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+
     const viewContainer = document.getElementById('ViewContainer')
 
     if (viewContainer) {
@@ -37,8 +44,9 @@ export const useHideBackgroundOnMobile = (isOpen: boolean): boolean => {
       targetElement.style.display = isOpen ? 'none' : ''
     }
 
-    // Cleanup: restaurar display cuando se cierra el menú o cambia el breakpoint
+    // Cleanup: restaurar display y overflow cuando se cierra el menú o cambia el breakpoint
     return () => {
+      document.body.style.overflow = ''
       const viewContainer = document.getElementById('ViewContainer')
       if (viewContainer) {
         viewContainer.style.display = ''

@@ -66,6 +66,7 @@ export const Avatar = ({
     margin: 0,
     overflow: 'hidden',
     width: `${size}px`,
+    boxSizing: 'border-box',
   }
 
   const initialsStyle: React.CSSProperties = {
@@ -78,8 +79,10 @@ export const Avatar = ({
   }
 
   const imgStyle: React.CSSProperties = {
-    height: 'auto',
-    maxWidth: '100%',
+    height: '100%',
+    width: '100%',
+    objectFit: 'cover',
+    display: 'block',
   }
 
   // Sin nombre: no hay nada que mostrar

@@ -1,5 +1,5 @@
 import { Code, MyHeading, MyText, MyTitle } from '@/documentation/components'
-import { UserDropdownMenu, ProfileMenuItem } from '@/organisms'
+import { UserDropdown, ProfileMenuItem } from '@/organisms'
 import { Box } from '@chakra-ui/react'
 import { vars } from '@theme'
 
@@ -24,10 +24,10 @@ const profileMenuItems: ProfileMenuItem[] = [
 export const UserDropdownPage = (): JSX.Element => {
   return (
     <>
-      <MyHeading>UserDropdownMenu</MyHeading>
+      <MyHeading>UserDropdown</MyHeading>
 
       <MyText>
-        El componente <strong>UserDropdownMenu</strong> es un menú desplegable de perfil de usuario
+        El componente <strong>UserDropdown</strong> es un menú desplegable de perfil de usuario
         accesible. Muestra un avatar como botón disparador que, al hacer clic, despliega un dropdown
         con:
         <ul style={{ listStylePosition: 'inside', marginTop: '8px' }}>
@@ -57,13 +57,13 @@ export const UserDropdownPage = (): JSX.Element => {
         position="relative"
         zIndex={10} // Aseguramos que el menú esté por encima del resto
       >
-        <UserDropdownMenu userInfo={user} menuItems={profileMenuItems} />
+        <UserDropdown userInfo={user} menuItems={profileMenuItems} />
       </Box>
 
       <Box id="ViewContainer" mt="20px">
         <MyTitle>Uso</MyTitle>
         <MyText>Importa el componente desde el paquete de ui-kit:</MyText>
-        <Code language="jsx" text={`import { UserDropdownMenu } from '@eclass/ui-kit'`} />
+        <Code language="jsx" text={`import { UserDropdown } from '@eclass/ui-kit'`} />
 
         <MyTitle>Uso básico</MyTitle>
         <MyText>
@@ -71,7 +71,7 @@ export const UserDropdownPage = (): JSX.Element => {
         </MyText>
         <Code
           language="jsx"
-          text={`import { UserDropdownMenu } from '@eclass/ui-kit'
+          text={`import { UserDropdown } from '@eclass/ui-kit'
 
 const menuItems = [
   { label: 'Cursos', type: 'courses', href: '/courses' },
@@ -79,7 +79,7 @@ const menuItems = [
   { label: 'Cerrar sesión', type: 'logout', onClick: () => console.log('logout') },
 ]
 
-<UserDropdownMenu
+<UserDropdown
   userInfo={{
     name: 'Josefin',
     id: 12345,
@@ -98,7 +98,7 @@ const menuItems = [
           language="jsx"
           text={`const [isOpen, setIsOpen] = useState(false)
 
-<UserDropdownMenu
+<UserDropdown
   userInfo={userInfo}
   menuItems={menuItems}
   isOpen={isOpen}
@@ -115,7 +115,7 @@ const menuItems = [
 
 interface ProfileMenuItem {
   label: string              // Texto del link o botón
-  type?: ProfileMenuItemType // Tipo de ícono predefinido
+  type: ProfileMenuItemType // Tipo de ícono predefinido
   href?: string              // URL de destino (si es un link)
   onClick?: () => void       // Función a ejecutar (si es un botón)
 }

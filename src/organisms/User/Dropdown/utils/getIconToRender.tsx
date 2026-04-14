@@ -6,12 +6,7 @@ import { CalendarIcon } from '../Icons/CalendarIcon'
 
 export type ProfileMenuItemType = 'courses' | 'calendar' | 'academic-history' | 'profile' | 'logout'
 
-export const getMenuItemIcon = (
-  type?: ProfileMenuItemType,
-  customIcon?: React.ReactNode
-): React.ReactNode => {
-  if (customIcon) return customIcon
-
+export const getMenuItemIcon = (type?: ProfileMenuItemType): React.ReactNode => {
   switch (type) {
     case 'courses':
       return <CoursesIcon />
