@@ -123,7 +123,7 @@ export const UserDropdown = ({
           height: isMobile ? '100%' : 'auto',
           borderRadius: !isMobile ? '10px' : '0',
           bg: vars('colors-neutral-white'),
-          '>button': {
+          '>button, >chakra-link': {
             borderBottom: isMobile ? `solid 1px ${vars('colors-neutral-platinum')}` : 'none',
           },
         },
@@ -184,7 +184,7 @@ export const UserDropdown = ({
                     <StyledMenuItem
                       aria-label={onClick ? 'Botón' : `Vínculo, ${label}`}
                       key={label}
-                      as={isLogout || onClick ? 'button' : Link}
+                      as={onClick ? 'button' : Link}
                       href={onClick ? undefined : href}
                       onClick={onClick}
                       icon={view ? <>{view}</> : undefined}
