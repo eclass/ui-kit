@@ -1,3 +1,10 @@
+## [1.59.3](https://github.com/eclass/ui-kit/compare/v1.59.2...v1.59.3) (2026-04-14)
+
+
+### Bug Fixes
+
+* **a:** corregimos alto del componente en mobile y border ([#772](https://github.com/eclass/ui-kit/issues/772)) ([e350d15](https://github.com/eclass/ui-kit/commit/e350d156d18a1039835c586f272612a5880554c7))
+
 ## [1.59.2](https://github.com/eclass/ui-kit/compare/v1.59.1...v1.59.2) (2026-04-14)
 
 
