@@ -99,7 +99,7 @@ export const UserDropdown = ({
         '>div': {
           left: isMobile ? '0 !important' : 'auto',
           position: isMobile ? 'fixed !important' : 'absolute',
-          top: isMobile ? '52px !important' : 'auto',
+          top: isMobile ? '56px !important' : 'auto',
           bottom: isMobile ? '0 !important' : 'auto',
           transform: isMobile ? 'none !important' : 'auto',
           width: isMobile ? '100% !important' : 'auto',
@@ -129,7 +129,7 @@ export const UserDropdown = ({
           borderRadius: !isMobile ? '10px' : '0',
           bg: vars('colors-neutral-white'),
           '>button, >a': {
-            borderBottom: isMobile ? `solid 1px ${vars('colors-neutral-platinum')}` : 'none',
+            borderBottom: isMobile ? `solid 1px ${vars('colors-neutral-platinum')}` : undefined,
           },
         },
         '.css-r6z5ec': {
