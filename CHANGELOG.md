@@ -1,3 +1,10 @@
+## [1.59.1](https://github.com/eclass/ui-kit/compare/v1.59.0...v1.59.1) (2026-04-14)
+
+
+### Bug Fixes
+
+* **dropdown:** corregimos nombre componente version mobile y avatar ([#770](https://github.com/eclass/ui-kit/issues/770)) ([0171581](https://github.com/eclass/ui-kit/commit/0171581e89841865dbaf7a0f17b682ca35bbf68a))
+
 # [1.59.0](https://github.com/eclass/ui-kit/compare/v1.58.4...v1.59.0) (2026-04-13)
 
 
