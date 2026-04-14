@@ -1,3 +1,10 @@
+## [1.59.4](https://github.com/eclass/ui-kit/compare/v1.59.3...v1.59.4) (2026-04-14)
+
+
+### Bug Fixes
+
+* **items:** correccion estilo border roto en escritorio ([#773](https://github.com/eclass/ui-kit/issues/773)) ([bc1ac61](https://github.com/eclass/ui-kit/commit/bc1ac618623d70881362980cfec93f3cd3dd47a6))
+
 ## [1.59.3](https://github.com/eclass/ui-kit/compare/v1.59.2...v1.59.3) (2026-04-14)
 
 
