@@ -27,6 +27,11 @@ export const useHideBackgroundOnMobile = (isOpen: boolean): boolean => {
     if (viewContainer) {
       // Caso v8: se usa el ID del contenedor principal
       viewContainer.style.display = isOpen ? 'none' : ''
+      const footer = document.getElementById('Footer')
+
+      if (footer) {
+        footer.style.display = isOpen ? 'none' : ''
+      }
     } else {
       // Caso CV: lógica de respaldo buscando elementos en .main
       const mainElement = document.querySelector('.main')
@@ -48,8 +53,13 @@ export const useHideBackgroundOnMobile = (isOpen: boolean): boolean => {
     return () => {
       document.body.style.overflow = ''
       const viewContainer = document.getElementById('ViewContainer')
+
       if (viewContainer) {
         viewContainer.style.display = ''
+        const footer = document.getElementById('Footer')
+        if (footer) {
+          footer.style.display = ''
+        }
       } else {
         const mainElement = document.querySelector('.main')
         if (mainElement) {
