@@ -1,3 +1,10 @@
+## [1.59.5](https://github.com/eclass/ui-kit/compare/v1.59.4...v1.59.5) (2026-04-15)
+
+
+### Bug Fixes
+
+* **drodpdown:** ocultamos tambien el footer cuando se abre en movil ([#774](https://github.com/eclass/ui-kit/issues/774)) ([623afb6](https://github.com/eclass/ui-kit/commit/623afb6b8ef77a4967a82cad37a57593c3c5fa0a))
+
 ## [1.59.4](https://github.com/eclass/ui-kit/compare/v1.59.3...v1.59.4) (2026-04-14)
 
 
