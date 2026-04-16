@@ -129,6 +129,8 @@ export const UserDropdown = ({
           borderRadius: !isMobile ? '10px' : '0',
           bg: vars('colors-neutral-white'),
           '>button, >a': {
+            borderTop: 'none',
+            borderInline: 'none',
             borderBottom: isMobile ? `solid 1px ${vars('colors-neutral-platinum')}` : undefined,
           },
         },

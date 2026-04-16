@@ -34,6 +34,11 @@ export const useHideBackgroundOnMobile = (isOpen: boolean): boolean => {
       }
     } else {
       // Caso CV: lógica de respaldo buscando elementos en .main
+      const browse = document.querySelector<HTMLElement>('.browse')
+      if (browse) {
+        browse.style.display = isOpen ? 'none' : ''
+      }
+
       const mainElement = document.querySelector('.main')
       if (!mainElement) return
 
@@ -61,6 +66,10 @@ export const useHideBackgroundOnMobile = (isOpen: boolean): boolean => {
           footer.style.display = ''
         }
       } else {
+        const browse = document.querySelector<HTMLElement>('.browse')
+        if (browse) {
+          browse.style.display = ''
+        }
         const mainElement = document.querySelector('.main')
         if (mainElement) {
           const firstChild = mainElement.firstElementChild
