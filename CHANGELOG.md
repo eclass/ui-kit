@@ -1,3 +1,10 @@
+## [1.59.6](https://github.com/eclass/ui-kit/compare/v1.59.5...v1.59.6) (2026-04-16)
+
+
+### Bug Fixes
+
+* **dropdown:** ajustes item tipo boton e implementacion cv ([#775](https://github.com/eclass/ui-kit/issues/775)) ([e5baeb1](https://github.com/eclass/ui-kit/commit/e5baeb1be23e0c7b6e259d5b1580257688d519ee))
+
 ## [1.59.5](https://github.com/eclass/ui-kit/compare/v1.59.4...v1.59.5) (2026-04-15)
 
 
