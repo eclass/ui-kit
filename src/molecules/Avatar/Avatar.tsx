@@ -2,7 +2,7 @@ import * as React from 'react'
 import { useState, useEffect } from 'react'
 import { AvatarProps } from './Avatar.types'
 
-/** Los mismos 10 colores que usaba la v8, determinados por el último dígito del userId */
+/** Los mismos 10 colores que usaba la v8, determinados por un índice estable */
 const AVATAR_COLORS = [
   '#0076ba',
   '#229f9c',
@@ -16,13 +16,14 @@ const AVATAR_COLORS = [
   '#ff6363',
 ]
 
-const getColorByUserId = (userId: number): string => {
-  if (userId >= 0) {
-    const digits = userId.toString().split('')
-    const position = parseInt(digits[digits.length - 1], 10)
-    return AVATAR_COLORS[position]
-  }
-  return AVATAR_COLORS[Math.floor(Math.random() * AVATAR_COLORS.length)]
+const getColorIndex = (fullName?: string): number => {
+  const trimmedNameLength = fullName?.trim().length ?? 0
+  return trimmedNameLength % 10
+}
+
+const getAvatarColor = (fullName?: string): string => {
+  const position = getColorIndex(fullName)
+  return AVATAR_COLORS[position]
 }
 
 const getInitials = (fullName: string): string =>
@@ -35,11 +36,10 @@ const getInitials = (fullName: string): string =>
 
 /**
  * Muestra la foto de perfil del usuario o un placeholder circular con sus iniciales.
- * El color de fondo es determinista según el `userId`.
+ * El color de fondo es determinista según el largo del `fullName`.
  */
 export const Avatar = ({
   fullName,
-  userId,
   picture,
   size = 50,
   fontSize = 14,
@@ -51,8 +51,8 @@ export const Avatar = ({
   const [imageValid, setImageValid] = useState<boolean>(false)
 
   useEffect(() => {
-    setBgColor(getColorByUserId(userId))
-  }, [userId])
+    setBgColor(getAvatarColor(fullName))
+  }, [fullName])
 
   const wrapperStyle: React.CSSProperties = {
     alignItems: 'center',
