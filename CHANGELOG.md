@@ -1,3 +1,10 @@
+## [1.59.7](https://github.com/eclass/ui-kit/compare/v1.59.6...v1.59.7) (2026-04-29)
+
+
+### Bug Fixes
+
+* **dropdown:** corregimos color del avatar segun largo del nombre ([#777](https://github.com/eclass/ui-kit/issues/777)) ([a0d35e6](https://github.com/eclass/ui-kit/commit/a0d35e680426d837b049c942c5d230447c8aab02))
+
 ## [1.59.6](https://github.com/eclass/ui-kit/compare/v1.59.5...v1.59.6) (2026-04-16)
 
 
