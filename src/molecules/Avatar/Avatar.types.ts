@@ -1,8 +1,8 @@
 export interface AvatarProps {
   /** Nombre completo del usuario (se usan las primeras 2 iniciales como fallback) */
   fullName: string
-  /** ID del usuario (determina el color de fondo de forma determinista) */
-  userId: number
+  /** ID del usuario (determina el color de fondo de forma determinista; si no existe, se usa el largo del nombre) */
+  userId?: number
   /** URL de la foto de perfil (opcional) */
   picture?: string
   /** Diámetro en píxeles */
