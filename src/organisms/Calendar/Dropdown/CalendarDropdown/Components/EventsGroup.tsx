@@ -69,6 +69,7 @@ export const EventsGroup = ({
                   courseName={event.course.name}
                   day={event.formatedDate.day}
                   date={event.formatedDate.date}
+                  duration={event.duration_in_minutes}
                   time={event.formatedDate.time}
                   color={
                     event.course_id && colors?.[event.course_id]

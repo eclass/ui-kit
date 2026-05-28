@@ -1,3 +1,4 @@
+import { Remote, Time } from '@/atoms/Icons'
 import { Box } from '@chakra-ui/react'
 import { vars } from '@theme'
 
@@ -8,6 +9,7 @@ export interface IEventList {
   courseName?: string
   day: string
   date: string
+  duration?: number
   name: string
   hasNotification?: boolean
   onClick?: () => void
@@ -24,6 +26,7 @@ export const EventsList = ({
   color,
   day,
   date,
+  duration,
   name,
   hasNotification,
   onClick,
@@ -37,6 +40,9 @@ export const EventsList = ({
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
   const isClickable = Boolean(onClick)
+
+  const showEventDuration =
+    ['online', 'in-person'].includes(type) && duration !== undefined && duration > 0
 
   const initOrEnd = [
     'end-course',
@@ -55,9 +61,18 @@ export const EventsList = ({
   const detailTextStyle = {
     color: vars('colors-neutral-gray') ?? '#808080',
     fontSize: '14px',
-    display: 'inline',
+    alignItems: 'center',
+    display: 'flex',
     gap: '4px',
     lineHeight: 'normal',
+  }
+
+  const eventIconStyle = {
+    alignItems: 'center',
+    display: 'inline-flex',
+    height: '24px',
+    justifyContent: 'center',
+    minWidth: '16px',
   }
 
   return (
@@ -116,7 +131,30 @@ export const EventsList = ({
 
         {showCourse && !initOrEnd && (
           <Box as="span" sx={detailTextStyle}>
-            <strong>{text ? `${text}:` : 'Curso:'}</strong> {courseName}
+            {type === 'cv-events' ? <></> : <strong>{text ? `${text}:` : 'Curso:'}</strong>}{' '}
+            {courseName}
+          </Box>
+        )}
+
+        {showEventDuration && (
+          <Box display="flex" flexDirection="row" gap="8px" flexWrap="wrap">
+            <Box
+              as="span"
+              sx={detailTextStyle}
+              paddingRight="8px"
+              borderRight={`1px solid ${vars('colors-neutral-platinum')}`}
+            >
+              <Box as="span" sx={eventIconStyle}>
+                <Remote color={vars('colors-main-ziggurat')} />
+              </Box>
+              Link clase online
+            </Box>
+            <Box as="span" sx={detailTextStyle}>
+              <Box as="span" sx={eventIconStyle}>
+                <Time color={vars('colors-main-ziggurat')} />
+              </Box>
+              {duration} min
+            </Box>
           </Box>
         )}
 

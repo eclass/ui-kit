@@ -18,6 +18,7 @@ export interface Event {
   associated_resource: AssociatedResource
   course: Course
   course_id: number
+  duration_in_minutes?: number
   end: string
   start: string
   formatedDate: FormattedDate

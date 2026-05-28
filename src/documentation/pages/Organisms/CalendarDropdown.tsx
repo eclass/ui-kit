@@ -271,7 +271,7 @@ const events = [
     start: '2027-01-01T02:59:00.000Z',
     end: '2027-01-01T03:59:00.000Z',
     duration_in_minutes: 60,
-    type: 'answers-schedule-deadline',
+    type: 'cv-events',
     id_resource: 853909,
     associated_resource: {
       id: 1,
@@ -299,7 +299,7 @@ const events = [
     start: '2027-01-01T02:59:00.000Z',
     end: '2027-01-01T03:59:00.000Z',
     duration_in_minutes: 60,
-    type: 'answers-schedule-deadline',
+    type: 'in-person',
     id_resource: 848781,
     associated_resource: {
       id: 1,

@@ -80,6 +80,7 @@ export const EventsListPage = (): JSX.Element => {
           type="in-person"
           showCourse
           courseName="[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesos"
+          duration={40}
         />
       </Box>
 
@@ -123,6 +124,7 @@ interface IEventList {
   color?: string // Color del curso asociado
   day: string // Día de la semana
   date: string // Fecha 
+  duration_in_minutes?: number // Duración del evento en minutos
   time: string // Hora
   name: string // Nombre del evento
   hasNotification?: boolean // Indica si el evento tiene notificación
