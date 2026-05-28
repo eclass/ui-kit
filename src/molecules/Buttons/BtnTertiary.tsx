@@ -11,6 +11,8 @@ import {
   Multimedia,
   AcademicRecord,
   Download,
+  Time,
+  Remote,
 } from '@/atoms/Icons'
 
 type XOR<T, U> = T | U extends object
@@ -31,6 +33,8 @@ export interface propsTertiaryBtn {
     | 'multimedia'
     | 'record'
     | 'download'
+    | 'time'
+    | 'remote'
     | 'noIcon'
   m?: string
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
@@ -90,6 +94,8 @@ export function BtnTertiary({
     multimedia: <Multimedia color={colorIcon} />,
     password: <Password color={colorIcon} />,
     record: <AcademicRecord color={colorIcon} />,
+    time: <Time color={colorIcon} />,
+    remote: <Remote color={colorIcon} />,
     noIcon: <></>,
   }
 
