@@ -1,7 +1,7 @@
-import { Remote, Time } from '@/atoms/Icons'
 import { Box } from '@chakra-ui/react'
-import { vars } from '@theme'
 
+import { vars } from '@theme'
+import { MapIndicator, Remote, Time } from '@/atoms/Icons'
 import { NotificationIcon } from './NotificationIcon'
 
 export interface IEventList {
@@ -12,6 +12,7 @@ export interface IEventList {
   duration?: number
   name: string
   hasNotification?: boolean
+  locationSede?: string
   onClick?: () => void
   showCourse?: boolean
   showUnit?: boolean
@@ -29,6 +30,7 @@ export const EventsList = ({
   duration,
   name,
   hasNotification,
+  locationSede,
   onClick,
   showCourse,
   showUnit,
@@ -40,9 +42,13 @@ export const EventsList = ({
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
   const isClickable = Boolean(onClick)
+  const isInPersonPresencial = type === 'in-person-presencial'
+  const showEventLocation = !isInPersonPresencial || Boolean(locationSede)
 
   const showEventDuration =
-    ['online', 'in-person'].includes(type) && duration !== undefined && duration > 0
+    ['online', 'in-person', 'in-person-presencial'].includes(type) &&
+    duration !== undefined &&
+    duration > 0
 
   const initOrEnd = [
     'end-course',
@@ -50,30 +56,6 @@ export const EventsList = ({
     'init-course-flexible',
     'end-course-flexible',
   ].includes(type)
-
-  const dateTextStyle = {
-    color: vars('colors-neutral-white'),
-    fontSize: '14px',
-    fontWeight: '700',
-    lineHeight: '100%',
-  }
-
-  const detailTextStyle = {
-    color: vars('colors-neutral-gray') ?? '#808080',
-    fontSize: '14px',
-    alignItems: 'center',
-    display: 'flex',
-    gap: '4px',
-    lineHeight: 'normal',
-  }
-
-  const eventIconStyle = {
-    alignItems: 'center',
-    display: 'inline-flex',
-    height: '24px',
-    justifyContent: 'center',
-    minWidth: '16px',
-  }
 
   return (
     <Box
@@ -130,7 +112,7 @@ export const EventsList = ({
         </Box>
 
         {showCourse && !initOrEnd && (
-          <Box as="span" sx={detailTextStyle}>
+          <Box as="span" sx={courseDetailTextStyle}>
             {type === 'cv-events' ? <></> : <strong>{text ? `${text}:` : 'Curso:'}</strong>}{' '}
             {courseName}
           </Box>
@@ -138,17 +120,23 @@ export const EventsList = ({
 
         {showEventDuration && (
           <Box display="flex" flexDirection="row" gap="8px" flexWrap="wrap">
-            <Box
-              as="span"
-              sx={detailTextStyle}
-              paddingRight="8px"
-              borderRight={`1px solid ${vars('colors-neutral-platinum')}`}
-            >
-              <Box as="span" sx={eventIconStyle}>
-                <Remote color={vars('colors-main-ziggurat')} />
+            {showEventLocation && (
+              <Box
+                as="span"
+                sx={detailTextStyle}
+                paddingRight="8px"
+                borderRight={`1px solid ${vars('colors-neutral-platinum')}`}
+              >
+                <Box as="span" sx={eventIconStyle}>
+                  {isInPersonPresencial ? (
+                    <MapIndicator color={vars('colors-main-ziggurat')} />
+                  ) : (
+                    <Remote color={vars('colors-main-ziggurat')} />
+                  )}
+                </Box>
+                {isInPersonPresencial ? locationSede : 'Link clase online'}
               </Box>
-              Link clase online
-            </Box>
+            )}
             <Box as="span" sx={detailTextStyle}>
               <Box as="span" sx={eventIconStyle}>
                 <Time color={vars('colors-main-ziggurat')} />
@@ -168,4 +156,33 @@ export const EventsList = ({
       </Box>
     </Box>
   )
+}
+
+const dateTextStyle = {
+  color: vars('colors-neutral-white'),
+  fontSize: '14px',
+  fontWeight: '700',
+  lineHeight: '100%',
+}
+
+const detailTextStyle = {
+  color: vars('colors-neutral-gray') ?? '#808080',
+  fontSize: '14px',
+  alignItems: 'center',
+  display: 'flex',
+  gap: '4px',
+  lineHeight: 'normal',
+}
+
+const courseDetailTextStyle = {
+  ...detailTextStyle,
+  alignItems: 'flex-start',
+}
+
+const eventIconStyle = {
+  alignItems: 'center',
+  display: 'inline-flex',
+  height: '24px',
+  justifyContent: 'center',
+  minWidth: '16px',
 }

@@ -1,7 +1,8 @@
+import { Box } from '@chakra-ui/react'
+
 import { Code, MyHeading, MyText, MyTitle } from '@/documentation/components'
 import { EventsList } from '@/organisms'
 import { vars } from '@/theme'
-import { Box } from '@chakra-ui/react'
 
 export const EventsListPage = (): JSX.Element => {
   return (
@@ -82,6 +83,20 @@ export const EventsListPage = (): JSX.Element => {
           courseName="[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesos"
           duration={40}
         />
+        <EventsList
+          color="#00857A"
+          key="2"
+          name='Clase presencial "Caso aplicado"'
+          day="viernes"
+          date="30 jun"
+          time="19:00 hrs."
+          text="Curso"
+          type="in-person-presencial"
+          showCourse
+          courseName="[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesos"
+          duration={40}
+          locationSede="Sede Santiago, sala 204"
+        />
       </Box>
 
       <MyTitle>3. Eventos en vista curso</MyTitle>
@@ -128,6 +143,7 @@ interface IEventList {
   time: string // Hora
   name: string // Nombre del evento
   hasNotification?: boolean // Indica si el evento tiene notificación
+  locationSede?: string // Sede para eventos de tipo in-person-presencial
   onClick?: () => void // Permite usar el item como elemento clickeable
   showCourse?: boolean // Indica si se muestra el curso
   showUnit?: boolean // Indica si se muestra la unidad
