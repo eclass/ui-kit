@@ -52,6 +52,29 @@ describe('EventsList', () => {
     expect(container).toHaveTextContent(/40\s*min/)
   })
 
+  it('renders location for in-person-presencial events when locationSede is provided', () => {
+    const { container } = renderComponent(undefined, {
+      duration: 40,
+      locationSede: 'Sede Santiago, sala 204',
+      type: 'in-person-presencial',
+    })
+
+    expect(screen.getByText('Sede Santiago, sala 204')).toBeInTheDocument()
+    expect(screen.queryByText('Link clase online')).not.toBeInTheDocument()
+    expect(container).toHaveTextContent(/40\s*min/)
+  })
+
+  it('does not render an empty location label for in-person-presencial events without locationSede', () => {
+    const { container } = renderComponent(undefined, {
+      duration: 40,
+      type: 'in-person-presencial',
+    })
+
+    expect(screen.queryByText('Link clase online')).not.toBeInTheDocument()
+    expect(screen.queryByTitle('icon-mapIndicator')).not.toBeInTheDocument()
+    expect(container).toHaveTextContent(/40\s*min/)
+  })
+
   it('does not render duration when minutes are zero', () => {
     renderComponent(undefined, { duration: 0 })
 

@@ -24,6 +24,7 @@ export interface Event {
   formatedDate: FormattedDate
   id: number
   isNew?: boolean
+  location_sede?: string
   translatedTitle: string
   type: string
 }
