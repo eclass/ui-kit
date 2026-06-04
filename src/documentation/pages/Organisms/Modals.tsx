@@ -1,8 +1,10 @@
 import { MyHeading, MyText, MyTitle, Code, ListComponent } from '@/documentation/components'
 import {
   ModalAlertDemo,
+  ModalCardDemo,
   ModalDemo,
   ModalMultipleDemo,
+  ModalSimpleDemo,
 } from '@/documentation/components/Organisms/Modals'
 
 export const ViewModals = (): JSX.Element => {
@@ -52,6 +54,77 @@ export function View(){
         </ModalContent>
       </Modal>
     )
+}`}
+      />
+      <MyTitle>Tipo ModalSimple</MyTitle>
+      <MyText>
+        Es una variante mínima del modal para casos donde solo necesitas contenido libre y la acción
+        de cierre. No renderiza la banda azul ni título, y mantiene la <strong>X</strong> como
+        control principal junto con las props base del modal.
+      </MyText>
+      <MyText>El componente se importa de la siguiente manera:</MyText>
+      <Code text="import { ModalSimple } from '@eclass/ui-kit'" />
+      <ListComponent>
+        <ModalSimpleDemo />
+      </ListComponent>
+      <Code
+        text={`
+import { ModalSimple } from '@eclass/ui-kit'
+import { useDisclosure } from '@chakra-ui/react'
+
+export function View(){
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  return (
+    <>
+      <BtnPrimary onClick={onOpen}>Abrir ModalSimple</BtnPrimary>
+      <ModalSimple
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <p>Contenido libre del modal...</p>
+      </ModalSimple>
+    </>
+  )
+}`}
+      />
+      <MyTitle>Tipo ModalCard</MyTitle>
+      <MyText>
+        Es una variante pensada para contenido tipo card, como logros o medallas. No renderiza
+        iconos ni encabezado por defecto, mantiene la <strong>X</strong> para cerrar y permite
+        contenido completamente libre. Su ancho está pensado para cards compactas.
+      </MyText>
+      <MyText>El componente se importa de la siguiente manera:</MyText>
+      <Code text="import { ModalCard, ModalCardContent, ModalAlertButtons } from '@eclass/ui-kit'" />
+      <ListComponent>
+        <ModalCardDemo />
+      </ListComponent>
+      <Code
+        text={`
+import { ModalCard, ModalCardContent, ModalAlertButtons, BtnLink } from '@eclass/ui-kit'
+import { useDisclosure } from '@chakra-ui/react'
+
+export function View(){
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  return (
+    <>
+      <BtnPrimary onClick={onOpen}>Abrir ModalCard</BtnPrimary>
+      <ModalCard
+        isOpen={isOpen}
+        onClose={onClose}
+      >
+        <ModalCardContent>
+          <div>Contenido libre del card...</div>
+        </ModalCardContent>
+        <ModalAlertButtons>
+          <BtnLink as="button" onClick={onClose}>
+            Entendido
+          </BtnLink>
+        </ModalAlertButtons>
+      </ModalCard>
+    </>
+  )
 }`}
       />
       <MyTitle>Variantes del tipo Modal</MyTitle>

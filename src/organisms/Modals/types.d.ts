@@ -16,6 +16,23 @@ export interface IModal {
   autoFocus?: boolean
 }
 
+export interface IModalSimple {
+  children: React.ReactNode
+  closeOnEsc?: boolean
+  closeOnOverlayClick?: boolean
+  isOpen: boolean
+  onClose: () => void
+  withoutMargin?: boolean
+}
+
+export interface IModalCard {
+  children: React.ReactNode
+  closeOnEsc?: boolean
+  closeOnOverlayClick?: boolean
+  isOpen: boolean
+  onClose: () => void
+}
+
 export interface IModalContentBase {
   children: React.ReactNode
   closeOnOverlayClick: IModal['closeOnOverlayClick']
