@@ -1,6 +1,7 @@
+import { Box, MenuGroup } from '@chakra-ui/react'
+
 import { BtnLink } from '@/molecules'
 import { EventsList } from '@/organisms/Calendar'
-import { Box, MenuGroup } from '@chakra-ui/react'
 import { vars } from '@theme'
 import { Event } from '../../types'
 
@@ -29,6 +30,42 @@ export const EventsGroup = ({
 }: IEventsGroupProps): JSX.Element => {
   if (!events || (events && events.length === 0)) return <></>
 
+  const eventItems: JSX.Element[] = events.map((event) => (
+    // Una vez que el evento se comporte como link, se debe cambiar Box a MenuItem y aplicar el efecto de focus
+    <Box
+      bg={vars('colors-neutral-white') ?? '#FFFFFF'}
+      border="none"
+      cursor={onClickEvent ? 'pointer' : 'default'}
+      padding="0"
+      key={event.id}
+      _hover={{
+        boxShadow: 'none !important',
+        cursor: onClickEvent ? 'pointer !important' : 'default !important',
+        bg: 'none !important',
+      }}
+      _focus={{
+        background: 'none !important',
+        boxShadow: 'none !important',
+      }}
+    >
+      <EventsList
+        name={event.translatedTitle}
+        courseName={event.course.name}
+        day={event.formatedDate.day}
+        date={event.formatedDate.date}
+        duration={event.duration_in_minutes}
+        time={event.formatedDate.time}
+        color={event.course_id && colors?.[event.course_id] ? colors[event.course_id] : '#82504A'}
+        text={text}
+        type={event.type}
+        locationSede={event.location_sede}
+        hasNotification={event.isNew}
+        onClick={onClickEvent ? () => onClickEvent(event) : undefined}
+        showCourse
+      />
+    </Box>
+  ))
+
   return (
     <>
       <Box
@@ -43,49 +80,7 @@ export const EventsGroup = ({
           },
         }}
       >
-        <MenuGroup title={title}>
-          {events.map((event: Event) => {
-            return (
-              // Una vez que el evento se comporte como link, se debe cambiar Box a MenuItem y aplicar el efecto de focus
-              <Box
-                bg={vars('colors-neutral-white') ?? '#FFFFFF'}
-                border="none"
-                cursor={onClickEvent ? 'pointer' : 'default'}
-                padding="0"
-                key={event.id}
-                _hover={{
-                  boxShadow: 'none !important',
-                  cursor: onClickEvent ? 'pointer !important' : 'default !important',
-                  bg: 'none !important',
-                }}
-                _focus={{
-                  background: 'none !important',
-                  boxShadow: 'none !important',
-                }}
-              >
-                <EventsList
-                  key={event.id}
-                  name={event.translatedTitle}
-                  courseName={event.course.name}
-                  day={event.formatedDate.day}
-                  date={event.formatedDate.date}
-                  duration={event.duration_in_minutes}
-                  time={event.formatedDate.time}
-                  color={
-                    event.course_id && colors?.[event.course_id]
-                      ? colors[event.course_id]
-                      : '#82504A'
-                  }
-                  text={text}
-                  type={event.type}
-                  hasNotification={event.isNew}
-                  onClick={onClickEvent ? () => onClickEvent(event) : undefined}
-                  showCourse
-                />
-              </Box>
-            )
-          })}
-        </MenuGroup>
+        <MenuGroup title={title}>{eventItems}</MenuGroup>
       </Box>
       {hasMoreNext && (
         <Box display="flex" alignItems="center" padding="16px 0 0 16px">

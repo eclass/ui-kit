@@ -1,6 +1,7 @@
+import { Box } from '@chakra-ui/react'
+
 import { Code, MyHeading, MyText, MyTitle } from '@/documentation/components'
 import { CalendarDropdown } from '@/organisms'
-import { Box } from '@chakra-ui/react'
 import { vars } from '@theme'
 
 export const CalendarDropdownPage = (): JSX.Element => {
@@ -206,34 +207,34 @@ const events = [
       time: '0:01 hrs.',
     },
   },
-  {
-    id: 4534,
-    student_id: 17158893,
-    course_id: 40711,
-    class_id: 1,
-    status: 'SCHEDULED',
-    start: '2025-05-29T04:01:00.000Z',
-    end: '2025-05-29T05:01:00.000Z',
-    duration_in_minutes: 60,
-    type: 'evaluation-release',
-    id_resource: 1947886,
-    associated_resource: {
-      id: 1,
-      name: 'Se habilita para responder "MCH y MCV"',
-      description: 'MCH o MCV',
-    },
-    url: null,
-    course: {
-      id: 40711,
-      name: '[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesoss',
-    },
-    translatedTitle: 'Se habilita para responder "MCH y MCV"',
-    formatedDate: {
-      day: 'jueves',
-      date: '29 may',
-      time: '0:01 hrs.',
-    },
-  },
+  // {
+  //   id: 4534,
+  //   student_id: 17158893,
+  //   course_id: 40711,
+  //   class_id: 1,
+  //   status: 'SCHEDULED',
+  //   start: '2025-05-29T04:01:00.000Z',
+  //   end: '2025-05-29T05:01:00.000Z',
+  //   duration_in_minutes: 60,
+  //   type: 'evaluation-release',
+  //   id_resource: 1947886,
+  //   associated_resource: {
+  //     id: 1,
+  //     name: 'Se habilita para responder "MCH y MCV"',
+  //     description: 'MCH o MCV',
+  //   },
+  //   url: null,
+  //   course: {
+  //     id: 40711,
+  //     name: '[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesoss',
+  //   },
+  //   translatedTitle: 'Se habilita para responder "MCH y MCV"',
+  //   formatedDate: {
+  //     day: 'jueves',
+  //     date: '29 may',
+  //     time: '0:01 hrs.',
+  //   },
+  // },
   {
     id: 62947,
     student_id: 17158893,
@@ -300,6 +301,35 @@ const events = [
     end: '2027-01-01T03:59:00.000Z',
     duration_in_minutes: 60,
     type: 'in-person',
+    id_resource: 848781,
+    associated_resource: {
+      id: 1,
+      name: 'CalendarEventDeadlineAnswer "Pregunta tipo archivo toma 2"',
+      description: 'Clase con Pruebas de Prueba',
+    },
+    url: null,
+    course: {
+      id: 22568,
+      name: 'Pruebas contenido v8',
+    },
+    translatedTitle: 'Fin del plazo para responder "Pregunta tipo archivo toma 2"',
+    formatedDate: {
+      day: 'jueves',
+      date: '31 dic',
+      time: '23:59 hrs.',
+    },
+  },
+  {
+    id: 808522222,
+    student_id: 17269014,
+    course_id: 22568,
+    class_id: 1,
+    status: 'SCHEDULED',
+    start: '2027-01-01T02:59:00.000Z',
+    end: '2027-01-01T03:59:00.000Z',
+    duration_in_minutes: 60,
+    type: 'in-person-presencial',
+    location_sede: 'Sede Santiago, sala 204',
     id_resource: 848781,
     associated_resource: {
       id: 1,
