@@ -1,3 +1,11 @@
+# [1.60.0](https://github.com/eclass/ui-kit/compare/v1.59.7...v1.60.0) (2026-06-04)
+
+
+### Features
+
+* **organisms:** agregamos modal simple y modal card ([#782](https://github.com/eclass/ui-kit/issues/782)) ([2fd5e7f](https://github.com/eclass/ui-kit/commit/2fd5e7f97765cb0a1ddbc9abdadede694b16c45f))
+* **organisms:** indicadores en eventos tipo clases ([#779](https://github.com/eclass/ui-kit/issues/779)) ([1ccd17a](https://github.com/eclass/ui-kit/commit/1ccd17ab031d6c666d83602fd433891d24e9d365))
+
 ## [1.59.7](https://github.com/eclass/ui-kit/compare/v1.59.6...v1.59.7) (2026-04-29)
 
 
