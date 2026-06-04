@@ -1,4 +1,6 @@
 export { Modal } from './Modal/Modal'
+export { ModalCard, ModalCardContent } from './Modal/ModalCard'
+export { ModalSimple } from './Modal/ModalSimple'
 export { ModalButtons, ModalContent } from './Modal/ModalButtons'
 export { ModalAlertNew, ModalAlertButtons } from './ModalAlert/ModalAlert'
 export { ModalMultiple } from './ModalMultiple/ModalMultiple'

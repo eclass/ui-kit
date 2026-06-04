@@ -1,4 +1,4 @@
-import { useDisclosure } from '@chakra-ui/react'
+import { Box, useDisclosure } from '@chakra-ui/react'
 
 import { BtnLink, BtnPrimary, BtnSecondary } from '@/molecules'
 import {
@@ -6,7 +6,10 @@ import {
   ModalAlertNew,
   ModalAlertButtons,
   ModalButtons,
+  ModalCard,
+  ModalCardContent,
   ModalContent,
+  ModalSimple,
 } from '@/organisms/Modals/'
 import { ModalMultiple, ModalMultipleProps } from '@/organisms/Modals/ModalMultiple/ModalMultiple'
 import { useState } from 'react'
@@ -298,6 +301,66 @@ export const ModalAlertDemo = ({
           </BtnLink>
         </ModalAlertButtons>
       </ModalAlertNew>
+    </>
+  )
+}
+
+export const ModalSimpleDemo = (): JSX.Element => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  return (
+    <>
+      <BtnPrimary onClick={onOpen}>ModalSimple</BtnPrimary>
+      <ModalSimple isOpen={isOpen} onClose={onClose}>
+        <p>{text}</p>
+      </ModalSimple>
+    </>
+  )
+}
+
+export const ModalCardDemo = (): JSX.Element => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  return (
+    <>
+      <BtnPrimary onClick={onOpen}>ModalCard</BtnPrimary>
+      <ModalCard isOpen={isOpen} onClose={onClose}>
+        <ModalCardContent>
+          <Box display="flex" flexDirection="column" alignItems="center" textAlign="center">
+            <Box as="p" fontSize="20px" fontWeight={700} lineHeight="24px" mb="16px">
+              !Has ganado una nueva medalla!
+            </Box>
+            <Box
+              w="120px"
+              h="120px"
+              borderRadius="16px"
+              bg="#E0EEFA"
+              mb="16px"
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              fontSize="14px"
+              fontWeight={700}
+            >
+              Medal
+            </Box>
+            <Box as="p" fontSize="16px" fontWeight={700} lineHeight="24px" mb="8px">
+              Blast off
+            </Box>
+            <Box as="p" fontSize="16px" lineHeight="24px" color="#808080" mb="16px">
+              ¡Felicitaciones, has comenzado tu viaje de estudio!
+            </Box>
+            <BtnLink as="button" onClick={onClose}>
+              Ver mis medallas
+            </BtnLink>
+          </Box>
+        </ModalCardContent>
+        <ModalAlertButtons>
+          <BtnLink as="button" onClick={onClose}>
+            Entendido
+          </BtnLink>
+        </ModalAlertButtons>
+      </ModalCard>
     </>
   )
 }
