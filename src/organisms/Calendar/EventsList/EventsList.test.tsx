@@ -45,6 +45,19 @@ describe('EventsList', () => {
     expect(screen.getByText('Evento demo')).toBeInTheDocument()
   })
 
+  it('renders unavailable label and does not call onClick when url is empty', async () => {
+    const onClick = jest.fn()
+    const user = userEvent.setup()
+
+    renderComponent(onClick, { url: '' })
+
+    expect(screen.getByText('Aún no disponible')).toBeInTheDocument()
+
+    await user.click(screen.getByText('Evento demo'))
+
+    expect(onClick).not.toHaveBeenCalled()
+  })
+
   it('renders duration for online or in-person events with positive minutes', () => {
     const { container } = renderComponent(undefined, { duration: 40 })
 

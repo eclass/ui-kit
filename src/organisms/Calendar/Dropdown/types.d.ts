@@ -26,6 +26,7 @@ export interface Event {
   isNew?: boolean
   translatedTitle: string
   type: string
+  url?: string | null
 }
 
 export type Events = Event[]

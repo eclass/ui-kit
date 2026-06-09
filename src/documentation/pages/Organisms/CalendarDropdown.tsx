@@ -193,7 +193,7 @@ const events = [
       name: 'Inicio del plazo para realizar "Caso 2: Evaluado (con grupo de notas y sin rúbrica)"',
       description: 'Unidad 2',
     },
-    url: null,
+    url: '/demo',
     course: {
       id: 40711,
       name: '[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesoss',
@@ -250,7 +250,7 @@ const events = [
       name: 'CalendarEventDeadlineAnswer "Control 3"',
       description: 'Unidad 3',
     },
-    url: null,
+    url: '/demo',
     course: {
       id: 40711,
       name: '[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesoss',
@@ -278,7 +278,7 @@ const events = [
       name: 'CalendarEventDeadlineAnswer "Con intentos y tiempo"',
       description: 'Clase con Pruebas de Prueba',
     },
-    url: null,
+    url: '/demo',
     course: {
       id: 22568,
       name: 'Pruebas contenido v8',
@@ -306,7 +306,7 @@ const events = [
       name: 'CalendarEventDeadlineAnswer "Pregunta tipo archivo toma 2"',
       description: 'Clase con Pruebas de Prueba',
     },
-    url: null,
+    url: '/demo',
     course: {
       id: 22568,
       name: 'Pruebas contenido v8',
@@ -334,7 +334,7 @@ const events = [
       name: 'CalendarEventDeadlineAnswer "Prueba pregunta text con tiempo"',
       description: 'Unit 1',
     },
-    url: null,
+    url: '/demo',
     course: {
       id: 22568,
       name: 'Pruebas contenido v8',
@@ -362,7 +362,7 @@ const events = [
       name: 'CalendarEventDeadlineAnswer "Control refactor de la alerta"',
       description: 'Clase con Pruebas de Prueba',
     },
-    url: null,
+    url: '/demo',
     course: {
       id: 22568,
       name: 'Pruebas contenido v8',
