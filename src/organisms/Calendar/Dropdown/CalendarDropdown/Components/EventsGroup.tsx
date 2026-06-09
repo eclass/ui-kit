@@ -82,6 +82,7 @@ export const EventsGroup = ({
                   text={text}
                   type={event.type}
                   hasNotification={event.isNew}
+                  headquartersAddress={event.headquarters_address}
                   onClick={eventOnClick}
                   showCourse
                   url={event.url ?? ''}

@@ -1,5 +1,5 @@
 import { TinyAlert } from '@/atoms'
-import { Remote, Time } from '@/atoms/Icons'
+import { MapIndicator, Remote, Time } from '@/atoms/Icons'
 import { Box } from '@chakra-ui/react'
 import { vars } from '@theme'
 
@@ -13,6 +13,7 @@ export interface IEventList {
   duration?: number
   name: string
   hasNotification?: boolean
+  headquartersAddress?: string | null
   onClick?: () => void
   showCourse?: boolean
   showUnit?: boolean
@@ -32,6 +33,7 @@ export const EventsList = ({
   duration,
   name,
   hasNotification,
+  headquartersAddress,
   onClick,
   showCourse,
   showUnit,
@@ -44,12 +46,15 @@ export const EventsList = ({
 }: IEventList): JSX.Element => {
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
-  const isAvailable = url === undefined ? true : Boolean(url)
-  const isClickable = Boolean(onClick) && isAvailable
+  const hasUrl = Boolean(url)
+  const isAvailable = url === undefined ? true : hasUrl
+  const isClickable = Boolean(onClick) && hasUrl
   const disabledOpacity = isAvailable ? 1 : 0.5
+  const isCpr = type === 'cpr'
+  const showEventLocation = !isCpr || Boolean(headquartersAddress)
 
   const showEventDuration =
-    ['online', 'in-person'].includes(type) && duration !== undefined && duration > 0
+    ['online', 'in-person', 'cpr'].includes(type) && duration !== undefined && duration > 0
 
   const initOrEnd = [
     'end-course',
@@ -160,17 +165,23 @@ export const EventsList = ({
 
           {showEventDuration && (
             <Box display="flex" flexDirection="row" gap="8px" flexWrap="wrap">
-              <Box
-                as="span"
-                sx={detailTextStyle}
-                paddingRight="8px"
-                borderRight={`1px solid ${vars('colors-neutral-platinum')}`}
-              >
-                <Box as="span" sx={eventIconStyle}>
-                  <Remote color={vars('colors-main-ziggurat')} />
+              {showEventLocation && (
+                <Box
+                  as="span"
+                  sx={detailTextStyle}
+                  paddingRight="8px"
+                  borderRight={`1px solid ${vars('colors-neutral-platinum')}`}
+                >
+                  <Box as="span" sx={eventIconStyle}>
+                    {isCpr ? (
+                      <MapIndicator color={vars('colors-main-ziggurat')} />
+                    ) : (
+                      <Remote color={vars('colors-main-ziggurat')} />
+                    )}
+                  </Box>
+                  {isCpr ? headquartersAddress : 'Link clase online'}
                 </Box>
-                Link clase online
-              </Box>
+              )}
               <Box as="span" sx={detailTextStyle}>
                 <Box as="span" sx={eventIconStyle}>
                   <Time color={vars('colors-main-ziggurat')} />

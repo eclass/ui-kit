@@ -64,4 +64,19 @@ describe('EventsGroup', () => {
 
     expect(onClickEvent).toHaveBeenCalledWith(event)
   })
+
+  it('renders headquarters address for cpr events', () => {
+    const event = {
+      ...baseEvent,
+      duration_in_minutes: 40,
+      headquarters_address: 'Sede Apoquindo',
+      type: 'cpr',
+      url: 'https://example.com/cpr',
+    }
+
+    renderComponent(event)
+
+    expect(screen.getByText('Sede Apoquindo')).toBeInTheDocument()
+    expect(screen.queryByText('Link clase online')).not.toBeInTheDocument()
+  })
 })

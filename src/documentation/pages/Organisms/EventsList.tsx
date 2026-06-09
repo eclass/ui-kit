@@ -57,6 +57,10 @@ export const EventsListPage = (): JSX.Element => {
         Dentro del menú dropdown y las modales que se abren en la vista calendario, se muestra el
         detalle del nombre del curso al que pertenece el evento.
         <br />
+        Los eventos de tipo <strong>cpr</strong> muestran la dirección de la sede recibida en{' '}
+        <strong>headquartersAddress</strong>. Si este dato no llega, no se muestra ni el texto de
+        sede ni el ícono de ubicación.
+        <br />
         Para esto, el componente debe recibir los props{' '}
         <ul style={{ listStylePosition: 'inside' }}>
           <li>
@@ -66,6 +70,12 @@ export const EventsListPage = (): JSX.Element => {
             <strong>courseName</strong>, con el nombre del curso
           </li>
         </ul>
+      </MyText>
+
+      <MyText>
+        El evento solo se comporta como clickeable cuando recibe tanto <strong>onClick</strong> como{' '}
+        <strong>url</strong>. Si <strong>url</strong> llega vacío o nulo, se muestra el estado{' '}
+        <strong>Aún no disponible</strong> y se deshabilita la interacción.
       </MyText>
 
       <Box border={`1px solid ${vars('colors-neutral-platinum')}`} borderTop="none">
@@ -81,6 +91,20 @@ export const EventsListPage = (): JSX.Element => {
           showCourse
           courseName="[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesos"
           duration={40}
+        />
+        <EventsList
+          color="#00857A"
+          key="2"
+          name='Clase presencial "Taller de caso"'
+          day="sábado"
+          date="01 jul"
+          time="10:00 hrs."
+          text="Curso"
+          type="cpr"
+          showCourse
+          courseName="[Pruebas TI] - Herramientas para la Gestión Estratégica de Procesos"
+          duration={120}
+          headquartersAddress="Sede Apoquindo"
         />
       </Box>
 
@@ -121,13 +145,14 @@ export const EventsListPage = (): JSX.Element => {
       <Code
         text={`
 interface IEventList {
-  color?: string // Color del curso asociado
-  day: string // Día de la semana
-  date: string // Fecha 
-  duration_in_minutes?: number // Duración del evento en minutos
+	  color?: string // Color del curso asociado
+	  day: string // Día de la semana
+	  date: string // Fecha 
+	  duration?: number // Duración del evento en minutos
   time: string // Hora
   name: string // Nombre del evento
   hasNotification?: boolean // Indica si el evento tiene notificación
+  headquartersAddress?: string | null // Dirección de la sede para eventos CPR
   onClick?: () => void // Permite usar el item como elemento clickeable
   showCourse?: boolean // Indica si se muestra el curso
   showUnit?: boolean // Indica si se muestra la unidad
@@ -135,6 +160,8 @@ interface IEventList {
   unitName?: string // Nombre de la unidad
   text: string // "Curso"
   type: string // Identificador del tipo de evento
+  unavailableLabel?: string // Texto del estado no disponible
+  url?: string | null // URL requerida junto a onClick para habilitar interacción
 }
         `}
       />

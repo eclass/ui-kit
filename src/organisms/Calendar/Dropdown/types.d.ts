@@ -22,6 +22,7 @@ export interface Event {
   end: string
   start: string
   formatedDate: FormattedDate
+  headquarters_address?: string | null
   id: number
   isNew?: boolean
   translatedTitle: string

@@ -62,9 +62,10 @@ interface ICalendarDropdown {
 
       <MyTitle>onClickEvent</MyTitle>
       <MyText>
-        El prop <strong>onClickEvent</strong> es opcional. Si se envía, se ejecuta al presionar
-        cualquiera de los eventos del dropdown y entrega hacia arriba la información completa del
-        evento seleccionado.
+        El prop <strong>onClickEvent</strong> es opcional. Si se envía, se ejecuta al presionar un
+        evento del dropdown siempre que ese evento también tenga <strong>url</strong>, y entrega
+        hacia arriba la información completa del evento seleccionado. Los eventos sin URL se
+        muestran como no disponibles y no ejecutan el callback.
       </MyText>
       <Code
         text={`
@@ -100,6 +101,8 @@ interface ICalendarDropdown {
   start: '2025-05-28T04:01:00.000Z',
   end: '2025-05-28T05:01:00.000Z',
   type: 'work-release',
+  url: '/demo',
+  headquarters_address: null,
   translatedTitle: 'Inicio del plazo para realizar "Caso 2: Evaluado (con grupo de notas y sin rúbrica)"',
   associated_resource: {
     id: 1,
@@ -271,7 +274,7 @@ const events = [
     start: '2027-01-01T02:59:00.000Z',
     end: '2027-01-01T03:59:00.000Z',
     duration_in_minutes: 60,
-    type: 'cv-events',
+    type: 'cpr',
     id_resource: 853909,
     associated_resource: {
       id: 1,
@@ -279,6 +282,7 @@ const events = [
       description: 'Clase con Pruebas de Prueba',
     },
     url: '/demo',
+    headquarters_address: 'Av. Apoquindo 12345, Santiago',
     course: {
       id: 22568,
       name: 'Pruebas contenido v8',
