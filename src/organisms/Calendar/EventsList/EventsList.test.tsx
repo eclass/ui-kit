@@ -32,11 +32,22 @@ describe('EventsList', () => {
     const onClick = jest.fn()
     const user = userEvent.setup()
 
-    renderComponent(onClick)
+    renderComponent(onClick, { url: '/demo' })
 
     await user.click(screen.getByText('Evento demo'))
 
     expect(onClick).toHaveBeenCalledTimes(1)
+  })
+
+  it('does not call onClick when url is not provided', async () => {
+    const onClick = jest.fn()
+    const user = userEvent.setup()
+
+    renderComponent(onClick)
+
+    await user.click(screen.getByText('Evento demo'))
+
+    expect(onClick).not.toHaveBeenCalled()
   })
 
   it('renders the item when onClick is not provided', () => {
@@ -45,10 +56,46 @@ describe('EventsList', () => {
     expect(screen.getByText('Evento demo')).toBeInTheDocument()
   })
 
+  it('renders unavailable label and does not call onClick when url is empty', async () => {
+    const onClick = jest.fn()
+    const user = userEvent.setup()
+
+    renderComponent(onClick, { url: '' })
+
+    expect(screen.getByText('Aún no disponible')).toBeInTheDocument()
+
+    await user.click(screen.getByText('Evento demo'))
+
+    expect(onClick).not.toHaveBeenCalled()
+  })
+
   it('renders duration for online or in-person events with positive minutes', () => {
     const { container } = renderComponent(undefined, { duration: 40 })
 
     expect(screen.getByText('Link clase online')).toBeInTheDocument()
+    expect(container).toHaveTextContent(/40\s*min/)
+  })
+
+  it('renders headquarters address instead of online class link for cpr events', () => {
+    const { container } = renderComponent(undefined, {
+      duration: 40,
+      headquartersAddress: 'Sede Apoquindo',
+      type: 'cpr',
+    })
+
+    expect(screen.getByText('Sede Apoquindo')).toBeInTheDocument()
+    expect(screen.queryByText('Link clase online')).not.toBeInTheDocument()
+    expect(container).toHaveTextContent(/40\s*min/)
+  })
+
+  it('does not render location text when cpr event has no headquarters address', () => {
+    const { container } = renderComponent(undefined, {
+      duration: 40,
+      headquartersAddress: null,
+      type: 'cpr',
+    })
+
+    expect(screen.queryByText('Link clase online')).not.toBeInTheDocument()
     expect(container).toHaveTextContent(/40\s*min/)
   })
 

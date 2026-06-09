@@ -45,17 +45,20 @@ export const EventsGroup = ({
       >
         <MenuGroup title={title}>
           {events.map((event: Event) => {
+            const hasUrl = Boolean(event.url)
+            const eventOnClick = onClickEvent && hasUrl ? () => onClickEvent(event) : undefined
+
             return (
               // Una vez que el evento se comporte como link, se debe cambiar Box a MenuItem y aplicar el efecto de focus
               <Box
                 bg={vars('colors-neutral-white') ?? '#FFFFFF'}
                 border="none"
-                cursor={onClickEvent ? 'pointer' : 'default'}
+                cursor={eventOnClick ? 'pointer' : 'default'}
                 padding="0"
                 key={event.id}
                 _hover={{
                   boxShadow: 'none !important',
-                  cursor: onClickEvent ? 'pointer !important' : 'default !important',
+                  cursor: eventOnClick ? 'pointer !important' : 'default !important',
                   bg: 'none !important',
                 }}
                 _focus={{
@@ -79,8 +82,10 @@ export const EventsGroup = ({
                   text={text}
                   type={event.type}
                   hasNotification={event.isNew}
-                  onClick={onClickEvent ? () => onClickEvent(event) : undefined}
+                  headquartersAddress={event.headquarters_address}
+                  onClick={eventOnClick}
                   showCourse
+                  url={event.url ?? ''}
                 />
               </Box>
             )
