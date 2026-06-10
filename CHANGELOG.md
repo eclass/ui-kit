@@ -1,3 +1,10 @@
+## [1.60.1](https://github.com/eclass/ui-kit/compare/v1.60.0...v1.60.1) (2026-06-10)
+
+
+### Bug Fixes
+
+* **calendar-dropdown:** deshabilitamos click en eventos ([#784](https://github.com/eclass/ui-kit/issues/784)) ([97da33f](https://github.com/eclass/ui-kit/commit/97da33fda452ea9e58fade7ab404bb9ae322c26c))
+
 # [1.60.0](https://github.com/eclass/ui-kit/compare/v1.59.7...v1.60.0) (2026-06-04)
 
 
