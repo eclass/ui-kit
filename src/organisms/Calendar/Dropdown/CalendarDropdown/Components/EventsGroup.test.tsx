@@ -53,7 +53,7 @@ describe('EventsGroup', () => {
     expect(onClickEvent).not.toHaveBeenCalled()
   })
 
-  it('calls onClickEvent when event has url', async () => {
+  it('does not call onClickEvent when event has url', async () => {
     const user = userEvent.setup()
     const onClickEvent = jest.fn()
     const event = { ...baseEvent, url: 'https://example.com/evaluation-2' }
@@ -62,7 +62,7 @@ describe('EventsGroup', () => {
 
     await user.click(screen.getByText('Se habilita para responder “Evaluación 2”'))
 
-    expect(onClickEvent).toHaveBeenCalledWith(event)
+    expect(onClickEvent).not.toHaveBeenCalled()
   })
 
   it('renders headquarters address for cpr events', () => {

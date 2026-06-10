@@ -48,7 +48,8 @@ export const EventsList = ({
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
   const hasUrl = Boolean(url)
   const isAvailable = url === undefined ? true : hasUrl
-  const isClickable = Boolean(onClick) && hasUrl
+  const eventClicksEnabled = false
+  const isClickable = eventClicksEnabled && Boolean(onClick) && hasUrl
   const disabledOpacity = isAvailable ? 1 : 0.5
   const isCpr = type === 'cpr'
   const showEventLocation = !isCpr || Boolean(headquartersAddress)
