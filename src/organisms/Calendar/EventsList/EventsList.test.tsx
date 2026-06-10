@@ -28,7 +28,7 @@ const renderComponent = (
   )
 
 describe('EventsList', () => {
-  it('calls onClick when the item is clicked', async () => {
+  it('does not call onClick when the item is clicked even with url', async () => {
     const onClick = jest.fn()
     const user = userEvent.setup()
 
@@ -36,7 +36,7 @@ describe('EventsList', () => {
 
     await user.click(screen.getByText('Evento demo'))
 
-    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(onClick).not.toHaveBeenCalled()
   })
 
   it('does not call onClick when url is not provided', async () => {
