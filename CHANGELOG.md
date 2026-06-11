@@ -1,3 +1,10 @@
+## [1.60.2](https://github.com/eclass/ui-kit/compare/v1.60.1...v1.60.2) (2026-06-11)
+
+
+### Bug Fixes
+
+* **calendar-dropdown:** quitamos opacidad en eventos no disponibles ([#785](https://github.com/eclass/ui-kit/issues/785)) ([c4c0deb](https://github.com/eclass/ui-kit/commit/c4c0debc3d83105c97c32ab77f117395feafff77))
+
 ## [1.60.1](https://github.com/eclass/ui-kit/compare/v1.60.0...v1.60.1) (2026-06-10)
 
 
