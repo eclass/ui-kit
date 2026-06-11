@@ -56,13 +56,13 @@ describe('EventsList', () => {
     expect(screen.getByText('Evento demo')).toBeInTheDocument()
   })
 
-  it('renders unavailable label and does not call onClick when url is empty', async () => {
+  it('does not render unavailable label and does not call onClick when url is empty', async () => {
     const onClick = jest.fn()
     const user = userEvent.setup()
 
     renderComponent(onClick, { url: '' })
 
-    expect(screen.getByText('Aún no disponible')).toBeInTheDocument()
+    expect(screen.queryByText('Aún no disponible')).not.toBeInTheDocument()
 
     await user.click(screen.getByText('Evento demo'))
 

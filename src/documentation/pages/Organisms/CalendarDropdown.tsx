@@ -64,8 +64,8 @@ interface ICalendarDropdown {
       <MyText>
         El prop <strong>onClickEvent</strong> es opcional. Si se envía, se ejecuta al presionar un
         evento del dropdown siempre que ese evento también tenga <strong>url</strong>, y entrega
-        hacia arriba la información completa del evento seleccionado. Los eventos sin URL se
-        muestran como no disponibles y no ejecutan el callback.
+        hacia arriba la información completa del evento seleccionado. Los eventos sin URL no
+        ejecutan el callback.
       </MyText>
       <Code
         text={`

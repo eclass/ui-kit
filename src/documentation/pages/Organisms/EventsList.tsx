@@ -74,8 +74,8 @@ export const EventsListPage = (): JSX.Element => {
 
       <MyText>
         El evento solo se comporta como clickeable cuando recibe tanto <strong>onClick</strong> como{' '}
-        <strong>url</strong>. Si <strong>url</strong> llega vacío o nulo, se muestra el estado{' '}
-        <strong>Aún no disponible</strong> y se deshabilita la interacción.
+        <strong>url</strong>. Si <strong>url</strong> llega vacío o nulo, se deshabilita la
+        interacción.
       </MyText>
 
       <Box border={`1px solid ${vars('colors-neutral-platinum')}`} borderTop="none">
@@ -160,7 +160,6 @@ interface IEventList {
   unitName?: string // Nombre de la unidad
   text: string // "Curso"
   type: string // Identificador del tipo de evento
-  unavailableLabel?: string // Texto del estado no disponible
   url?: string | null // URL requerida junto a onClick para habilitar interacción
 }
         `}
