@@ -40,13 +40,13 @@ const renderComponent = (event: Event, onClickEvent = jest.fn()): RenderResult =
   )
 
 describe('EventsGroup', () => {
-  it('renders unavailable event label and does not call onClickEvent when url is empty', async () => {
+  it('does not render unavailable event label and does not call onClickEvent when url is empty', async () => {
     const user = userEvent.setup()
     const onClickEvent = jest.fn()
 
     renderComponent(baseEvent, onClickEvent)
 
-    expect(screen.getByText('Aún no disponible')).toBeInTheDocument()
+    expect(screen.queryByText('Aún no disponible')).not.toBeInTheDocument()
 
     await user.click(screen.getByText('Se habilita para responder “Evaluación 2”'))
 

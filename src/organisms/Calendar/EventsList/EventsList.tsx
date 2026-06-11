@@ -1,4 +1,3 @@
-import { TinyAlert } from '@/atoms'
 import { MapIndicator, Remote, Time } from '@/atoms/Icons'
 import { Box } from '@chakra-ui/react'
 import { vars } from '@theme'
@@ -21,7 +20,6 @@ export interface IEventList {
   text: string
   type: string
   unitName?: string
-  unavailableLabel?: string
   url?: string | null
 }
 
@@ -41,16 +39,13 @@ export const EventsList = ({
   text,
   type,
   unitName,
-  unavailableLabel = 'Aún no disponible',
   url,
 }: IEventList): JSX.Element => {
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
   const hasUrl = Boolean(url)
-  const isAvailable = url === undefined ? true : hasUrl
   const eventClicksEnabled = false
   const isClickable = eventClicksEnabled && Boolean(onClick) && hasUrl
-  const disabledOpacity = isAvailable ? 1 : 0.5
   const isCpr = type === 'cpr'
   const showEventLocation = !isCpr || Boolean(headquartersAddress)
 
@@ -111,7 +106,6 @@ export const EventsList = ({
         display="flex"
         flexDirection="column"
         justifyContent="space-around"
-        opacity={disabledOpacity}
       >
         <Box as="span" sx={dateTextStyle}>
           {day}
@@ -123,20 +117,7 @@ export const EventsList = ({
       </Box>
 
       <Box display="flex" flexDirection="column" gap="8px" w="100%">
-        {!isAvailable && (
-          <TinyAlert
-            status="warning"
-            text={unavailableLabel}
-            sx={{
-              padding: '4px 6px',
-              '> span': {
-                fontSize: '12px',
-              },
-            }}
-          />
-        )}
-
-        <Box display="flex" flexDirection="column" gap="8px" opacity={disabledOpacity}>
+        <Box display="flex" flexDirection="column" gap="8px">
           <Box
             alignItems="center"
             display="flex"
