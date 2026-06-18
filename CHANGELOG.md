@@ -1,3 +1,10 @@
+## [1.60.3](https://github.com/eclass/ui-kit/compare/v1.60.2...v1.60.3) (2026-06-18)
+
+
+### Reverts
+
+* Revert "fix(calendar-dropdown): deshabilitamos click en eventos (#784)" ([b446019](https://github.com/eclass/ui-kit/commit/b446019cf467d04d5a0d151df576d525c35b9cbe)), closes [#784](https://github.com/eclass/ui-kit/issues/784)
+
 ## [1.60.2](https://github.com/eclass/ui-kit/compare/v1.60.1...v1.60.2) (2026-06-11)
 
 
