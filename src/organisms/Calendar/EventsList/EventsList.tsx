@@ -44,8 +44,7 @@ export const EventsList = ({
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
   const hasUrl = Boolean(url)
-  const eventClicksEnabled = false
-  const isClickable = eventClicksEnabled && Boolean(onClick) && hasUrl
+  const isClickable = Boolean(onClick) && hasUrl
   const isCpr = type === 'cpr'
   const showEventLocation = !isCpr || Boolean(headquartersAddress)
 

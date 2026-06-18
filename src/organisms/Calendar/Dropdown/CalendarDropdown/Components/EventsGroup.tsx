@@ -29,8 +29,6 @@ export const EventsGroup = ({
 }: IEventsGroupProps): JSX.Element => {
   if (!events || (events && events.length === 0)) return <></>
 
-  const eventClicksEnabled = false
-
   return (
     <>
       <Box
@@ -55,15 +53,12 @@ export const EventsGroup = ({
               <Box
                 bg={vars('colors-neutral-white') ?? '#FFFFFF'}
                 border="none"
-                cursor={eventClicksEnabled && eventOnClick ? 'pointer' : 'default'}
+                cursor={eventOnClick ? 'pointer' : 'default'}
                 padding="0"
                 key={event.id}
                 _hover={{
                   boxShadow: 'none !important',
-                  cursor:
-                    eventClicksEnabled && eventOnClick
-                      ? 'pointer !important'
-                      : 'default !important',
+                  cursor: eventOnClick ? 'pointer !important' : 'default !important',
                   bg: 'none !important',
                 }}
                 _focus={{
