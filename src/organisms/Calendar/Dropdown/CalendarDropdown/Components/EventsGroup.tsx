@@ -85,7 +85,6 @@ export const EventsGroup = ({
                   headquartersAddress={event.headquarters_address}
                   onClick={eventOnClick}
                   showCourse
-                  url={event.url ?? ''}
                 />
               </Box>
             )

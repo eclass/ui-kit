@@ -32,7 +32,7 @@ describe('EventsList', () => {
     const onClick = jest.fn()
     const user = userEvent.setup()
 
-    renderComponent(onClick, { url: '/demo' })
+    renderComponent(onClick)
 
     await user.click(screen.getByText('Evento demo'))
 
@@ -60,7 +60,7 @@ describe('EventsList', () => {
     const onClick = jest.fn()
     const user = userEvent.setup()
 
-    renderComponent(onClick, { url: '' })
+    renderComponent(onClick)
 
     expect(screen.queryByText('Aún no disponible')).not.toBeInTheDocument()
 

@@ -20,7 +20,6 @@ export interface IEventList {
   text: string
   type: string
   unitName?: string
-  url?: string | null
 }
 
 export const EventsList = ({
@@ -39,12 +38,9 @@ export const EventsList = ({
   text,
   type,
   unitName,
-  url,
 }: IEventList): JSX.Element => {
   const border = `1px solid ${vars('colors-neutral-platinum') ?? '#E8E8E8'}`
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
-  const hasUrl = Boolean(url)
-  const isClickable = Boolean(onClick) && hasUrl
   const isCpr = type === 'cpr'
   const showEventLocation = !isCpr || Boolean(headquartersAddress)
 
@@ -88,11 +84,11 @@ export const EventsList = ({
       borderTop={border}
       display="flex"
       gap="12px"
-      cursor={isClickable ? 'pointer' : 'default'}
-      onClick={isClickable ? onClick : undefined}
+      cursor={'pointer'}
+      onClick={onClick}
       p="16px"
       transition="background-color 0.2s ease"
-      _hover={isClickable ? { bg: hoverBg } : undefined}
+      _hover={{ bg: hoverBg }}
     >
       <Box
         bg={color}
