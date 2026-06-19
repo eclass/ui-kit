@@ -1,3 +1,11 @@
+## [1.60.4](https://github.com/eclass/ui-kit/compare/v1.60.3...v1.60.4) (2026-06-19)
+
+
+### Bug Fixes
+
+* **calendar:** corregimos lint en cursor de eventos ([464eede](https://github.com/eclass/ui-kit/commit/464eede8d631146fee8144fa8b3a969f81c2377b))
+* **calendar:** habilitamos click en eventos sin url ([05288e1](https://github.com/eclass/ui-kit/commit/05288e13913bb266ab53a1b24adcb966d7696c78))
+
 ## [1.60.3](https://github.com/eclass/ui-kit/compare/v1.60.2...v1.60.3) (2026-06-18)
 
 
