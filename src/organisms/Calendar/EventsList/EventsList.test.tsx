@@ -39,7 +39,7 @@ describe('EventsList', () => {
     expect(onClick).toHaveBeenCalledTimes(1)
   })
 
-  it('does not call onClick when url is not provided', async () => {
+  it('calls onClick when url is not provided', async () => {
     const onClick = jest.fn()
     const user = userEvent.setup()
 
@@ -47,7 +47,7 @@ describe('EventsList', () => {
 
     await user.click(screen.getByText('Evento demo'))
 
-    expect(onClick).not.toHaveBeenCalled()
+    expect(onClick).toHaveBeenCalledTimes(1)
   })
 
   it('renders the item when onClick is not provided', () => {
@@ -56,7 +56,7 @@ describe('EventsList', () => {
     expect(screen.getByText('Evento demo')).toBeInTheDocument()
   })
 
-  it('does not render unavailable label and does not call onClick when url is empty', async () => {
+  it('does not render unavailable label and calls onClick when url is empty', async () => {
     const onClick = jest.fn()
     const user = userEvent.setup()
 
@@ -66,7 +66,7 @@ describe('EventsList', () => {
 
     await user.click(screen.getByText('Evento demo'))
 
-    expect(onClick).not.toHaveBeenCalled()
+    expect(onClick).toHaveBeenCalledTimes(1)
   })
 
   it('renders duration for online or in-person events with positive minutes', () => {
