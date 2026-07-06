@@ -14,6 +14,10 @@ export interface IModal {
   /** Si esta activo se fija el footer */
   fixedButtons?: boolean
   autoFocus?: boolean
+  minWidth?: string | number
+  maxWidth?: string | number
+  minHeight?: string | number
+  maxHeight?: string | number
 }
 
 export interface IModalSimple {
@@ -23,6 +27,8 @@ export interface IModalSimple {
   isOpen: boolean
   onClose: () => void
   withoutMargin?: boolean
+  /** Si está activo en mobile se comporta como una tarjeta compacta centrada */
+  mobileCompact?: boolean
 }
 
 export interface IModalCard {

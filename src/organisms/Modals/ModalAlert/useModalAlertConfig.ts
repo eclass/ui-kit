@@ -21,7 +21,7 @@ export const useModalAlertConfig = (): ModalConfig => {
       p: 0,
       m: '10vh auto 0',
       sx: {
-        maxWidth: isDesktop ? '589px' : '343px',
+        maxWidth: isDesktop ? '589px' : 'calc(100vw - 32px)',
       },
     },
   }

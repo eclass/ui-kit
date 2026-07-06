@@ -15,6 +15,10 @@ export interface ModalDefaultProps {
   withoutMargin?: IModal['withoutMargin']
   scrollBehavior?: IModal['scrollBehavior']
   fixedButtons?: IModal['fixedButtons']
+  minWidth?: IModal['minWidth']
+  maxWidth?: IModal['maxWidth']
+  minHeight?: IModal['minHeight']
+  maxHeight?: IModal['maxHeight']
 }
 
 type BaseProps = ModalDefaultProps & {
@@ -88,6 +92,10 @@ export const ModalMultiple = (props: ModalMultipleProps): JSX.Element => {
     withoutMargin = false,
     scrollBehavior = 'outside',
     fixedButtons = false,
+    minWidth,
+    maxWidth,
+    minHeight,
+    maxHeight,
   } = props
 
   const modalConfig = useModalMultipleConfig({
@@ -96,6 +104,10 @@ export const ModalMultiple = (props: ModalMultipleProps): JSX.Element => {
     scrollBehavior,
     fixedButtons,
     withoutMargin,
+    minWidth,
+    maxWidth,
+    minHeight,
+    maxHeight,
   })
 
   const renderContent = (): JSX.Element | null => {
