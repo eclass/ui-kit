@@ -17,12 +17,14 @@ export const ModalSimple = ({
   closeOnOverlayClick = true,
   closeOnEsc,
   withoutMargin = false,
+  mobileCompact = false,
 }: IModalSimple): JSX.Element => {
   const modalConfig = useModalConfig({
     closeOnOverlayClick,
     scrollBehavior: 'outside',
     fixedButtons: false,
     withoutMargin,
+    mobileCompact,
   })
 
   return (
@@ -33,6 +35,7 @@ export const ModalSimple = ({
       motionPreset="scale"
       onClose={onClose}
       scrollBehavior="outside"
+      isCentered={mobileCompact}
       blockScrollOnMount={false}
     >
       <ModalOverlay />

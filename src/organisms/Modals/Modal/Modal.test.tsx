@@ -130,6 +130,24 @@ describe('Modal Component', () => {
       const modalContent = screen.getByRole('dialog')
       expect(modalContent).toBeInTheDocument()
     })
+
+    it('applies custom size props when provided', () => {
+      renderWithChakra(
+        <Modal
+          {...defaultProps}
+          minWidth="700px"
+          maxWidth="80vw"
+          minHeight="320px"
+          maxHeight="80vh"
+        />
+      )
+
+      const modalContent = screen.getByRole('dialog')
+      expect(modalContent).toHaveStyle('min-width: 700px')
+      expect(modalContent).toHaveStyle('max-width: 80vw')
+      expect(modalContent).toHaveStyle('min-height: 320px')
+      expect(modalContent).toHaveStyle('max-height: 80vh')
+    })
   })
 
   describe('Responsive Behavior', () => {

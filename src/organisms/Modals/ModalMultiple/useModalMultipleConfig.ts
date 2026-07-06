@@ -17,6 +17,10 @@ interface UseModalMultipleConfigParams {
   scrollBehavior: 'outside' | 'inside'
   fixedButtons: boolean
   withoutMargin: boolean
+  minWidth?: string | number
+  maxWidth?: string | number
+  minHeight?: string | number
+  maxHeight?: string | number
 }
 
 export const useModalMultipleConfig = ({
@@ -25,12 +29,20 @@ export const useModalMultipleConfig = ({
   scrollBehavior,
   fixedButtons,
   withoutMargin,
+  minWidth,
+  maxWidth,
+  minHeight,
+  maxHeight,
 }: UseModalMultipleConfigParams): ModalConfig => {
   const modalConfig = useModalConfig({
     closeOnOverlayClick,
     scrollBehavior,
     fixedButtons,
     withoutMargin,
+    minWidth,
+    maxWidth,
+    minHeight,
+    maxHeight,
   })
 
   const modalAlertConfig = useModalAlertConfig()

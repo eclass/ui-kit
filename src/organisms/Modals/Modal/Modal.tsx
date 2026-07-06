@@ -21,6 +21,10 @@ export const Modal = ({
   scrollBehavior = 'outside',
   fixedButtons = false,
   autoFocus = false,
+  minWidth,
+  maxWidth,
+  minHeight,
+  maxHeight,
 }: IModal): JSX.Element => {
   const isInside = scrollBehavior === 'inside' || fixedButtons
 
@@ -29,6 +33,10 @@ export const Modal = ({
     scrollBehavior,
     fixedButtons,
     withoutMargin,
+    minWidth,
+    maxWidth,
+    minHeight,
+    maxHeight,
   })
 
   return (
