@@ -1,3 +1,10 @@
+# [1.61.0](https://github.com/eclass/ui-kit/compare/v1.60.4...v1.61.0) (2026-07-06)
+
+
+### Features
+
+* **modals:** modal alerta ancho mobile modal simple compacto ([#786](https://github.com/eclass/ui-kit/issues/786)) ([0f01241](https://github.com/eclass/ui-kit/commit/0f012411356f0a8eaf13f9d18c4dc9dab6a3f83c))
+
 ## [1.60.4](https://github.com/eclass/ui-kit/compare/v1.60.3...v1.60.4) (2026-06-19)
 
 
