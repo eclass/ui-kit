@@ -14,6 +14,7 @@ export interface IModal {
   /** Si esta activo se fija el footer */
   fixedButtons?: boolean
   autoFocus?: boolean
+  returnFocusOnClose?: boolean
   minWidth?: string | number
   maxWidth?: string | number
   minHeight?: string | number
@@ -59,6 +60,7 @@ export interface IModalButtons {
 
 export interface IModalAlert {
   autoFocus?: boolean
+  returnFocusOnClose?: boolean
   children?: React.ReactNode
   isOpen: boolean
   onClose: () => void

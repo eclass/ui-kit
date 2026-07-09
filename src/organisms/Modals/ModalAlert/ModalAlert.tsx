@@ -8,6 +8,7 @@ import { useModalAlertConfig } from './useModalAlertConfig'
 export const ModalAlertNew = ({
   autoFocus = false,
   type,
+  returnFocusOnClose = true,
   isOpen,
   onClose,
   children,
@@ -25,6 +26,7 @@ export const ModalAlertNew = ({
         onClose={onClose}
         closeOnEsc={type !== 'loading'}
         autoFocus={autoFocus}
+        returnFocusOnClose={returnFocusOnClose}
       >
         <ModalOverlay />
         <ModalContent {...modalConfig.contentProps}>

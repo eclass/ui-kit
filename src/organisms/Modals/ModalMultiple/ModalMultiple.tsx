@@ -25,6 +25,7 @@ type BaseProps = ModalDefaultProps & {
   isOpen: boolean
   onClose: () => void
   autoFocus?: boolean
+  returnFocusOnClose?: boolean
 }
 
 type ModalProps = BaseProps & {
@@ -85,6 +86,7 @@ export const ModalMultiple = (props: ModalMultipleProps): JSX.Element => {
     isOpen,
     onClose,
     autoFocus = false,
+    returnFocusOnClose = true,
     children,
     title,
     closeOnOverlayClick = true,
@@ -149,6 +151,7 @@ export const ModalMultiple = (props: ModalMultipleProps): JSX.Element => {
       onClose={onClose}
       motionPreset="scale"
       autoFocus={autoFocus}
+      returnFocusOnClose={returnFocusOnClose}
       closeOnOverlayClick={modalConfig.closeOnOverlayClick}
       closeOnEsc={modalConfig.closeOnEsc}
       scrollBehavior={modalConfig.scrollBehavior}

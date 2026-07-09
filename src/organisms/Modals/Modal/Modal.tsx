@@ -21,6 +21,7 @@ export const Modal = ({
   scrollBehavior = 'outside',
   fixedButtons = false,
   autoFocus = false,
+  returnFocusOnClose = true,
   minWidth,
   maxWidth,
   minHeight,
@@ -48,6 +49,7 @@ export const Modal = ({
       onClose={onClose}
       scrollBehavior={isInside ? 'inside' : 'outside'}
       autoFocus={autoFocus}
+      returnFocusOnClose={returnFocusOnClose}
       blockScrollOnMount={false}
     >
       <ModalOverlay />
