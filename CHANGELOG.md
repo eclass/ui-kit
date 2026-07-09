@@ -1,3 +1,10 @@
+# [1.62.0](https://github.com/eclass/ui-kit/compare/v1.61.0...v1.62.0) (2026-07-09)
+
+
+### Features
+
+* **modals:** agregamos soporte returnFocusOnClose ([#787](https://github.com/eclass/ui-kit/issues/787)) ([0932a25](https://github.com/eclass/ui-kit/commit/0932a25c3673bafdbf9f7aa39f6d7e159ba6c161))
+
 # [1.61.0](https://github.com/eclass/ui-kit/compare/v1.60.4...v1.61.0) (2026-07-06)
 
 
