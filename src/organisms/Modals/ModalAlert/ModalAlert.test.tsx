@@ -1,4 +1,5 @@
-import { render, screen } from '@testing-library/react'
+import { useState } from 'react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { ChakraProvider } from '@chakra-ui/react'
 
@@ -15,6 +16,34 @@ jest.mock('@chakra-ui/react', () => {
 
 const renderWithChakra = (ui: React.ReactElement): any => {
   return render(<ChakraProvider>{ui}</ChakraProvider>)
+}
+
+const ModalAlertFocusHarness = ({
+  returnFocusOnClose = true,
+}: {
+  returnFocusOnClose?: boolean
+}): JSX.Element => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+      <button type="button" onClick={() => setIsOpen(true)}>
+        Open Alert
+      </button>
+      <ModalAlertNew
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Focus Alert"
+        type="info"
+        status="info"
+        returnFocusOnClose={returnFocusOnClose}
+      >
+        <button type="button" onClick={() => setIsOpen(false)}>
+          Close Alert
+        </button>
+      </ModalAlertNew>
+    </>
+  )
 }
 
 describe('ModalAlertNew Component', () => {
@@ -110,5 +139,21 @@ describe('ModalAlertNew Component', () => {
     )
 
     expect(screen.getByText('Custom Description Node')).toBeInTheDocument()
+  })
+
+  it('does not restore focus to trigger when returnFocusOnClose is false', async () => {
+    const user = userEvent.setup()
+    renderWithChakra(<ModalAlertFocusHarness returnFocusOnClose={false} />)
+
+    const trigger = screen.getByRole('button', { name: 'Open Alert' })
+    trigger.focus()
+
+    await user.click(trigger)
+    await user.click(screen.getByRole('button', { name: 'Close Alert' }))
+
+    await waitFor(() => {
+      expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+    })
+    expect(trigger).not.toHaveFocus()
   })
 })

@@ -1,5 +1,6 @@
+import { useState } from 'react'
 import { ChakraProvider } from '@chakra-ui/react'
-import { render, screen } from '@testing-library/react'
+import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { Modal } from './Modal'
@@ -15,6 +16,30 @@ jest.mock('@chakra-ui/react', () => {
 
 const renderWithChakra = (ui: React.ReactElement): any => {
   return render(<ChakraProvider>{ui}</ChakraProvider>)
+}
+
+const ModalFocusHarness = ({
+  returnFocusOnClose = true,
+}: {
+  returnFocusOnClose?: boolean
+}): JSX.Element => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <>
+      <button type="button" onClick={() => setIsOpen(true)}>
+        Open Modal
+      </button>
+      <Modal
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title="Focus Modal"
+        returnFocusOnClose={returnFocusOnClose}
+      >
+        <div>Focus Content</div>
+      </Modal>
+    </>
+  )
 }
 
 // Props por defecto para reducir repetición
@@ -97,6 +122,22 @@ describe('Modal Component', () => {
 
       await user.keyboard('{Escape}')
       expect(onCloseMock).not.toHaveBeenCalled()
+    })
+
+    it('does not restore focus to trigger when returnFocusOnClose is false', async () => {
+      const user = userEvent.setup()
+      renderWithChakra(<ModalFocusHarness returnFocusOnClose={false} />)
+
+      const trigger = screen.getByRole('button', { name: 'Open Modal' })
+      trigger.focus()
+
+      await user.click(trigger)
+      await user.click(screen.getByLabelText('Close'))
+
+      await waitFor(() => {
+        expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+      })
+      expect(trigger).not.toHaveFocus()
     })
   })
 
