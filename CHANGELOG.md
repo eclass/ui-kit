@@ -1,3 +1,10 @@
+# [1.63.0](https://github.com/eclass/ui-kit/compare/v1.62.0...v1.63.0) (2026-07-13)
+
+
+### Features
+
+* **calendar:** agrega clase isCourse al texto de curso ([#788](https://github.com/eclass/ui-kit/issues/788)) ([f9fde98](https://github.com/eclass/ui-kit/commit/f9fde98d517e6e1c4c36f8d0a6de0af327b7bdb4))
+
 # [1.62.0](https://github.com/eclass/ui-kit/compare/v1.61.0...v1.62.0) (2026-07-09)
 
 
