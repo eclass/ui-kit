@@ -43,6 +43,9 @@ export const EventsList = ({
   const hoverBg = vars('colors-neutral-cultured2') ?? '#F8F8F8'
   const isCpr = type === 'cpr'
   const showEventLocation = !isCpr || Boolean(headquartersAddress)
+  const courseLabel = text || 'Curso'
+  const showCourseLabel = type !== 'cv-events'
+  const isCourse = showCourseLabel && courseLabel === 'Curso'
 
   const showEventDuration =
     ['online', 'in-person', 'cpr'].includes(type) && duration !== undefined && duration > 0
@@ -68,6 +71,9 @@ export const EventsList = ({
     display: 'flex',
     gap: '4px',
     lineHeight: 'normal',
+    '&.isCourse': {
+      alignItems: 'self-start',
+    },
   }
 
   const eventIconStyle = {
@@ -134,9 +140,13 @@ export const EventsList = ({
           </Box>
 
           {showCourse && !initOrEnd && (
-            <Box as="span" sx={detailTextStyle}>
-              {type === 'cv-events' ? <></> : <strong>{text ? `${text}:` : 'Curso:'}</strong>}{' '}
-              {courseName}
+            <Box
+              as="span"
+              className={isCourse ? 'isCourse' : undefined}
+              data-testid="event-course"
+              sx={detailTextStyle}
+            >
+              {showCourseLabel && <strong>{courseLabel}:</strong>} {courseName}
             </Box>
           )}
 
