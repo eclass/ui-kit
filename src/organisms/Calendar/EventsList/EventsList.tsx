@@ -140,7 +140,12 @@ export const EventsList = ({
           </Box>
 
           {showCourse && !initOrEnd && (
-            <Box as="span" className={isCourse ? 'isCourse' : undefined} sx={detailTextStyle}>
+            <Box
+              as="span"
+              className={isCourse ? 'isCourse' : undefined}
+              data-testid="event-course"
+              sx={detailTextStyle}
+            >
               {showCourseLabel && <strong>{courseLabel}:</strong>} {courseName}
             </Box>
           )}
