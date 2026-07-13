@@ -111,4 +111,16 @@ describe('EventsList', () => {
     expect(screen.queryByText('Curso:')).not.toBeInTheDocument()
     expect(screen.getByText('Curso demo')).toBeInTheDocument()
   })
+
+  it('adds isCourse class when course label is shown', () => {
+    renderComponent(undefined, { text: '' })
+
+    expect(screen.getByText('Curso:').parentElement).toHaveClass('isCourse')
+  })
+
+  it('does not add isCourse class when course label is hidden for cv-events', () => {
+    renderComponent(undefined, { text: '', type: 'cv-events' })
+
+    expect(screen.getByText('Curso demo')).not.toHaveClass('isCourse')
+  })
 })
