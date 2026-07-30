@@ -32,7 +32,7 @@ export const ShareAndReviewModal = ({
   onClose,
   onContinue,
   onLeaveReview,
-}: ShareAndReviewProps) => {
+}: ShareAndReviewProps): JSX.Element => {
   const [hasClickedLinkedin, setHasClickedLinkedin] = useState(false)
 
   // Resetear el estado cada vez que se abre o cierra la modal
@@ -42,7 +42,7 @@ export const ShareAndReviewModal = ({
     }
   }, [isOpen])
 
-  const handleLinkedinClick = () => {
+  const handleLinkedinClick: () => void = () => {
     // 1. Ejecutamos la acción original de LinkedIn (abrir la nueva pestaña)
     if (onContinue) {
       onContinue()

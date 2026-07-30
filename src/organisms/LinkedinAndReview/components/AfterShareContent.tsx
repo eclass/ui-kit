@@ -14,7 +14,10 @@ export interface AfterShareContentProps {
   onLeaveReview?: () => void
 }
 
-export const AfterShareContent = ({ onClose, onLeaveReview }: AfterShareContentProps) => {
+export const AfterShareContent = ({
+  onClose,
+  onLeaveReview,
+}: AfterShareContentProps): JSX.Element => {
   return (
     <StyledFlex
       flexDir="column"

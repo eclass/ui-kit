@@ -29,7 +29,7 @@ interface InitialShareContentProps {
 export const InitialShareContent = ({
   handleLinkedinClick,
   onLeaveReview,
-}: InitialShareContentProps) => {
+}: InitialShareContentProps): JSX.Element => {
   return (
     <>
       <StyledFlex direction="column" gap="16px" alignItems="center">
