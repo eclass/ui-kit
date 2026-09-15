@@ -1,3 +1,4 @@
+import * as React from 'react'
 import { Box, LinkBox, LinkOverlay } from '@chakra-ui/react'
 
 import { vars } from '@theme'
@@ -29,12 +30,29 @@ export function BoxImage({
   size = 'large',
   m,
 }: ImageBoxProps): JSX.Element {
+  const hasCustomClick = data?.onClick !== undefined
+  const isClickable =
+    hasCustomClick || isCourseActive(data?.action?.enabled ?? false, data?.Profile?.id)
+  const hasHref = !hasCustomClick && !!data?.action?.href
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>): void => {
+    event.preventDefault()
+    data?.onClick?.(data)
+  }
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      data?.onClick?.(data)
+    }
+  }
+
   const boxHeight = {
     large: '286px',
     small: '197px',
   }
   return (
-    <WithRipples enabled={isCourseActive(data?.action?.enabled ?? false, data?.Profile?.id)}>
+    <WithRipples enabled={isClickable}>
       <LinkBox
         className="CourseList-ImageBox"
         _focusVisible={{
@@ -63,12 +81,18 @@ export function BoxImage({
             },
           },
         }}
+        aria-label={hasCustomClick ? title : undefined}
+        role={hasCustomClick ? 'button' : undefined}
+        onKeyDown={hasCustomClick ? handleKeyDown : undefined}
       >
-        {!data?.hasFinanzeFreezed &&
-          isCourseActive(data?.action?.enabled ?? false, data?.Profile?.id) && (
+        {(hasCustomClick || !data?.hasFinanzeFreezed) &&
+          isClickable &&
+          (hasHref || hasCustomClick) && (
             <LinkOverlay
-              href={data?.action?.href}
-              isExternal={data?.action?.targetBlank}
+              data-testid="course-link-overlay"
+              href={hasHref ? data?.action?.href : undefined}
+              isExternal={hasHref && data?.action?.targetBlank}
+              onClick={hasCustomClick ? handleClick : undefined}
               tabIndex={-1}
             />
           )}

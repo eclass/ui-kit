@@ -3,6 +3,11 @@ import { CourseList } from '@/organisms'
 import { dataFake } from '@/organisms/CourseList/utils'
 
 export const ViewCourseList = (): JSX.Element => {
+  const courseWithCustomClick = {
+    ...dataFake[18],
+    onClick: (selectedCourse: typeof dataFake[number]) => console.log(selectedCourse),
+  }
+
   return (
     <>
       <MyHeading>CourseList</MyHeading>
@@ -20,6 +25,24 @@ export const ViewCourseList = (): JSX.Element => {
 <CourseList courses={courses} />`}
       />
       <CourseList courses={[dataFake[18]]} />
+
+      <MyTitle>Acción personalizada al seleccionar una caja</MyTitle>
+      <MyText>
+        Cada curso puede incluir <code>onClick</code> para ejecutar una acción personalizada al
+        seleccionar su caja. Cuando se define, recibe el objeto completo del curso y reemplaza la
+        redirección configurada en <code>action.href</code>.
+      </MyText>
+      <Code
+        text={`const courses = [
+  {
+    ...course,
+    onClick: (selectedCourse) => {
+      console.log(selectedCourse)
+    },
+  },
+]`}
+      />
+      <CourseList courses={[courseWithCustomClick]} typeBox="TRADITIONAL" />
 
       <MyTitle>Tipos de Caja curso</MyTitle>
       <MyText>
