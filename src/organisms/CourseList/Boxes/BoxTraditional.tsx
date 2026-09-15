@@ -23,8 +23,22 @@ interface IBoxTraditional {
 }
 
 export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX.Element {
-  const isClickable = isCourseActive(data.action?.enabled ?? false, data.Profile?.id)
-  const hasHref = !!data.action?.href
+  const hasCustomClick = data.onClick !== undefined
+  const isClickable =
+    hasCustomClick || isCourseActive(data.action?.enabled ?? false, data.Profile?.id)
+  const hasHref = !hasCustomClick && !!data.action?.href
+
+  const handleClick = (event: React.MouseEvent<HTMLElement>): void => {
+    event.preventDefault()
+    data.onClick?.(data)
+  }
+
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>): void => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault()
+      data.onClick?.(data)
+    }
+  }
 
   useEnterNavigate()
 
@@ -47,18 +61,21 @@ export function BoxTraditional({ data, modalPaymentText }: IBoxTraditional): JSX
           boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')} inset`,
         }}
         tabIndex={0}
-        role={hasHref ? 'link' : undefined}
+        role={hasHref ? 'link' : hasCustomClick ? 'button' : undefined}
         data-href={hasHref ? data.action?.href : undefined}
+        onKeyDown={hasCustomClick ? handleKeyDown : undefined}
       >
         <WithRipples enabled={isClickable}>
           <Flex direction="column" justify="space-between" h="100%">
             <Box className="CourseList-TraditionalBox">
-              {isClickable && hasHref && (
+              {isClickable && (hasHref || hasCustomClick) && (
                 <LinkOverlay
                   className="course-link-overlay"
+                  data-testid="course-link-overlay"
                   bg="gray"
-                  href={data.action?.href}
-                  isExternal={data.action?.targetBlank}
+                  href={hasHref ? data.action?.href : undefined}
+                  isExternal={hasHref && data.action?.targetBlank}
+                  onClick={hasCustomClick ? handleClick : undefined}
                   tabIndex={-1}
                 />
               )}
