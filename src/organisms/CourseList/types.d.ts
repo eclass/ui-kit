@@ -1,10 +1,18 @@
 import { AcademicBox } from '@eclass/api'
 
-export type ExtendAcademicList = AcademicBox & {
+export type CourseClickPayload = AcademicBox & {
   soonCourse?: {
     show?: true
     text?: string
   }
+}
+
+export type ExtendAcademicList = CourseClickPayload & {
+  /**
+   * Ejecuta una acción personalizada al seleccionar la caja en lugar de navegar a `action.href`.
+   * Recibe el objeto completo que se utilizó para renderizar la caja.
+   */
+  onClick?: (course: CourseClickPayload) => void
 }
 
 interface PaymentText {
