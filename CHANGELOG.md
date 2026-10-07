@@ -1,3 +1,12 @@
+# [1.64.0](https://github.com/eclass/ui-kit/compare/v1.63.1...v1.64.0) (2026-10-07)
+
+
+### Features
+
+* **PDYE-2217:** agrega acción personalizada al seleccionar cursos ([bee3c90](https://github.com/eclass/ui-kit/commit/bee3c90dde27ba557c69c53c89a363f203700ca4))
+* **PDYE-2217:** agrega acción personalizada al seleccionar cursos ([#791](https://github.com/eclass/ui-kit/issues/791)) ([ab644f8](https://github.com/eclass/ui-kit/commit/ab644f8e24ac9cf41bc66f263b818570b7d44874))
+* **PDYE-2259:** nuevo componente caja curso horizontal simple ([#794](https://github.com/eclass/ui-kit/issues/794)) ([37a19c0](https://github.com/eclass/ui-kit/commit/37a19c0644d44fd41994443866e6b4bfaf1b12dc))
+
 ## [1.63.1](https://github.com/eclass/ui-kit/compare/v1.63.0...v1.63.1) (2026-07-30)
 
 
