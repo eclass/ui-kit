@@ -37,6 +37,7 @@ export { Resources } from './organisms/Resources'
 export { CalendarDropdown, EventsList } from './organisms/Calendar'
 export { UserDropdown } from './organisms/User'
 export { ShareAndReviewModal } from './organisms/LinkedinAndReview'
+export { SimpleCourseBox } from './organisms/SimpleCourseBox'
 export type { AccesibleProfileMenuProps, ProfileMenuItem } from './organisms/User'
 
 // Tema

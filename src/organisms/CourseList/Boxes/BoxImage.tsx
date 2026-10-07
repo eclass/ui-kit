@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { Box, LinkBox, LinkOverlay } from '@chakra-ui/react'
-
+import { Box, LinkBox, LinkOverlay, LinkBoxProps, LinkOverlayProps } from '@chakra-ui/react'
 import { vars } from '@theme'
 import { Ripples } from '@atoms'
+
 import * as Type from '../types'
 import { isCourseActive } from '../utils'
 
@@ -19,6 +19,10 @@ interface WithRipplesProps {
   enabled: boolean
   children: React.ReactNode
 }
+
+const StyledLinkBox = LinkBox as React.FC<LinkBoxProps>
+const StyledLinkOverlay = LinkOverlay as React.FC<LinkOverlayProps>
+
 function WithRipples({ enabled, children }: WithRipplesProps): JSX.Element {
   return enabled ? <Ripples>{children}</Ripples> : <>{children}</>
 }
@@ -53,7 +57,7 @@ export function BoxImage({
   }
   return (
     <WithRipples enabled={isClickable}>
-      <LinkBox
+      <StyledLinkBox
         className="CourseList-ImageBox"
         _focusVisible={{
           boxShadow: `0 0 0 3px ${vars('colors-alert-deepSkyBlue')} inset`,
@@ -88,7 +92,7 @@ export function BoxImage({
         {(hasCustomClick || !data?.hasFinanzeFreezed) &&
           isClickable &&
           (hasHref || hasCustomClick) && (
-            <LinkOverlay
+            <StyledLinkOverlay
               data-testid="course-link-overlay"
               href={hasHref ? data?.action?.href : undefined}
               isExternal={hasHref && data?.action?.targetBlank}
@@ -127,7 +131,7 @@ export function BoxImage({
               )
           )}
         </Box>
-      </LinkBox>
+      </StyledLinkBox>
     </WithRipples>
   )
 }
