@@ -1,3 +1,10 @@
+## [1.64.1](https://github.com/eclass/ui-kit/compare/v1.64.0...v1.64.1) (2026-10-08)
+
+
+### Bug Fixes
+
+* **PDYE-2259:** link de caja curso simple ([#795](https://github.com/eclass/ui-kit/issues/795)) ([edf5e07](https://github.com/eclass/ui-kit/commit/edf5e075bb8b398a57c2c3fd9345ab99d2d52729))
+
 # [1.64.0](https://github.com/eclass/ui-kit/compare/v1.63.1...v1.64.0) (2026-10-07)
 
 
