@@ -8,8 +8,6 @@ import {
   LinkBoxProps,
   LinkOverlay,
   LinkOverlayProps,
-  Text,
-  TextProps,
 } from '@chakra-ui/react'
 import { ArrowRight } from '@/atoms/Icons'
 
@@ -18,14 +16,16 @@ import { vars } from '@theme'
 
 interface SimpleCourseBoxProps {
   courseName: string
+  grade?: string
   href?: string
   img: string
   icon?: string
+  isApproved?: boolean
   label?: string
-  noLink?: boolean
+  isEnabled?: boolean
+  noBorder?: boolean
 }
 
-const StyledText = Text as React.FC<TextProps>
 const StyledFlex = Flex as React.FC<FlexProps>
 const StyledImage = Image as React.FC<ImageProps>
 const StyledLinkBox = LinkBox as React.FC<LinkBoxProps>
@@ -33,28 +33,39 @@ const StyledLinkOverlay = LinkOverlay as React.FC<LinkOverlayProps>
 
 export const SimpleCourseBox = ({
   courseName,
+  grade,
   href,
   img,
   icon,
+  isApproved,
   label,
-  noLink = false,
+  isEnabled = true,
+  noBorder = false,
 }: SimpleCourseBoxProps): JSX.Element => {
-  const link = noLink || !href || href === '' ? undefined : href
+  const link = !isEnabled || !href || href === '' ? undefined : href
 
   return (
     <StyledLinkBox
-      p="16px"
-      borderBottom={`1px solid ${vars('colors-neutral-platinum')}`}
+      p="16px 0"
+      borderBottom={noBorder ? 'none' : `1px solid ${vars('colors-neutral-platinum')}`}
       _hover={{
         backgroundColor: link ? vars('colors-neutral-cultured2') : 'none',
         cursor: link ? 'pointer' : 'default',
+      }}
+      sx={{
+        a: {
+          textDecoration: 'none',
+          color: vars('colors-neutral-darkCharcoal'),
+        },
       }}
     >
       <StyledLinkOverlay
         href={link}
         display="flex"
+        gap="24px"
         alignItems="center"
         justifyContent="space-between"
+        pr="8px"
       >
         <StyledFlex gap="24px" alignItems="center">
           <StyledImage src={img} w="150px" h="74px" borderRadius="10px" />
@@ -62,7 +73,7 @@ export const SimpleCourseBox = ({
             <strong>{courseName}</strong>
 
             {icon && label && (
-              <StyledText
+              <Box
                 m="0"
                 fontSize="14px"
                 lineHeight="19px"
@@ -75,12 +86,27 @@ export const SimpleCourseBox = ({
                   },
                 }}
               >
-                <IconSelection type={icon} /> {label}
-              </StyledText>
+                <IconSelection type={icon} />
+                <p>{label}</p>
+                {grade && (
+                  <Box
+                    h="17px"
+                    w="34px"
+                    fontSize="12px"
+                    fontWeight="700"
+                    textAlign="center"
+                    borderRadius="5px"
+                    color={vars('colors-neutral-white')}
+                    bg={isApproved ? vars('colors-alert-jadeGreen') : vars('colors-alert-red')}
+                  >
+                    {grade}
+                  </Box>
+                )}
+              </Box>
             )}
           </StyledFlex>
         </StyledFlex>
-        {link && (
+        {isEnabled && link && (
           <Box>
             <ArrowRight color="#60798E" />
           </Box>
