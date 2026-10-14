@@ -1,3 +1,10 @@
+## [1.64.2](https://github.com/eclass/ui-kit/compare/v1.64.1...v1.64.2) (2026-10-14)
+
+
+### Bug Fixes
+
+* **PDYE-2266:** ajuste estilo link ([#796](https://github.com/eclass/ui-kit/issues/796)) ([59d66c0](https://github.com/eclass/ui-kit/commit/59d66c00fda1c7254c307acbed6e84fccf9b28c1))
+
 ## [1.64.1](https://github.com/eclass/ui-kit/compare/v1.64.0...v1.64.1) (2026-10-08)
 
 
