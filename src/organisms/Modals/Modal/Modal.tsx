@@ -1,8 +1,16 @@
-import { Modal as ChakraModal, ModalOverlay, ModalContent, Box } from '@chakra-ui/react'
+import {
+  Modal as ChakraModal,
+  ModalOverlay,
+  ModalContent,
+  Box,
+  ModalContentProps,
+} from '@chakra-ui/react'
 
 import { IModal } from '../types'
 import { ModalContentBase } from './ModalContentBase'
 import { useModalConfig } from './useModalConfig'
+
+const StyledModalContent = ModalContent as React.FC<ModalContentProps>
 
 export const uiKitModalIsDesktop = 641
 export const ModalPadding = {
@@ -65,7 +73,7 @@ export const Modal = ({
           }),
         }}
       >
-        <ModalContent {...modalConfig.contentProps}>
+        <StyledModalContent {...modalConfig.contentProps}>
           <ModalContentBase
             fixedButtons={fixedButtons}
             withoutMargin={withoutMargin}
@@ -75,7 +83,7 @@ export const Modal = ({
           >
             {children}
           </ModalContentBase>
-        </ModalContent>
+        </StyledModalContent>
       </Box>
     </ChakraModal>
   )
