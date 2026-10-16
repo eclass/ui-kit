@@ -1,3 +1,10 @@
+## [1.64.6](https://github.com/eclass/ui-kit/compare/v1.64.5...v1.64.6) (2026-10-16)
+
+
+### Bug Fixes
+
+* **PDYE-2274:** commit para release ([#800](https://github.com/eclass/ui-kit/issues/800)) ([264c082](https://github.com/eclass/ui-kit/commit/264c0829726e27ed464da775dd402a1f4441f494))
+
 ## [1.64.4](https://github.com/eclass/ui-kit/compare/v1.64.3...v1.64.4) (2026-10-16)
 
 
