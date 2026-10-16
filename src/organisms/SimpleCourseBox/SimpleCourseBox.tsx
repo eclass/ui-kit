@@ -8,6 +8,7 @@ import {
   LinkBoxProps,
   LinkOverlay,
   LinkOverlayProps,
+  useMediaQuery,
 } from '@chakra-ui/react'
 import { ArrowRight } from '@/atoms/Icons'
 
@@ -43,10 +44,11 @@ export const SimpleCourseBox = ({
   noBorder = false,
 }: SimpleCourseBoxProps): JSX.Element => {
   const link = !isEnabled || !href || href === '' ? undefined : href
+  const [isDesktop] = useMediaQuery('(min-width: 768px)')
 
   return (
     <StyledLinkBox
-      p="16px 0"
+      p={isDesktop ? '16px 24px' : '16px'}
       borderBottom={noBorder ? 'none' : `1px solid ${vars('colors-neutral-platinum')}`}
       _hover={{
         backgroundColor: link ? vars('colors-neutral-cultured2') : 'none',
@@ -65,9 +67,12 @@ export const SimpleCourseBox = ({
         gap="24px"
         alignItems="center"
         justifyContent="space-between"
-        pr="8px"
       >
-        <StyledFlex gap="24px" alignItems="center">
+        <StyledFlex
+          gap={isDesktop ? '24px' : '16px'}
+          alignItems={isDesktop ? 'center' : 'flex-start'}
+          flexDir={isDesktop ? 'row' : 'column'}
+        >
           <StyledImage src={img} w="150px" h="74px" borderRadius="10px" />
           <StyledFlex flexDirection="column" gap="8px" justifyContent="center">
             <strong>{courseName}</strong>
