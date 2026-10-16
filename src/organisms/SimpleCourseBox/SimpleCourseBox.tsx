@@ -32,6 +32,9 @@ const StyledImage = Image as React.FC<ImageProps>
 const StyledLinkBox = LinkBox as React.FC<LinkBoxProps>
 const StyledLinkOverlay = LinkOverlay as React.FC<LinkOverlayProps>
 
+// Componente que renderiza información básica de un curso en formato horizontal
+// Creado para listar prerrequerimientos de cursos dentro de un modal
+
 export const SimpleCourseBox = ({
   courseName,
   grade,
