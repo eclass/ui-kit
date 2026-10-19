@@ -35,6 +35,7 @@ const Modals = React.lazy(async () => await import('../pages/Organisms/Modals'))
 const Events = React.lazy(async () => await import('../pages/Organisms/Events'))
 const EventsList = React.lazy(async () => await import('../pages/Organisms/EventsList'))
 const Resources = React.lazy(async () => await import('../pages/Organisms/Resources'))
+const SimpleCourseBox = React.lazy(async () => await import('../pages/Organisms/SimpleCourseBox'))
 const UserDropdown = React.lazy(async () => await import('../pages/Organisms/UserDropdown'))
 
 /**
@@ -206,5 +207,10 @@ export const routes: IRoute[] = [
     path: '/organisms/resource',
     label: 'Resources',
     component: <Resources />,
+  },
+  {
+    path: '/organisms/simple-box',
+    label: 'Simple Course Box',
+    component: <SimpleCourseBox />,
   },
 ]
