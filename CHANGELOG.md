@@ -1,3 +1,13 @@
+## [1.64.3](https://github.com/eclass/ui-kit/compare/v1.64.2...v1.64.3) (2026-10-19)
+
+
+### Bug Fixes
+
+* **PDYE-2274:** commit para release ([#800](https://github.com/eclass/ui-kit/issues/800)) ([264c082](https://github.com/eclass/ui-kit/commit/264c0829726e27ed464da775dd402a1f4441f494))
+* **PDYE-2274:** layout mobile caja curso simple ([81115ee](https://github.com/eclass/ui-kit/commit/81115eeb009919be571dba8af2fd3874faca8367))
+* **PDYE-2274:** layout mobile caja curso simple ([#797](https://github.com/eclass/ui-kit/issues/797)) ([ad5704c](https://github.com/eclass/ui-kit/commit/ad5704c573755f23f335aa84f5186d987a878eff))
+* **PDYE-2279:** docu inicial caja curso simple ([#801](https://github.com/eclass/ui-kit/issues/801)) ([272978b](https://github.com/eclass/ui-kit/commit/272978bdfb35b4753abb0f87e0e1fbaab753810d))
+
 ## [1.64.6](https://github.com/eclass/ui-kit/compare/v1.64.5...v1.64.6) (2026-10-16)
 
 
