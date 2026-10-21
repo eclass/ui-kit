@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [14.21.3]
+        node: [24.22.0]
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,11 +32,8 @@ jobs:
       - name: Add Known Hosts
         run: ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
 
-      - name: Regenerate package-lock.json
-        run: npm i
-
-      - name: Clean node_modules after regenerate
-        run: rm -rf node_modules
+      - name: Pin npm version
+        run: npm install --global npm@11.13.0
 
       - name: Clean install on CI
         run: npm ci
@@ -71,7 +68,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 14.21.3
+          node-version: 24.22.0
           cache: 'npm'
 
       - uses: webfactory/ssh-agent@v0.7.0
@@ -81,11 +78,8 @@ jobs:
       - name: Add Known Hosts
         run: ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
 
-      - name: Regenerate package-lock.json
-        run: npm i
-
-      - name: Clean node_modules after regenerate
-        run: rm -rf node_modules
+      - name: Pin npm version
+        run: npm install --global npm@11.13.0
 
       - name: Clean install on CI
         run: npm ci
@@ -94,7 +88,7 @@ jobs:
         run: npm run build
 
       - name: Release version
-        run: npx semantic-release@18
+        run: npm exec --no -- semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -113,7 +107,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 14.21.3
+          node-version: 24.22.0
           cache: 'npm'
 
       - uses: webfactory/ssh-agent@v0.7.0
@@ -123,11 +117,8 @@ jobs:
       - name: Add Known Hosts
         run: ssh-keyscan gitlab.com >> ~/.ssh/known_hosts
 
-      - name: Regenerate package-lock.json
-        run: npm i
-
-      - name: Clean node_modules after regenerate
-        run: rm -rf node_modules
+      - name: Pin npm version
+        run: npm install --global npm@11.13.0
 
       - name: Clean install on CI
         run: npm ci

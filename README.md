@@ -8,6 +8,8 @@ La fuente de donde se basan los componentes se encuentran en este [**Sistema de 
 
 ## Scripts
 
+El desarrollo y CI usan Node.js `24.22.0` y npm `11.13.0` (npm `11.5.1` o superior es requisito para Trusted Publishing de npm). Instale las dependencias bloqueadas con `npm ci`; CI no regenera el lockfile. La publicación sigue usando el `NPM_TOKEN` existente: Trusted Publishing todavía no está configurado en npm, así que el workflow de release aún no usa OIDC.
+
 Los componentes están al 100% en escritas en archivos `typescript`.
 
 Además deben ser testeadas en donde el enfoque del `testing` es asegurarse de que se muestre todo lo que se promete
