@@ -11,6 +11,7 @@ export interface props {
   isDisable?: boolean
   m?: string
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
+  p?: string
   role?: 'button' | 'link'
   tabIndex?: number
   target?: '_blank' | '_self'
@@ -28,6 +29,7 @@ export function BtnLink({
   isDisable = false,
   m = '0',
   onClick,
+  p,
   role = 'link',
   tabIndex,
   target = '_blank',
@@ -57,6 +59,7 @@ export function BtnLink({
       id={id}
       onClick={isDisable ? undefined : onClick}
       opacity={isDisable ? 0.5 : 1}
+      padding={p ? p : '.25em'}
       role={role}
       tabIndex={tabIndex}
       textDecorationLine={textDecorationLine ? 'underline' : 'none'}
@@ -79,7 +82,6 @@ export const stylesBtnLink = {
   fontStyle: 'normal',
   fontWeight: '500',
   lineHeight: '1rem',
-  padding: '.25em',
   textDecorationLine: 'underline',
   width: 'fit-content',
   _hover: {

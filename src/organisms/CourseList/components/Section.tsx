@@ -1,11 +1,12 @@
 import * as React from 'react'
-import { Box, Heading, Link, List, HStack, Text, ListItem, Flex } from '@chakra-ui/react'
+import { Box, Heading, List, HStack, Text, ListItem, Flex } from '@chakra-ui/react'
 
+import { vars } from '@theme'
+import { BtnLink } from '@/molecules'
 import { CourseBoxContext } from '../Boxes/BoxTraditional'
+import { CourseStatus } from './CourseStatus'
 import { DateStatus } from './DateStatus'
 import { IconSelection } from './IconSelection'
-import { vars } from '@theme'
-import { CourseStatus } from './CourseStatus'
 
 export function Section(): JSX.Element | null {
   const { name, dateStatus, information, progress, status } = React.useContext(CourseBoxContext)
@@ -64,16 +65,9 @@ export function Section(): JSX.Element | null {
               <IconSelection type={item.icon} />
               <Box display="inline-block" ml=".625rem">
                 {item.href !== undefined && item.href?.length > 0 ? (
-                  <Link
-                    isExternal
-                    href={item.href}
-                    color={vars('colors-main-deepSkyBlue')}
-                    textDecor="underline"
-                    fontWeight="500"
-                    fontSize=".75rem"
-                  >
+                  <BtnLink href={item.href} p="0" target={item.targetBlank ? '_blank' : '_self'}>
                     {item.text}
-                  </Link>
+                  </BtnLink>
                 ) : (
                   <Text m="0" color={vars('colors-neutral-gray')} fontSize=".75rem">
                     {item.text}
