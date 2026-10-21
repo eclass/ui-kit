@@ -65,7 +65,7 @@ export function Section(): JSX.Element | null {
               <IconSelection type={item.icon} />
               <Box display="inline-block" ml=".625rem">
                 {item.href !== undefined && item.href?.length > 0 ? (
-                  <BtnLink href={item.href} p="0" target={item.targetBlank ? '_blank' : '_self'}>
+                  <BtnLink href={item.href} p="0" target="_self">
                     {item.text}
                   </BtnLink>
                 ) : (
