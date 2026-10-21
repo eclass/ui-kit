@@ -1,3 +1,10 @@
+## [1.64.5](https://github.com/eclass/ui-kit/compare/v1.64.4...v1.64.5) (2026-10-21)
+
+
+### Bug Fixes
+
+* **ci:** actualiza Node y npm y publica mediante Trusted Publishing ([#804](https://github.com/eclass/ui-kit/issues/804)) ([2889cf7](https://github.com/eclass/ui-kit/commit/2889cf705bc5d13a12456f8dc2795d8093c0a7a1))
+
 ## [1.64.4](https://github.com/eclass/ui-kit/compare/v1.64.3...v1.64.4) (2026-10-21)
 
 
