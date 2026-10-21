@@ -1,3 +1,11 @@
+## [1.64.4](https://github.com/eclass/ui-kit/compare/v1.64.3...v1.64.4) (2026-10-21)
+
+
+### Bug Fixes
+
+* **PDYE-2282:** reemplazo link por btn link en caja curso tradicional ([#802](https://github.com/eclass/ui-kit/issues/802)) ([7b81446](https://github.com/eclass/ui-kit/commit/7b814464a617962a40443b779e967f08f2988932))
+* **PDYE-2282:** reemplazo link por btn link en caja curso tradicional y prop de target ([#803](https://github.com/eclass/ui-kit/issues/803)) ([eacebef](https://github.com/eclass/ui-kit/commit/eacebef40c131381e6fd7043a5f893887f1fe196))
+
 ## [1.64.3](https://github.com/eclass/ui-kit/compare/v1.64.2...v1.64.3) (2026-10-19)
 
 
