@@ -59,7 +59,7 @@ export function BtnLink({
       id={id}
       onClick={isDisable ? undefined : onClick}
       opacity={isDisable ? 0.5 : 1}
-      padding={p ? p : '.25em'}
+      padding={p ?? '.25em'}
       role={role}
       tabIndex={tabIndex}
       textDecorationLine={textDecorationLine ? 'underline' : 'none'}
