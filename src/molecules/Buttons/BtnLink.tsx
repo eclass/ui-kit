@@ -39,11 +39,11 @@ export function BtnLink({
   const typeButton = {
     button: {
       onClick: isDisable ? undefined : onClick,
-      target: target,
+      target,
     },
     a: {
       href,
-      target: target,
+      target,
     },
   }
 

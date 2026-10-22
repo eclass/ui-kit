@@ -25,7 +25,7 @@ export function ModalAlert({
 
   const modalStyles = {
     content: {
-      top: top,
+      top,
     },
   }
 

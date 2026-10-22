@@ -7,8 +7,8 @@ export default function FlashNotificationDemo({
   message,
 }: IFlashNotificationProps): JSX.Element {
   const { show, active, config } = useFlashNotification({
-    state: state,
-    message: message,
+    state,
+    message,
   }) as { show: boolean; active: () => void; config: IFlashNotificationProps }
   return (
     <Box>
