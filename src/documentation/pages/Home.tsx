@@ -1,6 +1,4 @@
 import { MyHeading, MyText, MyTitle, Code } from '../components'
-import { Box } from '@chakra-ui/react'
-import { CalendarDropdown } from '@/organisms'
 
 export const Home = (): JSX.Element => {
   return (
@@ -20,40 +18,6 @@ export const Home = (): JSX.Element => {
         Además deben ser testeadas en donde el enfoque del testing es asegurarse de que se muestre
         todo lo que se promete.
       </MyText>
-
-      <Box
-        justifyItems="end"
-        bg="black"
-        height="62px"
-        alignContent="center"
-        display="grid"
-        pr="62px"
-      >
-        <CalendarDropdown
-          events={dataFake}
-          now="2025-02-26T04:01:00.000Z"
-          redirectToCalendar={() => {}}
-          text={{
-            empty: 'hola',
-            header: 'hola',
-            tooltip: 'hola',
-            course: 'hola',
-            events: {
-              today: 'hola',
-              tomorrow: 'hola',
-              next: 'hola',
-            },
-            seeMore: {
-              see: 'hola',
-              link: 'hola',
-            },
-            loading: 'hola',
-            buttonCalendar: 'hola',
-          }}
-          onClickEvent={(event) => console.log('Evento clickeado:', event)}
-        />
-      </Box>
-
       <MyText>Para trabajar de manera local</MyText>
       <Code text="npm run dev" />
       <MyText>Ejecuta los test con jest</MyText>
