@@ -1,3 +1,10 @@
+## [1.64.6](https://github.com/eclass/ui-kit/compare/v1.64.5...v1.64.6) (2026-10-22)
+
+
+### Bug Fixes
+
+* **documentation:** quito calendardropdown del home ([5767e5f](https://github.com/eclass/ui-kit/commit/5767e5fbbb752e1bef5c143690021c1c6e922c05))
+
 ## [1.64.5](https://github.com/eclass/ui-kit/compare/v1.64.4...v1.64.5) (2026-10-21)
 
 
