@@ -10,3 +10,4 @@ docs
 tsconfig.tsbuildinfo
 *.env*
 .jest-cache
+odd/
