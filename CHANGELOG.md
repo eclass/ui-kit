@@ -1,3 +1,10 @@
+# [1.65.0](https://github.com/eclass/ui-kit/compare/v1.64.6...v1.65.0) (2026-10-29)
+
+
+### Features
+
+* **icons:** agrega componente Icon y galería de íconos ([79c901d](https://github.com/eclass/ui-kit/commit/79c901d2d92c0326cd0e3a7bf72e70875e3003bc))
+
 ## [1.64.6](https://github.com/eclass/ui-kit/compare/v1.64.5...v1.64.6) (2026-10-22)
 
 
