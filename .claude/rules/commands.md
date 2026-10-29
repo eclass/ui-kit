@@ -14,7 +14,10 @@ npm run docu     # sitio de documentación en local
 npm run build    # build de la librería en dist/ (lo corre CI al publicar)
 ```
 
-- `npm run storybook`, que menciona el README, no existe.
+- No hay Storybook: la documentación es el sitio de `npm run docu`.
+- Antes de sacar una versión, el usuario valida que los cambios se vean bien en un consumidor
+  (p. ej. v8) con yalc: `npm run build` + `npx yalc publish` (o `npx yalc push` tras cada cambio)
+  en ui-kit, y `npx yalc add @eclass/ui-kit` en el consumidor.
 
 ## Tests
 

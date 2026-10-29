@@ -77,3 +77,5 @@ Clasifica cada pedido antes de editar:
 
 - Pedir "juntar los commits" significa solo hacer squash de los commits del usuario; los cambios
   propios quedan aparte para revisión.
+- El CI es GitHub Actions (`.github/workflows/nodejs.yml`); no existe `.gitlab-ci.yml`. GitLab
+  solo se usa para instalar por SSH los paquetes de tipos privados `@types/eclass__*`.
