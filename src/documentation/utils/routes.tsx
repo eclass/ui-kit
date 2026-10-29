@@ -11,7 +11,7 @@ const ShadowsElevation = React.lazy(async () => await import('../pages/Utils/Sha
 const SpacialUnits = React.lazy(async () => await import('../pages/Utils/SpacialUnits'))
 
 /** ATOMS */
-// const Icons = React.lazy(async () => await import('../pages/Atoms/Icons'))
+const Icons = React.lazy(async () => await import('../pages/Atoms/Icons'))
 const Label = React.lazy(async () => await import('../pages/Atoms/Label'))
 const Progress = React.lazy(async () => await import('../pages/Atoms/Progress'))
 const Ripples = React.lazy(async () => await import('../pages/Atoms/Ripples'))
@@ -97,11 +97,11 @@ export const routes: IRoute[] = [
   },
   /** ****************************** */
 
-  // {
-  //   path: '/atoms/icons',
-  //   label: 'Icons',
-  //   component: <Icons />,
-  // },
+  {
+    path: '/atoms/icons',
+    label: 'Icons',
+    component: <Icons />,
+  },
   {
     path: '/atoms/label',
     label: 'Label',

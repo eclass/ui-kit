@@ -1,0 +1,8 @@
+export function Add(): JSX.Element {
+  return (
+    <path
+      fill="currentColor"
+      d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm4 9H9v3H7V9H4V7h3V4h2v3h3v2z"
+    />
+  )
+}

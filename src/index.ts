@@ -3,6 +3,9 @@ export { Label } from './atoms/Label/Label'
 export { Progress } from './atoms/Progress/Progress'
 export { Ripples } from './atoms/Ripples/Ripples'
 export { TinyAlert } from './atoms/TinyAlert/TinyAlert'
+export { Icon } from './atoms/Icon/Icon'
+export type { IconProps } from './atoms/Icon/Icon'
+export type { IconName } from './atoms/Icon/registry'
 export * as Icons from './atoms/Icons'
 
 // Moléculas
