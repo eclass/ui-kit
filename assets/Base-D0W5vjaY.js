@@ -1,0 +1,2 @@
+import{S as e,c as t,o as n}from"./Typography-Db7ZPykY.js";var r=t();function i({w:t=`1rem`,h:i=`1rem`,color:a=n(`colors-main-ziggurat`),m:o=`0`,viewBox:s=`0 0 16 16`,children:c,title:l}){return(0,r.jsxs)(e,{w:t,h:i,viewBox:s,color:a,m:o,"aria-label":` `,"aria-hidden":!0,children:[(0,r.jsxs)(`title`,{children:[`icon`,l&&`-${l}`]}),c]})}export{i as t};
+//# sourceMappingURL=Base-D0W5vjaY.js.map

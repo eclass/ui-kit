@@ -1,0 +1,1 @@
+{"version":3,"file":"uniqueId-Dz2jySz_.js","names":["uniqueId"],"sources":["../../src/services/uniqueId.ts"],"sourcesContent":["export function uniqueId(): string {\n  return Math.random().toString(36).slice(2, 9)\n}\n"],"mappings":"AAAA,SAAgBA,GAAmB,CACjC,OAAO,KAAK,OAAO,CAAC,CAAC,SAAS,EAAE,CAAC,CAAC,MAAM,EAAG,CAAC,CAC9C,C"}

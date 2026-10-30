@@ -1,0 +1,2 @@
+import{c as e,u as t}from"./Typography-Db7ZPykY.js";import{t as n}from"./esm-Bt253M8S.js";var r=e();function i({children:e,color:i=`rgba(204,204,204,0.2)`}){return(0,r.jsx)(n,{during:1e3,color:i,children:(0,r.jsx)(t,{children:e})})}export{i as t};
+//# sourceMappingURL=Ripples-DIZ2TSgK.js.map

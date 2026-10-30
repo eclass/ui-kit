@@ -1,0 +1,9 @@
+import{c as e,i as t,o as n,r,t as i,u as a}from"./Typography-Db7ZPykY.js";import{t as o}from"./ListComponent-BSNp0HG4.js";import{t as s}from"./BoxCopy-CC8DzjB8.js";import{t as c}from"./Code-Bgr_Rzly.js";var l=e(),u=()=>(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(i,{children:`Borders`}),(0,l.jsx)(r,{children:`Las variables CSS para tipos de bordes ofrecen una gama de colores predefinidos que pueden aplicarse a diferentes elementos. Esto te permite seleccionar rápidamente un color que se adapte al contexto y al propósito de cada borde.`}),(0,l.jsxs)(o,{children:[(0,l.jsx)(d,{border:`borders-normal`}),(0,l.jsx)(d,{border:`borders-light`}),(0,l.jsx)(d,{border:`borders-active`}),(0,l.jsx)(d,{border:`borders-success`}),(0,l.jsx)(d,{border:`borders-error`}),(0,l.jsx)(a,{p:`1rem`,bg:n(`colors-neutral-darkCharcoal`),children:(0,l.jsx)(d,{border:`borders-white`})})]}),(0,l.jsx)(c,{text:`<Box border={vars('borders-normal')} />
+<Box border={vars('borders-light')} />
+<Box border={vars('borders-active')} />
+<Box border={vars('borders-success')} />
+<Box border={vars('borders-error')} />
+<Box border={vars('borders-white')} />`}),(0,l.jsx)(t,{children:`Radio`}),(0,l.jsxs)(o,{children:[(0,l.jsx)(d,{borderRadius:`radii-small`}),(0,l.jsx)(d,{borderRadius:`radii-big`}),(0,l.jsx)(d,{borderRadius:`radii-rounded`})]}),(0,l.jsx)(c,{text:`<Box borderRadius={vars('radii-small')}/>
+<Box borderRadius={vars('radii-big')}/>
+<Box borderRadius={vars('radii-rounded')}/>`})]}),d=({borderRadius:e,border:t=`borders-normal`})=>(0,l.jsx)(s,{h:`5.5rem`,w:`5.5rem`,border:n(t),borderRadius:n(e==null?`0`:e),text:e==null?t:e});export{u as ViewBorders,u as default};
+//# sourceMappingURL=Borders-BOTJFabj.js.map

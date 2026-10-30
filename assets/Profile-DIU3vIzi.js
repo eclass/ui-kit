@@ -1,0 +1,2 @@
+import{t as e}from"./Base-D0W5vjaY.js";import{c as t}from"./Typography-Db7ZPykY.js";var n=t();function r(t){return(0,n.jsx)(e,{...t,viewBox:`0 0 12 12`,w:`12px`,title:`profile`,children:(0,n.jsx)(`path`,{fill:`currentColor`,d:`M5 6a3 3 0 100-6 3 3 0 000 6zM5 7c-3.375 0-5 2.106-5 3.333V11a1 1 0 001 1h8a1 1 0 001-1v-.667C10 9.106 8.375 7 5 7z`})})}r.displayName=`Profile`;export{r as t};
+//# sourceMappingURL=Profile-DIU3vIzi.js.map

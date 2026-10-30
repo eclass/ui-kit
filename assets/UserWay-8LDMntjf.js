@@ -1,0 +1,8 @@
+import{c as e,o as t,r as n,t as r,u as i}from"./Typography-Db7ZPykY.js";import{t as a}from"./Code-Bgr_Rzly.js";import{t as o}from"./Accessibility-B8usG7Ps.js";var s=e();function c(){return(0,s.jsx)(i,{as:`button`,alignItems:`center`,bg:t(`colors-main-blueGrey`),borderRadius:`100%`,border:`1px solid transparent`,display:`flex`,height:`30px`,id:`UserWayButton`,justifyContent:`center`,padding:`0 8px`,width:`30px`,_hover:{background:`rgba(96, 121, 142, 0.8)`},onClick:()=>{let e=document.getElementById(`userWayTrigger`);e!=null&&e.click&&e.click()},children:(0,s.jsx)(o,{})})}var l=()=>(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(r,{children:`UserWay`}),(0,s.jsx)(n,{children:`Botón personalizado para el widget gratuito de accesibilidad UserWay. Contiene los estilos base del elemento customizado y una función que detecta un botón localizado en el archivo index.html implementado en el sitio.`}),(0,s.jsx)(c,{}),(0,s.jsx)(a,{text:`import { UserWay } from '@eclass/ui-kit'
+      <UserWay/>`}),(0,s.jsx)(n,{children:`Al hacer click en este componente, se activa el botón html que actúa como trigger del widget. Es importante que el botón al que apunta la función, tenga el id 'userWayTrigger'.`}),(0,s.jsx)(a,{text:`function triggerWidget() {
+const buttonB = document.getElementById('userWayTrigger')
+if (buttonB?.click) {
+buttonB.click() 
+}}
+      `})]});export{l as ViewUserWay,l as default};
+//# sourceMappingURL=UserWay-8LDMntjf.js.map

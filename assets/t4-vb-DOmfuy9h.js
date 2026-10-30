@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";import{t}from"./t4-templating-DsmplN5v.js";import{t as n}from"./vbnet-DtEcGPUx.js";var r=e(((e,r)=>{var i=t(),a=n();r.exports=o,o.displayName=`t4Vb`,o.aliases=[];function o(e){e.register(i),e.register(a),e.languages[`t4-vb`]=e.languages[`t4-templating`].createT4(`vbnet`)}}));export default r();
+//# sourceMappingURL=t4-vb-DOmfuy9h.js.map

@@ -1,0 +1,2 @@
+import{T as e}from"./Typography-Db7ZPykY.js";var t={border:`0px`,clip:`rect(0px, 0px, 0px, 0px)`,height:`1px`,width:`1px`,margin:`-1px`,padding:`0px`,overflow:`hidden`,whiteSpace:`nowrap`,position:`absolute`},n=e(`span`,{baseStyle:t});e(`input`,{baseStyle:t});export{n as t};
+//# sourceMappingURL=chakra-ui-visually-hidden.esm-CS2EaUIk.js.map

@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";var t=e(((e,t)=>{t.exports=n,n.displayName=`arff`,n.aliases=[];function n(e){e.languages.arff={comment:/%.*/,string:{pattern:/(["'])(?:\\.|(?!\1)[^\\\r\n])*\1/,greedy:!0},keyword:/@(?:attribute|data|end|relation)\b/i,number:/\b\d+(?:\.\d+)?\b/,punctuation:/[{},]/}}}));export default t();
+//# sourceMappingURL=arff-BmLJ4efO.js.map

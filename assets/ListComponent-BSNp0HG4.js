@@ -1,0 +1,2 @@
+import{c as e,u as t}from"./Typography-Db7ZPykY.js";var n=e(),r=({children:e,gap:r=`1rem`,m:i=`0`})=>(0,n.jsx)(t,{display:`flex`,flexWrap:`wrap`,alignItems:`center`,m:i,gap:r,sx:{">*":{marginInlineStart:`0 !important`}},children:e});export{r as t};
+//# sourceMappingURL=ListComponent-BSNp0HG4.js.map

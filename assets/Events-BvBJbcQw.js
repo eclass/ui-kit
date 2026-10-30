@@ -1,0 +1,41 @@
+import{S as e,c as t,f as n,h as r,i,o as a,r as o,t as s,u as c,x as l}from"./Typography-Db7ZPykY.js";import{t as u}from"./Code-Bgr_Rzly.js";import{t as d}from"./Ripples-DIZ2TSgK.js";var f=t(),p=({color:t=`white`})=>(0,f.jsxs)(e,{width:`16px`,height:`17px`,viewBox:`0 0 16 17`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,children:[(0,f.jsx)(`path`,{d:`M15 2.5H13V0.5H11V2.5H9V0.5H7V2.5H5V0.5H3V2.5H1C0.447 2.5 0 2.947 0 3.5V15.5C0 16.053 0.447 16.5 1 16.5H15C15.553 16.5 16 16.053 16 15.5V3.5C16 2.947 15.553 2.5 15 2.5ZM14 14.5H2V5.5H14V14.5Z`,fill:t}),(0,f.jsx)(`path`,{d:`M6 7.5H4V9.5H6V7.5Z`,fill:t}),(0,f.jsx)(`path`,{d:`M9 7.5H7V9.5H9V7.5Z`,fill:t}),(0,f.jsx)(`path`,{d:`M6 10.5H4V12.5H6V10.5Z`,fill:t}),(0,f.jsx)(`path`,{d:`M9 10.5H7V12.5H9V10.5Z`,fill:t}),(0,f.jsx)(`path`,{d:`M12 7.5H10V9.5H12V7.5Z`,fill:t}),(0,f.jsx)(`path`,{d:`M12 10.5H10V12.5H12V10.5Z`,fill:t})]}),m=({color:t=`white`})=>(0,f.jsx)(e,{width:`16px`,height:`17px`,viewBox:`0 0 16 17`,fill:`none`,xmlns:`http://www.w3.org/2000/svg`,children:(0,f.jsx)(`path`,{fillRule:`evenodd`,clipRule:`evenodd`,d:`M0 8.5C0 4.1 3.6 0.5 8 0.5C12.4 0.5 16 4.1 16 8.5C16 12.9 12.4 16.5 8 16.5C3.6 16.5 0 12.9 0 8.5ZM7 9.5H12V7.5H9V4.5H7V9.5Z`,fill:t})}),h=({id:e,eventTitle:t,startDate:i,startTime:o,buttonInfo:s,redirect:u,eventImage:h,targetBlank:g,isMobile:_})=>{let v={boxShadow:`0 2px 7px 0 ${a(`colors-neutral-silverSand`)}`};return(0,f.jsx)(r,{href:u,target:g?`_blank`:`_self`,rel:g?`noopener noreferrer`:void 0,w:`fit-content`,h:`fit-content`,transition:`box-shadow .3s`,borderRadius:a(`radii-big`),_active:v,_hover:v,_focusVisible:{boxShadow:`0 0 0 3px ${a(`colors-alert-deepSkyBlue`)}`},children:(0,f.jsx)(d,{children:(0,f.jsxs)(n,{cursor:`pointer`,w:`fit-content`,display:_?`block`:`flex`,children:[(0,f.jsx)(c,{width:`285px`,height:_?`140px`:`168px`,bgImage:`url(${h})`,backgroundSize:`cover`,borderRadius:_?`8px 8px 0px 0px`:`8px 0 0 8px`}),(0,f.jsxs)(c,{width:_?`285px`:`305px`,minHeight:_?`160px`:`168px`,borderRadius:_?`0 0 8px 8px`:`0 8px 8px 0`,border:a(`borders-light`),display:`flex`,flexDirection:`column`,cursor:`pointer`,children:[(0,f.jsxs)(c,{width:`inherit`,height:`100%`,padding:`16px`,color:`#555555`,gap:`16px`,display:`grid`,children:[(0,f.jsx)(l,{fontWeight:`700`,m:`0px`,p:`0px`,children:t}),(0,f.jsxs)(c,{display:`flex`,alignItems:`center`,gap:`4px`,children:[(0,f.jsx)(p,{color:a(`colors-main-ziggurat`)}),(0,f.jsx)(l,{fontWeight:`400`,m:`0px`,p:`0px`,children:i}),(0,f.jsx)(l,{color:a(`borders-light`),m:`0px`,p:`0px`,children:`|`}),(0,f.jsx)(m,{color:a(`colors-main-ziggurat`)}),(0,f.jsx)(l,{m:`0px`,p:`0px`,children:o})]})]}),(0,f.jsx)(c,{borderTop:`${a(`borders-light`)}`,width:`100%`,height:`50px`,padding:`12px`,backgroundColor:`white`,alignItems:`center`,display:`flex`,justifyContent:`center`,borderRadius:` 0 0 8px 8px`,fontSize:`16px`,fontFamily:`Roboto`,color:a(`colors-main-deepSkyBlue`),fontWeight:`500`,children:s})]})]})})},e)},g=({id:e,eventTitle:t,startDate:n,startTime:i,buttonInfo:o,redirect:s,eventImage:u,targetBlank:h})=>{let g={boxShadow:`0 2px 7px 0 ${a(`colors-neutral-silverSand`)}`};return(0,f.jsx)(r,{href:s,target:h?`_blank`:`_self`,rel:h?`noopener noreferrer`:void 0,transition:`box-shadow .3s`,_active:g,_hover:g,_focusVisible:{boxShadow:`0 0 0 3px ${a(`colors-alert-deepSkyBlue`)}`},width:`286px`,height:`247px`,borderRadius:a(`radii-big`),children:(0,f.jsx)(d,{children:(0,f.jsxs)(c,{width:`286px`,height:`247px`,borderRadius:a(`radii-big`),border:a(`borders-light`),justifyContent:`center`,textAlign:`center`,display:`flex`,flexDirection:`column`,cursor:`pointer`,children:[(0,f.jsx)(c,{flex:`1`,bgImage:`linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,1) 100%), url(${u})`,backgroundSize:`cover`,borderRadius:`8px 8px 0 0`,margin:`0`,display:`grid`,alignItems:`flex-end`,children:(0,f.jsxs)(c,{color:a(`colors-neutral-white`),padding:`16px`,textAlign:`initial`,fontFamily:`Roboto`,fontSize:`16px`,lineHeight:`21px`,display:`grid`,gap:`8px`,children:[(0,f.jsx)(l,{fontWeight:`700`,m:`0px`,children:t}),(0,f.jsxs)(c,{display:`flex`,alignItems:`center`,gap:`4px`,children:[(0,f.jsx)(p,{}),(0,f.jsx)(l,{fontWeight:`400`,m:`0px`,children:n}),(0,f.jsx)(l,{m:`0px`,children:`|`}),(0,f.jsx)(m,{}),(0,f.jsx)(l,{m:`0px`,children:i})]})]})}),(0,f.jsx)(c,{width:`100%`,height:`50px`,backgroundColor:`white`,alignItems:`center`,display:`flex`,justifyContent:`center`,borderRadius:` 0 0 8px 8px`,fontSize:`16px`,fontFamily:`Roboto`,color:a(`colors-main-deepSkyBlue`),fontWeight:`500`,children:o})]})})},e)},_=({typeEvent:e,itemsEvent:t})=>e===`LARGE_EVENTS`?(0,f.jsx)(h,{...t}):(0,f.jsx)(g,{...t}),v=[{typeEvent:`LARGE_EVENTS`,itemsEvent:{id:`1`,eventTitle:`Resuelve tus dudas en vivo | Martes`,startDate:`04/27/2024`,startTime:`14:00 hrs`,buttonInfo:`Ver información del evento`,redirect:`https://.....`,eventImage:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76y4DAhqWAlCspmGYWcbxSDnLw3p1FzJQKA&usqp=CAU`,isMobile:!1}},{typeEvent:`LARGE_EVENTS`,itemsEvent:{id:`1`,eventTitle:`Resuelve tus dudas en vivo | Martes`,startDate:`04/27/2024`,startTime:`14:00 hrs`,buttonInfo:`Ver información del evento`,redirect:`https://.....`,eventImage:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76y4DAhqWAlCspmGYWcbxSDnLw3p1FzJQKA&usqp=CAU`,isMobile:!0}},{typeEvent:`SMALL_EVENTS`,itemsEvent:{id:`1`,eventTitle:`Resuelve tus dudas en vivo | Martes`,startDate:`04/27/2024`,startTime:`14:00 hrs`,buttonInfo:`Ver información del evento`,redirect:`https://.....`,eventImage:`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76y4DAhqWAlCspmGYWcbxSDnLw3p1FzJQKA&usqp=CAU`,isMobile:!0}}],y=()=>(0,f.jsxs)(f.Fragment,{children:[(0,f.jsx)(s,{children:`Eventos`}),(0,f.jsxs)(o,{children:[`Los eventos estan contenidos en una nueva caja, la cual cuenta con 3 disenios distintos agrupados en dos tipos`,(0,f.jsx)(`strong`,{children:` LARGE_EVENTS`}),` y `,(0,f.jsx)(`strong`,{children:` SMALL_EVENTS.`}),`LARGE_EVENTS: contiene un responsive para mobile y desktop.`]}),(0,f.jsx)(i,{children:`Types Definidos`}),(0,f.jsx)(o,{children:`El componente Eventos requiere el siguiente typado:`}),(0,f.jsx)(u,{text:`export interface EventosProps {
+typeEvent: 'SMALL_EVENTS' | 'LARGE_EVENTS' | string // Tipo de caja
+isMobile?: boolean // Si es mobile o no
+itemsEvent: ItemsEventsProps // Objeto de eventos
+}
+
+export interface ItemsEventsProps {
+id: string // Key para ordenar
+eventTitle: string // Titulo del evento
+startDate: string // Fecha de inicio del evento
+startTime: string // Hora de inicio del evento
+buttonInfo: string // Texto del boton
+redirect: string // Link de redireccion
+eventImage: string // Imagen del evento
+targetBlank?: boolean // Si abre en nueva pestaña
+isMobile?: boolean // Si es mobile o no
+}
+
+`}),(0,f.jsx)(`i`,{children:`Se deja en espanol debido a que Event es una funcion nativa`}),(0,f.jsx)(u,{text:`import { Eventos } from '@eclass/ui-kit'`}),(0,f.jsx)(c,{display:`grid`,gap:`16px`,children:(0,f.jsx)(_,{...v[2]})}),(0,f.jsx)(i,{children:`Estados`}),(0,f.jsx)(o,{children:`Existen 3 posibles estados que definen el diseño del evento.`}),(0,f.jsxs)(c,{display:`grid`,gap:`16px`,children:[(0,f.jsx)(o,{children:(0,f.jsx)(`strong`,{children:`LARGE_EVENTS`})}),(0,f.jsx)(_,{...v[0]}),(0,f.jsx)(o,{children:(0,f.jsx)(`strong`,{children:`LARGE_EVENTS para Mobile`})}),(0,f.jsx)(_,{...v[1]}),(0,f.jsx)(o,{children:(0,f.jsx)(`strong`,{children:`SMALL_EVENTS o por defecto`})}),(0,f.jsx)(_,{...v[2]})]}),(0,f.jsx)(i,{children:`Modo de uso`}),(0,f.jsx)(o,{children:`El Evento se utiliza de manera bastante simple siguiendo el siguiente ejemplo:`}),(0,f.jsx)(u,{text:`// importamos el componente
+import { Eventos } from '@eclass/ui-kit'
+//Definimos las propieaddes para el Evento
+const dataFakeEvents = {
+{
+typeEvent: 'LARGE_EVENTS',
+itemsEvent: {
+id: '1',
+eventTitle: 'Resuelve tus dudas en vivo | Martes',
+startDate: '04/27/2024',
+startTime: '14:00 hrs',
+buttonInfo: 'Ver información del evento',
+redirect: 'https://.....',
+eventImage:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT76y4DAhqWAlCspmGYWcbxSDnLw3p1FzJQKA&usqp=CAU',
+isMobile: false,
+},
+}
+}
+
+// Utilizamos el componente
+<Eventos {...dataFakeEvents} />
+`}),(0,f.jsx)(_,{...v[0]})]});export{y as default};
+//# sourceMappingURL=Events-BvBJbcQw.js.map

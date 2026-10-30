@@ -1,0 +1,2 @@
+import{c as e,o as t,u as n}from"./Typography-Db7ZPykY.js";var r=e();function i({children:e,bg:i=t(`colors-icon-ripeMango`),color:a=t(`colors-neutral-darkCharcoal`),size:o=`md`,m:s=`0`,sx:c}){let l={md:{borderRadius:`0.25em`,fontWeight:`400`,p:`0.25em 0.84em`},sm:{borderRadius:`0.42em`,fontWeight:`700`,p:`0.17em 0.67em`}};return(0,r.jsx)(n,{bg:i,borderRadius:l[o].borderRadius,color:a,display:`inline-block`,fontSize:`0.75rem`,fontWeight:l[o].fontWeight,lineHeight:`.875rem`,m:s,p:l[o].p,sx:c,children:e})}export{i as t};
+//# sourceMappingURL=Label-9uyCh-r2.js.map

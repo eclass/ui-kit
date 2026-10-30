@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";var t=e(((e,t)=>{t.exports=n,n.displayName=`properties`,n.aliases=[];function n(e){e.languages.properties={comment:/^[ \t]*[#!].*$/m,"attr-value":{pattern:/(^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?: *[=:] *(?! )| ))(?:\\(?:\r\n|[\s\S])|[^\\\r\n])+/m,lookbehind:!0},"attr-name":/^[ \t]*(?:\\(?:\r\n|[\s\S])|[^\\\s:=])+(?= *[=:]| )/m,punctuation:/[=:]/}}}));export default t();
+//# sourceMappingURL=properties-C14HCeJg.js.map

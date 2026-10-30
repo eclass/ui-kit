@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";var t=e(((e,t)=>{t.exports=n,n.displayName=`bnf`,n.aliases=[`rbnf`];function n(e){e.languages.bnf={string:{pattern:/"[^\r\n"]*"|'[^\r\n']*'/},definition:{pattern:/<[^<>\r\n\t]+>(?=\s*::=)/,alias:[`rule`,`keyword`],inside:{punctuation:/^<|>$/}},rule:{pattern:/<[^<>\r\n\t]+>/,inside:{punctuation:/^<|>$/}},operator:/::=|[|()[\]{}*+?]|\.{3}/},e.languages.rbnf=e.languages.bnf}}));export default t();
+//# sourceMappingURL=bnf-CRseI7ux.js.map

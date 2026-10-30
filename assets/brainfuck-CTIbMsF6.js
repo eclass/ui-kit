@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";var t=e(((e,t)=>{t.exports=n,n.displayName=`brainfuck`,n.aliases=[];function n(e){e.languages.brainfuck={pointer:{pattern:/<|>/,alias:`keyword`},increment:{pattern:/\+/,alias:`inserted`},decrement:{pattern:/-/,alias:`deleted`},branching:{pattern:/\[|\]/,alias:`important`},operator:/[.,]/,comment:/\S+/}}}));export default t();
+//# sourceMappingURL=brainfuck-CTIbMsF6.js.map

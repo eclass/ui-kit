@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";var t=e(((e,t)=>{t.exports=n,n.displayName=`csv`,n.aliases=[];function n(e){e.languages.csv={value:/[^\r\n,"]+|"(?:[^"]|"")*"(?!")/,punctuation:/,/}}}));export default t();
+//# sourceMappingURL=csv-DMU5hytM.js.map

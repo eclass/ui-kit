@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";import{t}from"./json-BvNAMR1J.js";var n=e(((e,n)=>{var r=t();n.exports=i,i.displayName=`jsonp`,i.aliases=[];function i(e){e.register(r),e.languages.jsonp=e.languages.extend(`json`,{punctuation:/[{}[\]();,.]/}),e.languages.insertBefore(`jsonp`,`punctuation`,{function:/(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*(?=\s*\()/})}}));export default n();
+//# sourceMappingURL=jsonp-CT_aMjpv.js.map

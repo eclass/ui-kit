@@ -1,0 +1,2 @@
+import{t as e}from"./rolldown-runtime-BWaJ3C7D.js";var t=e(((e,t)=>{t.exports=n,n.displayName=`xmlDoc`,n.aliases=[];function n(e){(function(e){function t(t,n){e.languages[t]&&e.languages.insertBefore(t,`comment`,{"doc-comment":n})}var n=e.languages.markup.tag,r={pattern:/\/\/\/.*/,greedy:!0,alias:`comment`,inside:{tag:n}},i={pattern:/'''.*/,greedy:!0,alias:`comment`,inside:{tag:n}};t(`csharp`,r),t(`fsharp`,r),t(`vbnet`,i)})(e)}}));export default t();
+//# sourceMappingURL=xml-doc-BXYKHj7S.js.map
