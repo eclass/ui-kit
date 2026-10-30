@@ -4,11 +4,11 @@ import userEvent from '@testing-library/user-event'
 
 import { ModalSimple } from './ModalSimple'
 
-jest.mock('@chakra-ui/react', () => {
-  const originalModule = jest.requireActual('@chakra-ui/react')
+vi.mock('@chakra-ui/react', async (importOriginal) => {
+  const originalModule = await importOriginal<typeof import('@chakra-ui/react')>()
   return {
     ...originalModule,
-    useMediaQuery: jest.fn(() => [false]),
+    useMediaQuery: vi.fn(() => [false]),
   }
 })
 
@@ -19,7 +19,7 @@ const renderWithChakra = (ui: React.ReactElement): any => {
 describe('ModalSimple Component', () => {
   it('renders children content', () => {
     renderWithChakra(
-      <ModalSimple isOpen onClose={jest.fn()}>
+      <ModalSimple isOpen onClose={vi.fn()}>
         <div>Simple content</div>
       </ModalSimple>
     )
@@ -30,7 +30,7 @@ describe('ModalSimple Component', () => {
 
   it('calls onClose when close button is clicked', async () => {
     const user = userEvent.setup()
-    const onCloseMock = jest.fn()
+    const onCloseMock = vi.fn()
 
     renderWithChakra(
       <ModalSimple isOpen onClose={onCloseMock}>
@@ -44,7 +44,7 @@ describe('ModalSimple Component', () => {
 
   it('does not call onClose when Escape key is pressed and closeOnEsc is false', async () => {
     const user = userEvent.setup()
-    const onCloseMock = jest.fn()
+    const onCloseMock = vi.fn()
 
     renderWithChakra(
       <ModalSimple isOpen onClose={onCloseMock} closeOnEsc={false}>
@@ -58,7 +58,7 @@ describe('ModalSimple Component', () => {
 
   it('removes inner spacing when withoutMargin is true', () => {
     renderWithChakra(
-      <ModalSimple isOpen onClose={jest.fn()} withoutMargin>
+      <ModalSimple isOpen onClose={vi.fn()} withoutMargin>
         <div>Simple content</div>
       </ModalSimple>
     )
@@ -69,7 +69,7 @@ describe('ModalSimple Component', () => {
 
   it('renders in compact mode on mobile when mobileCompact is true', () => {
     renderWithChakra(
-      <ModalSimple isOpen onClose={jest.fn()} mobileCompact>
+      <ModalSimple isOpen onClose={vi.fn()} mobileCompact>
         <div>Simple content</div>
       </ModalSimple>
     )

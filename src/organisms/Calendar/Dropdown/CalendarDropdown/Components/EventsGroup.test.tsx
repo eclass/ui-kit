@@ -28,7 +28,7 @@ const baseEvent: Event = {
   url: null,
 }
 
-const renderComponent = (event: Event, onClickEvent = jest.fn()): RenderResult =>
+const renderComponent = (event: Event, onClickEvent = vi.fn()): RenderResult =>
   render(
     <ChakraProvider>
       <Menu isOpen>
@@ -42,7 +42,7 @@ const renderComponent = (event: Event, onClickEvent = jest.fn()): RenderResult =
 describe('EventsGroup', () => {
   it('does not render unavailable event label and does not call onClickEvent when url is empty', async () => {
     const user = userEvent.setup()
-    const onClickEvent = jest.fn()
+    const onClickEvent = vi.fn()
 
     renderComponent(baseEvent, onClickEvent)
 
@@ -55,7 +55,7 @@ describe('EventsGroup', () => {
 
   it('calls onClickEvent when event has url', async () => {
     const user = userEvent.setup()
-    const onClickEvent = jest.fn()
+    const onClickEvent = vi.fn()
     const event = { ...baseEvent, url: 'https://example.com/evaluation-2' }
 
     renderComponent(event, onClickEvent)

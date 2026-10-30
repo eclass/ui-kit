@@ -6,11 +6,11 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { ModalAlertNew } from './ModalAlert'
 
 // Mock de useMediaQuery para controlar el comportamiento responsivo en los tests
-jest.mock('@chakra-ui/react', () => {
-  const originalModule = jest.requireActual('@chakra-ui/react')
+vi.mock('@chakra-ui/react', async (importOriginal) => {
+  const originalModule = await importOriginal<typeof import('@chakra-ui/react')>()
   return {
     ...originalModule,
-    useMediaQuery: jest.fn(() => [true]), // Por defecto, simula un entorno de escritorio
+    useMediaQuery: vi.fn(() => [true]), // Por defecto, simula un entorno de escritorio
   }
 })
 
@@ -68,7 +68,7 @@ describe('ModalAlertNew Component', () => {
   })
 
   it('calls onClose when overlay is clicked', async () => {
-    const onCloseMock = jest.fn()
+    const onCloseMock = vi.fn()
     renderWithChakra(
       <ModalAlertNew isOpen onClose={onCloseMock} title="Test Title" type="info" status="info" />
     )

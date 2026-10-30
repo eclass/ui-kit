@@ -40,8 +40,8 @@
     "build:types": "tsc -p tsconfig.types.json",
     "copy-dts": "copyfiles -u 1 \"src/**/*.d.ts\" dist",
     "serve": "vite preview",
-    "test": "jest --coverage",
-    "test-local": "jest --watch",
+    "test": "vitest run --coverage",
+    "test-local": "vitest",
     "lint": "npm run format && npm run eslint",
     "format": "prettier --write 'src/**/*.{ts,tsx,mdx}'",
     "eslint": "eslint 'src/**/*.{ts,tsx,mdx}' --fix --cache",
@@ -69,18 +69,18 @@
     "@semantic-release/changelog": "7.0.0",
     "@semantic-release/git": "11.0.1",
     "@testing-library/dom": "8.20.1",
-    "@testing-library/jest-dom": "5.17.0",
+    "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "12.1.5",
     "@testing-library/user-event": "14.4.3",
     "@types/eclass__api": "git+ssh://git@gitlab.com/eclass/types-eclass-api.git#v3.108.0",
     "@types/eclass__sequelize-models": "git+ssh://git@gitlab.com/eclass/types-sequelize-models.git#v5.40.0",
-    "@types/jest": "27.5.2",
-    "@types/node": "^16.11.17",
+    "@types/node": "^24.19.2",
     "@types/react": "17.0.64",
     "@types/react-dom": "17.0.20",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
-    "@vitejs/plugin-react": "1.3.2",
+    "@vitejs/plugin-react": "6.1.2",
+    "@vitest/coverage-v8": "5.0.5",
     "copyfiles": "2.4.1",
     "eslint": "8.57.1",
     "eslint-config-prettier": "8.10.0",
@@ -104,9 +104,7 @@
     "gh-pages": "^6.0.0",
     "graphql": "^16.8.1",
     "husky": "7.0.4",
-    "identity-obj-proxy": "3.0.0",
-    "jest": "27.5.1",
-    "jest-watch-typeahead": "1.0.0",
+    "jsdom": "29.1.1",
     "lint-staged": "12.3.7",
     "localforage": "1.10.0",
     "match-sorter": "6.3.1",
@@ -117,12 +115,11 @@
     "react-router-dom": "6.14.2",
     "semantic-release": "25.0.9",
     "sort-by": "1.2.0",
-    "ts-jest": "27.1.5",
     "ts-patch": "2.0.1",
     "typescript": "4.9.5",
     "typescript-transform-paths": "3.3.1",
-    "vite": "2.9.16",
-    "vite-tsconfig-paths": "3.4.1"
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
   },
   "dependencies": {
     "@chakra-ui/react": "1.8.9",
@@ -139,5 +136,8 @@
     "@types/react": "17.0.2",
     "@types/react-dom": "17.0.2"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "overrides": {
+    "@babel/plugin-transform-runtime": "^7.29.0"
+  }
 }

@@ -19,7 +19,7 @@ const renderCourseList = (
 
 describe.each(['TRADITIONAL', 'IMAGE_LARGE'] as const)('CourseList %s', (typeBox) => {
   it('calls the data onClick from the overlay with the full course and does not redirect', () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     const courseWithOnClick = { ...course, onClick }
     renderCourseList(courseWithOnClick, typeBox)
 
@@ -39,7 +39,7 @@ describe.each(['TRADITIONAL', 'IMAGE_LARGE'] as const)('CourseList %s', (typeBox
   })
 
   it('calls the custom action when the selectable box is activated with Enter', () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     const courseWithOnClick = { ...course, onClick }
     renderCourseList(courseWithOnClick, typeBox)
 

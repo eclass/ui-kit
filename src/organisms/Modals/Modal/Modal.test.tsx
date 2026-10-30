@@ -1,16 +1,16 @@
 import { useState } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useMediaQuery } from '@chakra-ui/react'
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { Modal } from './Modal'
 
 // Mock de useMediaQuery para controlar el comportamiento responsivo en los tests
-jest.mock('@chakra-ui/react', () => {
-  const originalModule = jest.requireActual('@chakra-ui/react')
+vi.mock('@chakra-ui/react', async (importOriginal) => {
+  const originalModule = await importOriginal<typeof import('@chakra-ui/react')>()
   return {
     ...originalModule,
-    useMediaQuery: jest.fn(() => [true]), // Por defecto, simula un entorno de escritorio
+    useMediaQuery: vi.fn(() => [true]), // Por defecto, simula un entorno de escritorio
   }
 })
 
@@ -45,14 +45,14 @@ const ModalFocusHarness = ({
 // Props por defecto para reducir repetición
 const defaultProps = {
   isOpen: true,
-  onClose: jest.fn(),
+  onClose: vi.fn(),
   title: 'Test Title',
   children: <div>Test Content</div>,
 }
 
 describe('Modal Component', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   describe('Rendering', () => {
@@ -94,7 +94,7 @@ describe('Modal Component', () => {
   describe('Interaction', () => {
     it('calls onClose when close button is clicked', async () => {
       const user = userEvent.setup()
-      const onCloseMock = jest.fn()
+      const onCloseMock = vi.fn()
 
       renderWithChakra(<Modal {...defaultProps} onClose={onCloseMock} />)
 
@@ -103,7 +103,7 @@ describe('Modal Component', () => {
     })
 
     it('does not render close button when closeOnOverlayClick is false', () => {
-      const onCloseMock = jest.fn()
+      const onCloseMock = vi.fn()
 
       renderWithChakra(
         <Modal {...defaultProps} onClose={onCloseMock} closeOnOverlayClick={false} />
@@ -114,7 +114,7 @@ describe('Modal Component', () => {
 
     it('does not call onClose when Escape key is pressed if closeOnOverlayClick is false', async () => {
       const user = userEvent.setup()
-      const onCloseMock = jest.fn()
+      const onCloseMock = vi.fn()
 
       renderWithChakra(
         <Modal {...defaultProps} onClose={onCloseMock} closeOnOverlayClick={false} />
@@ -193,8 +193,8 @@ describe('Modal Component', () => {
 
   describe('Responsive Behavior', () => {
     it('applies desktop styles when screen is desktop size', () => {
-      const useMediaQuery = jest.requireMock('@chakra-ui/react').useMediaQuery
-      useMediaQuery.mockReturnValue([true]) // Simulate desktop environment
+      const mediaQueryMock = vi.mocked(useMediaQuery)
+      mediaQueryMock.mockReturnValue([true]) // Simulate desktop environment
 
       renderWithChakra(<Modal {...defaultProps} />)
 
@@ -204,8 +204,8 @@ describe('Modal Component', () => {
     })
 
     it('applies mobile styles when screen is mobile size', () => {
-      const useMediaQuery = jest.requireMock('@chakra-ui/react').useMediaQuery
-      useMediaQuery.mockReturnValue([false]) // Simulate mobile environment
+      const mediaQueryMock = vi.mocked(useMediaQuery)
+      mediaQueryMock.mockReturnValue([false]) // Simulate mobile environment
 
       renderWithChakra(<Modal {...defaultProps} />)
 
@@ -228,16 +228,16 @@ describe('Modal Component', () => {
     })
 
     it('renders header with different font size on mobile vs desktop', () => {
-      const useMediaQuery = jest.requireMock('@chakra-ui/react').useMediaQuery
+      const mediaQueryMock = vi.mocked(useMediaQuery)
 
       // Test desktop
-      useMediaQuery.mockReturnValue([true])
+      mediaQueryMock.mockReturnValue([true])
       const { rerender } = renderWithChakra(<Modal {...defaultProps} />)
       let header = screen.getByText('Test Title')
       expect(header).toHaveStyle('font-size: 20px')
 
       // Test mobile
-      useMediaQuery.mockReturnValue([false])
+      mediaQueryMock.mockReturnValue([false])
       rerender(
         <ChakraProvider>
           <Modal {...defaultProps} />

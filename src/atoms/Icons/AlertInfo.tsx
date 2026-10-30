@@ -43,4 +43,4 @@ export function AlertInfo(props: BaseProps): JSX.Element {
   )
 }
 
-AlertInfo.displayName = 'ArrowRight'
+AlertInfo.displayName = 'AlertInfo'

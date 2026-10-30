@@ -41,7 +41,7 @@ jobs:
       - name: Linter code check
         run: npm run lint:check
 
-      - name: Testing JEST
+      - name: Testing Vitest
         run: npm run test
 
   release:

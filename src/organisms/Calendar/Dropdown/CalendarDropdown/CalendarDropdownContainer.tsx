@@ -111,7 +111,7 @@ export const CalendarDropdownContainer = ({
           border: 'none',
           borderRadius: isMobile ? '0' : '10px',
           boxShadow: isMobile ? 'none' : 'rgba(47, 47, 47, 0.2) -1px 6px 40px 0px',
-          left: isMobile ? 'auto' : '34pxpx',
+          left: isMobile ? 'auto' : 0,
           maxHeight: isMobile ? 'calc(100vh - 62px)' : 'auto',
           opacity: '1 !important',
           overflowY: isMobile ? 'auto' : 'hidden',

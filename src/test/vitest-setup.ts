@@ -1,6 +1,6 @@
 /**
- * Jest global setup
- * =================
+ * Vitest global setup
+ * ===================
  *
  * Este archivo se ejecuta automáticamente antes de cada test.
  * Su objetivo es:
@@ -13,7 +13,7 @@
  *  - Todo mock definido aquí afecta a TODOS los tests.
  *  - No agregar lógica específica de un test puntual.
  *  - Si un test necesita el comportamiento real de una librería,
- *    se debe hacer `jest.unmock()` dentro del test.
+ *    se debe hacer `vi.unmock()` dentro del test.
  */
 
 /**
@@ -23,7 +23,7 @@
  *  - toHaveTextContent
  *  - toBeVisible
  */
-import '@testing-library/jest-dom'
+import '@testing-library/jest-dom/vitest'
 
 /**
  * react-ripples
@@ -36,7 +36,7 @@ import '@testing-library/jest-dom'
  *  - Evitar errores de render
  *  - Acelerar la ejecución
  */
-jest.mock('react-ripples')
+vi.mock('react-ripples')
 
 /**
  * DOMPurify
@@ -48,7 +48,7 @@ jest.mock('react-ripples')
  *
  * Se mockea para evitar costos innecesarios y side-effects.
  */
-jest.mock('dompurify')
+vi.mock('dompurify')
 
 /**
  * Chakra UI
@@ -63,8 +63,8 @@ jest.mock('dompurify')
  *  - No depende del tamaño de pantalla
  *  - Menor costo de ejecución
  */
-jest.mock('@chakra-ui/react', () => {
-  const actual = jest.requireActual('@chakra-ui/react')
+vi.mock('@chakra-ui/react', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@chakra-ui/react')>()
   return {
     ...actual,
     useMediaQuery: () => [false],
@@ -85,8 +85,8 @@ jest.mock('@chakra-ui/react', () => {
  *
  * Esto reduce significativamente el tiempo de ejecución.
  */
-jest.mock('@emotion/react', () => {
-  const actual = jest.requireActual('@emotion/react')
+vi.mock('@emotion/react', async (importOriginal) => {
+  const actual = await importOriginal<typeof import('@emotion/react')>()
   return {
     ...actual,
     css: () => '',

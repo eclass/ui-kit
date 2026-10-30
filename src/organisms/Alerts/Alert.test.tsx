@@ -10,7 +10,7 @@ describe('Alert Component', () => {
   })
 
   it('displays a button and calls onClick callback when clicked', () => {
-    const onClickMock = jest.fn()
+    const onClickMock = vi.fn()
     render(
       <Alert state="info" buttonText="Button text" onClick={onClickMock}>
         Test message
@@ -37,7 +37,7 @@ describe('Alert Component', () => {
   })
 
   it('calls onClick callback when dismiss button is clicked', () => {
-    const onClickMock = jest.fn()
+    const onClickMock = vi.fn()
     render(
       <Alert state="info" canDismiss onClick={onClickMock}>
         Test message

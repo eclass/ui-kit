@@ -1,16 +1,16 @@
 import { useState } from 'react'
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, useMediaQuery } from '@chakra-ui/react'
 import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 import { ModalMultiple } from './ModalMultiple'
 
 // Mock de useMediaQuery para controlar el comportamiento responsivo
-jest.mock('@chakra-ui/react', () => {
-  const originalModule = jest.requireActual('@chakra-ui/react')
+vi.mock('@chakra-ui/react', async (importOriginal) => {
+  const originalModule = await importOriginal<typeof import('@chakra-ui/react')>()
   return {
     ...originalModule,
-    useMediaQuery: jest.fn(() => [true]), // Desktop por defecto
+    useMediaQuery: vi.fn(() => [true]), // Desktop por defecto
   }
 })
 
@@ -45,7 +45,7 @@ const ModalMultipleFocusHarness = ({
 
 describe('ModalMultiple Component', () => {
   beforeEach(() => {
-    jest.clearAllMocks()
+    vi.clearAllMocks()
   })
 
   /* -------------------------------------------------------------------------- */
@@ -55,7 +55,7 @@ describe('ModalMultiple Component', () => {
   describe('Rendering', () => {
     it('renders modal type correctly', () => {
       renderWithChakra(
-        <ModalMultiple type="modal" isOpen onClose={jest.fn()} title="Modal Title">
+        <ModalMultiple type="modal" isOpen onClose={vi.fn()} title="Modal Title">
           <div>Modal Content</div>
         </ModalMultiple>
       )
@@ -70,7 +70,7 @@ describe('ModalMultiple Component', () => {
         <ModalMultiple
           type="modalAlert"
           isOpen
-          onClose={jest.fn()}
+          onClose={vi.fn()}
           title="Alert Title"
           description="Alert Description"
         />
@@ -86,7 +86,7 @@ describe('ModalMultiple Component', () => {
         <ModalMultiple
           type="modalLoading"
           isOpen
-          onClose={jest.fn()}
+          onClose={vi.fn()}
           title="Loading Title"
           description="Loading Description"
         />
@@ -99,7 +99,7 @@ describe('ModalMultiple Component', () => {
 
     it('does not render when isOpen is false', () => {
       renderWithChakra(
-        <ModalMultiple type="modal" isOpen={false} onClose={jest.fn()} title="Hidden Modal">
+        <ModalMultiple type="modal" isOpen={false} onClose={vi.fn()} title="Hidden Modal">
           <div>Modal Multiple</div>
         </ModalMultiple>
       )
@@ -116,7 +116,7 @@ describe('ModalMultiple Component', () => {
   describe('Interaction', () => {
     it('calls onClose when close button is clicked (modal)', async () => {
       const user = userEvent.setup()
-      const onCloseMock = jest.fn()
+      const onCloseMock = vi.fn()
 
       renderWithChakra(
         <ModalMultiple type="modal" isOpen onClose={onCloseMock} title="Closable Modal">
@@ -130,7 +130,7 @@ describe('ModalMultiple Component', () => {
 
     it('does not close on escape when type is modalLoading', async () => {
       const user = userEvent.setup()
-      const onCloseMock = jest.fn()
+      const onCloseMock = vi.fn()
 
       renderWithChakra(
         <ModalMultiple
@@ -170,7 +170,7 @@ describe('ModalMultiple Component', () => {
   describe('Children rendering', () => {
     it('renders children for modal type', () => {
       renderWithChakra(
-        <ModalMultiple type="modal" isOpen onClose={jest.fn()} title="Modal With Children">
+        <ModalMultiple type="modal" isOpen onClose={vi.fn()} title="Modal With Children">
           <div>Children Content</div>
         </ModalMultiple>
       )
@@ -180,7 +180,7 @@ describe('ModalMultiple Component', () => {
 
     it('renders children for modalLoading type', () => {
       renderWithChakra(
-        <ModalMultiple type="modalLoading" isOpen onClose={jest.fn()} title="Loading">
+        <ModalMultiple type="modalLoading" isOpen onClose={vi.fn()} title="Loading">
           <div>Loading Children</div>
         </ModalMultiple>
       )
@@ -195,11 +195,11 @@ describe('ModalMultiple Component', () => {
 
   describe('Responsive behavior', () => {
     it('applies desktop behavior', () => {
-      const useMediaQuery = jest.requireMock('@chakra-ui/react').useMediaQuery
-      useMediaQuery.mockReturnValue([true])
+      const mediaQueryMock = vi.mocked(useMediaQuery)
+      mediaQueryMock.mockReturnValue([true])
 
       renderWithChakra(
-        <ModalMultiple type="modal" isOpen onClose={jest.fn()} title="Desktop Modal">
+        <ModalMultiple type="modal" isOpen onClose={vi.fn()} title="Desktop Modal">
           <div>Modal Multiple</div>
         </ModalMultiple>
       )
@@ -208,11 +208,11 @@ describe('ModalMultiple Component', () => {
     })
 
     it('applies mobile behavior', () => {
-      const useMediaQuery = jest.requireMock('@chakra-ui/react').useMediaQuery
-      useMediaQuery.mockReturnValue([false])
+      const mediaQueryMock = vi.mocked(useMediaQuery)
+      mediaQueryMock.mockReturnValue([false])
 
       renderWithChakra(
-        <ModalMultiple type="modal" isOpen onClose={jest.fn()} title="Mobile Modal">
+        <ModalMultiple type="modal" isOpen onClose={vi.fn()} title="Mobile Modal">
           <div>Modal Multiple</div>
         </ModalMultiple>
       )

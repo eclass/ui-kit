@@ -5,11 +5,11 @@ import { Btn } from './Btn'
 import { Profile } from '@icons'
 
 const props = {
-  onClick: jest.fn(),
+  onClick: vi.fn(),
 }
 
 beforeEach(() => {
-  jest.clearAllMocks()
+  vi.clearAllMocks()
 })
 
 describe('Btn', () => {

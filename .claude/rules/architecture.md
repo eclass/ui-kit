@@ -10,7 +10,7 @@
   `vars()`, que devuelve la variable CSS de Chakra (`vars('colors-main-deepSkyBlue')` →
   `var(--chakra-colors-main-deepSkyBlue)`). Los colores siguen el sistema de diseño.
 - `src/services/`: utilidades sin UI (`uniqueId`).
-- `src/test/jest-setup.ts`: configuración global de Jest (ver `.claude/rules/testing/testing.md`).
+- `src/test/vitest-setup.ts`: configuración global de Vitest (ver `.claude/rules/testing/testing.md`).
 - `src/documentation/`: sitio de documentación (ver `.claude/rules/documentation/documentation.md`).
 - `src/Playground.tsx`: página vacía para probar componentes en local; no se publica.
 - `src/main.tsx`: entrada de Vite. Con `VITE_REACT_DEPLOY_DOCUMENTATION=DOCUMENTATION` (en `.env`)

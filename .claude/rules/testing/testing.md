@@ -14,17 +14,20 @@ paths:
   existentes en inglés no se cambian salvo que se pida.
 - Probar lo que el componente promete al consumidor: lo que renderiza según sus props, sus
   callbacks (`onClick`, `onClose`...) y su accesibilidad (rol, foco, `aria-*`).
-- Correr solo las pruebas tocadas con `npx jest <rutas>` (ver `.claude/rules/commands.md`).
+- Correr solo las pruebas tocadas con `npx vitest run <rutas>` (ver `.claude/rules/commands.md`).
 
-## Configuración global (`src/test/jest-setup.ts`)
+## Configuración global (`src/test/vitest-setup.ts`)
 
 Afecta a todas las pruebas; no agregar ahí lógica de una prueba puntual.
 
-- Extiende `expect` con `@testing-library/jest-dom`.
+- Extiende `expect` con `@testing-library/jest-dom/vitest`. `describe`, `test`, `expect` y `vi`
+  son globales (`globals: true`); no hace falta importarlos.
 - Mockea `react-ripples` y `dompurify` (no se valida la sanitización).
 - `useMediaQuery` de Chakra siempre devuelve `[false]` (vista mobile). Para probar escritorio,
   re-mockearlo en el archivo de prueba (ver `ModalAlert.test.tsx`).
 - `css` y `keyframes` de Emotion devuelven `''`: no se pueden validar estilos.
+- `vite.config.ts` usa `pool: 'vmThreads'` y `maxWorkers: '50%'`. No usar `isolate: false`: los
+  `vi.mock` de un archivo se filtran a otros y fallan pruebas.
 
 ## Según qué se prueba
 
@@ -33,7 +36,7 @@ Afecta a todas las pruebas; no agregar ahí lógica de una prueba puntual.
 | Componente React | `@testing-library/react` (v12) | `render`, `screen`, `waitFor`, `within` |
 | Interacción | `@testing-library/user-event` (v14) | `const user = userEvent.setup()`; `await user.click(...)`, `await user.type(...)` |
 | Hook | no hay `renderHook` (RTL 12 sin `@testing-library/react-hooks`) | probarlo a través de un componente de prueba que lo use |
-| Función / util `.ts` | solo Jest | `describe`, `test`, `expect`, `jest.fn` |
+| Función / util `.ts` | solo Vitest | `describe`, `test`, `expect`, `vi.fn` |
 
 - Preferir consultas accesibles: `getByRole`, `getByLabelText`, `getByText`; `getByTestId` solo
   si no hay otra opción.
@@ -52,7 +55,7 @@ describe('BtnTertiary', () => {
   const user = userEvent.setup()
 
   test('llama a onClick al hacer clic', async () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     render(<BtnTertiary onClick={onClick}>Texto</BtnTertiary>)
 
     await user.click(screen.getByRole('button'))

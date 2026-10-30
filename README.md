@@ -34,8 +34,8 @@ Unifica los estilos y el comportamiento de los fronts de eClass (por ejemplo v8)
 | UI          | React (desarrollo en 17.0.2, compatible desde 16.8 hasta 19)                      |
 | Lenguaje    | TypeScript 4.9 (`strict`), target ES2019                                          |
 | Estilos     | Chakra UI 1.8 + Emotion 11 + framer-motion 6                                      |
-| Build       | Vite 2.9 en modo librería (formatos ES y UMD) + `tsc` para los tipos `.d.ts`      |
-| Pruebas     | Jest 27 + ts-jest + Testing Library                                               |
+| Build       | Vite 8 en modo librería (formatos ES y UMD) + `tsc` para los tipos `.d.ts`        |
+| Pruebas     | Vitest 5 + Testing Library                                                        |
 | Calidad     | ESLint (standard + TypeScript) + Prettier + husky + lint-staged + commitlint      |
 | Publicación | GitHub Actions + semantic-release + npm Trusted Publishing                        |
 | Otras deps. | `date-fns`, `html-react-parser` + `dompurify`, `react-hot-toast`, `react-ripples` |
@@ -197,8 +197,8 @@ se actualiza `@eclass/ui-kit` en cada proyecto que la utiliza.
 | `npm run build`            | Build de la librería en `dist/`: `tsc` + `vite build` (ES y UMD) + tipos + copia de los `.d.ts` de `src`. |
 | `npm run deploy`           | Build del sitio de documentación en `dist/` (lo usa CI para GitHub Pages).                                |
 | `npm run serve`            | Sirve el último build con `vite preview`.                                                                 |
-| `npm run test`             | Suite completa de Jest con coverage (la corre CI).                                                        |
-| `npm run test-local`       | Jest en modo `--watch`.                                                                                   |
+| `npm run test`             | Suite completa de Vitest con coverage (la corre CI).                                                      |
+| `npm run test-local`       | Vitest en modo watch.                                                                                     |
 | `npm run lint`             | Formatea `src` con Prettier y corrige con `eslint --fix`.                                                 |
 | `npm run lint:check`       | Revisa `src` con ESLint sin corregir (la corre CI).                                                       |
 | `npm run format`           | Solo Prettier sobre `src`.                                                                                |
@@ -206,7 +206,7 @@ se actualiza `@eclass/ui-kit` en cada proyecto que la utiliza.
 | `npm run ts-compile-check` | Revisión de tipos de todo el proyecto con `tsc` (la corre el pre-commit).                                 |
 
 > La suite completa es pesada. En local, corre solo las pruebas de los archivos que tocaste:
-> `npx jest src/molecules/Buttons/BtnPrimary.test.tsx`.
+> `npx vitest run src/molecules/Buttons/BtnPrimary.test.tsx`.
 
 ## Estructura del proyecto
 
@@ -214,7 +214,7 @@ se actualiza `@eclass/ui-kit` en cada proyecto que la utiliza.
 ui-kit/
 ├── .github/workflows/nodejs.yml   # CI: lint, pruebas, release y deploy de la documentación
 ├── .husky/                        # Hooks de git (pre-commit y commit-msg)
-├── __mocks__/                     # Mocks de Jest (dompurify, react-ripples)
+├── __mocks__/                     # Mocks de Vitest (dompurify, react-ripples)
 ├── src/
 │   ├── atoms/                     # Componentes básicos (Label, Progress, Icons, ...)
 │   ├── molecules/                 # Combinaciones de átomos (botones, tooltip, ...)
@@ -222,7 +222,7 @@ ui-kit/
 │   ├── theme/                     # Tema de Chakra (colores, tipografía, estilos) y vars()
 │   ├── services/                  # Utilidades sin UI
 │   ├── documentation/             # Sitio de documentación (páginas, rutas y componentes)
-│   ├── test/jest-setup.ts         # Configuración global de Jest
+│   ├── test/vitest-setup.ts       # Configuración global de Vitest
 │   ├── Playground.tsx             # Página para probar componentes en local
 │   ├── main.tsx                   # Entrada de Vite (documentación o Playground)
 │   └── index.ts                   # API pública de la librería

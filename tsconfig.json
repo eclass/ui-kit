@@ -15,6 +15,7 @@
     "incremental": true,
     "jsx": "react-jsx",
     "importHelpers": true,
+    "types": ["node", "vitest/globals", "@testing-library/jest-dom/vitest"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -34,6 +35,6 @@
     "outDir": "dist",
     "noEmit": false
   },
-  "include": ["src", "test", "vite.config.ts"],
+  "include": ["src", "test"],
   "exclude": ["jest.config.js", ".eslintrc.js", "prepare.js"]
 }
