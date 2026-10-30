@@ -26,6 +26,8 @@ Afecta a todas las pruebas; no agregar ahí lógica de una prueba puntual.
 - `useMediaQuery` de Chakra siempre devuelve `[false]` (vista mobile). Para probar escritorio,
   re-mockearlo en el archivo de prueba (ver `ModalAlert.test.tsx`).
 - `css` y `keyframes` de Emotion devuelven `''`: no se pueden validar estilos.
+- `vite.config.ts` usa `pool: 'vmThreads'` y `maxWorkers: '50%'`. No usar `isolate: false`: los
+  `vi.mock` de un archivo se filtran a otros y fallan pruebas.
 
 ## Según qué se prueba
 

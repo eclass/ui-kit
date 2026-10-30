@@ -16,6 +16,10 @@ export default defineConfig({
     environment: 'jsdom',
     include: ['src/**/*.test.{ts,tsx}'],
     setupFiles: ['src/test/vitest-setup.ts'],
+    // vmThreads crea jsdom una vez por worker (mantiene el aislamiento por archivo) y con la
+    // mitad de los núcleos se evita la competencia por CPU: la suite tarda menos de la mitad
+    pool: 'vmThreads',
+    maxWorkers: '50%',
     coverage: { provider: 'v8' },
   },
   build: {
