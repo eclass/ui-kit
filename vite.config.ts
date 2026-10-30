@@ -20,7 +20,11 @@ export default defineConfig({
     // mitad de los núcleos se evita la competencia por CPU: la suite tarda menos de la mitad
     pool: 'vmThreads',
     maxWorkers: '50%',
-    coverage: { provider: 'v8' },
+    coverage: {
+      provider: 'v8',
+      // Barrels, mocks y tipos no tienen lógica que probar
+      exclude: ['**/index.ts', '**/index.tsx', '__mocks__/**', '**/*.d.ts'],
+    },
   },
   build: {
     // ES2019: la librería debe correr en los fronts consumidores sin polyfills

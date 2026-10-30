@@ -102,4 +102,4 @@ export function PaymentModal({
   )
 }
 
-Modal.displayName = 'Modal'
+PaymentModal.displayName = 'PaymentModal'

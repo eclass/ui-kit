@@ -29,6 +29,8 @@ const getAvatarColor = (fullName?: string): string => {
 const getInitials = (fullName: string): string =>
   fullName
     .split(' ')
+    // Descarta las palabras vacías que dejan los espacios dobles o en los extremos
+    .filter((word) => word.length > 0)
     .map((word) => word[0])
     .slice(0, 2)
     .join('')
