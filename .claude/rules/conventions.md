@@ -35,7 +35,7 @@
   - Muchos cambios: agruparlos en `sx` con `'@media screen and (max-width: 640px)': { ... }`.
   - En código nuevo, `useMediaQuery` solo cuando cambia la lógica o qué se renderiza, no para
     estilos. El código existente que lo usa para estilos no se migra salvo que se pida. En las
-    pruebas `useMediaQuery` siempre devuelve `false` (`jest-setup.ts`).
+    pruebas `useMediaQuery` siempre devuelve `false` (`vitest-setup.ts`).
   - El punto de quiebre depende del componente; en el repo se usan 900px, 768px, 640px, 577px,
     480px y 425px, entre otros.
 - No usar styled-components, `@emotion/styled`, scss ni css nuevos.

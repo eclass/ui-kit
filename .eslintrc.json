@@ -33,8 +33,14 @@
       "extends": "plugin:mdx/recommended"
     }
   ],
+  "globals": {
+    // Globals de Vitest (globals: true); describe, test y expect vienen del env jest
+    "vi": "readonly"
+  },
   "rules": {
-    "@typescript-eslint/strict-boolean-expressions": "off"
+    "@typescript-eslint/strict-boolean-expressions": "off",
+    // Solo revisa APIs obsoletas de Jest; las pruebas corren con Vitest
+    "jest/no-deprecated-functions": "off"
   },
   "settings": {
     "mdx/code-blocks": true,

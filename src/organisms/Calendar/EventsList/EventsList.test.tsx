@@ -29,7 +29,7 @@ const renderComponent = (
 
 describe('EventsList', () => {
   it('calls onClick when the item is clicked', async () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     const user = userEvent.setup()
 
     renderComponent(onClick)
@@ -40,7 +40,7 @@ describe('EventsList', () => {
   })
 
   it('calls onClick when url is not provided', async () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     const user = userEvent.setup()
 
     renderComponent(onClick)
@@ -57,7 +57,7 @@ describe('EventsList', () => {
   })
 
   it('does not render unavailable label and calls onClick when url is empty', async () => {
-    const onClick = jest.fn()
+    const onClick = vi.fn()
     const user = userEvent.setup()
 
     renderComponent(onClick)

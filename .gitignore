@@ -9,5 +9,4 @@ docs
 .eslintcache
 tsconfig.tsbuildinfo
 *.env*
-.jest-cache
 odd/

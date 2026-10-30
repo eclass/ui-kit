@@ -22,11 +22,11 @@ npm run build    # build de la librería en dist/ (lo corre CI al publicar)
 ## Tests
 
 ```bash
-npx jest <rutas de .test.tsx>
+npx vitest run <rutas de .test.tsx>
 ```
 
 - `npm run test` corre la suite completa con coverage: en local no usarlo, ni
-  `--findRelatedTests`, porque es muy pesado para el equipo de desarrollo. La suite completa corre
+  `vitest related`, porque es muy pesado para el equipo de desarrollo. La suite completa corre
   en CI (GitHub Actions).
 - En local, correr solo los `.test.ts(x)` de los archivos tocados, pasando sus rutas, y solo
   cuando la tarea lo requiera.

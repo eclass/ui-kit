@@ -10,7 +10,7 @@ const renderWithChakra = (ui: React.ReactElement): any => {
 describe('ModalCard Component', () => {
   it('renders children content', () => {
     renderWithChakra(
-      <ModalCard isOpen onClose={jest.fn()}>
+      <ModalCard isOpen onClose={vi.fn()}>
         <div>Card content</div>
       </ModalCard>
     )
@@ -21,7 +21,7 @@ describe('ModalCard Component', () => {
 
   it('does not render a close button', () => {
     renderWithChakra(
-      <ModalCard isOpen onClose={jest.fn()}>
+      <ModalCard isOpen onClose={vi.fn()}>
         <div>Card content</div>
       </ModalCard>
     )

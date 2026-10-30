@@ -4,11 +4,11 @@ import userEvent from '@testing-library/user-event'
 import { BtnTertiary } from './BtnTertiary'
 
 const props = {
-  onClick: jest.fn(),
+  onClick: vi.fn(),
 }
 
 beforeEach(() => {
-  jest.clearAllMocks()
+  vi.clearAllMocks()
 })
 
 describe('BtnTertiary', () => {

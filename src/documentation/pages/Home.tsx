@@ -20,7 +20,7 @@ export const Home = (): JSX.Element => {
       </MyText>
       <MyText>Para trabajar de manera local</MyText>
       <Code text="npm run dev" />
-      <MyText>Ejecuta los test con jest</MyText>
+      <MyText>Ejecuta los test con vitest</MyText>
       <Code text="npm run test" />
     </>
   )
