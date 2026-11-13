@@ -1,3 +1,10 @@
+## [1.65.1](https://github.com/eclass/ui-kit/compare/v1.65.0...v1.65.1) (2026-11-13)
+
+
+### Bug Fixes
+
+* **PDYE-2318:** configuración accesibilidad claude ([#810](https://github.com/eclass/ui-kit/issues/810)) ([40eaaba](https://github.com/eclass/ui-kit/commit/40eaaba40db81b6fcd4b8b1aff3e0380d9c12a13))
+
 # [1.65.0](https://github.com/eclass/ui-kit/compare/v1.64.6...v1.65.0) (2026-10-29)
 
 
