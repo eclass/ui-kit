@@ -10,3 +10,4 @@ docs
 tsconfig.tsbuildinfo
 *.env*
 odd/
+src/Playground.local.tsx

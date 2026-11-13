@@ -77,5 +77,8 @@ Clasifica cada pedido antes de editar:
 
 - Pedir "juntar los commits" significa solo hacer squash de los commits del usuario; los cambios
   propios quedan aparte para revisión.
+- Accesibilidad: el código nuevo sigue `.claude/rules/conventions.md` ("Accesibilidad al escribir
+  componentes"). En una revisión, los arreglos mecánicos de `accesibilidad-teclado-lector` se
+  aplican sin preguntar (informando cada cambio, sin commitear); el resto espera al usuario.
 - El CI es GitHub Actions (`.github/workflows/nodejs.yml`); no existe `.gitlab-ci.yml`. GitLab
   solo se usa para instalar por SSH los paquetes de tipos privados `@types/eclass__*`.
