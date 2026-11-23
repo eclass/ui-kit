@@ -4,7 +4,8 @@
   "version": "1.65.1",
   "packageManager": "npm@11.13.0",
   "files": [
-    "dist"
+    "dist",
+    "ai"
   ],
   "main": "dist/eclass-ui-kit.umd.js",
   "module": "dist/eclass-ui-kit.es.js",
