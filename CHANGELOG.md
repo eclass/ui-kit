@@ -1,3 +1,10 @@
+# [1.66.0](https://github.com/eclass/ui-kit/compare/v1.65.1...v1.66.0) (2026-11-23)
+
+
+### Features
+
+* **ai:** agrega catálogo de componentes para agentes ([#811](https://github.com/eclass/ui-kit/issues/811)) ([4c557b6](https://github.com/eclass/ui-kit/commit/4c557b6a1069c46bd13a162b390a3f730d574812))
+
 ## [1.65.1](https://github.com/eclass/ui-kit/compare/v1.65.0...v1.65.1) (2026-11-13)
 
 
