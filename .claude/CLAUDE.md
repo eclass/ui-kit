@@ -67,8 +67,8 @@ Clasifica cada pedido antes de editar:
   2. Con el plan aprobado, crear `odd/tasks/<feature>.md` (ignorado por git) con objetivo,
      alcance, checklist, criterios de aceptación y progreso. Mantenerlo al día en cada paso.
   3. Implementar de a un paso, deteniéndose para que el usuario revise.
-- **Todo componente o funcionalidad nueva** lleva sus pruebas y la actualización de su página
-  en `src/documentation` en el mismo cambio.
+- **Todo componente o funcionalidad nueva** lleva sus pruebas, la actualización de su página
+  en `src/documentation` y su ficha en `ai/` (ver `.claude/rules/ai-catalog.md`) en el mismo cambio.
 - **Al terminar y validar a mano**: el usuario corre `/revisar-desarrollo`, que ajusta la
   profundidad de la revisión según el riesgo.
 - Al retomar una tarea grande, leer primero su `odd/tasks/<feature>.md`.
