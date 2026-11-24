@@ -1,3 +1,10 @@
+# [1.67.0](https://github.com/eclass/ui-kit/compare/v1.66.0...v1.67.0) (2026-11-24)
+
+
+### Features
+
+* **PDYE-2353:** nuevo componente caja ruta de aprendizaje ([#812](https://github.com/eclass/ui-kit/issues/812)) ([1b42020](https://github.com/eclass/ui-kit/commit/1b42020e442425090a06b9cbad913039ba049d74))
+
 # [1.66.0](https://github.com/eclass/ui-kit/compare/v1.65.1...v1.66.0) (2026-11-23)
 
 
