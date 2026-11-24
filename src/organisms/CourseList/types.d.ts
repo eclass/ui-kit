@@ -45,6 +45,29 @@ export interface WrapperCoursesProps {
   typeBox?: 'TRADITIONAL' | 'TRADITIONAL_LANDSCAPE' | 'IMAGE_LARGE' | 'IMAGE_SMALL'
 }
 
+export interface LearningPathStart {
+  level: string
+  courseTitle: string
+  courseHref: string
+  thumbnail: string
+  thumbnailAlt?: string
+}
+
+export interface IBoxLearningPath {
+  headerImage: string
+  title: string
+  coursesCount: number
+  /** Porcentaje de avance (0-100) */
+  progress?: number
+  /** Curso con el que se recomienda comenzar */ // Revisar cuando este la estructura de datos definida
+  start: LearningPathStart
+  /** Texto del botón. Por defecto: "Ver ruta de aprendizaje" */
+  buttonLabel: string
+  /** href para navegar a vista de ruta */
+  pathHref: string
+  hasFinished?: boolean
+}
+
 export interface FooterProps {
   modalPaymentText?: PaymentText
 }

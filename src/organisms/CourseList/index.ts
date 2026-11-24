@@ -1,3 +1,5 @@
 export { CourseList } from './CourseList'
+export { BoxLearningPath } from './Boxes/BoxLearningPath'
+export type { IBoxLearningPath, LearningPathStart } from './types'
 export { CourseStatus } from './components/CourseStatus'
 export { dataFake, maxWidthCoursesList } from './utils'
