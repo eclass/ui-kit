@@ -1,0 +1,48 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": { "sourceType": "module", "ecmaFeatures": { "jsx": true } },
+  "plugins": ["jsx-a11y"],
+  "settings": {
+    "jsx-a11y": {
+      "polymorphicPropName": "as",
+      "components": {
+        "Box": "div",
+        "Flex": "div",
+        "Text": "p",
+        "Heading": "h2",
+        "Link": "a",
+        "Image": "img",
+        "Button": "button",
+        "IconButton": "button",
+        "Input": "input"
+      }
+    }
+  },
+  "rules": {
+    "jsx-a11y/alt-text": "error",
+    "jsx-a11y/anchor-has-content": "error",
+    "jsx-a11y/aria-props": "error",
+    "jsx-a11y/aria-proptypes": "error",
+    "jsx-a11y/aria-role": ["error", { "ignoreNonDOM": false }],
+    "jsx-a11y/aria-unsupported-elements": "error",
+    "jsx-a11y/click-events-have-key-events": "error",
+    "jsx-a11y/interactive-supports-focus": "error",
+    "jsx-a11y/no-aria-hidden-on-focusable": "error",
+    "jsx-a11y/no-noninteractive-tabindex": "error",
+    "jsx-a11y/no-static-element-interactions": "error",
+    "jsx-a11y/role-has-required-aria-props": "error",
+    "jsx-a11y/role-supports-aria-props": "error",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "Property[key.name=/^(outline|outlineWidth)$/][value.value=/^(none|0)$/]",
+        "message": "outline en none/0 sin reemplazo visible: usar _focusVisible (WCAG 2.4.7)"
+      },
+      {
+        "selector": "JSXAttribute[name.name='outline'][value.value=/^(none|0)$/]",
+        "message": "outline en none/0 sin reemplazo visible: usar _focusVisible (WCAG 2.4.7)"
+      }
+    ]
+  }
+}

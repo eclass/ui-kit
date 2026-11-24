@@ -26,8 +26,9 @@ no se indican, pregunta cuáles.
 ### Accesibilidad
 
 - Botones solo con ícono: `aria-label`. Íconos decorativos: `aria-hidden="true"`.
-- Los íconos de `src/atoms/Icons` (vía `Base.tsx`) traen `<title>icon-<nombre></title>`, que no es
-  un texto legible: si el ícono comunica algo, quien lo usa debe dar un `aria-label` en español.
+- Los íconos de `src/atoms/Icons` (vía `Base.tsx`) y `atoms/Icon` llevan `aria-hidden`: el lector
+  no los anuncia. Si el ícono comunica algo, quien lo usa debe dar el `aria-label` en español en el
+  botón o enlace. Los íconos que no pasan por `Base` ni `Icon` hay que revisarlos uno a uno.
 - Acciones con `<button>` (o `Box as="button"`), navegación con `<a>`/`Link`; nunca `div`/`span`
   con `onClick`.
 - Elementos interactivos operables con teclado.
@@ -51,6 +52,10 @@ no se indican, pregunta cuáles.
 - Foco visible en todo elemento interactivo (`_focusVisible` en Chakra).
 - Nunca `outline: none` / `boxShadow: 'none'` en foco sin un reemplazo visible.
 - Preferir `:focus-visible` sobre `:focus`.
+- Headers, footers u overlays fijos no deben tapar el elemento con foco.
+
+Para una revisión más profunda de teclado y lector de pantalla (roles ARIA, nombre accesible,
+foco en modales y menús) usa la skill `accesibilidad-teclado-lector`.
 
 ### Formularios (si el componente incluye controles)
 

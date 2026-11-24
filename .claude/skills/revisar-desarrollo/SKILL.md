@@ -26,7 +26,7 @@ Clasifica con la lista de archivos y el diff:
 |---|---|
 | **Bajo** | Solo estilos (`sx`, props de Chakra) de un componente, textos, `src/documentation`, `.md` o configuración sin lógica |
 | **Medio** | Componentes con lógica de render o estado local, props nuevas opcionales, sin efectos nuevos |
-| **Alto** | Hooks, `useEffect`, listeners, `localStorage`/cookies, foco y modales, fechas, `src/theme` (afecta a todos los componentes), exports de `src/index.ts`, props existentes, dependencias o build (`package.json`, `vite.config.ts`, `tsconfig*.json`) |
+| **Alto** | Hooks, `useEffect`, listeners, `localStorage`/cookies, foco, modales y menús, anuncios dinámicos (`aria-live`, alertas), fechas, `src/theme` (afecta a todos los componentes), exports de `src/index.ts`, props existentes, dependencias o build (`package.json`, `vite.config.ts`, `tsconfig*.json`) |
 
 Si un archivo es de riesgo alto, todo el cambio es alto. Indica el riesgo en una línea al
 empezar, con el motivo.
@@ -74,7 +74,21 @@ export nombrado, archivos estáticos, sin `CHANGELOG.md` ni versión editados a 
   `src/documentation`, o prop nueva / cambio de comportamiento sin su sección.
 
 **E. Accesibilidad y UI**: skill `web-design-guidelines` solo sobre los archivos con JSX
-modificado (fuera de `src/documentation`).
+modificado (fuera de `src/documentation`). Esa guía no cubre lo siguiente, así que revísalo
+además con la skill `accesibilidad-teclado-lector` sobre el diff (en riesgo bajo, solo roles
+ARIA y nombre accesible):
+- Roles ARIA válidos: `role` con un nombre inventado o un rol válido en el elemento equivocado
+  (`role="presentation"` en un `<nav>`).
+- Componentes hijos compartidos (`Icon`, `Icons/*`, `NavBarButton`, `BtnLink`, `BtnTertiary`): si
+  el cambio los usa, confirma que no aportan roles ni nombres inválidos.
+- Foco y teclado: dónde queda el foco al abrir y al cerrar un modal o menú, orden de tabulación y
+  elementos personalizados operables con teclado (flechas, `Enter`, `Esc`). Si cambia un rol o un
+  `aria-label` existente, avisa: puede romper pruebas del consumidor.
+- Lo que requiera comprobación manual con teclado o lector de pantalla, dilo como tarea pendiente
+  del usuario; no lo des por verificado leyendo código.
+- Excepción a "no modifiques archivos": los arreglos **mecánicos** de accesibilidad definidos en
+  `accesibilidad-teclado-lector` se aplican sin preguntar y se informan (archivo, antes → después);
+  los demás hallazgos siguen esperando la elección del usuario.
 
 **F. Rendimiento**: skill `react-best-practices`, solo las reglas relacionadas con lo que
 cambió (efectos, memo, listeners, storage, listas, SVG).

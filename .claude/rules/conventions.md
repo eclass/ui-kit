@@ -54,6 +54,23 @@ se hace al final con `/revisar-desarrollo`.
   `aria-label`; imágenes con `alt`; inputs con label asociado.
 - HTML recibido por props: sanitizar con `dompurify` antes de parsearlo con `html-react-parser`.
 
+### Accesibilidad al escribir componentes (teclado y lector de pantalla)
+
+Al crear o modificar un componente con JSX (modales, menús, listas, botones), el código debe salir
+ya accesible, sin esperar a la revisión:
+
+- Modales y menús: el foco entra al abrir y vuelve al disparador al cerrar (`returnFocusOnClose`,
+  `initialFocusRef`/`finalFocusRef` si hace falta); cierre con `Esc`; el modal con título enlazado
+  (`aria-labelledby` o `ModalHeader` de Chakra).
+- Lista de elementos clicables: `MenuItem`, `button` o `a`, nunca `Box`/`div` con `onClick`.
+- Botón solo con ícono: `aria-label` en español; ícono decorativo: `aria-hidden="true"`.
+- Foco visible con `_focusVisible`; nunca `outline: none` sin reemplazo.
+- Sin `role` inventado ni repetido sobre elementos que ya lo tienen; `id` internos con `uniqueId()`.
+- Props de accesibilidad nuevas, opcionales y con un valor por defecto que mantenga el comportamiento
+  actual.
+- Al terminar el código nuevo, aplicar la skill `accesibilidad-teclado-lector` sobre lo escrito.
+  Teclado y lector de pantalla no se pueden verificar leyendo código: dejar "Pendiente manual".
+
 ## Qué NO hacer
 
 - No editar a mano `CHANGELOG.md` ni la versión de `package.json` (semantic-release).

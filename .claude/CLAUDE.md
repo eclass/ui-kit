@@ -67,8 +67,8 @@ Clasifica cada pedido antes de editar:
   2. Con el plan aprobado, crear `odd/tasks/<feature>.md` (ignorado por git) con objetivo,
      alcance, checklist, criterios de aceptación y progreso. Mantenerlo al día en cada paso.
   3. Implementar de a un paso, deteniéndose para que el usuario revise.
-- **Todo componente o funcionalidad nueva** lleva sus pruebas y la actualización de su página
-  en `src/documentation` en el mismo cambio.
+- **Todo componente o funcionalidad nueva** lleva sus pruebas, la actualización de su página
+  en `src/documentation` y su ficha en `ai/` (ver `.claude/rules/ai-catalog.md`) en el mismo cambio.
 - **Al terminar y validar a mano**: el usuario corre `/revisar-desarrollo`, que ajusta la
   profundidad de la revisión según el riesgo.
 - Al retomar una tarea grande, leer primero su `odd/tasks/<feature>.md`.
@@ -77,5 +77,8 @@ Clasifica cada pedido antes de editar:
 
 - Pedir "juntar los commits" significa solo hacer squash de los commits del usuario; los cambios
   propios quedan aparte para revisión.
+- Accesibilidad: el código nuevo sigue `.claude/rules/conventions.md` ("Accesibilidad al escribir
+  componentes"). En una revisión, los arreglos mecánicos de `accesibilidad-teclado-lector` se
+  aplican sin preguntar (informando cada cambio, sin commitear); el resto espera al usuario.
 - El CI es GitHub Actions (`.github/workflows/nodejs.yml`); no existe `.gitlab-ci.yml`. GitLab
   solo se usa para instalar por SSH los paquetes de tipos privados `@types/eclass__*`.

@@ -1,10 +1,11 @@
 {
   "name": "@eclass/ui-kit",
   "description": "Elementos UI transversales eClass",
-  "version": "1.65.0",
+  "version": "1.66.0",
   "packageManager": "npm@11.13.0",
   "files": [
-    "dist"
+    "dist",
+    "ai"
   ],
   "main": "dist/eclass-ui-kit.umd.js",
   "module": "dist/eclass-ui-kit.es.js",
