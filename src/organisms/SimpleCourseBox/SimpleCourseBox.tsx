@@ -8,26 +8,36 @@ import {
   LinkBoxProps,
   LinkOverlay,
   LinkOverlayProps,
+  Text,
+  TextProps,
   useMediaQuery,
 } from '@chakra-ui/react'
 import { ArrowRight } from '@/atoms/Icons'
 
 import { IconSelection } from '../CourseList/components/IconSelection'
 import { vars } from '@theme'
+import { TinyAlert } from '@/atoms'
 
 interface SimpleCourseBoxProps {
+  alert?: {
+    status: 'success' | 'error' | 'info' | 'warning' | 'answered' | 'pending' | 'omitted' | 'new'
+    text: string
+  }
   courseName: string
+  finishDate?: string
   grade?: string
   href?: string
   img: string
   icon?: string
   isApproved?: boolean
-  label?: string
   isEnabled?: boolean
+  label?: string
   noBorder?: boolean
+  p?: string
 }
 
 const StyledFlex = Flex as React.FC<FlexProps>
+const StyledText = Text as React.FC<TextProps>
 const StyledImage = Image as React.FC<ImageProps>
 const StyledLinkBox = LinkBox as React.FC<LinkBoxProps>
 const StyledLinkOverlay = LinkOverlay as React.FC<LinkOverlayProps>
@@ -36,7 +46,9 @@ const StyledLinkOverlay = LinkOverlay as React.FC<LinkOverlayProps>
 // Creado para listar prerrequerimientos de cursos dentro de un modal
 
 export const SimpleCourseBox = ({
+  alert,
   courseName,
+  finishDate,
   grade,
   href,
   img,
@@ -45,13 +57,16 @@ export const SimpleCourseBox = ({
   label,
   isEnabled = true,
   noBorder = false,
+  p = '16px 24px',
 }: SimpleCourseBoxProps): JSX.Element => {
   const link = !isEnabled || !href || href === '' ? undefined : href
   const [isDesktop] = useMediaQuery('(min-width: 768px)')
 
+  const defaultPadding = isDesktop ? '16px 24px' : '16px'
+
   return (
     <StyledLinkBox
-      p={isDesktop ? '16px 24px' : '16px'}
+      p={p ?? defaultPadding}
       borderBottom={noBorder ? 'none' : `1px solid ${vars('colors-neutral-platinum')}`}
       _hover={{
         backgroundColor: link ? vars('colors-neutral-cultured2') : 'none',
@@ -76,9 +91,17 @@ export const SimpleCourseBox = ({
           alignItems={isDesktop ? 'center' : 'flex-start'}
           flexDir={isDesktop ? 'row' : 'column'}
         >
-          <StyledImage src={img} w="150px" h="74px" borderRadius="10px" />
+          <StyledImage src={img} w="150px" h="74px" borderRadius="10px" objectFit="cover" />
           <StyledFlex flexDirection="column" gap="8px" justifyContent="center">
-            <strong>{courseName}</strong>
+            {alert && <TinyAlert status={alert.status} text={alert.text} />}
+            {finishDate && (
+              <StyledText fontSize="12px" lineHeight="100%" m="0">
+                {finishDate}
+              </StyledText>
+            )}
+            <StyledText as="strong" lineHeight="21px" m="0">
+              {courseName}
+            </StyledText>
 
             {icon && label && (
               <Box
@@ -87,7 +110,6 @@ export const SimpleCourseBox = ({
                 lineHeight="19px"
                 display="flex"
                 gap="10px"
-                maxW="395px"
                 sx={{
                   svg: {
                     verticalAlign: 'top',

@@ -20,7 +20,14 @@ export { UserWay } from './molecules/UserWay/UserWay'
 export { UserWayCookie } from './molecules/UserWay/UserWayCookie'
 
 // Organismos
-export { CourseList, CourseStatus, dataFake, maxWidthCoursesList } from './organisms/CourseList'
+export {
+  BoxLearningPath,
+  CourseList,
+  CourseStatus,
+  dataFake,
+  maxWidthCoursesList,
+} from './organisms/CourseList'
+export type { IBoxLearningPath, LearningPathStart } from './organisms/CourseList'
 export { Alert, FlashNotification, useFlashNotification } from './organisms/Alerts'
 export {
   Modal,
