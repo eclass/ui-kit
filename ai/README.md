@@ -4,7 +4,7 @@ Componentes React de eClass sobre Chakra UI 1.8. Funcionan desde React 16.8. Tod
 desde el paquete:
 
 ```tsx
-import { ModalMultiple, ModalContent, ModalButtons, BtnPrimary, vars } from '@eclass/ui-kit'
+import { ModalMultiple, ModalContent, ModalButtons, BtnPrimary, BoxLearningPath, vars } from '@eclass/ui-kit'
 ```
 
 ## Reglas rápidas
@@ -28,6 +28,8 @@ cómo reconocerlo en un diseño.
 | `BtnTertiary`          | Acción de baja jerarquía: texto gris subrayado con ícono azul            | [botones](components/botones.md)                     |
 | `BtnLink`              | Acción con aspecto de enlace                                             | [botones](components/botones.md)                     |
 | `Btn`                  | Botón base; preferir las variantes de arriba                             | [botones](components/botones.md)                     |
+| `BoxLearningPath`      | Caja para rutas de aprendizaje.                                          |
+[ruta-aprendizaje](components/ruta-aprendizaje.md)   |
 | `Modal`                | Modal con cabecera azul, título, contenido y botones                     | [modales](components/modales.md)                     |
 | `ModalMultiple`        | Un solo modal que cambia entre contenido, alerta y carga                 | [modales](components/modales.md)                     |
 | `ModalContent`         | Cuerpo de `Modal`/`ModalMultiple`                                        | [modales](components/modales.md)                     |
