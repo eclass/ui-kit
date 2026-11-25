@@ -87,7 +87,6 @@ export const BoxLearningPath = ({
       as="article"
       position="relative"
       w="100%"
-      pt="10px"
       onMouseEnter={() => {
         setIsHovered(true)
         if (stackPhase === 'rest' || stackPhase === 'dropping') setStackPhase('rising')
@@ -102,7 +101,7 @@ export const BoxLearningPath = ({
       <Box
         aria-hidden="true"
         position="absolute"
-        top="-3px"
+        top="-13px"
         left="24px"
         right="24px"
         h="28px"
@@ -119,7 +118,7 @@ export const BoxLearningPath = ({
       <Box
         aria-hidden="true"
         position="absolute"
-        top="4px"
+        top="-6px"
         left="12px"
         right="12px"
         h="18px"
