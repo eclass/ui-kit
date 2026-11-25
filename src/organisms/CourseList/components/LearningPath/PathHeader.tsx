@@ -1,4 +1,5 @@
 import { Icons } from '@/atoms'
+import { vars } from '@theme'
 import { Flex, FlexProps, Heading, HeadingProps, Text, TextProps } from '@chakra-ui/react'
 
 const StyledFlex = Flex as React.FC<FlexProps>
@@ -28,18 +29,20 @@ export const PathHeader = ({ headerImage, title, coursesCount }: PathHeaderProps
     >
       <StyledFlex position="relative" align="center" gridGap="8px" mb="12px">
         <Icons.LearningPath />
-        <StyledText fontSize="14px" lineHeight="20px">
+        <StyledText fontSize="14px" lineHeight="20px" m="0">
           Ruta de aprendizaje | {coursesCount} cursos
         </StyledText>
       </StyledFlex>
 
       <StyledHeading
         as="h3"
+        color={vars('colors-neutral-white')}
         fontFamily="Roboto"
-        position="relative"
         fontSize="16px"
-        lineHeight="1.3rem"
         fontWeight="700"
+        lineHeight="1.3rem"
+        m="0"
+        position="relative"
       >
         {title}
       </StyledHeading>

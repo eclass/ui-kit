@@ -34,14 +34,14 @@ export const PathCourseLink = ({
       {completedCourse ? (
         <StyledFlex gap="8px">
           <Icon name="circleCheck" />
-          <StyledText fontSize="14px" lineHeight="19px">
+          <StyledText fontSize="14px" lineHeight="19px" m="0">
             ¡Has completado tu Ruta de aprendizaje!
           </StyledText>
         </StyledFlex>
       ) : finishedCourse ? (
         <StyledFlex gap="8px">
           <Icon name="info" />
-          <StyledText fontSize="14px" lineHeight="19px">
+          <StyledText fontSize="14px" lineHeight="19px" m="0">
             Tu Ruta de aprendizaje ha finalizado
           </StyledText>
         </StyledFlex>
@@ -74,6 +74,7 @@ export const PathCourseLink = ({
                 fontSize="14px"
                 fontWeight="700"
                 lineHeight="19px"
+                m="0"
                 color={vars('colors-neutral-darkCharcoal')}
               >
                 {start.level}
