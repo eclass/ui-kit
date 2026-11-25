@@ -1,3 +1,10 @@
+## [1.67.3](https://github.com/eclass/ui-kit/compare/v1.67.2...v1.67.3) (2026-11-25)
+
+
+### Bug Fixes
+
+* **PDYE-2353:** nuevo icono de bandera ([#815](https://github.com/eclass/ui-kit/issues/815)) ([ccb5e77](https://github.com/eclass/ui-kit/commit/ccb5e77caa2214746ad03920d963a14ad6f64aa9))
+
 ## [1.67.2](https://github.com/eclass/ui-kit/compare/v1.67.1...v1.67.2) (2026-11-25)
 
 
