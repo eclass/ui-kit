@@ -1,7 +1,7 @@
 {
   "name": "@eclass/ui-kit",
   "description": "Elementos UI transversales eClass",
-  "version": "1.67.0",
+  "version": "1.67.1",
   "packageManager": "npm@11.13.0",
   "files": [
     "dist",

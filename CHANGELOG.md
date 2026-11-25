@@ -1,3 +1,10 @@
+## [1.67.1](https://github.com/eclass/ui-kit/compare/v1.67.0...v1.67.1) (2026-11-25)
+
+
+### Bug Fixes
+
+* **PDYE-2353:** ajuste de color y margen de textos caja ruta ([#813](https://github.com/eclass/ui-kit/issues/813)) ([408b5d3](https://github.com/eclass/ui-kit/commit/408b5d34a57fc2b321744a4b9ec8ab5d433b99da))
+
 # [1.67.0](https://github.com/eclass/ui-kit/compare/v1.66.0...v1.67.0) (2026-11-24)
 
 
