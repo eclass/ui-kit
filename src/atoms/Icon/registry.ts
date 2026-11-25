@@ -267,6 +267,7 @@ export const icons = defineIcons({
     h: '32px',
   },
   unlocked: { Svg: Svgs.Unlocked },
+  verticalFlag: { Svg: Svgs.VerticalFlag },
   video: { Svg: Svgs.Video },
   warning: { Svg: Svgs.Warning },
   warningColor: { Svg: Svgs.WarningColor, viewBox: '0 0 53 45', w: '53px', h: '45px' },
