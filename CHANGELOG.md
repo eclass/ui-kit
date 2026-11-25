@@ -1,3 +1,10 @@
+## [1.67.2](https://github.com/eclass/ui-kit/compare/v1.67.1...v1.67.2) (2026-11-25)
+
+
+### Bug Fixes
+
+* **PDYE-2353:** ajuste altura caja ruta ([#814](https://github.com/eclass/ui-kit/issues/814)) ([79bb902](https://github.com/eclass/ui-kit/commit/79bb902d5315b219bac8af172a2690031c37d671))
+
 ## [1.67.1](https://github.com/eclass/ui-kit/compare/v1.67.0...v1.67.1) (2026-11-25)
 
 
